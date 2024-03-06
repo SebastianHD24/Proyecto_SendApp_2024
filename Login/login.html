@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <title>SendApp</title>
+</head>
+<body>
+    <span class="background"></span> 
+    <span class="centrado">
+        <img class="kevin" src="login-img/img3.jpeg">
+        <form class="my-form">
+            <span class="login-welcome-row"> 
+                <img src="https://seeklogo.com/images/S/sena-logo-DEA81361FA-seeklogo.com.png" class="login-welcome-img"/>
+                <!-- https://seeklogo.com/images/S/sena-logo-DEA81361FA-seeklogo.com.png -->
+                <!-- login-img/SendApp.png -->
+                    <!-- La imagen la optizamos en CSS -->
+                    <h1>INGRESO</h1> 
+            </span>
+            <div class="text-field">  <!-- Primera seccion input 1 -->
+                <label for="email">Email:</label>
+                    <input
+                        aria-label="Email"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ingrese su correo aqui" required
+                    >
+                    <img
+                    alt="Email Icon"
+                    title="Email Icon"
+                    src="login-img/newemailenvelopebacksymbolincircularoutlinedbutton_104687.svg"
+                    >
+            </div>
+            <div class="text-field"> <!-- Segunda seccion input 2-->
+                <label for="password">Password:</label>
+                    <input 
+                        id="password"
+                        type="password"
+                        aria-label="Password"
+                        name="password"
+                        placeholder="Ingrese su contraseña aqui"
+                        title="Mínimo 8 caracteres que contengan un número y un letra en mayúscula"
+                        pattern="(?#*.[A-Za-z])(?#*.\d)[A-Aa-z\d]{8,}$" required
+                    >
+                    <img
+                        alt="Password Icon"
+                        title="Password Icon"
+                        src="login-img/icons8-password.svg"
+                    >
+            </div>
+                <!--boton de ingreso-->
+            <input type="submit" class="my-form__button" id="my-form__button" value="Ingresar"> 
+            <div class="my-form__acction" id="my-form__acction"> <!-- Acciones de ingreso -->
+                
+                <div class="my-form__row"> <!-- Div que contiene la accion de olvide mi contraseña-->
+                    <span>¿Olvidaste tu contraseña?<span>
+                        <a href="#" tittle="Olvide mi contraseña">Recuperar Contraseña</a>
+                </div>
+
+                <div class="my-form__registro">  <!-- Div que contiene la acción de crear una nueva cuenta -->
+                    <a href="#" title="Crear Cuenta">Crear Cuenta</a>
+                </div>
+            </div>
+        </form>
+    </span>
+<script src="login.js"></script>
+</body>
+</html>
