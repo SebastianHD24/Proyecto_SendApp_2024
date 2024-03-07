@@ -8,10 +8,9 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
-    --gris-oscuro: #c7c7c7;
-    --gris-claro: #f7f7f7;
-    --fuente-poppins: 'Poppins', sans-serif;
-    --fuente-open-sans: 'Open Sans', sans-serif;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
 }
 
 body{
