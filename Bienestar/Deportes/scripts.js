@@ -26,8 +26,10 @@ window.addEventListener('click', function(e) {
 });
 
 
-//Menu Hamburguesa
-document.querySelector(".bars__menu").addEventListener("click", animarBar);
+//Menu Hamburguesa -------------------------------------------------------------------------------------------------
+
+// barra menu hamburguesa
+const animacion = document.querySelector(".bars__menu").addEventListener("click", animarBar);
 
 let line1_bars = document.querySelector(".line1__bars-menu");
 let line2_bars = document.querySelector(".line2__bars-menu");
@@ -40,4 +42,21 @@ function animarBar(){
     line3_bars.classList.toggle("activeline3__bars-menu");
 }
 
-//boton
+// funcion para abrir y cerrar menu hamburguesa
+const btnAbrir = document.querySelector('.bars__menu')
+const mostrarMenu = document.querySelector('.resposive__menu')
+
+btnAbrir.onclick = function() {
+    mostrarMenu.classList.toggle('open')
+}
+
+// funcion para mostrar areas en el menu hamburguesa
+
+const btnAreas = document.querySelector('.btn-areas')
+const contAreas = document.querySelector('.menu-areas')
+
+btnAreas.addEventListener('click', () => {
+    contAreas.classList.toggle('abrirCer')
+})
+//------------------------------------------------------------------------------------------------------------------
+
