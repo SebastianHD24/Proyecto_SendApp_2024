@@ -15,16 +15,34 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container" id="container">
-        <div class="formulario-container inicio-sesion">
-            <form action="#">
-                <h1>Crea una cuenta</h1>
-                <div class="redes-sociales">
-                    <a href="https://web.facebook.com/SENA/?locale=es_LA&_rdc=1&_rdr" class="social">
-                        
-                    </a>
-                </div>
-            </form>
+    <div class="login-container">
+        <form action="" method="post" class="form-login">
+            <div class="titulos">
+                <ul class="login-nav">
+                    <li class="login-nav__item active">
+                        <a href="#">Iniciar Sesión</a>
+                    </li>
+                    <li class="login-nav__item">
+                        <a href="../login2/login2_registrarse.html">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+            <label for="login-input-user" class="login__label">
+                Usuario
+            </label>
+            <input id="login-input-user" class="login__input" type="text" name="nombre" />
+            <label for="login-input-password" class="login__label">
+                Contraseña
+            </label>
+            <input id="login-input-password" class="login__input" type="password" />
+            <label for="login-sign-up" class="login__label--checkbox">
+                <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+                Mantenerme conectado
+            </label>
+            <button class="login__submit" disabled>Iniciar Sesión</button>
+        </form>
+        <div class="olvidaste">
+            <a href="#" class="login__forgot">¿Olvidaste tu contraseña?</a>
         </div>
     </div>
 </body>
