@@ -199,42 +199,47 @@ i{
 /* ----------------------------------------------------- */
 
 /* Slider */
-.slider-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+*{
+    margin: 0;
+    padding: 0;
 
-.slider{
-    background-size: cover;
-    height: 15rem;
+ }
+ .slider{
     width: 100%;
-    animation: animate 20s infinite;
-}
+    margin: auto;
+    overflow: hidden;
+ }
+ .slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
 
-@keyframes animate{
-    20%{
-        background-image: url(../Img-home/Slider-img/04022024_cursos_virtuales.png);
-        background-size: cover;
-    }
-    40%{
-        background-image: url(../Img-home/Slider-img/04022024_ingles.png);
-        background-size: cover;
-    }
-    60%{
-        background-image: url(../Img-home/Slider-img/07122023_BannerExternoSeguridad.png);
-        background-size: cover;
-    }
-    80%{
-        background-image: url(../Img-home/Slider-img/04122023_Banner_Exteno\ Actualización\ datos\ Sofia\ .png);
-        background-size: cover;
-    }
-    100%{
-        background-image: url(../Img-home/Slider-img/bannerOferta.jpg);
-        background-size: cover;
-    }
-}
+    animation: slider 20s infinite alternate;
+    animation-timing-function: linear;
 
+ }
+ .slider li{
+    width: 100%;
+    list-style: none;
+
+ }
+ .slider li img{
+    width: 100%;
+
+ }
+ @keyframes slider {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left:-300%}
+ }
 /* ----------------------------------------------------- */
 
 /* Contenedor principal con la seccion de informacion */
