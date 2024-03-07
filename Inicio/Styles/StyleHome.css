@@ -9,6 +9,7 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
+    --azul: #04324D;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
     --fuente-principal: "Work Sans", sans-serif;
@@ -45,9 +46,9 @@ i{
 
 /* Navegador */
 .navbar {
-    background-color: #070001;
-    opacity: 0.8;
-    height: 3.2rem;
+    background-color: var(--azul);
+    /* opacity: 0.8; */
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,9 +82,26 @@ i{
     
 }
 
-/* ----------------------------------------------------- */
+.links li a:hover{
+    color: var(--verde);
+}
 
-/* Menu hamburguesa 😛 */
+/* -----Diseño menu hamburguesa------*/
+.header-menu{
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+.logo-header{
+    display: none;
+}
+
+.logo-header img{
+    width: 70px;
+}
+
+/* Menu hamburguesa */
 .bars__menu{
     display: none;
     width: 30px;
@@ -118,7 +136,11 @@ i{
     translate(-4px, 2px);
 }
 
-/* ----------------------------------------------------- */
+.resposive__menu{
+    display: none;
+}
+
+/* -------------------------- Menu Desplegable de Areas ------------------------- */
 
 /* Estilo para ocultar el contenido del menú desplegable por defecto */
 .areas-mas,
@@ -130,7 +152,7 @@ i{
 .links li:hover .areas-mas {
     display: block;
     position: absolute;
-    background-color: var(--negro);
+    background-color: var(--azul);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -142,7 +164,7 @@ i{
 /* Estilo para mostrar el menú desplegable al hacer hover sobre "Bienestar al aprendiz" */
 .areas-mas li:hover .areas-bienestar {
     display: block;
-    background-color: var(--negro);
+    background-color: var(--azul);
     list-style: none;
     padding: 0;
     margin-left: 210px; /* Ajusta este valor según tu diseño */
