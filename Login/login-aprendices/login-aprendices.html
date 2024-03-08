@@ -15,6 +15,7 @@
     <title>Login</title>
 </head>
 <body>
+    <div id="loginForm">
     <div class="login-container">
         <form action="" method="post" class="form-login">
             <div class="titulos">
@@ -23,7 +24,8 @@
                         <a href="#">Iniciar Sesión</a>
                     </li>
                     <li class="login-nav__item">
-                        <a href="../login2/login2_registrarse.html">Registrarse</a>
+                        <a id="goToRegister">Registrarse</a>
+                        
                     </li>
                 </ul>
             </div>
@@ -45,5 +47,39 @@
             <a href="#" class="login__forgot">¿Olvidaste tu contraseña?</a>
         </div>
     </div>
+</div>
+    <div id="registerForm"  style="display: none;">
+    <div class="login-container">
+        <form action="#" class="form-login"> 
+            <div class="titulos">
+                <ul class="login-nav">
+                    <li class="login-nav__item">
+                        <a id="goToLogin">Iniciar Sesión</a>
+                    </li>
+                    <li class="login-nav__item active">
+                        <a href="#">Registrarse</a>
+                    </li>
+                </ul>
+            </div> 
+            <label for="login-input-user" class="login__label">
+                Usuario
+            </label>
+            <input id="login-input-user" class="login__input" type="text" />
+            <label for="login-input-password" class="login__label">
+                Contraseña
+            </label>
+            <input id="login-input-password" class="login__input" type="password" />
+            <label for="login-sign-up" class="login__label--checkbox">
+                <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+                Acepto los términos y condiciones
+            </label>
+            <button class="login__submit" disabled>Registrarse</button>
+        </form>
+        <div class="olvidaste">
+        <a id="goToLogin" class="login__forgot">¿Ya tienes una cuenta? Inicia sesión aquí.</a>
+    </div>
+    </div>
+</div>
 </body>
+<script src="./login-aprendices.js"></script>
 </html>

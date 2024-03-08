@@ -86,6 +86,7 @@ body {
 	font-size: 1.25rem;
 	padding-bottom: .5rem;
 	transition: .20s all ease;
+	cursor: pointer;
 }
 
 
@@ -182,7 +183,7 @@ body {
 	border-radius: 2rem;
 	display: block;
 	width: 100%;
-	background-color: rgba(17, 97, 237, .75);
+	background-color: var(--azul-oscuro);
 	border: none;
 	cursor: pointer;
 }
@@ -224,4 +225,14 @@ body {
         padding-bottom: 1.5rem;
     }
     
+}
+
+.loginForm + .registerForm{
+	transition: opacity .20s all ease;
+}
+
+@media (max-width: 320px) {
+	.titulos a{
+		font-size: 1.2rem;
+	}
 }
