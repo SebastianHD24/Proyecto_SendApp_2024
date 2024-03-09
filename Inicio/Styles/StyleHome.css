@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -46,9 +47,9 @@ i{
 
 /* Navegador */
 .navbar {
-    background-color: #070001;
-    opacity: 0.8;
-    height: 3.2rem;
+    background-color: var(--azul);
+    /* opacity: 0.8; */
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,9 +83,26 @@ i{
     
 }
 
-/* ----------------------------------------------------- */
+.links li a:hover{
+    color: var(--verde);
+}
 
-/* Menu hamburguesa 😛 */
+/* -----Diseño menu hamburguesa------*/
+.header-menu{
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+.logo-header{
+    display: none;
+}
+
+.logo-header img{
+    width: 70px;
+}
+
+/* Menu hamburguesa */
 .bars__menu{
     display: none;
     width: 30px;
@@ -119,7 +137,11 @@ i{
     translate(-4px, 2px);
 }
 
-/* ----------------------------------------------------- */
+.resposive__menu{
+    display: none;
+}
+
+/* -------------------------- Menu Desplegable de Areas ------------------------- */
 
 /* Estilo para ocultar el contenido del menú desplegable por defecto */
 .areas-mas,
@@ -131,7 +153,7 @@ i{
 .links li:hover .areas-mas {
     display: block;
     position: absolute;
-    background-color: var(--negro);
+    background-color: var(--azul);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -143,7 +165,7 @@ i{
 /* Estilo para mostrar el menú desplegable al hacer hover sobre "Bienestar al aprendiz" */
 .areas-mas li:hover .areas-bienestar {
     display: block;
-    background-color: var(--negro);
+    background-color: var(--azul);
     list-style: none;
     padding: 0;
     margin-left: 210px; /* Ajusta este valor según tu diseño */
@@ -201,42 +223,47 @@ i{
 /* ----------------------------------------------------- */
 
 /* Slider */
-.slider-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+*{
+    margin: 0;
+    padding: 0;
 
-.slider{
-    background-size: cover;
-    height: 15rem;
+ }
+ .slider{
     width: 100%;
-    animation: animate 20s infinite;
-}
+    margin: auto;
+    overflow: hidden;
+ }
+ .slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
 
-@keyframes animate{
-    20%{
-        background-image: url(../Img-home/Slider-img/04022024_cursos_virtuales.png);
-        background-size: cover;
-    }
-    40%{
-        background-image: url(../Img-home/Slider-img/04022024_ingles.png);
-        background-size: cover;
-    }
-    60%{
-        background-image: url(../Img-home/Slider-img/07122023_BannerExternoSeguridad.png);
-        background-size: cover;
-    }
-    80%{
-        background-image: url(../Img-home/Slider-img/04122023_Banner_Exteno\ Actualización\ datos\ Sofia\ .png);
-        background-size: cover;
-    }
-    100%{
-        background-image: url(../Img-home/Slider-img/bannerOferta.jpg);
-        background-size: cover;
-    }
-}
+    animation: slider 20s infinite alternate;
+    animation-timing-function: linear;
 
+ }
+ .slider li{
+    width: 100%;
+    list-style: none;
+
+ }
+ .slider li img{
+    width: 100%;
+
+ }
+ @keyframes slider {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left:-300%}
+ }
 /* ----------------------------------------------------- */
 
 /* Contenedor principal con la seccion de informacion */
@@ -371,14 +398,17 @@ i{
 /* FOOTER */
 footer{
     width: 100%;
+    height: 10rem;
     bottom: 0;
     left: 0;
-    background-color: var(--blanco);
+    background-color: var(--verde);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-top: 1px solid var(--gris-oscuro);
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
 }
 
 /*Tamaño del logo SendApp*/
@@ -412,7 +442,7 @@ footer{
     width: 45px;
     border-radius: 10px;
     /* border: 1px solid var(--negro); */
-    background-image: url(../Img-home/Footer-img/icons8-linkedin-48.png);
+    background-image: url(../Img-home/Footer-img/linkedin.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -423,28 +453,29 @@ footer{
 }
 
 .icono-red:nth-last-of-type(2){
-    background-image: url(../Img-home/Footer-img/icons8-youtube-48.png);
+    background-image: url(../Img-home/Footer-img/youtube.png);
 }
 .icono-red:nth-last-of-type(3){
-    background-image: url(../Img-home/Footer-img/icons8-twitterx-48.png);
+    background-image: url(../Img-home/Footer-img/x.png);
 }
 .icono-red:nth-last-of-type(4){
-    background-image: url(../Img-home/Footer-img/icons8-instagram-48.png);
+    background-image: url(../Img-home/Footer-img/instagram.png);
 }
 .icono-red:nth-last-of-type(5){
-    background-image: url(../Img-home/Footer-img/icons8-facebook-48.png);
+    background-image: url(../Img-home/Footer-img/facebook.png);
 }
 
 /* esta parte es para la parte del apartado de pqrs etc*/
 .footer-menu{
     list-style-type: none;
-    color: var(--negro);
-    font-size: 20px;
+    color: white;
 }
-.menu-item{
+.footer-menu .menu-item{
     margin: 1rem;
     cursor: pointer;
     opacity: 0.6;
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
 }
 .menu-item:hover{
     opacity: 1;
@@ -490,5 +521,86 @@ footer{
     .resposive__menu-ul a{
         text-decoration: none;
     }
+    /*RESPONSIVE FOOTER*/
+    footer{
+        width: 100%;
+        height: 10rem;
+        bottom: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 1px solid var(--gris-oscuro);
+        font-family: "Work Sans", sans-serif;
+        font-weight: bold;
+    }
+    
 
+    
+    /*links de los iconos de las redes sociales y el footer como tal*/
+    .iconos-container{
+        gap: 10px;
+    }
+    
+    .iconos-container, .footer-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* margin-bottom: 1rem; */
+    }
+    
+    .footer-menu li{
+        font-size: 15px;
+    }
+    /*toda la parte que dice icono red es de los iconos*/
+    .icono-red{
+        height: 45px;
+        width: 45px;
+        border-radius: 10px;
+        /* border: 1px solid var(--negro); */
+        background-image: url(../Img-home/Footer-img/linkedin_responsive.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .icono-red:hover{
+        /* background-color: var(--verde); */
+        /*filter: invert(1);*/
+        transform: scale(1.2);
+    }
+    
+    .icono-red:nth-last-of-type(2){
+        background-image: url(../Img-home/Footer-img/youtube_responsive.png);
+    }
+    .icono-red:nth-last-of-type(3){
+        background-image: url(../Img-home/Footer-img/x_responsive.png);
+    }
+    .icono-red:nth-last-of-type(4){
+        background-image: url(../Img-home/Footer-img/instagram_responsive.png);
+    }
+    .icono-red:nth-last-of-type(5){
+        background-image: url(../Img-home/Footer-img/facebook_responsive.png);
+    }
+    
+    /* esta parte es para la parte del apartado de pqrs etc*/
+    .footer-menu{
+        list-style-type: none;
+        color: var(--verde);
+    }
+    .footer-menu .menu-item{
+        margin: 1rem;
+        cursor: pointer;
+        opacity: 0.6;
+        font-size: 1rem;
+        letter-spacing: 0.8rem;
+    }
+    .menu-item:hover{
+        opacity: 1;
+    }
+    
+    .resposive__menu{
+        display: none;
+    }
 }
