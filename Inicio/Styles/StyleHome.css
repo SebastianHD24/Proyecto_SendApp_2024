@@ -15,6 +15,10 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
+html{
+    width: 100vw;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -340,19 +344,34 @@ i{
     position: absolute;
 }
 
-
 .panel1 img{
     border-radius: 50px;
 }
 
 @media (max-width: 480px) {
     .container {
-    width: 100vw;
+    width: 90%;
     }
 
     .panel1:nth-of-type(4),
     .panel1:nth-of-type(5) {
     display: none;
+}
+
+.panel1 {
+    width: 100%;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px ;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px; 
+    position: relative;
+    transition: flex 0.7s ease-in;
+
 }
 }
 
@@ -520,6 +539,8 @@ footer{
     .resposive__menu-ul a{
         text-decoration: none;
     }
+<<<<<<< HEAD
+=======
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
@@ -602,4 +623,5 @@ footer{
     .resposive__menu{
         display: none;
     }
+>>>>>>> 3d21cc1a65afdf4cf202705276eaae4920521342
 }
