@@ -75,7 +75,6 @@ i{
 .links li a{
     text-decoration: none;
     color: var(--negro);
-    font-family: var(--fuente-poppins);
     font-size: 15px;
     /* color: var(--verde); */
     color: var(--blanco);

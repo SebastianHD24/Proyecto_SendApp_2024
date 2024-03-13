@@ -216,6 +216,9 @@ body {
     justify-content: space-between;
     padding-bottom: 2.5rem;
 }
+#goToLogin + #goToRegister{
+	cursor: pointer;
+}
 @media (max-width: 540px) {
     .titulos ul{
         display: flex;
