@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-03-2024 a las 14:34:25
+-- Tiempo de generación: 11-03-2024 a las 23:16:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -80,13 +80,21 @@ CREATE TABLE `usuarios` (
   `nombres` varchar(30) NOT NULL COMMENT 'Nombre del usuario\r\n',
   `apellidos` varchar(30) NOT NULL COMMENT 'Apellido del usuario',
   `correo` varchar(30) NOT NULL COMMENT 'Correo del usuario',
-  `celular` int(15) NOT NULL COMMENT 'Celular del usuario',
+  `celular` varchar(15) NOT NULL COMMENT 'Celular del usuario',
   `programa` varchar(50) NOT NULL COMMENT 'Programa del usuario',
   `ficha` int(10) DEFAULT NULL COMMENT 'Ficha del usuario',
   `estado` tinyint(1) NOT NULL COMMENT 'Estado del usuario',
   `id_rol` int(2) DEFAULT NULL COMMENT 'Rol del usuario',
   `id_servicio` int(2) DEFAULT NULL COMMENT 'Los servicios del ususario'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`) VALUES
+(11111, '123', 'pepito peres', 'lopes', 'menajuabnes@gmail.com', '3208108780', 'no le interesa puto ', 0, 0, 1, NULL),
+(11112, '123', 'pepito peres', 'lopes', 'menajuabnes@gmail.com', '3208108780', 'no le interesa puto ', 2618075, 0, 1, NULL);
 
 --
 -- Índices para tablas volcadas
