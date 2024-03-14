@@ -51,7 +51,7 @@ i{
 
 /* Navegador */
 .navbar {
-    background-color: var(--azul);
+    background-color: var(--azul-oscuro);
     /* opacity: 0.8; */
     height: 50px;
     display: flex;
@@ -539,8 +539,6 @@ footer{
     .resposive__menu-ul a{
         text-decoration: none;
     }
-<<<<<<< HEAD
-=======
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
@@ -623,5 +621,4 @@ footer{
     .resposive__menu{
         display: none;
     }
->>>>>>> 3d21cc1a65afdf4cf202705276eaae4920521342
 }
