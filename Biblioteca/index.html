@@ -14,58 +14,91 @@
 
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>
-    <script src="/senova/scripts.js"> </script>
-    
+    <link rel="stylesheet" href="/Inicio/Styles/StyleHome.css"> <!-- Estilos del nav -->
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>    
 </head>
-
 <body>
     <header id="main-header">
-        <!-- Logo-->
+        <!-- Logo SendApp-->
         <div class="logo">
-            <img src="./img pagina principal/SendApp.png" alt="SendApp Image">
+            <img src="img/LogosSena-img/SendApp.png"
+            alt="SendApp Logo"/>
         </div>
+        <!--Nav Container--> 
         <nav class="navbar">
-            <!-- <img id="img-logo" src=".//img pagina principal/logo1.png" alt=""> -->
+            <!-- Logo sena -->
+            <div class="logo-header">
+                <img src="img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
+            </div>
             <ul class="links">
-                <li><i class="fa-solid fa-house"></i><a href="../Pangina principal/index.html">Inicio</a></li>
-                <li><i class="fa-solid fa-user-group"></i><a href="#">Nosotros</a></li>
+                <li><i class="fa-solid fa-house"></i><a href="index.html">Inicio</a></li>
+                <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li>
                 <li>
                     <i class="fa-solid fa-cubes"></i><a href="#">Areas</a>
                     <ul class="areas-mas">
-                        <li><a href="../Biblioteca/index.html">Biblioteca</a></li>
+                        <li><a href="Biblioteca/index.html">Biblioteca</a></li>
                         <li>
-                            <a href="../Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
+                            <a href="Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
                             <ul class="areas-bienestar">
-                                <li><a href="../Bienestar/psicologia/index.html">Psicologia</a></li>
-                                <li><a href="../Bienestar/Deportes/index.html">Deportes y cultura</a></li>
+                                <li><a href="Bienestar/psicologia/index.html">Psicologia</a></li>
+                                <li><a href="Bienestar/Deportes/index.html">Deportes y cultura</a></li>
                             </ul>
                         </li>
-                        <li><a href="../coordinaccion/index.html">Cordinacion academica</a></li>
-                        <li><a href="../administracion/index.html">Administracion educativa</a></li>
-                        <li><a href="../senova/index.html">Sennova</a></li>
-                        <li><a href="../fondoEmprender/index.html">Fondo emprender</a></li>
-                        <li><a href="../relacionesCorporativas/index.html">Relaciones corporativas</a></li>
-                        <li><a href="../serviciosTecnologicos/index.html">Servicios tecnologicos</a></li>
-                        <li><a href="../TecnoParque/index.html">Tecno parque</a></li>
-                        <li><a href="../TecnoAcademia/index.html">Tecno academia</a></li>
-                        <li><a href="../FabricaSoftware/index.html">Fabrica de software</a></li>
+                        <li><a href="coordinaccion/index.html">Cordinacion academica</a></li>
+                        <li><a href="administracion/index.html">Administracion educativa</a></li>
+                        <li><a href="senova/index.html">Sennova</a></li>
+                        <li><a href="fondoEmprender/index.html">Fondo emprender</a></li>
+                        <li><a href="relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                        <li><a href="serviciosTecnologicos/index.html">Servicios tecnologias</a></li>
+                        <li><a href="TecnoParque/index.html">Tecno parque</a></li>
+                        <li><a href="TecnoAcademia/index.html">Tecno academia</a></li>
+                        <li><a href="FabricaSoftware/index.html">Fabrica de software</a></li>
                     </ul>
                 </li>
-                <li><i class="fa-solid fa-circle-info"></i><a href="#">Informacion CDITI</a>
-                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="#">Ingreso</a></li>
+                <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a>
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
             </ul>
-        </nav>
-        <!--Menu Hamburguesa Animado-->
-        <div class="bars__menu">
-            <span class="line1__bars-menu"></span>
-            <span class="line2__bars-menu"></span>
-            <span class="line3__bars-menu"></span>
-        </div>
-        <div class="resposive__menu">
-            <nav class="menu__nav-responsive">
 
-            </nav>
+            <!--Menu Hamburguesa Animado-->
+            <div class="bars__menu">
+                <span class="line1__bars-menu"></span>
+                <span class="line2__bars-menu"></span>
+                <span class="line3__bars-menu"></span>
+            </div>
+        </nav>
+
+        <!-- Contenido Responsive Menu-->
+        <div class="resposive__menu">
+            <ul class="resposive__menu-ul">
+                <li><i class="fa-solid fa-house"></i><a href="index.html">Inicio</a></li>
+                <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nostros.html">Nosotros</a></li>
+                <li class="btn-areas">
+                    <i class="fa-solid fa-cubes"></i><a href="#">Areas</a>
+                    <div class="menu-areas">
+                        <ul class="content-areas">
+                            <li><a href="Biblioteca/index.html">Biblioteca</a></li>
+                            <li>
+                                <a href="Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
+                                <ul class="areas-bienestar">
+                                    <li><a href="Bienestar/psicologia/index.html">Psicologia</a></li>
+                                    <li><a href="Bienestar/Deportes/index.html">Deportes y cultura</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="coordinaccion/index.html">Cordinacion academica</a></li>
+                            <li><a href="administracion/index.html">Administracion educativa</a></li>
+                            <li><a href="senova/index.html">Sennova</a></li>
+                            <li><a href="fondoEmprender/index.html">Fondo emprender</a></li>
+                            <li><a href="relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                            <li><a href="serviciosTecnologicos/index.html">Servicios tecnologias</a></li>
+                            <li><a href="TecnoParque/index.html">Tecno parque</a></li>
+                            <li><a href="TecnoAcademia/index.html">Tecno academia</a></li>
+                            <li><a href="FabricaSoftware/index.html">Fabrica de software</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a></li>
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
+            </ul>
         </div>
     </header>
     <div class="sennova">
@@ -91,7 +124,6 @@
                 });</script>
         </section>
     </div>
-
 </body>
-
+<script src="/Inicio/Scripts/scriptHome.js"></script> <!-- Eventos y acciones del menu -->
 </html>
