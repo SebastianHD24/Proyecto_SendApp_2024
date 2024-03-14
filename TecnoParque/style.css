@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -10,13 +11,22 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
+<<<<<<< HEAD
+    --azul-oscuro: #00324D;
+    --azul-claro: #82DEF0;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
     --fuente-principal: "Work Sans", sans-serif;
+=======
+    --gris-oscuro: #c7c7c7;
+    --gris-claro: #f7f7f7;
+    --fuente-poppins: 'Poppins', sans-serif;
+    --fuente-open-sans: "Open Sans", sans-serif;
+>>>>>>> bdf0baa249e6f9dba35f70bb5a02b5f4ddd3d09f
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--fuente-principal);
     font-family: 1.2rem;
 }
 
@@ -221,17 +231,19 @@ i{
 
 /*titulo sennova*/
 .titulo{
+    font-size: 35px;
     text-align: center;
     font-family: var(--fuente-open-sans);
 }
 /*subtitulos*/
- .subtitulos{
+.subtitulos{
+    font-size: 25px;
     font-family: var(--fuente-open-sans);
-    text-align: center;
+    text-align: left;
     margin-top: 50px;
 }
-/*contenido de el div senova*/
-.sennova{
+/*contenido de el div tecnoparque*/
+.tecnoparque{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -239,27 +251,47 @@ i{
     align-items: center;
 
 }
-.sennova section{
+.tecnoparque section{
     width: 100%;
-    padding: 80px;
+    padding: 0px 60px;
 
 }
-.sennova p{
+
+/* listas ordenadas y desordenadas */
+ol, ul{
+    padding: 30px;
+}
+
+.tecnoparque p{
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: var(--fuente-poppins);
     line-height: 30px;
 }
-/* .sennova img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
-article {
+.tecnoparque img{
+    width: 40%;
+}
+
+.logo_tecnoparque{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px 0px 0px;
     object-fit: cover;
+}
+
+.foto1{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;   
+}
+
+.foto1 img{
+    box-shadow: #070001 1px 1px 15px; 
+    border-radius: 10px;
+    filter: brightness(90%);
+}
+
+.foto1 :hover{
+    filter: brightness(100%);
 }
