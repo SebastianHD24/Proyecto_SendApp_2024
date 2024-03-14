@@ -11,18 +11,12 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
-<<<<<<< HEAD
-    --azul-oscuro: #00324D;
+    --azul: #00324D;
     --azul-claro: #82DEF0;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
     --fuente-principal: "Work Sans", sans-serif;
-=======
-    --gris-oscuro: #c7c7c7;
-    --gris-claro: #f7f7f7;
-    --fuente-poppins: 'Poppins', sans-serif;
-    --fuente-open-sans: "Open Sans", sans-serif;
->>>>>>> bdf0baa249e6f9dba35f70bb5a02b5f4ddd3d09f
+
 }
 
 body{
