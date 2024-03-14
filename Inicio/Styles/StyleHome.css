@@ -9,7 +9,7 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
-    --azul-oscuro: #00324D;
+    --azul: #00324D;
     --azul-claro: #82DEF0;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
@@ -539,8 +539,7 @@ footer{
     .resposive__menu-ul a{
         text-decoration: none;
     }
-<<<<<<< HEAD
-=======
+
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
@@ -623,5 +622,4 @@ footer{
     .resposive__menu{
         display: none;
     }
->>>>>>> 3d21cc1a65afdf4cf202705276eaae4920521342
 }
