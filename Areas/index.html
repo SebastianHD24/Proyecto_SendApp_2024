@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="Styles/areas.css">
+    <link rel="stylesheet" href="../Inicio/Styles/StyleHome.css"> <!-- Estilos del menu y del footer -->
     <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
     <title>SendApp</title>
 </head>
 <body>
     <header id="main-header">
-        <!-- Logo-->
+        <!-- Logo SendApp-->
         <div class="logo">
             <img src="Img/LogosSena-img/SendApp.png"
             alt="SendApp Logo"/>
         </div>
-        <!--Nav Container-->
+        <!--Nav Container--> 
         <nav class="navbar">
+            <!-- Logo sena -->
+            <div class="logo-header">
+                <img src="Img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
+            </div>
             <ul class="links">
                 <li><i class="fa-solid fa-house"></i><a href="index.html">Inicio</a></li>
-                <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nostros.html">Nostros</a></li>
+                <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li>
                 <li>
                     <i class="fa-solid fa-cubes"></i><a href="#">Areas</a>
                     <ul class="areas-mas">
@@ -45,37 +53,57 @@
                     </ul>
                 </li>
                 <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a>
-                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
             </ul>
-        </nav>
-        <!-- Responsive Menu-->
-        <div class="resposive__menu">
-            <nav class="resposive__menu-nav">
-                <ul class="resposive__menu-ul">
-                    <li><i class="fa-solid fa-house"></i><a href="#">Inicio</a></li>
-                    <li><i class="fa-solid fa-user-group"></i><a href="#">Nostros</a></li>
-                    <li><i class="fa-solid fa-cubes"></i><a href="#">Areas</a></li>
-                    <li><i class="fa-solid fa-circle-info"></i><a href="#">Acerca CDITI</a></li>
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="#">Ingreso</a></li>
-                </ul>
-            </nav>
+
             <!--Menu Hamburguesa Animado-->
             <div class="bars__menu">
                 <span class="line1__bars-menu"></span>
                 <span class="line2__bars-menu"></span>
                 <span class="line3__bars-menu"></span>
             </div>
+        </nav>
+
+        <!-- Contenido Responsive Menu-->
+        <div class="resposive__menu">
+            <ul class="resposive__menu-ul">
+                <li><i class="fa-solid fa-house"></i><a href="index.html">Inicio</a></li>
+                <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nostros.html">Nosotros</a></li>
+                <li class="btn-areas">
+                    <i class="fa-solid fa-cubes"></i><a href="#">Areas</a>
+                    <div class="menu-areas">
+                        <ul class="content-areas">
+                            <li><a href="Biblioteca/index.html">Biblioteca</a></li>
+                            <li>
+                                <a href="Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
+                                <ul class="areas-bienestar">
+                                    <li><a href="Bienestar/psicologia/index.html">Psicologia</a></li>
+                                    <li><a href="Bienestar/Deportes/index.html">Deportes y cultura</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="coordinaccion/index.html">Cordinacion academica</a></li>
+                            <li><a href="administracion/index.html">Administracion educativa</a></li>
+                            <li><a href="senova/index.html">Sennova</a></li>
+                            <li><a href="fondoEmprender/index.html">Fondo emprender</a></li>
+                            <li><a href="relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                            <li><a href="serviciosTecnologicos/index.html">Servicios tecnologias</a></li>
+                            <li><a href="TecnoParque/index.html">Tecno parque</a></li>
+                            <li><a href="TecnoAcademia/index.html">Tecno academia</a></li>
+                            <li><a href="FabricaSoftware/index.html">Fabrica de software</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a></li>
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
+            </ul>
         </div>
     </header>
+
     <!-- Contenedor con las tarjetas de cada area -->
     <div class="content__areas">
         <div class="content__areas-info">
-            <article>
-                <img src="Img/LogosSena-img/Sendero.png" alt="Logo SendApp" title="Logo SendApp"/>
-                <img src="Img/LogosSena-img/Sena-Logo.png">
-            </article>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore natus, culpa ipsam similique aspernatur architecto possimus nulla excepturi iure hic rem odit laborum eos vitae fuga libero velit odio?
+                Selecciona el área con la cual deseas agendar un cita.
             </p>
         </div>
         <!-- Sección con las tarjetas-->
@@ -154,7 +182,7 @@
                     <div class="parrafos">
                         <p>Fondo Emprender</p>
                         <hr>
-                        <p>Entrepreneurship fund</p>
+                        <p>Entrepreneur<br>ship fund</p>
                     </div>
                 </article>
             </div>
@@ -191,9 +219,9 @@
                 </article>
                 <article>
                     <div class="parrafos">
-                        <p>Tecno Parque</p>
+                        <p>Tecno<br>Parque</p>
                         <hr>
-                        <p>Tecno Parque</p>
+                        <p>Tecno<br>Parque</p>
                     </div>
                 </article>
             </div>
@@ -204,9 +232,9 @@
                 </article>
                 <article>
                     <div class="parrafos">
-                        <p>Tecno Academia</p>
+                        <p>Tecno<br>Academia</p>
                         <hr>
-                        <p>Tecno Academia</p>
+                        <p>Tecno<br>Academia</p>
                     </div>
                 </article>
             </div>
@@ -219,7 +247,7 @@
                     <div class="parrafos">
                         <p>Fábrica de Software</p>
                         <hr>
-                        <p>Software Factory</p>
+                        <p>Software<br>Factory</p>
                     </div>
                 </article>
             </div>
@@ -238,25 +266,24 @@
             </div>
         </section>
     </div>
-    <footer>
-        <img src="Img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/>
-        <div class="iconos-container">
-            <!--Donde estan las redes sociales-->
-            <a href="https://www.facebook.com/SENA/" class="icono-red"></a>
-            <a href="https://www.instagram.com/senacomunica/" class="icono-red"></a>
-            <a href="https://twitter.com/SENAComunica" class="icono-red"></a>
-            <a href="https://www.youtube.com/user/SENATV" class="icono-red"></a>
-            <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" class="icono-red"></a>
-            
-        </div>
-        <ul class="footer-menu">
-            <li class="menu-item">PQRS</li>
-            <li class="menu-item">T&C</li>
-            <li class="menu-item">Derechos de autor </li>
-            <li class="menu-item">Politica de seguridad y privacidad</li>
-        </ul>
-    </footer>
+ <!-- Footer -->
+ <footer>
+    <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
+    <div class="iconos-container">
+        <!--Donde estan las redes sociales-->
+        <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+        <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+        <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+        <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+        <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+        
+    </div>
+    <ul class="footer-menu">
+
+        <li class="menu-item">@SENAComunica</li>
+    </ul>
+</footer>
 <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
-<script src="Scripts/areas.js"> </script> <!--Scripts Generales -->
+<script src="../Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
 </body>
 </html>
