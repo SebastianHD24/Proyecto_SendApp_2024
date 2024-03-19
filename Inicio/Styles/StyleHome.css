@@ -74,6 +74,7 @@ i{
     justify-items: center;
     width: 100%; /* Ocupar todo el ancho del contenedor nav */
     height: 100%; /* Ocupar todo el alto del contenedor nav */
+    background-color: var(--azul-oscuro);
 }
 
 .links li a{
@@ -539,8 +540,7 @@ footer{
     .resposive__menu-ul a{
         text-decoration: none;
     }
-<<<<<<< HEAD
-=======
+
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
@@ -623,5 +623,4 @@ footer{
     .resposive__menu{
         display: none;
     }
->>>>>>> 3d21cc1a65afdf4cf202705276eaae4920521342
 }
