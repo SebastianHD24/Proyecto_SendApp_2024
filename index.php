@@ -16,7 +16,7 @@
     <title>SendApp</title>
 </head>
 <body>
-        <?php include 'base.php' ?>
+        <?php include './bases/base.php' ?>
 
         <!-- Slider Sena -->
         <div class="slider">

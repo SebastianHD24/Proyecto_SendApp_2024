@@ -45,13 +45,15 @@
                     }
 
                         else{
-                            echo '<span> Usuario o contraseña incorrectas </span>';
+                            echo '<script> alert("Usuario o contraseña incorrectas") </script>';
+                            echo '<script>location.href = "../login-aprendices.html"</script>';
+
                         }
 
         
 
         
         }
-        echo "nooo";
+        
     
 ?>

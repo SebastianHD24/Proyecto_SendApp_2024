@@ -39,8 +39,8 @@
     
     if (mysqli_num_rows($resultDocumento) > 0) {
         // El usuario ya está registrado
-        echo "<h1>El usuario ya está registrado en la base de datos. Por favor, contacte al administrador para activar su cuenta.</h1>";
-        echo "<meta http-equiv='refresh' content='1; url=login-aprendices.html'>";
+        echo '<script>alert("El usuario ya existe, estas intentando plagiar el documento")</script>';
+        echo '<script>location.href = "login-aprendices.html"</script>';
     }else {
         if (mysqli_num_rows($result) > 0) {
             // El rol existe, continuar con la inserción
