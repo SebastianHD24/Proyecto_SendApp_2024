@@ -337,6 +337,11 @@ i{
     padding: 10px 0px 10px 0px;
 }
 
+.p__container p{
+    padding: 0px 25px 10px 25px;
+    text-align: justify;
+}
+
 .p__container a{
     color: var(--verde);
 }
@@ -633,6 +638,12 @@ footer{
 
 /*RESPONSIVE FOOTER*/
 @media screen and (max-width: 480px){
+    /*RESPONSIVE CONTENT*/
+    .p__container article img{
+        width: 75px;
+        padding: 10px 0px 10px 0px;
+    }
+
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
