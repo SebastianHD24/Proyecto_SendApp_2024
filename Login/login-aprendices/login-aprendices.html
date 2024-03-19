@@ -62,7 +62,7 @@
 
         <!-- CAMBIAR EL METODO POST EN PHP SI ES NECESARIO Y CAMBIAR LA ACCIÓN DEL FORM DEPENDIENDO DE LA NECESIDAD -->
 
-        <form action="#" class="form-login"> 
+        <form action="agregandoregistro.php" class="form-login" method="post"> 
             <div class="titulos">
                 <ul class="login-nav">
                     <li class="login-nav__item">
@@ -74,18 +74,45 @@
                 </ul>
             </div> 
             <label for="login-input-user" class="login__label">
-                Usuario
+                Documento de identidad
             </label>
-            <input id="login-input-user" class="login__input" type="text" />
+            <input id="login-input-user" class="login__input" type="number" name="documento_identidad"/>
+
             <label for="login-input-password" class="login__label">
                 Contraseña
             </label>
-            <input id="login-input-password" class="login__input" type="password" />
-            <label for="login-sign-up" class="login__label--checkbox">
-                <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
-                Acepto los términos y condiciones
+            <input id="login-input-password" class="login__input" type="text" name="contrasena"/>
+            
+            <label for="login-input-user" class="login__label">
+                Nombres
             </label>
-            <button class="login__submit" disabled>Registrarse</button>
+            <input id="login-input-user" class="login__input" type="text" name="nombres"/>
+
+            <label for="login-input-user" class="login__label">
+                Apellidos
+            </label>
+            <input id="login-input-user" class="login__input" type="text" name="apellidos"/>
+
+            <label for="login-input-user" class="login__label">
+                Correo
+            </label>
+            <input id="login-input-user" class="login__input" type="email" name="correo"/>
+
+            <label for="login-input-user" class="login__label">
+                Celular
+            </label>
+            <input id="login-input-user" class="login__input" type="text" name="celular"/>
+
+            <label for="login-input-user" class="login__label">
+                Programa opcional
+            </label>
+            <input id="login-input-user" class="login__input" type="text" name="programa"/>
+
+            <label for="login-input-user" class="login__label">
+                Ficha opcional
+            </label>
+            <input id="login-input-user" class="login__input" type="number" name="ficha"/>
+            <input class="login__submit" type="submit" value="Registrarse">
         </form>
         <div class="olvidaste">
         <a id="goToLogin" class="login__forgot">¿Ya tienes una cuenta? Inicia sesión aquí.</a> 
