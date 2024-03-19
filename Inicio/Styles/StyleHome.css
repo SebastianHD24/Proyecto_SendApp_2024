@@ -305,85 +305,14 @@ i{
     font-size: 14px;
 }
 
-/* Contenedor de imgenes en el Section */
-.container {
-    display: flex;
-    width: 90%;
-}
-
-.panel1 {
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px ;
-    color: #fff;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: flex 0.7s ease-in;
-}
-
-.panel1 h3 {
-    font-size: 24px;
-    bottom: 20px;
-    left: 30px;
-    margin: 0;
-    opacity: 0;
-}
-
-.panel1.active {
-    flex: 5;
-}
-
-.panel1.active h3 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-    display: block;
-    position: absolute;
-}
-
-.panel1 img{
-    border-radius: 50px;
-}
-
-@media (max-width: 480px) {
-    .container {
-    width: 90%;
-    }
-
-    .panel1:nth-of-type(4),
-    .panel1:nth-of-type(5) {
-    display: none;
-}
-
-.panel1 {
-    width: 100%;
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px ;
-    color: #fff;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px; 
-    position: relative;
-    transition: flex 0.7s ease-in;
-
-}
-}
-
 /* Contenedor de parrafos en el section */
 .content__parrafos-links{
     width: 100%;
     height: 100%;
     font-size: 14px;
-    /* display: grid;
-    grid-template-columns: repeat( minmax(250px, 1fr));
-    grid-template-rows: 1fr; */
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
     padding: 5px;
     gap: 15px; 
     text-align: justify;
@@ -504,8 +433,16 @@ footer{
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 480px){
+
+/* -----responsive menu hambuerguesa -----*/
+
+@media (max-width: 655px){
+
     .navbar{
+        justify-content: space-between;
+    }
+
+    .links{
         display: none;
     }
 
@@ -514,14 +451,27 @@ footer{
         display: block;
         right: 5px;
     } 
+    
+    .logo-header{
+        display: block;
+    }
 
     .resposive__menu{
-        width: 100%;
         display: flex;
+        position: absolute;
+        right: 0;
+        top: 86px;
+        width: 400px;
+        height: 0;
+        background-color: var(--azul);
         justify-content: center;
         align-items: center;
-        background-color: var(--gris-claro);
-        padding: 12px 0px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .resposive__menu.open{
+        height: 250px;
     }
 
     .resposive__menu-ul{
@@ -536,10 +486,153 @@ footer{
         padding: 8px 0px;
         gap: 5px;
     }
+
     .resposive__menu-ul a{
         text-decoration: none;
+        color: var(--blanco);
     }
-    
+
+    .resposive__menu-ul a:hover{
+        color: var(--verde);
+    } 
+
+/* estilos para las areas en el menu hamburguesa */
+
+    .menu-areas{
+        display: none;
+        position: absolute;
+        right: 5px;
+        top: 40px;
+        width: 170px;
+        height: 250;
+        background-color: var(--negro);
+        opacity: 0.8;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 10px;
+        border: 1px solid var(--verde);
+    }
+
+    .menu-areas.abrirCer{
+        display: block;
+    }
+
+    .content-areas li{
+        padding: 2px;
+    }
+
+    .content-areas li a{
+        color: var(--blanco);
+    }
+}
+
+@media (max-width: 550px){
+
+    .resposive__menu{
+        width: 450px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .resposive__menu{
+        width: 100%;
+    }
+}
+/* --------------------------------------------------- */
+
+
+
+
+
+/* responsive general */
+@media (min-width: 1370px){
+    /* .content__parrafos-links{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    } */
+
+    .content__parrafos-links{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: 1fr;
+        padding: 5px;
+        gap: 15px; 
+        text-align: justify;
+    }
+
+    .p__container p{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1615px){
+
+    .content__parrafos-titulos{
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* .content__parrafos-links{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    } */
+
+    .content__parrafos-links{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-rows: 1fr;
+        padding: 5px;
+        gap: 15px; 
+        text-align: justify;
+    }
+
+    .p__container p{
+        font-size: 17px;
+    }
+}
+
+
+@media (min-width: 1720px){
+    /* .content__parrafos-links{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    } */
+
+    .content__parrafos-links{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-rows: 1fr;
+        padding: 5px;
+        gap: 15px; 
+        text-align: justify;
+    }
+
+    .p__container p{
+        font-size: 18px;
+    }
+}
+
+/*RESPONSIVE FOOTER*/
+@media screen and (max-width: 480px){
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
@@ -555,8 +648,6 @@ footer{
         font-family: "Work Sans", sans-serif;
         font-weight: bold;
     }
-    
-
     
     /*links de los iconos de las redes sociales y el footer como tal*/
     .iconos-container{
@@ -617,9 +708,5 @@ footer{
     }
     .menu-item:hover{
         opacity: 1;
-    }
-    
-    .resposive__menu{
-        display: none;
     }
 }
