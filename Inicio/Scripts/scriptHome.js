@@ -25,7 +25,6 @@ window.addEventListener('click', function(e) {
 });
 
 //Menu Hamburguesa -------------------------------------------------------------------------------------------------
-
 // barra menu hamburguesa
 const animacion = document.querySelector(".bars__menu").addEventListener("click", animarBar);
 
