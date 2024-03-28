@@ -13,6 +13,9 @@
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="Inicio/Styles/StyleHome.css">
     <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>SendApp</title>
 </head>
 <body>
@@ -75,6 +78,7 @@
         </div>
     </header>
 
+
         <!-- Slider Sena -->
         <div class="slider">
             <ul>
@@ -85,8 +89,71 @@
         
             </ul>
         </div>
+        <div class="acesibilidad">
+        <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
+        <input type="checkbox" id="toggle">
+        <!------->
+        <label for="toggle2" id="label_toggle2"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle3" id="label_toggle3"><i class="fa-solid fa-magnifying-glass-minus"></i></label>
+        <input type="checkbox" id="toggle2">
+        <!---->
+        <label for="toggle4" id="label_toggle4"><i class="fa-solid fa-chevron-up"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle5" id="label_toggle5"><i class="fa-solid fa-chevron-down"></i></label>
+        <input type="checkbox" id="toggle">
 
+        </div>
     <!-- Contenido -->
+        <div class="content">
+            <section>
+                <div class="content__parrafos-titulos">
+                    <h1>Bienvenido a SendApp</h1> 
+                    <h2>EL sitio Web Ofcial del Centro De Diseño e Innovación Tecnólogica Industrial</h2>
+                    <p>¿Que podrás encontrar aquí?</br>
+                        Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formacion, sus principales areas y servicios.
+                    </p>
+                </div>
+                    <p style="color: red;"> Espacio para el nuevo slider </p>
+                        <!--Contenddor de Parrafos-->
+                        <div class="content__parrafos-links">
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Inoco De Areas">
+                                </article>                         
+                                <p>
+                                    En el menú de navagación en el apartado de <b><a href="">Areas</a></b> puedes encontrar la información referente a cada una de las areas y sus respectivos servicios.</br><b>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de Aprendíz Sena</b>
+                                </p>
+                            </div>
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/communicate_2343723.png" alt="Inoco De informacion">
+                                </article> 
+                                <p>
+                                    Aún así si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la informacion necesaria en <b><a href="">Acerca CDITI</a></b>
+                                </p>
+                            </div>
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/training_12343284.png" alt="Inoco De Nosotros">
+                                </article> 
+                                <p>
+                                    Si te intera saber un poco más sobre nosotros y el ¿Por qué? fue creado este sitio web puedes visitar el apartado de <b><a href="">Nosotros</a></b>
+                                </p>
+                            </div>
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/calendar_2693507.png" alt="Inoco de Agenda">
+                                </article> 
+                                <p>
+                                    Sí eres aprendíz Sena y necesitas agendar una cita para algun servicio del Centro de Diseño e Innovacion Tecnólogica Industrial recuerda insgresar con tus datos de Sofia en <b><a href="">Ingreso</a></b>
+                                </p>
+                            </div>
+                        </div>
+            </section>
+        </div>
         <div class="content">
             <section>
                 <div class="content__parrafos-titulos">
@@ -154,4 +221,8 @@
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
     <script src="Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
 </body>
+<script src="./Inicio/Scripts/scriptcontraste.js"></script>
+<script src="./Inicio/Scripts/Zoom.js"></script>
+<script src="./Inicio/Scripts/SubirBajar.js"></script>
+
 </html>
