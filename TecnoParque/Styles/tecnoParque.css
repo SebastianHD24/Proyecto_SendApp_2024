@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-family: 1.2rem;
+}
+
+/*titulo sennova*/
+.titulo{
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--fuente-principal);
+}
+
+/*subtitulos*/
+.subtitulos{
+    font-size: 25px;
+    font-family: var(--fuente-principal);
+    text-align: left;
+    margin-top: 50px;
+}
+
+/*contenido de el div tecnoparque*/
+.tecnoparque{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.tecnoparque section{
+    width: 100%;
+    padding: 0px 60px;
+
+}
+
+/* listas ordenadas y desordenadas */
+ol, ul{
+    padding: 30px;
+}
+
+.tecnoparque p{
+    text-align: justify;
+    margin-top: 10px;
+    font-family: var(--fuente-principal);
+    line-height: 30px;
+}
+.tecnoparque img{
+    width: 40%;
+}
+
+.logo_tecnoparque{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.foto1{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;   
+}
+
+.foto1 img{
+    box-shadow: #070001 1px 1px 15px; 
+    border-radius: 10px;
+    filter: brightness(90%);
+}
+
+.foto1 :hover{
+    filter: brightness(100%);
+}
