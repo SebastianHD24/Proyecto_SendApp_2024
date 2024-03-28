@@ -1,11 +1,6 @@
 <?php
-    $servername = "localhost";
-    $database = "sendapp";
-    $username = "root";
-    $password = "";
-
-    //Creando conexion
-    $conn = mysqli_connect($servername, $username, $password, $database);
+    include("../conexion.php");
+    $conn = connection();
 
     //chequeando la conexion
     if (!$conn) {

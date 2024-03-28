@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamiento de Citas</title>
+</head>
+<body>
+    <h1>Agendamiento de Citas</h1>
+    <form action="registrar_cita.php" method="post">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required><br><br>
+
+        <label for="documento_usuario">Documento(C.C):</label><br>
+        <input id="documento_usuario" name="documento_usuario" type="number"><br><br>
+
+        <label for="id_servicio">Servicio:</label><br>
+        <input id="descripcion" name="id_servicio" type="number"><br><br>
+
+        <input type="submit" value="Agendar Cita">
+    </form>
+</body>
+</html>
