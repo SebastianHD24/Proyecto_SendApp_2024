@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendApp</title>
+
+    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS CSS -->
+    <link rel="stylesheet" href="Inicio/Styles/StyleHome.css">
+    <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+</head>
+<body>
+    
+    <?php include './bases/header.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredear-->
+        <!-- Slider Sena -->
+        <div class="slider">
+            <ul>
+                <li><img src="./Inicio/Img-home/Slider-img/img1.jpg" alt="imagen1"></li>
+                <li><img src="./Inicio/Img-home/Slider-img/img2.png" alt="imagen2"></li>
+                <li><img src="./Inicio/Img-home/Slider-img/img3.png" alt="imagen3"></li>
+                <li><img src="./Inicio/Img-home/Slider-img/img4.png" alt="imagen4"></li>
+        
+            </ul>
+        </div>
+
+    <!-- Contenido -->
+        <div class="content">
+            <section>
+                <div class="content__parrafos-titulos">
+                    <h1>Bienvenido a SendApp</h1> 
+                    <h2>EL sitio Web Ofcial del Centro De Diseño e Innovación Tecnólogica Industrial</h2>
+                    <p>¿Que podrás encontrar aquí?</br>
+                        Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formacion, sus principales areas y servicios.
+                    </p>
+                </div>
+                    <p style="color: red;"> Espacio para el nuevo slider </p>
+                        <!--Contenddor de Parrafos-->
+                        <div class="content__parrafos-links">
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Inoco De Areas">
+                                </article>                         
+                                <p>
+                                    En el menú de navagación en el apartado de <b><a href="Areas/index.html">Areas</a></b> puedes encontrar la información referente a cada una de las areas y sus respectivos servicios.</br><b>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de Aprendíz Sena</b>
+                                </p>
+                            </div>
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/communicate_2343723.png" alt="Inoco De informacion">
+                                </article> 
+                                <p>
+                                    Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la informacion necesaria en <b><a href="">Acerca CDITI</a></b>
+                                </p>
+                            </div>
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/training_12343284.png" alt="Inoco De Nosotros">
+                                </article> 
+                                <p>
+                                    Si te intera saber un poco más sobre nosotros y el ¿Por qué? fue creado este sitio web puedes visitar el apartado de <b><a href="">Nosotros</a></b>
+                                </p>
+                            </div>
+                            <div class="p__container">
+                                <article>
+                                    <img src="Inicio/Img-home/Section-Img/calendar_2693507.png" alt="Inoco de Agenda">
+                                </article> 
+                                <p>
+                                    Sí eres aprendíz Sena y necesitas agendar una cita para algun servicio del Centro de Diseño e Innovacion Tecnólogica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="Login/login-aprendices/login-aprendices.html">Ingreso</a></b>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------ Nosotros -------------------------- -->
+                    <div class="container_nostros">
+                        <div class="section-escudo_bandera">
+                            <div class="escudo">
+                            <h1>Escudo y Bandera</h1>
+                            <p>
+                                El escudo y la bandera del SENA, fueron diseñados a comienzos de la creación de nuestra institución, reflejan los tres sectores económicos dentro de los cuales se ubica el accionar de la institución: el piñón, representativo del sector industria; el caduceo, asociado al de comercio y servicios; y el café, ligado al primario y extractivo.SENA
+                            </p>
+                            </div>
+                            <div class="img_escudo">
+                            <img src="./Inicio/Img-home/Section-Img/escudo.png" alt="Escudo Sena">
+                            </div>
+                        </div>
+                            <!-- ---------------------------------------------------------- -->
+                        <div class="section-logosimbolo">
+                            <div>
+                                <img src="./Inicio/Img-home/Section-Img/logo1.png" alt="Logo Sena">
+                            </div>
+                            <div class="logosimbolo">
+                            <h1>Logosímbolo</h1>
+                            <p>
+                                El logosímbolo muestra de forma gráfica la síntesis los enfoques de la formación que impartimos en la que el individuo es el responsable de su propio proceso de aprendizaje.
+                                SENA
+                                A</p>
+                            </div>
+                            
+                        </div>
+                        <!-- ----------------------------------------- ------------------>
+                        <div class="section2">
+                            <div class="mision_vision">
+                                <h1>Misión</h1>
+                                <p>EL SENA está encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la formación profesional integral, para la incorporación y el desarrollo de las personas en actividades productivas que contribuyan al desarrollo social, económico y tecnológico del país.
+                                    Visión</p><br>
+            
+                                <h1>Visión</h1>
+                                <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regio- nes como contribución a una Colombia educada, equitativa y en paz.</p>
+            
+                            </div>
+                            <div class="imagen_mision_vision">
+                                <img src="./Inicio/Img-home/Section-Img/img1.jfif" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                        <!-- --------------------------------------- Info CDITI ------------------------------ -->
+
+        <div class="container_info">
+            <div class="section-1">
+                <h1>CDITI Informa</h1>
+                <p>La estrategia CDITINFORMA está alineada con los objetivos y valores del SENA, por tanto es la brújula que guiará el camino para invertir los recursos sin improvisar y por el contrario, ejecutando lo planificado de forma real y aterrizada. Ese crecimiento controlado se verá reflejado en la ampliación de la cobertura toda vez que la visibilización del Centro llevará a mostrar a la Regional Risaralda como la pionera en Contenidos Digitales. Para canalizar los esfuerzos y energías en el mismo objetivo, bajo los lineamientos de la oficina de Comunicaciones de la Regional Risaralda, se crea el progama CDITINFORMA como una estrategia pedagógica de la Agencia de Contenidos Digitales en la cual son los mismos aprendices los encargados de visibilizar las acciones y actividades realizadas por el Centro, al tiempo que ponen en práctica lo aprendido. Con lo anterior, es importante entender cuál es el Mensaje Comunicativo que se divulgará y cuál es la audiencia a la que llegará. </p>
+                <img src="./Inicio/Img-home/Section-Img/img2.JPG" alt="">
+            </div>
+        <div class="recuadros-info">
+            <div class="section-2">
+                <h2>Contrato de arrendamiento</h2>
+                <img src="./Inicio/Img-home/Section-Img/1.jpeg" alt="Datos presupuesto">
+            </div>
+            <div class="section-3">
+                <h2>Compra de materias formación de áre automotriz</h2>
+                <img src="./Inicio/Img-home/Section-Img/2.jpeg" alt="Datos presupuesto">
+            </div>
+            <div class="section-4">
+                <h2>Compra de materia Programas Fic</h2>
+                <img src="./Inicio/Img-home/Section-Img/3.jpeg" alt="Datos presupuesto">
+            </div>
+            <div class="section-5">
+                <h2>Adecuación para la modernización del ambiente del área de contenidos digitales</h2>
+                <img src="./Inicio/Img-home/Section-Img/4.jpeg" alt="Datos presupuesto">
+            </div>
+            <div class="section-6">
+                <h2>Contrato de suministro de gases para el área de soldaduray refrigeración</h2>
+                <img src="./Inicio/Img-home/Section-Img/5.jpeg" alt="Datos presupuesto">
+            </div>
+            <div class="section-7">
+                <h2>Compra de materiales de formación para el área de confecciones.</h2>
+                <img src="./Inicio/Img-home/Section-Img/6.jpeg" alt="Datos presupuesto">
+            </div>
+        </div>
+        
+        </div>
+    </section>
+        </div>
+            <!-- Footer -->
+            <footer>
+                <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
+                <div class="iconos-container">
+                    <!--Donde estan las redes sociales-->
+                    <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+                    <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+                    <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+                    
+                </div>
+                <ul class="footer-menu">
+
+                    <li class="menu-item">@SENAComunica</li>
+                </ul>
+            </footer>
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
+    <script src="Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
+</body>
+</html>
