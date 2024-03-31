@@ -20,9 +20,9 @@
         $contrasena = $_POST['contrasena'];
         $estado = 1;
 
-        $consulta1 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena' and id_rol = 1 and estado = $estado " ); //rol del administarador
-        $consulta2 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena' and id_rol = 2 and estado = $estado " ); //rol de funcionario
-        $consulta3 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena' and id_rol = 3 and estado = $estado " ); //rol de aprendiz
+        $consulta1 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena' and estado = $estado and id_rol = (SELECT id_rol FROM roles WHERE nombre_rol = 'administrador') " ); //rol del administarador
+        $consulta2 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena' and estado = $estado and id_rol = (SELECT id_rol FROM roles WHERE nombre_rol = 'funcionario') " ); //rol de funcionario
+        $consulta3 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena' and estado = $estado and id_rol = (SELECT id_rol FROM roles WHERE nombre_rol = 'aprendiz') " ); //rol de aprendiz
         $error_existencia = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena'  and estado != $estado" ); // Error de estado inactivo
 
         if (mysqli_fetch_array($consulta1)>0) {
