@@ -4,67 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <link rel="shortcut icon" href="Img/LogosSena-img/Sena-Logo.png"> <!-- Icono de la ventana -->
     <title>SendApp</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/Inicio/Styles/StyleHome.css">
-    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"> </script>
-</head>
 
+    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS CSS -->
+    <link rel="stylesheet" type="text/css" href="Styles/tecnoParque.css"> <!-- Estilos de Tecno Parque--> 
+    <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!-- Estilos del Header-->
+    <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!-- Estilos del Footer-->
+
+</head>
 <body>
     <header id="main-header">
-        <!-- Logo-->
+        <!-- Logo SendApp-->
         <div class="logo">
-            <img src="./img pagina principal/SendApp.png" alt="SendApp Image">
+            <img src="img/LogosSena-img/SendApp.png"
+            alt="SendApp Logo"/>
         </div>
+        <!--Nav Container--> 
         <nav class="navbar">
-            <!-- <img id="img-logo" src=".//img pagina principal/logo1.png" alt=""> -->
+            <!-- Logo sena -->
+            <div class="logo-header">
+                <img src="img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
+            </div>
             <ul class="links">
-                <li><i class="fa-solid fa-house"></i><a href="../Pangina principal/index.html">Inicio</a></li>
-                <li><i class="fa-solid fa-user-group"></i><a href="#">Nosotros</a></li>
+                <li><i class="fa-solid fa-house"></i><a href="../index.html">Inicio</a></li>
                 <li>
-                    <i class="fa-solid fa-cubes"></i><a href="#">Areas</a>
+                    <i class="fa-solid fa-cubes"></i><a href="../Areas/index.html">Areas</a>
                     <ul class="areas-mas">
                         <li><a href="../Biblioteca/index.html">Biblioteca</a></li>
                         <li>
                             <a href="../Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
                             <ul class="areas-bienestar">
                                 <li><a href="../Bienestar/psicologia/index.html">Psicologia</a></li>
-                                <li><a href="../Bienestar/Deportes/index.html">Deportes y cultura</a></li>
+                                <li><a href="../Bienestar/">Deportes y cultura</a></li>
                             </ul>
                         </li>
                         <li><a href="../coordinaccion/index.html">Cordinacion academica</a></li>
-                        <li><a href="../administracion/index.html">Administracion educativa</a></li>
+                        <li><a href="../coordinaccion/index.html">Administracion educativa</a></li>
                         <li><a href="../senova/index.html">Sennova</a></li>
-                        <li><a href="../fondoEmprender/index.html">Fondo emprender</a></li>
-                        <li><a href="../relacionesCorporativas/index.html">Relaciones corporativas</a></li>
-                        <li><a href="../serviciosTecnologicos/index.html">Servicios tecnologicos</a></li>
+                        <li><a href="../relacionesCorporativas/">Fondo emprender</a></li>
+                        <li><a href="../serviciosTecnologicos/">Relaciones corporativas</a></li>
+                        <li><a href="../serviciosTecnologicos/index.html">Servicios tecnologias</a></li>
                         <li><a href="../TecnoParque/index.html">Tecno parque</a></li>
-                        <li><a href="../TecnoAcademia/index.html">Tecno academia</a></li>
-                        <li><a href="../FabricaSoftware/index.html">Fabrica de software</a></li>
+                        <li><a href="../TecnoAcademia/">Tecno academia</a></li>
+                        <li><a href="../FabricaSoftware/">Fabrica de software</a></li>
                     </ul>
                 </li>
-                <li><i class="fa-solid fa-circle-info"></i><a href="#">Informacion CDITI</a>
-                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="#">Ingreso</a></li>
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
             </ul>
-        </nav>
-        <!--Menu Hamburguesa Animado-->
-        <div class="bars__menu">
-            <span class="line1__bars-menu"></span>
-            <span class="line2__bars-menu"></span>
-            <span class="line3__bars-menu"></span>
-        </div>
-        <div class="resposive__menu">
-            <nav class="menu__nav-responsive">
 
-            </nav>
+            <!--Menu Hamburguesa Animado-->
+            <div class="bars__menu">
+                <span class="line1__bars-menu"></span>
+                <span class="line2__bars-menu"></span>
+                <span class="line3__bars-menu"></span>
+            </div>
+        </nav>
+
+        <!-- Contenido Responsive Menu-->
+        <div class="resposive__menu">
+            <ul class="resposive__menu-ul">
+                <li><i class="fa-solid fa-house"></i><a href="../index.html">Inicio</a></li>
+                <li class="btn-areas">
+                    <i class="fa-solid fa-cubes"></i><a href="../Areas/index.html">Areas</a>
+                </li>
+
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
+            </ul>
         </div>
     </header>
+
     <div class="tecnoparque">
         <section>
-            <article class="logo_tecnoparque"><img src="img pagina principal/logo _tecnoparque.png" alt="logo"></article>
-            <h1 class="titulo">Tecnoparque</h1>
+            <article class="logo_tecnoparque"><img src="Img/TencoParque-img/logo _tecnoparque.png" alt="logo TecnoParque"></article>
+            <h1 class="titulo">TecnoParque</h1>
 
             <div class="contenido">
                 <h3 class="subtitulos">¿Qué es Tecnoparque?</h3>
@@ -84,10 +102,9 @@
                     </div>
 
                     <div class="foto1">
-                        <img src="img pagina principal/tecnoparque1.png" alt="foto1">
+                        <img src="Img/TencoParque-img/tecnoparque1.png" alt="Emprendimineto">
                     </div>
                 </div>
-                
             </div>
             
             <div class="contenido">
@@ -124,7 +141,7 @@
                 </p>
 
                 <h3 class="subtitulos">¿Qué beneficios se pueden obtener de los servicios que ofrecen?</h3>
-
+                
                 <ol class="l_ordenada">
                     <li>
                         Infraestructura y espacio de trabajo: Acceso a instalaciones modernas y equipadas con tecnología de punta, 
@@ -157,6 +174,7 @@
                         mercados internacionales, programas de intercambio y cooperación internacional.
                     </li>
                 </ol>
+                
             </div>
             
             <div class="contenido_lineas">
@@ -165,7 +183,7 @@
                 <div class="lineas">
                     <div class="linea1">
                         <div class="logo_lineas">
-                            <img src="img pagina principal/ingenieria.png" alt="piñon">
+                            <img src="Img/TencoParque-img/ingenieria.png" alt="piñon">
                         </div>
                         <strong>Ingenieria y Diseño:</strong>
                         <p>
@@ -183,7 +201,7 @@
 
                     <div class="linea2">
                         <div class="logo_lineas" >
-                            <img src="img pagina principal/biotecnologia.png" alt="matraz">
+                            <img src="Img/TencoParque-img/biotecnologia.png" alt="matraz">
                         </div>
                         
                         <strong>Biotecnología y Nanotecnología</strong>
@@ -205,7 +223,7 @@
 
                     <div class="linea3">
                         <div  class="logo_lineas">
-                            <img src="img pagina principal/electronica.png" alt="circuito">
+                            <img src="Img/TencoParque-img/electronica.png" alt="circuito">
                         </div>
                         
                         <strong>Electrónica y telecomunicaciones</strong>
@@ -228,7 +246,7 @@
 
                     <div class="linea4">
                         <div  class="logo_lineas" >
-                            <img src="img pagina principal/realidad_virtual.png" alt="virtualidad">
+                            <img src="Img/TencoParque-img/realidad_virtual.png" alt="virtualidad">
                         </div>
                         
                         <strong>Tecnologías virtuales</strong>
@@ -268,7 +286,7 @@
                 </p>
 
                 <h3 class="subtitulos">Requisitos para ingresar a Tecnoparque</h3>
-
+                
                 <ol class="l_ordenada">
                     <li>
                         Debes tener un proyecto o una idea clara relacionada con la tecnología, la innovación o un emprendimiento que pueda 
@@ -297,25 +315,24 @@
             <br>
         </section>
     </div>
+            <!-- Footer -->
+            <footer>
+                <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
+                <div class="iconos-container">
+                    <!--Donde estan las redes sociales-->
+                    <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+                    <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+                    <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+                    
+                </div>
+                <ul class="footer-menu">
 
-    <!-- Footer -->
-    <footer>
-        <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
-        <div class="iconos-container">
-            <!--Donde estan las redes sociales-->
-            <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
-            <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
-            <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
-            <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
-            <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
-            
-        </div>
-        <ul class="footer-menu">
-
-            <li class="menu-item">@SENAComunica</li>
-        </ul>
-    </footer>
-
+                    <li class="menu-item">@SENAComunica</li>
+                </ul>
+            </footer>
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
+    <script src="Scripts/tecnoParque.js"> </script> <!--Scripts Generales -->
 </body>
-
 </html>
