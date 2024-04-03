@@ -14,24 +14,25 @@
     
 
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../Inicio/Styles/StyleHome.css"> <!-- Estilos del nav -->
-    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"> </script>
+    <link rel="stylesheet" type="text/css" href="deportes.css"> <!--Estilos de Deportes -->
+    <link rel="stylesheet" type="text/css" href="../../Styles/header.css"> <!-- Estilos del header -->
+    <link rel="stylesheet" type="text/css" href="../../Styles/footer.css"> <!-- Estilos del footer -->
+    <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
+
 </head>
 
 <body>
     <header id="main-header">
         <!-- Logo SendApp-->
         <div class="logo">
-            <img src="img/LogosSena-img/SendApp.png"
+            <img src="Img/LogosSena-img/SendApp.png"
             alt="SendApp Logo"/>
         </div>
         <!--Nav Container--> 
         <nav class="navbar">
             <!-- Logo sena -->
             <div class="logo-header">
-                <img src="img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
+                <img src="Img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
             </div>
             <ul class="links">
                 <li><i class="fa-solid fa-house"></i><a href="../index.html">Inicio</a></li>
@@ -80,6 +81,25 @@
             </ul>
         </div>
     </header>
+     <!--accesibilidad-->								
+     <div class="acesibilidad">
+        <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
+        <input type="checkbox" id="toggle">
+        <!------->
+        <label for="toggle2" id="label_toggle2"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle3" id="label_toggle3"><i class="fa-solid fa-magnifying-glass-minus"></i></label>
+        <input type="checkbox" id="toggle2">
+        <!---->
+        <label for="toggle4" id="label_toggle4"><i class="fa-solid fa-chevron-up"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle5" id="label_toggle5"><i class="fa-solid fa-chevron-down"></i></label>
+        <input type="checkbox" id="toggle">
+
+        </div>
+
     <div class="sennova">
         <section>
             <h1 class="titulo">Deportes y Cultura</h1>
@@ -103,7 +123,25 @@
                 });</script>
         </section>
     </div>
-
+                <!-- Footer -->
+                <footer>
+                    <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
+                    <div class="iconos-container">
+                        <!--Donde estan las redes sociales-->
+                        <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+                        <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+                        <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+                        <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+                        <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+                        
+                    </div>
+                    <ul class="footer-menu">
+    
+                        <li class="menu-item">@SENAComunica</li>
+                    </ul>
+                </footer>
+    <script src="deportes.js"></script>
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>
+    <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
-
 </html>
