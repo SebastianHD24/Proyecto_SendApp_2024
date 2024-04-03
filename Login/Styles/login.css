@@ -186,15 +186,11 @@ body {
 	cursor: pointer;
 }
 
-.login__submit:hover {
-	background-color: var(--azul);
-}
-
 .login__forgot {
 	display: block;
 	margin-top: 3rem;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.75);
+	color: var(--verde);
 	font-size: .75rem;
 	text-decoration: none;
 	position: relative;

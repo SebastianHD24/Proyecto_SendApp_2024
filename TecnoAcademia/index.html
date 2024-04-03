@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="Styles/academia.css"> <!--Estilos de Tecno Academia -->
     <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!--Estilos del Header -->
     <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!--Estilos del Footer -->
+    <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
 </head>
 <body>
     <header id="main-header">
@@ -77,6 +78,24 @@
             </ul>
         </div>
     </header>
+     <!--accesibilidad-->								
+    <div class="acesibilidad">
+        <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
+        <input type="checkbox" id="toggle">
+        <!------->
+        <label for="toggle2" id="label_toggle2"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle3" id="label_toggle3"><i class="fa-solid fa-magnifying-glass-minus"></i></label>
+        <input type="checkbox" id="toggle2">
+        <!---->
+        <label for="toggle4" id="label_toggle4"><i class="fa-solid fa-chevron-up"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle5" id="label_toggle5"><i class="fa-solid fa-chevron-down"></i></label>
+        <input type="checkbox" id="toggle">
+    </div>
+
     <div class="tecnoacademia">
         <section>
             <h1 class="titulo">TecnoAcademia</h1>
@@ -150,42 +169,47 @@
                     <a href="https://tecnoacademiarisaralda.com/" target="_blank" rel="noopener noreferrer">www.tecnoacademiarisaralda.com</a>
                     seleccionar la linea de formación de su interés y hacer la preinscripción.
                 </p>
+            </div>
 
-                <h3 class="subtitulos">¿Qué beneficios se pueden obtener de los servicios que ofrecen?</h3>
-                <p>
-                    <ol>
-                        <li>
-                            Adquisición de habilidades tecnológicas.
-                        </li>
-                        <li>
-                            Fomento del espiritu emprendedor.
-                        </li>
-                        <li>
-                            Networking y colaboracion.
-                        </li>
-                        <li>
-                            Acceso a recursos y oportunidades adicionales.                        
-                        </li>
-                    </ol>
-                </p>
+            <div class="beneficios_lineas">    
+                <div class="ben_lin1">
+                    <h3 class="subtitulos">¿Qué beneficios se pueden obtener de los servicios que ofrecen?</h3>
+                    <p>
+                        <ol>
+                            <li>
+                                Adquisición de habilidades tecnológicas.
+                            </li>
+                            <li>
+                                Fomento del espiritu emprendedor.
+                            </li>
+                            <li>
+                                Networking y colaboracion.
+                            </li>
+                            <li>
+                                Acceso a recursos y oportunidades adicionales.                        
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="ben_lin2">
+                    <h3 class="subtitulos">Lineas de formación de Tecnoacademia</h3>
+                    <p>
+                        Las lineas de formación que ofrece tecnoacademia son:
+                        <br>
+                        <ol>
+                            <li>Matemáticas y Diseño</li>
+                            <li>Física</li>
+                            <li>Química</li>
+                            <li>Nanotecnología</li>
+                            <li>Biotecnología</li>
+                            <li>TICS y videojuegos</li>
+                            <li>Robótica y electrónica</li>
+                        </ol>
+                    </p>
+                </div>
             </div>
             
             <div class="contenido">
-                <h3 class="subtitulos">Lineas de formación de Tecnoacademia</h3>
-                <p>
-                    Las lineas de formación que ofrece tecnoacademia son:
-                    <br>
-                    <ol>
-                        <li>Matemáticas y Diseño</li>
-                        <li>Física</li>
-                        <li>Química</li>
-                        <li>Nanotecnología</li>
-                        <li>Biotecnología</li>
-                        <li>TICS y videojuegos</li>
-                        <li>Robótica y electrónica</li>
-                    </ol>
-                </p>
-
                 <h3 class="subtitulos">¿Para quienes está dirigido el Tecnoacademia?</h3>
                 <p>
                     El programa está dirigido a estudiantes de educación básica secundaria y media academica.
@@ -253,6 +277,7 @@
             </footer>
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
     <script src="Scripts/academia.js"> </script> <!--Scripts Generales -->
+    <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 
 </html>
