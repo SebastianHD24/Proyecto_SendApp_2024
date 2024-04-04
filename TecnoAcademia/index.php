@@ -170,6 +170,3 @@
     <?php startblock('scripts') ?>
         <script src="Scripts/academia.js"> </script> <!--Scripts Generales -->
     <?php endblock() ?>
-</body>
-
-</html>

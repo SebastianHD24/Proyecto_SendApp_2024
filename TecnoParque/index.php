@@ -225,5 +225,3 @@
         <script src="./Scripts/tecnoParque.js"> </script> <!--Scripts Generales -->
     <?php endblock() ?>
 
-</body>
-</html>
