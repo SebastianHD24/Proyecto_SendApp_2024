@@ -28,13 +28,13 @@ body{
     font-family: var(--fuente-open-sans);
 }
 /*subtitulos*/
- .subtitulos{
+.subtitulos{
     font-family: var(--fuente-open-sans);
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 /*contenido de el div senova*/
-.sennova{
+.deportes{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -42,14 +42,14 @@ body{
     align-items: center;
 
 }
-.sennova section{
+.deportes section{
     width: 100%;
     padding: 80px;
 
 }
-.sennova p{
+.deportes p{
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: var(--fuente-poppins);
     line-height: 30px;
 }
