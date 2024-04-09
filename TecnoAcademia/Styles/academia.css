@@ -8,7 +8,7 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
-    --azul-oscuro: #00324D;
+    --azul: #00324D;
     --azul-claro: #82DEF0;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
@@ -22,24 +22,26 @@ body{
 
 /*titulo sennova*/
 .titulo{
-    font-size: 35px;
+    font-size: 4rem;
     text-align: center;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 /*subtitulos*/
  .subtitulos{
     font-size: 25px;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: left;
-    margin-top: 50px;
+    margin-top: 30px;
 }
-/*contenido de el div senova*/
+/*contenido de el div tecnoacademia*/
 .tecnoacademia{
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 
 }
 .tecnoacademia section{
@@ -47,10 +49,20 @@ body{
     padding: 60px;
 
 }
+
+.l_desordenada, .l_ordenada{
+    padding: 15px 30px 15px 30px;
+}
+
+.l_ordenada li, .l_desordenada li{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
 .tecnoacademia p{
     text-align: justify;
     margin-top: 10px;
-    font-family: var(--fuente-poppins);
+    font-family: var(--fuente-principal);
     line-height: 30px;
 }
 /* .tecnoacademia img{
