@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../../../project/Proyecto_SendApp_2024/Styles/header.css"> <!-- Estilos del Header-->
     <link rel="stylesheet" type="text/css" href="../../../project/Proyecto_SendApp_2024/Styles/footer.css"> <!-- Estilos del Footer-->
     <title>Tecno Parque</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?> <!--Inicio bloque contenido-->
@@ -222,7 +223,8 @@
            
     
     <?php startblock('scripts') ?>
-        <script src="./Scripts/tecnoParque.js"> </script> <!--Scripts Generales -->
+        <script src="./Scripts/tecnoParque.js"> </script>
+        <script src="../Inicio/Scripts/inactividad.js"></script> <!--Scripts Generales -->
     <?php endblock() ?>
 
 </body>

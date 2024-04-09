@@ -133,9 +133,10 @@
         </ul>
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
-
+    <script></script>
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
-    <script src="Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
+    <script src="Inicio/Scripts/scriptHome.js"></script>
+    <!--Scripts Generales -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

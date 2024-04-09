@@ -1,6 +1,6 @@
 
 <?php include '../Proyecto_SendApp_2024/bases/header.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredear-->
-
+     
     <!--Bloque para agregar las rutas de stylos independientes de cada archivo y links adicionales para archivos propios-->
     <?php startblock('links-styles') ?>
         <link rel="stylesheet" href="Inicio/Styles/StyleHome.css">
@@ -237,5 +237,4 @@
         </section>
     </div>
     
-    <?php endblock() ?> <!--Fin bloque de contenido-->
-           
+    <?php endblock() ?> <!--Fin bloque de contenido-->   
