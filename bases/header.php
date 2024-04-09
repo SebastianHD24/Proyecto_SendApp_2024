@@ -14,7 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- ESTILOS CSS -->
-    <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <link rel="shortcut icon" href="../../../project/Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <link rel="stylesheet" href="../../../project/Proyecto_SendApp_2024/Styles/accesibilidad.css"><!--CSS accesibilidad-->
+    <link rel="stylesheet" href="../../../project/Proyecto_SendApp_2024/Inicio/Styles/StyleHome.css">
 
     <!--Styles adicionales, este bloque se llamara en otro archivos para agregar rutas de estilos y links que no son globales para todas las paginas-->
     <?php startblock('links-styles') ?>
@@ -38,31 +40,31 @@
             <nav class="navbar">
                 <!-- Logo sena -->
                 <div class="logo-header">
-                    <img src="../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
+                    <img src="../../../project/Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
                 </div>
                 <ul class="links">
                     <li><i class="fa-solid fa-house"></i><a href="../../../project/Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                     <li>
-                        <i class="fa-solid fa-cubes"></i><a href="../../../project/Proyecto_SendApp_2024/Areas/index.html">Areas</a>
+                        <i class="fa-solid fa-cubes"></i><a href="../../../project/Proyecto_SendApp_2024/Areas/index.php">Areas</a>
                         <ul class="areas-mas">
-                            <li><a href="../../../project/Proyecto_SendApp_2024/Biblioteca/index.html">Biblioteca</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
                             <li>
-                                <a href="../../../project/Proyecto_SendApp_2024/Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
+                                <a href="../../../project/Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
                                 <ul class="areas-bienestar">
-                                    <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/psicologia/index.html">Psicologia</a></li>
-                                    <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/Deportes/index.html">Deportes y cultura</a></li>
+                                    <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
+                                    <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
                                 </ul>
                             </li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.html">Cordinacion academica</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.html">Sennova</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.html">Fondo emprender</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.html">Servicios tecnologias</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/FabricaSoftware/index.html">Fabrica de software</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
@@ -83,26 +85,26 @@
                     <li><i class="fa-solid fa-house"></i><a href="../../../project/Proyecto_SendApp_2024/index.html">Inicio</a></li>
                     <li><i class="fa-solid fa-user-group"></i><a href="../../../project/Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
                     <li class="btn-areas">
-                        <i class="fa-solid fa-cubes"></i><a href="#">Areas</a> <!--Falta la ruta-->
+                        <i class="fa-solid fa-cubes"></i><a href="../../../project/Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
                         <div class="menu-areas">
                             <ul class="content-areas">
-                                <li><a href="../../../project/Proyecto_SendApp_2024/Biblioteca/index.html">Biblioteca</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
                                 <li>
-                                    <a href="../../../project/Proyecto_SendApp_2024/Bienestar/index.html" id="bienestar">Bienestar al aprendiz</a>
+                                    <a href="../../../project/Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
                                     <ul class="areas-bienestar">
-                                        <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/psicologia/index.html">Psicologia</a></li>
-                                        <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/Deportes/index.html">Deportes y cultura</a></li>
+                                        <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
+                                        <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.html">Cordinacion academica</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.html">Sennova</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.html">Fondo emprender</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.html">Servicios tecnologias</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/FabricaSoftware/index.html">Fabrica de software</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
                             </ul>
                         </div>
                     </li>
@@ -113,9 +115,30 @@
         <?php endblock() ?> <!--Fin bloque de mavegacion-->
     </header>
 
+    <!--accesibilidad-->								
+    <div class="acesibilidad">
+        <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
+        <input type="checkbox" id="toggle">
+        <!------->
+        <label for="toggle2" id="label_toggle2"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle3" id="label_toggle3"><i class="fa-solid fa-magnifying-glass-minus"></i></label>
+        <input type="checkbox" id="toggle2">
+        <!---->
+        <label for="toggle4" id="label_toggle4"><i class="fa-solid fa-chevron-up"></i></label>
+        <input type="checkbox" id="toggle">
+        <!----->
+        <label for="toggle5" id="label_toggle5"><i class="fa-solid fa-chevron-down"></i></label>
+        <input type="checkbox" id="toggle">
+
+    </div>
+
     <!--Este bloque se llamara en otro archivo para poner contenido que no es global en todas las paginas-->
     <?php startblock('contenido') ?>
     <?php endblock() ?>
+    <!--********************************************************-->
+    
 
     <?php startblock('footer') ?> <!--Inicio bloque footer-->
     <footer>
@@ -135,8 +158,13 @@
     <?php endblock() ?> <!--Fin bloque footer-->
     <script></script>
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
+<<<<<<< HEAD
     <script src="Inicio/Scripts/scriptHome.js"></script>
     <!--Scripts Generales -->
+=======
+    <script src="../../../project/Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
+    <script src="../../../project/Proyecto_SendApp_2024/ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
+>>>>>>> 120f7db420390c7f4d7149f94688f0674755c5d2
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

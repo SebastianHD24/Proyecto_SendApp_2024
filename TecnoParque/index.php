@@ -227,5 +227,3 @@
         <script src="../Inicio/Scripts/inactividad.js"></script> <!--Scripts Generales -->
     <?php endblock() ?>
 
-</body>
-</html>

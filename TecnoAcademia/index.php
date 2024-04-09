@@ -172,6 +172,3 @@
         <script src="Scripts/academia.js"> </script> <!--Scripts Generales -->
         <script src="../Inicio/Scripts/inactividad.js"></script>
     <?php endblock() ?>
-</body>
-
-</html>
