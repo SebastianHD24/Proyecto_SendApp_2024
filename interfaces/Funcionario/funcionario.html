@@ -61,12 +61,12 @@
                 <path d="M14 12h6v8h-6z" />
                 <path d="M14 4h6v4h-6z" />
               </svg>
-              <span class="link hide">Dashboard</span>
-              <span class="tooltip__content">Dashboard</span>
+              <span class="link hide">Citas</span>
+              <span class="tooltip__content">Citas</span>
             </a>
           </li>
           <!-- Segundo Link -->
-          <li>
+          <!-- <li>
             <a href="#market-overview" class="tooltip">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-bar" width="24"
                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -80,9 +80,9 @@
               <span class="link hide">Market Overview</span>
               <span class="tooltip__content">Market Overview</span>
             </a>
-          </li>
+          </li> -->
           <!-- Tercer Link -->
-          <li>
+          <!-- <li>
             <a href="#analytics" title="Analytics" class="tooltip">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-pie" width="24"
                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -94,9 +94,9 @@
               <span class="link hide">Analytics</span>
               <span class="tooltip__content">Analytics</span>
             </a>
-          </li>
+          </li> -->
           <!-- Cuarto Link -->
-          <li>
+          <!-- <li>
             <a href="#reports" title="Reports" class="tooltip">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-analytics" width="24"
                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -111,9 +111,9 @@
               <span class="link hide">Reports</span>
               <span class="tooltip__content">Reports</span>
             </a>
-          </li>
+          </li> -->
           <!-- Quinto Link -->
-          <li>
+          <!-- <li>
             <a href="#industries" title="Industries" class="tooltip">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-factory-2" width="24"
                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -128,7 +128,7 @@
               <span class="link hide">Industries</span>
               <span class="tooltip__content">Industries</span>
             </a>
-          </li>
+          </li> -->
           <!-- Sexto Link -->
           <li>
             <a href="#settings" title="Settings" class="tooltip">
@@ -145,7 +145,7 @@
             </a>
           </li>
           <!-- Septimo Link -->
-          <li>
+          <!-- <li>
             <a href="#notifications" title="Notifications" class="tooltip">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="24" height="24"
                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -159,7 +159,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <!--Sección del Perfil -->
       <div class="sidebar__profile">
         <!-- Avatar/Imagen de usuario -->
@@ -187,6 +187,102 @@
       </div>
     </nav>
   </div>
+  <!-- Contenido Principal -->
+  <div class="containerEncabezado">
+  <img  class="img-logo" src="./Funcionario-img/LogosSena-img/LogoSenaVerde.png">
+  <h1 class="TituloB">Agenda Tú Cita Aquí <i class="fa-regular fa-hand-point-down" style="color: #39a900;"></i></h1>
+  <p class="parrafo_descripcion">
+    ¡Bienvenido a SendApp, tu plataforma de agendamiento de citas rápida y confiable! Estamos aquí para simplificar tu vida y asegurarnos de que tus compromisos estén siempre en orden. ¡Comencemos a organizar tu agenda de manera eficiente y sin complicaciones!</p>
+
+   <!--accesibilidad-->								
+   <div class="acesibilidad">
+    <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
+    <input type="checkbox" id="toggle">
+    <!------->
+    <label for="toggle2" id="label_toggle2"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
+    <input type="checkbox" id="toggle">
+    <!----->
+    <label for="toggle3" id="label_toggle3"><i class="fa-solid fa-magnifying-glass-minus"></i></label>
+    <input type="checkbox" id="toggle2">
+    <!---->
+    <label for="toggle4" id="label_toggle4"><i class="fa-solid fa-chevron-up"></i></label>
+    <input type="checkbox" id="toggle">
+    <!----->
+    <label for="toggle5" id="label_toggle5"><i class="fa-solid fa-chevron-down"></i></label>
+    <input type="checkbox" id="toggle">
+
+    </div>
+
+    <!--Calendario-->
+    <div class="calendar" id="calendar-app">
+      <div class="calendar--day-view" id="day-view">
+        <span class="day-view-exit" id="day-view-exit">&times;</span>
+        <span class="day-view-date" id="day-view-date">3 DE ABRIL DE 2024</span>
+        <div class="day-view-content">
+          <div class="day-highlight">
+          <span class="day-events" id="day-events"></span>. &nbsp; <span tabindex="0" onkeyup="if(event.keyCode != 13) return; this.click();" class="day-events-link" id="add-event" data-date>¿Agregar un nuevo evento?</span>
+          </div>
+          <div class="day-add-event" id="add-day-event-box" data-active="false">
+            <div class="row">
+              <div class="half">
+                <label class="add-event-label">
+                   Nombre del evento
+                  <input type="text" class="add-event-edit add-event-edit--long" placeholder="Nuevo evento" id="input-add-event-name">
+                 
+                </label>
+              </div>
+              <div class="qtr">
+                <label class="add-event-label">
+              Hora de inicio
+                  <input type="text" class="add-event-edit" placeholder="8:15" id="input-add-event-start-time" data-options="1,2,3,4,5,6,7,8,9,10,11,12" data-format="datetime">
+                  <input type="text" class="add-event-edit" placeholder="am" id="input-add-event-start-ampm" data-options="a,p,am,pm">
+                </label>
+              </div>
+              <div class="qtr">
+                <label class="add-event-label">
+              Hora de finalización
+                  <input type="text" class="add-event-edit" placeholder="9" id="input-add-event-end-time" data-options="1,2,3,4,5,6,7,8,9,10,11,12" data-format="datetime">
+                  <input type="text" class="add-event-edit" placeholder="am" id="input-add-event-end-ampm" data-options="a,p,am,pm">
+                </label>
+              </div>
+              <div class="half">
+                <a onkeyup="if(event.keyCode != 13) return; this.click();" tabindex="0" id="add-event-save" class="event-btn--save event-btn">Guardar</a>
+                <a tabindex="0" id="add-event-cancel" class="event-btn--cancel event-btn">Cancelar</a>
+              </div>
+            </div>
+            
+          </div>
+          <div id="day-events-list" class="day-events-list">
+            
+          </div>
+          <div class="day-inspiration-quote" id="inspirational-quote">
+            Cada niño es un artista. El problema es cómo seguir siendo un artista una vez que crece. –Pablo Picasso
+          </div>
+        </div>
+      </div>
+      <div class="calendar--view" id="calendar-view">
+        <div class="cview__month">
+          <span class="cview__month-last" id="calendar-month-last">Mar</span>
+          <span class="cview__month-current" id="calendar-month">Abril</span>
+          <span class="cview__month-next" id="calendar-month-next">Mayo</span>
+        </div>
+        <div class="cview__header">Dom</div>
+        <div class="cview__header">Lun</div>
+        <div class="cview__header">Mar</div>
+        <div class="cview__header">Mié</div>
+        <div class="cview__header">Jue</div>
+        <div class="cview__header">Vie</div>
+        <div class="cview__header">Sáb</div>
+        <div class="calendar--view" id="dates">
+        </div>
+      </div>
+      <div class="footer">
+        <span><span id="footer-date" class="footer__link">Hoy es 4 de abril</span></span>    
+      </div>
+    </div>
+  </div>
   <script src="Scripts/funcionario.js"></script>
+  <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
+  <script src="/ScriptsGenerales/accesibilidad.js"></script>
 </body>
 </html>
