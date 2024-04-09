@@ -22,9 +22,10 @@ body{
 
 /*titulo sennova*/
 .titulo{
-    font-size: 35px;
+    font-size: 4rem;
     text-align: center;
     font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 
 /*subtitulos*/
@@ -42,16 +43,16 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 
 }
-.tecnoparque section{
+
+.tecnoparque{
     width: 100%;
-
 }
 
-/* listas ordenadas y desordenadas */
-ol, ul{
-    padding: 30px;
+.tecnoparque .infor{
+    padding: 0px 60px;
 }
 
 .tecnoparque p{
@@ -132,13 +133,14 @@ ol, ul{
     margin-top: 0;
 }
 
+/* listas ordenadas y desordenadas */
+.l_ordenada, .l_desordenada{
+    padding: 15px 30px 15px 30px;
+}
+
 .l_ordenada li{
     margin-bottom: 10px;
     font-size: 15px;
-}
-
-.l_ordenada{
-    padding-top: 15px;
 }
 
 
@@ -182,13 +184,8 @@ ol, ul{
     margin: 0;
 }
 
-.contenido{
-    padding: 0px 60px;
-}
-
-section .contenido_lineas{
+.contenido_lineas{
     background: linear-gradient(0deg, var(--verde), var(--azul));
-    margin: 0;
     width: 100%;
 }
 
