@@ -148,3 +148,22 @@ article {
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
     }
 }
+
+/* --------------------- Content ----------------------------------- */
+
+section img{
+    width: 80vh;
+    height: auto;   
+    border-radius: 10px;
+}
+
+
+h3,h2, h1{
+    color: var(--verde);
+    padding: 20px;
+}
+p{
+    font-size: 1.2rem;
+    padding: 20px;
+    font-family: var(--fuente-principal);
+}
