@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="biblioteca.css">    
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
@@ -32,3 +33,5 @@
         </section>
     </div>
 <?php endblock() ?>
+
+<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->

@@ -1,8 +1,8 @@
 function tiempo_espera(){
-    let tiempo_inactividad = 9000;
+    let tiempo_inactividad = 1800000;
         
     function cerrar_sesion(){
-        location.href = "../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php";
+        location.href = "../../../../../project/Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php";
     }
 
     function restablecer_temporizador(){
@@ -18,7 +18,7 @@ function tiempo_espera(){
 
 $.ajax({
     type: "POST",
-    url: "../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php",
+    url: "../../../../project/Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php",
     data: {
     },
     success: function(response) { // Función que se ejecuta si la solicitud es exitosa

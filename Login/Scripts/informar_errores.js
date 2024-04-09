@@ -18,7 +18,7 @@ $(document).ready(function() {
                     const error = document.getElementById('mensaje_error');
                     error.textContent = "Complete todos los campos";
                 } else if (jsonData.success == "2") { // Si es igual a 2 redirigir a otro pagina
-                    location.href = "../../coordinaccion/index.html";
+                    location.href = "../../coordinaccion/index.php";
                 } else if (jsonData.success == "3") {
                     location.href = "../../index.php";
                 } else if (jsonData.success == "4") {

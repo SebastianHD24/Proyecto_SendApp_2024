@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="fabrica.css"> <!-- Estilos de la fabrica -->
     <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!-- Estilos del header -->
     <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!-- Estilos del footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
     
 <?php endblock() ?>
 
@@ -23,3 +24,5 @@
         </section>
     </div>
 <?php endblock() ?>
+
+<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->

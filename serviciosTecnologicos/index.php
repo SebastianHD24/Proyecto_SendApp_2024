@@ -203,7 +203,6 @@
                     <li class="menu-item">@SENAComunica</li>
                 </ul>
             </footer>
-    <script src="../Inicio/Scripts/inactividad.js"></script>
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
     <script src="Scripts/tecnologicos.js"> </script> <!--Scripts Generales -->
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
@@ -314,6 +313,7 @@
 <?php endblock() ?> <!--Fin bloque contenido-->
             
 <?php startblock('scripts') ?>
+    <script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 <?php endblock() ?>
 >>>>>>> 120f7db420390c7f4d7149f94688f0674755c5d2:serviciosTecnologicos/index.php
