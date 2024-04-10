@@ -166,16 +166,6 @@
             
 >>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
-
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
 <<<<<<< HEAD
