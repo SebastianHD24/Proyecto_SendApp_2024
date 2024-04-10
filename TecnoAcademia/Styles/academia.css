@@ -83,19 +83,3 @@ article {
 .foto1 :hover{
     filter: brightness(100%);
 }
-.beneficios_lineas{
-    display: flex;
-    justify-content: space-around;
-}
-
-.ben_lin1, .ben_lin2{
-    width: 50%;
-}
-
-.ben_lin1{
-    padding-right: 5%;
-}
-
-.ben_lin2{
-    padding-left: 5%;
-}

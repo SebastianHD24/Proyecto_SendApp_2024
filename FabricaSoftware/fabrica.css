@@ -22,8 +22,10 @@ body{
 
 /*titulo sennova*/
 .titulo{
+    font-size: 4rem;
     text-align: center;
     font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 /*subtitulos*/
  .subtitulos{

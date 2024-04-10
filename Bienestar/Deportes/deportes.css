@@ -24,8 +24,10 @@ body{
 
 /*titulo sennova*/
 .titulo{
+    font-size: 4rem;
     text-align: center;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 /*subtitulos*/
 .subtitulos{
@@ -44,7 +46,7 @@ body{
 }
 .deportes section{
     width: 100%;
-    padding: 80px;
+    padding: 60px;
 
 }
 .deportes p{
@@ -53,11 +55,9 @@ body{
     font-family: var(--fuente-poppins);
     line-height: 30px;
 }
-/* .sennova img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
+.deportes img{
+    width: 40%;
+}
 article {
     display: flex;
     width: 100%;
