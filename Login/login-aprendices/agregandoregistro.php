@@ -1,11 +1,6 @@
 <?php
-    $servername = "localhost";
-    $database = "sendapp";
-    $username = "root";
-    $password = "";
-
-    //Creando conexion
-    $conn = mysqli_connect($servername, $username, $password, $database);
+    include("../conexion.php");
+    $conn = connection();
 
     //chequeando la conexion
     if (!$conn) {
@@ -47,11 +42,11 @@
             $sql = "INSERT INTO usuarios (documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol) VALUES ('$documento_identidad', '$contrasena', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol')";
 
             // Condicion para verificar el registro en la bd
-            if (mysqli_query($conn, $sql)) {
+            if (mysqli_query($conn, $sql)) {      echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
+            } else {
                 // Para confirmar, habilitarlo
                 // echo "<h1><center>Registro Grabado Correctamente</center></h1>";
-                echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
-            } else {
+          
                 echo "Error:" . $sql . "<br>" . mysqli_error($conn);
             }
         }

@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!--Estilos del header-->
     <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!--Estilos del Foorer-->
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <body>
     <header id="main-header">
         <!-- Logo SendApp-->
@@ -31,7 +32,7 @@
                 <img src="img/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
             </div>
             <ul class="links">
-                <li><i class="fa-solid fa-house"></i><a href="../index.html">Inicio</a></li>
+                <li><i class="fa-solid fa-house"></i><a href="../index.php">Inicio</a></li>
                 <li>
                     <i class="fa-solid fa-cubes"></i><a href="../Areas/index.html">Areas</a>
                     <ul class="areas-mas">
