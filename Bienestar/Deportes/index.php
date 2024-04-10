@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,10 +102,35 @@
     </div>
 
     <div class="deportes">
+=======
+<?php include '../../bases/header.php' ?>
+    
+<?php startblock('links-styles') ?>
+    <!-- ESTILOS CSS -->
+    <link rel="stylesheet" type="text/css" href="deportes.css"> <!--Estilos de Deportes -->
+    <link rel="stylesheet" type="text/css" href="../../Styles/header.css"> <!-- Estilos del header -->
+    <link rel="stylesheet" type="text/css" href="../../Styles/footer.css"> <!-- Estilos del footer -->
+    <link rel="stylesheet" type="text/css" href="../../Styles/accesibilidad.css"> <!--Estilos de la accesibilida-->
+<?php endblock() ?>
+
+<!-- Logo SendApp-->
+<!--Bloque para el logo sena-->
+<?php startblock('logo-sena') ?>
+<div class="logo">
+    <img src="../../Inicio/Img-home/LogosSena-img/SendApp.png"
+    alt="SendApp Logo"/>
+</div>
+<?php endblock() ?>
+
+
+<?php startblock('contenido') ?>
+    <div class="sennova">
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
         <section>
             <h1 class="titulo">Deportes y Cultura</h1>
             <article><img src="" alt="logo"></article>
 
+<<<<<<< HEAD
             <h3 class="subtitulos">Cronograma de Actividades</h3>
             <br>
 
@@ -218,6 +244,12 @@
             </p>
             
             <br>
+=======
+            <h3 class="subtitulos">Subtitulo</h3>
+            <p>
+                parrafo
+            </p>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
             
             <button class="button">Reservar cita</button>
             <script>const button = document.querySelector(" .button ");
@@ -232,6 +264,7 @@
                 });</script>
         </section>
     </div>
+<<<<<<< HEAD
                 <!-- Footer -->
                 <footer>
                     <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
@@ -254,3 +287,10 @@
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 </html>
+=======
+<?php endblock() ?>  
+
+<?php startblock('scripts') ?>
+    <script src="../../ScriptsGenerales/accesibilidad.js"></script> 
+<?php endblock() ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30

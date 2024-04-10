@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+=======
+<?php include '../../Proyecto_SendApp_2024/bases/header.php' ?> <!--Llamo el archivo base-->
+
+<?php startblock('links-styles') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="Styles/coorporativas.css"> <!-- Estilos de relaciones coorporativas -->
     <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!-- Estilos del header -->
     <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!-- Estilos del footer -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
 </head>
 <body>
@@ -97,6 +104,12 @@
         <input type="checkbox" id="toggle">
 
         </div>
+=======
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+<?php endblock() ?>
+
+<?php startblock('contenido') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
 
     <div class="sennova">
         <section>
@@ -121,6 +134,7 @@
                 });</script>
         </section>
     </div>
+<<<<<<< HEAD
             <!-- Footer -->
             <footer>
                 <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
@@ -143,3 +157,8 @@
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 </html>
+=======
+<?php endblock() ?>
+    
+<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30

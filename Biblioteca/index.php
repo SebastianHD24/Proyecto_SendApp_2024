@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+=======
+<?php include '../bases/header.php' ?>
+
+<?php startblock('links-styles') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="biblioteca.css">    
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> 
 
@@ -100,10 +107,18 @@
         </div>
 
     <div class="biblioteca">
+=======
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+<?php endblock() ?>
+
+<?php startblock('contenido') ?>
+    <div class="sennova">
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
         <section>
             <h1 class="titulo">Biblioteca</h1>
             <article><img src="" alt="logo"></article>
 
+<<<<<<< HEAD
             <h3 class="subtitulos">Normas de la biblioteca</h3>
             
             <ol class="l_ordenada">
@@ -211,6 +226,12 @@
             <p>Lunes a Viernes de 8:00 AM a 8:00 PM jornada continua.</p>
             <br>
             
+=======
+            <h3 class="subtitulos">Subtitulo</h3>
+            <p>
+                parrafo
+            </p>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
             
             <button class="button">Reservar cita</button>
             <script>const button = document.querySelector(" .button ");
@@ -225,6 +246,7 @@
                 });</script>
         </section>
     </div>
+<<<<<<< HEAD
 </body>
             <!-- Footer -->
             <footer>
@@ -247,3 +269,8 @@
 <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </html>
+=======
+<?php endblock() ?>
+
+<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30

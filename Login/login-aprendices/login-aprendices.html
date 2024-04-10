@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="/Login/Styles/login.css">
+    <link rel="stylesheet" href="../Styles/login.css">
     <title>Login</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
 
         <!-- CAMBIAR EL METODO POST EN PHP SI ES NECESARIO -->
 
-        <form action="" method="post" class="form-login">
+        <form action="validacion/val.php" method="post" class="form-login">
             <div class="titulos">
                 <ul class="login-nav">
                     <li class="login-nav__item active">
@@ -35,19 +36,20 @@
                     </li>
                 </ul>
             </div>
+            <p id="mensaje_error"></p>
             <label for="login-input-user" class="login__label">
                 Usuario
             </label>
-            <input id="login-input-user" class="login__input" type="text" name="nombre" />
+            <input id="login-input-user" class="login__input" type="text" name="documento_identidad" />
             <label for="login-input-password" class="login__label">
                 Contraseña
             </label>
-            <input id="login-input-password" class="login__input" type="password" />
+            <input id="login-input-password" class="login__input" type="password" name="contrasena" />
             <label for="login-sign-up" class="login__label--checkbox">
                 <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
                 Mantenerme conectado
             </label>
-            <button class="login__submit" disabled>Iniciar Sesión</button>
+            <input class="login__submit" value="Iniciar Sesion" type="submit">
         </form>
         <div class="olvidaste">
             <a id="goToRegister" class="login__forgot">¿Olvidaste tu contraseña?</a>
@@ -120,5 +122,6 @@
     </div>
 </div>
 </body>
-<script src="/Login/Scripts/login.js"></script>
+<script src="../Scripts/login.js"></script>
+<script src="../Scripts/informar_errores.js"></script>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+=======
+<?php include '../../bases/header.php' ?>
+
+<?php startblock('links-styles') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="psicologia.css"> <!-- Estilos de psicologia -->
     <link rel="stylesheet" href="../../Styles/header.css"> <!-- Estilos del header -->
     <link rel="stylesheet" href="../../Styles/footer.css"> <!-- Estilos del footer -->
     <link rel="stylesheet" href="../../Styles/accesibilidad.css"><!--CSS accesibilidad-->
+<<<<<<< HEAD
 </head>
 
 <body>
@@ -123,6 +130,41 @@
                 <h3>Contáctanos:</h3>
                 <p>Si estás listo para dar el primer paso hacia una vida más saludable y satisfactoria, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu viaje hacia el bienestar emocional y el crecimiento personal. ¡Contáctanos hoy mismo para programar una consulta inicial!</p>
             </div>
+=======
+<?php endblock() ?>
+
+<!-- Logo SendApp-->
+<!--Bloque para el logo sena-->
+<?php startblock('logo-sena') ?>
+<div class="logo">
+    <img src="../../Inicio/Img-home/LogosSena-img/SendApp.png"
+    alt="SendApp Logo"/>
+</div>
+<?php endblock() ?>
+
+<?php startblock('contenido') ?>
+        <section>
+            <h1 class="titulo">Psicologia</h1>
+            <article><img src="" alt="logo"></article>
+
+            <h3 class="subtitulos">Subtitulo</h3>
+            <p>
+                parrafo
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eum maxime in. Pariatur sed quidem veritatis, ut quaerat nam reprehenderit quam debitis eligendi est! Delectus totam voluptatibus impedit nihil nemo.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi neque, voluptates eaque aliquid accusamus dolore quis, dicta, doloribus saepe ipsum quae ullam architecto exercitationem atque incidunt deleniti? Reiciendis, optio amet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea autem quibusdam repellat nam perferendis, aut dicta, dolorem, a consequatur fuga voluptatibus? Molestias consequatur delectus esse voluptates porro, quos quas ab.
+                parrafo
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eum maxime in. Pariatur sed quidem veritatis, ut quaerat nam reprehenderit quam debitis eligendi est! Delectus totam voluptatibus impedit nihil nemo.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi neque, voluptates eaque aliquid accusamus dolore quis, dicta, doloribus saepe ipsum quae ullam architecto exercitationem atque incidunt deleniti? Reiciendis, optio amet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea autem quibusdam repellat nam perferendis, aut dicta, dolorem, a consequatur fuga voluptatibus? Molestias consequatur delectus esse voluptates porro, quos quas ab.
+                parrafo
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eum maxime in. Pariatur sed quidem veritatis, ut quaerat nam reprehenderit quam debitis eligendi est! Delectus totam voluptatibus impedit nihil nemo.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi neque, voluptates eaque aliquid accusamus dolore quis, dicta, doloribus saepe ipsum quae ullam architecto exercitationem atque incidunt deleniti? Reiciendis, optio amet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea autem quibusdam repellat nam perferendis, aut dicta, dolorem, a consequatur fuga voluptatibus? Molestias consequatur delectus esse voluptates porro, quos quas ab.
+                
+            </p>
+            
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
             <button class="button">Reservar cita</button>
             <script>const button = document.querySelector(" .button ");
 
@@ -136,6 +178,7 @@
                 });</script>
         </section>
     </div>
+<<<<<<< HEAD
             <!-- Footer -->
             <footer>
                 <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
@@ -158,3 +201,10 @@
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 </html>
+=======
+<?php endblock() ?>          
+
+<?php startblock('scripts') ?>
+    <script src="../../ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
+<?php endblock() ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30

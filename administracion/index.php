@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+=======
+<?php include '../bases/header.php' ?>
+
+<?php startblock('links-styles') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="administracion.css"> <!-- Estilos de Administración -->
     <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!-- Estilos del header -->
     <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!-- Estilos del footer -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
@@ -99,6 +106,13 @@
 
         </div>
 
+=======
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+<?php endblock() ?>
+
+
+<?php startblock('contenido') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
     <div class="sennova">
         <section>
             <h1 class="titulo">Administración Educativa</h1>
@@ -122,6 +136,7 @@
                 });</script>
         </section>
     </div>
+<<<<<<< HEAD
         <!-- Footer -->
         <footer>
             <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
@@ -143,3 +158,8 @@
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 </html>
+=======
+<?php endblock() ?>
+
+<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30

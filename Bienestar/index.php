@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+=======
+<?php include '../bases/header.php' ?>
+
+<?php startblock('links-styles') ?>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="Styles-Bienestar/bienestar.css"> <!--Estilos de Bienestar -->
     <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!--Estilos del Header -->
     <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!--Estilos del Footer -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
 </head>
 <body>
@@ -128,10 +135,24 @@
                 El Bienestar al Aprendiz SENA busca apoyar la permanencia y el éxito de los aprendices en su formación. Ofrece apoyo socioeconómico, físico, mental, social, académico y en la formación. Los beneficios incluyen auxilios, formación, acompañamiento, acceso a recursos y ambientes de aprendizaje. Para acceder, debes estar matriculado y cumplir con los requisitos.            
                 
                 <h3 class="subtitulos"><strong>¿Cuál es su objetivo?</strong></h3>
+=======
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+<?php endblock() ?>
+
+<?php startblock('contenido') ?>
+    <div class="sennova">
+        <section class="descripcion">
+            <article><img src="./img/LogosSena-img/Bienestar logo.jpg" alt="logo"></article>
+
+            <h3 class="subtitulos"><strong>¿Qué es bienestar al aprendiz?</strong></h3>
+            <p>
+                El Bienestar al Aprendiz SENA busca apoyar la permanencia y el éxito de los aprendices en su formación. Ofrece apoyo socioeconómico, físico, mental, social, académico y en la formación. Los beneficios incluyen auxilios, formación, acompañamiento, acceso a recursos y ambientes de aprendizaje. Para acceder, debes estar matriculado y cumplir con los requisitos.            <h3 class="subtitulos"><strong>¿Cuál es su objetivo?</strong></h3>
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
             <p>
                 El área de bienestar al aprendiz tiene como objetivo principal contribuir al fortalecimiento del desarrollo humano integral del aprendiz en el Sena. Ofrece una variedad de servicios que incluyen apoyo administrativo, servicios de enfermería para primeros auxilios, gimnasio con actividades deportivas, talleres de música y danza, entre otros.            </p>
         </section>
     </div>
+<<<<<<< HEAD
                 <!-- Footer -->
                 <footer>
                     <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
@@ -154,3 +175,8 @@
     <script src="ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 </html>
+=======
+<?php endblock() ?>
+
+<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
