@@ -164,6 +164,7 @@
     <script src="../../../Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 
+
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>
     <?php endblock() ?>
