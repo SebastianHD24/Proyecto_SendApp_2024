@@ -17,7 +17,7 @@ allLinks.forEach((elem) => {
   elem.addEventListener("click", function () {
     const hrefLinkClick = elem.href;
 
-    //Para cada link mostramos su nombre si el puntero del mouse esta encima de los contrario no.
+    //Para cada link mostramos su nombre si el puntero del mouse esta encima de lo contrario no.
     allLinks.forEach((link) => {
       if (link.href == hrefLinkClick) {
         link.classList.add("active");

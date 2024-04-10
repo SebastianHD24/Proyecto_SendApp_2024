@@ -4,10 +4,8 @@
     <link rel="stylesheet" href="Styles/areas.css">
     <link rel="stylesheet" href="../Styles/footer.css"> <!-- Estilos footer -->
     <link rel="stylesheet" href="../Styles/header.css"> <!-- Estilos header -->
-<<<<<<< HEAD:Areas/index.php
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
 <?php endblock() ?>
-=======
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
     <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
     <title>SendApp</title>
@@ -90,7 +88,6 @@
         <input type="checkbox" id="toggle">
 
         </div>
->>>>>>> 8408af53cad53fd0ee2b39c8a8b3b156a9a3e3f2:Areas/index.html
 
 <?php startblock('contenido') ?>
     <!-- Contenedor con las tarjetas de cada area -->

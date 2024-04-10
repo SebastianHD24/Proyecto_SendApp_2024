@@ -52,6 +52,7 @@ body{
     margin-top: 50px;
     font-family: var(--fuente-principal);
     line-height: 30px;
+    background-color: red;
 }
 /* .sennova img{
     width: 70%;
