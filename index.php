@@ -43,10 +43,10 @@
                 <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
             </div>
             <ul class="links">
-                <li><i class="fa-solid fa-house"></i><a href="index.html">Sebastian</a></li>
+                <li><i class="fa-solid fa-house"></i><a href="index.html">Inicio</a></li>
                 <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                 <li>
-                    <i class="fa-solid fa-cubes"></i><a href="Areas/index.html">Quintero</a>
+                    <i class="fa-solid fa-cubes"></i><a href="Areas/index.html">Area</a>
                     <ul class="areas-mas">
                         <li><a href="Biblioteca/index.html">Biblioteca</a></li>
                         <li>
