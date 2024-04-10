@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 <!DOCTYPE html>
 <html lang="en">
@@ -301,6 +303,7 @@
         <script src="../Inicio/Scripts/inactividad.js"></script>
     <?php endblock() ?>
 =======
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
 <!DOCTYPE html>
 <html lang="en">
 
@@ -580,6 +583,10 @@
     <script src="../ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
 </body>
 
+<<<<<<< HEAD
+</html>
+=======
 </html>
 >>>>>>> 8408af53cad53fd0ee2b39c8a8b3b156a9a3e3f2:TecnoAcademia/index.html
 >>>>>>> 13d839f0f96de926c52e0f1fa16480ba2d961238:TecnoAcademia/index.php
+>>>>>>> 45235734228586b5233670e3d1131f3aeed96e30
