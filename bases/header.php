@@ -57,10 +57,10 @@
                                 </ul>
                             </li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                            <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                             <li><a href="../../../project/Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
@@ -97,10 +97,10 @@
                                     </ul>
                                 </li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                                <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                                 <li><a href="../../../project/Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
