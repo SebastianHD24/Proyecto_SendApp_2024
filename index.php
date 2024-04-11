@@ -1,9 +1,10 @@
 
 <?php include '../Proyecto_SendApp_2024/bases/header.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredear-->
 
-    <!--Bloque para agregar las rutas de stylos independientes de cada archivo y links adicionales para archivos propios de cada pagina-->
+    <!--Bloque para agregar las rutas de stylos independientes de cada archivo y links adicionales para archivos propios-->
     <?php startblock('links-styles') ?>
         <title>SendApp</title>
+        <link rel="stylesheet" type="text/css" href="Inicio/Styles/StyleHome.css">
     <?php endblock() ?>
     
     <!-- Slider Sena -->
@@ -24,7 +25,6 @@
         
         </ul>
     </div>
-
     <!-- Contenido -->
     <div class="content">
         <section>
@@ -158,5 +158,3 @@
     </div>
     
 <?php endblock() ?> <!--Fin bloque de contenido-->
-    
-           

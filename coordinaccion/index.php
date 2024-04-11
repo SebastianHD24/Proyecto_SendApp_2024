@@ -3,8 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="coordinacion.css"> <!-- Estilos de coordinación -->
-    <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!-- Estilos del header -->
-    <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!-- Estilos del footer -->
+    <title>Coordinación Académica</title>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
@@ -24,16 +23,10 @@
                 Esta es la segunda prueba de git
             </p>
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
-
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
+<?php endblock() ?>
+
+<?php startblock('scripts') ?>
+    <script src="coordinacion.js"> </script>
 <?php endblock() ?>

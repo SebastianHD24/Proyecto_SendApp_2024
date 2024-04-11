@@ -23,17 +23,22 @@ body{
 
 /*titulo sennova*/
 .titulo{
+    font-size: 4rem;
     text-align: center;
     font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 /*subtitulos*/
  .subtitulos{
+    font-size: 25px;
     font-family: var(--fuente-principal);
-    text-align: center;
-    margin-top: 50px;
+    text-align: left;
+    margin-top: 30px;
 }
+
+
 /*contenido de el div senova*/
-.sennova{
+.emprender{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -41,22 +46,30 @@ body{
     align-items: center;
 
 }
-.sennova section{
+.emprender section{
     width: 100%;
-    padding: 80px;
+    padding: 60px;
 
 }
-.sennova p{
+
+.l_desordenada, .l_ordenada{
+    padding: 15px 30px 15px 30px;
+}
+
+.l_ordenada li, .l_desordenada li{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.emprender p{
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: var(--fuente-principal);
     line-height: 30px;
 }
-/* .sennova img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
+.emprender img{
+    width: 40%;
+}
 article {
     display: flex;
     width: 100%;

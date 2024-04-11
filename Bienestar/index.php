@@ -3,8 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="Styles-Bienestar/bienestar.css"> <!--Estilos de Bienestar -->
-    <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!--Estilos del Header -->
-    <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!--Estilos del Footer -->
+    <title>Bienestar Al Aprendíz</title>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>

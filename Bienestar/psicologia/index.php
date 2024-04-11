@@ -3,12 +3,9 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="psicologia.css"> <!-- Estilos de psicologia -->
-    <link rel="stylesheet" href="../../Styles/header.css"> <!-- Estilos del header -->
-    <link rel="stylesheet" href="../../Styles/footer.css"> <!-- Estilos del footer -->
-    <link rel="stylesheet" href="../../Styles/accesibilidad.css"><!--CSS accesibilidad-->
+    <title>Psicologia</title>
 <?php endblock() ?>
 
-<!-- Logo SendApp-->
 <!--Bloque para el logo sena-->
 <?php startblock('logo-sena') ?>
 <div class="logo">
@@ -40,20 +37,10 @@
             </p>
             
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
-
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
 <?php endblock() ?>          
 
 <?php startblock('scripts') ?>
-    <script src="../../ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
+                
 <?php endblock() ?>

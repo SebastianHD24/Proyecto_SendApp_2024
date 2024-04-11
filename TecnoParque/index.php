@@ -2,8 +2,6 @@
 
 <?php startblock('links-styles') ?>
     <link rel="stylesheet" type="text/css" href="./Styles/tecnoParque.css"> <!-- Estilos de Tecno Parque--> 
-    <link rel="stylesheet" type="text/css" href="../../../project/Proyecto_SendApp_2024/Styles/header.css"> <!-- Estilos del Header-->
-    <link rel="stylesheet" type="text/css" href="../../../project/Proyecto_SendApp_2024/Styles/footer.css"> <!-- Estilos del Footer-->
     <title>Tecno Parque</title>
 <?php endblock() ?>
 
@@ -171,7 +169,6 @@
 
                 </p>
             </div>
-            
             <div class="contenido">
                 <h3 class="subtitulos">¿Para quienes está dirigido el Tecnoparque?</h3>
                 <p>
@@ -219,9 +216,8 @@
         </section>
     </div>
 <?php endblock() ?> <!--Fin bloque contenido-->
-           
-    
-    <?php startblock('scripts') ?>
-        <script src="./Scripts/tecnoParque.js"> </script> <!--Scripts Generales -->
-    <?php endblock() ?>
+
+<?php startblock('scripts') ?>
+    <script src="./Scripts/tecnoParque.js"> </script>
+<?php endblock() ?>
 

@@ -9,14 +9,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->
+    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->                                     
+    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->                                     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- ESTILOS CSS -->
-    <link rel="shortcut icon" href="../../../project/Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
-    <link rel="stylesheet" href="../../../project/Proyecto_SendApp_2024/Styles/accesibilidad.css"><!--CSS accesibilidad-->
-    <link rel="stylesheet" href="../../../project/Proyecto_SendApp_2024/Inicio/Styles/StyleHome.css">
+    <link rel="shortcut icon" href="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/accesibilidad.css"><!--CSS accesibilidad-->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/header.css"> <!--CSS haader -->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/footer.css"> <!--CSS footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/header.css"> <!--CSS haader -->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/footer.css"> <!--CSS footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
 
     <!--Styles adicionales, este bloque se llamara en otro archivos para agregar rutas de estilos y links que no son globales para todas las paginas-->
     <?php startblock('links-styles') ?>
@@ -40,35 +48,35 @@
             <nav class="navbar">
                 <!-- Logo sena -->
                 <div class="logo-header">
-                    <img src="../../../project/Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
+                    <img src="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
                 </div>
                 <ul class="links">
-                    <li><i class="fa-solid fa-house"></i><a href="../../../project/Proyecto_SendApp_2024/index.php">Inicio</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../..//Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                     <li>
-                        <i class="fa-solid fa-cubes"></i><a href="../../../project/Proyecto_SendApp_2024/Areas/index.php">Areas</a>
+                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a>
                         <ul class="areas-mas">
-                            <li><a href="../../../project/Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
                             <li>
-                                <a href="../../../project/Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
+                                <a href="../../../Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
                                 <ul class="areas-bienestar">
-                                    <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
-                                    <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
+                                    <li><a href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
+                                    <li><a href="../../../Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
                                 </ul>
                             </li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
-                            <li><a href="../../../project/Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../project/Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
                 </ul>
 
                 <!--Menu Hamburguesa Animado-->
@@ -82,29 +90,29 @@
             <!-- Contenido Responsive Menu-->
             <div class="resposive__menu">
                 <ul class="resposive__menu-ul">
-                    <li><i class="fa-solid fa-house"></i><a href="../../../project/Proyecto_SendApp_2024/index.html">Inicio</a></li>
-                    <li><i class="fa-solid fa-user-group"></i><a href="../../../project/Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-user-group"></i><a href="../../../Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
                     <li class="btn-areas">
-                        <i class="fa-solid fa-cubes"></i><a href="../../../project/Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
+                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
                         <div class="menu-areas">
                             <ul class="content-areas">
-                                <li><a href="../../../project/Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
                                 <li>
-                                    <a href="../../../project/Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
+                                    <a href="../../../Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
                                     <ul class="areas-bienestar">
-                                        <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
-                                        <li><a href="../../../project/Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
+                                        <li><a href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
+                                        <li><a href="../../../Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
-                                <li><a href="../../../project/Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
                             </ul>
                         </div>
                     </li>
@@ -156,14 +164,22 @@
         </ul>
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
+    <script></script>
 
-    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
-    <script src="../../../project/Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> <!--Scripts Generales -->
-    <script src="../../../project/Proyecto_SendApp_2024/ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
+    <script src="Inicio/Scripts/scriptHome.js"></script>
+    <!--Scripts Generales -->
+    <!-- <script src="../../../Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> Scripts Generales -->
+    <!-- <script src="../../../Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> Scripts Generales -->
+    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
+    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
+    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
+    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/BotonCitas.js"></script><!--Scripts Boton citas-->
+
+    
+    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
+    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
-    <?php startblock('scripts') ?>
-    <?php endblock() ?>
 
 </body>
 </html>

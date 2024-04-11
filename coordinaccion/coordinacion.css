@@ -25,9 +25,13 @@ body{
 
 /*titulo sennova*/
 .titulo{
+    font-size: 4rem;
     text-align: center;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
+    color: var(--azul);
 }
+
+
 /*subtitulos*/
  .subtitulos{
     font-family: var(--fuente-open-sans);
@@ -41,7 +45,6 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-
 }
 .sennova section{
     width: 100%;

@@ -22,12 +22,14 @@ body{
 
 /*titulo sennova*/
 .titulo{
+    font-size: 4rem;
     text-align: center;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 /*subtitulos*/
  .subtitulos{
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: center;
     margin-top: 50px;
 }
@@ -48,7 +50,7 @@ body{
 .sennova p{
     text-align: justify;
     margin-top: 50px;
-    font-family: var(--fuente-poppins);
+    font-family: var(--fuente-principal);
     line-height: 30px;
 }
 /* .sennova img{
@@ -75,7 +77,7 @@ article {
     border: none;
     font-size: 18px;
     font-weight: 400;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .button:hover{
