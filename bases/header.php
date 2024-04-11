@@ -51,7 +51,7 @@
                     <img src="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
                 </div>
                 <ul class="links">
-                    <li><i class="fa-solid fa-house"></i><a href="../..//Proyecto_SendApp_2024/index.php">Inicio</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                     <li>
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a>
@@ -65,10 +65,10 @@
                                 </ul>
                             </li>
                             <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
@@ -90,7 +90,7 @@
             <!-- Contenido Responsive Menu-->
             <div class="resposive__menu">
                 <ul class="resposive__menu-ul">
-                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <li><i class="fa-solid fa-user-group"></i><a href="../../../Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
@@ -105,10 +105,10 @@
                                     </ul>
                                 </li>
                                 <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
@@ -164,6 +164,7 @@
         </ul>
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
+
     <script></script>
 
     <script src="Inicio/Scripts/scriptHome.js"></script>
@@ -180,7 +181,8 @@
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
-
+    <?php startblock('scripts') ?>
+    <?php endblock() ?>
 </body>
 </html>
 
