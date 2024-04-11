@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="../Styles/header.css"> <!-- Estilos header -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
 <?php endblock() ?>
+
     <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
     <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
     <title>SendApp</title>
-
 
 <?php startblock('contenido') ?>
     <!-- Contenedor con las tarjetas de cada area -->

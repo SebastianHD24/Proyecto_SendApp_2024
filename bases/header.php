@@ -90,7 +90,7 @@
             <!-- Contenido Responsive Menu-->
             <div class="resposive__menu">
                 <ul class="resposive__menu-ul">
-                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <li><i class="fa-solid fa-user-group"></i><a href="../../../Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
@@ -164,6 +164,7 @@
         </ul>
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
+
     <script></script>
 
     <script src="Inicio/Scripts/scriptHome.js"></script>
@@ -180,7 +181,8 @@
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
-
+    <?php startblock('scripts') ?>
+    <?php endblock() ?>
 </body>
 </html>
 
