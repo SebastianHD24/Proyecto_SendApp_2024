@@ -21,5 +21,3 @@
         </section>
     </div>
 <?php endblock() ?>
-
-
