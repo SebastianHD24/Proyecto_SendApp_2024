@@ -30,10 +30,10 @@
             echo "<script>location.href='../../../interfaces/Administrador/index.php'; </script>";
         } elseif (mysqli_fetch_array($consulta2)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo "<script>location.href='../../../interfaces/Funcionario/funcionario.html'; </script>";
+            echo "<script>location.href='../../../interfaces/Funcionario/funcionario.php'; </script>";
         } elseif (mysqli_fetch_array($consulta3)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo "<script>location.href='../../../interfaces/Usuario/usuarioSesion.html'; </script>";
+            echo "<script>location.href='../../../interfaces/Usuario/usuarioSesion.php'; </script>";
         } elseif (mysqli_fetch_array($error_existencia)>0) {
             echo json_encode(array('success' => 4));
         } else{
