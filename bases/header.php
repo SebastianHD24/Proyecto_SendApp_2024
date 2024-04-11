@@ -51,10 +51,10 @@
                     <img src="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" />
                 </div>
                 <ul class="links">
-                    <li><i class="fa-solid fa-house"></i><a href="../..//Proyecto_SendApp_2024/index.php">Inicio</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                     <li>
-                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a>
+                        <i class="fa-solid fa-cubes"></i><a href="../../Proyecto_SendApp_2024/Areas/index.php">Areas</a>
                         <ul class="areas-mas">
                             <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
                             <li>
@@ -65,10 +65,10 @@
                                 </ul>
                             </li>
                             <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
@@ -105,10 +105,10 @@
                                     </ul>
                                 </li>
                                 <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/administracion/index.html">Administracion educativa</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.html">Relaciones corporativas</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
                                 <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
@@ -120,9 +120,9 @@
                     <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
                 </ul>
             </div>
-        <?php endblock() ?> <!--Fin bloque de mavegacion-->
+        
     </header>
-
+    <?php endblock() ?> <!--Fin bloque de navegacion-->
     <!--accesibilidad-->								
     <div class="acesibilidad">
         <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
