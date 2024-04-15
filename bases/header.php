@@ -178,7 +178,6 @@
 
     
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
-    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

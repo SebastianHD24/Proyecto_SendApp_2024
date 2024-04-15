@@ -2,7 +2,6 @@
 
 <?php startblock('links-styles') ?>
     <link rel="stylesheet" href="Styles/senova.css"> <!-- Estilos de Senova -->
-    <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
