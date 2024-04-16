@@ -54,7 +54,7 @@
                     <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                     <li>
-                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a>
+                        <i class="fa-solid fa-cubes"></i><a href="../../Proyecto_SendApp_2024/Areas/index.php">Areas</a>
                         <ul class="areas-mas">
                             <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
                             <li>
@@ -120,9 +120,9 @@
                     <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
                 </ul>
             </div>
-        <?php endblock() ?> <!--Fin bloque de mavegacion-->
+        
     </header>
-
+    <?php endblock() ?> <!--Fin bloque de navegacion-->
     <!--accesibilidad-->								
     <div class="acesibilidad">
         <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
@@ -178,7 +178,6 @@
 
     
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
-    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

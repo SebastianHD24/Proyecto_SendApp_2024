@@ -11,6 +11,6 @@
     }
 
     // Redirige a la página de inicio
-    header("Location: ../../../../Proyecto_SendApp_2024");
+    header("Location: ../../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html  ");
     exit(); // Asegura que el script se detenga después de la redirección
 ?>

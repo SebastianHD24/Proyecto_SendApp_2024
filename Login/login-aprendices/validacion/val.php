@@ -1,12 +1,13 @@
 <?php
     error_reporting(0); 
     session_start();
-    $conn = new mysqli("localhost", "root", "", "sendapp"); // Se hace la conexion a la base de datos
-    
-    if ($conn->connect_errno) //Se hace una condicion por si marca algun error al la hora de conectarse la a base de datos
-    { 
-        echo "Fallo conectar a MySQL: (" . $con_connect_errno . ") " . $con_connect_errno;
-        exit();
+
+    include("../../conexion.php"); //importamos la conexion que se hizo global para AHORRAR LINEAS DE CODIGO
+    $conn = connection();
+
+    //chequeando la conexion
+    if (!$conn) {
+        die("Conexion Fallo: ".mysqli_connect_error()); // Si hay error de conexion marca error
     }
 
     @mysqli_query($conn, "SET NAMES 'utf8'"); // Esta parte es para admitir caracteres en la base de datos
@@ -26,13 +27,13 @@
 
         if (mysqli_fetch_array($consulta1)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo json_encode(array('success' => 2));
+            echo "<script>location.href='../../../interfaces/Administrador/index.php'; </script>";
         } elseif (mysqli_fetch_array($consulta2)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo json_encode(array('success' => 3));
+            echo "<script>location.href='../../../interfaces/Funcionario/funcionario.php'; </script>";
         } elseif (mysqli_fetch_array($consulta3)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo json_encode(array('success' => 3));
+            echo "<script>location.href='../../../interfaces/Usuario/usuarioSesion.php'; </script>";
         } elseif (mysqli_fetch_array($error_existencia)>0) {
             echo json_encode(array('success' => 4));
         } else{

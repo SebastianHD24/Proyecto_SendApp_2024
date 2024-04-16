@@ -14,6 +14,8 @@
 </div>
 <?php endblock() ?>
 
+
+
 <?php startblock('contenido') ?>
         <section>
             <h1 class="titulo">Psicologia</h1>

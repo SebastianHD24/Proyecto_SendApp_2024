@@ -1,3 +1,5 @@
+<?php include '../../bases/sesion_start.php' ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -114,7 +116,7 @@
           <div class="email">hideoshy@hotmail.com</div>
         </div>
         <!--Icono de Cerrar Sesion-->
-        <a href="#logout" class="logout hide">
+        <a href="../../Login/login-aprendices/validacion/cerrar_sesion.php" class="logout hide">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="24" height="24"
             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
             stroke-linejoin="round" aria-labelledby="logout-icon" role="img">
