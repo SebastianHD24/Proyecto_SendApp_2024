@@ -1,7 +1,7 @@
 // Espera a que el documento HTML esté completamente cargado
 $(document).ready(function() {
     // Cuando se envía el formulario con la clase 'form-login'
-    $('.form-login').submit(function(e) {
+    $('.form1').submit(function(e) {
         // Previene el comportamiento por defecto del formulario (enviar y recargar la página)
         e.preventDefault();
         // Realiza una solicitud AJAX al archivo 'val.php'
