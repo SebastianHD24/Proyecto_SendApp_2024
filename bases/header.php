@@ -76,7 +76,9 @@
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <?php startblock('cd') ?>
+                        <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <?php endblock() ?>
                 </ul>
 
                 <!--Menu Hamburguesa Animado-->
@@ -117,7 +119,7 @@
                         </div>
                     </li>
                     <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a></li>
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
+                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
                 </ul>
             </div>
         
