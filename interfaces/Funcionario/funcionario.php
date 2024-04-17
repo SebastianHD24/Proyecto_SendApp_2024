@@ -1,5 +1,6 @@
 <?php include '../../bases/sesion_start.php' ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
