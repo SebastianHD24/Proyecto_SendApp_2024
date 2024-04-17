@@ -15,10 +15,10 @@
     --gris-claro: #ededed;
     --fuente-principal: "Work Sans", sans-serif;
 }
-
+/*  
 html{
     width: 100vw;
-}
+}   */
 
 body{
     font-family: var(--fuente-principal);
@@ -228,11 +228,11 @@ i{
 /* ----------------------------------------------------- */
 
 /* Slider */
-*{
+/* *{
     margin: 0;
     padding: 0;
 
- }
+ } */
  .slider{
     width: 100%;
     margin: auto;
@@ -1288,3 +1288,5 @@ footer{
         opacity: 1;
     }
 }
+
+

@@ -1,11 +1,8 @@
 <?php include '../bases/header.php' ?>
-
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="biblioteca.css">    
-    <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+    <link rel="stylesheet" href="biblioteca.css">
+    <title>Senova</title>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
@@ -20,18 +17,7 @@
             </p>
             
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
 
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
 <?php endblock() ?>
-
-<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->

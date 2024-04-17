@@ -3,9 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="Styles-Bienestar/bienestar.css"> <!--Estilos de Bienestar -->
-    <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!--Estilos del Header -->
-    <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!--Estilos del Footer -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+    <title>Bienestar Al Aprendíz</title>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
@@ -21,5 +19,3 @@
         </section>
     </div>
 <?php endblock() ?>
-
-<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->

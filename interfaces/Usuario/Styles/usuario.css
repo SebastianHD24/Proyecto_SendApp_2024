@@ -370,25 +370,54 @@ section p{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
     grid-template-rows: 1fr;
     align-items: center; /*Alineación de los items de manera horizontal*/
     justify-items: center; /*Alineación de los items de manera vertical*/
     align-content: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     gap: 18px;
 }
 
 .cards{
-    width: 90%;
-    border: 1px solid black;
+    width: 120px;
+    border: 1.5px solid var(--negro);
+    background-color: var(--azul);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 12px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 10;
+
+}
+
+.cards article p {
+  opacity: 1; /* Por defecto visible */
+  transition: opacity 0.3s; /* Efecto de transición */
+}
+
+.cards:hover article p {
+  opacity: 0; /* Al hacer hover, desaparece el párrafo */
+}
+
+.cards article{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards article p{
+  text-align: center;
+  color: var(--white);
 }
 
 .cards article img{
-    width: 80px;
+    width: 60px;
+    position: absolute;
+    z-index: -100;
+    opacity: 1; /* Por defecto visible */
 }

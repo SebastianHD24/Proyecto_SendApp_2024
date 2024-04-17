@@ -3,9 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="Styles/coorporativas.css"> <!-- Estilos de relaciones coorporativas -->
-    <link rel="stylesheet" type="text/css" href="../Styles/header.css"> <!-- Estilos del header -->
-    <link rel="stylesheet" type="text/css" href="../Styles/footer.css"> <!-- Estilos del footer -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
+    <title>Relaciones Coorporativas</title>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
@@ -21,18 +19,10 @@
             </p>
             
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
-
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
 <?php endblock() ?>
-    
-<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
+
+<?php startblock("script")?>
+    <script src="Scripts/coorporativas.js"></script>
+<?php endblock()?>
