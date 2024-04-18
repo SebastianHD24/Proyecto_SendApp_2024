@@ -208,6 +208,9 @@ body {
     padding-bottom: 3rem;
 }
 
+.titulos{
+	padding-bottom: 2rem;
+}
 .titulos ul{
     display: flex;
     justify-content: space-between;
