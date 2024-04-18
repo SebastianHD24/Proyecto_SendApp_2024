@@ -76,7 +76,9 @@
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <?php startblock('cd') ?>
+                        <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <?php endblock() ?>
                 </ul>
 
                 <!--Menu Hamburguesa Animado-->
@@ -94,30 +96,9 @@
                     <li><i class="fa-solid fa-user-group"></i><a href="../../../Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
-                        <div class="menu-areas">
-                            <ul class="content-areas">
-                                <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/index.php">Biblioteca</a></li>
-                                <li>
-                                    <a href="../../../Proyecto_SendApp_2024/Bienestar/index.php" id="bienestar">Bienestar al aprendiz</a>
-                                    <ul class="areas-bienestar">
-                                        <li><a href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/index.php">Psicologia</a></li>
-                                        <li><a href="../../../Proyecto_SendApp_2024/Bienestar/Deportes/index.php">Deportes y cultura</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/index.php">Cordinacion academica</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/administracion/index.php">Administracion educativa</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
-                                <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
-                            </ul>
-                        </div>
                     </li>
                     <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a></li>
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="Login/login.html">Ingreso</a></li>
+                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
                 </ul>
             </div>
         

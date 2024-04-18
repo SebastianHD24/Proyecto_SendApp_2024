@@ -1,7 +1,7 @@
 // Espera a que el documento HTML esté completamente cargado
 $(document).ready(function() {
     // Cuando se envía el formulario con la clase 'form-login'
-    $('.form-login').submit(function(e) {
+    $('.form1').submit(function(e) {
         // Previene el comportamiento por defecto del formulario (enviar y recargar la página)
         e.preventDefault();
         // Realiza una solicitud AJAX al archivo 'val.php'
@@ -18,9 +18,11 @@ $(document).ready(function() {
                     const error = document.getElementById('mensaje_error');
                     error.textContent = "Complete todos los campos";
                 } else if (jsonData.success == "2") { // Si es igual a 2 redirigir a otro pagina
-                    location.href = "../../coordinaccion/index.php";
+                    location.href='../../../../Proyecto_SendApp_2024/interfaces/Administrador/index.php';
                 } else if (jsonData.success == "3") {
-                    location.href = "../../index.php";
+                    location.href='../../../../Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php';
+                } else if (jsonData.success == "6") {
+                    location.href='../../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php';
                 } else if (jsonData.success == "4") {
                     const error = document.getElementById('mensaje_error');
                     error.textContent = "Tu cuenta está suspendida. Comunícate con el administrador";
