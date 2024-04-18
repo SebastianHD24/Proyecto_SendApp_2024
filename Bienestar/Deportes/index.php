@@ -1,4 +1,4 @@
-<?php include '../../bases/header.php' ?>
+<?php include '../../bases/header.php'; ?>
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
@@ -16,7 +16,7 @@
 
 
 <?php startblock('contenido') ?>
-    <div class="sennova">
+    <div class="deportes">
         <section>
             <h1 class="titulo">Deportes y Cultura</h1>
             <article><img src="" alt="logo"></article>
@@ -54,7 +54,7 @@
         
             <h3 class="subtitulos">¿Actividades y deportes a los que se puede inscribir un aprendices?</h3>
             <p>
-                <ul>
+                <ul class="l_desordenada">
                     <li>
                         Vóleibol.
                     </li>
@@ -90,7 +90,7 @@
             <h3 class="subtitulos">¿Qué se debe hacer para usar el gimnasio?</h3>
             <p>
                 Para hacer uso del gimnasio se debe hacer un proceso, primero se debe inscribir, lo pueden hacer atravez del Whatsapp 
-                de Juan C. MArtínez 3115566251, se les hace una evaluación de riesgo cardiovascular y osteomuscular. 
+                de Juan C. Martínez 3115566251, se les hace una evaluación de riesgo cardiovascular y osteomuscular. 
                 De auerdo a los resulados se le asigna un tipo de entrenamiento.
             </p>
         
@@ -134,10 +134,6 @@
             </p>
             
             <br>
-            <h3 class="subtitulos">Subtitulo</h3>
-            <p>
-                parrafo
-            </p>
             
             <button class="button">Reservar cita</button>
 
