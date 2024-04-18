@@ -25,7 +25,6 @@ window.addEventListener('click', function(e) {
 });
 
 //Menu Hamburguesa -------------------------------------------------------------------------------------------------
-
 // barra menu hamburguesa
 const animacion = document.querySelector(".bars__menu").addEventListener("click", animarBar);
 
@@ -56,23 +55,4 @@ const contAreas = document.querySelector('.menu-areas')
 btnAreas.addEventListener('click', () => {
     contAreas.classList.toggle('abrirCer')
 })
-//------------------------------------------------------------------------------------------------------------------
-
-
-//Div con Images dentro del Section
-const panels = document.querySelectorAll(".panel1")
-
-//funcion para añadir el evento y la nueva clase a cada elemento
-panels.forEach(panel1 =>{
-    panel1.addEventListener("click", () =>{
-        removeActiveClasses()
-        panel1.classList.add("active")
-    })
-})
-
-//Funcion para desactivar al nueva clase añadida cada vez que cambie de imagen
-function removeActiveClasses(){
-    panels.forEach(panel1 => {
-        panel1.classList.remove("active")
-    })
-}
+//---------------------------------------------------------------------------------------------------------

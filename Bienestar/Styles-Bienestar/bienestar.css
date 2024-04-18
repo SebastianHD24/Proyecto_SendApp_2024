@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-family: 1.2rem;
+}
+
+/*titulo sennova*/
+.titulo{
+    text-align: center;
+    font-family: var(--fuente-open-sans);
+}
+/*subtitulos*/
+ .subtitulos{
+    font-family: var(--fuente-open-sans);
+    text-align: center;
+    margin-top: 50px;
+}
+/*contenido de el div senova*/
+.sennova{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.sennova section{
+    width: 100%;
+    padding: 80px;
+
+}
+.sennova p{
+    text-align: justify;
+    margin-top: 50px;
+    font-family: var(--fuente-poppins);
+    line-height: 30px;
+}
+/* .sennova img{
+    width: 70%;
+    height:90px;
+    margin-top: 20px;
+} */
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-bienestar img{
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ------------button ------------------------------- */
+.botones-bienestar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+}
+
+.btn{
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+}
+
+.btn:hover{
+    background-color: var(--azul);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.btn a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.container-bienestar h1{
+    font-family: var(--fuente-principal);
+    text-align: center;
+    margin-top: 20px;
+}
+.container-bienestar p{
+    font-family: var(--fuente-principal);
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.container-bienestar h2{
+    font-family: var(--fuente-principal);
+    text-align: center;
+    margin-top: 20px;
+}
+.container-bienestar h3{
+    font-family: var(--fuente-principal);
+    text-align: center;
+    margin-top: 20px;
+}
+.container-bienestar p{
+    font-family: var(--fuente-principal);
+    text-align: justify;
+    padding: 20px;
+}
