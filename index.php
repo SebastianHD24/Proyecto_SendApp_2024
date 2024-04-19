@@ -72,88 +72,71 @@
                 </div>
             </div>
 
-            <!-- ------------------------ Nosotros -------------------------- -->
-            <div class="container_nostros">
-                <div class="section-escudo_bandera">
-                    <div class="escudo">
-                        <h1>Escudo y Bandera</h1>
-                        <p>
-                            El escudo y la bandera del SENA, fueron diseñados a comienzos de la creación de nuestra institución, reflejan los tres sectores económicos dentro de los cuales se ubica el accionar de la institución: el piñón, representativo del sector industria; el caduceo, asociado al de comercio y servicios; y el café, ligado al primario y extractivo.SENA
-                        </p>
-                    </div>
-                    <div class="img_escudo">
-                        <img src="./Inicio/Img-home/Section-Img/escudo.png" alt="Escudo Sena">
-                    </div>
+                <!-- ------------------------ Nosotros -------------------------- -->
+    <div class="container_nostros">
+        <div class="contenedor">
+            <div class="seccion-escudo_bandera">
+                <div class="escudo">
+                    <h1>Escudo y Bandera</h1>
+                    <p>
+                        El escudo y la bandera del SENA, fueron diseñados a comienzos de la creación de nuestra institución, reflejan los tres sectores económicos dentro de los cuales se ubica el accionar de la institución: el piñón, representativo del sector industria; el caduceo, asociado al de comercio y servicios; y el café, ligado al primario y extractivo.SENA
+                    </p>
                 </div>
-                <!-- ---------------------------------------------------------- -->
-                <div class="section-logosimbolo">
-                    <div>
-                        <img src="./Inicio/Img-home/Section-Img/logo1.png" alt="Logo Sena">
-                    </div>
-                    <div class="logosimbolo">
-                        <h1>Logosímbolo</h1>
-                        <p>
-                            El logosímbolo muestra de forma gráfica la síntesis los enfoques de la formación que impartimos en la que el individuo es el responsable de su propio proceso de aprendizaje.
-                            SENA
-                            A
-                        </p>
-                    </div>
-                            
+                <img src="./Inicio/Img-home/Section-Img/escudo.png" alt="Escudo Sena">
+            </div>
+            <div class="section-logosimbolo">
+                <img src="./Inicio/Img-home/Section-Img/logo1.png" alt="Logo Sena">
+                <div class="logosimbolo">
+                    <h1>Logosímbolo</h1>
+                    <p>
+                        El logosímbolo muestra de forma gráfica la síntesis los enfoques de la formación que impartimos en la que el individuo es el responsable de su propio proceso de aprendizaje.
+                        SENA
+                        
+                    </p>
                 </div>
-                <!-- ----------------------------------------- ------------------>
-                <div class="section2">
-                    <div class="mision_vision">
+            </div>
+        </div>
+        
+        <!-- ----------------------------------------- ------------------>
+        <div class="section2">
+            <div class="mision_vision">
+                <div class="izquierda">
+                    <div class="content-izquierda">
                         <h1>Misión</h1>
                         <p>EL SENA está encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la formación profesional integral, para la incorporación y el desarrollo de las personas en actividades productivas que contribuyan al desarrollo social, económico y tecnológico del país.
                             Visión
-                        </p><br>
+                        </p>
+                    </div>
+                    <div class="triangulo-derecha"></div>
+                </div>
+                
+                <div class="derecha">
+                    <div class="triangulo-izquierda"></div>
+                    <div class="content-derecha">
                         <h1>Visión</h1>
-                        <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regio- nes como contribución a una Colombia educada, equitativa y en paz.</p>
+                    <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regio- nes como contribución a una Colombia educada, equitativa y en paz.</p>
                     </div>
-                    <div class="imagen_mision_vision">
-                        <img src="./Inicio/Img-home/Section-Img/img1.jfif" alt="">
-                    </div>
+                    
                 </div>
+                
             </div>
 
+        </div>    
+    </div>
 
 
-            <!-- --------------------------------------- Info CDITI ------------------------------ -->
 
-            <div class="container_info">
-                <div class="section-1">
-                    <h1>CDITI Informa</h1>
-                        <p>La estrategia CDITINFORMA está alineada con los objetivos y valores del SENA, por tanto es la brújula que guiará el camino para invertir los recursos sin improvisar y por el contrario, ejecutando lo planificado de forma real y aterrizada. Ese crecimiento controlado se verá reflejado en la ampliación de la cobertura toda vez que la visibilización del Centro llevará a mostrar a la Regional Risaralda como la pionera en Contenidos Digitales. Para canalizar los esfuerzos y energías en el mismo objetivo, bajo los lineamientos de la oficina de Comunicaciones de la Regional Risaralda, se crea el progama CDITINFORMA como una estrategia pedagógica de la Agencia de Contenidos Digitales en la cual son los mismos aprendices los encargados de visibilizar las acciones y actividades realizadas por el Centro, al tiempo que ponen en práctica lo aprendido. Con lo anterior, es importante entender cuál es el Mensaje Comunicativo que se divulgará y cuál es la audiencia a la que llegará. </p>
-                        <img src="./Inicio/Img-home/Section-Img/img2.JPG" alt="">
-                </div>
-                <div class="recuadros-info">
-                    <div class="section-2">
-                        <h2>Contrato de arrendamiento</h2>
-                        <img src="./Inicio/Img-home/Section-Img/1.jpeg" alt="Datos presupuesto">
-                    </div>
-                    <div class="section-3">
-                        <h2>Compra de materias formación de áre automotriz</h2>
-                        <img src="./Inicio/Img-home/Section-Img/2.jpeg" alt="Datos presupuesto">
-                    </div>
-                    <div class="section-4">
-                        <h2>Compra de materia Programas Fic</h2>
-                        <img src="./Inicio/Img-home/Section-Img/3.jpeg" alt="Datos presupuesto">
-                    </div>
-                    <div class="section-5">
-                        <h2>Adecuación para la modernización del ambiente del área de contenidos digitales</h2>
-                        <img src="./Inicio/Img-home/Section-Img/4.jpeg" alt="Datos presupuesto">
-                    </div>
-                    <div class="section-6">
-                        <h2>Contrato de suministro de gases para el área de soldaduray refrigeración</h2>
-                        <img src="./Inicio/Img-home/Section-Img/5.jpeg" alt="Datos presupuesto">
-                    </div>
-                    <div class="section-7">
-                        <h2>Compra de materiales de formación para el área de confecciones.</h2>
-                        <img src="./Inicio/Img-home/Section-Img/6.jpeg" alt="Datos presupuesto">
-                    </div>
-                </div>
-        
-            </div>
+    <!-- --------------------------------------- Info CDITI ------------------------------ -->
+
+    <div class="container_info">
+        <div class="section-1">
+            <h1>CDITI Informa</h1>
+                <p>La estrategia CDITINFORMA está alineada con los objetivos y valores del SENA, por tanto es la brújula que guiará el camino para invertir los recursos sin improvisar y por el contrario, ejecutando lo planificado de forma real y aterrizada. Ese crecimiento controlado se verá reflejado en la ampliación de la cobertura toda vez que la visibilización del Centro llevará a mostrar a la Regional Risaralda como la pionera en Contenidos Digitales. Para canalizar los esfuerzos y energías en el mismo objetivo, bajo los lineamientos de la oficina de Comunicaciones de la Regional Risaralda, se crea el progama CDITINFORMA como una estrategia pedagógica de la Agencia de Contenidos Digitales en la cual son los mismos aprendices los encargados de visibilizar las acciones y actividades realizadas por el Centro, al tiempo que ponen en práctica lo aprendido. Con lo anterior, es importante entender cuál es el Mensaje Comunicativo que se divulgará y cuál es la audiencia a la que llegará. </p>
+                
+        </div>
+        <img src="./Inicio/Img-home/Section-Img/img2.JPG" alt="">
+
+        </div>
         </section>
     </div>
     
