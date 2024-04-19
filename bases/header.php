@@ -21,10 +21,7 @@
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/footer.css"> <!--CSS footer -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
-    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/header.css"> <!--CSS haader -->
-    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/footer.css"> <!--CSS footer -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
-    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
+    
 
     <!--Styles adicionales, este bloque se llamara en otro archivos para agregar rutas de estilos y links que no son globales para todas las paginas-->
     <?php startblock('links-styles') ?>
@@ -69,9 +66,9 @@
                             <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnológicos</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecnoparque</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecnoacademia</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
                         </ul>
                     </li>
@@ -158,7 +155,7 @@
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/BotonCitas.js"></script><!--Scripts Boton citas-->
 
     
-    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
+    <!-- <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script>Scripts HEADER -->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

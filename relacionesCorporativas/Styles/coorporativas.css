@@ -29,12 +29,13 @@ body{
 }
 /*subtitulos*/
  .subtitulos{
+    font-size: 25px;
     font-family: var(--fuente-principal);
-    text-align: center;
-    margin-top: 50px;
+    text-align: left;
+    margin-top: 30px;
 }
 /*contenido de el div senova*/
-.sennova{
+.corporativas{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -42,17 +43,16 @@ body{
     align-items: center;
 
 }
-.sennova section{
+.corporativas section{
     width: 100%;
-    padding: 80px;
+    padding: 60px;
 
 }
-.sennova p{
+.corporativas p{
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: var(--fuente-principal);
     line-height: 30px;
-    background-color: red;
 }
 /* .sennova img{
     width: 70%;
@@ -66,6 +66,14 @@ article {
     align-items: center;
     padding: 20px 0px 0px 0px;
     object-fit: cover;
+}
+
+.l_ordenada{
+    padding: 15px 30px 15px 30px;
+}
+.l_ordenada li{
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 /*******************************botones**********************************/
 /*Boton agendar cita*/
