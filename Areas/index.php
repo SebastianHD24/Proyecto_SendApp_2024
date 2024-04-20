@@ -2,23 +2,18 @@
 
 <?php startblock('links-styles') ?>
     <link rel="stylesheet" href="Styles/areas.css">
-    <link rel="stylesheet" href="../Styles/footer.css"> <!-- Estilos footer -->
-    <link rel="stylesheet" href="../Styles/header.css"> <!-- Estilos header -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
 <?php endblock() ?>
 
-    <link rel="stylesheet" href="../Styles/accesibilidad.css"><!--CSS accesibilidad-->
-    <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
     <title>SendApp</title>
 
 <?php startblock('contenido') ?>
     <!-- Contenedor con las tarjetas de cada area -->
     <div class="content__areas">
-        <div class="content__areas-info">
+        <article class="content__areas-info">
             <p>
                 Click sobre el área de la cual deseas conocer más información.
             </p>
-        </div>
+        </article>
         <!-- Sección con las tarjetas-->
         <section class="areas__cards">
             <!-- Card 1-->
@@ -29,9 +24,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Biblioteca</p>
                             <hr>
-                            <p>Library</p>
+                            <p>Biblioteca</p>
                         </div>
                     </article>
                 </a>
@@ -44,9 +38,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Senova</p>
                             <hr>
-                            <p>Senova</p>
+                            <p>Sennova</p>
                         </div>
                     </article>
                 </a>
@@ -59,9 +52,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Tecno Parque</p>
                             <hr>
-                            <p>Tech Park</p>
+                            <p>Tecno Parque</p>
                         </div>
                     </article>
                 </a>
@@ -74,9 +66,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Tecno Académia</p>
                             <hr>
-                            <p>Tech Academic</p>
+                            <p>Tecno Académia</p>
                         </div>
                     </article>
                 </a>
@@ -89,9 +80,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Fondo Emprender</p>
                             <hr>
-                            <p>Entrepreneur Ship Found</p>
+                            <p>Fondo Emprender</p>
                         </div>
                     </article>
                 </a>
@@ -104,9 +94,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Fabrica de Software</p>
                             <hr>
-                            <p>Software<br>Factory</p>
+                            <p>Fábrica de Software</p>
                         </div>
                     </article>
                 </a>
@@ -119,9 +108,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Bienestar Al Aprendiz</p>
                             <hr>
-                            <p>Apprentice Wellbeing</p>
+                            <p>Bienestar Al Aprendiz</p>
                         </div>
                     </article>
                 </a>
@@ -134,9 +122,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Servicios Tecnológicos</p>
                             <hr>
-                            <p>Technological Services</p>
+                            <p>Servicios Tecnológicos</p>
                         </div>
                     </article>
                 </a>
@@ -149,9 +136,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Ralciones Corporativas</p>
                             <hr>
-                            <p>Corporare Relations</p>
+                            <p>Relaciones Coorporativas</p>
                         </div>
                     </article>
                 </a>
@@ -164,9 +150,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Coordinación Académica</p>
                             <hr>
-                            <p>Academic Cordintation</p>
+                            <p>Coordinación Académica</p>
                         </div>
                     </article>
                 </a>
@@ -179,9 +164,8 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Administración Educativa</p>
                             <hr>
-                            <p>Educative Administration</p>
+                            <p>Administración Educativa</p>
                         </div>
                     </article>
                 </a>
@@ -194,15 +178,14 @@
                     </article>
                     <article>
                         <div class="parrafos">
-                            <p>Programas de Formación</p>
                             <hr>
-                            <p>Formation Programs</p>
+                            <p>Programas de Formación</p>
                         </div>
                     </article>
                 </a>
             </div>
         </section>
     </div>
+<script src="Scripts/areas.js"></script>
 <?php endblock() ?>
 
-<script src="../Inicio/Scripts/inactividad.js"></script> <!--Script para manejar la inactividad del usuario-->
