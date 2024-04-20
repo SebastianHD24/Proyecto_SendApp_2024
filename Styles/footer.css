@@ -8,20 +8,12 @@ footer{
     left: 0;
     background-color: var(--verde);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-top: 1px solid var(--gris-oscuro);
     font-family: "Work Sans", sans-serif;
     font-weight: bold;
-}
-.maps{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-
-.maps iframe{
-    border-radius: 20px;
 }
 
 /*Tamaño del logo SendApp*/
@@ -101,20 +93,6 @@ footer{
 }
 
 /*RESPONSIVE FOOTER*/
-@media (max-width: 810px){
-    footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-}
-
-
-
-
 
 @media screen and (max-width: 480px){
     /*RESPONSIVE CONTENT*/
