@@ -1,4 +1,3 @@
-
 <?php include '../Proyecto_SendApp_2024/bases/header.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredear-->
 
     <!--Bloque para agregar las rutas de stylos independientes de cada archivo y links adicionales para archivos propios-->
@@ -43,7 +42,7 @@
                         <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Inoco De Areas">
                     </article>                         
                     <p>
-                        En el menú de navagación en el apartado de <b><a href="Areas/index.html">Areas</a></b> puedes encontrar la información referente a cada una de las areas y sus respectivos servicios.</br><b>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de Aprendíz Sena</b>
+                        En el menú de navagación en el apartado de <b><a href="Areas/index.html">Areas</a></b> puedes encontrar la información referente a cada una de las areas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -51,7 +50,7 @@
                         <img src="Inicio/Img-home/Section-Img/communicate_2343723.png" alt="Inoco De informacion">
                     </article> 
                     <p>
-                        Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la informacion necesaria en <b><a href="">Acerca CDITI</a></b>
+                        Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la informacion necesaria en <b><a href="">Acerca CDITI.</a></b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -59,7 +58,7 @@
                         <img src="Inicio/Img-home/Section-Img/training_12343284.png" alt="Inoco De Nosotros">
                     </article> 
                     <p>
-                        Si te intera saber un poco más sobre nosotros y el ¿Por qué? fue creado este sitio web puedes visitar el apartado de <b><a href="">Nosotros</a></b>
+                        Si te intera saber un poco más sobre nosotros y el ¿Por qué? fue creado este sitio web puedes visitar el apartado de <b><a href="">Nosotros.</a></b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -67,7 +66,7 @@
                         <img src="Inicio/Img-home/Section-Img/calendar_2693507.png" alt="Inoco de Agenda">
                     </article> 
                     <p>
-                        Sí eres aprendíz Sena y necesitas agendar una cita para algun servicio del Centro de Diseño e Innovacion Tecnólogica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="Login/login-aprendices/login-aprendices.html">Ingreso</a></b>
+                        Sí eres aprendíz Sena y necesitas agendar una cita para algun servicio del Centro de Diseño e Innovacion Tecnólogica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="Login/login-aprendices/login-aprendices.html">Ingreso.</a></b>
                     </p>
                 </div>
             </div>
@@ -144,7 +143,4 @@
         </div>
 
     </div>
-
-
-    
 <?php endblock() ?> <!--Fin bloque de contenido-->
