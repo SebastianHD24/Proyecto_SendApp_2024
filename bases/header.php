@@ -129,17 +129,22 @@
     <?php startblock('footer') ?> <!--Inicio bloque footer-->
     <footer>
         <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
-        <div class="iconos-container">
-        <!--Donde estan las redes sociales-->
-            <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
-            <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
-            <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
-            <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
-            <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+        <div class="footer-content">
+            <div class="iconos-container">
+            <!--Donde estan las redes sociales-->
+                <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+                <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+                <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+                <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+                <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+                
+            </div>
+            <ul class="footer-menu">
+                <li class="menu-item">@SENAComunica</li>
+            </ul>
         </div>
-        <ul class="footer-menu">
-            <li class="menu-item">@SENAComunica</li>
-        </ul>
+        <div class="maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.956669064205!2d-75.68085189753448!3d4.836410011767831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3881a4b50bb31d%3A0x9150c2e299ed35b0!2sCDITI%20SENA%20Dosquebradas!5e0!3m2!1ses-419!2sco!4v1713576301141!5m2!1ses-419!2sco" width="380" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
 
