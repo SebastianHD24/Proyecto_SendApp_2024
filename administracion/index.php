@@ -10,7 +10,6 @@
     <div class="administracion">
         <section>
             <h1 class="titulo">Administración Educativa</h1>
-            <article><img src="" alt="logo"></article>
 
             <h3 class="subtitulos">¿Qué es?</h3>
             <p>

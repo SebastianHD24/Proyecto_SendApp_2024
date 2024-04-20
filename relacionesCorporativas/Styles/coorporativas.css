@@ -59,14 +59,6 @@ body{
     height:90px;
     margin-top: 20px;
 } */
-article {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0px 0px 0px;
-    object-fit: cover;
-}
 
 .l_ordenada{
     padding: 15px 30px 15px 30px;
@@ -155,5 +147,14 @@ article {
         background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
         110% 10%;
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
+    }
+}
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
     }
 }

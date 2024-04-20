@@ -11,8 +11,7 @@
     <div class="corporativas">
         <section>
             <h1 class="titulo">Relaciones Corporativas</h1>
-            <article><img src="" alt="logo"></article>
-
+            
             <h3 class="subtitulos">¿Qué son las relaciones corporativas del SENA?</h3>
             <p>
                 Es el área encargada de la interacción entre el servicio nacional de aprendizaje SENA y las empresas.

@@ -9,7 +9,7 @@
     <div class="biblioteca">
         <section>
         <h1 class="titulo">Biblioteca</h1>
-            <article><img src="" alt="logo"></article>
+        
 
             <h3 class="subtitulos">Normas de la biblioteca</h3>
             

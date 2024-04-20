@@ -9,89 +9,36 @@
     <div class="sennova">
         <section>
             <h1 class="titulo">Servicios Tecnologicos</h1>
-            <article><img src="img pagina principal/logo SENNOVA.jpg" alt="logosennova"></article>
+            
 
             <h3 class="subtitulos">¿Qué son los servicios tecnológicos</h3>
-            <p>Bueno, los servicios tecnológicos son proyectos que dependen de la línea de imas de matching que tiene el
-                SENA como estrategia para fortalecimiento de los productos de investigación, innovación y desarrollo
-                tecnológico, servicios tecnológicos está adherido a la parte directa de e desarrollo tecnológico y con
-                los productos que sacamos de aquí de los laboratorios contribuimos también al registro calificado de los
-                tecnólogos e que e se forman dentro del centro de formación en la líneas específicas que tenemos las
-                líneas medulares que tienen adheridas al centro.
+            <p>
+                Los servicios tecnológicos representan proyectos que se alinean con la estrategia de fortalecimiento de los productos de investigación, innovación y desarrollo tecnológico del SENA. Estos proyectos están vinculados directamente al área de desarrollo tecnológico y complementan los productos que se generan en los laboratorios. Además, contribuyen al proceso de registro calificado de los tecnólogos formados dentro del centro de formación, especialmente en las áreas específicas que están integradas en las líneas medulares del centro.
 
             </p>
             <h3 class="subtitulos">¿Qué servicios ofrece?</h3>
-            <p> Dentro de los centros hay que tener presente que los laboratorios que están adheridos a los servicios
-                tecnológicos deben de cumplir unas necesidades cierto? o deben de cumplir con unos requisitos
-                específicos establecidos en los lineamientos de SENNOVA, lo primero es que por ejemplo los servicios no
-                pueden ser competencia de los privados y deben de cubrir necesidades específicas de los sectores
-                productivos que están asociados a líneas medulares del centro entonces nosotros dentro de las líneas
-                tenemos las son metalmecánica y construcción y en eso nuestros laboratorios es fuerte actualmente
-                nosotros tenemos un laboratorio o dos laboratorios que hacen caracterizaciones mecánicas y dimensionales
-                para productos de infraestructura de concreto
-                barras curvadas y mallas electrosoldadas caracterizamos mecánicamente y físicamente y dimensionalmente
-                esos elementos que son utilizados en infraestructura y que son digamos de carácter obligatorio en e
-                requerimientos del ministerio de industria y comercio y turismo.
+            <p> 
+                Dentro de los centros es fundamental que los laboratorios asociados a los servicios tecnológicos cumplan con requisitos específicos establecidos en los lineamientos de SENNOVA. Estos laboratorios deben satisfacer necesidades particulares y no pueden competir con servicios privados. Además, deben atender las demandas específicas de los sectores productivos vinculados a las líneas medulares del centro. Por ejemplo, en nuestro caso, las líneas medulares incluyen metalmecánica y construcción, áreas en las que nuestros laboratorios tienen una sólida presencia. Actualmente, contamos con uno o dos laboratorios dedicados a realizar caracterizaciones mecánicas y dimensionales de productos utilizados en infraestructura, como barras curvadas y mallas electrosoldadas. Estas caracterizaciones incluyen análisis mecánicos, físicos y dimensionales que son obligatorios según los requisitos establecidos por el Ministerio de Industria, Comercio y Turismo.
 
             </p>
             <h3 class="subtitulos">¿Quiénes pueden acceder a servicios tecnológicos?</h3>
-            <p> Los servicios están abiertos a cualquier persona natural, empresa, aprendices, instructores,
-                administrativos de la comunidad SENA nosotros como servicios tecnológicos del SENA estamos abiertos a
-                que cualquier persona puede venir y acceder a ellos siempre y cuando nuestras capacidades operativas
-                permitan hacerlo.
-            </p>
-            <h3 class="subtitulos">¿Cuáles son los requisitos para acceder a servicios tecnológicos?</h3>
-            <p>No hay unos requisitos establecidos que digamos e solamente estas personas pueden hacerlo mm nosotros e
-                estamos abiertos y de los aprendices requieren de hacer un trabajo y nosotros tenemos esa capacidad
-                operativa, tenemos el equipamiento podamos hacerlo no hay ningún inconveniente.
-
+            <p> 
+                Los servicios tecnológicos del SENA están disponibles para cualquier persona natural, empresa, aprendiz, instructor o miembro administrativo de la comunidad SENA. Nuestra política es de puertas abiertas, lo que significa que cualquier individuo puede acceder a estos servicios, siempre y cuando nuestras capacidades operativas lo permitan. Estamos comprometidos a brindar apoyo y soluciones tecnológicas a quienes lo necesiten, promoviendo así la colaboración y el intercambio de conocimientos en beneficio de la comunidad.
             </p>
             <h3 class="subtitulos">¿De qué se encarga servicios tecnológicos?</h3>
             <p>
-                los servicios tecnológicos como le decía antes pues tiene que cubrir una necesidad específica del sector
-                en este caso sector construcción y sector metalmecánico entonces nuestras necesidades buscan suplir
-                ensayos de laboratorio para caracterizar materiales con base a las normas en el ntc 2289, ntc 3353, ntc
-                5806, ntc 1, ntc 2 todas las empresas que requieran ensayos y que estén adheridas a este, a esos métodos
-                o a esos requerimientos pueden acceder a estos servicios y nosotros los préstamos con la mayor e digamos
-                calidad técnica porque estamos cubiertos bajo el alcance de acreditación 19 lab 020 ante el organismo
-                nacional de acreditación lab la acreditación nos permite definir que somos un laboratorio que cuenta con
-                un reconocimiento de tercera parte para admitir resultados que son confiables que es lo más importante
-                en todo nuestro proceso.
+            Los servicios tecnológicos que ofrecemos están diseñados para satisfacer necesidades específicas del sector, como el sector de la construcción y el sector metalmecánico. Nuestro enfoque se centra en proporcionar ensayos de laboratorio para caracterizar materiales de acuerdo con las normas establecidas en la NTC 2289, NTC 3353, NTC 5806, NTC 1 y NTC 2. Todas las empresas que requieran este tipo de ensayos y estén sujetas a estos estándares pueden acceder a nuestros servicios. Nos comprometemos a ofrecer la más alta calidad técnica en nuestros servicios, respaldados por nuestro alcance de acreditación 19 lab 020 ante el Organismo Nacional de Acreditación (ONA). Esta acreditación nos otorga el reconocimiento de tercera parte y garantiza la fiabilidad de los resultados que proporcionamos, lo cual es fundamental para todo nuestro proceso y para la confianza de nuestros clientes.
 
             </p>
-            <h3 class="subtitulos">¿Servicios tecnológicos le puede brindar ayuda a todas las áreas que hay en el CDITI?
-                ¿Sí? ¿No?, ¿Cuáles?</h3>
-            <p> Si nosotros e digamos que no solo prestamos servicios externos también tenemos una caracterización de
-                servicios internos o servicios a través de SENA proveedor SENA y los servicios internos buscan cubrir
-                requerimientos que tengas otras áreas en elementos específicos por ejemplo procesos de investigación e
-                innovación si hay proyectos de investigación e innovación bajo la línea de SENNOVA que requieran por
-                ejemplo ensayos de laboratorio para avanzar en sus ejecuciones técnicas nosotros podemos prestar esos
-                servicios de manera gratuita cierto? o por ejemplo hay aprendices que tienen proyectos de emprendimiento
-                y esos proyectos de emprendimiento nosotros podemos darle solución estéticas nosotros podemos apoyarlos,
-                lo mismo tecno parqués, tecno academia o cualquier necesidad interna que se presente dentro del centro
-                de formación y que permita, si por ejemplo dentro del centro de formación se estuviera haciendo una
-                construcción y se requieran ensayos pues nosotros estamos en la obligación de prestar esos servicios
-                para hacer esa caracterización de maneral imparcial cierto? y que se busquen unos resultados que sean
-                fiable.
+            <h3 class="subtitulos">¿Servicios tecnológicos le puede brindar ayuda a todas las áreas que hay en el CDITI?</h3>
+            <p> Además de proporcionar servicios externos, también ofrecemos servicios internos a través del SENA proveedor. Estos servicios internos están destinados a cubrir las necesidades de otras áreas dentro del centro en elementos específicos. Por ejemplo, si hay proyectos de investigación e innovación bajo la línea de SENNOVA que requieran ensayos de laboratorio para avanzar en su ejecución técnica, podemos proporcionar esos servicios de manera gratuita. También podemos apoyar a los aprendices que estén desarrollando proyectos de emprendimiento, ofreciendo soluciones estéticas u otros tipos de apoyo. Del mismo modo, podemos brindar soluciones a necesidades internas de tecno parques, tecno academias u otros proyectos dentro del centro de formación. Si, por ejemplo, se está llevando a cabo una construcción en el centro y se requieren ensayos, estamos obligados a prestar esos servicios de manera imparcial, asegurando que los resultados sean fiables y cumplan con los estándares requeridos. Nuestro objetivo es apoyar el desarrollo y éxito de todos los proyectos dentro del centro de formación, tanto externos como internos.
             </p>
             <h3 class="subtitulos">¿En qué horarios se puede acceder a servicios tecnológicos?</h3>
-            <p> Normalmente las solicitudes de los servicios tecnológicos se hacen a través de medios ofimáticos se hace
-                una solicitud a través de un correo o en el caso que se requiera digamos una asesoría presencial e se
-                pueda acceder en horario de oficina desde las 8 de la mañana hasta las 6 de la tarde en las
-                instalaciones del centro en las oficinas de servicios tecnológicos.
+            <p> Nuestro horario de oficina, de 8:00 am a 6:00 pm, en nuestras oficinas de servicios tecnológicos en el centro.
 
             </p>
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
 
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
     <?php endblock() ?>
