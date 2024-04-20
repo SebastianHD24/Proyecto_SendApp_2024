@@ -1,4 +1,5 @@
 <?php include '../../bases/sesion_start.php' ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +19,8 @@
     <link rel="shortcut icon" href="Pangina principal/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="Styles/admin.css"> <!-- Enlace hacia la hoja de estilos CSS-->
+    <link rel="stylesheet" type="text/css" href="./Styles/admin.css"> <!-- Enlace hacia la hoja de estilos CSS-->
+    <link rel="stylesheet" type="text/css" href="./Styles/style.css" >
     <title>SendApp</title>
 </head>
 <body>
@@ -196,89 +198,146 @@
       </div>
     </nav>
   </div> 
-    <!-- Contenido -->
-    <div class="div__content">
-        <section>
+  <!-- Contenido -->
+  <div class="div__content">
+      <section>
         <!--Logo en el contenido-->
         <article>
-            <img src="Admin-img/LogosSena-img/SendApp.png" name="SendApp" alt="SendApp Logo"/>
+          <img src="Admin-img/LogosSena-img/SendApp.png" name="SendApp" alt="SendApp Logo"/>
         </article>
         <p>
-            Ingresa la cedula del aprendiz y/o funcionario del cual deseas consultar su información
+          Ingresa la cedula del aprendiz y/o funcionario del cual deseas consultar su información
         </p>
-         <!-- Barra de busqueda-->
-         <div class="search__wrapper">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="search-icon" role="img">
-            <title id="search-icon">Buscar</title>
-            <path
-                d="M9 9L13 13M5.66667 10.3333C3.08934 10.3333 1 8.244 1 5.66667C1 3.08934 3.08934 1 5.66667 1C8.244 1 10.3333 3.08934 10.3333 5.66667C10.3333 8.244 8.244 10.3333 5.66667 10.3333Z"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <input type="text" aria-labelledby="search-icon" name="barraBusqueda">
+        
+        <!--*********************************************************************************-->
+        <!-- Contenedor de búsqueda -->
+        <div class="search-container">
+          <!-- Formulario de búsqueda -->
+            <form method="GET">
+              <input type="text" name="documento_identidad" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
+              <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
+            </form>
         </div>
-        <div class="cards__container">
-              <div class="cards">
-                 <article>
-                    <img src="Admin-img/LogosSena-img/avatar.png" name="" alt="Imagen de usuario"/>
-                 </article>
-                 <p>rol del usuario</p>
-                 <p>nombre del usuario</p>
-                 <p>Id del usuario</p>
-                 <button class="modify__button">Modificar</button>
-              </div>
-              <div class="cards">Biblioteca
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards"><center> Coordinación Académica </center>
-                <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                </article>   
-              </div>
-              <div class="cards">Administración
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Fondo Enprender
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Relaciones Corporativas
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Senova
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Servicios Tecnológicos
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Fabrica de Software
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Tecno Academia
-                 <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                 </article>   
-              </div>
-              <div class="cards">Tecno Parque
-                <article>
-                    <img src="Assets/digitalization_4825067.png" name="" alt=""/>
-                </article>    
-              </div>
-          </div>
-        </section>
-    </div>
+        <br>
+
+        <!-- Tabla de usuarios -->
+        <div class="users-table">
+          <table>
+            <!-- Encabezados de la tabla -->
+            <thead>
+              <tr>
+                <!-- Columnas de la tabla -->
+                <th>Documento Identidad</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Contraseña</th>
+                <th>Correo</th>
+                <th>Celular</th>
+                <th>Programa</th>
+                <th>Ficha</th>
+                <th>Estado</th>
+                <th>Rol</th>
+                <th>Servicio</th> <!-- Cambiado de "ID Servicio" a "Servicio" -->
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <!-- Cuerpo de la tabla -->
+            <tbody>
+              <?php
+                // Incluir el archivo de conexión
+                include("../../Login/conexion.php");
+                // Establecer conexión a la base de datos
+                $conn = connection();
+
+                // Consulta SQL para obtener datos de usuarios, roles y servicios
+                $sql = "SELECT *, (SELECT nombre_rol FROM roles WHERE roles.id_rol = usuarios.id_rol) AS nombre_rol,
+                        (SELECT nombre_servicio FROM servicios WHERE servicios.id_servicio = usuarios.id_servicio) AS nombre_servicio
+                        FROM usuarios";
+
+                // Verificar si se realizó una búsqueda
+                if(isset($_GET['documento_identidad']) && $_GET['documento_identidad'] != '') {
+                  $search_term = $_GET['documento_identidad'];
+                  echo "Buscas: $search_term";
+
+                  // Agregar condición de búsqueda a la consulta SQL
+                  $sql .= " WHERE usuarios.documento_identidad = ? OR usuarios.nombres LIKE ?";
+                  // Preparar la consulta SQL
+                  $stmt = mysqli_prepare($conn, $sql);
+                  if ($stmt) {
+                    $search_term_like = "%$search_term%";
+                    // Enlazar parámetros a la consulta preparada
+                    mysqli_stmt_bind_param($stmt, "is", $search_term, $search_term_like);
+                    // Ejecutar la consulta preparada
+                    mysqli_stmt_execute($stmt);
+                    // Obtener el resultado de la consulta
+                    $query = mysqli_stmt_get_result($stmt);
+                  } else {
+                    echo "Error en la preparación de la consulta: " . mysqli_error($conn);
+                  }
+                } else {
+                  // Ejecutar la consulta sin condición de búsqueda
+                  $query = mysqli_query($conn, $sql);
+                }
+
+                // Verificar si la consulta fue exitosa
+                if (!$query) {
+                  echo "Error en la consulta SQL: " . mysqli_error($conn);
+                } else {
+                  // Iterar sobre los resultados y mostrar cada fila en la tabla
+                  while ($row = mysqli_fetch_array($query)) {
+              ?>
+                <tr id="row_<?= $row['documento_identidad'] ?>">
+                  <!-- Mostrar datos de usuario en cada columna -->
+                  <td><?= $row['documento_identidad'] ?></td>
+                  <td><?= $row['nombres'] ?></td>
+                  <td><?= $row['apellidos'] ?></td>
+                  <td><?= $row['contrasena'] ?></td>
+                  <td><?= $row['correo'] ?></td>
+                  <td><?= $row['celular'] ?></td>
+                  <td><?= $row['programa'] ?></td>
+                  <td><?= $row['ficha'] ?></td>
+                  <!-- Mostrar el estado del usuario -->
+                  <td id="estado_<?= $row['documento_identidad'] ?>" class="<?= ($row['estado'] == 1) ? 'activo' : 'inactivo' ?>"><?= ($row['estado'] == 1) ? 'Activo' : 'Inactivo' ?></td>
+                  <td><?= $row['nombre_rol'] ?></td>
+                  <!-- Mostrar el nombre del servicio en lugar del ID -->
+                  <td><?= $row['nombre_servicio'] ?></td>
+                  <!-- Acciones -->
+                  <td>
+                    <?php if ($row['estado'] == 1): ?>
+                      <!-- Enlace para desactivar usuario -->
+                      <a href="actualizar_estado.php?action=desactivar&documento_identidad=<?= $row['documento_identidad'] ?>" onclick="return confirmarDesactivar('<?= $row['documento_identidad'] ?>')">Desactivar</a>
+                    <?php else: ?>
+                      <!-- Enlace para activar usuario -->
+                      <a href="actualizar_estado.php?action=activar&documento_identidad=<?= $row['documento_identidad'] ?>" onclick="return confirmarActivar('<?= $row['documento_identidad'] ?>')">Activar</a>
+                    <?php endif; ?>
+                    <!-- Separador -->
+                    
+                    <!-- Enlace para editar usuario -->
+                    <a href="actualizar.php?documento_identidad=<?= $row['documento_identidad'] ?>" class="users-table--edit">Editar</a>
+                  </td>
+                </tr>
+                <?php
+                  }
+                }
+          ?>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Script JavaScript para confirmar acciones -->
+        <script>
+        // Función para confirmar activar usuario
+          function confirmarActivar(documento_identidad) {
+            let confirmacion = confirm('¿Estás seguro de que quieres activar este usuario?');
+            return confirmacion;
+          }
+
+          // Función para confirmar desactivar usuario
+          function confirmarDesactivar(documento_identidad) {
+            let confirmacion = confirm('¿Estás seguro de que quieres desactivar este usuario?');
+            return confirmacion;
+            }
+        </script>     
   <script src="Scripts/admin.js"></script>
 </body>
 </html>
