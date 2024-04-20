@@ -126,7 +126,7 @@
                         <p>La estrategia CDITINFORMA está alineada con los objetivos y valores del SENA, por tanto es la brújula que guiará el camino para invertir los recursos sin improvisar y por el contrario, ejecutando lo planificado de forma real y aterrizada. Ese crecimiento controlado se verá reflejado en la ampliación de la cobertura toda vez que la visibilización del Centro llevará a mostrar a la Regional Risaralda como la pionera en Contenidos Digitales. Para canalizar los esfuerzos y energías en el mismo objetivo, bajo los lineamientos de la oficina de Comunicaciones de la Regional Risaralda, se crea el progama CDITINFORMA como una estrategia pedagógica de la Agencia de Contenidos Digitales en la cual son los mismos aprendices los encargados de visibilizar las acciones y actividades realizadas por el Centro, al tiempo que ponen en práctica lo aprendido. Con lo anterior, es importante entender cuál es el Mensaje Comunicativo que se divulgará y cuál es la audiencia a la que llegará. </p>
                         <img src="./Inicio/Img-home/Section-Img/img2.JPG" alt="">
                 </div>
-                <div class="recuadros-info">
+                <!-- <div class="recuadros-info">
                     <div class="section-2">
                         <h2>Contrato de arrendamiento</h2>
                         <img src="./Inicio/Img-home/Section-Img/1.jpeg" alt="Datos presupuesto">
@@ -152,7 +152,7 @@
                         <img src="./Inicio/Img-home/Section-Img/6.jpeg" alt="Datos presupuesto">
                     </div>
                 </div>
-        
+         -->
             </div>
         </section>
     </div>
