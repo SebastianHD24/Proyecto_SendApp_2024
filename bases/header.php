@@ -129,17 +129,19 @@
     <?php startblock('footer') ?> <!--Inicio bloque footer-->
     <footer>
         <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
-        <div class="iconos-container">
-        <!--Donde estan las redes sociales-->
-            <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
-            <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
-            <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
-            <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
-            <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
-        </div>
-        <ul class="footer-menu">
-            <li class="menu-item">@SENAComunica</li>
-        </ul>
+            <div class="iconos-container">
+            <!--Donde estan las redes sociales-->
+                <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+                <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+                <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+                <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+                <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+                
+            </div>
+            <ul class="footer-menu">
+                <li class="menu-item">@SENAComunica</li>
+            </ul>
+ 
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
 

@@ -15,10 +15,25 @@
     --gris-claro: #ededed;
     --fuente-principal: "Work Sans", sans-serif;
 }
-/*  
-html{
-    width: 100vw;
-}   */
+
+/* -------------------------------- mapa ----------------------- */
+
+.map{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map iframe{
+    border-radius: 12px;
+    margin: 20px;
+}
+.map h1 {
+    text-align: center;
+}
+
 
 body{
     font-family: var(--fuente-principal);
@@ -326,10 +341,6 @@ h1{
 }
 
 
-
-
-/* -------------------------   Info CDITI   ------------------ */
-
 /* --------- Contenido info CDITI ------------ */
 
 
@@ -338,6 +349,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction:row;
     gap: 80px;
 }
 
@@ -350,6 +362,7 @@ h1{
     width: 50%;
     height: auto;
     border-radius: 20px;
+}
 
 @media screen and (min-width:768px){
     
@@ -368,7 +381,6 @@ h1{
         width: 80%;
     }
 }
-
 
 /* --------------------------------------------------- */
 /* responsive general */
