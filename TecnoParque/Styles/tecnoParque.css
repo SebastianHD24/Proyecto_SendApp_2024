@@ -199,3 +199,12 @@ body{
     margin: 0;
     text-shadow: var(--negro) 1px 1px 10px;
 }
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
+}

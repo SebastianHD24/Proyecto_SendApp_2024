@@ -27,13 +27,13 @@
 
         if (mysqli_fetch_array($consulta1)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo "<script>location.href='../../../interfaces/Administrador/index.php'; </script>";
+            echo json_encode(array('success' => 2));
         } elseif (mysqli_fetch_array($consulta2)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo "<script>location.href='../../../interfaces/Funcionario/funcionario.php'; </script>";
+            echo json_encode(array('success' => 3));
         } elseif (mysqli_fetch_array($consulta3)>0) {
             $_SESSION["documento_identidad"] = $documento_identidad;
-            echo "<script>location.href='../../../interfaces/Usuario/usuarioSesion.php'; </script>";
+            echo json_encode(array('success' => 6));
         } elseif (mysqli_fetch_array($error_existencia)>0) {
             echo json_encode(array('success' => 4));
         } else{

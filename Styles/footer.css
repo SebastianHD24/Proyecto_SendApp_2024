@@ -30,6 +30,12 @@ footer{
     gap: 20px;
 }
 
+.footer-content{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
 .iconos-container, .footer-menu{
     display: flex;
     justify-content: center;
@@ -87,7 +93,14 @@ footer{
 }
 
 /*RESPONSIVE FOOTER*/
+
 @media screen and (max-width: 480px){
+    /*RESPONSIVE CONTENT*/
+    .p__container article img{
+        width: 75px;
+        padding: 10px 0px 10px 0px;
+    }
+
     /*RESPONSIVE FOOTER*/
     footer{
         width: 100%;
@@ -102,6 +115,7 @@ footer{
         border-top: 1px solid var(--gris-oscuro);
         font-family: "Work Sans", sans-serif;
         font-weight: bold;
+
     }
     
     /*links de los iconos de las redes sociales y el footer como tal*/

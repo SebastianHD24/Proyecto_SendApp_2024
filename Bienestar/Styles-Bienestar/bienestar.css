@@ -38,26 +38,24 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-}
 
+}
 .sennova section{
     width: 100%;
     padding: 80px;
-}
 
+}
 .sennova p{
     text-align: justify;
     margin-top: 50px;
     font-family: var(--fuente-poppins);
     line-height: 30px;
 }
-
 /* .sennova img{
     width: 70%;
     height:90px;
     margin-top: 20px;
 } */
-
 
 article{
     display: flex;
@@ -125,4 +123,3 @@ article{
     text-align: justify;
     padding: 20px;
 }
-
