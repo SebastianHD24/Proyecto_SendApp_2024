@@ -66,6 +66,8 @@ article {
     padding: 20px 0px 0px 0px;
     object-fit: cover;
 }
+article img{
+}
 /*******************************botones**********************************/
 /*Boton agendar cita*/
 .button{
