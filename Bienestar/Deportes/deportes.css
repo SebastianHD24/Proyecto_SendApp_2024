@@ -31,8 +31,9 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-    font-family: var(--fuente-open-sans);
-    text-align: center;
+    font-size: 25px;
+    font-family: var(--fuente-principal);
+    text-align: left;
     margin-top: 30px;
 }
 /*contenido de el div senova*/
@@ -66,7 +67,14 @@ article {
     padding: 20px 0px 0px 0px;
     object-fit: cover;
 }
-article img{
+
+.l_desordenada{
+    padding: 15px 30px 15px 30px;
+}
+
+.l_desordenada li{
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 /*******************************botones**********************************/
 /*Boton agendar cita*/

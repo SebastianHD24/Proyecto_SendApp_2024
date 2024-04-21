@@ -8,120 +8,31 @@
     <div class="sennova">
         <section>
             <h1 class="titulo">SENNOVA</h1>
-            <article><img src="img/LogosSena-img/logo SENNOVA.jpg" alt="logosennova"></article>
-            
+           
             <h3 class="subtitulos">¿Que es SENNOVA?</h3>
             <p>Sennova es el sistema de investigación, innovación y desarrollo tecnológico que tiene el SENA el cual es
                 una estrategia nacional que está presente en los 119 centros del país.
             </p>
             <h3 class="subtitulos">¿Cuáles son los requisitos para acceder a los servicios?</h3>
-            <p>Mas que requisitos cual es la voluntad y el compromiso que tienen que tener los aprendices y lo
-                instructores, primero que les guste la investigación porque la investigación es un gusto, es un placer
-                no es impuesto entonces a todos los seres humanos nos gusta aprender y conocer cierto e el cómo aprender
-                y el cómo conocemos de eso se trata estar de llevar el conocimiento y divulgar el conocimiento hacia los
-                demás entonces una de las acciones que tiene que tener los aprendices es como entrar en este e como
-                entrar a los semilleros de investigación, para entrar a los semilleros de investigación los aprendices
-                tienen que estar asociados a un proyecto de investigación ese proyecto de investigación tiene que ser
-                representado y jalonado por los instructores del área en su caso por los instructores del área de
-                teleinformática o e como el área de teleinformática tiene tantas áreas puede ser de multimedia,
-                audiovisuales e de infraestructura ahí pueden entrar los aprendices o pueden apoyar otros proyectos de
-                otros de otras ambientes de formación por ejemplo construcción, en construcción se requiere la parte de
-                multimedia se requiere la parte de programación porque e afortunadamente e sistemas, teleinformática ,
-                comunicaciones e teleinformática es transversal a todas las áreas del centro si usted quiere hacer un
-                proyecto social y si usted quiere divulgar la información lo hace a través del sistema cierto por eso es
-                la importancia de esa en el centro y en el mundo ósea el mundo se está moviendo por dos, dos centros en
-                el mundo por dos centros dos centros que es la parte de automatización y la parte de la informática y
-                ahora el mundo y el país está entrando en algo que todavía estamos apenas entrando que es la informática
-                industrial como a través de la programación poner a mover las maquinas.
+            <p> Se subraya la necesidad de una disposición y compromiso intrínsecos por parte tanto de los aprendices como de los instructores. Es esencial que exista una afinidad hacia la investigación, ya que esta debe ser concebida como un ejercicio gratificante y de placer intelectual. La inclinación innata por el aprendizaje y la adquisición de conocimiento es un atributo inherente a la condición humana. En este sentido, es crucial comprender los mecanismos y procesos de aprendizaje, así como también su difusión hacia terceros. Una de las acciones primordiales para los aprendices es el ingreso a los semilleros de investigación, los cuales requieren que estén vinculados a proyectos de investigación dirigidos y respaldados por instructores especializados en áreas específicas, como la teleinformática. Esta disciplina abarca múltiples subdominios, tales como multimedia, audiovisuales e infraestructura, lo cual brinda oportunidades de participación a los aprendices o el apoyo a otros proyectos en diversos ámbitos de formación. Por ejemplo, en el ámbito de la construcción, donde se demanda la integración de aspectos multimediales y de programación. La teleinformática, afortunadamente, presenta una naturaleza transversal que abarca todas las áreas del centro educativo, lo que facilita la ejecución de proyectos sociales y la difusión de información mediante sistemas establecidos. Esto subraya la relevancia de esta disciplina tanto a nivel institucional como global, dado el constante avance hacia la automatización y la informática industrial, donde la programación juega un papel fundamental en la operación de maquinaria.
             </p>
             <h3 class="subtitulos">¿Cómo podemos participar en una investigación?</h3>
-            <p> En una investigación puede ser asociado al semillero de investigación como les decía antes y ese
-                semillero tiene que tener un proyecto de investigación tiene que tener un proyecto de investigación ahí
-                pegado listo entonces ahora ustedes pueden decir pueden comunicársele a su instructores decirle venga
-                instructor yo quiero participar o quiero que nosotros armemos un proyecto de investigación y el
-                instructor e para que se lo presentemos a sennova entonces que nazca desde los instructores con el
-                instructor y que el instructor lo presente aquí a sennova porque el instructor porque el instructor es
-                el directo responsable del proyecto y tiene que ir acompañado de los aprendices cierto, porque los
-                proyectos están también ligados a la destinación de recursos entonces el instructor tiene que responder
-                por los recursos por eso es que es importante la unión entre el instructor y los aprendices entonces así
-                participan los aprendices también participan como en las jornadas de divulgación e nosotros manejas
-                muchas jornadas de divulgación con las empresas y lo hemos hecho mucho con el ambiente de
-                teleinformática entonces cuando las empresas vienen y me dicen venga yo e quiero la oportunidad de
-                conseguir presupuesto por sennova mi empresa tuvo la oportunidad de ser ganadora de una convocatoria de
-                innovación para las empresas entonces yo le voy a transmitir a los aprendices como lo conseguí como hice
-                el proyecto como lo desarrolle estas fueron las metodologías que emplee estos fueron los desarrollos
-                entonces ahí también se está siendo participe a los aprendices de los de como de como el conocimiento se
-                aplica y se genera valor y genera riqueza en las empresas.</p>
+            <p> En el contexto de una investigación, los aprendices pueden integrarse en un semillero de investigación. Este semillero debe contar con un proyecto de investigación bien definido y estructurado. Una vez establecido, los aprendices pueden comunicarse con sus instructores para expresar su interés en participar o proponer la creación de un nuevo proyecto de investigación. El instructor, a su vez, debe presentar este proyecto ante el Sistema de Investigación, Desarrollo Tecnológico e Innovación (SENNOVA), ya que es el responsable directo del proyecto y debe asegurar la asignación adecuada de recursos. Esta colaboración entre instructor y aprendices es crucial, ya que los proyectos suelen estar vinculados a la asignación de recursos y el instructor debe garantizar su correcta gestión. Por lo tanto, la participación activa de los aprendices se refleja también en eventos de divulgación, como las jornadas realizadas con empresas en el ámbito de la teleinformática. Durante estas jornadas, las empresas expresan su interés en obtener financiamiento a través de SENNOVA, y transmiten a los aprendices sus experiencias en la obtención de fondos para proyectos de innovación. De esta manera, los aprendices son partícipes del proceso de aplicación del conocimiento en la generación de valor y riqueza en el ámbito empresarial.</p>
             <h3 class="subtitulos">¿Existe alguna limitación o razón para no desarrollar una investigación?</h3>
-            <p>Ninguna no hay ninguna limitación no hay ninguna razón e porque, porque es una razón porque es una
-                función natural del ser humano el ser humano vuelvo y repito a todos los seres humanos nos gusta
-                aprender nos gusta conocer nos gusta e lo desconocido nos gusta mirar otras cosas diferentes entonces e
-                no se le puede castrar un intelecto a la personas no se le puede castrar la capacidad de aprender a las
-                personas todos queremos aprender todos los días y uno aprende hasta el último día de su existencia el
-                que no aprende hasta el último día de su vida está muerto en vida y puede ser una persona joven.
+            <p>
+                No existen limitaciones ni restricciones, ya que el impulso hacia el aprendizaje es intrínseco al ser humano. Es una función natural que todos los individuos poseen. La curiosidad y el deseo de explorar lo desconocido son inherentes a nuestra condición humana. No se puede suprimir la capacidad intelectual ni el deseo de aprender de las personas. Todos anhelamos adquirir conocimientos constantemente, independientemente de la edad o etapa de la vida en la que nos encontremos. Aquel que deja de aprender, incluso en el último día de su existencia, se encuentra estancado y privado de una vida plena. Este deseo de aprendizaje es universal y no conoce límites ni barreras, y puede observarse en personas de todas las edades y condiciones.
             </p>
             <h3 class="subtitulos">¿En qué eventos se dan a conocer los proyectos e investigaciones?</h3>
-            <p>Correcto mire nosotros hemos desarrollado cuatro congresos internacionales de investigación e dónde han
-                venido a científicos reconocidos por ejemplo Jorge Reines sabe quién es Jorge Reines? el inventor del
-                marcapasos que ha salvado a más de 40 millones de personas tal vez el común de la sociedad colombiana no
-                lo conoce pero sí podrían conocerlo políticos tradicionales, ladrones o delincuentes pero este tipo de
-                personas no los conocen hemos traído el director de Pfizer a nivel mundial, hemos traído a hemos traído
-                a investigadores italianos, norteamericanos, chilenos para qué? para que a través de ellos vean que la
-                investigación la podemos hacer todos que la investigación es disciplina a rigor es interesarse por los
-                demás es construir sociedad es construir conocimiento entonces lo hacemos a través de congresos
-                internacionales lo hacemos a través de transparencias de conocimientos que lo hacen las empresas lo
-                llevamos a los aprendices a la red de semilleros de investigación de Risaralda donde nuestros aprendices
-                compiten con universidades de todo el eje cafetero y, y de una manera irracional nuestros aprendices
-                tienen mejor nivel que muchos estudiantes de las universidades porque nosotros hacemos educación
-                superior, las universidades hacen educación superior cuando ofrecen tecnólogos y profesionales nosotros
-                hacemos educación superior cuando hacemos e tecnólogos entonces esa formación en educación superior
-                nosotros la ponemos a competir y nos comparamos con las universidades nosotros somos un nosotros somos e
-                afortunados de tener abundancia de tener riqueza nosotros tenemos mayores desarrollos tecnológicos que
-                las universidades se lo digo con conocimiento de causa la tecnología que hay en el sena no la hay los
-                equipos que hay en el sena no los hay las capacidades que hay acá no las hay nosotros podemos mandar y
-                hemos mandado aprendices a Brasil a china, Alemania a España a chile mientras que en las universidades
-                cuando mandan un aprendiz con todos los gastos pagos cuando, cuando mandan un estudiante con todos los
-                gastos pagos lo único que la única vez que hemos hecho e que hemos visto una cosa así es por ejemplo
-                hace dos años si hace dos años y medio con la universidad tecnológica la universidad enviamos
-                estudiantes a Brasil con el sena e para participar en forma de losada de Brasil para participar en
-                diferentes universidades del mundo por Colombia estaba la universidad tecnológica y estaba el sena e
-                llevamos un carro de carreras listo nosotros mandamos los aprendices en avión con todos los gastos pagos
-                los mandamos con todo y mandamos instructores, la universidad mando los estudiantes en un carro que
-                también es una experiencia buena pero, puede y pero no era las mismas condiciones nosotros los mandamos
-                con mayores condiciones entonces nosotros tenemos concurso de world script ¿en dónde las universidades
-                tienen concursos internacionales? Hace poco los aprendices del Sena estuvieron en Alemania ¿en dónde la
-                universidad hace eso? los equipos cuando yo he sido profesor de la universidad yo he traído a los
-                muchachos acá porque en la universidad no hay eso a nosotros, nosotros tenemos que hacernos fuertes en
-                la rigurosidad en la parte de abstracción en la rigurosidad matemática en las ciencias en las ciencias
-                básicas ahí tenemos que fortalecernos muchos más pero en las capacidades que tiene el sena son inmensas
-                comparadas con cualquier universidad privada e en investigación nosotros somos muy superiores excepto
-                pues en la universidad pública en la tecnológica donde hay muchos grupos de investigaciones y llevan
-                muchos años de ventaja pero sin embargo ellos vienen a hacer proyectos y a desarrollar proyectos con
-                nosotros porque no tienen las capacidades que nosotros tenemos .</p>
+            <p>
+                Hemos organizado cuatro congresos internacionales de investigación, en los cuales han participado científicos de renombre, como Jorge Reines, reconocido por ser el inventor del marcapasos, dispositivo que ha salvado la vida de más de 40 millones de personas. Aunque es posible que el público general no esté familiarizado con estos nombres, son figuras relevantes en el ámbito científico. También hemos recibido la visita del director de Pfizer a nivel mundial, así como investigadores de Italia, Estados Unidos y Chile. El propósito de estas iniciativas es demostrar que la investigación es una disciplina accesible para todos, basada en el rigor y el interés por el progreso social y el conocimiento. Utilizamos estos congresos internacionales y la transmisión de conocimientos por parte de empresas para involucrar a nuestros aprendices en la red de semilleros de investigación de Risaralda. En esta red, nuestros estudiantes compiten con universidades de todo el eje cafetero y, en muchos casos, demuestran un nivel superior de competencia. A pesar de que el enfoque tradicional de las universidades se centra en la formación de tecnólogos y profesionales, en el SENA consideramos que nuestra formación también es educación superior, ya que promovemos la excelencia en tecnólogos. Hemos tenido la oportunidad de comparar nuestras capacidades tecnológicas con las de las universidades y podemos afirmar con certeza que el SENA cuenta con recursos y equipamiento superiores. Hemos enviado aprendices a países como Brasil, China, Alemania, España y Chile, con todos los gastos pagos, mientras que las universidades no tienen la misma capacidad para proporcionar estas oportunidades. En el SENA, también organizamos concursos internacionales y brindamos a nuestros aprendices experiencias únicas, como participar en la Feria de la Educación Superior de Brasil. Aunque reconocemos la fortaleza de las universidades públicas, como la Universidad Tecnológica, en investigación, estas instituciones también colaboran con nosotros debido a nuestras capacidades tecnológicas y de investigación superiores. En resumen, el SENA se destaca en investigación y desarrollo tecnológico, y nuestra colaboración con universidades demuestra nuestro compromiso con la excelencia en la educación y la innovación</p>
             <h3 class="subtitulos">¿Qué proceso debe de hacer un aprendiz para participar en un semillero?</h3>
-            <p> Bueno, un aprendiz para participar en un semillero debe hablar con su instructor y decirle señor
-                instructor en el ambiente hay un semillero por favor yo quiero entrar al semillero de investigación que
-                tengo que hacer, hay algún proyecto asociado si lo hay entonces el instructor lo entra al semillero
-                de…que el instructor le coloque actividades al semillero cierto o si no hay entonces empezar a plantear
-                el proyecto de investigación mire que bueno que los aprendices viniera y dijera venga que bueno
-                adelantar un proyecto de investigación y se plantea entonces uno recoge a sus instructores entonces
-                venga los muchachos nos están jalando que hay que investigar que tenemos que generar nuevo conocimiento
-                que tenemos que generar buenas cosas ,entonces venga pues saquemos esto adelante mire que son cosas muy
-                sencillas que no nos cuesta un peso y que lo único que nos cuesta es mover el intelecto ,saber que es.
+            <p> 
+            Para un aprendiz que desee participar en un semillero de investigación, el proceso implica comunicarse con su instructor y expresar su interés en unirse al semillero. Debe dirigirse al instructor y manifestar su deseo de formar parte del proyecto de investigación. Si el semillero ya cuenta con un proyecto en curso, el instructor puede integrar al aprendiz en el equipo. En caso de que no haya un proyecto establecido, el aprendiz y el instructor pueden colaborar en la formulación y desarrollo de un nuevo proyecto de investigación. Es importante que el instructor guíe al semillero y proponga actividades pertinentes. Los aprendices también pueden tomar la iniciativa de proponer proyectos de investigación y buscar el apoyo de sus instructores para llevarlos a cabo. Esta interacción entre aprendices e instructores fomenta un ambiente de colaboración y motivación para generar nuevo conocimiento. Además, este proceso es accesible y no implica costos económicos significativos, sino más bien un compromiso intelectual y de trabajo en equipo.
             </p>
             <h3 class="subtitulos">¿En qué horarios se puede acceder a los servicios?</h3>
-            <p> Desde 7.30 am a 1:00 pm y de 2:00 pm a 5:00 de la tarde.</p>
+            <p> El horario de atención es de 7:30 am a 1:00 pm y de 2:00 pm a 5:00 pm.
+            </p>
             <button class="button">Reservar cita</button>
-            <script>const button = document.querySelector(" .button ");
-
-                button.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    button.classList.add("animate");
-                
-                    setTimeout(() => {
-                        button.classList.remove("animate");
-                    }, 600);
-                });</script>
         </section>
     </div>
 <?php endblock() ?>

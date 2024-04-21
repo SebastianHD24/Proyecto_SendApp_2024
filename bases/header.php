@@ -9,8 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->                                     
-    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->                                     
+    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->                                                                      
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -21,11 +20,7 @@
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/footer.css"> <!--CSS footer -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
-    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/header.css"> <!--CSS haader -->
-    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Styles/footer.css"> <!--CSS footer -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
-    <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
-
+    
     <!--Styles adicionales, este bloque se llamara en otro archivos para agregar rutas de estilos y links que no son globales para todas las paginas-->
     <?php startblock('links-styles') ?>
     <?php endblock() ?>
@@ -69,9 +64,9 @@
                             <li><a href="../../../Proyecto_SendApp_2024/senova/index.php">Sennova</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/index.php">Fondo emprender</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/index.php">Relaciones corporativas</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnologias</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecno parque</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecno academia</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/index.php">Servicios tecnológicos</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/index.php">Tecnoparque</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/index.php">Tecnoacademia</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/index.php">Fabrica de software</a></li>
                         </ul>
                     </li>
@@ -132,33 +127,27 @@
     <?php startblock('footer') ?> <!--Inicio bloque footer-->
     <footer>
         <!-- <img src="Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena" class="logo2"/> -->
-        <div class="iconos-container">
-        <!--Donde estan las redes sociales-->
-            <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
-            <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
-            <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
-            <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
-            <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
-        </div>
-        <ul class="footer-menu">
-            <li class="menu-item">@SENAComunica</li>
-        </ul>
+            <div class="iconos-container">
+            <!--Donde estan las redes sociales-->
+                <a href="https://www.facebook.com/SENA/" target="_blank" class="icono-red"></a>
+                <a href="https://www.instagram.com/senacomunica/" target="_blank" class="icono-red"></a>
+                <a href="https://twitter.com/SENAComunica" target="_blank" class="icono-red"></a>
+                <a href="https://www.youtube.com/user/SENATV" target="_blank" class="icono-red"></a>
+                <a href="https://www.linkedin.com/school/servicio-nacional-de-aprendizaje-sena-/" target="_blank" class="icono-red"></a>
+                
+            </div>
+            <ul class="footer-menu">
+                <li class="menu-item">@SENAComunica</li>
+            </ul>
+ 
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->
 
-    <script></script>
-
-    <script src="Inicio/Scripts/scriptHome.js"></script>
     <!--Scripts Generales -->
-    <!-- <script src="../../../Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> Scripts Generales -->
-    <!-- <script src="../../../Proyecto_SendApp_2024/Inicio/Scripts/scriptHome.js"> </script> Scripts Generales -->
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
     <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/BotonCitas.js"></script><!--Scripts Boton citas-->
-
-    
-    <script src="../../../Proyecto_SendApp_2024/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

@@ -8,7 +8,7 @@
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
-    --azul-oscuro: #00324D;
+    --azul: #00324D;
     --azul-claro: #82DEF0;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
@@ -22,14 +22,15 @@ body{
 
 /*titulo sennova*/
 .titulo{
-    font-size: 35px;
+    font-size: 4rem;
     text-align: center;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
+    color: var(--azul);
 }
 /*subtitulos*/
  .subtitulos{
     font-size: 25px;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: left;
     margin-top: 50px;
 }
@@ -50,7 +51,7 @@ body{
 .tecnoacademia p{
     text-align: justify;
     margin-top: 10px;
-    font-family: var(--fuente-poppins);
+    font-family: var(--fuente-principal);
     line-height: 30px;
 }
 /* .tecnoacademia img{
@@ -58,14 +59,7 @@ body{
     height:90px;
     margin-top: 20px;
 } */
-article {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0px 0px 0px;
-    object-fit: cover;
-}
+
 
 .foto1{
     display: flex;
@@ -82,4 +76,22 @@ article {
 
 .foto1 :hover{
     filter: brightness(100%);
+}
+
+.l_ordenada, .l_desordenada{
+    padding: 15px 30px 15px 30px;
+}
+
+.l_ordenada li, .l_desordenada li{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
 }

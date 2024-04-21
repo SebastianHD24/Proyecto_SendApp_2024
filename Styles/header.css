@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 #main-header{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     font-family: "Work Sans", sans-serif;
+    position: sticky;
+    top: 0;
+
+
 }
 
  /* imagen logo de sendapp */
@@ -13,6 +17,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
 }
 
 .logo img{
@@ -216,7 +223,6 @@ i{
     .links{
         display: none;
     }
-
     .bars__menu{
         position: absolute;
         display: block;
@@ -225,6 +231,7 @@ i{
     
     .logo-header{
         display: block;
+        
     }
 
     .resposive__menu{
