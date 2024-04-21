@@ -19,21 +19,35 @@
 /* -------------------------------- mapa ----------------------- */
 
 .map{
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.map iframe{
+.mapaSena{
     border-radius: 12px;
     margin: 20px;
+    width:500px;
+    height:300px;
 }
 .map h1 {
     text-align: center;
 }
 
+@media (max-width: 560px) {
+    .mapaSena{
+        width: 280px;
+        height: foo;
+    }
+    .map h1 {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+
+/* ------------------------------------------------- */
 
 body{
     font-family: var(--fuente-principal);
@@ -169,33 +183,33 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
-
-    .section-escudo_bandera{ 
+}
+.section-escudo_bandera{ 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: auto;
-    }
+}
     
-    .img_escudo{
+.img_escudo{
         width: auto;
         height: auto;
         display: flex;
         justify-content: center;
         align-items:  center;
-    }
-    .section-escudo_bandera div img{
+}
+.section-escudo_bandera div img{
         width: 100%;
         height: 100%;
-    }
-    .section-logosimbolo{
+}
+.section-logosimbolo{
         display: flex;
         flex-direction: column;
         height: auto;
-    }
-
 }
+
+
 
 .seccion-escudo_bandera,
 .section-logosimbolo {
@@ -279,7 +293,7 @@ h1{
 
 .derecha{
     display: flex;
-    margin-left: 180px;
+    margin-left: 80px;
     margin-right: 10px;
     margin-top: 10px;
     color: #ededed;

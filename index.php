@@ -130,7 +130,7 @@
     <div class="container_info">
         <div class="section-1">
             <h1>CDITI Informa</h1>
-                <p>La estrategia CDITINFORMA está alineada con los objetivos y valores del SENA, por tanto es la brújula que guiará el camino para invertir los recursos sin improvisar y por el contrario, ejecutando lo planificado de forma real y aterrizada. Ese crecimiento controlado se verá reflejado en la ampliación de la cobertura toda vez que la visibilización del Centro llevará a mostrar a la Regional Risaralda como la pionera en Contenidos Digitales. Para canalizar los esfuerzos y energías en el mismo objetivo, bajo los lineamientos de la oficina de Comunicaciones de la Regional Risaralda, se crea el progama CDITINFORMA como una estrategia pedagógica de la Agencia de Contenidos Digitales en la cual son los mismos aprendices los encargados de visibilizar las acciones y actividades realizadas por el Centro, al tiempo que ponen en práctica lo aprendido. Con lo anterior, es importante entender cuál es el Mensaje Comunicativo que se divulgará y cuál es la audiencia a la que llegará. </p>
+                <p>La estrategia CDITINFORMA está alineada con los objetivos y valores del SENA, por tanto es la brújula que guiará el camino para invertir los recursos sin improvisar y por el contrario, ejecutando lo planificado de forma real y aterrizada. Ese crecimiento controlado se verá reflejado en la ampliación de la cobertura toda vez que la visibilización del Centro llevará a mostrar a la Regional Risaralda como la pionera en Contenidos Digitales. Para canalizar los esfuerzos y energías en el mismo objetivo, bajo los lineamientos de la oficina de Comunicaciones de la Regional Risaralda, se crea el progama CDITINFORMA como una estrategia pedagógica de la Agencia de Contenidos Digitales en la cual son los mismos aprendices los encargados de visibilizar las acciones y actividades realizadas por el Centro, al tiempo que ponen en práctica lo aprendido. </p>
                 
         </div>
         <img src="./Inicio/Img-home/Section-Img/img2.JPG" alt="">
@@ -139,7 +139,7 @@
         </section>
         <div class="map">
             <h1>¿Sabes dónde queda el Centro de Diseño e Innovación tecnológica Industrial?</h1>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.956669064205!2d-75.68085189753448!3d4.836410011767831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3881a4b50bb31d%3A0x9150c2e299ed35b0!2sCDITI%20SENA%20Dosquebradas!5e0!3m2!1ses-419!2sco!4v1713576301141!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.956669064205!2d-75.68085189753448!3d4.836410011767831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3881a4b50bb31d%3A0x9150c2e299ed35b0!2sCDITI%20SENA%20Dosquebradas!5e0!3m2!1ses-419!2sco!4v1713576301141!5m2!1ses-419!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapaSena"></iframe>
         </div>
 
     </div>

@@ -169,7 +169,7 @@ footer{
         color: var(--verde);
     }
     .footer-menu .menu-item{
-        margin: 1rem;
+        margin: 5px;
         cursor: pointer;
         opacity: 0.6;
         font-size: 1rem;
