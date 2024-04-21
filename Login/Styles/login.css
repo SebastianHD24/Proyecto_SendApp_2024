@@ -58,6 +58,12 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+#mensaje_error {
+	color: rgb(189, 38, 38);
+	padding-left: 1rem;
+	padding-bottom: 0.5rem;
+}
+
 .login-nav {
 	position: relative;
 	padding: 0;
@@ -202,10 +208,13 @@ body {
     padding-bottom: 3rem;
 }
 
+.titulos{
+	padding-bottom: 2rem;
+}
 .titulos ul{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1rem;
 }
 #goToLogin + #goToRegister{
 	cursor: pointer;

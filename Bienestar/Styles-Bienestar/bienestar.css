@@ -57,10 +57,6 @@ body{
     margin-top: 20px;
 } */
 
-.container-bienestar{
-
-}
-
 article{
     display: flex;
     justify-content: center;
@@ -127,4 +123,3 @@ article{
     text-align: justify;
     padding: 20px;
 }
-
