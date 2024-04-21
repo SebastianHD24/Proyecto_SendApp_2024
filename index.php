@@ -29,9 +29,9 @@
         <section>
             <div class="content__parrafos-titulos">
                 <h1>Bienvenido a SendApp</h1> 
-                <h2>EL sitio Web Ofcial del Centro De Diseño e Innovación Tecnólogica Industrial</h2>
-                <p>¿Que podrás encontrar aquí?</br>
-                    Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formacion, sus principales areas y servicios.
+                <h2>El sitio web ofcial del Centro De Diseño e Innovación Tecnológica Industrial</h2>
+                <p>¿Qué podrás encontrar aquí?</br>
+                    Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formación, sus principales áreas y servicios.
                 </p>
             </div>
             <p style="color: red;"> Espacio para el nuevo slider </p>
@@ -42,7 +42,7 @@
                         <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Inoco De Areas">
                     </article>                         
                     <p>
-                        En el menú de navagación en el apartado de <b><a href="Areas/index.html">Areas</a></b> puedes encontrar la información referente a cada una de las areas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
+                        En el menú de navagación en el apartado de <b><a href="Areas/index.html">Áreas</a></b> puedes encontrar la información referente a cada una de las áreas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -50,7 +50,7 @@
                         <img src="Inicio/Img-home/Section-Img/communicate_2343723.png" alt="Inoco De informacion">
                     </article> 
                     <p>
-                        Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la informacion necesaria en <b><a href="">Acerca CDITI.</a></b>
+                        Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la información necesaria en <b><a href="">Acerca CDITI.</a></b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -58,7 +58,7 @@
                         <img src="Inicio/Img-home/Section-Img/training_12343284.png" alt="Inoco De Nosotros">
                     </article> 
                     <p>
-                        Si te intera saber un poco más sobre nosotros y el ¿Por qué? fue creado este sitio web puedes visitar el apartado de <b><a href="">Nosotros.</a></b>
+                        Si te interesa saber un poco más sobre nosotros y ¿Por qué fue creado este sitio web? puedes visitar el apartado de <b><a href="">Nosotros.</a></b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -66,7 +66,7 @@
                         <img src="Inicio/Img-home/Section-Img/calendar_2693507.png" alt="Inoco de Agenda">
                     </article> 
                     <p>
-                        Sí eres aprendíz Sena y necesitas agendar una cita para algun servicio del Centro de Diseño e Innovacion Tecnólogica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="Login/login-aprendices/login-aprendices.html">Ingreso.</a></b>
+                        Si eres aprendíz Sena y necesitas agendar una cita para algún servicio del Centro de Diseño e Innovación Tecnológica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="Login/login-aprendices/login-aprendices.html">Ingreso.</a></b>
                     </p>
                 </div>
             </div>
