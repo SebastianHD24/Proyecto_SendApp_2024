@@ -20,51 +20,99 @@ body{
     font-family: 1.2rem;
 }
 
+.Contenido{
+    width: 100%;
+    padding: 80px;
+}
+
 /*titulo sennova*/
 .titulo{
     font-size: 4rem;
     text-align: center;
     font-family: var(--fuente-principal);
+    opacity: 0;
+    animation: fadeIn 3s forwards;
     color: var(--azul);
 }
-/*subtitulos*/
- .subtitulos{
-    font-family: var(--fuente-principal);
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+h3{
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
 }
-/*contenido de el div senova*/
-.sennova{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.tarjeta {        
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+    /* transition:background-color 0.5sg ease; */
+}
+.tarjeta .cambio{
+    color: #fff;
+    backdrop-filter: blur(10px);
+    background:linear-gradient(#00324D, #fff); 
+}
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
+  }
+.tarj-img {
+    float: left; 
+    margin-right: 12px; 
+    margin-bottom: 10px;
+}
 
+.tarj-img img {
+    width: 100%; 
+    height:100%; 
+    object-fit: cover;
 }
-.sennova section{
-    width: 100%;
-    padding: 80px;
+.contenido_tarjeta {
+    overflow: hidden; 
+}
+.contenido-corto{
+    padding: 10px;
+}
+.contenido-expansivo {
+    display: none;
+}
 
+.leerMenos,
+.leerMas {
+    cursor: pointer;
+    border-radius: 7px;
+    height: 30px;
+    width: 100px;
+    color: #fff;
+    background-color: #39a900;
+    margin-top: 20px; 
 }
-.sennova p{
-    text-align: justify;
-    margin-top: 50px;
-    font-family: var(--fuente-principal);
-    line-height: 30px;
-}
-/* .sennova img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
+    .contenido{
+        padding: 30px;
+    }
     .titulo{
-        font-size: 2rem;
-        text-align: center;
-        font-family: var(--fuente-principal);
-        color: var(--azul);
+        font-size: 30px;
+    }
+    .tarj-img {
+        width: 100%; 
+    }
 
+    .contenido_tarjeta {
+        width: 100%; 
     }
 }
-
