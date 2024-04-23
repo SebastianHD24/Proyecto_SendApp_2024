@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario para Agendar Cita</title>
 </head>
 <body>
 
-<form >
-    <label>prueba
-        <input  placehodler="agrega aqui un texto "/>
-        <button><a href="guardarcita.php"></a></button>
-        
-        
-
+<form action="guardarcita.php" method="post">  <!-- Se especifica la acción y el método -->
+    <label>Prueba:
+        <input type="text" name="datos" placeholder="Agrega aquí un texto" />  <!-- Se añade el atributo 'name' -->
     </label>
-    <button><a href="guardarcita.php"> enviar</a></button>
+    <button type="submit">Enviar</button>  <!-- Botón para enviar el formulario -->
 </form>
-    
+
 </body>
 </html>

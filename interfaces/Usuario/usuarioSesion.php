@@ -57,7 +57,7 @@
         <ul>
           <!-- Primer Link -->
           <li>
-            <a href="#reports" title="Reports" class="tooltip">
+            <a href="mostarcita.php" title="Reports" class="tooltip">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-analytics" width="24"
                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
@@ -209,6 +209,7 @@
               </div>
           </div>
         </section>
+        <button><a href="agendarcita.php"> solicitar</a></button>
     </div>
   <script src="Scripts/usuario.js"></script>
 </body>
