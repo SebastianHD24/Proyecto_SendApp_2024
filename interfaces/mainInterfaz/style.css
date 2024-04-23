@@ -9,37 +9,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
 }
 h1,h2,h3,h4,h5,h6, p, a, input, textarea, ul {
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: "Work Sans", sans-serif;
+}
+
 ul{
     list-style-type: none;
 }
+
 a{
     text-decoration: none;
 }
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #00234D;
-
-
 }
 aside{
     padding: 2rem;
-    padding-right: 0;
     color: white;
     position: sticky;
     top : 0;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+
+    /* overflow-y: auto; */
 
 }
 
@@ -48,9 +53,8 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 70px;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     overflow: hidden;
     border-radius: 50%;
     margin-top: 1rem
@@ -75,15 +79,14 @@ aside{
     font-size: 20px; 
     color: #39a900; 
     display: flex;
-    margin-right: 35px;
+    margin-right: 2.1rem;
+    
 }
 .nombre{
-    width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-    
+    padding: 1.75rem;
+    text-align: center;
 }
 
 
@@ -100,7 +103,7 @@ aside{
     align-items: center;
     gap: 1rem;
     font-weight: 600;
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: .85rem;
     width: 100%;
 
@@ -147,20 +150,23 @@ aside{
     display: flex;
     text-align: center;
     justify-content: center;
+    border-radius: 50%;
     font-size: 2rem;
     cursor: pointer;
-    
+    padding: 1.5rem;
 
-    
 }
 
+.texto-footer:hover{
+    background-color: var(--clr-white);
+}
 main{
     background-color: white;
     margin: 1rem;
     margin-left: 0;
     border-radius: 2rem;
-    padding: 3rem;
-    overflow-y: auto;
+    /* padding: 3rem; */
+    /* overflow-y: auto; */
 }
 .titulo-principal{
     color:#39a900;
@@ -185,7 +191,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 0.9rem;
     width: 100%;
 }
 
@@ -197,11 +203,11 @@ section article{
 }
 
 section article img{
-    width: 150px;
+    width: 9.375rem;
 }
 
 section p{
-    padding: 16px;
+    padding: 1rem;
     text-align: justify;
 }
 
@@ -213,34 +219,35 @@ section p{
     grid-template-rows: 1fr;
     align-items: center; /*Alineación de los items de manera horizontal*/
     justify-items: center; /*Alineación de los items de manera vertical*/
-    align-content: center;
+    /* align-content: center; */
     /* border: 1px solid red; */
-    gap: 18px;
+    gap: 1.125rem;
 }
 
 .cards{
-    width: 120px;
+    width: 7.5rem;
     border: 1.5px solid #000000;
     background-color: #00234D;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 12px;
-    height: 120px;
+    padding: 0.75rem;
+    height: 7.5rem;
     border-radius: 50%;
     text-align: center;
     z-index: 10;
+    font-size: 14.1px;
 
 }
 
 .cards article p {
   opacity: 1; /* Por defecto visible */
-  transition: opacity 0.3s; /* Efecto de transición */
+  transition: opacity 0.3s ease; /* Efecto de transición */
 }
 
 .cards:hover article p {
-  opacity: 0; /* Al hacer hover, desaparece el párrafo */
+  color:#39a900; /* Al hacer hover, desaparece el párrafo */
 }
 
 .cards article{
@@ -255,7 +262,7 @@ section p{
 }
 
 .cards article img{
-    width: 60px;
+    width: 3.75rem;
     position: absolute;
     z-index: -100;
     opacity: 1; /* Por defecto visible */
@@ -267,7 +274,7 @@ section p{
         grid-template-columns: 1fr 1fr 1fr;
     }
     .perfil{
-        margin-left: 28px;
+        margin-left: 1.75rem;
     }
 }
 @media screen and (max-width: 675px){
@@ -275,7 +282,7 @@ section p{
         grid-template-columns: 1fr 1fr ;
     }
     .perfil{
-        margin-left: 28px;
+        margin-left: 1.75rem;
     }
 }
 @media screen and (max-width: 600px){
@@ -299,6 +306,7 @@ section p{
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
+        height: 100%;
     }
     .boton-menu.active::before,
     .boton-menu.active::after{
@@ -317,6 +325,11 @@ section p{
         padding: 1rem;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: #00234D;
+        border-bottom: 1px black
+    };
     }
     .header-mobile .logo{
         color: #39a900;
@@ -336,14 +349,16 @@ section p{
 
     }
     .perfil{
-        margin-left: 28px;
+        margin-left: 1.75rem;
     }
-}
+    .cards{
+        z-index: inherit;
+    }
 @media screen and (max-width: 400px){
     .contenedor-productos{
         grid-template-columns: 1fr ;
     }
     .perfil{
-        margin-left: 28px;
+        margin-left: 1.75rem;
     }
 }
