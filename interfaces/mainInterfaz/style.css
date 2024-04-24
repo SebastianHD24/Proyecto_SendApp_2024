@@ -4,6 +4,7 @@
     --clr-gray: #e2e2e2;
     --clr-red: #961818;
     --fuente-principal: 'Work Sans', sans-serif;
+    --verde: #39a900;
 }
 *{
     margin: 0;
@@ -30,11 +31,11 @@ a{
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    /* height: 100vh; */
     background-color: #00234D;
+    height: auto;
+    min-height: 100vh;
 }
 aside{
-    padding: 2rem;
     color: white;
     position: sticky;
     top : 0;
@@ -42,28 +43,25 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding-left: 2em;
 
     /* overflow-y: auto; */
 
 }
 
 .perfil {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6.25rem;
-    height: 6.25rem;
-    overflow: hidden;
     border-radius: 50%;
     margin-top: 1rem
 }
 
 .foto-perfil {
     position: relative; 
-    width: 100%;
-    height: 100%;
+    width: 6.25rem;
+    height: 6.25rem;
+    object-fit: cover;
 }
 
 .logo {
@@ -77,7 +75,7 @@ aside{
     bottom: 5px; 
     right: 5px; 
     font-size: 20px; 
-    color: #39a900; 
+    color: var(--verde); 
     display: flex;
     margin-right: 2.1rem;
     
@@ -102,7 +100,7 @@ aside{
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     padding: 1.2rem;
     font-size: .85rem;
     width: 100%;
@@ -110,7 +108,7 @@ aside{
 }
 .bx{
     font-size: 2rem;
-    color:#39a900;
+    color:var(--verde);
 }
 .boton-menu.active{
     background-color: white;
@@ -146,10 +144,11 @@ aside{
 }
 
 .texto-footer{
-    color: #39a900;
+    color: var(--verde);
     display: flex;
     text-align: center;
     justify-content: center;
+    align-items: flex-end;
     border-radius: 50%;
     font-size: 2rem;
     cursor: pointer;
@@ -169,7 +168,7 @@ main{
     /* overflow-y: auto; */
 }
 .titulo-principal{
-    color:#39a900;
+    color:var(--verde);
 }
 .header-mobile{
     display: none;
@@ -215,7 +214,7 @@ section p{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
     grid-template-rows: 1fr;
     align-items: center; /*Alineación de los items de manera horizontal*/
     justify-items: center; /*Alineación de los items de manera vertical*/
@@ -247,7 +246,7 @@ section p{
 }
 
 .cards:hover article p {
-  color:#39a900; /* Al hacer hover, desaparece el párrafo */
+  color:var(--verde); /* Al hacer hover, desaparece el párrafo */
 }
 
 .cards article{
@@ -267,22 +266,31 @@ section p{
     z-index: -100;
     opacity: 1; /* Por defecto visible */
 }
-
+.log-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
 /*media query*/
-@media screen and (max-width: 850px){
-    .contenedor-productos{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .perfil{
-        margin-left: 1.75rem;
+@media screen and (max-width: 1024px){
+    .cards__container{
+        grid-template-columns: repeat(auto-fill,minmax(170px, 1fr));
+        grid-template-rows: 1fr;
     }
 }
-@media screen and (max-width: 675px){
-    .contenedor-productos{
-        grid-template-columns: 1fr 1fr ;
+
+@media screen and (max-width: 780px){
+    .cards__container{
+        grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+        grid-template-rows: 1fr;
     }
-    .perfil{
-        margin-left: 1.75rem;
+}
+@media screen and (max-width: 638px){
+    .cards__container{
+        grid-template-columns: repeat(auto-fill,minmax(130px, 1fr));
+        grid-template-rows: 1fr;
     }
 }
 @media screen and (max-width: 600px){
@@ -317,9 +325,6 @@ section p{
         margin-top: 0;
         padding: 2rem;
     }
-    .contenedor-productos{
-        grid-template-columns: 1fr;
-    }
     .header-mobile{
         display: flex;
         padding: 1rem;
@@ -328,11 +333,13 @@ section p{
         position: sticky;
         top: 0;
         background-color: #00234D;
-        border-bottom: 1px black
+        border-bottom: 1px black;
+        color: var(--verde);
+        
     };
-    }
+    
     .header-mobile .logo{
-        color: #39a900;
+        color: var(--verde);
     }
     .open-menu, .close-menu {
         background-color: transparent;
@@ -354,11 +361,16 @@ section p{
     .cards{
         z-index: inherit;
     }
+}
 @media screen and (max-width: 400px){
-    .contenedor-productos{
-        grid-template-columns: 1fr ;
+    .cards__container{
+        grid-template-columns: repeat(auto-fill,minmax(85px, 1fr));
+        grid-template-rows: 1fr;
     }
-    .perfil{
-        margin-left: 1.75rem;
+    .cards{
+        width: 7rem;
+        height: 6.5rem;
+        padding: 0.8rem;
+        font-size: 12px;
     }
 }
