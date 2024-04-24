@@ -1,16 +1,21 @@
 <?php 
+    session_start();
 // Paso 1: Incluir la conexión a la base de datos
-include('C:/xampp/htdocs/Proyecto_SendApp_2024/Login/conexion.php');  // Ajusta según la ubicación de tu archivo de conexión
+include '../../Login/conexion.php';  // Ajusta según la ubicación de tu archivo de conexión
 $conn = connection();  // Asegúrate de llamar a la función correcta
+
+$documento_identidad = $_SESSION['documento_identidad'];
+
 
 if (!$conn) {
     die("Error al conectar a la base de datos: " . mysqli_connect_error());
 }
 
 // Paso 2: Escribir la consulta para recuperar los datos
-$sql = "SELECT * FROM prueba";  // Cambia 'prueba' por el nombre de tu tabla
+$sql = "SELECT * FROM prueba WHERE id_usuario = $documento_identidad";  
 
-// Paso 3: Ejecutar la consulta y obtener los resultados
+
+// P aso 3: Ejecutar la consulta y obtener los resultados
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
