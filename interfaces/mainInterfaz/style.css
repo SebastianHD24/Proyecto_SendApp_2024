@@ -274,14 +274,14 @@ section p{
     
 }
 /*media query*/
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1042px){
     .cards__container{
-        grid-template-columns: repeat(auto-fill,minmax(170px, 1fr));
+        grid-template-columns: repeat(auto-fill,minmax(210px, 1fr));
         grid-template-rows: 1fr;
     }
 }
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 827px){
     .cards__container{
         grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
         grid-template-rows: 1fr;
@@ -355,21 +355,26 @@ section p{
         right: 1rem;
 
     }
-    .perfil{
-        margin-left: 1.75rem;
-    }
     .cards{
         z-index: inherit;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 405px){
     .cards__container{
         grid-template-columns: repeat(auto-fill,minmax(85px, 1fr));
         grid-template-rows: 1fr;
     }
     .cards{
         width: 7rem;
-        height: 6.5rem;
+        height: 7rem;
+        padding: 0.8rem;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 354px) {
+    .cards{
+        width: 6rem;
+        height: 6rem;
         padding: 0.8rem;
         font-size: 12px;
     }
