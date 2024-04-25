@@ -18,7 +18,7 @@ if (isset($_POST['datos']) && $_POST['datos'] != "") {
     mysqli_stmt_bind_param($stmt, 's', $datos);
 
     if (mysqli_stmt_execute($stmt)) {
-        // Redirigir a 'mostarcita.php' después de una inserción exitosa
+        // Redirigir a 'usuarioSesion.php' después de una inserción exitosa
         header("Location: usuarioSesion.php");
         exit();  // Asegúrate de usar exit() para evitar cualquier procesamiento adicional
     } else {

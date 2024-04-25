@@ -1,36 +1,100 @@
-<?php 
-    session_start();
-// Paso 1: Incluir la conexión a la base de datos
-include '../../Login/conexion.php';  // Ajusta según la ubicación de tu archivo de conexión
-$conn = connection();  // Asegúrate de llamar a la función correcta
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Usuario</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos del Usuario</h1>
+    
+    <div class="table_div">
+        <table>
+            <thead>
+                <tr>
+                    <th>Datos</th>
+                    <th>hora</th>
+                    <th>dia</th>
+                    <th>estado</th>
 
-$documento_identidad = $_SESSION['documento_identidad'];
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    session_start();
 
+                    // Paso 1: Conexión a la base de datos
+                    include '../../Login/conexion.php';
+                    $conn = connection();
 
-if (!$conn) {
-    die("Error al conectar a la base de datos: " . mysqli_connect_error());
-}
+                    // Paso 2: Verificar si la sesión y el documento de identidad existen
+                    if (isset($_SESSION['documento_identidad'])) {
+                        $documento_identidad = $_SESSION['documento_identidad'];
 
-// Paso 2: Escribir la consulta para recuperar los datos
-$sql = "SELECT * FROM prueba WHERE id_usuario = $documento_identidad";  
+                        if (!$conn) {
+                            die("Error al conectar a la base de datos: " . mysqli_connect_error());
+                        }
 
+                        // Paso 3: Consulta para recuperar datos
+                        $sql = "SELECT * FROM prueba WHERE id_usuario = '$documento_identidad'";  
 
-// P aso 3: Ejecutar la consulta y obtener los resultados
-$result = mysqli_query($conn, $sql);
+                        $result = mysqli_query($conn, $sql);
 
-if ($result) {
-    // Paso 4: Mostrar los datos
-    echo "<h2>Datos Guardados:</h2>";
-    echo "<ul>";  // Usa listas o tablas para mostrar datos
-    while ($row = mysqli_fetch_assoc($result)) {
-        // Puedes acceder a las columnas por nombre (por ejemplo, 'datos')
-        echo "<li>{$row['datos']}</li>";  // Muestra el campo 'datos'
-    }
-    echo "</ul>";
-} else {
-    echo "Error al recuperar datos: " . mysqli_error($conn);
-}
+                        if ($result) {
+                            // Paso 4: Mostrar datos en la tabla
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                    <tr>
+                                        <td><?= $row['datos'] ?></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>pendiente</td>
+                                    </tr>
+                                    <?php
+                                }
+                            } else {
+                                ?>
+                                <tr>
+                                    <td>No se encontraron datos para este usuario.</td>
+                                </tr>
+                                <?php
+                            }
+                        } else {
+                            ?>
+                            <tr>
+                                <td>Error al recuperar datos: <?= mysqli_error($conn) ?></td>
+                            </tr>
+                            <?php
+                        }
 
-// Paso 5: Cerrar la conexión a la base de datos
-mysqli_close($conn);
-?>
+                        // Paso 5: Cerrar la conexión a la base de datos
+                        mysqli_close($conn);
+                    } else {
+                        ?>
+                        <tr>
+                            <td>No se ha iniciado sesión o falta el documento de identidad.</td>
+                        </tr>
+                        <?php
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
