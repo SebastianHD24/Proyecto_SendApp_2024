@@ -41,9 +41,9 @@
                 }
 
                 // Consulta para obtener datos de la tabla prueba y el nombre del usuario de la tabla usuarios
-                $sql = "SELECT prueba.id_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, prueba.datos 
-                        FROM prueba 
-                        INNER JOIN usuarios ON prueba.id_usuario = usuarios.documento_identidad";
+                $sql = "SELECT solicitud_citas.id_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, solicitud_citas.descripcion 
+                        FROM solicitud_citas
+                        INNER JOIN usuarios ON solicitud_citas.id_usuario = usuarios.documento_identidad";
 
                 // Ejecutar la consulta
                 $result = mysqli_query($conn, $sql);
@@ -60,7 +60,7 @@
                             <td><?= $row['documento_identidad'] ?></td>
                             <td><?= $row['nombres'] ?></td>
                             <td><?= $row['apellidos'] ?></td>
-                            <td><?= $row['datos'] ?></td>
+                            <td><?= $row['descripcion'] ?></td>
                             
                         </tr>
                 <?php

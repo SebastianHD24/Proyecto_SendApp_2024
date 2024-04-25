@@ -26,7 +26,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Datos</th>
+                    <th>descripcion</th>
                     <th>hora</th>
                     <th>dia</th>
                     <th>estado</th>
@@ -50,7 +50,7 @@
                         }
 
                         // Paso 3: Consulta para recuperar datos
-                        $sql = "SELECT * FROM prueba WHERE id_usuario = '$documento_identidad'";  
+                        $sql = "SELECT * FROM solicitud_citas WHERE id_usuario = '$documento_identidad'";  
 
                         $result = mysqli_query($conn, $sql);
 
@@ -60,7 +60,7 @@
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     ?>
                                     <tr>
-                                        <td><?= $row['datos'] ?></td>
+                                        <td><?= $row['descripcion'] ?></td>
                                         <td></td>
                                         <td></td>
                                         <td>pendiente</td>

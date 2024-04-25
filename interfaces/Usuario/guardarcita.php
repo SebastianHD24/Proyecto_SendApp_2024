@@ -9,11 +9,11 @@ if (!$conn) {
 
 $documento_identidad = $_SESSION['documento_identidad'];
 
-if (isset($_POST['datos']) && $_POST['datos'] != "") {
-    $datos = $_POST['datos'];
+if (isset($_POST['descripcion']) && $_POST['descripcion'] != "") {
+    $datos = $_POST['descripcion'];
     
     // Uso de declaración preparada para inserción segura
-    $sql = "INSERT INTO prueba (datos,id_usuario) VALUES (?,$documento_identidad)";
+    $sql = "INSERT INTO solicitud_citas (descripcion,id_usuario) VALUES (?,$documento_identidad)";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, 's', $datos);
 

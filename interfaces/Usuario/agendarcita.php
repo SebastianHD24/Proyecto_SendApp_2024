@@ -9,7 +9,7 @@
 
 <form action="guardarcita.php" method="post">  <!-- Se especifica la acción y el método -->
     <label>Prueba:
-        <input type="text" name="datos" placeholder="Agrega aquí un texto" />  <!-- Se añade el atributo 'name' -->
+        <input type="text" name="descripcion" placeholder="Agrega aquí un texto" />  <!-- Se añade el atributo 'name' -->
     </label>
     <button type="submit">Enviar</button>  <!-- Botón para enviar el formulario -->
 </form>
