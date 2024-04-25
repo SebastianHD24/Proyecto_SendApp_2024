@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceptar cita</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th>Campo</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Documento de Identidad</td>
+                <td>
+                    <input type="text" name="documento" placeholder="Documento" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Nombres</td>
+                <td>
+                    <input type="text" name="nombres" placeholder="Nombres" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Apellidos</td>
+                <td>
+                    <input type="text" name="apellidos" placeholder="Apellidos" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Dia</td>
+                <td>
+                    <input type="date"  name="dia" placeholder="dia" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>hora</td>
+                <td>
+                    <input type="time" name="hora" placeholder="hora" required>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Aceptar</button>
+    </form>
+</body>
+</html>

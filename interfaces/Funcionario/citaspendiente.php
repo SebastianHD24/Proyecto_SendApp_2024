@@ -8,6 +8,7 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-bottom: 20px;
         }
         th, td {
             border: 1px solid #ddd;
@@ -17,6 +18,35 @@
             background-color: #f2f2f2;
             text-align: left;
         }
+
+        .button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;  /* Quita el subrayado en los enlaces */
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button.danger {
+            background-color: #dc3545;
+        }
+
+        .button.danger:hover {
+            background-color: #c82333;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;  /* Espacio entre botones */
+        }
+
     </style>
 </head>
 <body>
@@ -27,8 +57,9 @@
                     <th>Documento de Identidad</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>Datos</th>
-                    <th>acciones</th>
+                    <th>Descripción de la cita</th>
+                    <th>Acciones</th>
+                    <th>Jornada</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,19 +71,16 @@
                     die("Error al conectar a la base de datos: " . mysqli_connect_error());
                 }
 
-                // Consulta para obtener datos de la tabla prueba y el nombre del usuario de la tabla usuarios
-                $sql = "SELECT solicitud_citas.id_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, solicitud_citas.descripcion 
+                $sql = "SELECT solicitud_citas.id_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, solicitud_citas.descripcion, solicitud_citas.jornada 
                         FROM solicitud_citas
                         INNER JOIN usuarios ON solicitud_citas.id_usuario = usuarios.documento_identidad";
 
-                // Ejecutar la consulta
                 $result = mysqli_query($conn, $sql);
 
                 if ($result === false) {
                     die("Error en la consulta: " . mysqli_error($conn));
                 }
 
-                // Mostrar resultados
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                 ?>
@@ -61,12 +89,16 @@
                             <td><?= $row['nombres'] ?></td>
                             <td><?= $row['apellidos'] ?></td>
                             <td><?= $row['descripcion'] ?></td>
-                            
+                            <td class="actions">
+                                <a class="button" href="aceptarcita.php">Aceptar</a>
+                                <a class="button danger" href="rechazarcita.php">Rechazar</a>
+                            </td>
+                            <td><?= $row['jornada'] ?></td>
                         </tr>
                 <?php
                     }
                 } else {
-                    echo "<tr><td colspan='4'>No se encontraron citas pendientes.</td></tr>";
+                    echo "<tr><td colspan='6'>No se encontraron citas pendientes.</td></tr>";
                 }
                 ?>
             </tbody>

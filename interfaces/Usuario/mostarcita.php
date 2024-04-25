@@ -26,10 +26,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>descripcion</th>
+                    <th>area</th>
                     <th>hora</th>
                     <th>dia</th>
                     <th>estado</th>
+                    <th>funcionario</th>
 
                 </tr>
             </thead>
@@ -64,6 +65,7 @@
                                         <td></td>
                                         <td></td>
                                         <td>pendiente</td>
+                                        <td>nombre funcionario</td>
                                     </tr>
                                     <?php
                                 }
