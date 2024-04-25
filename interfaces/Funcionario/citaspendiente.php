@@ -5,48 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mostrar citas pendientes</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-            text-align: left;
+        /* Styles... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
         }
 
+        /* Estilos para el contenedor principal */
+        .table_div {
+            max-width: 800px; /* Limita el ancho máximo */
+            margin: 20px auto; /* Centra el contenido y agrega espacio */
+            padding: 10px; /* Relleno interno */
+            background-color: white; /* Fondo blanco para el contenedor */
+            border: 1px solid #ddd; /* Borde suave */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        /* Estilos para la tabla */
+        table {
+            width: 100%; /* Ancho completo */
+            border-collapse: collapse; /* Elimina espacios entre celdas */
+        }
+
+        th, td {
+            padding: 12px; /* Espacio interno */
+            border: 1px solid #ddd; /* Bordes claros */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Fondo para encabezados */
+            text-align: left; /* Alineación a la izquierda */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        /* Estilos para los botones */
         .button {
-            padding: 8px 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;  /* Quita el subrayado en los enlaces */
-            transition: background-color 0.3s ease;
-            cursor: pointer;
+            padding: 10px 15px; /* Espacio interno */
+            background-color: #007bff; /* Azul para el botón */
+            color: white; /* Texto blanco */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Sin subrayado */
+            transition: background-color 0.3s ease; /* Efecto suave en hover */
+            cursor: pointer; /* Cambia el cursor a puntero */
         }
 
         .button:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Fondo más oscuro en hover */
         }
 
         .button.danger {
-            background-color: #dc3545;
+            background-color: #dc3545; /* Rojo para botón de peligro */
         }
 
         .button.danger:hover {
-            background-color: #c82333;
+            background-color: #c82333; /* Rojo más oscuro en hover */
         }
 
+        /* Estilos para el área de acciones */
         .actions {
-            display: flex;
-            gap: 8px;  /* Espacio entre botones */
+            display: flex; /* Layout flexible para acciones */
+            gap: 10px; /* Espacio entre botones */
         }
-
     </style>
 </head>
 <body>
@@ -90,7 +112,8 @@
                             <td><?= $row['apellidos'] ?></td>
                             <td><?= $row['descripcion'] ?></td>
                             <td class="actions">
-                                <a class="button" href="aceptarcita.php">Aceptar</a>
+                                <!-- Aquí está el cambio -->
+                                <a class="button" href="aceptarcita.php?documento=<?= $row['documento_identidad'] ?>">Aceptar</a>
                                 <a class="button danger" href="rechazarcita.php">Rechazar</a>
                             </td>
                             <td><?= $row['jornada'] ?></td>

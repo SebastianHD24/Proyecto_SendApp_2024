@@ -1,0 +1,73 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Quita los espacios entre celdas */
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px; /* Espacio interno para las celdas */
+    border: 1px solid #ddd; /* Borde claro */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para el encabezado */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Estilos para los inputs */
+input {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde claro */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el borde en el ancho */
+}
+
+/* Estilo para el botón de formulario */
+button {
+    padding: 10px 20px; /* Espacio interno */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro en hover */
+}
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente para el cuerpo */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin relleno externo */
+    background-color: #f9f9f9; /* Color de fondo general */
+}
+
+/* Estilos para las tablas y formularios */
+form {
+    max-width: 600px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Relleno interno */
+    border: 1px solid #ddd; /* Borde claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Quita espacios entre celdas */
+}
+
+th, td {
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ddd; /* Borde claro */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para encabezados */
+    text-align: left; /* Alineación a la izquierda */
+}
