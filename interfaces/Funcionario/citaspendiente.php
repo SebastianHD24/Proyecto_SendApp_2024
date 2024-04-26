@@ -93,9 +93,9 @@
                     die("Error al conectar a la base de datos: " . mysqli_connect_error());
                 }
 
-                $sql = "SELECT solicitud_citas.id_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, solicitud_citas.descripcion, solicitud_citas.jornada 
-                        FROM solicitud_citas
-                        INNER JOIN usuarios ON solicitud_citas.id_usuario = usuarios.documento_identidad";
+                $sql = "SELECT citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada 
+                        FROM citas
+                        INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad";
 
                 $result = mysqli_query($conn, $sql);
 

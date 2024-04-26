@@ -16,7 +16,7 @@ if (isset($_POST['descripcion']) && $_POST['descripcion'] != "") {
         $jornada = $_POST['jornada'];
     
     // Uso de declaración preparada para inserción segura
-    $sql = "INSERT INTO solicitud_citas (descripcion,id_usuario,jornada) VALUES (?,?,?)";
+    $sql = "INSERT INTO citas (descripcion,documento_usuario,jornada) VALUES (?,?,?)";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, 'sis', $datos, $documento_identidad,$jornada);
 

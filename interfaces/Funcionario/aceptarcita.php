@@ -49,25 +49,25 @@ if ($documento) {
             <tr>
                 <td>Documento de Identidad</td>
                 <td>
-                    <input type="text" name="documento" placeholder="Documento" required value="<?php echo $documento; ?>">
+                    <input type="text" name="documento" placeholder="Documento" disabled value="<?php echo $documento; ?>">
                 </td>
             </tr>
             <tr>
                 <td>Nombres</td>
                 <td>
-                    <input type="text" name="nombres" placeholder="Nombres" required value="<?php echo $nombres; ?>">
+                    <input type="text" name="nombres" placeholder="Nombres" disabled value="<?php echo $nombres; ?>">
                 </td>
             </tr>
             <tr>
                 <td>Apellidos</td>
                 <td>
-                    <input type="text" name="apellidos" placeholder="Apellidos" required value="<?php echo $apellidos; ?>">
+                    <input type="text" name="apellidos" placeholder="Apellidos" disabled value="<?php echo $apellidos; ?>">
                 </td>
             </tr>
             <tr>
                 <td>Día</td>
                 <td>
-                    <input type="date" name="dia" placeholder="Día" required>
+                    <input type="date" name="fecha" placeholder="Día" required>
                 </td>
             </tr>
             <tr>

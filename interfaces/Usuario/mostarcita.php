@@ -51,7 +51,7 @@
                         }
 
                         // Paso 3: Consulta para recuperar datos
-                        $sql = "SELECT * FROM solicitud_citas WHERE id_usuario = '$documento_identidad'";  
+                        $sql = "SELECT * FROM citas WHERE documento_usuario = '$documento_identidad'";  
 
                         $result = mysqli_query($conn, $sql);
 
@@ -62,10 +62,9 @@
                                     ?>
                                     <tr>
                                         <td><?= $row['descripcion'] ?></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>pendiente</td>
-                                        <td>nombre funcionario</td>
+                                        <td><?= $row['hora'] ?></td>
+                                        <td><?= $row['fecha'] ?></td>
+                                        
                                     </tr>
                                     <?php
                                 }
