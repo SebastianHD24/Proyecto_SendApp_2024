@@ -64,6 +64,7 @@
                                         <td><?= $row['descripcion'] ?></td>
                                         <td><?= $row['hora'] ?></td>
                                         <td><?= $row['fecha'] ?></td>
+                                        <td><?= $row['estado_cita']?> </td>
                                         
                                     </tr>
                                     <?php
