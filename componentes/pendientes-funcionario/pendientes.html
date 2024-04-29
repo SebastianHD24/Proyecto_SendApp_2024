@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Styles/componentes/pendientes.css">
+
+    <!-- WORK SANS FONT INSTITUCIONAL IMPORTACIÓN DESDE GOOGLE FONTS-->                                                                      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Pendientes</title>
+</head>
+<body>
+    <section>
+        <div class="datos-aprendiz" style="display: none;">
+            <!-- --------------------- Datos del aprendiz ------------- -->
+            <h1>Datos del aprendiz</h1>
+            <div class="datos-content">
+                <div class="datos-section1">
+                    <label for="Documenti">Documento de identidad:</label>
+                    <p>3324234324</p>
+                    <br>
+                    <label for="Nombre">Nombre:</label>
+                    <p>Juanito Gustavo</p>
+                    <br>
+                    <label for="apellido">Apellido:</label>
+                    <p>Alimaña Piromano</p>
+                    <br>
+                    <label for="jornada">Jornada:</label>
+                    <p>Mañana</p>
+                </div>
+                <div class="datos-section2">
+                    <form action="">
+                    <label for="">Descripción de las cita</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+
+                <div class="button">
+                    <a href=""><button id="Confirmar">Confirmar</button></a>
+                    <a href=""><button id="Rechazar">Rechazar</button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+                    <!-- ----------------------- Confirmar agendamiento ----------- -->
+                    <div class="confirmacion-agendamiento" style="display: none;">
+                        <h1>Confirmar <br>agendamiento</h1>
+                        
+                        <form action="">
+                            <label for="dia">Día:</label>
+                            <input type="date" name="fecha" id="fecha">
+                            <br>
+                            <label for="hora">Hora:</label>
+                            <input type="time" name="hora" id="hora">
+                            <br>
+                            <label for="Encargado">Encargado:</label>
+                            <select name="opciones" id="opciones" placeholder="Seleccione una hora">
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="name1">Name1</option>
+                                <option value="name2">Name1</option>
+                                <option value="name3">Name1</option>
+                            </select>
+                            <br>
+                            <div class="button">
+                                <a href=""><button>Cerrar</button></a>
+                                <a href=""><button>Enviar</button></a>
+                            </div>
+                        </form>
+                    </div>
+    </section>
+    <section>
+        <div class="confirmacion-agendamiento">
+            <p>Agendamiento éxitoso</p>
+            <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="">
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-family: 1.2rem;
+}
+/*Contenido*/
+.Contenido{
+    width: 100%;
+    padding: 80px;
+}
+/*titulo */
+.titulo{
+    font-size: 4rem;
+    text-align: center;
+    font-family: var(--fuente-principal);
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    color: var(--azul);
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/*subtitulos*/
+ .subtitulos{
+    font-family: var(--fuente-open-sans);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+.tarjeta {        
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+    /* transition:background-color 0.5sg ease; */
+}
+.tarjeta.cambio{
+    color: #fff;
+    background-color: #00324D;
+    background:linear-gradient(#cfcfcf,#ededed);  
+}
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
+  }
+.tarj-img {
+    float: left; 
+    margin-right: 12px; 
+    margin-bottom: 10px;
+}
+
+.tarj-img img {
+    width: 100%; 
+    height:100%; 
+    object-fit: cover;
+}
+.contenido_tarjeta {
+    overflow: hidden; 
+}
+.contenido-corto{
+    padding: 10px;
+}
+.contenido-expansivo {
+    display: none;
+}
+
+.leerMenos,
+.leerMas {
+    cursor: pointer;
+    border-radius: 7px;
+    height: 30px;
+    width: 100px;
+    border: none;
+    color: #fff;
+    background-color: #39a900;
+    margin-top: 20px; 
+}
+@media only screen and (max-width: 767px) {
+    .contenido{
+        padding: 30px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .tarj-img {
+        width: 100%; 
+    }
+
+    .contenido_tarjeta {
+        width: 100%; 
+    }
+}
+/*******************************botones**********************************/
+/*Boton agendar cita*/
+.button{
+    position: relative;
+    padding: 10px 22px;
+    background-color: #39a900;
+    border-radius: 6px;
+    color: var(--gris-claro);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--fuente-open-sans);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.button:hover{
+    background-color: #070001;
+}
+.button:active{
+    transform: scale(0.96);
+}
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+.button.animate::before{
+    top: -70%;
+    background-image: radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #000000 20%, transparent 30%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #000000 15%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%);
+    background-size: 10%  10%, 20% 20%, 15% 15%,  20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25%  90%, 25% 90%, 40% 90%, 55% 90%, 
+    70% 90%;
+    animation: topBubbles 0.6s ease-in-out forwards;
+}
+@keyframes topBubbles {
+    50%{
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%,
+        22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100%{
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
+    }
+}
+.button.animate::after{
+    bottom: -70%;
+    background-image:  radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #39a900 15%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 10%  0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+    animation: bottomBubbles 0.6s ease-in-out forwards;
+
+}
+@keyframes bottomBubbles {
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%,
+        95% 60%, 105% 0%;
+    }
+    100%{
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
+    }
+}
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
+}
