@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Styles/citas.css">
+    <link rel="stylesheet" href="../../Styles/componentes/formulario.css">
+    <link rel="stylesheet" type="text/css" href="../../Styles/notificaiones.css">
+    <title>Interfaz Usuario</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <h1 class="logo">SendApp</h1>
+            <button class="open-menu" id="open-menu"><i class='bx bx-menu'></i></button>
+        </header>
+        <aside>
+            <button class="close-menu" id="close-menu"><i class='bx bx-x'></i></button>
+                <div class="perfil">
+                    <figure class="foto-perfil">
+                    <img class="logo" src="./Usuario-img/fotor-ai-20230902143349.jpg">
+                    <i class='bx bxs-camera'></i>
+                    </figure>
+                </div>
+            <article class="nombre">
+              <p>Joan Fonseca Cardenas</p>
+            </article>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li>
+                        <a class=" boton-categoria" href=""><i class='bx bx-home'></i>Inicio</a>
+                    </li>
+                    <li>
+                        <button id="servicios" class="boton-menu boton-categoria active"><i
+                                class='bx bx-objects-horizontal-left'></i>Servicio</button>
+                    </li>
+                    <li>
+                        <button id="citas" class="boton-menu boton-categoria"><i class='bx bx-calendar'></i>Mis
+                            Citas</button>
+                    </li>
+                    <li>
+                        <button id="notificaciones" class="boton-menu boton-categoria"><i
+                                class='bx bx-bell'></i>Notificaciones</button>
+                    </li>
+                    <li>
+                        <button id="pqr" class="boton-menu boton-categoria"><i
+                                class='bx bx-message-alt-error'></i>PQR</button>
+                    </li>
+                    <li>
+                        <button id="perfil " class="boton-menu boton-categoria"><i
+                                class='bx bx-user'></i>Perfil</button>
+                    </li>
+                </ul>
+            </nav>
+      <div class="log-out">
+          <a class="texto-footer" href="#"><i class='bx bx-log-out'></i></a>
+      </div> 
+    </aside>
+<main>
+<!-----------------------------Logo Institucional--------------------------->          
+    <article class="senappd__top-logo">
+        <img src="./Usuario-img/LogosSena-img/SendApp.png" name="SendApp" width="250px" height="85px" alt="SendApp Logo" />
+    </article>
+<!-----------------------------Presentación--------------------------->          
+    <section class="introduction">
+        <!--Título de cada sección-->
+        <h1>Conoce y agenda tus citas</h1>
+        <!--Introducción-->
+        <p>
+          Bienvenido Aprendíz, este es tu nuevo espacio personal en SendApp, donde podrás agendar citas con nuestros funcionarios de cada área y cambiar tus datos personales, <b>Solo debes hacer click sobre el área de tu preferencia y se te abrirá automaticamente el formulario para solicitar una cita.</b> Pero recuerda, solo algunas de nuestras área estan habilitadas para recibir citas, también algunos de tus datos personales solo pueden ser actualizados atraves del aplicativo web de <a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/" target="_blank">SofiaPlus.</a> 
+        </p>
+    </section>
+<!-----------------------------Sección principal de servicios--------------------------->
+    <!-- Contenido -->
+    <div class="div__content">
+      <section>
+        <div class="cards__container">
+            <div class="cards">
+              <article>
+                  <img src="Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
+                  <p>Bienestar Al Aprendíz</p>
+              </article>
+            </div>
+            <div class="cards">
+              <article>
+                  <p>Biblioteca</p>
+                  <img src="Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
+              </article>     
+            </div>
+            <div class="cards">
+              <article>
+                <p>Coordinación Académica</p>
+                <img src="Usuario-img/Areas-img/academico.png" name="" alt=""/>
+              </article>    
+            </div>
+            <div class="cards">
+              <article>
+                <p>Administración</p>
+                <img src="Usuario-img/Areas-img/administraconNegro.png" name="" alt=""/>
+              </article>     
+            </div>
+            <div class="cards">
+              <article>
+                <p>Fondo Emprender</p>
+                <img src="Usuario-img/Areas-img/enprederNegro.png" name="" alt=""/>
+              </article>   
+            </div>
+            <div class="cards">
+              <article>
+                <p>Relaciones Corporativas</p>
+                <img src="Usuario-img/Areas-img/corporacionNegro.png" name="" alt=""/>
+              </article>      
+            </div>
+            <div class="cards">
+              <article>
+                <p>Sennova</p>
+                <img src="Usuario-img/Areas-img/senova.png" name="" alt=""/>
+              </article>    
+            </div>
+            <div class="cards">
+              <article>
+                <p>Servicios Tecnológicos</p>
+                <img src="Usuario-img/Areas-img/serviciosNegros.png" name="" alt=""/>
+              </article>  
+            </div>
+            <div class="cards">
+              <article>
+                <p>Fábrica De Software</p>
+                <img src="Usuario-img/Areas-img/fabricaNegro.png" name="" alt=""/>
+              </article>   
+            </div>
+            <div class="cards">
+              <article>
+                <p>Tecno Academia</p>
+                <img src="Usuario-img/Areas-img/tecnoAcademiaNegro.png" name="" alt=""/>
+              </article>    
+            </div>
+            <div class="cards">
+              <article>
+                <p>Tecno Parque</p>
+                <img src="Usuario-img/Areas-img/tecnoParqueNegro.png" name="" alt=""/>
+              </article>  
+            </div>
+        </div>
+      </section>
+    </div>   
+   
+<!-----------------------------Logo Institucional al píe del contenido-------------------------->
+    <article class="sena__bottom--logo">
+      <img src="../../Inicio/Img-home/LogosSena-img/LogoSenaVerde.png" alt="Logo Sena"/>
+    </article>
+  </main>
+</div>
+    <script src="./script.js"></script>
+    <script src="./response.js"></script>
+</body>
+</html>

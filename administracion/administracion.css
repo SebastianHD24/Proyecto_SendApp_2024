@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+body{
+    font-family: var(--fuente-principal);
+    font-family: 1.2rem;
+}
+
+/*Contenido*/
+.orden{
+    margin: 4rem;
+}
+ .Primera_Impresion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+} 
+
+.contn {
+    margin: 1rem;
+    flex:60%;
+    padding-right: 20px; 
+    text-align: left;
+}
+.contn, .imagen{
+    opacity: 0;
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.imagen{
+    flex: 35%;
+    text-align: center; 
+    padding: 20px;
+
+}
+.imagen img{
+    margin-top: 9rem;
+    max-width: 134%;
+    height: auto;
+}
+
+.Contenido{
+    width: 100%;
+    padding: 70px;
+    background:linear-gradient(#ededed,#fff); 
+    
+}
+/*titulo */
+.titulo{
+    font-size: 6rem;
+    text-align:left;
+    font-family: var(--fuente-principal);
+    animation: fadeIn 3s forwards;
+    color: var(--azul);
+}
+/*subtitulos*/
+.subtitulos{
+    font-family: var(--fuente-open-sans);
+    text-align: left;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+.parrafo{
+    font-size: 25px;
+}
+hr{
+    margin: 2rem 0 10px 0;
+}
+.Contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background:linear-gradient(#cfcfcf,#ededed); 
+}
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    gap: 4rem;
+}
+.tarjeta {  
+    width: 40rem;      
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+
+}
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
+}
+.l_ordenada{
+    list-style-type:none;
+    padding-left: 20px;
+}
+.l_ordenada li{
+    margin: 2rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+.l_ordenada li::before {
+    content: "✔";
+    display: inline-block; 
+    width: 1em; 
+    height: 1em; 
+    margin-right: 0.5em; 
+    color: #29a900; 
+    font-size: 1.2em; 
+    position: absolute; 
+    left: -20px;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+/*******************************botones**********************************/
+/*Boton agendar cita*/
+.button{
+    position: relative;
+    padding: 10px 22px;
+    background-color: #39a900;
+    border-radius: 6px;
+    color: var(--gris-claro);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--fuente-principal);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.button:hover{
+    background-color: #070001;
+}
+.button:active{
+    transform: scale(0.96);
+}
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+.button.animate::before{
+    top: -70%;
+    background-image: radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #000000 20%, transparent 30%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #000000 15%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, #000000 20%, transparent 20%);
+    background-size: 10%  10%, 20% 20%, 15% 15%,  20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25%  90%, 25% 90%, 40% 90%, 55% 90%, 
+    70% 90%;
+    animation: topBubbles 0.6s ease-in-out forwards;
+}
+@keyframes topBubbles {
+    50%{
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%,
+        22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100%{
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
+    }
+}
+.button.animate::after{
+    bottom: -70%;
+    background-image:  radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #39a900 15%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%),
+    radial-gradient(circle, #29a900 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 10%  0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+    animation: bottomBubbles 0.6s ease-in-out forwards;
+
+}
+@keyframes bottomBubbles {
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%,
+        95% 60%, 105% 0%;
+    }
+    100%{
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
+    }
+}
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
+}
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
+    .Contenido{
+        padding: 30px;
+    }
+    .orden{
+        margin: 2rem;
+    }
+    .tarjeta{
+        width: 87%; 
+        max-width: 30rem;
+    }
+    .subtitulos,.sub{
+        font-size: 1.3rem;
+    }
+    
+    .parrafo,.p{
+        font-size: 1rem;
+    }
+}
