@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-family: 1.2rem;
+}
+
+/*Contenido*/
+.orden{
+    margin: 4rem;
+}
+ .Primera_Impresion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+} 
+
+.contn {
+    margin: 1rem;
+    flex:60%;
+    padding-right: 20px; 
+    text-align: left;
+}
+.contn, .imagen{
+    opacity: 0;
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.imagen{
+    flex: 35%;
+    text-align: center; 
+    padding: 20px;
+
+}
+.imagen img{
+    border-radius: 5rem;
+    margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.Contenido{
+    width: 100%;
+    padding: 60px;
+    background:linear-gradient(#ededed,#fff); 
+    
+}
+/*titulo */
+.titulo{
+    font-size: 6rem;
+    text-align:left;
+    font-family: var(--fuente-principal);
+    animation: fadeIn 3s forwards;
+    color: var(--azul);
+}
+/*subtitulos*/
+.subtitulos{
+    font-family: var(--fuente-open-sans);
+    text-align: left;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+.sub{
+    font-family: var(--fuente-open-sans);
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 4rem 2rem 4rem;
+}
+.parrafo{
+    font-size: 25px;
+}
+.p{
+    color: #00324D;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+}
+hr{
+    margin: 2rem 0 10px 0;
+}
+.Contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background:linear-gradient(#cfcfcf,#ededed); 
+}
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    gap: 4rem;
+}
+.tarjeta {  
+    width: 40rem;      
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+
+}
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
+}
+.l_ordenada{
+    list-style-type:none;
+    padding-left: 20px;
+}
+.l_ordenada li{
+    margin: 2rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+.l_ordenada li::before {
+    content: "✔";
+    display: inline-block; 
+    width: 1em; 
+    height: 1em; 
+    margin-right: 0.5em; 
+    color: #29a900; 
+    font-size: 1.2em; 
+    position: absolute; 
+    left: -20px;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+ /* Estilos para las esferas */
+ .contenedor-esferas {
+    margin: 3rem 0 3rem 0;
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+.esfera {
+    flex: 0 1 calc(30% - 20px); 
+    max-width: calc(100% - 20px);
+    width: 100%;
+    margin: 20px;
+    border-radius: 50%;
+    color:#00324D;
+    text-align: center;
+    padding: 35px;
+}
+
+.esfera-1,
+.esfera-2,
+.esfera-3{
+    background:linear-gradient(#cfcfcf,#ededed); 
+}
+
+.subtitulo{
+    font-size: 25px;
+    margin-top: 2rem;
+}
+.info-container {
+    margin: 3rem 0 3rem 0;
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+}
+
+.info-column {
+    max-width: calc(100% - 20px);
+    width: 100%;
+    margin: 10px;
+    color:#00324D;
+    text-align: center;
+    padding: 0;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h4 {
+    color: #28a745;
+    font-size: 18px;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Estilos específicos para los enlaces */
+strong {
+    color: #00324D;
+}
+
+a {
+    color: #070001;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
+    .Contenido{
+        padding: 30px;
+    }
+    .orden{
+        margin: 2rem;
+    }
+    .tarjeta{
+        width: 87%; 
+        max-width: 30rem;
+    }
+    .subtitulos,.sub{
+        font-size: 1.3rem;
+    }
+    
+    .parrafo,.p{
+        font-size: 1rem;
+    }
+    .subtitulo{
+        font-size: 17px;
+        margin-top: 15px;
+    }
+}

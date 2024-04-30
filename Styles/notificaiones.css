@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+/*Contenedor principal con las notificaciones y las peticiones*/
+.notifications-container{
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    /* border: 1px solid #000; */
+    border-radius: 36px;
+    gap: 30px;
+    padding: 30px 0px 30px 0px;
+}
+
+/********************* Estilos del contenedor con la informacioón de las notificaciones **********************/
+.notifications-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 12px;
+    width: 250px;
+    cursor: pointer;
+}
+.notifications-box figure img{
+    width: 35px;
+}
+
+.figure__icon--schedule{
+    padding: 20px;
+}
+
+.figure__icon--confirm{
+    padding: 20px;
+}
+
+.notifications-box article p{
+    padding: 0px 20px 20px 20px; 
+    text-align:justify;
+    font-weight: 500;
+}
+
+.notifications-box span{
+    border: 1px solid #000;
+    opacity: .5;
+    width: 90%;
+    border-radius: 12px;
+}
+
+/**************** Estilos del contenedor con la información de las peticiones **************************/
+.notifications-pqr{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    cursor: pointer;
+}
+
+.notifications-pqr article{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.notifications-pqr p{
+    width: 100%;
+    font-weight: 500;
+    padding: 0px 20px 20px 20px;
+    text-align: justify;
+}
+
+.notifications-pqr figure img{
+    width: 35px;
+}
+
+.notifications-pqr span{
+    width: 90%;
+    border: 1px solid #000;
+    opacity: .5;
+    border-radius: 12px;
+}
+
+.show__details--button span{
+    border: none;
+    opacity: 1;
+}
+
+.show__details--button{
+    font-size: 16px;
+    background :none;
+    border: none;
+    color: #39a900;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    padding: 20px 5px 20px 6px;
+}
+
+.show__details--button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #00324d;
+}
+
+/*****************************Estilos del mensaje de QPR**********************************/
+.answer__container{
+    display: grid;
+    place-items: center;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 36px;
+    padding: 25px;
+    gap: 20px;
+}
+
+.date{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.date article:last-child{
+    display: flex;
+    justify-content: flex-end;
+    color: #39a900;
+}
+
+.date article h1{
+    color: #00324d;
+    font-size: 1.5rem;
+}
+
+.text p{
+    text-align: justify;
+    line-height: 150%;
+}
+
+.close__button--action{
+    width: 70px;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #39a900;
+    color: #fff;
+    border-radius: 12px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.close__button--action:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #00324d;
+    color: #39a900;
+}
+
+/************************** Responsive Desing *******************************/
+/*Tablets HD*/
+@media screen and (min-width:768px){
+    .notifications-container{
+        justify-items: center; /*Alineación de los items de manera vertical*/
+        width: 525px;
+        padding: 20px 20px;
+    }
+
+    /*--------------Notificaciones-----------------*/
+    .notifications-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .notifications-box article{
+        width: 100%;
+    }   
+
+    .notifications-box article p{
+        padding: 0px 20px 0px 0px;
+    }
+
+    .notifications-box span{
+        width: 1px;
+        height: 90%;
+    }
+
+    /*--------------PQR-----------------*/
+    .notifications-pqr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .notifications-pqr article{
+        width: 100%;
+    } 
+
+    .notifications-pqr article p{
+        padding: 0px 20px 0px 0px;
+    }
+
+    .notifications-pqr span{
+        width: 1px;
+        height: 90%;
+    }
+
+    /*--------------------PQR message-------------------*/
+    .answer__container{
+        width: 485px;
+    }
+}
+
+/*Laptos FHD */
+@media screen and (min-width: 1024px) {
+    .notifications-container{
+        width: 780px;
+        justify-items: center; /*Alineación de los items de manera vertical*/
+    }
+
+    /*------------------------Notificaciones-----------*/
+    .notifications-box{
+        height: 110px;
+    }
+
+    .notifications-box p{
+        font-size: 1.2rem;
+    }
+
+    .notifications-pqr p{
+        font-size: 1.2rem;
+    }
+
+    /*----------------------PQR message-----------------*/
+    .notifications-pqr article{
+        height: 110px;
+    } 
+
+    .answer__container{
+        width: 740px;
+    }
+
+    .answer__container{
+        font-size: 1.3rem;
+    }
+
+    .close__button--action{
+        width: 150px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+}
+
+/*Pantallas 2k */
+@media screen and (min-width: 1440px){
+    .notifications-container{
+        place-items: center;
+        width: 1000px;
+    }
+
+    /*-----------------Notificaiones-------------------*/
+    .notifications-box{
+        height: 120px;
+    }
+
+    .notifications-box figure img{
+        width: 40px;
+    }
+
+    .notifications-box p{
+        font-size: 1.4rem;
+    }
+
+    /*----------------------PQR-----------------------*/
+    .notifications-pqr{
+        height: 120px;
+    }
+
+    .notifications-pqr figure img{
+        width: 40px;
+    }
+
+    .notifications-pqr article p{
+        font-size: 1.4rem;
+    }
+
+    .show__details--button{
+        padding: 0px 8px 0px 8px;
+    }
+
+    .answer__container p{
+        font-size: 1.4rem;
+    }
+}
+
+/*Pantallas ultra wide 4k*/
+@media screen and (min-width:2560px){
+    .notifications-container{
+        justify-content: center;
+        width: 1800px;
+    }
+
+    /*-----------------Notificaiones-------------------*/
+    .notifications-box{
+        height: 165px;
+    }
+
+    .notifications-box figure img{
+        width: 75px;
+    }
+
+    .notifications-box article p{
+        font-size: 2rem;
+    }
+
+    .notifications-box figure{
+        height: 100%;
+        padding: 40px;
+    }
+
+    /*----------------------PQR-----------------------*/
+    .notifications-pqr{
+        height: 165px;
+    }
+
+    .notifications-pqr figure{
+        height: 100%;
+        padding: 40px;
+    }
+    
+    .notifications-pqr figure img{
+        width: 75px;
+    }
+
+    .notifications-pqr article p{
+        font-size: 2rem;
+    }
+
+    .show__details--button{
+        padding: 0px 13px 0px 14px;
+        font-size: 2rem;
+    }
+
+    /***************************PQR message****************************/
+    .answer__container{
+        width: 1700px;
+    }
+
+    .date article h1{
+        font-size: 2.3rem;
+    }
+
+    .date article p{
+        font-size: 2.3rem;
+    }
+
+    .answer__container p{
+        font-size: 2rem;
+    }
+
+    .close__button--action{
+        font-size: 2rem;
+        width: 200px;
+        height: 60px;
+    }
+
+}
