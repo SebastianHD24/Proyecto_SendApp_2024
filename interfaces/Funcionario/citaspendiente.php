@@ -82,6 +82,7 @@
                     <th>Descripción de la cita</th>
                     <th>Acciones</th>
                     <th>Jornada</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -93,9 +94,9 @@
                     die("Error al conectar a la base de datos: " . mysqli_connect_error());
                 }
 
-                $sql = "SELECT citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada 
-                        FROM citas
-                        INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad";
+                $sql = "SELECT citas.id_cita,citas.documento_usuario AS documento_identidad,usuarios.nombres,usuarios.apellidos,citas.descripcion,citas.jornada 
+                    FROM citas
+                    INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad";
 
                 $result = mysqli_query($conn, $sql);
 
@@ -113,7 +114,8 @@
                             <td><?= $row['descripcion'] ?></td>
                             <td class="actions">
                                 <!-- Aquí está el cambio -->
-                                <a class="button" href="aceptarcita.php?documento=<?= $row['documento_identidad'] ?>">Aceptar</a>
+                                <a class="button" href="aceptarcita.php?documento=<?= $row['documento_identidad'] ?>&id_cita=<?= $row['id_cita'] ?>">Aceptar</a>
+
                                 <a class="button danger" href="rechazarcita.php">Rechazar</a>
                             </td>
                             <td><?= $row['jornada'] ?></td>
