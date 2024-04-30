@@ -19,7 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Ejecutar la consulta
         if ($stmt->execute()) {
             if ($stmt->affected_rows > 0) {
-                echo "Cita actualizada correctamente";
+                // Redirigir al usuario a citaspendiente.php después de actualizar la cita correctamente
+                header('Location: citaspendiente.php');
+                exit; // Asegura que el script se detenga después de la redirección
             } else {
                 echo "No se encontró una cita para el documento proporcionado";
             }
