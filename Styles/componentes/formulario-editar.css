@@ -114,3 +114,33 @@ input{
         width: 30rem;
     }
 }
+
+/* CAMBIAR CONTRASEÑA */
+
+.cambiar-contraseña{
+    display: grid;
+    place-content: center;
+
+}
+.header-contraseña{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 13;
+    color: var(--azul);
+}
+.btn-confirmar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-form2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 2rem 0 1rem 0;
+}
+.main-form2 input{
+    width: 100%;
+}
