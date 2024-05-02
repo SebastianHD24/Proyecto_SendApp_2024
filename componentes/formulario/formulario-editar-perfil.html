@@ -15,13 +15,13 @@
     <title>Formulario</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="formularioPrincipal">
         <div class="second-container">
             <div class="header">
                 <img src="../../Styles/Img/LogosSena-img/SendApp.png" alt="Logo" class="login_img">
                 <h1 class="login__title">Bienvenido a tu perfil de usuario.</h1>
             </div>
-            <form action="../php/login.php" method="POST" class="login__form">
+            <form action="" method="POST" class="login__form">
                 <div class="main-form">
                         <div class="first-section">
                             <label for="form_input" class="form_input">Documento Identidad:</label>
@@ -44,7 +44,7 @@
                             <input type="text" name="estado" class="login__input" disabled>
                             <label for="form_input" class="form_input">Rol:</label>
                             <input type="text" name="rol" class="login__input" disabled>
-                            <button type="button" class="btn-cambiar">Cambiar Contraseña</button>
+                            <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
                         </div>
                 </div>
                 <div class="btn-actualizar">
@@ -53,4 +53,38 @@
             </form>
         </div>
     </div>
+    <div class="cambiar-contraseña" style="display: none;" id="cambiarContraseña">
+        <div class="container-contraseña">
+            <div class="header-contraseña">
+                <h1 class="login__title">Cambiar Contraseña</h1>
+            </div>
+            <form action="" method="POST" class="login__form">
+                <div class="main-form2">
+                    <div class="first-section">
+                        <label for="form_input" class="form_input">Ingresar la contraseña actual:</label>
+                        <input type="password" name="contraseña_actual" class="login__input">
+                        <label for="form_input" class="form_input">Ingresar la nueva contraseña:</label>
+                        <input type="password" name="nueva_contraseña" class="login__input">
+                        <label for="form_input" class="form_input">Confirme la nueva contraseña:</label>
+                        <input type="password" name="confirmar_contraseña" class="login__input">
+                    </div>
+                </div>  
+                <div class="btn-confirmar" id="btnConfirmarcontra">
+                    <button type="submit" class="btn-actu">
+                        Confirmar
+                    </button>
+                </div>
+            </form>
+        </div>    
+    </div>
+    <div class="alerta" id="alerta" style="display: none;">
+        <div class="mensaje">
+            <p>¡Contraseña actualizada con éxito!</p>
+        </div>   
+        <div class="imagen">
+            <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="Señal de aprobación">
+        </div>
+         
+    </div>
+<script src="./script/formulario-editar.js"></script>
 </body>
