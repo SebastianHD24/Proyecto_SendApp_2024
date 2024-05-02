@@ -6,17 +6,17 @@ var modal = document.getElementById("myModal");
 
 let forr = document.getElementById('formularioo');
 
+let enviar = document.getElementById('buttonEnviar');
 
-function ve() {
-    forr.addEventListener("submit", function (e) {
-        e.preventDefault();
-        modal.style.display = "block";
-    });
-
+enviar.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+},
     setTimeout(function () {
-        modal.style.display = "none";
-    }, 3000);
-}
+    modal.style.display = "none";
+}, 3000)
+
+);
 
 
 // Cuando el usuario haga clic en el botón de cerrar, cierra la ventana modal
