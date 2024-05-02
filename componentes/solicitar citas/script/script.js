@@ -8,22 +8,23 @@ let forr = document.getElementById('formularioo');
 
 let enviar = document.getElementById('buttonEnviar');
 
+//CUMPLIR LA ACCION DEL FORM
 enviar.addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.style.display = "block";
-},
-    setTimeout(function () {
-    modal.style.display = "none";
-}, 3000)
+    if (modal.style.display !== "block") {
+        e.preventDefault();
+        modal.style.display = "block";
 
-);
+        setTimeout(function () {
+            modal.style.display = "none"; 
+        }, 3000);
+    }
+});
 
 
 // Cuando el usuario haga clic en el botón de cerrar, cierra la ventana modal
 closeButton.onclick = function () {
     modal.style.display = "none";
 }
-
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";

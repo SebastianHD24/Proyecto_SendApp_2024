@@ -13,7 +13,7 @@
 <body>
 
   <div class="container">
-    <form  action="guardarcita.php" method="post" id="formularioo">
+    <form  action="guardarcita.php" method="POST" id="formularioo">
       <h1>Solicitar Cita</h1>
       <p>Jornada:</p>
       <select class="select" name="jornada">
@@ -36,11 +36,10 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="cerrar"></span>
-      <p>Ingrese datos validos</p>
+      <p>Datos cargados correctamente</p>
       <i class='bx bxs-certification'></i>
     </div>
   </div>
   <script src="script/script.js"></script>
 </body>
-
 </html>
