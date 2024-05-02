@@ -15,7 +15,7 @@
 
     // conexion a la bd 
 
-    include '../'
+    include '../../'
     
     ?>
 
