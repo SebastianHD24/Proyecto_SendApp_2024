@@ -14,8 +14,8 @@ botonConfirmar.addEventListener('click',function(){
     contraseña.style.display = 'none';
     mainForm.style.display = 'none';
     alerta.style.display = 'block';
-    setTimeout(function(){
-        alerta.style.display = 'none';
-        mainForm.style.display = 'block';
-    }, 3000);
+        setTimeout(function(){
+            alerta.style.display = 'none';
+            mainForm.style.display = 'block';
+        }, 30000);
 })
