@@ -39,38 +39,3 @@ const searchInput = document.querySelector(".search__wrapper input");
 searchInput.addEventListener("focus", (e) => {
   document.body.classList.remove("collapsed");
 });
-
-function contraseña() {
-
-  const inputsContraseñas = document.querySelectorAll('.contrasena')
-  const botonActualizar = document.querySelector('.actualizar') 
-  const botonMostrarFormContra = document.querySelector('.botonMostrarFormContra'); 
-
-  if (formContraseña.classList.contains('oculto')) {
-
-    formContraseña.classList.remove('oculto');
-
-    formulario.classList.add('oculto');
-
-    botonActualizar.classList.add('oculto');
-
-    botonMostrarFormContra.classList.add('oculto');
-  
-  } else {
-
-    formContraseña.classList.add('oculto');
-
-    formulario.classList.remove('oculto');
-
-    botonActualizar.classList.remove('oculto');
-
-    botonMostrarFormContra.classList.remove('oculto');
-
-    mensajeContraseña.classList.add('oculto');
-
-    inputsContraseñas.forEach(input => {
-      input.value = "";
-  });
-
-  };
-};x
