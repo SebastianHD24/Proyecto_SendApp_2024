@@ -52,6 +52,7 @@
                 // Para confirmar, habilitarlo
                 // echo "<h1><center>Registro Grabado Correctamente</center></h1>";
                 echo "<script>alert('Se ha registrado correctamente.')</script>";
+                echo "<meta http-equiv='refresh' content='2; url=../../interfaces\Administrador\index.php'>";
             } else {
                 echo "Error:" . $sql . "<br>" . mysqli_error($conn);
             }

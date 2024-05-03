@@ -25,6 +25,7 @@ h1{
 }
 textarea{
     width: 98%;
+    resize: none;
 }
 .formulario {
     width: 100%;

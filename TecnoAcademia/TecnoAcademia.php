@@ -134,11 +134,13 @@
 
         <div class="esfera esfera-2">
             <h3 class="subtitulo">Convenios de Tecnoacademia</h3>
+        
                 <p class="p">Tecnoacademia realiza convenios con instituciones educativas para fomentar el aprendizaje y desarrollo con las nuevas tecnologías.</p>
         </div>
 
         <div class="esfera esfera-3">
-            <h3 class="subtitulo">Requisitos para <br>ingresar a Tecnoacademia</h3>
+        
+        <h3 class="subtitulo">Requisitos para <br>ingresar a Tecnoacademia</h3>
                 <ol class="l_ordenada">
                     <li>Debes pertenecer a una institución educativa y ser estudiante de básica secundaria o media académica.</li>
                     <li>Registrarse en la página de Tecnoacademia Risaralda.</li>
@@ -160,7 +162,7 @@
             <p>Lunes a Viernes de 8:00 AM a 12:00 PM y de 1:00 PM a 5:00 PM</p>
         </div>
         <div class="info-column">
-            <h4>Línea de atención</h4>
+            <h4>Líneas de atención</h4>
             <p><strong>Teléfono: </strong> (6) 3135800 Ext. 63332</p>
             <p><strong>Correo: </strong> tecnoacademiarisaralda@gmail.com</p>
             <p><strong>Whatsapp: </strong> 3126410732</p>

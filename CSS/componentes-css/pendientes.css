@@ -9,6 +9,12 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 body{
+<<<<<<< HEAD:Styles/componentes/pendientes.css
+    display: flex;
+    justify-content: center;
+    align-items: center;
+=======
+>>>>>>> b400542327ff9083563aa7c01362c6b8bfa5b009:CSS/componentes-css/pendientes.css
     background-color: var(--gris-oscuro);
     font-family: var(--fuente-principal);
 }

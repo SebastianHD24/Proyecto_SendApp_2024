@@ -12,6 +12,8 @@
     background-color: #00324D;
     border-radius: 10px 0px 0px 10px;
     margin-top: 15rem;
+    transform: translateX(-20%);
+    right: 0;
 
 }
 #toggle{
@@ -114,6 +116,8 @@ input .toggle1{
         border-radius: 10px 0px 0px 10px;
         margin-top: 10rem;
         opacity: 0.7;
+        transform: translateX(-20%);
+        right: 0;
 
       }
       #toggle{
@@ -198,6 +202,8 @@ input .toggle1{
       border-radius: 10px 0px 0px 10px;
       margin-top: 15rem;
       opacity: 0.7;
+      transform: translateX(-20%);
+      right: 0;
 
     }
     #toggle{
@@ -282,6 +288,8 @@ input .toggle1{
       border-radius: 10px 0px 0px 10px;
       margin-top: 17rem;
       opacity: 0.7;
+      transform: translateX(-20%);
+      right: 0;
 
     }
     #toggle{
