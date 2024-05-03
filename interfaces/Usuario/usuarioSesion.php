@@ -10,7 +10,7 @@
   </li>
 
   <li>
-    <a class=" boton-categoria" href=""><i class="bi bi-calendar2-event"></i>Mis Citas</a>
+    <a class=" boton-categoria" href="../../componentes/citas/mostrarCitas.php"><i class="bi bi-calendar2-event"></i>Mis Citas</a>
   </li>
 
   <li>
@@ -100,8 +100,10 @@
       </div>
 
     </div>
+    
+    <button><a href="../../componentes/solicitar citas/agendarCita.php"> agendar cita </a></button>
 
-    <div class="contenidoInfo oculto">
+    <!-- <div class="contenidoInfo oculto"> -->
 
         
 <?php endblock() ?>
