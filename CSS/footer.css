@@ -150,16 +150,16 @@ footer{
     }
     
     .icono-red:nth-last-of-type(2){
-        background-image: url(../imagenes/Footer-img/youtube_responsive.png);
+        background-image: url(../imagenes/Footer-img/youtube.png);
     }
     .icono-red:nth-last-of-type(3){
-        background-image: url(../imagenes/Footer-img/x_responsive.png);
+        background-image: url(../imagenes/Footer-img/x.png);
     }
     .icono-red:nth-last-of-type(4){
-        background-image: url(..imagenes/Footer-img/instagram_responsive.png);
+        background-image: url(../imagenes/Footer-img/instagram.png);
     }
     .icono-red:nth-last-of-type(5){
-        background-image: url(..imagenes/Footer-img/facebook_responsive.png); /*Yo no tengo que nada, todo lo que hago es porque asi lo he querido. Una persona que conoce y maneja contexto, conceptos de tecnicas, artes etc*/
+        background-image: url(../imagenes/Footer-img/facebook.png); /*Yo no tengo que nada, todo lo que hago es porque asi lo he querido. Una persona que conoce y maneja contexto, conceptos de tecnicas, artes etc*/
     }
     
     /* esta parte es para la parte del apartado de pqrs etc*/

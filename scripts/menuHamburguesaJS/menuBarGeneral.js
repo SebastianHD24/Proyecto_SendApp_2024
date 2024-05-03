@@ -37,3 +37,21 @@ function animarBar(){
     line2_bars.classList.toggle("activeline2__bars-menu");
     line3_bars.classList.toggle("activeline3__bars-menu");
 }
+
+// funcion para abrir y cerrar menu hamburguesa
+const btnAbrir = document.querySelector('.bars__menu')
+const mostrarMenu = document.querySelector('.resposive__menu')
+
+btnAbrir.onclick = function() {
+    mostrarMenu.classList.toggle('open')
+}
+
+// funcion para mostrar areas en el menu hamburguesa
+
+const btnAreas = document.querySelector('.btn-areas')
+const contAreas = document.querySelector('.menu-areas')
+
+btnAreas.addEventListener('click', () => {
+    contAreas.classList.toggle('abrirCer')
+})
+//------------------------------------------------------------------------------------------------------------------
