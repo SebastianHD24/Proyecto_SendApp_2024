@@ -74,7 +74,7 @@
                     
                     <?php if ($id_rol == 1): ?>
                         <li>
-                        <a  href="?p=accountsCreated"><button class="boton-menu boton-categoria <?php echo $component == 'accountsCreated' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> ADMIN </button></a>
+                        <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> ADMIN </button></a>
                         </li>
                     <?php endif; ?>
                         
