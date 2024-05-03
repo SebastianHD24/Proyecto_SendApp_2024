@@ -1,0 +1,118 @@
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+.contenedor_registro{
+    padding: 5px 20px 5px 20px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.registro{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--blanco);
+    border-radius: 0.8em;
+}
+
+.logo_titulo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo_titulo h3{
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.registro_form{
+    margin-top: 20px;
+}
+
+.registro_img{
+    display: flex;
+    justify-content: center;
+    max-width: 13rem;
+    height: auto;
+}
+
+/* contenido formulario */
+.contenedor_secciones{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.primera-seccion, 
+.segunda-seccion{
+    max-width: 45%;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+/*inputs*/
+.registro_input{
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px; 
+    box-sizing: border-box;
+    background-color: var(--gris-oscuro);
+    border-radius: 0.4em;
+    border-style: none;
+}
+
+select{
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 20px;
+    background-color: var(--gris-oscuro);
+    margin-top: 10px; 
+    border-radius: 0.5em;
+}
+
+.registrar{
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_registrar{
+    padding: 8px 50px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    border-style:none;
+    border-radius: 0.4em;
+}
+
+.btn_registrar:hover{
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contenedor_secciones {
+        flex-direction: column;
+    }
+
+    .contenedor_registro, .ergistro{
+        margin: 20px 10px 20px 10px;
+    }
+
+    .primera-seccion,
+    .segunda-seccion {
+        max-width: 100%;
+    }
+}

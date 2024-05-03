@@ -1,6 +1,6 @@
 <?php
 // Incluir el archivo de conexión
-include("../../Login/conexion.php");
+include("../../bases/conexion.php");
 // Establecer conexión a la base de datos
 $con = connection();
 

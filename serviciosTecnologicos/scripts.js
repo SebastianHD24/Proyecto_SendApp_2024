@@ -1,5 +1,3 @@
-
-
 // Agregar un evento de clic a los elementos "Áreas" para mostrar/ocultar el menú
 document.querySelectorAll('li.dropdown').forEach(item => {
     item.addEventListener('click', function() {
