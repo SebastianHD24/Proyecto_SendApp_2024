@@ -13,7 +13,7 @@
 </head>
 <body>
     <section>
-        <div class="datos-aprendiz" style="display: none;">
+        <div class="datos-aprendiz" id="datosA">
             <!-- --------------------- Datos del aprendiz ------------- -->
             <h1>Datos del aprendiz</h1>
             <div class="datos-content">
@@ -38,46 +38,70 @@
                 </div>
 
                 <div class="button">
-                    <a href=""><button id="Confirmar">Confirmar</button></a>
-                    <a href=""><button id="Rechazar">Rechazar</button></a>
+                    <button id="Confirmar" onclick="confirmar();">Confirmar</button>
+                    <button id="Rechazar" onclick="mostrar()">Rechazar</button>
                 </div>
             </div>
+        </div>
+    </section>
+    <section>
+        <!-- ----------------------- Confirmar agendamiento ----------- -->
+        <div class="confirmacion-agendamiento" id="conf-agen">
+            <h1>Confirmar <br>agendamiento</h1>
+            
+            <form id="form1" action="">
+                <label for="dia">Día:</label>
+                <input type="date" name="fecha" id="fecha">
+                <br>
+                <label for="hora">Hora:</label>
+                <input type="time" name="hora" id="hora">
+                <br>
+                <label for="Encargado">Encargado:</label>
+                <select name="opciones" id="opciones" placeholder="Seleccione una hora">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="name1">Name1</option>
+                    <option value="name2">Name1</option>
+                    <option value="name3">Name1</option>
+                </select>
+                <br>
+                <div class="button">
+                    <button onclick="volver();">Cerrar</button>
+                    <button onclick="ver1();">Enviar</button>
+                </div>
+            </form>
+        </div>
 
+        <div id="ventana" class="ventana">
+            <div class="ventana-content">
+                <p>Agendamiento éxitoso</p>
+                <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="" class="bx">
+            </div>
         </div>
     </section>
+
     <section>
-                    <!-- ----------------------- Confirmar agendamiento ----------- -->
-                    <div class="confirmacion-agendamiento" style="display: none;">
-                        <h1>Confirmar <br>agendamiento</h1>
-                        
-                        <form action="">
-                            <label for="dia">Día:</label>
-                            <input type="date" name="fecha" id="fecha">
-                            <br>
-                            <label for="hora">Hora:</label>
-                            <input type="time" name="hora" id="hora">
-                            <br>
-                            <label for="Encargado">Encargado:</label>
-                            <select name="opciones" id="opciones" placeholder="Seleccione una hora">
-                                <option value="" disabled selected>Seleccione una opción</option>
-                                <option value="name1">Name1</option>
-                                <option value="name2">Name1</option>
-                                <option value="name3">Name1</option>
-                            </select>
-                            <br>
-                            <div class="button">
-                                <a href=""><button>Cerrar</button></a>
-                                <a href=""><button>Enviar</button></a>
-                            </div>
-                        </form>
-                    </div>
-    </section>
-    <section>
-        <div class="confirmacion-agendamiento">
-            <p>Agendamiento éxitoso</p>
-            <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="">
+        <div class="contenedor" id="contenedor">
+            <form id="form2">
+                <h1 class="tituloR">Motivo de Rechazo.</h1>
+                <div class="formulario">
+                    <label class="cont-label">Justificación:</label>
+                    <textarea class="descripcion"></textarea>
+                </div>
+                <div class="botones">
+                    <button class="btn" onclick="volver2()">Cerrar</button>
+                    <button class="btn" onclick="ver2();">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <!-- alerta emergente al dar enviar -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p>Enviada con exito</p>
+                <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="" class="bx">
+            </div>
         </div>
     </section>
-    
+
+    <script src="script/scriptP.js"></script>
 </body>
 </html>
