@@ -1,4 +1,4 @@
-<?php include '../Proyecto_SendApp_2024/bases/header.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredear-->
+<?php include '../Proyecto_SendApp_2024/bases/estructura-base.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredear-->
 
     <!--Bloque para agregar las rutas de stylos independientes de cada archivo y links adicionales para archivos propios-->
     <?php startblock('links-styles') ?>
@@ -39,10 +39,10 @@
             <div class="content__parrafos-links">
                 <div class="p__container">
                     <article>
-                        <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Inoco De Areas">
+                        <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Icono De Areas">
                     </article>                         
                     <p>
-                        En el menú de navagación en el apartado de <b><a href="Areas/index.html">Áreas</a></b> puedes encontrar la información referente a cada una de las áreas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
+                        En el menú de navagación en el apartado de <b><a href="Areas/Areas.php">Áreas</a></b> puedes encontrar la información referente a cada una de las áreas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
                     </p>
                 </div>
                 <div class="p__container">
