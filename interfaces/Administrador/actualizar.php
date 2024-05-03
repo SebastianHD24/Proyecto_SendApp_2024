@@ -26,7 +26,7 @@ $row= mysqli_fetch_array($query);
 </head>
 <body>
     <!-- Botón para volver al menú principal -->
-    <input type="button" onclick="window.location.href='index.php';" value="Menú" />
+    <input type="button" onclick="window.location.href='Administrador.php';" value="Menú" />
 
     <!-- Formulario para editar la información del usuario -->
     <div class="users-form">

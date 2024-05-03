@@ -12,6 +12,8 @@
     //Construir el nombre completo del usuario
     $full_name = $row_user['nombres'] . ' ' . $row_user['apellidos'];
 
+    $id_rol = $row_user['id_rol'];
+
     // Consulta SQL para obtener datos de usuarios, roles y servicios
     $sql = "SELECT *, (SELECT nombre_rol FROM roles WHERE roles.id_rol = usuarios.id_rol) AS nombre_rol,
             (SELECT nombre_servicio FROM servicios WHERE servicios.id_servicio = usuarios.id_servicio) AS nombre_servicio
