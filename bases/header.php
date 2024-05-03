@@ -85,11 +85,9 @@
             <div class="resposive__menu">
                 <ul class="resposive__menu-ul">
                     <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
-                    <li><i class="fa-solid fa-user-group"></i><a href="../../../Proyecto_SendApp_2024/Nosostros/nostros.html">Nosotros</a></li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/index.php">Areas</a> <!--Falta la ruta-->
                     </li>
-                    <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a></li>
                     <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
                 </ul>
             </div>
