@@ -17,7 +17,7 @@
     //Requisitos para la contraseña    
     const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*])(?=.{8,})/';
     
-    if ($contraseñaActual['contrasena'] === $contraseña) {
+    if (    password_hash()$contraseñaActual,$contraseña) {
         echo json_encode(array('success' => 1));
     }
 
