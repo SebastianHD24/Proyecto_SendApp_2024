@@ -64,16 +64,16 @@ footer{
 }
 
 .icono-red:nth-last-of-type(2){
-    background-image: url(Img/Footer-img/youtube.png);
+    background-image: url(../imagenes/Footer-img/youtube.png);
 }
 .icono-red:nth-last-of-type(3){
-    background-image: url(Img/Footer-img/x.png);
+    background-image: url(../imagenes/Footer-img/x.png);
 }
 .icono-red:nth-last-of-type(4){
-    background-image: url(Img/Footer-img/instagram.png);
+    background-image: url(../imagenes/Footer-img/instagram.png);
 }
 .icono-red:nth-last-of-type(5){
-    background-image: url(Img/Footer-img/facebook.png);
+    background-image: url(../imagenes/Footer-img/facebook.png);
 }
 
 /* esta parte es para la parte del apartado de pqrs etc*/
