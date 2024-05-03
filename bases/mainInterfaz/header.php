@@ -51,28 +51,47 @@
             <nav class="navbar">
                 <ul class="menu">
                     <li>
-                        <a class=" boton-categoria" id="inicio" href="../../../Proyecto_SendApp_2024/index.php"><i class="bi bi-house-door"></i>Inicio</a>
+                    <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
+                    
+                    <?php if ($id_rol == 2): ?>
+                        <li>
+                        <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                        </li>
+                    <?php endif; ?>
+
+                    </li>
+                    <?php if ($id_rol == 3): ?>
+                        <li>
+                            <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                        </li>
+                    
+
+                    <li>
+                    <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mis Citas </button></a>
+                    </li>
+
+                    <?php endif; ?>
+                    
+                    <?php if ($id_rol == 1): ?>
+                        <li>
+                        <a  href="?p=accountsCreated"><button class="boton-menu boton-categoria <?php echo $component == 'accountsCreated' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> ADMIN </button></a>
+                        </li>
+                    <?php endif; ?>
+                        
+                    <li>
+                    <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> PQR </button></a>
                     </li>
 
                     <li>
-                        <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                    <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
                     </li>
 
                     <li>
-                    <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Mis Citas </button></a>
+                    <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i> Perfil </button></a>
                     </li>
 
-                    <li>
-                    <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> PQR </button></a>
-                    </li>
-
-                    <li>
-                    <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Notificaciones </button></a>
-                    </li>
-
-                    <li>
-                    <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Perfil </button></a>
-                    </li>
+                    
+                    
                 </ul>
             </nav>
             <div class="log-out">
