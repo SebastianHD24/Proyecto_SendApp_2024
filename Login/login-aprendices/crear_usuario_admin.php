@@ -1,5 +1,5 @@
 <?php
-    include("../conexion.php");
+    include("../../../Proyecto_SendApp_2024/bases/conexion.php");
     $conn = connection();
 
     //chequeando la conexion

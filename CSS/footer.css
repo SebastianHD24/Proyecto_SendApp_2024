@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 10rem;
+    bottom: 0;
+    left: 0;
+    background-color: var(--verde);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid var(--gris-oscuro);
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+}
+
+/*Tamaño del logo SendApp*/
+.logo2{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    align-items: center;
+    /* margin-bottom: 1rem; */
+}
+
+/*links de los iconos de las redes sociales y el footer como tal*/
+.iconos-container{
+    gap: 20px;
+}
+
+.footer-content{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+.iconos-container, .footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-bottom: 1rem; */
+}
+
+.footer-menu li{
+    font-size: 15px;
+}
+/*toda la parte que dice icono red es de los iconos*/
+.icono-red{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    /* border: 1px solid var(--negro); */
+    background-image: url(Img/Footer-img/linkedin.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icono-red:hover{
+    /* background-color: var(--verde); */
+    /*filter: invert(1);*/
+    transform: scale(1.2);
+}
+
+.icono-red:nth-last-of-type(2){
+    background-image: url(../imagenes/Footer-img/youtube.png);
+}
+.icono-red:nth-last-of-type(3){
+    background-image: url(../imagenes/Footer-img/x.png);
+}
+.icono-red:nth-last-of-type(4){
+    background-image: url(../imagenes/Footer-img/instagram.png);
+}
+.icono-red:nth-last-of-type(5){
+    background-image: url(../imagenes/Footer-img/facebook.png);
+}
+
+/* esta parte es para la parte del apartado de pqrs etc*/
+.footer-menu{
+    list-style-type: none;
+    color: white;
+}
+.footer-menu .menu-item{
+    margin: 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+}
+.menu-item:hover{
+    opacity: 1;
+}
+
+/*RESPONSIVE FOOTER*/
+
+@media screen and (max-width: 480px){
+    /*RESPONSIVE CONTENT*/
+    .p__container article img{
+        width: 75px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    /*RESPONSIVE FOOTER*/
+    footer{
+        width: 100%;
+        height: 10rem;
+        bottom: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 1px solid var(--gris-oscuro);
+        font-family: "Work Sans", sans-serif;
+        font-weight: bold;
+
+    }
+    
+    /*links de los iconos de las redes sociales y el footer como tal*/
+    .iconos-container{
+        gap: 10px;
+    }
+    
+    .iconos-container, .footer-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* margin-bottom: 1rem; */
+    }
+    
+    .footer-menu li{
+        font-size: 15px;
+    }
+    /*toda la parte que dice icono red es de los iconos*/
+    .icono-red{
+        height: 45px;
+        width: 45px;
+        border-radius: 10px;
+        /* border: 1px solid var(--negro); */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .icono-red:hover{
+        /* background-color: var(--verde); */
+        /*filter: invert(1);*/
+        transform: scale(1.2);
+    }
+    
+    .icono-red:nth-last-of-type(2){
+        background-image: url(../imagenes/Footer-img/youtube.png);
+    }
+    .icono-red:nth-last-of-type(3){
+        background-image: url(../imagenes/Footer-img/x.png);
+    }
+    .icono-red:nth-last-of-type(4){
+        background-image: url(../imagenes/Footer-img/instagram.png);
+    }
+    .icono-red:nth-last-of-type(5){
+        background-image: url(../imagenes/Footer-img/facebook.png); /*Yo no tengo que nada, todo lo que hago es porque asi lo he querido. Una persona que conoce y maneja contexto, conceptos de tecnicas, artes etc*/
+    }
+    
+    /* esta parte es para la parte del apartado de pqrs etc*/
+    .footer-menu{
+        list-style-type: none;
+        color: var(--verde);
+    }
+    .footer-menu .menu-item{
+        margin: 5px;
+        cursor: pointer;
+        opacity: 0.6;
+        font-size: 1rem;
+        letter-spacing: 0.8rem;
+    }
+    .menu-item:hover{
+        opacity: 1;
+    }
+}

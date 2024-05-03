@@ -1,0 +1,476 @@
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+body{
+    background-color: var(--gris-oscuro);
+    font-family: var(--fuente-principal);
+}
+
+/* --------------------- Datos del aprendiz -------------- */
+.datos-aprendiz{
+    width: 100%;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.datos-content{
+    padding: 10px 0px 0px 30px;
+    display: grid;
+    grid-template-rows: 15rem 5rem ;
+    grid-template-columns: 15rem 23rem ;
+
+    grid-template-areas: 
+        'uno dos'
+        'uno tres'
+    ;
+
+}
+
+/* -------------- se asigna los valores del grid ------------ */
+.datos-aprendiz{
+    grid-area: uno;
+}
+.datos-section2{
+    grid-area: dos;
+
+}
+
+textarea{
+    resize: none;
+}
+
+.button{
+    grid-area: tres;
+}
+ 
+/* ------------------- parrafo y label - Se ajusta el espaciado -------- */
+.datos-aprendiz label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: inline-block; /* Hace que los labels se comporten como elementos en línea */
+}
+.datos-aprendiz p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ---------------- textarea ------------------- */
+
+.datos-section2 form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datos-section2 form textarea{
+    width:80%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--gris-oscuro);
+    justify-self: start;
+}
+
+.datos-section2 form label{
+    padding: 0px 0px 5px;
+    font-family: var(--fuente-principal);
+}
+
+.datos-content .button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.datos-content .button #Confirmar{
+    background-color: var(--verde);
+    border-style: none;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    width: 6rem;
+    height: 1.4rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.datos-content .button #Rechazar{
+    background-color: rgb(73, 22, 22);
+    border-style: none;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    width: 6rem;
+    height: 1.4rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* -------------- Responsive Datos del aprendiz --------- */
+
+
+@media (max-width: 687px){
+    .datos-content{
+        padding: 30px;
+        display: grid;
+        grid-template-rows: 18rem ;
+        grid-template-columns: 20rem ;
+    
+        grid-template-areas: 
+            'uno'
+            'uno'
+            'dos'
+            'tres'
+        ;
+    }
+    .datos-content .button {
+        padding: 20px;
+    }
+}
+/* ----------------------------------------------------------------------------- */
+/* ---------------------------- Confirmar Agendamiento -------------- */
+
+.confirmacion-agendamiento {
+    background-color:var(--blanco);
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.confirmacion-agendamiento h1{
+    text-align: center;
+    color: var(--azul);
+}
+
+.confirmacion-agendamiento form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.confirmacion-agendamiento form input{
+    width: 15rem;
+    height: 2rem;
+    border-style: none;
+    background-color: var(--gris-oscuro);
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+    margin: 5px 0px 1px 0px;
+}
+
+.confirmacion-agendamiento form select{
+    width: 15rem;
+    height: 2rem;
+    border-style: none;
+    background-color: var(--gris-oscuro);
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+    margin: 5px 0px 1px 0px;
+}
+
+.confirmacion-agendamiento form .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.confirmacion-agendamiento form .button button{
+    background-color: var(--verde);
+    border-style: none;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    width: 6rem;
+    height: 1.4rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* --------------------- Responsive confirmacion agendamiento ------------------ */
+@media (min-width: 1440px) and (max-width: 2560px) {
+    .confirmacion-agendamiento form{
+        width: 50rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .confirmacion-agendamiento h1{
+        font-size: 50px;
+    }
+    .confirmacion-agendamiento form input{
+        width: 100%;
+        height: 8rem;
+        font-size: 50px;
+        border-radius: 40px;
+        padding: 5px;
+        margin: 10px 0px 10px 0px;
+    }
+    .confirmacion-agendamiento form label {
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .confirmacion-agendamiento form select{
+        width: 50rem;
+        height: 8rem;
+        font-size: 35px;
+        border-radius: 40px;
+        padding: 5px;
+    }
+    
+    .confirmacion-agendamiento form .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .confirmacion-agendamiento form .button button{
+        width: 12rem;
+        height: 3rem;
+        font-size: 35px;
+    }
+
+  }
+
+/* ------------------ confirmacion agendamiento --------------------------- */
+
+.ventana{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.ventana-content{
+    background-color: var(--blanco);
+    margin: 15% auto;
+    padding: 15px;
+    border: 4px solid var(--verde);
+    border-radius: 15px;
+    width: 30%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ------------------- Responsive confirmacion agendamiento ----------------- */
+
+@media (max-width: 687px){
+    .confirmacion-agendamiento {
+        width: 20rem;
+        padding: 10px;
+        border-radius: 50px;
+    }
+    
+    .confirmacion-agendamiento p{
+        font-size: 20px;
+    }
+
+    .confirmacion-agendamiento img{
+        width: 30%;
+        height: auto;
+    }
+    
+}
+
+
+/* ------------------- Componente de rechazar  ----------------- */
+
+.contenedor{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tituloR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--azul);
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.formulario{
+    width: 90%;
+    margin: 0 20px 70px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-label{
+    font-size: 1.3rem;
+    font-family: var(--fuente-principal);
+    padding-bottom: 15px;
+}
+
+.descripcion{
+    width: 98%;
+    background-color: var(--gris-oscuro);
+    border-radius: 10px;
+    height: 30vh;
+    border: none;
+    resize: none;
+}
+
+/* estilos para los botones de enviar y cerrar */
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; 
+}
+
+.btn{
+    padding: 6px 20px 6px 20px;
+    font-size: 1.1rem;
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--azul);
+}
+
+
+/* alerta de ventana emergente */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.modal-content {
+    background-color: var(--blanco);
+    margin: 15% auto;
+    padding: 15px;
+    border: 4px solid var(--verde);
+    border-radius: 15px;
+    width: 30%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--verde);
+    width: 5rem;
+    height: 5rem;
+}
+
+/* resposive componente rechazar */
+@media only screen and (min-width: 300px) and (max-width: 500px){
+    .contenedor{
+        width: 500%;
+        padding: 10px; 
+    }
+
+    h1{
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 769px){
+    .contenedor{
+        width: 400%;
+        padding: 10px; 
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    /*ventana emergente*/
+        
+    .modal-content {
+        width: 90%; 
+        max-width: 300px; 
+        margin: 20% auto; 
+        padding: 15px; 
+    }
+        
+    .modal-content p {
+        font-size: 18px; 
+    }
+        
+    .modal-content i {
+        font-size: 20px; 
+    }
+}
+
+/* Estilos para dispositivos de pantalla mediana (tablets) */
+@media only screen and (min-width: 770px) and (max-width: 1023px){
+    .form{
+        width: 65%;
+    }
+    .contenedor{
+        width: 40%;
+        padding: 10px; 
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    /*ventana emergente*/
+    .modal-content {
+        width: 90%; 
+        max-width: 300px; 
+        margin: 20% auto; 
+        padding: 15px; 
+    }
+        
+    .modal-content p {
+        font-size: 18px; 
+    }
+     
+    .modal-content i {
+        font-size: 20px; 
+    }
+}
