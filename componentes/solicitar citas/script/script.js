@@ -15,7 +15,9 @@ enviar.addEventListener("click", function (e) {
         modal.style.display = "block";
 
         setTimeout(function () {
-            modal.style.display = "none"; 
+            modal.style.display = "none";
+            //Se redirecciona al usuario a la interfaz de usuarioSesion.php
+            window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
         }, 3000);
     }
 });
