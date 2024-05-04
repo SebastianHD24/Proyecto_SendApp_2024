@@ -2,7 +2,7 @@
     include '../../../Proyecto_SendApp_2024/bases/sesion_start.php';
     include '../../../Proyecto_SendApp_2024/bases/conexion.php';
     $conn = connection();
-    include '../../../Proyecto_SendApp_2024/bases/consulta_nombres_correos.php' 
+    include '../../../Proyecto_SendApp_2024/bases/consulta_nombres_correos.php';
 ?>
 
 <!DOCTYPE html>
