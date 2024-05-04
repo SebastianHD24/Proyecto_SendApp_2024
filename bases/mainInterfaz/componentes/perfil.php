@@ -3,10 +3,10 @@
             <div class="header">
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/Sena-Logo.png" alt="Logo" class="login_img">
                 <h1 class="login__title">Bienvenido a tu perfil de usuario.</h1>
+                <span class="inputGeneral oculto"></span>
             </div>
             <form method="POST" class="login__form datos_cuenta">
                 <div class="main-form">
-                    <span class="inputGeneral oculto"></span>
                         <div class="first-section">
                             <label for="form_input" class="form_input">Documento Identidad:</label>
                             <input type="text" name="documento_identidad" class="login__input" value="<?= $row_user['documento_identidad']?>" disabled>
@@ -62,17 +62,17 @@
         <div class="container-contraseña">
             <div class="header-contraseña">
                 <h1 class="login__title">Cambiar Contraseña</h1>
+                <span class="mensajeContraseña oculto"></span>
             </div>
             <form method="POST" class="login__form formCambiarContraseña">
                 <div class="main-form2">
-                <span class="mensajeContraseña oculto"></span>
                     <div class="first-section">
                         <label for="form_input" class="form_input">Ingresar la contraseña actual:</label>
-                        <input type="password" name="contraseña_actual" class="login__input">
+                        <input type="text" name="contraseña_actual" class="login__input">
                         <label for="form_input" class="form_input">Ingresar la nueva contraseña:</label>
-                        <input type="password" name="nueva_contraseña" class="login__input">
+                        <input type="text" name="nueva_contraseña" class="login__input">
                         <label for="form_input" class="form_input">Confirme la nueva contraseña:</label>
-                        <input type="password" name="confirmar_contraseña" class="login__input">
+                        <input type="text" name="confirmar_contraseña" class="login__input">
                     </div>
                 </div>  
                 <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>

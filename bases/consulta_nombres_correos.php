@@ -1,4 +1,3 @@
-<!--Este codigo me extrae el nombre y el correo de la persona que inicio sesion para agregarselos a la interfaz-->
 <?php 
 
     $documento_identidad = $_SESSION['documento_identidad']; // Creo la varia la cual tendra el valor del numero de documento con el cual se ingreso

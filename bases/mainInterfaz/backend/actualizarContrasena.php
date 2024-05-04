@@ -1,36 +1,48 @@
 <?php
-    include '../../../../../Proyecto_SendApp_2024/bases/sesion_start.php';
-    include '../../../../../Proyecto_SendApp_2024/bases/conexion.php';
+
+    //Incluimos la sesion iniciada, la conexion a la base de datos
+    include '../../../../Proyecto_SendApp_2024/bases/sesion_start.php';
+    include '../../../../Proyecto_SendApp_2024/bases/conexion.php';
     $conn = connection();
-    
-    //Obtención de los valores en los inputs y actualización de la base de datos y sesión
-    $contraseña = $_POST['validacion'];
-    $documento = $_SESSION['documento_identidad'];
 
-    //Contraseña en la base de datos
-    $sql = "SELECT contrasena FROM usuarios WHERE documento_identidad = $documento";
+    //Obtenemos el documento de identidad, y la contraseña actual, la nueva y su validacion
+    $documento_identidad = $_SESSION['documento_identidad'];
+    $contraseñaActual = $_POST['contraseña_actual'];
+    $validacion = $_POST['confirmar_contraseña'];
+    $contraseñaNueva = $_POST['nueva_contraseña'];
 
-    $query = mysqli_query($con, $sql);
+    // Requisitos para la contraseña    
+    const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*])(?=.{6,})/';
 
-    $contraseñaActual = mysqli_fetch_array($query);
+    // Contraseña en la base de datos
+    $sql = "SELECT contrasena FROM usuarios WHERE documento_identidad = $documento_identidad";
+    $query = mysqli_query($conn, $sql);
+    $contraseña = mysqli_fetch_array($query);
+    $contraseñaBase = $contraseña['contrasena'];
 
-    //Requisitos para la contraseña    
-    const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*])(?=.{8,})/';
-    
-    if (    password_hash()$contraseñaActual,$contraseña) {
-        echo json_encode(array('success' => 1));
-    }
+    //Comparamos la contraseña en la base de datos con la ingresada por el usuario para verificar que coinciden, en caso de coincidir evaluamos que la nueva contraseña cumple con ciertos parametros de seguridad y si la nueva contraseña es distinta a la anteriror se actualizara correctmente de forma encriptada
+    if (password_verify($contraseñaActual, $contraseñaBase)) {
+        if (preg_match(REGEX, $contraseñaNueva)) {
+            if ($validacion === $contraseñaNueva) {
+                if ($validacion != $contraseñaActual) {
+                    $encriptada = password_hash($validacion, PASSWORD_BCRYPT);
+                    // Actualización de la base de datos
+                    $consulta = "UPDATE usuarios SET contrasena='$encriptada' WHERE documento_identidad = $documento_identidad";
+                    $peticion = mysqli_query($conn, $consulta);
 
-    //Condicional para verificar que la contraseña cumple los requisitos
-    else if (preg_match(REGEX, $contraseña)) {
-        // Actualización de la base de datos
-        $consulta = "UPDATE usuarios SET contrasena='$contraseña' WHERE documento_identidad = $documento";
-        $peticion = mysqli_query($conn, $consulta);
-        
-        // Verificación del éxito de la actualización
-        if ($peticion) {
-            echo json_encode(array('success' => 0));
+                    // Verificación del éxito de la actualización
+                    if ($peticion) {
+                        echo json_encode(array('contra' => 0));
+                    }   
+                } else {
+                    echo json_encode(array('contra' => 4));
+                }
+            } else {
+                echo json_encode(array('contra' => 3));
+            }
+        } else {
+            echo json_encode(array('contra' => 2));
         }
     } else {
-        echo json_encode(array('success' => 'La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial.'));
-    };
+        echo json_encode(array('contra' => 1));
+    }
