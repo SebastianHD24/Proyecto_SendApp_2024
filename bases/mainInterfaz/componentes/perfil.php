@@ -16,10 +16,10 @@
                             <input type="text" name="apellidos" class="login__input" value="<?= $row_user['apellidos']?>" disabled>
                             <span class="inputCorreo oculto"></span>
                             <label for="form_input" class="form_input">Correo Electrónico:</label>
-                            <input type="email" name="correo" class="login__input" value="<?= $row_user['correo']?>" id="correo">
+                            <input type="email" name="correo" class="login__input" value="<?= $row_user['correo']?>" id="correo" required>
                             <span class="inputTelefono oculto"></span>
                             <label for="form_input" class="form_input">Celular:</label>
-                            <input type="text" name="celular" class="login__input" value="<?= $row_user['celular']?>" id="celular">
+                            <input type="text" name="celular" class="login__input" value="<?= $row_user['celular']?>" id="celular" required>
                         </div>
                         <div class="second-section">
                         <?php
@@ -68,11 +68,11 @@
                 <div class="main-form2">
                     <div class="first-section">
                         <label for="form_input" class="form_input">Ingresar la contraseña actual:</label>
-                        <input type="text" name="contraseña_actual" class="login__input">
+                        <input type="text" name="contraseña_actual" class="login__input" required>
                         <label for="form_input" class="form_input">Ingresar la nueva contraseña:</label>
-                        <input type="text" name="nueva_contraseña" class="login__input">
+                        <input type="text" name="nueva_contraseña" class="login__input" required>
                         <label for="form_input" class="form_input">Confirme la nueva contraseña:</label>
-                        <input type="text" name="confirmar_contraseña" class="login__input">
+                        <input type="text" name="confirmar_contraseña" class="login__input" required>
                     </div>
                 </div>  
                 <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>

@@ -131,9 +131,10 @@ formulario.addEventListener('submit', function(e) {
             mensajeTelefono.classList.add('oculto');
         }
     } else {
-        fetch('../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php', {
+        let form = new FormData(formulario);
+        fetch('../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPefil.php', {
             method: 'POST',
-            body: new FormData(formulario)
+            body:  form
         })
         .then(response => {
             if (!response.ok) {
