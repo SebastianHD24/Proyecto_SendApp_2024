@@ -89,13 +89,10 @@
                     <li>
                     <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i> Perfil </button></a>
                     </li>
-
-                    
-                    
                 </ul>
             </nav>
             <div class="log-out">
                 <a class="texto-footer" href="../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php"><i class="bi bi-box-arrow-right"></i></a>
             </div> 
         </aside>
-        <main>                                                                                                                                                                        
+        <main>                                                                                                                                                                  

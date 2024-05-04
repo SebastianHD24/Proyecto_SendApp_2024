@@ -2,7 +2,7 @@ function tiempo_espera(){
     let tiempo_inactividad = 1800000;
         
     function cerrar_sesion(){
-        location.href = "../../../../../project/Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php";
+        location.href = "../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php";
     }
 
     function restablecer_temporizador(){
@@ -16,19 +16,19 @@ function tiempo_espera(){
     let temporizadorInactividad = setTimeout(cerrar_sesion, tiempo_inactividad);
 }
 
-$.ajax({
-    type: "POST",
-    url: "../../../../project/Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php",
-    data: {
+fetch("../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
     },
-    success: function(response) { // Función que se ejecuta si la solicitud es exitosa
-        let jsonData = JSON.parse(response);
-        if (jsonData.success == "1") { // Si la respuesta indica éxito
-            tiempo_espera();
-        } else if (jsonData.success == "2"){
-            console.log("no sesion");
-        } else {
-            console.log("nada :c");
-        }
+    body: JSON.stringify({})
+    })
+    .then(response => response.json())
+    .then(jsonData => {
+    if (jsonData.success === "1") {
+        tiempo_espera();
+    } else if (jsonData.success === "2") {
+        console.log("no sesión");
     }
-});
+})
+.catch(error => console.error("Error:", error));
