@@ -39,7 +39,7 @@
             <div class="perfil">    
                     <!--*****************************************************-->
                     <figure class="foto-perfil">
-                      <img class="logo" src="./Usuario-img/fotor-ai-20230902143349.jpg">
+                      <img class="logo" src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/fotor-ai-20230902143349.jpg">
                       <i class="bi bi-camera-fill"></i>
                     </figure>
                     <!--*****************************************************-->  
