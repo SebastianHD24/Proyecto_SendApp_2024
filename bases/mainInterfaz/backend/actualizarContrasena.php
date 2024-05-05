@@ -12,7 +12,7 @@
     $contraseñaNueva = $_POST['nueva_contraseña'];
 
     // Requisitos para la contraseña    
-    const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*])(?=.{6,})/';
+    const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*_-¡?¿·çºª.:,;=|+#\/])(?=.{6,})/';
 
     // Contraseña en la base de datos
     $sql = "SELECT contrasena FROM usuarios WHERE documento_identidad = $documento_identidad";

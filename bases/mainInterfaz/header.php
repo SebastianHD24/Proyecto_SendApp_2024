@@ -59,6 +59,12 @@
                         </li>
                     <?php endif; ?>
 
+                    <?php if ($id_rol == 1): ?>
+                        <li>
+                            <a  href="?p=serviciosAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                        </li>
+                    <?php endif; ?>
+
                     </li>
                     <?php if ($id_rol == 3): ?>
                         <li>

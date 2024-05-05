@@ -69,6 +69,8 @@
             </tbody>
           </table>
         </div>
+        </main> 
+</div>
 
         <!-- Script JavaScript para confirmar acciones -->
         <script>
