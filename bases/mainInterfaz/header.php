@@ -55,7 +55,7 @@
                     
                     <?php if ($id_rol == 2): ?>
                         <li>
-                        <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                        <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
                         </li>
                     <?php endif; ?>
 
