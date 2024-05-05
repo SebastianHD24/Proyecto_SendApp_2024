@@ -1,7 +1,8 @@
-<?php include '../bases/estructura-base.php' ?>
+<?php include '../../Proyecto_SendApp_2024/bases/estructura-base.php' ?>
 
 <?php startblock('links-styles') ?>
     <link rel="stylesheet" href="Styles/areas.css">
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/CSS/header.css">
 <?php endblock() ?>
 
     <title>SendApp</title>
