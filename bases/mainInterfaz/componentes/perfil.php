@@ -43,11 +43,17 @@
                         ?>
                             <?php
                                 $id_servicio = $row_user['id_servicio'];
-                                $consulta = mysqli_query($conn, "SELECT * FROM servicios WHERE id_servicio = $id_servicio");
-                                $area = mysqli_fetch_array($consulta);
+                                if ($id_servicio != null): 
+                                    $consulta = mysqli_query($conn, "SELECT * FROM servicios WHERE id_servicio = $id_servicio");
+                                    $area = mysqli_fetch_array($consulta);
+                                    $area = $area['nombre_servicio'];
+                                else:
+                                    $area = "No perteneces a ningun servicio";
+                                
+                                endif;
                             ?>
                                 <label for="form_input" class="form_input">Ficha:</label>
-                                <input type="text" name="servicio" class="login__input" value="<?= $area['nombre_servicio']?>" disabled>
+                                <input type="text" name="servicio" class="login__input" value="<?= $area ?>" disabled>
                         <?php endif; ?>
                             <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
                         </div>
