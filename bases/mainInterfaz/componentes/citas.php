@@ -202,3 +202,5 @@
             </article>
     </div>
 </section>
+</main> 
+</div>

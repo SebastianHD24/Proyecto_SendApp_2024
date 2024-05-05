@@ -1,4 +1,4 @@
-<div class="container" id="formularioPrincipal">
+    <div class="container" id="formularioPrincipal">
         <div class="second-container">
             <div class="header">
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/Sena-Logo.png" alt="Logo" class="login_img">
@@ -93,3 +93,6 @@
         </div>
          
     </div>
+    </main> 
+</div>
+<script src="../../../Proyecto_SendApp_2024/scripts/componentesJS/formPerfiles.js"></script> 
