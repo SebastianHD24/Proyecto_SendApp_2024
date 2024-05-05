@@ -2,7 +2,7 @@
 // Incluir el archivo de conexión
 include("../../bases/conexion.php");
 // Establecer conexión a la base de datos
-$con = connection();
+$conn = connection();
 
 // Obtener el documento de identidad del usuario a editar desde la solicitud GET
 $documento_identidad=$_GET['documento_identidad'];
@@ -10,7 +10,7 @@ $documento_identidad=$_GET['documento_identidad'];
 // Consulta SQL para seleccionar el usuario con el documento de identidad especificado
 $sql="SELECT * FROM usuarios WHERE documento_identidad='$documento_identidad'";
 // Ejecutar la consulta SQL
-$query=mysqli_query($con, $sql);
+$query=mysqli_query($conn, $sql);
 
 // Obtener la fila de resultados como un array asociativo
 $row= mysqli_fetch_array($query);
@@ -56,7 +56,7 @@ $row= mysqli_fetch_array($query);
                 <?php
                     // Realizar la consulta para obtener solo los roles de aprendiz y funcionario
                     $sql_roles = "SELECT id_rol, nombre_rol FROM roles WHERE nombre_rol = 'funcionario' or nombre_rol = 'aprendiz'";
-                    $result_roles = mysqli_query($con, $sql_roles);
+                    $result_roles = mysqli_query($conn, $sql_roles);
 
                     // Iterar sobre los resultados y crear opciones del menú desplegable
                     while ($row_roles = mysqli_fetch_assoc($result_roles)) {
@@ -76,7 +76,7 @@ $row= mysqli_fetch_array($query);
                 <?php
                     // Realizar la consulta para obtener todos los servicios
                     $sql_servicios = "SELECT id_servicio, nombre_servicio FROM servicios";
-                    $result_servicios = mysqli_query($con, $sql_servicios);
+                    $result_servicios = mysqli_query($conn, $sql_servicios);
 
                     // Iterar sobre los resultados y crear opciones del menú desplegable
                     while ($row_servicios = mysqli_fetch_assoc($result_servicios)) {

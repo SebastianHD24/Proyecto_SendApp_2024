@@ -37,7 +37,6 @@
                   <td><?= $row['documento_identidad'] ?></td>
                   <td><?= $row['nombres'] ?></td>
                   <td><?= $row['apellidos'] ?></td>
-                  <td><?= $row['contrasena'] ?></td>
                   <td><?= $row['correo'] ?></td>
                   <td><?= $row['celular'] ?></td>
                   <td><?= $row['programa'] ?></td>
