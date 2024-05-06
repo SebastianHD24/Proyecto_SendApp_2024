@@ -1,6 +1,6 @@
 <section class="display-notificaciones">
     <div class="notifications-container">
-        <div class="notifications-box">
+        <div class="notifications-box" style="display: none;">
             <figure class="figure__icon--schedule">
                 <img src="../Styles/Img/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
             </figure>
@@ -13,7 +13,7 @@
             </figure>
         </div>
             <!--Contenedor de notificaiones -->
-        <div class="notifications-box">
+        <div class="notifications-box" style="display: none;">
                 <!--Contenedor de la imagen -->
             <figure class="figure__icon--schedule">
                 <img src="../Styles/Img/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
@@ -29,6 +29,7 @@
                 <img src="../Styles/Img/Componentes-img/exclamacion.png" alt="Imagen de exclamación">
             </figure>
         </div>
+
         <!--CONTENEDOR DE NOTIFICAIONES DE PETICIONES-->
         <div class="notifications-pqr">
                 <!--Contenedor de imagen a la izquierda -->
@@ -44,10 +45,12 @@
                     <span>Ver<br>Detalles</span>
                 </button>
         </div>
-            <!--*********************Espacio para más notificaciones********************** -->
+        <!--*********************Espacio para más notificaciones********************** -->
     </div>
+
+
     <!--Contenedor Respuesta QPR-->
-    <div class="answer__container" id="answer">
+    <div class="answer__container" id="answer" style="display: none;">
         <!--Contenedor del título y la fecha-->
         <div class="date">
             <!--Título-->
@@ -71,3 +74,6 @@
         </div>
     </div>
 </section>
+</main> 
+</div>
+<script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/notificacionesPQR.js"></script>

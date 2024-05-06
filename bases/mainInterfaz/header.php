@@ -76,15 +76,19 @@
                         <li>
                         <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> ADMIN </button></a>
                         </li>
+                        <li>
+                        <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
+                        </li>
                     <?php endif; ?>
                         
                     <li>
                     <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> PQR </button></a>
                     </li>
-
-                    <li>
-                    <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
-                    </li>
+                    <?php if ($id_rol != 1): ?>
+                        <li>
+                        <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
+                        </li>
+                    <?php endif; ?>
 
                     <li>
                     <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i> Perfil </button></a>
@@ -95,4 +99,4 @@
                 <a class="texto-footer" href="../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php"><i class="bi bi-box-arrow-right"></i></a>
             </div> 
         </aside>
-        <main>                                                                                                                                                                  
+    <main>                                                                                                                                             

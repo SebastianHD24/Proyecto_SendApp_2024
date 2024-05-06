@@ -31,10 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 error.textContent = "Tu cuenta está suspendida. Comunícate con el administrador";
             } else if (jsonData.success == "6") {
                 const error = document.getElementById('mensaje_error');
-                const limpiarU = document.getElementById('login-input-user-l');
                 const limpiarC = document.getElementById('login-input-password-l');
                 error.textContent = "El usuario o la contraseña son incorrectos";
-                limpiarU.value = "";
                 limpiarC.value = "";
             }
         })
