@@ -1,6 +1,6 @@
 function tiempo_espera(){
     let tiempo_inactividad = 1800000;
-        
+
     function cerrar_sesion(){
         location.href = "../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php";
     }
@@ -16,19 +16,21 @@ function tiempo_espera(){
     let temporizadorInactividad = setTimeout(cerrar_sesion, tiempo_inactividad);
 }
 
-fetch("../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({})
-    })
-    .then(response => response.json())
-    .then(jsonData => {
-    if (jsonData.success === "1") {
-        tiempo_espera();
-    } else if (jsonData.success === "2") {
-        console.log("no sesión");
-    }
-})
-.catch(error => console.error("Error:", error));
+function verificarSesion() {
+    fetch("../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php")
+        .then(response => response.json())
+        .then(jsonData => {
+            if (jsonData.success === 1) {
+                tiempo_espera();
+                console.log("Sesión iniciada");
+            } else if (jsonData.success === 2) {
+                console.log("No hay sesión");
+            }
+        })
+        .catch(error => console.error("Error:", error));
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    verificarSesion();
+    console.log("se ejecuta el dom");
+});

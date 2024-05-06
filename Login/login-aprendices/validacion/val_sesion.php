@@ -5,6 +5,7 @@
     if (!isset($_SESSION["documento_identidad"])) {
         // Si no ha iniciado sesión, redirigir a la página de inicio de sesión
         echo json_encode(array('success' => 2)); // Asegurarse de que el script se detenga después de la direccion
+        exit(); // Detener el script después de enviar el JSON
     } else {
         echo json_encode(array('success' => 1));
     }
