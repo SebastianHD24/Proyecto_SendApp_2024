@@ -3,8 +3,10 @@ const container_r = document.getElementById('respondidos');
 const historial = document.getElementById('Historial');
 const salir = document.getElementById('volver');
 const mensaje = document.getElementById('mensaje');
+const mensaje1 = document.getElementById('mensaje1');
 
 function verificar() {
+    console.log("hola");
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
         .then(response => response.json())
         .then(jsonData => {
@@ -17,7 +19,11 @@ function verificar() {
         })
         .catch(error => console.error('Error fetching data:', error));
 }
-verificar();
+
+function cargarInicio(){
+    verificar();
+}
+cargarInicio();
 
 function ver() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarConsulta.php')
@@ -92,15 +98,29 @@ function enviarIdPQR(id) {
     document.getElementById('id_pqr1').value = id;
 }
 
+function mostrarHistorial(){
+    fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarConsulta.php')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(usuario => {
+            if (usuario.respuesta_pqrs != null) {
+                container_r.style.display = "block";
+                mensaje1.style.display = "none";
+            } else {
+                container_r.style.display = "none";
+            }
+        })
+    })
+}
+
 function verHistorial(){
-    container_r.style.display = "block";
+    mostrarHistorial();
     historial.style.display = "none";
     salir.style.display = "block";
     mensaje.style.display = "none";
+    mensaje1.style.display = "block";
+    container.style.display = "none";
 }
 function ocultarHistorial(){
-    salir.style.display = "none";
-    historial.style.display = "block";
-    container_r.style.display = "none";
-    mensaje.style.display = "block";
+    location.reload();
 }

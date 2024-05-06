@@ -1,3 +1,4 @@
+<h1 id="mensaje1" style="display: none;">No hay historial</h1>
 <a href="#" id="volver" onclick="ocultarHistorial();" style="display: none;">Salir</a>
 <h1 id="mensaje">No hay nuevas PQR</h1>
 <div class="contenedor-popup" id="contenedor-popup"> 

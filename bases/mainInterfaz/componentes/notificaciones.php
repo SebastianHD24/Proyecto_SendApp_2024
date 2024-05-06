@@ -31,20 +31,7 @@
         </div>
 
         <!--CONTENEDOR DE NOTIFICAIONES DE PETICIONES-->
-        <div class="notifications-pqr">
-                <!--Contenedor de imagen a la izquierda -->
-            <figure class="figure__icon--schedule">
-                <img src="../Styles/Img/Componentes-img/qprIcon.png" alt="Imagen de PQR">
-            </figure>
-                <!--Contenedor de texto sobre la petición-->
-                <article class="article__text--1">
-                    <p>Atención a su solicitud de QPR.</p>
-                </article>
-            <span></span>
-                <button type="button" class="show__details--button" id="showDetailsButton">
-                    <span>Ver<br>Detalles</span>
-                </button>
-        </div>
+
         <!--*********************Espacio para más notificaciones********************** -->
     </div>
 
