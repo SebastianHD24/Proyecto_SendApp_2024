@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="coordinacion.css"o> <!-- Estilos de coordinación -->
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/coordinaccion/coordinacion.css"> <!-- Estilos de coordinación -->
     <title>Coordinación Académica</title>
 <?php endblock() ?>
 
