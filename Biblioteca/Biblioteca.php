@@ -1,7 +1,7 @@
 <?php include '../bases/estructura-base.php' ?>
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="biblioteca.css">
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/Biblioteca/biblioteca.css">
     <title>Biblioteca</title>
 <?php endblock() ?>
 

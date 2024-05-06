@@ -3,7 +3,7 @@
 <?php startblock('links-styles') ?>
     <!--ESTILOS-->
     <title>TecnoAcademia</title>
-    <link rel="stylesheet" type="text/css" href="Styles/academia.css"> <!--Estilos de Tecno Academia -->
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/TecnoAcademia/academia.css"> <!--Estilos de Tecno Academia -->
 <?php endblock() ?>
 
 <?php startblock('contenido') ?> <!--Inicio bloque contenido-->
