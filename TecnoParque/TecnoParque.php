@@ -1,7 +1,7 @@
 <?php include '../../Proyecto_SendApp_2024/bases/estructura-base.php' ?> <!--Llamo el archivo base-->
 
 <?php startblock('links-styles') ?>
-    <link rel="stylesheet" type="text/css" href="./Styles/tecnoParque.css"> <!-- Estilos de Tecno Parque--> 
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/TecnoParque/tecnoParque.css"> <!-- Estilos de Tecno Parque--> 
     <title>Tecno Parque</title>
 <?php endblock() ?>
 

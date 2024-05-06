@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-04-2024 a las 16:01:05
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.2.0
+-- Tiempo de generación: 06-05-2024 a las 18:24:21
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,9 @@ CREATE TABLE `citas` (
   `estado_cita` tinyint(1) NOT NULL COMMENT 'Muestra el estado de la cita',
   `fecha` date NOT NULL COMMENT 'Muestra la fecha',
   `hora` datetime NOT NULL COMMENT 'Muestra la hora',
-  `documento_usuario` int(12) NOT NULL COMMENT 'Muestra la TI o CC',
+  `documento_usuario` bigint(20) NOT NULL COMMENT 'Muestra la TI o CC',
   `id_servicio` int(2) NOT NULL COMMENT 'Muestra la id de los servicios'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Volcado de datos para la tabla `citas`
---
-
-INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuario`, `id_servicio`) VALUES
-(1, 1, '2024-04-19', '0000-00-00 00:00:00', 1087986236, 1);
 
 -- --------------------------------------------------------
 
@@ -51,13 +44,22 @@ INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuar
 
 CREATE TABLE `pqr` (
   `id_peticion` int(11) NOT NULL,
-  `documento_us` int(12) NOT NULL,
+  `documento_us` bigint(20) NOT NULL,
   `tipo_pqrs` varchar(15) NOT NULL,
   `descripcion` text NOT NULL,
   `respuesta_pqrs` text DEFAULT NULL,
   `fecha_solicitud` date DEFAULT NULL,
   `fecha_respuesta` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `pqr`
+--
+
+INSERT INTO `pqr` (`id_peticion`, `documento_us`, `tipo_pqrs`, `descripcion`, `respuesta_pqrs`, `fecha_solicitud`, `fecha_respuesta`) VALUES
+(1, 1087986236, 'Quejs', 'He estado satisfecho con el avance del back-end', 'no', '2024-05-06', '2024-05-06'),
+(2, 1087986236, 'queja', 'hola ', NULL, '2024-05-06', NULL),
+(3, 1059695065, 'sugerencia', 'Dar refrigerio', 'ok lo tendremos en cuenta', '2024-05-06', '2024-05-06');
 
 -- --------------------------------------------------------
 
@@ -109,7 +111,7 @@ INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado
 CREATE TABLE `solicitud_citas` (
   `id_solicitud_cita` int(11) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
-  `id_usuario` int(12) NOT NULL
+  `id_usuario` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
@@ -120,7 +122,7 @@ CREATE TABLE `solicitud_citas` (
 
 CREATE TABLE `usuarios` (
   `tipo_documento` varchar(3) NOT NULL,
-  `documento_identidad` int(12) NOT NULL COMMENT 'Es la identidad de la persona',
+  `documento_identidad` bigint(20) NOT NULL COMMENT 'Es la identidad de la persona',
   `contrasena` varchar(255) NOT NULL COMMENT 'Es la contrasena de todos los usuarios',
   `nombres` varchar(30) NOT NULL COMMENT 'Nombre del usuario\r\n',
   `apellidos` varchar(30) NOT NULL COMMENT 'Apellido del usuario',
@@ -139,15 +141,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`, `imagen`) VALUES
-('', 11111, '123', 'Camila', 'Quiceno', 'soymejor.@gmail.com', '3216716966', 'ADSO', 0, 1, 1, 1, NULL),
-('', 22222, '123', 'Jogo', 'Satoru', 'Jujutsukaisen.@gmail.com', '12345', '', 2618076, 1, 3, 1, NULL),
-('', 55555, '$2y$10$rhR', 'Steven', 'Cardenas', 'Steven@gmail.com', '1234321', '', 0, 1, 3, NULL, NULL),
-('', 99999, '123', 'ADMIN', 'ADMDIN', 'ADMIN@gmail.com', '123456789', NULL, NULL, 1, 1, NULL, NULL),
-('', 108888, '123', 'Yuely ', 'Arce Muñoz', 'yuelyAdriana@gmail.com', '3216739876', 'ADSO', 2618075, 1, 2, 1, NULL),
-('', 1231231, '123', 'Jhon', 'Itadori', 'soy.@gmail.com', '71273e2', '', 2618075, 1, 2, 1, NULL),
-('', 42146447, '$2y$10$aPi', 'Leidy', 'Ocampo', 'leidy@gmail.com', '3216716966', '', 0, 1, 3, NULL, NULL),
-('', 987654321, '123', 'santiago', 'Restrepo', 'lol.@gmail.com', '4321', '', 0, 1, 3, 1, NULL),
-('', 1087986236, '1234', 'sebastian', 'sanchez', 'wow@gmail.com', '3216735852', 'ADSO', 2618075, 1, 3, 1, NULL);
+('CC', 12345678, '$2y$10$ci8otfH8eikMCThZzP1M7OcPF6pyceLCqL3hK/CWnjv5UIwCTAg5G', 'ADMIN', 'ADMIN', 'admin@gmail.com', '1234567898', '', 0, 1, 1, NULL, NULL),
+('CC', 42146447, '$2y$10$m5v35Awui30KFK/KO9PJq.Cymz1LnGKO3kDWLp1RbiVjJ0r7dpny2', 'Leidy', 'Ramirez', 'soyelmejor.@gmail.com', '3216735852', '', 0, 1, 2, NULL, NULL),
+('CC', 1059695065, '$2y$10$X0QCxj9Fm.rdwuJ6T5.FfexnZbiRUKRAsSdFsfMBcGaHm/2TJ8R1m', 'Yesid', 'Molina Becerra', 'ymolina560@soy.sena.edu.co', '300684305388888', '', 0, 1, 3, NULL, NULL),
+('CC', 1087986236, '$2y$10$8dkKXJJOI5rS4qc2y0mgcuh5.O6tJH4OjV8IN9/bQ5TTjI429hGn2', 'Sebas', 'Sanchez', 'wowco.2000@gmail.com', '3216735852', 'ADSO', 2618075, 1, 3, NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -210,7 +207,7 @@ ALTER TABLE `citas`
 -- AUTO_INCREMENT de la tabla `pqr`
 --
 ALTER TABLE `pqr`
-  MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -238,8 +235,8 @@ ALTER TABLE `solicitud_citas`
 -- Filtros para la tabla `citas`
 --
 ALTER TABLE `citas`
-  ADD CONSTRAINT `citas_ibfk_2` FOREIGN KEY (`documento_usuario`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `citas_ibfk_4` FOREIGN KEY (`documento_usuario`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `pqr`
