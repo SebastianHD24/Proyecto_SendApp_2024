@@ -57,8 +57,8 @@
             }
 
             //Consulta para verificar que el usuario este inactivo
-            $error_existencia = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and contrasena = '$contrasena_hash' and estado != $estado" );
-            if (mysqli_num_rows($consulta3) > 0) {
+            $error_existencia = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and estado != $estado" );
+            if (mysqli_num_rows($error_existencia) > 0) {
                 echo json_encode(array('success' => 5));
                 exit();
             }
