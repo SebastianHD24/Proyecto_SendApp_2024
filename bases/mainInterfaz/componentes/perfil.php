@@ -92,7 +92,7 @@
     </div>
     <div class="alerta" id="alerta" style="display: none;">
         <div class="mensaje">
-            <p>¡Contraseña actualizada con éxito!</p>
+            <p>¡Actualización exitosa!</p>
         </div>   
         <div class="imagen">
             <img src="" alt="Señal de aprobación">
