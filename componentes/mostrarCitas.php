@@ -80,7 +80,7 @@
         <?php 
              }
              ?>
-               </div> <!--  cierra wel unico conetendor -->
+               </div> <!--  cierra el unico conetendor -->
              <?php
 
             }else{
