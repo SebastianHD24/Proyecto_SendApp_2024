@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="fabrica.css"> <!-- Estilos de la fabrica -->
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/FabricaSoftware/fabrica.css"> <!-- Estilos de la fabrica -->
     <title>Fabrica De Software</title> 
 <?php endblock() ?>
 

@@ -2,7 +2,7 @@
 
     <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="Styles/tecnologicos.css"> <!--Estilos de servicios Tecnológicos-->
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/serviciosTecnologicos/tecnologicos.css"> <!--Estilos de servicios Tecnológicos-->
     <?php endblock() ?>
 
     <?php startblock('contenido') ?>

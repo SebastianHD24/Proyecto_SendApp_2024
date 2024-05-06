@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="Styles-Bienestar/bienestar.css"> <!--Estilos de Bienestar -->
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/Bienestar/Styles-Bienestar/bienestar.css"> <!--Estilos de Bienestar -->
     <title>Bienestar Al Aprendíz</title>
 <?php endblock() ?>
 
