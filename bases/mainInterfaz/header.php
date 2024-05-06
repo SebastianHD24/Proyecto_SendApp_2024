@@ -3,6 +3,7 @@
     include '../../../Proyecto_SendApp_2024/bases/conexion.php';
     $conn = connection();
     include '../../../Proyecto_SendApp_2024/bases/consulta_nombres_correos.php';
+    include '../../../Proyecto_SendApp_2024/bases/redireccionamiento.php'
 ?>
 
 <!DOCTYPE html>
@@ -59,38 +60,36 @@
                         </li>
                     <?php endif; ?>
 
-                    <?php if ($id_rol == 1): ?>
-                        <li>
-                            <a  href="?p=serviciosAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
-                        </li>
-                    <?php endif; ?>
-
                     </li>
                     <?php if ($id_rol == 3): ?>
                         <li>
                             <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
-                    
+                    <?php endif; ?>
 
-                    <li>
-                    <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mis Citas </button></a>
-                    </li>
+                    <?php if ($id_rol != 1): ?>
+                        <li>
+                            <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mis Citas </button></a>
+                        </li>
 
                     <?php endif; ?>
                     
                     <?php if ($id_rol == 1): ?>
                         <li>
-                        <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> ADMIN </button></a>
+                        <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> Cuentas Creadas </button></a>
+                        </li>
+                        <li>
+                            <a  href="?p=serviciosAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosAdmin' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
                         <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
                         </li>
                     <?php endif; ?>
                         
-                    <li>
-                    <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> PQR </button></a>
-                    </li>
                     <?php if ($id_rol != 1): ?>
+                        <li>
+                            <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> PQR </button></a>
+                        </li>
                         <li>
                         <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
                         </li>
