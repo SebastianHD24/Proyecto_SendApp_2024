@@ -1,5 +1,39 @@
-<?php
+<link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Styles/admin.css" >
+<link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Styles/style.css" >
 
+
+<div class="search-container">
+    <!-- Formulario de búsqueda -->
+    <form method="GET">
+        <input type="text" name="documento_identidad" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
+        <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
+    </form>
+</div>
+<br>
+<!-- Tabla de usuarios -->
+<div class="users-table">
+    <table>
+        <!-- Encabezados de la tabla -->
+        <thead>
+            <tr>
+                <!-- Columnas de la tabla -->
+                <th>Documento Identidad</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Celular</th>
+                <th>Programa</th>
+                <th>Ficha</th>
+                <th>Estado</th>
+                <th>Rol</th>
+                <th>Servicio</th> <!-- Cambiado de "ID Servicio" a "Servicio" -->
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <!-- Cuerpo de la tabla -->
+        <tbody>
+<?php
+  
                 // Verificar si se realizó una búsqueda
                 if(isset($_GET['documento_identidad']) && $_GET['documento_identidad'] != '') {
                   $search_term = $_GET['documento_identidad'];

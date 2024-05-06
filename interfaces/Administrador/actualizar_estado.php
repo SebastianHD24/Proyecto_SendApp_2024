@@ -23,7 +23,7 @@ if(isset($_GET['documento_identidad']) && isset($_GET['action'])) { // Cambiado 
         // Cerrar la consulta preparada
         mysqli_stmt_close($stmt);
         // Redirigir a la página principal después de la actualización
-        header("Location: index.php");
+        header("Location: ../Administrador/Administrador.php");
         exit(); // Terminar la ejecución del script
     } else {
         // Mostrar un mensaje de error si la preparación de la consulta falla
