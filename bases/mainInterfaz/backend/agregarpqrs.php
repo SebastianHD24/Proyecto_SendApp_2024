@@ -1,5 +1,5 @@
 <?php
-    include("../bases/conexion.php");
+    include("../../conexion.php");
     $conn = connection();
     session_start();
 

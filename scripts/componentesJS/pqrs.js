@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let formData = new FormData(form);
 
         // Realizar una solicitud POST al servidor
-        fetch('agregarpqrs.php', {
+        fetch('../../bases/mainInterfaz/backend/agregarpqrs.php', {
             method: 'POST',
             body: formData
         })
