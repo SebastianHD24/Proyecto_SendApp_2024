@@ -1,5 +1,5 @@
 <?php
-    error_reporting(0); 
+    error_reporting(0);
     session_start();
     //llamamos el php que hace la conexion con la base de datos
     include("../../../../Proyecto_SendApp_2024/bases/conexion.php");
@@ -37,7 +37,7 @@
                 //Manda una respuesta
                 echo json_encode(array('success' => 2));
                 //Termina ejecución
-                exit(); 
+                exit();
             }
 
             //Consulta funcionario
@@ -45,7 +45,7 @@
             if (mysqli_num_rows($consulta2) > 0) {
                 $_SESSION["documento_identidad"] = $documento_identidad;
                 echo json_encode(array('success' => 3));
-                exit(); 
+                exit();
             }
 
             //Consulta aprendiz
@@ -53,7 +53,7 @@
             if (mysqli_num_rows($consulta3) > 0) {
                 $_SESSION["documento_identidad"] = $documento_identidad;
                 echo json_encode(array('success' => 4));
-                exit(); 
+                exit();
             }
 
             //Consulta para verificar que el usuario este inactivo
