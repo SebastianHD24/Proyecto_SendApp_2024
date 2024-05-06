@@ -214,7 +214,7 @@ i{
 
 /* -----responsive menu hambuerguesa -----*/
 
-@media (max-width: 655px){
+@media only screen and (max-width: 655px){
 
     .navbar{
         justify-content: space-between;
@@ -239,7 +239,7 @@ i{
         position: absolute;
         right: 0;
         top: 86px;
-        width: 400px;
+        width: 40px;
         height: 0;
         background-color: var(--azul);
         justify-content: center;
@@ -249,7 +249,8 @@ i{
     }
 
     .resposive__menu.open{
-        height: 250px;
+        height: 120px;
+        width: 120px;
     }
 
     .resposive__menu-ul{
@@ -263,6 +264,11 @@ i{
         align-items: center;
         padding: 8px 0px;
         gap: 5px;
+    }
+
+    .resposive__menu-ul p{
+        margin: 0;
+        font-size: 18px;
     }
 
     .resposive__menu-ul a{
@@ -302,19 +308,5 @@ i{
 
     .content-areas li a{
         color: var(--blanco);
-    }
-}
-
-@media (max-width: 550px){
-
-    .resposive__menu{
-        width: 450px;
-    }
-}
-
-@media (max-width: 500px){
-
-    .resposive__menu{
-        width: 100%;
     }
 }
