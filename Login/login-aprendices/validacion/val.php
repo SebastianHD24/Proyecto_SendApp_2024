@@ -2,7 +2,7 @@
     error_reporting(0); 
     session_start();
 
-    include("../../conexion.php"); //importamos la conexion que se hizo global para AHORRAR LINEAS DE CODIGO
+    include("../../../../Proyecto_SendApp_2024/bases/conexion.php"); //importamos la conexion que se hizo global para AHORRAR LINEAS DE CODIGO
     $conn = connection();
 
     //chequeando la conexion
@@ -50,4 +50,3 @@
         }
         mysqli_close($conn);
     }
-?>

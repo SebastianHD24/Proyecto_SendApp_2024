@@ -1,7 +1,7 @@
 <?php
 // suspender.php
 
-include("../../Login/conexion.php");
+include("../../bases/conexion.php");
 $con = connection();
 
 if (isset($_GET['documento_identidad'])) {

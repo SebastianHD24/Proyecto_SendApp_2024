@@ -1,5 +1,5 @@
 <?php
-    include("../conexion.php");
+    include("../../../Proyecto_SendApp_2024/bases/conexion.php");
     $conn = connection();
 
     //chequeando la conexion
@@ -39,7 +39,7 @@
         // El usuario ya está registrado
         echo "<script>alert('El usuario ya está registrado en la base de datos. Por favor, contacte al administrador para activar su cuenta.')</script>";
         echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
-    } else if(strlen(strval($documento_identidad)) < 8 || strlen($contrasena) < 6){
+    } else if(strlen(strval($documento_identidad)) < 5 || strlen($contrasena) < 6){
         echo "<script>alert('Verifique que la longitud de la contraseña sea mayor a 6 digitos y verifique que el numero de documento sea mayor a 10 digitos.')</script>";
         echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
     } else {
