@@ -1,4 +1,4 @@
-<div class="container" id="formularioPrincipal">
+    <div class="container" id="formularioPrincipal">
         <div class="second-container">
             <div class="header">
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/Sena-Logo.png" alt="Logo" class="login_img">
@@ -16,10 +16,10 @@
                             <input type="text" name="apellidos" class="login__input" value="<?= $row_user['apellidos']?>" disabled>
                             <span class="inputCorreo oculto"></span>
                             <label for="form_input" class="form_input">Correo Electrónico:</label>
-                            <input type="email" name="correo" class="login__input" value="<?= $row_user['correo']?>" id="correo">
+                            <input type="email" name="correo" class="login__input" value="<?= $row_user['correo']?>" id="correo" required>
                             <span class="inputTelefono oculto"></span>
                             <label for="form_input" class="form_input">Celular:</label>
-                            <input type="text" name="celular" class="login__input" value="<?= $row_user['celular']?>" id="celular">
+                            <input type="text" name="celular" class="login__input" value="<?= $row_user['celular']?>" id="celular" required>
                         </div>
                         <div class="second-section">
                         <?php
@@ -43,11 +43,17 @@
                         ?>
                             <?php
                                 $id_servicio = $row_user['id_servicio'];
-                                $consulta = mysqli_query($conn, "SELECT * FROM servicios WHERE id_servicio = $id_servicio");
-                                $area = mysqli_fetch_array($consulta);
+                                if ($id_servicio != null): 
+                                    $consulta = mysqli_query($conn, "SELECT * FROM servicios WHERE id_servicio = $id_servicio");
+                                    $area = mysqli_fetch_array($consulta);
+                                    $area = $area['nombre_servicio'];
+                                else:
+                                    $area = "No perteneces a ningun servicio";
+                                
+                                endif;
                             ?>
                                 <label for="form_input" class="form_input">Ficha:</label>
-                                <input type="text" name="servicio" class="login__input" value="<?= $area['nombre_servicio']?>" disabled>
+                                <input type="text" name="servicio" class="login__input" value="<?= $area ?>" disabled>
                         <?php endif; ?>
                             <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
                         </div>
@@ -68,11 +74,11 @@
                 <div class="main-form2">
                     <div class="first-section">
                         <label for="form_input" class="form_input">Ingresar la contraseña actual:</label>
-                        <input type="text" name="contraseña_actual" class="login__input">
+                        <input type="text" name="contraseña_actual" class="login__input" required>
                         <label for="form_input" class="form_input">Ingresar la nueva contraseña:</label>
-                        <input type="text" name="nueva_contraseña" class="login__input">
+                        <input type="text" name="nueva_contraseña" class="login__input" required>
                         <label for="form_input" class="form_input">Confirme la nueva contraseña:</label>
-                        <input type="text" name="confirmar_contraseña" class="login__input">
+                        <input type="text" name="confirmar_contraseña" class="login__input" required>
                     </div>
                 </div>  
                 <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>
@@ -93,3 +99,6 @@
         </div>
          
     </div>
+    </main> 
+</div>
+<script src="../../../Proyecto_SendApp_2024/scripts/componentesJS/formPerfiles.js"></script> 

@@ -74,6 +74,4 @@
         </div>
     </div>
 </section>
-</main> 
-</div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/notificacionesPQR.js"></script>
