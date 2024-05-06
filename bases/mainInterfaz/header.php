@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/PQR.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/notificaiones.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/PQR.css" >
 
 
 
@@ -53,21 +54,21 @@
                 <ul class="menu">
                     <li>
                     <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
-                    
+                    </li>
                     <?php if ($id_rol == 2): ?>
                         <li>
                         <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
                         </li>
                     <?php endif; ?>
 
-                    </li>
+                    
                     <?php if ($id_rol == 3): ?>
                         <li>
                             <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                     <?php endif; ?>
 
-                    <?php if ($id_rol != 1): ?>
+                    <?php if ($id_rol == 3): ?>
                         <li>
                             <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mis Citas </button></a>
                         </li>
