@@ -30,7 +30,7 @@
     
 
 
-    $insercion = "INSERT INTO pqrs (documento_us, tipo_pqrs, descripcion, fecha_solicitud) VALUES ('" . $usuario['documento_identidad'] . "', '$tipo_pqrs','$descripcion_pqrs', '$fecha')";
+    $insercion = "INSERT INTO pqr (documento_us, tipo_pqrs, descripcion, fecha_solicitud) VALUES ('" . $usuario['documento_identidad'] . "', '$tipo_pqrs','$descripcion_pqrs', '$fecha')";
 
 
     if ($descripcion_pqrs == null){
