@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+#main-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Work Sans", sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+
+}
+
+ /* imagen logo de sendapp */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    max-width: 8.4rem;
+    object-fit: cover;
+}
+
+i{
+    color:var(--verde);
+}
+
+/* Navegador */
+.navbar {
+    background-color: var(--azul);
+    /* opacity: 0.8; */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%; /* Ocupar todo el ancho del contenedor nav */
+    height: 100%; /* Ocupar todo el alto del contenedor nav */
+}
+
+.links li a{
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 15px;
+    /* color: var(--verde); */
+    color: var(--blanco);
+    padding: 0px 8px 0px 8px;
+    
+}
+
+.links li a:hover{
+    color: var(--verde);
+}
+
+/* -----Diseño menu hamburguesa------*/
+.header-menu{
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+.logo-header{
+    display: none;
+}
+
+.logo-header img{
+    width: 70px;
+}
+
+/* Menu hamburguesa */
+.bars__menu{
+    display: none;
+    width: 30px;
+    height: 30px; 
+    cursor: pointer;
+}
+
+/* Barras del menu */
+.bars__menu span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 6px;
+    background-color: var(--verde);
+    border-radius: 10px;
+    transform-origin: 0px 100%;
+    transition: ease-in 220ms;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) 
+    translate(-2px, 1px);
+}
+
+.activeline2__bars-menu{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg)
+    translate(-4px, 2px);
+}
+
+.resposive__menu{
+    display: none;
+}
+
+/* -------------------------- Menu Desplegable de Areas ------------------------- */
+
+/* Estilo para ocultar el contenido del menú desplegable por defecto */
+.areas-mas,
+.areas-bienestar {
+    display: none;
+}
+
+/* Estilo para mostrar el menú desplegable al hacer hover sobre "Areas" */
+.links li:hover .areas-mas {
+    display: block;
+    position: absolute;
+    background-color: var(--azul);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    border-radius: 15px;
+    border: 1px solid var(--verde);
+}
+
+/* Estilo para mostrar el menú desplegable al hacer hover sobre "Bienestar al aprendiz" */
+.areas-mas li:hover .areas-bienestar {
+    display: block;
+    background-color: var(--azul);
+    list-style: none;
+    padding: 0;
+    margin-left: 210px; /* Ajusta este valor según tu diseño */
+    margin-top: -15px; /* Ajusta este valor según tu diseño */
+    color: #f7f7f7;
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid var(--verde);
+}
+
+/* Estilos para los elementos de los menús desplegables */
+.areas-mas a,
+.areas-bienestar a {
+    display: block;
+    text-decoration: none;
+    color: var(--negro);
+}
+
+/* Estilos para los elementos de los menús desplegables al pasar el ratón por encima */
+.areas-mas a:hover,
+.areas-bienestar a:hover {
+    color: var(--verde);
+}
+
+/* Estilos para el menú "Áreas" */
+.areas-mas {
+    /* display: none; */
+    position: absolute;
+    background-color: var(--verde);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.areas-mas li{
+    display: flex;
+    flex-wrap:wrap ;
+    padding: 7px 8px 7px 8px;
+}
+
+/* Estilos para el menú "Bienestar al aprendiz" */
+.areas-bienestar {
+    /* display: none; */
+    position: absolute;
+    background-color: var(--verde);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.areas-bienestar li{
+    width: 180px;
+}
+
+
+.resposive__menu{
+    display: none;
+}
+
+/* RESPONSIVE */
+
+/* -----responsive menu hambuerguesa -----*/
+
+@media only screen and (max-width: 655px){
+
+    .navbar{
+        justify-content: space-between;
+    }
+
+    .links{
+        display: none;
+    }
+    .bars__menu{
+        position: absolute;
+        display: block;
+        right: 5px;
+    } 
+    
+    .logo-header{
+        display: block;
+        
+    }
+
+    .resposive__menu{
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 86px;
+        width: 40px;
+        height: 0;
+        background-color: var(--azul);
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .resposive__menu.open{
+        height: 120px;
+        width: 120px;
+    }
+
+    .resposive__menu-ul{
+        list-style: none;
+        flex-direction: column;
+    }
+
+    .resposive__menu-ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0px;
+        gap: 5px;
+    }
+
+    .resposive__menu-ul p{
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .resposive__menu-ul a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+
+    .resposive__menu-ul a:hover{
+        color: var(--verde);
+    } 
+
+/* estilos para las areas en el menu hamburguesa */
+
+    .menu-areas{
+        display: none;
+        position: absolute;
+        right: 5px;
+        top: 40px;
+        width: 170px;
+        height: 250;
+        background-color: var(--negro);
+        opacity: 0.8;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 10px;
+        border: 1px solid var(--verde);
+    }
+
+    .menu-areas.abrirCer{
+        display: block;
+    }
+
+    .content-areas li{
+        padding: 2px;
+    }
+
+    .content-areas li a{
+        color: var(--blanco);
+    }
+}

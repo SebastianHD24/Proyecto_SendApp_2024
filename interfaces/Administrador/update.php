@@ -1,6 +1,6 @@
 <?php
 
-include("../../Login/conexion.php");
+include("../../bases/conexion.php");
 $con = connection();
 
 // Obtener los datos del formulario

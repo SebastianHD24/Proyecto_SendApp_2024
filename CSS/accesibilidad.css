@@ -1,0 +1,204 @@
+.acesibilidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    left: 1rem;
+    height: 50px;
+    position: sticky;
+    z-index: 1000;
+    background-color: #00324D;
+    border-radius: 50px;
+    transition: width 2s, height 2s, transform 2s;
+    margin: 1rem;
+
+}
+.acesibilidad:hover{
+  transform: rotate(180deg);
+}
+#toggle, #toggle2, #toggle3, #toggle4, #toggle5{
+    display: none;
+
+}
+input .toggle1{
+    display: none;
+}
+
+#label_toggle, #label_toggle2, #label_toggle3, #label_toggle4, #label_toggle5{
+    font-size: 1.3rem;
+    cursor: pointer;
+    right: 30px;
+}
+.dark{
+    background-color: #333;
+    color: white;
+    transition: all 1.5s ease;
+}
+.acesibilidad label .fa-solid{
+    color: white;
+
+}
+.acesibilidad label .fa-solid:hover{
+    color: #39a900;
+    font-size: 2rem;
+}
+img.inverted{
+  filter: grayscale(100%);
+}
+
+/* ----------------------------------------------------- */
+/*Responsive accesibilidad*/
+@media only screen and (max-width: 767px){
+  .acesibilidad {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      left: 1rem;
+      height: 50px; 
+      position: fixed;
+      z-index: 1000;
+      background-color: #00324D;
+      border-radius: 50px;
+      bottom: 0;
+
+    }
+    
+
+    #toggle, #toggle2, #toggle3, #toggle4, #toggle5{
+        display: none;
+    }
+    
+
+    #label_toggle, #label_toggle2, #label_toggle3, #label_toggle4, #label_toggle5{
+        font-size: 1.3rem; 
+        cursor: pointer; 
+        right: 30px; 
+    } 
+    
+
+    .dark{
+        background-color: #333; 
+        color: white; 
+        transition: all 1.5s ease; 
+    }
+    
+
+    .acesibilidad label .fa-solid{
+        color: white; 
+    }
+    
+
+    .acesibilidad label .fa-solid:hover{
+        color: #39a900; 
+        font-size: 2rem; 
+    }
+
+  img.inverted {
+      filter: grayscale(100%);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+  .acesibilidad {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      left: 1rem;
+      height: 50px; 
+      position: fixed;
+      z-index: 1000;
+      background-color: #00324D;
+      border-radius: 50px;
+      bottom: 0;
+
+    }
+    
+
+    #toggle, #toggle2, #toggle3, #toggle4, #toggle5{
+        display: none;
+    }
+    
+
+    #label_toggle, #label_toggle2, #label_toggle3, #label_toggle4, #label_toggle5{
+        font-size: 1.3rem; 
+        cursor: pointer; 
+        right: 30px; 
+    } 
+    
+
+    .dark{
+        background-color: #333; 
+        color: white; 
+        transition: all 1.5s ease; 
+    }
+    
+
+    .acesibilidad label .fa-solid{
+        color: white; 
+    }
+    
+
+    .acesibilidad label .fa-solid:hover{
+        color: #39a900; 
+        font-size: 2rem; 
+    }
+  
+
+  img.inverted {
+      filter: grayscale(100%);
+  }
+}
+@media only screen and (min-width: 1024px){
+  .acesibilidad {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      left: 1rem;
+      height: 50px; 
+      position: fixed;
+      z-index: 1000;
+      background-color: #00324D;
+      border-radius: 50px;
+      bottom: 0;
+
+    }
+    
+
+    #toggle, #toggle2, #toggle3, #toggle4, #toggle5{
+        display: none;
+    }
+    
+
+    #label_toggle, #label_toggle2, #label_toggle3, #label_toggle4, #label_toggle5{
+        font-size: 1.3rem; 
+        cursor: pointer; 
+        right: 30px; 
+    } 
+    
+
+    .dark{
+        background-color: #333; 
+        color: white; 
+        transition: all 1.5s ease; 
+    }
+    
+
+    .acesibilidad label .fa-solid{
+        color: white; 
+    }
+    
+
+    .acesibilidad label .fa-solid:hover{
+        color: #39a900; 
+        font-size: 2rem; 
+    }
+  
+
+
+  img.inverted {
+      filter: grayscale(100%);
+  }
+
+}

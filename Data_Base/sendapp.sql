@@ -121,7 +121,7 @@ CREATE TABLE `solicitud_citas` (
 CREATE TABLE `usuarios` (
   `tipo_documento` varchar(3) NOT NULL,
   `documento_identidad` int(12) NOT NULL COMMENT 'Es la identidad de la persona',
-  `contrasena` varchar(10) NOT NULL COMMENT 'Es la contrasena de todos los usuarios',
+  `contrasena` varchar(255) NOT NULL COMMENT 'Es la contrasena de todos los usuarios',
   `nombres` varchar(30) NOT NULL COMMENT 'Nombre del usuario\r\n',
   `apellidos` varchar(30) NOT NULL COMMENT 'Apellido del usuario',
   `correo` varchar(30) NOT NULL COMMENT 'Correo del usuario',
