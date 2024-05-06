@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/bases/mainInterfaz/style.css">
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/bases/mainInterfaz/estiloInterfaces.css">
     <title>Aprendiz</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
