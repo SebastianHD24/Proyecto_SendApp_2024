@@ -23,8 +23,8 @@
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
         <div class="button">
-            <button type="submit" id="btnEnviar" onclick="confirmacion();">Enviar</button>
-            <Button type="reset" id="btnCancelar">Cancelar</Button>
+            <button type="submit" id="btnEnviar">Enviar</button>
+            <button type="reset" id="btnCancelar">Cancelar</button>
         </div>
         <!-- ----------------- menu para ocultar ----------- -->
     </section>
