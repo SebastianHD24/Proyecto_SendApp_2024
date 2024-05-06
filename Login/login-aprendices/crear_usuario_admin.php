@@ -1,5 +1,5 @@
 <?php
-    include("../conexion.php");
+    include("../../../Proyecto_SendApp_2024/bases/conexion.php");
     $conn = connection();
 
     //chequeando la conexion
@@ -52,6 +52,7 @@
                 // Para confirmar, habilitarlo
                 // echo "<h1><center>Registro Grabado Correctamente</center></h1>";
                 echo "<script>alert('Se ha registrado correctamente.')</script>";
+                echo "<meta http-equiv='refresh' content='2; url=../../interfaces\Administrador\index.php'>";
             } else {
                 echo "Error:" . $sql . "<br>" . mysqli_error($conn);
             }

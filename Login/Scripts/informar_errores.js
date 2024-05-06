@@ -1,41 +1,41 @@
-// Espera a que el documento HTML esté completamente cargado
-$(document).ready(function() {
-    // Cuando se envía el formulario con la clase 'form-login'
-    $('.form1').submit(function(e) {
-        // Previene el comportamiento por defecto del formulario (enviar y recargar la página)
+//Espera a que el documento HTML esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    //Obtener el formulario con la clase asignada
+    let form = document.querySelector('.form1');
+    //Evento de escucha para el evento submit del formulario
+    form.addEventListener('submit', function(e) {
+        //Prevenir el comportamiento por defecto del formulario (enviar y recargar la página)
         e.preventDefault();
-        // Realiza una solicitud AJAX al archivo 'val.php'
-        $.ajax({
-            type: "POST",
-            url: '../login-aprendices/validacion/val.php',
-            data: $(this).serialize(), // Datos del formulario serializados
-            success: function(response) { // Función que se ejecuta si la solicitud es exitosa
-                // Analiza la respuesta JSON recibida
-                let jsonData = JSON.parse(response);
-                // Dependiendo del valor de 'success' en la respuesta
-                if (jsonData.success == "1") { // Si el éxito es igual a "1"
-                    // Muestra un mensaje de error en rojo
-                    const error = document.getElementById('mensaje_error');
-                    error.textContent = "Complete todos los campos";
-                } else if (jsonData.success == "2") { // Si es igual a 2 redirigir a otro pagina
-                    location.href='../../../../Proyecto_SendApp_2024/interfaces/Administrador/index.php';
-                } else if (jsonData.success == "3") {
-                    location.href='../../../../Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php';
-                } else if (jsonData.success == "6") {
-                    location.href='../../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php';
-                } else if (jsonData.success == "4") {
-                    const error = document.getElementById('mensaje_error');
-                    error.textContent = "Tu cuenta está suspendida. Comunícate con el administrador";
-                } else if (jsonData.success == "5") { // Si el éxito es igual a "3"
-                    // Muestra un mensaje de error en rojo y limpia los campos de usuario y contraseña
-                    const error = document.getElementById('mensaje_error');
-                    const limpiarU = document.getElementById('login-input-user');
-                    const limpiarC = document.getElementById('login-input-password');
-                    error.textContent = "El usuario o la contraseña están incorrectos";
-                    limpiarU.value = "";
-                    limpiarC.value = "";
-                }
+        //Obtener datos del formulario
+        let formData = new FormData(form);
+        //Realizar una solicitud POST al servidor
+        fetch('../login-aprendices/validacion/val.php', {
+            method: 'POST',
+            body: formData
+        })
+        //Trasforma las respuesta en un JSON
+        .then(response => response.json())
+        .then(jsonData => {
+            //Manejar la respuestas que manda el PHP
+            if (jsonData.success == "1") {
+                const error = document.getElementById('mensaje_error');
+                error.textContent = "Complete todos los campos";
+            } else if (jsonData.success == "2") {
+                location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
+            } else if (jsonData.success == "3") {
+                location.href = '../../../../Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php';
+            } else if (jsonData.success == "4") {
+                location.href = '../../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php';
+            } else if (jsonData.success == "5") {
+                const error = document.getElementById('mensaje_error');
+                error.textContent = "Tu cuenta está suspendida. Comunícate con el administrador";
+            } else if (jsonData.success == "6") {
+                const error = document.getElementById('mensaje_error');
+                const limpiarC = document.getElementById('login-input-password-l');
+                error.textContent = "El usuario o la contraseña son incorrectos";
+                limpiarC.value = "";
             }
-        });
+        })
+        .catch(error => console.error('Error:', error));
     });
 });
