@@ -9,7 +9,17 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
-
+section{
+    font-family: var(--fuente-principal);
+    background-color: var(--blanco);
+    width: 20rem;
+    height: 30rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    gap: 30px;
+}
 
 .titulo{
     display: flex;
@@ -36,9 +46,11 @@ label{
 textarea{
     width: 100%;
     background-color: var(--gris-oscuro);
+    font-family: var(--fuente-principal);
     border-radius: 5px;
     border: none;
     margin: 10px 0px 0px 0px;
+    resize: none;
 }
 
 .button{
@@ -65,6 +77,15 @@ h1{
 
 
 /* ----------- section ----------- */
+
+#myModal {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    max-width: 18rem;
+}
 
 .confirmacion{
     background-color: var(--gris-oscuro);
