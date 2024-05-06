@@ -9,26 +9,6 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
-
-body{
-    display: grid;
-    justify-content: center;
-    place-content: center; 
-    background-color: #d7cecee4; 
-}
-
-section{
-    font-family: var(--fuente-principal);
-    background-color: var(--blanco);
-    width: 20rem;
-    height: 30rem;
-    border-radius: 20px;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    gap: 30px;
-}
-
 .titulo{
     display: flex;
     justify-content: center;
