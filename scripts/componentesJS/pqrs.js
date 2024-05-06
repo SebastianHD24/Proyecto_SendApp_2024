@@ -2,6 +2,8 @@ let btnEnviar = document.getElementById("btnEnviar");
 
 let modal = document.getElementById("myModal");
 
+let section = document.getElementById("mainContent")
+
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener referencia al formulario
     let form = document.getElementById("formulario");
@@ -27,10 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }else if (data.success == 2) {
                 // Redirigir a la página especificada en la respuesta del servidor
                 modal.style.display = "block"
+                section.style.display = "none"
 
                 setTimeout(function () {
                     location.reload();
-                }, 3000);
+                }, 2000);
             }
         })
         .catch(error => console.error('Error:', error));

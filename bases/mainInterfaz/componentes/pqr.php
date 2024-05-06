@@ -30,8 +30,8 @@
     </section>
     <div class="myModal" id="myModal">
     <div class="confirmacion" id="confirmacion">
-        <p>PQRS enviada con éxito</p>
-        <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="">
+        <p>Enviada con éxito</p>
+        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
     </div>
 </div>
 </form>
