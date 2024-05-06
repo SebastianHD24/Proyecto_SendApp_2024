@@ -79,7 +79,7 @@
                         <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> Cuentas Creadas </button></a>
                         </li>
                         <li>
-                            <a  href="?p=serviciosAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                            <a  href="?p=serviciosAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosAdmin' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
                         <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
