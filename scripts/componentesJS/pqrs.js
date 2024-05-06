@@ -1,6 +1,7 @@
 let btnEnviar = document.getElementById("btnEnviar");
 
 let modal = document.getElementById("myModal");
+let formPQR = document.getElementById('mainContent');
 
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener referencia al formulario
@@ -26,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert('Debes agregar una descripcion de tu PQRS')
             }else if (data.success == 2) {
                 // Redirigir a la página especificada en la respuesta del servidor
-                modal.style.display = "block"
+                modal.style.display = "block";
+                formPQR.style.display = "none";
 
                 setTimeout(function () {
                     location.reload();

@@ -29,11 +29,11 @@
         <!-- ----------------- menu para ocultar ----------- -->
     </section>
     <div class="myModal" id="myModal">
-    <div class="confirmacion" id="confirmacion">
-        <p>PQRS enviada con éxito</p>
-        <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="">
+        <div class="confirmacion" id="confirmacion">
+            <p>PQRS enviada con éxito</p>
+            <img src="../../Styles/Img/Componentes-img/senal-aprobada.png" alt="">
+        </div>
     </div>
-</div>
 </form>
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/pqrs.js"></script>
