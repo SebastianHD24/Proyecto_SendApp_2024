@@ -23,7 +23,7 @@
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
         <div class="button">
-            <button type="submit" id="btnEnviar" onclick="confirmacion();">Enviar</button>
+            <input type="submit" id="btnEnviar" onclick="confirmacion();">Enviar</input>
             <Button type="reset" id="btnCancelar">Cancelar</Button>
         </div>
         <!-- ----------------- menu para ocultar ----------- -->
