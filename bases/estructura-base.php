@@ -71,6 +71,7 @@
                         <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
                         <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
                     </ul>
+
                 <?php endif; ?>
 
                 <!--Menu Hamburguesa Animado-->
