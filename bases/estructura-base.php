@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- ESTILOS CSS -->
-    <link rel="shortcut icon" href="../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
+    <link rel="shortcut icon" href="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/LogoSenaVerde.png"> <!-- Icono de la ventana -->
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/CSS/accesibilidad.css"><!--CSS accesibilidad-->
-    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/CSS/header.css"> <!--CSS haader -->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/CSS/header.css"> <!-- CSS haader -->
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/CSS/footer.css"> <!--CSS footer -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusión de la biblioteca jQuery -->
     <script src="https://kit.fontawesome.com/a7f71e63d5.js" crossorigin="anonymous"></script> <!--Libreria de iconos de Font Awesome-->
@@ -84,11 +84,11 @@
             <!-- Contenido Responsive Menu-->
             <div class="resposive__menu">
                 <ul class="resposive__menu-ul">
-                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicio</p></a></li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Areas</a> <!--Falta la ruta-->
                     </li>
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html"><p>Ingreso</p></a></li>
                 </ul>
             </div>
         

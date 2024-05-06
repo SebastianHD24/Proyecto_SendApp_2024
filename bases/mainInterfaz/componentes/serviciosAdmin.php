@@ -1,5 +1,5 @@
         <div>
-            <h1>puto</h1>
+            <h1>HOLA ADMINISTRADOR</h1>
         </div>
     </main> 
 </div>
