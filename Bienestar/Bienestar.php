@@ -24,8 +24,8 @@
                         </div>
                 </div>
                     <div class="botones-bienestar">
-                        <a href="../../Proyecto_SendApp_2024/Bienestar/psicologia/index.php"><button class="btn">Psicología</button></a>
-                        <a href="../../Proyecto_SendApp_2024/Bienestar/Deportes/index.php"><button class="btn">Deportes y Cultura</button></a>
+                        <a href="../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.php"><button class="btn">Psicología</button></a>
+                        <a href="../../Proyecto_SendApp_2024/Bienestar/Deportes/deportes.php"><button class="btn">Deportes y Cultura</button></a>
             </div>
             <div class="Contenedor">
             <h2>Servicios Ofrecidos</h2>
