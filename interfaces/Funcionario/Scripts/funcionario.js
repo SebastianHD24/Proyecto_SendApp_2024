@@ -652,3 +652,20 @@ var calendar = new CalendarApp();
 console.log(calendar);
 
 
+function cargarEventos(fecha){
+  $.ajax({
+      url: "obtener_eventos.php",
+      type: "POST",
+      data: { fecha: fecha },
+      success: function(data){
+          $("#eventos").html(data);
+
+          // Aquí agregamos el código adicional
+          $(".evento").click(function(){
+              var idEvento = $(this).attr("id");
+              // Lógica para manejar el clic en el evento
+              console.log("Clic en el evento con ID: " + idEvento);
+          });
+      }
+  });
+}
