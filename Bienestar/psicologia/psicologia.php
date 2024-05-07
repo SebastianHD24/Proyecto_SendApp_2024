@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="psicologia.css"> <!-- Estilos de psicologia -->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.css"> <!-- Estilos de psicologia -->
     <title>Psicologia</title>
 <?php endblock() ?>
 
@@ -22,7 +22,7 @@
             <article><img src="../psicologia/Img/img content/IMG_7740.JPG" alt="logo"></article>
 
             <h2 class="subtitulos">Descripción de la Página:</h2>
-            <p>
+            <p class="descripcion">
                 En Psicología Integral para el Bienestar, nos dedicamos a ofrecer servicios de apoyo psicológico para ayudarte a alcanzar una vida plena y equilibrada. Nuestro equipo de profesionales altamente capacitados está aquí para brindarte el apoyo y las herramientas que necesitas para superar desafíos, gestionar el estrés y alcanzar tus metas personales.
             </p>
             

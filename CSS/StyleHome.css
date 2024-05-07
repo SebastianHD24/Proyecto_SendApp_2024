@@ -38,7 +38,7 @@
 @media (max-width: 560px) {
     .mapaSena{
         width: 280px;
-        height: foo;
+        height: auto;
     }
     .map h1 {
         font-size: 20px;
@@ -780,6 +780,28 @@ h1{
         font-size: 27px;
     }
 
+    /*Se configuro el tamano de los parrafos cuando las pantallas son grandes*/
+    .container_nostros p,h1{
+        font-size: 30px;
+        padding: 10px;
+    }
+    .container_info p,h1{
+        font-size: 30px;
+    }
+
+    .map h1{
+        font-size: 40px;
+    }
+    .map iframe {
+        width: 1800px;
+        height: 800px;
+    }
+
+
+    .triangulo-derecha,.triangulo-izquierda{
+        display: none;
+    }
+
     /* responsive footer */
     .footer-menu .menu-item{
         font-size: 35px;
@@ -788,6 +810,7 @@ h1{
 
 @media screen and (min-width: 2650px){
     /* responsive barra navegacion */
+
     .navbar{
         height: 100px;
     }
@@ -854,5 +877,12 @@ h1{
     /* responsive footer */
     .footer-menu .menu-item{
         font-size: 35px;
+    }
+
+}
+
+@media screen and (min-width: 2561px) {
+    body {
+        font-size: 10px; /* Ajusta el tamaño de la fuente para pantallas grandes */
     }
 }

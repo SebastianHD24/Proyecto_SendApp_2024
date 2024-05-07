@@ -2,7 +2,7 @@
 .<?php include '../bases/estructura-base.php' ?>
 
 <?php startblock('links-styles') ?>
-    <link rel="stylesheet" href="Styles/senova.css"> <!-- Estilos de Senova -->
+    <link rel="stylesheet" href="../../Proyecto_SendApp_2024/senova/senova.css"> <!-- Estilos de Senova -->
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
