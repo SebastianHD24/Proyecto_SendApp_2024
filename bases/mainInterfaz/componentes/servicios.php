@@ -6,7 +6,6 @@
         </article>
         <h1 class="bienvenida">Bienvenido Usuario</h1>
         <p>Conoce y agenda tus servicios.</p>
-        <button><a href=""></a></button>
         <div class="cards__container">
       
             <div class="cards">
