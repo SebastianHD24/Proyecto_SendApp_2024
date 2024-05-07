@@ -4,8 +4,8 @@
         <article>
             <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/LogoSenaVerde.png" name="SendApp" alt="SendApp Logo"/>
         </article>
-        <h1 class="bienvenida">Bienvenido Usuario</h1>
-        <p>Conoce y agenda tus servicios.</p>
+        <h1 class="bienvenida">Bienvenido Aprendiz</h1>
+        <p>Solicita tus citas con los distintos servicios que ofrece el SENA</p>
         <div class="cards__container">
       
             <div class="cards">
