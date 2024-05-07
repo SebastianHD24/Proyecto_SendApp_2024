@@ -130,4 +130,4 @@
     </div>
     </main> 
 </div>
-<script src="../../../Proyecto_SendApp_2024/scripts/componentesJS/formPerfiles.js"></script> 
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/formPerfiles.js"></script> 
