@@ -11,7 +11,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <a href="../../componentes/solicitar citas/index.html" ><p>Bienestar Al Aprendíz</p> </a>
+                <button id="Bienestar">Bienestar Al Aprendíz</button>
               </article>
             </div>
 
@@ -87,3 +87,39 @@
         </div>
     </section>  
 </div>
+<!-- la parte de solicitud citas -->
+<div  class="container oculto" >
+    <form id="formularioo">
+      <h1>Solicitar Cita</h1>
+      <p>Jornada:</p>
+      <select class="select">
+        <option value="opcion1">Diurna</option>
+        <option value="opcion2">Mixta</option>
+       
+      </select>
+      <div class="formulario">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" class="descripcion" rows="4"></textarea>
+      </div>
+
+      <div class="buttons">
+        <button class="button">Cerrar</button>
+        <button class="button" onclick="ve();">Enviar</button>
+      </div>
+    </form>
+  </div>
+  <!-- /* ventana emergente */ -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar"></span>
+      <p>¡Formulario Enviado con Exito!</p>
+      <i class='bx bxs-certification'></i>
+    </div>
+  </div>
+ 
+</main> 
+</div>
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/formcita.js"> </script>
+<script src="../../../../Proyecto_SendApp_2024/componentes/script.js"></script>
+
+

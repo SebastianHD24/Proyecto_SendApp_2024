@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="deportes.css"> <!--Estilos de Deportes -->
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/Bienestar/Deportes/deportes.css"> <!--Estilos de Deportes -->
     <title>Deportes</title>
 <?php endblock() ?>
 

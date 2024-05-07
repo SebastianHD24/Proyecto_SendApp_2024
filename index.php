@@ -3,7 +3,7 @@
     <!--Bloque para agregar las rutas de stylos independientes de cada archivo y links adicionales para archivos propios-->
     <?php startblock('links-styles') ?>
         <title>SendApp</title>
-        <link rel="stylesheet" type="text/css" href="Inicio/Styles/StyleHome.css">
+        <link rel="stylesheet" type="text/css" href="../Proyecto_SendApp_2024/CSS/StyleHome.css">
     <?php endblock() ?>
     
     <!-- Slider Sena -->

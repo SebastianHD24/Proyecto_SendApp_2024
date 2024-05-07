@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="psicologia.css"> <!-- Estilos de psicologia -->
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.css"> <!-- Estilos de psicologia -->
     <title>Psicologia</title>
 <?php endblock() ?>
 

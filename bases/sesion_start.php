@@ -8,4 +8,3 @@ if(!isset($_SESSION["documento_identidad"])) {
     header("Location: ../../Login/login-aprendices/login-aprendices.html");
     exit;
 }
-?>

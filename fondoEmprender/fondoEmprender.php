@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="fondoEmprender.css"> <!-- Estilos del Fondo Emprender -->
+    <link rel="stylesheet" href="../../Proyecto_SendApp_2024/fondoEmprender/fondoEmprender.css"> <!-- Estilos del Fondo Emprender -->
     <title>Fondo Enprender </title>
 <?php endblock() ?>
 
