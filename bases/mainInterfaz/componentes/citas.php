@@ -14,7 +14,8 @@ if (isset($_SESSION['documento_identidad'])) {
     citas.*, 
     servicios.nombre_servicio, 
     servicios.admin_area, 
-    servicios.estado_servicio FROM citas INNER JOIN servicios ON 
+    servicios.estado_servicio
+     FROM citas INNER JOIN servicios ON 
     citas.id_servicio = servicios.id_servicio WHERE citas.documento_usuario = '$documento_identidad'";
 
     $result = mysqli_query($conn, $sql);
@@ -50,6 +51,10 @@ if (isset($_SESSION['documento_identidad'])) {
                     <span></span>
                     <article>
                         <p>Motivo: <?= $row['descripcion'] ?></p>
+                    </article>
+                    <span></span>
+                    <article>
+                        <p>jornada: <?= $row['jornada'] ?></p>
                     </article>
                     <span></span>
                     <article>
