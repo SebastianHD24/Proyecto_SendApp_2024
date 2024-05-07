@@ -34,7 +34,7 @@
                 alt="SendApp Logo"/>
             </div>
         <?php endblock() ?>
-        <!--Nav Container--> 
+        <!--Nav Container-->
         <?php startblock('navegacion') ?> <!--Creo un bloque para la barra de navegacion-->
             <nav class="navbar">
                 
@@ -42,6 +42,7 @@
                 <div class="logo-header">
                     <img src="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/SendApp.png" alt="Logo Sena" />
                 </div>
+
                 <ul class="links">
                     <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
@@ -68,9 +69,8 @@
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
-                    
-                    <li> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
-                    
+                    <li id="ingreso"> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <li id="interfaz-u" style="display: none;"><i class="fa-solid fa-right-to-bracket"></i><a href="#" onclick="llevarURL();">Interfaz</a></li>
                 </ul>
 
                 <!--Menu Hamburguesa Animado-->
@@ -82,9 +82,9 @@
             </nav>
 
             <!-- Contenido Responsive Menu-->
-            <div class="resposive__menu">
+            <div class="resposive__menu" id="menu-no-sesion" style="display: none;">
                 <ul class="resposive__menu-ul">
-                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicio</p></a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicioo</p></a></li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Areas</a> <!--Falta la ruta-->
                     </li>
@@ -145,6 +145,7 @@
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/BotonCitas.js"></script><!--Scripts Boton citas-->
     <script src="../../../Proyecto_SendApp_2024/scripts/menuHamburguesaJS/menuBarGeneral.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/botonLeerMas.js"></script><!--Scripts menu hamburguesa general-->
+    <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/sesionIniciada.js"></script>
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

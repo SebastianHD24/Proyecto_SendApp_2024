@@ -10,7 +10,13 @@ if (isset($_SESSION['documento_identidad'])) {
         die("Error al conectar a la base de datos: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM citas WHERE documento_usuario = '$documento_identidad'";
+    $sql = "SELECT 
+    citas.*, 
+    servicios.nombre_servicio, 
+    servicios.admin_area, 
+    servicios.estado_servicio FROM citas INNER JOIN servicios ON 
+    citas.id_servicio = servicios.id_servicio WHERE citas.documento_usuario = '$documento_identidad'";
+
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -27,7 +33,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     </figure>
                     <span></span>
                     <article>
-                        <p>Área: Coordinación Académica</p>
+                        <p>Área: <?= $row['nombre_servicio'] ?></p>
                     </article>
                     <span></span>
                     <article>
@@ -35,18 +41,19 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <article>
-                        <p>Hora:<?= $row['hora'] ?></p>
+                        <p>Hora: <?= $row['hora'] ?></p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Estado:<?= $row['estado_cita'] ?></p>
+                        <p>Estado: <?= $row['estado_cita'] ?></p>
                     </article>
+                    <span></span>
                     <article>
                         <p>Motivo: <?= $row['descripcion'] ?></p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Funcionario: Jorge Padilla Agudelo Prada</p>
+                        <p>  Funcionario: <?= $row['admin_area'] ?></p>
                     </article>
                 </div>
                 <?php
