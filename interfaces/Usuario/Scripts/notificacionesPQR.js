@@ -1,3 +1,5 @@
+const mensaje = document.getElementById('mensaje');
+
 function createNotificationBox() {
     // Crear elemento section para display-notificaciones
     var displayNotificaciones = document.querySelector(".display-notificaciones");
@@ -54,24 +56,17 @@ function createNotificationBox() {
 }
 
 function consultar() {
-    fetch('aprendiz/mostrarDatos.php')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector('#notifica #mostrar #mostrar-m').innerHTML = '';
-            document.querySelector('#notifica #mostrar #mostrar-n').innerHTML = '';
-
-            data.forEach(usuario => {
-                let p = document.createElement('p');
-                p.textContent = 'Gracias, ' + usuario.nombres + ', por tu ' + usuario.tipo_pqrs + '. Nos complace informarte que ya ha sido revisada por nuestros administradores. Apreciamos tu contribución y estamos aquí para atender cualquier otra sugerencia o consulta que puedas tener en el futuro';
-
-                if (usuario.vista == 0) {
-                    document.querySelector('#notifica #mostrar #mostrar-n').appendChild(p);
-                } else {
-                    document.querySelector('#notifica #mostrar #mostrar-m').appendChild(p);
-                }
-            });
-        })
-        .catch(error => console.error('Error al obtener datos:', error));
+    fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
+    .then(response => response.json())
+    .then(data => {
+        if (data.success === "1") {
+            mensaje.style.display = "none";
+            createNotificationBox();
+        } else if (data.success === "2") {
+            mensaje.style.display = "block";
+        }
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 document.addEventListener("DOMContentLoaded", function() {
