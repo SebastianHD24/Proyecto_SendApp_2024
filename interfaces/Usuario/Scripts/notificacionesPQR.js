@@ -43,7 +43,8 @@ function createNotificationBox() {
     detailsButton.setAttribute("type", "button");
     detailsButton.classList.add("show__details--button");
     detailsButton.setAttribute("id", "showDetailsButton");
-    var span = document.createElement("span");
+    detailsButton.setAttribute("onclick", "mostrarR();");
+    var span = document.createElement('span');
     span.innerHTML = "Ver<br>Detalles";
     detailsButton.appendChild(span);
     notificationsPqr.appendChild(detailsButton);
