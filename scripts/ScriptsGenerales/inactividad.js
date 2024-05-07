@@ -32,5 +32,4 @@ function verificarSesion() {
 
 document.addEventListener("DOMContentLoaded", function() {
     verificarSesion();
-    console.log("se ejecuta el dom");
 });
