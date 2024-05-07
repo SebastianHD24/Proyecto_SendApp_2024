@@ -53,5 +53,4 @@ function cerrarSesion() {
 
 document.addEventListener("DOMContentLoaded", function() {
     veri();
-    console.log("se ejecuta el domm");
 });
