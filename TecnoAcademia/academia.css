@@ -67,7 +67,6 @@ body{
 .Contenido{
     width: 100%;
     padding: 60px;
-    background:linear-gradient(#ededed,#fff); 
     
 }
 /*titulo */
@@ -131,6 +130,7 @@ hr{
     margin-bottom: 20px;
     overflow: hidden; 
     box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+    color: #000000;
 
 }
 .tarjeta:hover {
