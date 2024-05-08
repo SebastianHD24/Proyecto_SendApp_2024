@@ -12,10 +12,9 @@
         $consulta = mysqli_query($conn, "SELECT id_peticion FROM pqr WHERE documento_us = '$id_usuario' AND vista = 0 AND respuesta_pqrs IS NOT NULL");
 
         if ($consulta->num_rows > 0){
-            echo json_encode(array('success' => 1));
+            echo json_encode(array('success' => "1"));
         } else {
-            echo json_encode(array('success' => 2));
+            echo json_encode(array('success' => "2"));
         }
     }
     $conn->close();
-?>
