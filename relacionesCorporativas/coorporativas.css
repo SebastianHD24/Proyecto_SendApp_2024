@@ -79,13 +79,13 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: left;
     padding-bottom: 1rem;
     margin-top: 1rem;
 }
 .sub{
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: center;
     font-size: 3rem;
     margin: 2rem 4rem 2rem 4rem;
