@@ -22,6 +22,15 @@ section article{
   align-content: center; 
   width: 100%;
 }
+aside{
+  color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-left: 2em;
+}
 
 section article img{
   width: 9.375rem;
