@@ -1,3 +1,4 @@
+
 <div class="div__content">
     <section>
         <!--Logo en el contenido-->
@@ -11,13 +12,13 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <button id="Bienestar">Bienestar Al Aprendíz</button>
+                <button onclick="capturar_id(1)" id="Bienestar">Bienestar Al Aprendíz</button>
               </article>
             </div>
 
             <div class="cards">
                 <article>
-                  <p>Biblioteca</p>
+                  <button onclick="capturar_id(2)" id="biblioteca" >Biblioteca</button>
                   <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
                 </article>     
             </div>
@@ -89,22 +90,29 @@
 </div>
 <!-- la parte de solicitud citas -->
 <div  class="container oculto" >
-    <form id="formularioo">
+    <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo">
+      <input type="text" name="id_servicio"  id='id_servicio' value="">
+
       <h1>Solicitar Cita</h1>
+     
       <p>Jornada:</p>
-      <select class="select">
-        <option value="opcion1">Diurna</option>
-        <option value="opcion2">Mixta</option>
+
+      <select  name="jornada" class="select">
+        <option value="Diurna"> Diurna </option>
+        <option value="Mixta">Mixta</option>
        
       </select>
+      <p>Area</p>
+      <input type="text" name="nombre_servicio" value=" ">
+
       <div class="formulario">
         <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" class="descripcion" rows="4"></textarea>
+        <textarea name='descripcion' id="descripcion" class="descripcion" rows="4"></textarea>
       </div>
 
       <div class="buttons">
         <button class="button">Cerrar</button>
-        <button class="button" onclick="ve();">Enviar</button>
+        <button type='submit' class="button" onclick="ve();">Enviar</button>
       </div>
     </form>
   </div>
@@ -119,7 +127,30 @@
  
 </main> 
 </div>
-<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/formcita.js"> </script>
-<script src="../../../../Proyecto_SendApp_2024/componentes/script.js"></script>
+<script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/formcita.js'></script>
 
+<script src="../../../../Proyecto_SendApp_2024/componentes/script.js"></script>
+<script>
+  function capturar_id(idServicio) {
+    // Establecer el campo de ID del servicio
+    const campoServicio = document.getElementById("id_servicio");
+    campoServicio.value = idServicio;
+    
+    // Hacer una solicitud AJAX para obtener el nombre del servicio
+    fetch(`Proyecto_SendApp_2024/bases/mainInterfaz/backend/nombreServicio.php?id_servicio=${idServicio}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.error("Error:", data.error);
+            } else {
+                // Actualizar el input con el nombre del servicio
+                const inputNombreServicio = document.querySelector('input[name="nombre_servicio"]');
+                inputNombreServicio.value = data.nombre_servicio;
+            }
+        })
+        .catch(error => console.error("Error al obtener el nombre del servicio:", error));
+}
+
+
+</script>
 
