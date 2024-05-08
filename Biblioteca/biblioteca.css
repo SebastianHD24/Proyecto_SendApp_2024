@@ -24,62 +24,141 @@ body{
     font-family: 1.2rem;
 }
 
-/*titulo sennova*/
+/*Contenido*/
+.orden{
+    margin: 4rem;
+}
+ .Primera_Impresion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+} 
+
+.contn {
+    margin: 1rem;
+    flex:60%;
+    padding-right: 20px; 
+    text-align: left;
+}
+.contn, .imagen{
+    opacity: 0;
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.imagen{
+    flex: 35%;
+    text-align: center; 
+    padding: 20px;
+
+}
+.imagen img{
+    margin-top: 9rem;
+    max-width: 134%;
+    height: auto;
+}
+
+.Contenido{
+    width: 100%;
+    padding: 70px;
+    background:linear-gradient(#ededed,#fff); 
+    
+}
+/*titulo */
 .titulo{
-    font-size: 4rem;
-    text-align: center;
+    font-size: 6rem;
+    text-align:left;
     font-family: var(--fuente-principal);
+    animation: fadeIn 3s forwards;
     color: var(--azul);
 }
 /*subtitulos*/
- .subtitulos{
-    font-size: 25px;
-    font-family: var(--fuente-principal);
+.subtitulos{
+    font-family: var(--fuente-open-sans);
     text-align: left;
-    margin-top: 30px;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
 }
-
-/*contenido de el div senova*/
-.biblioteca{
+.sub{
+    font-family: var(--fuente-open-sans);
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 4rem 2rem 4rem;
+}
+.parrafo{
+    font-size: 25px;
+}
+.p{
+    color: #00324D;
+    font-size: 25px;
+    text-align: center;
+}
+hr{
+    margin: 2rem 0 10px 0;
+}
+.Contenedor {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-
+    border-radius: 15px;
+    background:linear-gradient(#cfcfcf,#ededed); 
 }
-.biblioteca section{
-    width: 100%;
-    padding: 60px;
-
-}
-.biblioteca p{
-    text-align: justify;
-    margin-top: 10px;
-    font-family: var(--fuente-principal);
-    line-height: 30px;
-}
-/* .biblioteca img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
-
-.l_desordenada, .l_ordenada{
-    padding: 15px 30px 15px 30px;
-}
-
-.l_ordenada li, .l_desordenada li{
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
-
-
-.actividad{
+.tarjetas-contenedor {
     display: flex;
-    gap: 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    gap: 4rem;
 }
+.tarjeta {  
+    width: 40rem;      
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+
+}
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
+}
+.l_ordenada{
+    list-style-type:none;
+    padding-left: 20px;
+}
+.l_ordenada li{
+    margin: 2rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+.l_ordenada li::before {
+    content: "✔";
+    display: inline-block; 
+    width: 1em; 
+    height: 1em; 
+    margin-right: 0.5em; 
+    color: #29a900; 
+    font-size: 1.2em; 
+    position: absolute; 
+    left: -20px;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
 /*******************************botones**********************************/
 /*Boton agendar cita*/
 .button{
@@ -162,7 +241,6 @@ body{
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
     }
 }
-
 @media only screen and (max-width: 767px){
     .titulo{
         font-size: 2rem;
@@ -171,4 +249,25 @@ body{
         color: var(--azul);
 
     }
+    .Contenido{
+        padding: 30px;
+    }
+    .orden{
+        margin: 2rem;
+    }
+    .tarjeta{
+        width: 87%; 
+        max-width: 30rem;
+    }
+    .subtitulos,.sub{
+        font-size: 1.3rem;
+    }
+    
+    .parrafo,.p{
+        font-size: 1rem;
+    }
+}
+.actividad{
+    display: flex;
+    gap: 5%;
 }

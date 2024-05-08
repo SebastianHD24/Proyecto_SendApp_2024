@@ -109,21 +109,8 @@
     <?php endblock() ?> <!--Fin bloque de navegacion-->
     <!-- accesibilidad								 -->
     <div class="acesibilidad">
-        <label for="toggle" id="label_toggle"><i class="fa-solid fa-circle-half-stroke"></i></label>
+        <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
         <input type="checkbox" id="toggle">
-        
-        <label for="toggle2" id="label_toggle2"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
-        <input type="checkbox" id="toggle">
-        
-        <label for="toggle3" id="label_toggle3"><i class="fa-solid fa-magnifying-glass-minus"></i></label>
-        <input type="checkbox" id="toggle2">
-        
-        <label for="toggle4" id="label_toggle4"><i class="fa-solid fa-chevron-up"></i></label>
-        <input type="checkbox" id="toggle">
-    
-        <label for="toggle5" id="label_toggle5"><i class="fa-solid fa-chevron-down"></i></label>
-        <input type="checkbox" id="toggle">
-
     </div>
 
     <!--Este bloque se llamara en otro archivo para poner contenido que no es global en todas las paginas-->
