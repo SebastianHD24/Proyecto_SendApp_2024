@@ -16,7 +16,7 @@ function createNotificationBox() {
     // Crear elemento div para notifications-pqr
     var notificationsPqr = document.createElement("div");
     notificationsPqr.classList.add("notifications-pqr");
-    notificationsContainer.setAttribute("id", "contenedor_n");
+    notificationsPqr.setAttribute("id", "contenedor_n");
 
     // Contenedor de imagen de PQR
     var pqrFigure = document.createElement("figure");

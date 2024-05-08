@@ -6,7 +6,6 @@ const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
 
 function verificar() {
-    console.log("hola");
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
         .then(response => response.json())
         .then(jsonData => {
