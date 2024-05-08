@@ -1,23 +1,16 @@
-
-.contenedor-popup{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+/*Estilos para la tabla de responder*/
+.sin-responder{
+    background-color: #00234d;
+    
 }
-.popup{
-    display: flex;
-    width: 100%;
+th{
+    gap: 5rem;
+    width: 20%;
 }
-.confirmado{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
+/*+++++++++++++++++++++++++++++++++++++++++++++++*/
 .respondidos{
     background-color: #00234d;
-    width: 100%;
+     
 }
 .encabezado{
     height: 5rem;
@@ -37,4 +30,21 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+.salir{
+    margin-top: 2rem;
+    background-color: #39a900;
+    text-decoration: none;
+    color: #000000;
+}
+/* RESPONSIVE */
+
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+}
+@media only screen and (min-width: 1024px){
+
 }
