@@ -22,7 +22,7 @@ function createNotificationBox() {
     var pqrFigure = document.createElement("figure");
     pqrFigure.classList.add("figure__icon--schedule");
     var pqrImg = document.createElement("img");
-    pqrImg.setAttribute("src", "../Styles/Img/Componentes-img/qprIcon.png");
+    pqrImg.setAttribute("src", "../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/qprIcon.png");
     pqrImg.setAttribute("alt", "Imagen de PQR");
     pqrFigure.appendChild(pqrImg);
     notificationsPqr.appendChild(pqrFigure);
