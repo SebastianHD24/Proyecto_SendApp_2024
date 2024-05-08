@@ -3,21 +3,21 @@
     <div class="notifications-container">
         <div class="notifications-box" style="display: none;">
             <figure class="figure__icon--schedule">
-                <img src="../Styles/Img/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
+                <img src="../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
             </figure>
                 <article class="article__text--1">
                     <p>Su cita con Bienestar al Aprendiz fue agendada con éxito, pulse para ver más información</p>
                 </article>
             <span></span>
             <figure class="figure__icon--confirm">
-                <img src="../Styles/Img/Componentes-img/check.png" alt="Imagen de confirmación">
+                <img src="../../../Proyecto_SendApp_2024/imagenes/Componentes-img/check.png" alt="Imagen de confirmación">
             </figure>
         </div>
             <!--Contenedor de notificaiones -->
         <div class="notifications-box" style="display: none;">
                 <!--Contenedor de la imagen -->
             <figure class="figure__icon--schedule">
-                <img src="../Styles/Img/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
+                <img src="../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
             </figure>
                 <!--contenedor de texto -->
                 <article class="article__text--1">
@@ -27,7 +27,7 @@
             <span></span>
                 <!--Segundo contenedor de imagen-->
             <figure class="figure__icon--confirm">
-                <img src="../Styles/Img/Componentes-img/exclamacion.png" alt="Imagen de exclamación">
+                <img src="../../../Proyecto_SendApp_2024/imagenes/Componentes-img/exclamacion.png" alt="Imagen de exclamación">
             </figure>
         </div>
 

@@ -29,7 +29,7 @@ if ($id_servicio == "N/Aplica") {
 // Ejecutar la consulta preparada
 if (mysqli_stmt_execute($stmt)) {
     // Redirigir al usuario de vuelta a la página principal
-    header("Location: index.php");
+    header("Location: ../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php");
     exit(); // Terminar el script después de redirigir
 } else {
     // Error al actualizar
