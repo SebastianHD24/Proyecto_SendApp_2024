@@ -103,7 +103,7 @@
        
       </select>
       <p>Area</p>
-      <input type="text" name="nombre_servicio" value=" ">
+      <input type="text" name="nombre_servicio" >
 
       <div class="formulario">
         <label for="descripcion">Descripción:</label>
@@ -127,30 +127,10 @@
  
 </main> 
 </div>
+<!-- script para mostrar el formulario de la cita cuando se le da click a la bolita  -->
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/formcita.js'></script>
-
+<!-- este script no se para que sirve mejor no lo muevo by juanes -->
 <script src="../../../../Proyecto_SendApp_2024/componentes/script.js"></script>
-<script>
-  function capturar_id(idServicio) {
-    // Establecer el campo de ID del servicio
-    const campoServicio = document.getElementById("id_servicio");
-    campoServicio.value = idServicio;
-    
-    // Hacer una solicitud AJAX para obtener el nombre del servicio
-    fetch(`Proyecto_SendApp_2024/bases/mainInterfaz/backend/nombreServicio.php?id_servicio=${idServicio}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                console.error("Error:", data.error);
-            } else {
-                // Actualizar el input con el nombre del servicio
-                const inputNombreServicio = document.querySelector('input[name="nombre_servicio"]');
-                inputNombreServicio.value = data.nombre_servicio;
-            }
-        })
-        .catch(error => console.error("Error al obtener el nombre del servicio:", error));
-}
-
-
-</script>
+<!-- este script hace que el nombre del area que tengo por el id lo meustre en el input  -->
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/Nombre_Area.js"></script>
 
