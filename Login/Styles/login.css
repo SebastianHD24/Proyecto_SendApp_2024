@@ -32,8 +32,9 @@ body {
 	margin: 4rem auto 0;
     padding: 5rem 4rem 0 4rem;
     border-radius: 2rem;
+	/* TAMAÑO DEL LOGIN */
 	max-width: 33rem;
-	min-height: 42.5rem;
+	/* min-height: 42.5rem; */ 
 	box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
 }
 
