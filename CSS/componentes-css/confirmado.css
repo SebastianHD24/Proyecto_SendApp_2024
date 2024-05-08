@@ -1,0 +1,40 @@
+
+.contenedor-popup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.popup{
+    display: flex;
+    width: 100%;
+}
+.confirmado{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.respondidos{
+    background-color: #00234d;
+    width: 100%;
+}
+.encabezado{
+    height: 5rem;
+}
+.encabezado2{
+    color: #FFFFFF;
+    width: 1200px;
+
+}
+.respuestas{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+}
+.logo{
+    width: 10%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}

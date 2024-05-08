@@ -1,7 +1,7 @@
 <h1 id="mensaje" style="display: none;">No hay notificaciones</h1>
 <section class="display-notificaciones">
     <div class="notifications-container">
-        <div class="notifications-box" style="display: ;">
+        <div class="notifications-box" style="display: none;">
             <figure class="figure__icon--schedule">
                 <img src="../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
             </figure>
@@ -14,7 +14,7 @@
             </figure>
         </div>
             <!--Contenedor de notificaiones -->
-        <div class="notifications-box" style="display: ;">
+        <div class="notifications-box" style="display: none;">
                 <!--Contenedor de la imagen -->
             <figure class="figure__icon--schedule">
                 <img src="../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" alt="Imagen de notificaciones">
