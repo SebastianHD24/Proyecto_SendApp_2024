@@ -2,7 +2,7 @@
 
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" type="text/css" href="Styles/coorporativas.css"> <!-- Estilos de relaciones coorporativas -->
+    <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/relacionesCorporativas/coorporativas.css"> <!-- Estilos de relaciones coorporativas -->
     <title>Relaciones Coorporativas</title>
 <?php endblock() ?>
 

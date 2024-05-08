@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="../Styles/login.css">
@@ -37,23 +36,23 @@
                 </ul>
             </div>
             <p id="mensaje_error"></p>
-            <label for="login-input-user" class="login__label">
-                Usuario
+            <label for="login-input-user-l" class="login__label">
+                Documento
             </label>
-            <input id="login-input-user" class="login__input" type="text" name="documento_identidad" />
-            <label for="login-input-password" class="login__label">
+            <input id="login-input-user-l" class="login__input" type="text" name="documento_identidad" />
+            <label for="login-input-password-l" class="login__label">
                 Contraseña
             </label>
-            <input id="login-input-password" class="login__input" type="password" name="contrasena" />
+            <input id="login-input-password-l" class="login__input" type="password" name="contrasena" />
             <label for="login-sign-up" class="login__label--checkbox">
                 <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
                 Mantenerme conectado
             </label>
             <input class="login__submit" value="Iniciar Sesion" type="submit">
         </form>
-        <div class="olvidaste">
+        <!-- <div class="olvidaste">
             <a id="goToRegister" class="login__forgot">¿Olvidaste tu contraseña?</a>
-        </div>
+        </div> -->
         <div class="regresarI">
             <button class="btn_regresar"><a href="../../index.php">Regresar</a></button>
         </div>
@@ -90,42 +89,42 @@
             <label for="login-input-user" class="login__label">
                 Documento de identidad
             </label>
-            <input id="login-input-user" class="login__input" type="number" name="documento_identidad"/>
+            <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad"/>
 
             <label for="login-input-password" class="login__label">
                 Contraseña
             </label>
-            <input id="login-input-password" class="login__input" type="text" name="contrasena"/>
+            <input id="login-input-password-p" class="login__input" type="text" name="contrasena"/>
             
             <label for="login-input-user" class="login__label">
                 Nombres
             </label>
-            <input id="login-input-user" class="login__input" type="text" name="nombres"/>
+            <input id="login-input-user-n" class="login__input" type="text" name="nombres"/>
 
             <label for="login-input-user" class="login__label">
                 Apellidos
             </label>
-            <input id="login-input-user" class="login__input" type="text" name="apellidos"/>
+            <input id="login-input-user-a" class="login__input" type="text" name="apellidos"/>
 
             <label for="login-input-user" class="login__label">
                 Correo
             </label>
-            <input id="login-input-user" class="login__input" type="email" name="correo"/>
+            <input id="login-input-user-c" class="login__input" type="email" name="correo"/>
 
             <label for="login-input-user" class="login__label">
                 Celular
             </label>
-            <input id="login-input-user" class="login__input" type="text" name="celular"/>
+            <input id="login-input-user-ce" class="login__input" type="text" name="celular"/>
 
             <label for="login-input-user" class="login__label">
                 Programa opcional
             </label>
-            <input id="login-input-user" class="login__input" type="text" name="programa"/>
+            <input id="login-input-user-p" class="login__input" type="text" name="programa"/>
 
             <label for="login-input-user" class="login__label">
                 Ficha opcional
             </label>
-            <input id="login-input-user" class="login__input" type="number" name="ficha"/>
+            <input id="login-input-user-f" class="login__input" type="number" name="ficha"/>
             <input class="login__submit" type="submit" value="Registrarse">
         </form>
         <div class="olvidaste">
@@ -137,6 +136,7 @@
     </div>
 </div>
 </body>
+<script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/inactividad.js"></script>
 <script src="../Scripts/login.js"></script>
 <script src="../Scripts/informar_errores.js"></script>
 </html>

@@ -1,4 +1,3 @@
-<!--Este codigo me extrae el nombre y el correo de la persona que inicio sesion para agregarselos a la interfaz-->
 <?php 
 
     $documento_identidad = $_SESSION['documento_identidad']; // Creo la varia la cual tendra el valor del numero de documento con el cual se ingreso
@@ -11,6 +10,8 @@
     $row_user = $result_user->fetch_assoc();
     //Construir el nombre completo del usuario
     $full_name = $row_user['nombres'] . ' ' . $row_user['apellidos'];
+
+    $id_rol = $row_user['id_rol'];
 
     // Consulta SQL para obtener datos de usuarios, roles y servicios
     $sql = "SELECT *, (SELECT nombre_rol FROM roles WHERE roles.id_rol = usuarios.id_rol) AS nombre_rol,

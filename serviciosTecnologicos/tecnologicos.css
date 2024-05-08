@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -23,49 +20,164 @@ body{
     font-family: 1.2rem;
 }
 
-/*titulo sennova*/
-.titulo{
-    text-align: center;
-    font-family: var(--fuente-open-sans);
+/*Contenido*/
+.orden{
+    margin: 4rem;
 }
-/*subtitulos*/
- .subtitulos{
-    font-family: var(--fuente-open-sans);
-    text-align: center;
-    margin-top: 50px;
-}
-/*contenido de el div senova*/
-.sennova{
+ .Primera_Impresion{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+} 
+
+.contn {
+    margin: 1rem;
+    flex:60%;
+    padding-right: 20px; 
+    text-align: left;
+}
+.contn, .imagen{
+    opacity: 0;
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.imagen{
+    flex: 35%;
+    text-align: center; 
+    padding: 20px;
 
 }
-.sennova section{
+.imagen img{
+    margin-top: 9rem;
+    max-width: 134%;
+    height: auto;
+}
+
+.Contenido{
     width: 100%;
     padding: 80px;
+}
+/*titulo */
+.titulo{
+    font-size: 6rem;
+    text-align:left;
+    font-family: var(--fuente-principal);
+    animation: fadeIn 3s forwards;
+    color: var(--azul);
+}
+/*subtitulos*/
+.subtitulos{
+    font-family: var(--fuente-open-sans);
+    text-align: left;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+.parrafo{
+    font-size: 2rem;
+}
+hr{
+    margin: 2rem 0 10px 0;
+}
+
+.tarjeta {        
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+    color: #000000; 
 
 }
-.sennova p{
-    text-align: justify;
-    margin-top: 50px;
-    font-family: var(--fuente-poppins);
-    line-height: 30px;
+.tarjeta.cambio{
+    color: #00324D;
+    background-color: #00324D;
+    background:linear-gradient(#cfcfcf,#ededed); 
 }
-/* .sennova img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
-article {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0px 0px 0px;
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
+}
+
+.tarj-img {
+    float: left; 
+    margin-right: 12px; 
+    margin-bottom: 10px;
+}
+
+
+.tarj-img img {
+    width: 100%; 
+    height:35%; 
     object-fit: cover;
+    opacity: 0; 
+    animation: aparecerDesdeIzquierda 1s ease forwards;
+} 
+@keyframes aparecerDesdeIzquierda {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.contenido_tarjeta {
+    overflow: hidden; 
+}
+.contenido-corto{
+    padding: 10px; 
+}
+.contenido-expansivo {
+    display: none;
+}
+
+.leerMenos,
+.leerMas {
+    cursor: pointer;
+    border-radius: 7px;
+    height: 30px;
+    width: 100px;
+    border: none;
+    color: #fff;
+    background-color: #39a900;
+    margin-top: 20px; 
+}
+@media only screen and (max-width: 720px) {
+    .contenido{
+        padding: 30px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .tarj-img {
+        width: 100%; 
+    }
+
+    .contenido_tarjeta {
+        width: 100%; 
+    }
+    .contn,
+    .imagen {
+        flex: auto; 
+        padding-right: 0; 
+        text-align: center; 
+        padding-top: 0;
+    }
 }
 /*******************************botones**********************************/
 /*Boton agendar cita*/
@@ -78,7 +190,7 @@ article {
     border: none;
     font-size: 18px;
     font-weight: 400;
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .button:hover{
@@ -149,3 +261,15 @@ article {
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
     }
 }
+
+/*Responsive titulo */
+@media only screen and (max-width: 767px){
+    .titulo{
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--fuente-principal);
+        color: var(--azul);
+
+    }
+}
+
