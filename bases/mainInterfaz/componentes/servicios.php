@@ -12,7 +12,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <button onclick="capturar_id(1)" id="Bienestar">Bienestar Al Aprendíz</button>
+                <button onclick="capturar_id(1)" id="Bienestar">Bienestar al Aprendiz</button>
               </article>
             </div>
 
@@ -25,73 +25,63 @@
 
             <div class="cards">
               <article>
-                <p>Coordinación Académica</p>
+                <button onclick="capturar_id(3)" id="psicologia">Psicología</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
               </article>    
             </div>
                 
-            <div class="cards">
-              <article>
-                <p>Administración</p>
-                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/administraconNegro.png" name="" alt=""/>
-              </article>     
-            </div>
+           
       
             <div class="cards">
               <article>
-                <p>Fondo Emprender</p>
+                <button onclick="capturar_id(4)" id="fondo_emprender">Fondo Emprender</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/enprederNegro.png" name="" alt=""/>
               </article>   
             </div>
 
             <div class="cards">
               <article>
-                <p>Relaciones Corporativas</p>
+                <button onclick="capturar_id(5)" id="relaciones_Corporativas">Relaciones Corporativas</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/corporacionNegro.png" name="" alt=""/>
               </article>      
             </div>
 
             <div class="cards">
               <article>
-                <p>Sennova</p>
+                <button onclick="capturar_id(6)" id="sennova">Sennova</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/senova.png" name="" alt=""/>
               </article>    
             </div>
 
             <div class="cards">
               <article>
-                <p>Servicios Tecnológicos</p>
+                <button onclick="capturar_id(7)" id="Servicios_tecnologicos">Servicios Tecnológicos</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/serviciosNegros.png" name="" alt=""/>
               </article>  
             </div>
 
             <div class="cards">
               <article>
-                <p>Fábrica De Software</p>
+                <button onclick="capturar_id(8)" id="fabrica_Software">Fábrica De Software</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/fabricaNegro.png" name="" alt=""/>
               </article>   
             </div>
 
             <div class="cards">
               <article>
-                <p>Tecno Academia</p>
+                <button onclick="capturar_id(9)" id="deportes">Deportes</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoAcademiaNegro.png" name="" alt=""/>
               </article>    
             </div>
 
-            <div class="cards">
-              <article>
-                <p>Tecno Parque</p>
-                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoParqueNegro.png" name="" alt=""/>
-              </article>  
-            </div>
+            
         </div>
     </section>  
 </div>
 <!-- la parte de solicitud citas -->
 <div  class="container oculto" >
     <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo">
-      <input type="text" name="id_servicio"  id='id_servicio' value="">
+      <input type="hidden" name="id_servicio"  id='id_servicio' value="">
 
       <h1>Solicitar Cita</h1>
      
@@ -127,6 +117,7 @@
  
 </main> 
 </div>
+
 <!-- script para mostrar el formulario de la cita cuando se le da click a la bolita  -->
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/formcita.js'></script>
 <!-- este script no se para que sirve mejor no lo muevo by juanes -->
