@@ -33,7 +33,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="../Bienestar/img/icons/ayuda.png" alt="imagen servicios que se ofrese">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -47,7 +47,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="../Bienestar/img/icons/ninos.png" alt="imangen representa el apoyo Emocional y psicologico">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -61,7 +61,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="../Bienestar/img/icons/habilidad.png" alt="imagen representativa de desarrollo de habilidades blandas">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -75,7 +75,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="../Bienestar/img/icons/felicidad.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -89,7 +89,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="../Bienestar/img/icons/asesoramiento.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
