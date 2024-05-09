@@ -82,16 +82,18 @@
 <div  class="container oculto" >
     <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo">
       <input type="hidden" name="id_servicio"  id='id_servicio' value="">
-
+  
       <h1>Solicitar Cita</h1>
      
-      <p>Jornada:</p>
+     
+      
+        <p>Jornada:</p>
 
       <select  name="jornada" class="select">
         <option value="Diurna"> Diurna </option>
         <option value="Mixta">Mixta</option>
        
-      </select>
+      </select> 
       <p>Area</p>
       <input type="text" name="nombre_servicio" >
 
