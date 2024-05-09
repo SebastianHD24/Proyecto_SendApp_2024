@@ -28,7 +28,7 @@
                         <a href="../../Proyecto_SendApp_2024/Bienestar/Deportes/deportes.php"><button class="btn">Deportes y Cultura</button></a>
             </div>
             <div class="Contenedor">
-            <h2>Servicios Ofrecidos</h2>
+            <h2 class="subtitulos">Servicios Ofrecidos</h2>
             <div class="tarjetas-contenedor">
                 <div class="tarjeta">
 
