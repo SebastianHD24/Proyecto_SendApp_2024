@@ -107,7 +107,9 @@ body{
     font-size: 23px;
     text-align: center;
 }
-
+.p1{
+    margin-top: 1.5rem;
+}
 
 hr{
     margin: 2rem 0 10px 0;
@@ -294,6 +296,7 @@ hr{
     .parrafo,.p{
         font-size: 1rem;
     }
+    .p1,
     .p{
         margin-top: 1.5rem;
         font-size: 1rem;

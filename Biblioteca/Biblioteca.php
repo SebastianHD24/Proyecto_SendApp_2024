@@ -89,7 +89,7 @@
 
                         <h2>¿Qué tipos de libros se pueden encontrar en la Biblioteca?</h2>
 
-                        <p class="p">Contamos con libros técnicos que apoyan todos los programas de formación, contamos con colección de literatura y algunas revistas.</p>
+                        <p class="p1">Contamos con libros técnicos que apoyan todos los programas de formación, contamos con colección de literatura y algunas revistas.</p>
 
                     </div>
                 </div>
@@ -103,7 +103,7 @@
 
                         <h2>¿Cuántos libros puede solicitar un aprendiz para un prestamos?</h2>
 
-                        <p class="p">Maximo 3 libros para llevar a casa.</p>
+                        <p class="p1">Maximo 3 libros para llevar a casa.</p>
 
                     </div>
                 </div>
@@ -135,7 +135,7 @@
 
                         <h2>Soluciones si un aprendiz daña un libro</h2>
 
-                        <p class="p"> Al dañar o extraviar un libro, debe reponer el mismo libro que se llevo, si es imposible entonces un libro con tematica similar. 
+                        <p class="p1"> Al dañar o extraviar un libro, debe reponer el mismo libro que se llevo, si es imposible entonces un libro con tematica similar. 
                         Lo ideal es que el libro no sea pirada y se le hace acompañamiento al aprendiz para reponerlo.</p>
 
                     </div>
@@ -167,7 +167,7 @@
                     <div class="contenido_tarjeta">
 
                         <h2 >¿Qué paginas virtuales estan vinculas a la biblioteca SENA?</h2>
-                        <p class="p">El sistema de biblioteca SENA es la pagina oficial y contamos con 33 bases de datos en varias areas del conocimiento y se puede encontrar informacion y libros electrónicos que estan disponibles para aprendices en formación y egresados.
+                        <p class="p1">El sistema de biblioteca SENA es la pagina oficial y contamos con 33 bases de datos en varias areas del conocimiento y se puede encontrar informacion y libros electrónicos que estan disponibles para aprendices en formación y egresados.
                         </p>
             
                     </div>
