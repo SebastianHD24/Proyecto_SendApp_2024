@@ -18,7 +18,7 @@
                         <p class="p">Nuestro horario de oficina, de 8:00 am a 6:00 pm, en nuestras oficinas de servicios tecnológicos en el centro. </p>
                     </div>
                         <div class="imagen">
-                            <img src="" alt="">
+                            <img src="../serviciosTecnologicos/img/img-conten/IMG_5391.jpg" alt="Imagenes lugar Servicios Tecnologicos">
                         </div>
                 </div>
 

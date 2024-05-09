@@ -22,7 +22,7 @@
                     <p><strong>Horario de atención:</strong>Lunes a Viernes de 7:30 AM a 12:00 PM y de 1:00 PM a 5:00 PM</p>
                 </div>
                         <div class="imagen">
-                            <img src="Img/Academia-Img/tecnoacademia1.png" alt="foto1">
+                            <img src="../fondoEmprender/img/img-content/IMG_5371.jpg" alt="foto1">
                         </div>
             </div>
             <button class="button">Reservar cita</button>

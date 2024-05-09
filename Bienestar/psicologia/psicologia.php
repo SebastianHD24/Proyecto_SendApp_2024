@@ -30,7 +30,7 @@
                         <hr>
                     </div>
                         <div class="imagen">
-                            <img src="../psicologia/Img/img content/IMG_7740.JPG" alt="logo"> 
+                            <img src="../psicologia/Img/img content/IMG_1.jpg" alt="logo"> 
                         </div>
                 </div>
                 <button class="button">Reservar cita</button>
