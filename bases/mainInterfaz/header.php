@@ -37,8 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/PQR.css" >
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/confirmado.css">
-
-
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/servicios.css" >
 
 </head>
 <body>

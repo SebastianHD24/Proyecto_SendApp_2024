@@ -1,10 +1,25 @@
 //ETIQUETAS OBTENIDAS EN LA PAGINA
 
-//ventana emergente de confirmacion o negacion
-let ventanaConfirmacion = document.querySelector('.popUpSeguro');
+// ventana emergente de confirmacion o negacion
+let ventanaConfirmacion = document.querySelector('.fondoPopUp');
 
-//Contenedor de la tabla de servicios
+// Contenedor de la tabla de servicios
 let contenedorTabla = document.querySelector('.tablaServicios');
+
+// contenedor de los datos del admin
+let popUp = document.querySelector('.popUp');
+
+// boton para cerrar el contenedor de la info del admin
+let botonCerrar = document.querySelector('.cerrar');
+
+// tabla con la info del admin
+let tablaAdmin = document.querySelector('.tablaAdmin');
+
+// mensaje predeterminado en caso de que el servicio no cuente con un admin
+let mensajeAdmin = document.querySelector('.mensajeAdmin');
+
+// nombre del servicio
+let nomServicio = document.getElementById('tituloServicio');
 
 
 //EVENTOS Y FUNCIONES
@@ -24,7 +39,7 @@ function confirmacionAd() {
 
         document.querySelector('.confirmacionAd.nega').addEventListener('click', () => {
             // Ocultar el popup
-            ventanaConfirmacion.classList.add('oculto')
+            ventanaConfirmacion.classList.add('oculto');
             contenedorTabla.classList.remove('oculto');
             // Rechazamos la promesa
             reject(new Error('Se canceló la operación'));
@@ -33,88 +48,147 @@ function confirmacionAd() {
 }
 
 
-// Bloque de codigo que cambia el estado del servicio seleccionado y maneja los posibles errores y como manejarlos al realizar la accion
+// Bloque de codigo que cambia el estado del servicio seleccionado y maneja los posibles errores al realizar la accion
 function actualizarEstado(idServicio) {
     confirmacionAd().then(() => {
-        // Se ejecuta cuando se hace clic en el botón "Sí"
-        fetch('../../../Proyecto_SendApp_2024/', {
-            method: 'POST',
-            body: JSON.stringify({ 
-                idServicio: idServicio 
-            })
-        })
+    fetch('../../bases/mainInterfaz/backend/cambiarEstado.php', { // Reemplaza 'ruta_a_tu_archivo_php.php' con la ruta correcta a tu archivo PHP
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ idServicio: idServicio })
     })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Hubo un error en la solicitud.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.cambio === 0) {
+            location.reload(); // Recarga la página si la operación fue exitosa
+        } else {
+            console.log(data);
+            console.log('Hubo un error al cambiar el estado del servicio');
+        }
+    })
+});
 }
 
 
-// Bloque de codigo que cambia al admin de un area especifica y maneja los posibles errores y como manejarlos al realizar la accion
-/*function actualizarAdmin(idServicio, posicion) {
-    // Obtener el select de la misma fila del boton
+// Bloque de codigo que cambia al admin de un area especifica y maneja los posibles errores al realizar la accion
+function actualizarAdmin(idServicio, posicion) {
+    // Obtener el select de la misma fila del botón
     let selectAdmin = document.querySelectorAll('.posibles_admin')[posicion];
     // Obtener el valor seleccionado del select
     let admin = selectAdmin.value;
 
     confirmacionAd().then(() => {
-        // Realizar la solicitud AJAX con los datos del servicio y el admin seleccionado
-        $.ajax({
-            url: './actualizarServicios.php',
-            type: 'POST',
-            data: {
-                idServicio: idServicio,
-                admin: admin
+        // Realizar la solicitud fetch con los datos del servicio y el admin seleccionado
+        fetch('../../bases/mainInterfaz/backend/actualizarAdministrador.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
             },
-            success: function(response) {
-                console.log(response)
-                let jsonData = JSON.parse(response);
-                switch (jsonData.success) {
-                    case 0:
-                        $('.tablaServicios').load('../../../Proyecto_SendApp_2024/bases/mainInterfaz/baseInterfaz.php .tablaServicios > * ');
-                        break;
-                    case 1:
-                        $('.mensajeCambio').eq(posicion).removeClass('oculto').text('No se enviaron datos nuevos para actualizar');
-                        break;
-                    default:
-                        break;
-                }
+            body: JSON.stringify({ idServicio: idServicio,
+                admin: admin
+             })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Hubo un error en la solicitud.');
             }
-        });
-    }).catch(error => {
-        // Se ejecuta cuando se hace clic en el botón "No" o se cancela la operación
-        console.error(error.message);
-        // Aquí puedes manejar el caso en el que se cancela la operación
+            return response.json();
+        })
+        .then(data => {
+            switch (data.success) {
+                case 0:
+                    location.reload();
+                    break;
+                case 1:
+                    let mensajeCambio = document.querySelectorAll('.mensajeCambio')[posicion];
+                    mensajeCambio.classList.remove('oculto');
+                    mensajeCambio.textContent = 'No se enviaron datos nuevos para actualizar';
+                    contenedorTabla.classList.remove('oculto');
+                    ventanaConfirmacion.classList.add('oculto');
+                    break;
+                default:
+                    console.log(data.data)
+                    break;
+            }
+        })
     });
-};
+}
+
+// Bloque de codigo que oculta el contenedor de la info del admin
+botonCerrar.addEventListener('click', function () {
+    // Limpiar la tabla antes de agregar nuevos datos
+    popUp.classList.add('oculto');
+    contenedorTabla.classList.remove('oculto');
+    mensajeAdmin.classList.remove('oculto');
+    tablaAdmin.classList.remove('oculto');
+    nomServicio.classList.remove('oculto');
+})
 
 
-
-function consultar(idAdmin) {
-    $.ajax({
-        url: 'mostrarAdmin.php',
-        type: 'POST',
-        data: {
-            admin: idAdmin,
+// Bloque de codigo que muestra la info del admin de un area
+function consultar(idAdmin, servicio) {
+    fetch('../../bases/mainInterfaz/backend/mostrarAdmin.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
         },
-        success: function(response) {
-            console.log(response);
-            // Limpiar la tabla antes de agregar nuevos datos
-            $('.popUp').removeClass('oculto');
-            $('.cerrar').removeClass('oculto');
-            $('.tablaAdmin tbody').empty();
-
-            let adminData = JSON.parse(response);
-
-            // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
-            if (adminData === '') {
-                $('.mensajeAdmin').removeClass('oculto');
-            } else {
-                $('.tablaAdmin').removeClass('oculto');
-
-                // Mostrar la imagen
-                $('.tablaAdmin tbody').append('<tr><td><img src="' + adminData.imagen + '" alt="Imagen de usuario"></td><td>' + adminData.nombres + '</td><td>' + adminData.apellidos + '</td><td>' + adminData.correo + '</td><td>' + adminData.celular + '</td></tr>');
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error("Error al obtener datos: " + error);
+        body: JSON.stringify({ admin: idAdmin })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Hubo un error en la solicitud.');
         }
+        return response.json();
+    })
+    .then(adminData => {
+        // Limpiar la tabla antes de agregar nuevos datos
+        popUp.classList.remove('oculto');
+        contenedorTabla.classList.add('oculto');
+        tablaAdmin.querySelector('tbody').innerHTML = '';
+
+        // Verificación si existe o no un Admin
+        if (adminData.adminNotFound) {
+            tablaAdmin.classList.add('oculto');
+            nomServicio.classList.add('oculto');
+        } else {
+            // Se ordenan los datos del admin para mostrarlos ordenadamente
+            mensajeAdmin.classList.add('oculto');
+            const tr = document.createElement('tr');
+            const tdImagen = document.createElement('td');
+            const imagen = document.createElement('img');
+            imagen.src = adminData.imagen;
+            imagen.alt = 'Imagen de usuario';
+            tdImagen.appendChild(imagen);
+
+            const tdNombres = document.createElement('td');
+            tdNombres.textContent = adminData.nombres;
+
+            const tdApellidos = document.createElement('td');
+            tdApellidos.textContent = adminData.apellidos;
+
+            const tdCorreo = document.createElement('td');
+            tdCorreo.textContent = adminData.correo;
+
+            const tdCelular = document.createElement('td');
+            tdCelular.textContent = adminData.celular;
+
+            tr.appendChild(tdImagen);
+            tr.appendChild(tdNombres);
+            tr.appendChild(tdApellidos);
+            tr.appendChild(tdCorreo);
+            tr.appendChild(tdCelular);
+
+            tablaAdmin.querySelector('tbody').appendChild(tr);
+            nomServicio.textContent = "Adminitrador del servicio: " + servicio;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
     });
-} */
+}
