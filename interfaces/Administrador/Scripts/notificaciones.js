@@ -30,43 +30,27 @@ function ver() {
     .then(data => {
         // Limpiar las tablas antes de agregar nuevos datos
         document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML = '';
-        document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML = '';
 
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(usuario => {
-            if (usuario.respuesta_pqrs === null) {
-                document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML += `
-                    <tr>
-                        <td>${usuario.id_peticion}</td>
-                        <td>${usuario.nombres}</td>
-                        <td>${usuario.apellidos}</td>
-                        <td>${usuario.documento_identidad}</td>
-                        <td>${usuario.fecha_solicitud}</td>
-                        <td>${usuario.tipo_pqrs}</td>
-                        <td>${usuario.descripcion}</td>
-                        <td>
-                            <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
-                                <input type="hidden" name="fecha_respuesta" id="fecha_S">
-                                <input type="hidden" name="id_peticion" id="id_pqr1">
-                                <input type="text" name="respuesta_pqrs">
-                                <input type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});">
-                            </form>
-                        </td>
+            document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML += `
+                <tr>
+                    <td>${usuario.id_peticion}</td>
+                    <td>${usuario.nombres}</td>
+                    <td>${usuario.apellidos}</td>
+                    <td>${usuario.documento_identidad}</td>
+                    <td>${usuario.fecha_solicitud}</td>
+                    <td>${usuario.tipo_pqrs}</td>
+                    <td>${usuario.descripcion}</td>
+                    <td>
+                        <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
+                            <input type="hidden" name="fecha_respuesta" id="fecha_S">
+                            <input type="hidden" name="id_peticion" id="id_pqr1">
+                            <input type="text" name="respuesta_pqrs">
+                            <input type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});">
+                        </form>
+                    </td>
                     </tr>`;
-            } else {
-                document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
-                    <tr>
-                        <td>${usuario.id_peticion}</td>
-                        <td>${usuario.nombres}</td>
-                        <td>${usuario.apellidos}</td>
-                        <td>${usuario.documento_identidad}</td>
-                        <td>${usuario.fecha_solicitud}</td>
-                        <td>${usuario.fecha_respuesta}</td>
-                        <td>${usuario.tipo_pqrs}</td>
-                        <td>${usuario.descripcion}</td>
-                        <td>${usuario.respuesta_pqrs}</td>
-                    </tr>`;
-            }
         });
 
         // Agregar el evento de envío del formulario
@@ -98,11 +82,11 @@ function enviarIdPQR(id) {
 }
 
 function mostrarHistorial(){
-    fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarConsulta.php')
+    fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
     .then(response => response.json())
     .then(data => {
-        data.forEach(usuario => {
-            if (usuario.respuesta_pqrs != null) {
+        data.forEach(historial => {
+            if (historial.respuesta_pqrs != null) {
                 container_r.style.display = "block";
                 mensaje1.style.display = "none";
             } else {
@@ -119,6 +103,30 @@ function verHistorial(){
     mensaje.style.display = "none";
     mensaje1.style.display = "block";
     container.style.display = "none";
+
+    fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
+    .then(response => response.json())
+    .then(data => {
+        // Limpiar las tablas antes de agregar nuevos datos
+        document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML = '';
+
+        // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
+        data.forEach(historial => {
+            document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
+                <tr>
+                    <td>${historial.id_peticion}</td>
+                    <td>${historial.nombres}</td>
+                    <td>${historial.apellidos}</td>
+                    <td>${historial.documento_identidad}</td>
+                    <td>${historial.fecha_solicitud}</td>
+                    <td>${historial.fecha_respusta}</td>
+                    <td>${historial.tipo_pqrs}</td>
+                    <td>${historial.descripcion}</td>
+                    <td>${historial.respuesta_pqrs}</td>
+                </tr>`;
+        });
+    })
+    .catch(error => console.error("Error al obtener datos: " + error));
 }
 function ocultarHistorial(){
     location.reload();
