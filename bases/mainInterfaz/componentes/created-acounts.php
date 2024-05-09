@@ -64,6 +64,7 @@
           } else {
             // Iterar sobre los resultados y mostrar cada fila en la tabla
             while ($row = mysqli_fetch_array($query)) {
+              $frase = "No Aplica";
         ?>
               <tr id="row_<?= $row['documento_identidad'] ?>">
                 <!-- Mostrar datos de usuario en cada columna -->
@@ -72,13 +73,27 @@
                 <td><?= $row['apellidos'] ?></td>
                 <td><?= $row['correo'] ?></td>
                 <td><?= $row['celular'] ?></td>
-                <td><?= $row['programa'] ?></td>
+                <td><?php 
+                  if($row['id_rol'] != 3){
+                    echo $frase;
+                  } else {
+                    echo $row['programa'];
+                  } 
+                  ?>
+                  </td>
                 <td><?= $row['ficha'] ?></td>
                 <!-- Mostrar el estado del usuario -->
                 <td id="estado_<?= $row['documento_identidad'] ?>" class="<?= ($row['estado'] == 1) ? 'activo' : 'inactivo' ?>"><?= ($row['estado'] == 1) ? 'Activo' : 'Inactivo' ?></td>
                 <td><?= $row['nombre_rol'] ?></td>
                 <!-- Mostrar el nombre del servicio en lugar del ID -->
-                <td><?= $row['nombre_servicio'] ?></td>
+                <td><?php
+                  if($row['id_rol'] != 2){
+                    echo $frase;
+                  } else {
+                    echo $row['nombre_servicio'];
+                  } 
+                  ?>
+                </td>
                 <!-- Acciones -->
                 <td>
                 <?php if ($row['estado'] == 1): ?>
@@ -122,22 +137,28 @@
     }
     // Consulta SQL para seleccionar el usuario con el documento de identidad especificado
     $sql="SELECT * FROM usuarios WHERE documento_identidad='$documento_identidad'";
+
     // Ejecutar la consulta SQL
     $query=mysqli_query($conn, $sql);
 
     // Obtener la fila de resultados como un array asociativo
     $row= mysqli_fetch_array($query);
+
+    
   ?>
 
   <a href="?p=created-acounts">Menu</a>
 
   <!-- Formulario para editar la información del usuario -->
   <div class="users-form">
-    <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/update.php" method="POST">
+    <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/update-created-accounts.php" method="post">
       <!-- Campo oculto para almacenar el documento de identidad del usuario -->
       <input type="hidden" name="documento_identidad" value="<?= $row['documento_identidad']?>">
 
       <!-- Campos para editar los datos del usuario -->
+      <label for="documento_identidad">Documento:</label>
+      <input type="number" name="nuevo_documento_identidad" id="documento_identidad" value="<?= $row['documento_identidad']?>"><br>
+
       <label for="nombres">Nombres:</label>
       <input type="text" name="nombres" id="nombres" value="<?= $row['nombres']?>"><br>
 
@@ -148,10 +169,10 @@
       <input type="text" name="celular" id="celular" value="<?= $row['celular']?>"><br>
 
       <label for="correo">Correo:</label>
-      <input type="text" name="correo" id="correo" value="<?= $row['correo']?>"><br>
+      <input type="email" name="correo" id="correo" value="<?= $row['correo']?>"><br>
 
       <label for="ficha">Ficha:</label>
-      <input type="text" name="ficha" id="ficha" value="<?= $row['ficha']?>"><br>
+      <input type="number" name="ficha" id="ficha" value="<?= $row['ficha']?>"><br>
 
       <!-- Menú desplegable para seleccionar el rol del usuario -->
       <label for="id_rol">Rol:</label>
@@ -173,26 +194,39 @@
         ?>
       </select><br>
 
-      <!-- Menú desplegable para seleccionar el servicio del usuario -->
-      <label for="id_servicio">Servicio:</label>
-      <select name="id_servicio" id="id_servicio">
-        <?php
-          // Realizar la consulta para obtener todos los servicios
-          $sql_servicios = "SELECT id_servicio, nombre_servicio FROM servicios";
-          $result_servicios = mysqli_query($conn, $sql_servicios);
+      <div id="servicio_select" style="display: <?php echo ($row['id_rol'] != 3) ? 'block' : 'none'; ?>">
+        <!-- Menú desplegable para seleccionar el servicio del usuario -->
+        <label for="id_servicio">Servicio:</label>
+        <select name="id_servicio" id="id_servicio">
+          <?php
+            // Realizar la consulta para obtener todos los servicios
+            $sql_servicios = "SELECT id_servicio, nombre_servicio FROM servicios";
+            $result_servicios = mysqli_query($conn, $sql_servicios);
 
-          // Iterar sobre los resultados y crear opciones del menú desplegable
-          while ($row_servicios = mysqli_fetch_assoc($result_servicios)) {
-            echo "<option value='{$row_servicios['id_servicio']}'";
-            // Si el ID del servicio coincide con el del usuario, seleccionarlo por defecto
-            if ($row_servicios['id_servicio'] == $row['id_servicio']) {
+            // Iterar sobre los resultados y crear opciones del menú desplegable
+            while ($row_servicios = mysqli_fetch_assoc($result_servicios)) {
+              echo "<option value='{$row_servicios['id_servicio']}'";
+              // Si el ID del servicio coincide con el del usuario, seleccionarlo por defecto
+              if ($row_servicios['id_servicio'] == $row['id_servicio']) {
                 echo " selected";
-            }
-            echo ">{$row_servicios['nombre_servicio']}</option>";
-          }
-        ?>
-      </select><br>
+              }
 
+              echo ">{$row_servicios['nombre_servicio']}</option>";
+            }
+          ?>
+        </select><br>
+      </div>
+
+      <script>
+        document.getElementById('id_rol').addEventListener('change', function() {
+          var servicioSelect = document.getElementById('servicio_select');
+          if (this.value == 3) {
+            servicioSelect.style.display = 'none';
+          } else {
+            servicioSelect.style.display = 'block';
+          }
+        });
+      </script>
       <!-- Botón para enviar el formulario y actualizar la información del usuario -->
       <input type="submit" value="Actualizar">
     </form>
