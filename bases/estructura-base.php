@@ -82,7 +82,7 @@
             </nav>
 
             <!-- Contenido Responsive Menu-->
-            <div class="resposive__menu" id="menu-no-sesion" style="display: none;">
+            <div class="resposive__menu" id="menu-no-sesion" >
                 <ul class="resposive__menu-ul">
                     <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicioo</p></a></li>
                     <li class="btn-areas">
