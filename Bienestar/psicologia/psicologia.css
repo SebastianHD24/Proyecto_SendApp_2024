@@ -272,6 +272,10 @@ a:hover {
         border-radius: 49%;
         margin-bottom: 1rem;
     }
+    .tarjetas-contenedor{
+        gap: 1.5rem;
+        margin-bottom: 0px;
+    }
 }
 /* ------------button ------------------------------- */
 .botones-bienestar{
