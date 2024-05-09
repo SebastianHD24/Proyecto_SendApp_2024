@@ -27,8 +27,10 @@
         <div class="Contenedor">
         <div class="actividades">
                 <h3 class="subtitulos">¿Qué actividades ofrecemos?</h3>
-                <p>
-                    Trabajamos bajo los lineamientos a nivel nacional del SENA. Tenemos dos ramas que son:
+                <p class="p">
+                    Trabajamos bajo los lineamientos a nivel 
+                    <br>
+                    nacional del SENA. Tenemos dos ramas que son:
                     <br>
                 </p>
 
