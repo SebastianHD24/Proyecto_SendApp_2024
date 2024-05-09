@@ -104,18 +104,18 @@
             <div class="contenedor-esferas">
                 <div class="esfera esfera-1">
                     <h3 class="subtitulo">Nuestro Enfoque</h3>
-                        <p class="p">En Bienestar al Aprendiz, creemos en el poder del apoyo integral para promover el éxito académico y personal de nuestros aprendices. Nos esforzamos por crear un entorno acogedor y solidario donde cada estudiante se sienta valorado y empoderado para alcanzar su máximo potencial.</p>
+                        <p >En Bienestar al Aprendiz, creemos en el poder del apoyo integral para promover el éxito académico y personal de nuestros aprendices. Nos esforzamos por crear un entorno acogedor y solidario donde cada estudiante se sienta valorado y empoderado para alcanzar su máximo potencial.</p>
                 </div>
 
                 <div class="esfera esfera-2">
                     <h3 class="subtitulo">Nuestro Equipo</h3>
                 
-                        <p class="p">Nuestro equipo está formado por profesionales capacitados en psicología, orientación educativa, trabajo social y otras disciplinas relacionadas. Estamos comprometidos con tu bienestar y éxito, y trabajamos juntos para brindarte el apoyo que necesitas para triunfar en tu viaje educativo.</p>
+                        <p >Nuestro equipo está formado por profesionales capacitados en psicología, orientación educativa, trabajo social y otras disciplinas relacionadas. Estamos comprometidos con tu bienestar y éxito, y trabajamos juntos para brindarte el apoyo que necesitas para triunfar en tu viaje educativo.</p>
                 </div>
                 <div class="esfera esfera-3">
                     <h3 class="subtitulo">Contáctanos</h3>
                 
-                        <p class="p">Si necesitas apoyo, orientación o simplemente alguien con quien hablar, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu camino hacia el éxito académico y personal. ¡No estás solo(a)!</p>
+                        <p >Si necesitas apoyo, orientación o simplemente alguien con quien hablar, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu camino hacia el éxito académico y personal. ¡No estás solo(a)!</p>
                 </div>
              </div>
         </section>
