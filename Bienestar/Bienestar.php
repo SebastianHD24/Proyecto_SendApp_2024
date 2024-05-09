@@ -20,7 +20,7 @@
                         <hr>
                     </div>
                         <div class="imagen">
-                            <img src="./img/LogosSena-img/Bienestar logo.jpg" alt="">
+                            <img src="./img/img-content/IMG_5364.jpg" alt="">
                         </div>
                 </div>
                     <div class="botones-bienestar">
