@@ -36,6 +36,7 @@
               </article>    
             </div>
                 
+           
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/administraconNegro.png" name="" alt=""/>
@@ -106,6 +107,7 @@
               </article>    
             </div>
 
+            
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoParqueNegro.png" name="" alt=""/>
