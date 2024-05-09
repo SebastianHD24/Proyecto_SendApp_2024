@@ -188,6 +188,10 @@ hr{
     list-style: none;
     color: #000000;
 }
+.iconosBajo{
+    width: 72px;
+    height: 72px;
+}
 
 /*******************************botones**********************************/
 /*Boton agendar cita*/
