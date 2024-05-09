@@ -18,7 +18,7 @@
                     <p><strong>Horario de atención:</strong>Lunes a Viernes de 8:00 AM a 8:00 PM jornada continua.</p>
                 </div>
                     <div class="imagen">
-                        <img src="img/logo_SENNOVA.jpg" alt="">
+                        <img src="../Biblioteca/img/img-content/IMG_5358.jpg" alt="">
                     </div>
             </div>
 
