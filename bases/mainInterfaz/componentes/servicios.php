@@ -19,7 +19,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
-                <button id="Biblioteca" class="btn">
+                <button onclick="capturar_id(2)" id="Biblioteca" class="btn">
                   <p class="txt1">Biblioteca</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -29,15 +29,15 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
-                <button id="Coordinacion" class="btn">
-                  <p class="txt1">Coordinación Académica</p>
+                <button onclick="capturar_id(3)"id="psicologia" class="btn">
+                  <p class="txt1">Psicologia</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>    
             </div>
                 
            
-            <div class="cards">
+            <!-- <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/administraconNegro.png" name="" alt=""/>
                 <button id="Administracion" class="btn">
@@ -45,12 +45,12 @@
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>     
-            </div>
+            </div> -->
       
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/enprederNegro.png" name="" alt=""/>
-                <button id="FondoE" class="btn">
+                <button onclick="capturar_id(4)" id="FondoE" class="btn">
                   <p class="txt1">Fondo Emprender</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -60,7 +60,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/corporacionNegro.png" name="" alt=""/>
-                <button id="RelacionesC" class="btn">
+                <button onclick="capturar_id(5)" id="RelacionesC" class="btn">
                   <p class="txt1">Relaciones Corporativas</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -70,7 +70,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/senova.png" name="" alt=""/>
-                <button id="Sennova" class="btn">
+                <button onclick="capturar_id(6)" id="Sennova" class="btn">
                   <p class="txt1">Sennova</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -80,7 +80,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/serviciosNegros.png" name="" alt=""/>
-                <button id="ServiciosT" class="btn">
+                <button onclick="capturar_id(7)" id="ServiciosT" class="btn">
                   <p class="txt1">Servicios Tecnológicos</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -90,7 +90,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/fabricaNegro.png" name="" alt=""/>
-                <button id="FabricaS" class="btn">
+                <button onclick="capturar_id(8)" id="FabricaS" class="btn">
                   <p class="txt1">Fábrica De Software</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -100,15 +100,15 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoAcademiaNegro.png" name="" alt=""/>
-                <button id="TecnoA" class="btn">
-                  <p class="txt1">Tecno Academia</p>
+                <button onclick="capturar_id(9)" id="Deportes" class="btn">
+                  <p class="txt1">Deportes</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>    
             </div>
 
             
-            <div class="cards">
+            <!-- <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoParqueNegro.png" name="" alt=""/>
                 <button id="TecnoP" class="btn">
@@ -116,7 +116,7 @@
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>  
-            </div>
+            </div> -->
         </div>
     </section>  
 </div>
