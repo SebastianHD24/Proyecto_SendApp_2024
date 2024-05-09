@@ -3,7 +3,6 @@
 
 <h1 id="mensaje">No hay nuevas PQR</h1>
 <div class="contenedor-popup" id="contenedor-popup"> 
-    <div class="popup">
         <div class="sin-responder" id="sin-responder" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="sin_respuesta" class="confirmado">
@@ -65,7 +64,6 @@
             </table>
         </div>  
     </div>
-</div>
 <a href="#" onclick="verHistorial();" id="Historial">Ver historial</a>
 <a href="#" class="salir" id="volver" onclick="ocultarHistorial();" style="display: none;">Salir</a>
 </main> 
