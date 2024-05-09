@@ -59,7 +59,8 @@
         </div>
     </div>
 </section>
-</main> 
+<a onclick>Ver historial</a>
+</main>
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/notificacionesPQR.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/mostrarRespuesta.js"></script>
