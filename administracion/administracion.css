@@ -64,7 +64,7 @@ body{
 .Contenido{
     width: 100%;
     padding: 70px;
-    background:linear-gradient(#ededed,#fff); 
+
     
 }
 /*titulo */
@@ -94,6 +94,7 @@ hr{
     align-items: center;
     border-radius: 15px;
     background:linear-gradient(#cfcfcf,#ededed); 
+    color: #000000;
 }
 .tarjetas-contenedor {
     display: flex;
