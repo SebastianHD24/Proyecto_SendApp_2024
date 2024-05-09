@@ -22,12 +22,13 @@
 body{
     font-family: var(--fuente-principal);
     font-family: 1.2rem;
+
 }
 
 /*Contenido*/
 .orden{
-    margin: 4rem;
-}
+    margin-bottom: 4rem;
+} 
  .Primera_Impresion{
     display: flex;
     flex-wrap: wrap;
@@ -69,13 +70,12 @@ body{
 
 .Contenido{
     width: 100%;
-    padding: 70px;
-    background:linear-gradient(#ededed,#fff); 
+    padding: 40px 53px 53px 53px;
     
 }
 /*titulo */
 .titulo{
-    font-size: 6rem;
+    font-size: 5rem;
     text-align:left;
     font-family: var(--fuente-principal);
     animation: fadeIn 3s forwards;
@@ -83,27 +83,41 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-    font-family: var(--fuente-open-sans);
-    text-align: left;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-family: var(--fuente-principal);
+    text-align: center;
+    padding-bottom: 1.5em;
+    margin-top: 4rem;
+    color: #000000;
+
 }
 .sub{
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: center;
     font-size: 3rem;
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
-    font-size: 25px;
+    font-size: 22px;
+
+
 }
 .p{
-    color: #00324D;
-    font-size: 25px;
+    padding: 2px;
+    font-size: 23px;
     text-align: center;
 }
+.p1{
+    margin-top: 1.5rem;
+}
+
 hr{
     margin: 2rem 0 10px 0;
+}
+.actividad{
+    margin: 2.9rem;
+    display: flex;
+    gap: 10%;
 }
 .Contenedor {
     display: flex;
@@ -112,15 +126,22 @@ hr{
     border-radius: 15px;
     background:linear-gradient(#cfcfcf,#ededed); 
 }
+.Contenedor p{
+    color: #000000;
+}
+.Contenedor strong{
+    color: #000000;
+}
 .tarjetas-contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 3rem 0 3rem 0;
     gap: 4rem;
+    color: #000000;
 }
 .tarjeta {  
-    width: 40rem;      
+    width: 32rem;      
     background-color: #f0f0f0;
     transition: transform 0.3s ease;
     text-align: center;
@@ -136,6 +157,7 @@ hr{
     transform: scale(1.1);
     box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
 }
+
 .l_ordenada{
     list-style-type:none;
     padding-left: 20px;
@@ -157,6 +179,14 @@ hr{
     left: -20px;
     top: 50%; 
     transform: translateY(-50%); 
+}
+.actividad{
+    display: flex;
+    gap: 5%;
+}
+.l_desordenada li{
+    list-style: none;
+    color: #000000;
 }
 
 /*******************************botones**********************************/
@@ -253,21 +283,28 @@ hr{
         padding: 30px;
     }
     .orden{
-        margin: 2rem;
+        margin-bottom: 2rem;
     }
     .tarjeta{
         width: 87%; 
         max-width: 30rem;
     }
     .subtitulos,.sub{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
     .parrafo,.p{
         font-size: 1rem;
     }
-}
-.actividad{
-    display: flex;
-    gap: 5%;
+    .p1,
+    .p{
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
+    .actividades{
+       width: 100%;
+    }
+    .actividad{ 
+        flex-wrap: wrap;
+    }
 }

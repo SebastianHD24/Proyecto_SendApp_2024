@@ -30,7 +30,7 @@
                     </th>
                     <th class="nombreAdmin">
                     <?php
-                        $documento_identidad = $servicios['documento_identidad'];
+                        $documento_identidad = $servicios['admin_area'];
                         $consulta_admin = "SELECT CONCAT(nombres, ' ', apellidos) AS nombre_completo FROM usuarios WHERE documento_identidad = $documento_identidad";
                         $consulta_a = mysqli_query($conn, $consulta_admin);
                         if ( mysqli_num_rows($consulta_a) == 0) {
@@ -66,7 +66,7 @@
                             $hayFuncionarios = false; // Variable para indicar si hay funcionarios
                             if (mysqli_num_rows($consulta_f) != 0):
                                 while ($funci = mysqli_fetch_array($consulta_f)):
-                                    if ($funci['estado'] != 0 && $servicios['documento_identidad'] != $funci['documento_identidad']):
+                                    if ($funci['estado'] != 0 && $servicios['admin_area'] != $funci['documento_identidad']):
                                         $hayFuncionarios = true;
                                         ?>
                                         <option value="<?= $funci['documento_identidad'] ?>">
@@ -87,13 +87,13 @@
                     </th>
                     <th>
                         <span class="mensajeCambio oculto"></span>
-                        <button id="aceptarCambios" onclick="actualizarAdmin(<?= $servicios['id_servicio']; ?>, <?= $posicion; ?>);">Aceptar cambios</button>
+                        <button id="aceptarCambios" onclick="actualizarAdmin(<?= $servicios['id_servicio']; ?>, <?= $posicion; ?>);">Cambiar admin</button>
                     </th>
                     <th>
-                        <button id="cambiarEstado" onclick="actualizarEstado(<?= $servicios['id_servicio']; ?>);">Cambiar estado</button>
+                        <button id="cambiarEstado" onclick="actualizarEstado(<?= $servicios['id_servicio'] ?>);">Cambiar estado</button>
                     </th>
                     <th>
-                        <button id="consultarAdmin" onclick="consultar(<?= $servicios['documento_identidad'] ?>);">Consultar datos del admin</button>
+                        <button id="consultarAdmin" onclick="consultar(<?= $servicios['admin_area']; ?>, '<?= $servicios['nombre_servicio']; ?>');">Consultar datos del admin</button>
                     </th>
                 </tr>
                 <?php $posicion++; ?>
@@ -103,7 +103,8 @@
         </div>
 
         <div class="popUp oculto">
-            <table class="tablaAdmin oculto">
+            <h1 id="tituloServicio"></h1>
+            <table class="tablaAdmin">
                 <thead>
                     <tr>
                         <th>Foto de perfil</th>
@@ -123,15 +124,17 @@
                     </tr>
                 </tbody>
             </table>
-            <h1 class="mensajeAdmin oculto">Este servicio no cuenta con un admin</h1>
-            <button onclick="" class="cerrar oculto">Cerrar</button>
+            <h1 class="mensajeAdmin">Este servicio no cuenta con un admin</h1>
+            <button onclick="" class="cerrar">Cerrar</button>
         </div>
         
-        <div class="popUpSeguro oculto">
-            <h2>¿Seguro que desea realizar los cambios?</h2>
-            <div id="botones">
-                <button class="confirmacionAd afir">Si</button>
-                <button class="confirmacionAd nega">No</button>
+        <div class="fondoPopUp oculto">
+            <div class="popUpSeguro">
+                <h2>¿Seguro que desea realizar los cambios?</h2>
+                <div id="botones">
+                    <button class="confirmacionAd afir">Si</button>
+                    <button class="confirmacionAd nega">No</button>
+                </div>
             </div>
         </div>
     </main> 
