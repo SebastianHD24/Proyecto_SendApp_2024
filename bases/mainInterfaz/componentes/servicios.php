@@ -30,12 +30,7 @@
               </article>    
             </div>
                 
-            <div class="cards">
-              <article>
-                <p>Administración</p>
-                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/administraconNegro.png" name="" alt=""/>
-              </article>     
-            </div>
+           
       
             <div class="cards">
               <article>
@@ -79,12 +74,7 @@
               </article>    
             </div>
 
-            <div class="cards">
-              <article>
-                <p>Tecno Parque</p>
-                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoParqueNegro.png" name="" alt=""/>
-              </article>  
-            </div>
+            
         </div>
     </section>  
 </div>
