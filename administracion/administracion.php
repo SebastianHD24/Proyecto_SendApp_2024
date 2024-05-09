@@ -21,7 +21,7 @@
                     <hr>
                 </div>
                 <div class="imagen">
-                    <img src="img/logo_SENNOVA.jpg" alt="">
+                    <img src="./img-content/IMG_5375.jpg" alt="">
                 </div>
             </div>
 

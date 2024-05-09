@@ -16,6 +16,10 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* -------------------------------- mapa ----------------------- */
 
 .map{

@@ -22,64 +22,173 @@
 body{
     font-family: var(--fuente-principal);
     font-family: 1.2rem;
+
 }
 
-/*titulo sennova*/
+/*Contenido*/
+.orden{
+    margin-bottom: 4rem;
+} 
+ .Primera_Impresion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+} 
+
+.contn {
+    margin: 1rem;
+    flex:60%;
+    padding-right: 20px; 
+    text-align: left;
+}
+.contn, .imagen{
+    opacity: 0;
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.imagen{
+    flex: 35%;
+    text-align: center; 
+    padding: 20px;
+
+}
+.imagen img{
+    margin-top: 9rem;
+    max-width: 134%;
+    height: auto;
+}
+
+.Contenido{
+    width: 100%;
+    padding: 40px 53px 53px 53px;
+    
+}
+/*titulo */
 .titulo{
-    font-size: 4rem;
-    text-align: center;
+    font-size: 5rem;
+    text-align:left;
     font-family: var(--fuente-principal);
+    animation: fadeIn 3s forwards;
     color: var(--azul);
 }
 /*subtitulos*/
- .subtitulos{
-    font-size: 25px;
+.subtitulos{
+    font-size: 2.5rem;
     font-family: var(--fuente-principal);
-    text-align: left;
-    margin-top: 30px;
+    text-align: center;
+    padding-bottom: 1.5em;
+    margin-top: 4rem;
+    color: #000000;
+
+}
+.sub{
+    font-family: var(--fuente-principal);
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 4rem 2rem 4rem;
+}
+.parrafo{
+    font-size: 22px;
+
+
+}
+.p{
+    padding: 2px;
+    font-size: 23px;
+    text-align: center;
+}
+.p1{
+    margin-top: 1.5rem;
 }
 
-/*contenido de el div senova*/
-.biblioteca{
+hr{
+    margin: 2rem 0 10px 0;
+}
+.actividad{
+    margin: 2.9rem;
+    display: flex;
+    gap: 10%;
+}
+.Contenedor {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    background:linear-gradient(#cfcfcf,#ededed); 
+}
+.Contenedor p{
+    color: #000000;
+}
+.Contenedor strong{
+    color: #000000;
+}
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    gap: 4rem;
+    color: #000000;
+}
+.tarjeta {  
+    width: 32rem;      
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
 
 }
-.biblioteca section{
-    width: 100%;
-    padding: 60px;
-
-}
-.biblioteca p{
-    text-align: justify;
-    margin-top: 10px;
-    font-family: var(--fuente-principal);
-    line-height: 30px;
-}
-/* .biblioteca img{
-    width: 70%;
-    height:90px;
-    margin-top: 20px;
-} */
-
-.l_desordenada, .l_ordenada{
-    padding: 15px 30px 15px 30px;
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
 }
 
-.l_ordenada li, .l_desordenada li{
+.l_ordenada{
+    list-style-type:none;
+    padding-left: 20px;
+}
+.l_ordenada li{
+    margin: 2rem;
     margin-bottom: 10px;
-    font-size: 15px;
+    position: relative;
 }
-
-
-
+.l_ordenada li::before {
+    content: "✔";
+    display: inline-block; 
+    width: 1em; 
+    height: 1em; 
+    margin-right: 0.5em; 
+    color: #29a900; 
+    font-size: 1.2em; 
+    position: absolute; 
+    left: -20px;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
 .actividad{
     display: flex;
     gap: 5%;
 }
+.l_desordenada li{
+    list-style: none;
+    color: #000000;
+}
+
 /*******************************botones**********************************/
 /*Boton agendar cita*/
 .button{
@@ -162,7 +271,6 @@ body{
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
     }
 }
-
 @media only screen and (max-width: 767px){
     .titulo{
         font-size: 2rem;
@@ -170,5 +278,33 @@ body{
         font-family: var(--fuente-principal);
         color: var(--azul);
 
+    }
+    .Contenido{
+        padding: 30px;
+    }
+    .orden{
+        margin-bottom: 2rem;
+    }
+    .tarjeta{
+        width: 87%; 
+        max-width: 30rem;
+    }
+    .subtitulos,.sub{
+        font-size: 1rem;
+    }
+    
+    .parrafo,.p{
+        font-size: 1rem;
+    }
+    .p1,
+    .p{
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
+    .actividades{
+       width: 100%;
+    }
+    .actividad{ 
+        flex-wrap: wrap;
     }
 }
