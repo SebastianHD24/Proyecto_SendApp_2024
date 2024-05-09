@@ -17,64 +17,106 @@
             </div>
 
             <div class="cards">
-                <article>
-                  <button onclick="capturar_id(2)" id="biblioteca" >Biblioteca</button>
-                  <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
-                </article>     
+              <article>
+                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
+                <button onclick="capturar_id(2)" id="Biblioteca" class="btn">
+                  <p class="txt1">Biblioteca</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
+              </article>     
             </div>
 
             <div class="cards">
               <article>
-                <button onclick="capturar_id(3)" id="psicologia">Psicología</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
+                <button onclick="capturar_id(3)"id="psicologia" class="btn">
+                  <p class="txt1">Psicologia</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>    
             </div>
                 
            
+            <!-- <div class="cards">
+              <article>
+                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/administraconNegro.png" name="" alt=""/>
+                <button id="Administracion" class="btn">
+                  <p class="txt1">Administración</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
+              </article>     
+            </div> -->
       
             <div class="cards">
               <article>
-                <button onclick="capturar_id(4)" id="fondo_emprender">Fondo Emprender</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/enprederNegro.png" name="" alt=""/>
+                <button onclick="capturar_id(4)" id="FondoE" class="btn">
+                  <p class="txt1">Fondo Emprender</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>   
             </div>
 
             <div class="cards">
               <article>
-                <button onclick="capturar_id(5)" id="relaciones_Corporativas">Relaciones Corporativas</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/corporacionNegro.png" name="" alt=""/>
+                <button onclick="capturar_id(5)" id="RelacionesC" class="btn">
+                  <p class="txt1">Relaciones Corporativas</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>      
             </div>
 
             <div class="cards">
               <article>
-                <button onclick="capturar_id(6)" id="sennova">Sennova</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/senova.png" name="" alt=""/>
+                <button onclick="capturar_id(6)" id="Sennova" class="btn">
+                  <p class="txt1">Sennova</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>    
             </div>
 
             <div class="cards">
               <article>
-                <button onclick="capturar_id(7)" id="Servicios_tecnologicos">Servicios Tecnológicos</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/serviciosNegros.png" name="" alt=""/>
+                <button onclick="capturar_id(7)" id="ServiciosT" class="btn">
+                  <p class="txt1">Servicios Tecnológicos</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>  
             </div>
 
             <div class="cards">
               <article>
-                <button onclick="capturar_id(8)" id="fabrica_Software">Fábrica De Software</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/fabricaNegro.png" name="" alt=""/>
+                <button onclick="capturar_id(8)" id="FabricaS" class="btn">
+                  <p class="txt1">Fábrica De Software</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>   
             </div>
 
             <div class="cards">
               <article>
-                <button onclick="capturar_id(9)" id="deportes">Deportes</button>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoAcademiaNegro.png" name="" alt=""/>
+                <button onclick="capturar_id(9)" id="Deportes" class="btn">
+                  <p class="txt1">Deportes</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
               </article>    
             </div>
 
             
+            <!-- <div class="cards">
+              <article>
+                <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoParqueNegro.png" name="" alt=""/>
+                <button id="TecnoP" class="btn">
+                  <p class="txt1">Tecno Parque</p>
+                  <p class="txt2">Agendar Cita</p>
+                </button>
+              </article>  
+            </div> -->
         </div>
     </section>  
 </div>
@@ -82,16 +124,18 @@
 <div  class="container oculto" >
     <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo">
       <input type="hidden" name="id_servicio"  id='id_servicio' value="">
-
+  
       <h1>Solicitar Cita</h1>
      
-      <p>Jornada:</p>
+     
+      
+        <p>Jornada:</p>
 
       <select  name="jornada" class="select">
         <option value="Diurna"> Diurna </option>
         <option value="Mixta">Mixta</option>
        
-      </select>
+      </select> 
       <p>Area</p>
       <input type="text" name="nombre_servicio" >
 

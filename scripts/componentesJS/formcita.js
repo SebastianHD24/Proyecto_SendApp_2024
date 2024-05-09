@@ -1,34 +1,48 @@
-let buttonBiblioteca = document.getElementById('biblioteca'),
- buttonBienestar = document.getElementById('Bienestar'),
- buttonFondoEmprender = document.getElementById('fondo_emprender'),
- buttonRelacionesCorporativas = document.getElementById('relaciones_Corporativas'),
- buttonSennova = document.getElementById('sennova'),
- buttonServiciosTecnologicos = document.getElementById('Servicios_tecnologicos'),
- buttonFabricaSoftware = document.getElementById('fabrica_Software'),
- buttonDeportes = document.getElementById('deportes'),
- buttonPsicologia = document.getElementById('psicologia');
+// Referencias a los botones de las áreas
+let buttonBienestar = document.getElementById('Bienestar');
+let buttonBiblioteca = document.getElementById('Biblioteca');
+let buttonCoordinacion = document.getElementById('psicologia');
+let buttonAdministracion = document.getElementById('Administracion');
+let buttonFondoE = document.getElementById('FondoE');
+let buttonRelacionesC = document.getElementById('RelacionesC');
+let buttonSennova = document.getElementById('Sennova');
+let buttonServiciosT = document.getElementById('ServiciosT');
+let buttonFabricaS = document.getElementById('FabricaS');
+let buttonTecnoA = document.getElementById('Deportes');
+let buttonTecnoP = document.getElementById('TecnoP');
+
+// Contenedores de formulario e información
 let contenedor = document.querySelector('.container');
 let div_container = document.querySelector('.div__content');
-// Obtener referencias a los botones
-const botones = [buttonBienestar, buttonBiblioteca, buttonPsicologia,buttonFondoEmprender,buttonRelacionesCorporativas,buttonSennova,buttonServiciosTecnologicos,buttonFabricaSoftware,buttonDeportes];
 
-// Definir el evento
-function mostrarContenedor() {
+// Función para mostrar el formulario y ocultar el contenido
+function mostrarFormulario() {
     contenedor.classList.remove('oculto');
     div_container.classList.add('oculto');
 }
 
-// Asignar el evento a cada botón
+// Lista de botones a los que queremos asignar el evento
+let botones = [
+    buttonBienestar,
+    buttonBiblioteca,
+    buttonCoordinacion,
+    buttonAdministracion,
+    buttonFondoE,
+    buttonRelacionesC,
+    buttonSennova,
+    buttonServiciosT,
+    buttonFabricaS,
+    buttonTecnoA,
+    buttonTecnoP
+];
+
+// Asignar el evento 'click' a cada botón usando un foreach
 botones.forEach(boton => {
-    boton.addEventListener('click', mostrarContenedor);
+    if (boton) { // Verifica que el botón existe antes de agregar el evento
+        boton.addEventListener('click', mostrarFormulario);
+    } else {
+        console.warn('Un botón no fue encontrado');
+    }
 });
 
-
-// buttonBienestar.addEventListener('click', function(){
-//     contenedor.classList.remove('oculto');
-//     div_container.classList.add('oculto');
-// });
-// buttonBiblioteca.addEventListener('click', function(){
-//     contenedor.classList.remove('oculto');
-//     div_container.classList.add('oculto');
-// });
+console.log("hola soy Dios");

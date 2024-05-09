@@ -54,7 +54,7 @@
                     <article>
                         <div class="parrafos">
                             <hr>
-                            <p>Tecno Parque</p>
+                            <p>Tecnoparque</p>
                         </div>
                     </article>
                 </a>
@@ -68,7 +68,7 @@
                     <article>
                         <div class="parrafos">
                             <hr>
-                            <p>Tecno Académia</p>
+                            <p>Tecnoacadémia</p>
                         </div>
                     </article>
                 </a>
