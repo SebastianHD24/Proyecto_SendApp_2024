@@ -1,3 +1,9 @@
+/* .contenedor-popup{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+} */
 /*Estilos para la tabla de responder*/
 .sin-responder{
     background-color: #00234d;
@@ -10,12 +16,12 @@ th{
 /*+++++++++++++++++++++++++++++++++++++++++++++++*/
 .respondidos{
     background-color: #00234d;
-    width: 70vw;
      
 }
 
 .confirmado{
     width: 70vw;
+    
 }
 
 
@@ -40,26 +46,32 @@ th{
 }
 .salir{
     margin-top: 2rem;
-    background-color: #39a900;
     text-decoration: none;
     color: #000000;
 }
 /* RESPONSIVE */
 
 @media only screen and (max-width: 767px){
-    .confirmado{
-        border-collapse: collapse;
-        width: 20vh;
+    .contenedor-popup{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-x: auto;
     }
-    .respondidos{
-        border-collapse: collapse;
-        
-         
-    }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-
+    .contenedor-popup{
+        display: flex;
+        width: 50%;
+        overflow-x: auto;
+    }
 }
-@media only screen and (min-width: 1024px){
-
-}
+/* @media only screen and (min-width: 1024px){
+    .contenedor-popup{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-x: auto;
+    }
+} */
