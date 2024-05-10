@@ -118,7 +118,7 @@
         </div>    
     </div>
 
-    <!-- Ventana emergente despues de actualizar la contraseña. -->
+    <!-- Ventana emergente despues de una actualizacion. -->
     <div class="alerta" id="alerta" style="display: none;">
         <div class="mensaje">
             <p>¡Actualización exitosa!</p>
@@ -126,7 +126,6 @@
         <div class="imagen">
             <img src="" alt="Señal de aprobación">
         </div>
-         
     </div>
     </main> 
 </div>
