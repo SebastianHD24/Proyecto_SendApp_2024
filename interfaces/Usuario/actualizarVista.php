@@ -10,9 +10,12 @@
     $id_usuario = $_SESSION["documento_identidad"];
     $vista = 1;
 
-    $sql = mysqli_query($conn, "UPDATE pqr SET vista = $vista WHERE documento_us = '$id_usuario'");
+    $consulta_id_primero = mysqli_query($conn, "SELECT id_peticion FROM pqr WHERE documento_us = '$id_usuario' AND vista = 0 AND respuesta_pqrs IS NOT NULL LIMIT 1");
+    $fila = mysqli_fetch_assoc($consulta_id_primero);
+    $id_peticion = ($fila) ? $fila['id_peticion'] : null;
+    $sql = mysqli_query($conn, "UPDATE pqr SET vista = $vista WHERE documento_us = '$id_usuario' and id_peticion = '$id_peticion'");
     $consulta = "SELECT u.nombres, u.apellidos, u.id_rol, p.id_peticion, 
-    p.tipo_pqrs, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and u.documento_identidad = '$id_usuario'";
+    p.tipo_pqrs, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and u.documento_identidad = '$id_usuario' and id_peticion = '$id_peticion'";
     $resultado = mysqli_query($conn, $consulta);
 
     if ($resultado->num_rows > 0){
