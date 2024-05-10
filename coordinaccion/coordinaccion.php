@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="imagen">
-                    <img src="img/logo_SENNOVA.jpg" alt="">
+                    <img src="../coordinaccion/img/img-content/IMG_5377.jpg" alt="">
                 </div>
 
             </div>     

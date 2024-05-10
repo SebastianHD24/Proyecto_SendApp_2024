@@ -66,7 +66,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/1.png" >
+                            <img src="./img/icons/subasta (2).png" alt=Icono-dudas">
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -82,7 +82,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="./img/icons/pregunta.png" alt="Icono-dudas<">
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -96,7 +96,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="./img/icons/libro.png" alt="Icono-libros" >
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -110,7 +110,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="./img/icons/mapa-vial.png" alt="Icoono-procedimiento" >
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -128,7 +128,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="./img/icons/solucion.png" alt="Icono-solucion" >
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -143,7 +143,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="./img/icons/juego-de-mesa.png" alt="Icono-juegos">
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -161,7 +161,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="img/icons/navegador-de-internet.png" alt="Icono-páginas" class="iconosBajo">
                         </div>
 
                     <div class="contenido_tarjeta">
@@ -175,7 +175,7 @@
                 <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/2.png" >
+                            <img src="./img/icons/reclutamiento.png" alt="Icono-organización" class="iconosBajo">
                         </div>
 
                     <div class="contenido_tarjeta">

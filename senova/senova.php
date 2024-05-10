@@ -21,7 +21,7 @@
                     <p class="p">El horario de atención es de 7:30 am a 1:00 pm y de 2:00 pm a 5:00 pm. </p>
                 </div>
                     <div class="imagen">
-                        <img src="img/logo_SENNOVA.jpg" alt="">
+                        <img src="../senova/img/img-content/IMG_5383.jpg" alt="">
                     </div>
             </div>
 

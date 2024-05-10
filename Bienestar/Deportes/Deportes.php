@@ -35,7 +35,7 @@
                 <button class="button">Reservar cita</button>
             </div>
             <div class="Contenedor">
-            <h2>Servicios Ofrecidos</h2>
+            <h2 class="sub">Servicios Ofrecidos</h2>
             <div class="tarjetas-contenedor">
                 <div class="tarjeta">
 
@@ -85,7 +85,7 @@
 
                         <h2>¿Actividades y deportes a los que se puede inscribir un aprendices?</h2>
 
-                        <ol class="l_desordenada">
+                        <ol class="l_ordenada">
                             <li>
                                 Vóleibol.
                             </li>
