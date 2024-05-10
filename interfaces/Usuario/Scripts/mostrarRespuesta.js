@@ -1,8 +1,10 @@
 function mostrarR() {
     const answer = document.getElementById('answer');
-    const contenedor_notificacion = document.getElementById('contenedor_n');
+    const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
     answer.style.display = "block";
-    contenedor_notificacion.style.display = "none";
+    contenedores_notificacion.forEach(contenedor => {
+        contenedor.style.display = "none";
+    });
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/actualizarVista.php')
     .then(response => response.json())
@@ -11,9 +13,9 @@ function mostrarR() {
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(usuario => {
             if (usuario.id_rol == 3) {
-                datosMensaje.innerHTML = "Estimado aprendiz " + usuario.nombres + " " + usuario.apellidos +"<br><br>" +
-                  "Le informamos que su " + usuario.tipo_pqrs + " enviada el " + usuario.fecha_solicitud + "<br>" +
-                  "Nos complace comunicarle que nuestro equipo de trabajo ha respondido a su " + usuario.tipo_pqrs + " hoy, " + usuario.fecha_respuesta + " La respuesta por parte de nuestro equipo fue: <br>" + usuario.respuesta_pqrs + "<br><br>" +
+                datosMensaje.innerHTML = "Estimado aprendiz " + usuario.nombres + " " + usuario.apellidos +",<br><br>" +
+                  "Nos dirigimos a usted con respecto a su " + usuario.tipo_pqrs + " enviada el " + usuario.fecha_solicitud + ". " +
+                  "Nos complace comunicarle que nuestro equipo de trabajo ha respondido a su " + usuario.tipo_pqrs + " hoy, " + usuario.fecha_respuesta + ". La respuesta por parte de nuestro equipo fue: <br>" + usuario.respuesta_pqrs + "<br><br>" +
                   "Quedamos a su disposición para cualquier otra consulta que pueda tener.<br><br>" +
                   "Atentamente,<br>" +
                   "Sendapp";
