@@ -114,14 +114,15 @@ hr{
 
 .tarj-img {
     float: left; 
-    margin-right: 12px; 
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .tarj-img img {
-    width: 100%; 
-    height:35%; 
+    width: 100px;
+    height: auto;
     object-fit: cover;
     opacity: 0; 
     animation: aparecerDesdeIzquierda 1s ease forwards;
