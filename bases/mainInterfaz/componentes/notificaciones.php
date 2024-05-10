@@ -59,7 +59,7 @@
         </div>
     </div>
 </section>
-<a onclick>Ver historial</a>
+<a href="#" onclick>Ver historial</a>
 </main>
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/notificacionesPQR.js"></script>
