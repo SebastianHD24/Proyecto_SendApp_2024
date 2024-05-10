@@ -66,7 +66,7 @@
 
         <!-- CAMBIAR EL METODO POST EN PHP SI ES NECESARIO Y CAMBIAR LA ACCIÓN DEL FORM DEPENDIENDO DE LA NECESIDAD -->
 
-        <form action="agregandoregistro.php" class="form-login" method="post"> 
+        <form action="agregandoregistro.php" class="form-login form2" method="post"> 
             <div class="titulos">
                 <ul class="login-nav">
                     <li class="login-nav__item">
@@ -85,11 +85,13 @@
                 <option value="TI">Tarjeta de Identidad</option>
                 <option value="DE">Documento Extranjero</option>
             </select>
+            <p id="mensaje_errord"></p>
             <label for="login-input-user" class="login__label">
                 Documento de identidad
             </label>
             <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad"/>
 
+            <p id="mensaje_errorc"></p>
             <label for="login-input-password" class="login__label">
                 Contraseña
             </label>
@@ -125,6 +127,7 @@
             </label>
             <input id="login-input-user-f" class="login__input" type="number" name="ficha"/>
             <input class="login__submit" type="submit" value="Registrarse">
+            <p id="mensaje_errore"></p>
         </form>
         <div class="olvidaste">
             <a id="goToLogin" class="login__forgot">¿Ya tienes una cuenta? Inicia sesión aquí.</a> 
@@ -138,4 +141,5 @@
 <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/inactividad.js"></script>
 <script src="../Scripts/login.js"></script>
 <script src="../Scripts/informar_errores.js"></script>
+<script src="../Scripts/informar_error_registro.js"></script>
 </html>
