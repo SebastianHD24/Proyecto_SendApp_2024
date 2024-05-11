@@ -53,6 +53,7 @@
             <div class="tarjeta">
 
                 <div class="tarj-img">
+                    
                     <img src="img/icons/1.png">
                 </div>
 
