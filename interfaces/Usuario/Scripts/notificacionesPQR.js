@@ -1,3 +1,5 @@
+const mensaje = document.getElementById('mensaje');
+
 function createNotificationBox() {
     // Crear elemento section para display-notificaciones
     var displayNotificaciones = document.querySelector(".display-notificaciones");
@@ -14,12 +16,13 @@ function createNotificationBox() {
     // Crear elemento div para notifications-pqr
     var notificationsPqr = document.createElement("div");
     notificationsPqr.classList.add("notifications-pqr");
+    notificationsPqr.setAttribute("id", "contenedor_n");
 
     // Contenedor de imagen de PQR
     var pqrFigure = document.createElement("figure");
     pqrFigure.classList.add("figure__icon--schedule");
     var pqrImg = document.createElement("img");
-    pqrImg.setAttribute("src", "../Styles/Img/Componentes-img/qprIcon.png");
+    pqrImg.setAttribute("src", "../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/qprIcon.png");
     pqrImg.setAttribute("alt", "Imagen de PQR");
     pqrFigure.appendChild(pqrImg);
     notificationsPqr.appendChild(pqrFigure);
@@ -41,7 +44,8 @@ function createNotificationBox() {
     detailsButton.setAttribute("type", "button");
     detailsButton.classList.add("show__details--button");
     detailsButton.setAttribute("id", "showDetailsButton");
-    var span = document.createElement("span");
+    detailsButton.setAttribute("onclick", "mostrarR();");
+    var span = document.createElement('span');
     span.innerHTML = "Ver<br>Detalles";
     detailsButton.appendChild(span);
     notificationsPqr.appendChild(detailsButton);
@@ -54,24 +58,17 @@ function createNotificationBox() {
 }
 
 function consultar() {
-    fetch('aprendiz/mostrarDatos.php')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector('#notifica #mostrar #mostrar-m').innerHTML = '';
-            document.querySelector('#notifica #mostrar #mostrar-n').innerHTML = '';
-
-            data.forEach(usuario => {
-                let p = document.createElement('p');
-                p.textContent = 'Gracias, ' + usuario.nombres + ', por tu ' + usuario.tipo_pqrs + '. Nos complace informarte que ya ha sido revisada por nuestros administradores. Apreciamos tu contribución y estamos aquí para atender cualquier otra sugerencia o consulta que puedas tener en el futuro';
-
-                if (usuario.vista == 0) {
-                    document.querySelector('#notifica #mostrar #mostrar-n').appendChild(p);
-                } else {
-                    document.querySelector('#notifica #mostrar #mostrar-m').appendChild(p);
-                }
-            });
-        })
-        .catch(error => console.error('Error al obtener datos:', error));
+    fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
+    .then(response => response.json())
+    .then(data => {
+        if (data.success === "1") {
+            mensaje.style.display = "none";
+            createNotificationBox();
+        } else if (data.success === "2") {
+            mensaje.style.display = "block";
+        }
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 document.addEventListener("DOMContentLoaded", function() {

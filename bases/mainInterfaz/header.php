@@ -3,7 +3,7 @@
     include '../../../Proyecto_SendApp_2024/bases/conexion.php';
     $conn = connection();
     include '../../../Proyecto_SendApp_2024/bases/consulta_nombres_correos.php';
-    include '../../../Proyecto_SendApp_2024/bases/redireccionamiento.php'
+    include '../../../Proyecto_SendApp_2024/bases/redireccionamiento.php';
 ?>
 
 <!DOCTYPE html>

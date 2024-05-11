@@ -41,7 +41,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/1.png" alt="Imagen representativa de Terapia individual">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -55,7 +55,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/2.png" alt="Imagen representativa de Terapia de Pareja y Familia">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -69,7 +69,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/3.png" alt="Imagen representativa de Apoyo Psicológico para Niños y Adolescentes">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -83,7 +83,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/4.png" alt="Imagen representativa de Orientación Vocacional y Profesional">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -97,7 +97,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/5.png" alt="Imagen representativa de Asesoramiento en Salud Mental y Bienestar">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -111,7 +111,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/6.png" alt="Imagen representativa de Workshops y Talleres">
                     </div>
 
                     <div class="contenido_tarjeta">
