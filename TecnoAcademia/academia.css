@@ -164,6 +164,9 @@ hr{
     top: 50%; 
     transform: translateY(-50%); 
 }
+.tarj-img{
+    margin-bottom: .6rem;
+}
  /* Estilos para las esferas */
  .contenedor-esferas {
     margin: 3rem 0 3rem 0;
