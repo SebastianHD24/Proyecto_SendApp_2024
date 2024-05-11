@@ -32,6 +32,13 @@
                 </tbody>
             </table>  
         </div>
+        <form style="display: none;" id="selector" class="formulario">
+            <select name="" id="">
+                <option value="">Ayer</option>
+                <option value="">Hoy</option>
+                <option value="">Mes Pasado</option>
+            </select>
+        </form>
         <div class="respondidos" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">
