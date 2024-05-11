@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-05-2024 a las 18:24:21
+-- Tiempo de generación: 09-05-2024 a las 19:27:33
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,12 +29,26 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `citas` (
   `id_cita` int(11) NOT NULL COMMENT 'Identifica la id de la cita',
-  `estado_cita` tinyint(1) NOT NULL COMMENT 'Muestra el estado de la cita',
+  `estado_cita` varchar(30) NOT NULL COMMENT 'Muestra el estado de la cita',
   `fecha` date NOT NULL COMMENT 'Muestra la fecha',
-  `hora` datetime NOT NULL COMMENT 'Muestra la hora',
+  `hora` time NOT NULL COMMENT 'Muestra la hora',
   `documento_usuario` bigint(20) NOT NULL COMMENT 'Muestra la TI o CC',
-  `id_servicio` int(2) NOT NULL COMMENT 'Muestra la id de los servicios'
+  `id_servicio` int(2) NOT NULL COMMENT 'Muestra la id de los servicios',
+  `descripcion` varchar(100) NOT NULL,
+  `jornada` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuario`, `id_servicio`, `descripcion`, `jornada`) VALUES
+(11, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 1, 'juanesssss', 'opc'),
+(12, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 1, 'probando con la jornada de nuevo', 'Mix'),
+(13, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 1, 'probamdo otra vez', 'Diurna'),
+(14, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 1, 'hhhh', 'Diurna'),
+(15, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 2, 'aqui estamos vinedo si funciona com odebe', 'Diurna'),
+(16, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 1, 'probanod con el nombre del area', 'Diurna');
 
 -- --------------------------------------------------------
 
@@ -51,15 +65,6 @@ CREATE TABLE `pqr` (
   `fecha_solicitud` date DEFAULT NULL,
   `fecha_respuesta` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Volcado de datos para la tabla `pqr`
---
-
-INSERT INTO `pqr` (`id_peticion`, `documento_us`, `tipo_pqrs`, `descripcion`, `respuesta_pqrs`, `fecha_solicitud`, `fecha_respuesta`) VALUES
-(1, 1087986236, 'Quejs', 'He estado satisfecho con el avance del back-end', 'no', '2024-05-06', '2024-05-06'),
-(2, 1087986236, 'queja', 'hola ', NULL, '2024-05-06', NULL),
-(3, 1059695065, 'sugerencia', 'Dar refrigerio', 'ok lo tendremos en cuenta', '2024-05-06', '2024-05-06');
 
 -- --------------------------------------------------------
 
@@ -100,19 +105,15 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado_servicio`) VALUES
-(1, 'biblioteca', 'sandra', 1);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `solicitud_citas`
---
-
-CREATE TABLE `solicitud_citas` (
-  `id_solicitud_cita` int(11) NOT NULL,
-  `descripcion` varchar(255) NOT NULL,
-  `id_usuario` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+(1, 'bienestar al parendiz', 'sandra', 1),
+(2, 'biblioteca', 'juliana', 1),
+(3, 'Psicologia', 'juliana', 1),
+(4, 'Fondo emprender', 'no se', 1),
+(5, 'Relaciones Corporativas', 'no se', 1),
+(6, 'sennova', 'no se', 1),
+(7, 'Servicios Tecnologicos', 'no se', 1),
+(8, 'Fabrica software', 'no se', 1),
+(9, 'Deportes', 'no se', 1);
 
 -- --------------------------------------------------------
 
@@ -141,10 +142,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`, `imagen`) VALUES
-('CC', 12345678, '$2y$10$ci8otfH8eikMCThZzP1M7OcPF6pyceLCqL3hK/CWnjv5UIwCTAg5G', 'ADMIN', 'ADMIN', 'admin@gmail.com', '1234567898', '', 0, 1, 1, NULL, NULL),
-('CC', 42146447, '$2y$10$m5v35Awui30KFK/KO9PJq.Cymz1LnGKO3kDWLp1RbiVjJ0r7dpny2', 'Leidy', 'Ramirez', 'soyelmejor.@gmail.com', '3216735852', '', 0, 1, 2, NULL, NULL),
-('CC', 1059695065, '$2y$10$X0QCxj9Fm.rdwuJ6T5.FfexnZbiRUKRAsSdFsfMBcGaHm/2TJ8R1m', 'Yesid', 'Molina Becerra', 'ymolina560@soy.sena.edu.co', '300684305388888', '', 0, 1, 3, NULL, NULL),
-('CC', 1087986236, '$2y$10$8dkKXJJOI5rS4qc2y0mgcuh5.O6tJH4OjV8IN9/bQ5TTjI429hGn2', 'Sebas', 'Sanchez', 'wowco.2000@gmail.com', '3216735852', 'ADSO', 2618075, 1, 3, NULL, NULL);
+('CC', 1114149055, '$2y$10$st1fzc0QpwVGNAUGDW555OF1oEcfGSSknCE7Rn9R27lhlB1Y8CHue', 'juanes', 'mena', 'loperas@erestu.vomn', '3208108780', '', 0, 1, 3, NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -178,13 +176,6 @@ ALTER TABLE `servicios`
   ADD PRIMARY KEY (`id_servicio`);
 
 --
--- Indices de la tabla `solicitud_citas`
---
-ALTER TABLE `solicitud_citas`
-  ADD PRIMARY KEY (`id_solicitud_cita`),
-  ADD KEY `id_usuario` (`id_usuario`);
-
---
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -201,7 +192,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifica la id de la cita', AUTO_INCREMENT=2;
+  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifica la id de la cita', AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `pqr`
@@ -219,13 +210,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id_servicio` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Identifica los servicos del sena', AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `solicitud_citas`
---
-ALTER TABLE `solicitud_citas`
-  MODIFY `id_solicitud_cita` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_servicio` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Identifica los servicos del sena', AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
@@ -243,12 +228,6 @@ ALTER TABLE `citas`
 --
 ALTER TABLE `pqr`
   ADD CONSTRAINT `pqr_ibfk_1` FOREIGN KEY (`documento_us`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `solicitud_citas`
---
-ALTER TABLE `solicitud_citas`
-  ADD CONSTRAINT `solicitud_citas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios`

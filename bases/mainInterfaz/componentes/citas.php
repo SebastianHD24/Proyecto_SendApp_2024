@@ -1,7 +1,7 @@
 <?php
 
 
-// $conn = connection();
+ $conn = connection();
 
 if (isset($_SESSION['documento_identidad'])) {
     $documento_identidad = $_SESSION['documento_identidad'];

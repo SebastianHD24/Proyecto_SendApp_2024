@@ -32,29 +32,37 @@
     $queryDocumento = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$documento_identidad'";
     $resultDocumento = mysqli_query($conn, $queryDocumento);
 
-    //encritar la contraseña
+    //encriptar la contraseña
     $passwordHash = password_hash($contrasena, PASSWORD_BCRYPT);
+
+    // Requisitos para la contraseña    
+    const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*_-¡?¿·çºª.:,;=|+#\/])(?=.{6,})/';
     
     if (mysqli_num_rows($resultDocumento) > 0) {
         // El usuario ya está registrado
         echo "<script>alert('El usuario ya está registrado en la base de datos. Por favor, contacte al administrador para activar su cuenta.')</script>";
         echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
     } else if(strlen(strval($documento_identidad)) < 5 || strlen($contrasena) < 6){
-        echo "<script>alert('Verifique que la longitud de la contraseña sea mayor a 6 digitos y verifique que el numero de documento sea mayor a 10 digitos.')</script>";
+        echo "<script>alert('Verifique que la longitud de la contraseña sea mayor a 6 digitos y verifique que el numero de documento sea mayor a 5 digitos.')</script>";
         echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
     } else {
-        if (mysqli_num_rows($result) > 0) {
-            // El rol existe, continuar con la inserción
-            $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol')";
-            echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
-            // Condicion para verificar el registro en la bd
-            if (mysqli_query($conn, $sql)) {
-                // Para confirmar, habilitarlo
-                // echo "<h1><center>Registro Grabado Correctamente</center></h1>";
-                echo "<script>alert('Se ha registrado correctamente.')</script>";
-            } else {
-                echo "Error:" . $sql . "<br>" . mysqli_error($conn);
+        if (preg_match(REGEX, $contrasena) == True){
+            if (mysqli_num_rows($result) > 0) {
+                // El rol existe, continuar con la inserción
+                $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol')";
+                echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
+                // Condicion para verificar el registro en la bd
+                if (mysqli_query($conn, $sql)) {
+                    // Para confirmar, habilitarlo
+                    // echo "<h1><center>Registro Grabado Correctamente</center></h1>";
+                    echo "<script>alert('Se ha registrado correctamente.')</script>";
+                } else {
+                    echo "Error:" . $sql . "<br>" . mysqli_error($conn);
+                }
             }
+        } else if (preg_match(REGEX, $contrasena) == False){
+            echo "<script>alert('Verifique que su contraseña tenga una letra mayuscula, un numero y un caracter especial.')</script>";
+            echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
         }
     }
     mysqli_close($conn);

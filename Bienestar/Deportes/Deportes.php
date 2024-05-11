@@ -40,7 +40,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/1.png" alt="Imagen representativa de">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -78,7 +78,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/2.png" alt="Imagen representativa de Actividades y deportes a los que se puede inscribir un aprendices">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -111,7 +111,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/3.png" alt="Imagen representativa de deportes donde se puede inscribir">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -130,7 +130,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/4.png" alt="Imagen representativa del GYM">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -148,7 +148,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/5.png" alt="Imagen representativa que muestra lo importante implementar hábitos nutricionales en gimnasio y deportes">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -168,7 +168,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/6.png" alt="Imagen representativa de área de gimnasio">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -189,7 +189,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/7.png" alt="Imagen representativa donde SENA participa en campeonatos">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -210,7 +210,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/8.png" alt="Imagen representativa el estilo de vida basada en el deporte">
                     </div>
 
                     <div class="contenido_tarjeta">
