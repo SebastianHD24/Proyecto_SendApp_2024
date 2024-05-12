@@ -273,3 +273,20 @@ hr{
 
     }
 }
+@media (max-width: 460px){
+    .tarjeta{
+        flex-direction: column;
+    }
+    .tarj-img{
+        width: 100%;
+    }
+    .contenido_tarjeta{
+        width: 100%;
+    }
+    .contn, .imagen{
+        flex: auto;
+        padding-right: 0;
+        text-align: center;
+        padding-top: 0;
+    }
+}
