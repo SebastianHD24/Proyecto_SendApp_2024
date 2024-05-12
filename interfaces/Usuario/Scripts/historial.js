@@ -1,8 +1,4 @@
-const mensaje1 = document.getElementById('mensaje1');
-const historial = document.getElementById('historial');
-const salir = document.getElementById('salir');
-
-function createNotificationBoxH() {
+function createNotificationBoxH(id) {
     // Crear elemento section para display-notificaciones
     let displayNotificaciones = document.querySelector(".display-notificaciones");
 
@@ -18,7 +14,7 @@ function createNotificationBoxH() {
     // Crear elemento div para notifications-pqr
     let notificationsPqr = document.createElement("div");
     notificationsPqr.classList.add("notifications-pqr");
-    notificationsPqr.setAttribute("id", "contenedor_h");
+    notificationsPqr.setAttribute("id", "contenedor_h_" + id); // Asignar ID al contenedor
 
     // Contenedor de imagen de PQR
     let pqrFigure = document.createElement("figure");
@@ -46,7 +42,7 @@ function createNotificationBoxH() {
     detailsButton.setAttribute("type", "button");
     detailsButton.classList.add("show__details--button");
     detailsButton.setAttribute("id", "showDetailsButton");
-    detailsButton.setAttribute("onclick", "mostrarR();");
+    detailsButton.setAttribute("onclick", "mostrarH(" + id + ");");
     let span = document.createElement('span');
     span.innerHTML = "Ver<br>Detalles";
     detailsButton.appendChild(span);
@@ -60,6 +56,11 @@ function createNotificationBoxH() {
 }
 
 function consultarHistorial() {
+    const mensaje = document.getElementById('mensaje');
+    const mensaje1 = document.getElementById('mensaje1');
+    const historial = document.getElementById('historial');
+    const salir = document.getElementById('salir');
+
     function ocultar_QPR() {
         const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
         contenedores_notificacion.forEach(contenedor => {
@@ -75,13 +76,18 @@ function consultarHistorial() {
             // Si hay registros, ejecutar un ciclo basado en el número de registros
             for (let i = 0; i < data.num_registros; i++) {
                 // Aquí puedes realizar las operaciones que necesites dentro del ciclo
-                createNotificationBoxH();
+                createNotificationBoxH(data.id_peticion[i]); // Pasar el ID al crear el box
             }
         } else {
             // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
             mensaje1.style.display = "block";
         }
+        mensaje.style.display = "none";
+        historial.style.display = "none";
         salir.style.display = "block";
     })
     .catch(error => console.error("Error:", error));
+}
+function salir(){
+    location.reload();
 }
