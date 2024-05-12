@@ -1,4 +1,5 @@
 <h1 id="mensaje" style="display: none;">No hay notificaciones</h1>
+<h1 id="mensaje1" style="display: none;">No hay Historial</h1>
 <section class="display-notificaciones">
     <div class="notifications-container">
         <div class="notifications-box" style="display: none;">
@@ -59,8 +60,11 @@
         </div>
     </div>
 </section>
-<a onclick>Ver historial</a>
+<button onclick="consultarHistorial()" id="historial" >Ver historial</button>
 </main>
 </div>
+
+
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/notificacionesPQR.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/mostrarRespuesta.js"></script>
+<script src="../../../../Proyecto_SendApp_2024/interfaces/Usuario/Scripts/mostrarHistorial.js"></script>

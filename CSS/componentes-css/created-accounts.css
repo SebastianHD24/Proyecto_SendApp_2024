@@ -17,21 +17,6 @@
   --fuente-principal: 'Work Sans', sans-serif;
 }
 
-html{
-  height: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: var(--fuente-principal);
-  font-size: 16px;
-}
-
 /*SIDEBAR*/
 .sidebar__container{
   padding: 1rem;

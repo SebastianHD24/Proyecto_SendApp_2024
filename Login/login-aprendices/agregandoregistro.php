@@ -40,29 +40,30 @@
     
     if (mysqli_num_rows($resultDocumento) > 0) {
         // El usuario ya está registrado
-        echo "<script>alert('El usuario ya está registrado en la base de datos. Por favor, contacte al administrador para activar su cuenta.')</script>";
-        echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
-    } else if(strlen(strval($documento_identidad)) < 5 || strlen($contrasena) < 6){
-        echo "<script>alert('Verifique que la longitud de la contraseña sea mayor a 6 digitos y verifique que el numero de documento sea mayor a 5 digitos.')</script>";
-        echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
+        echo json_encode(array('success' => 5));
+        
+    } else if(strlen(strval($contrasena)) < 6 && strlen(strval($documento_identidad)) < 5){
+        echo json_encode(array('success' => 4));
+    } else if(strlen(strval($documento_identidad)) < 5){
+        echo json_encode(array('success' => 1));
+    } else if(strlen(strval($contrasena)) < 6){
+        echo json_encode(array('success' => 2));
     } else {
         if (preg_match(REGEX, $contrasena) == True){
             if (mysqli_num_rows($result) > 0) {
                 // El rol existe, continuar con la inserción
                 $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol')";
-                echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
                 // Condicion para verificar el registro en la bd
                 if (mysqli_query($conn, $sql)) {
                     // Para confirmar, habilitarlo
                     // echo "<h1><center>Registro Grabado Correctamente</center></h1>";
-                    echo "<script>alert('Se ha registrado correctamente.')</script>";
+                    echo json_encode(array('success' => 6));
                 } else {
                     echo "Error:" . $sql . "<br>" . mysqli_error($conn);
                 }
             }
         } else if (preg_match(REGEX, $contrasena) == False){
-            echo "<script>alert('Verifique que su contraseña tenga una letra mayuscula, un numero y un caracter especial.')</script>";
-            echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
+            echo json_encode(array('success' => 3));
         }
     }
     mysqli_close($conn);
