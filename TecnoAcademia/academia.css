@@ -22,17 +22,16 @@ body{
 
 /*Contenido*/
 .orden{
-    margin: 4rem;
+    margin-bottom: 4rem;
 }
- .Primera_Impresion{
+.Primera_Impresion{
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
 } 
 
 .contn {
     margin: 1rem;
-    flex:60%;
     padding-right: 20px; 
     text-align: left;
 }
@@ -52,26 +51,24 @@ body{
 }
 
 .imagen{
-    flex: 35%;
-    text-align: center; 
-    padding: 20px;
-
+    padding: 10px;
+    width: 120rem;
 }
 .imagen img{
-    border-radius: 5rem;
-    margin-top: 1rem;
-    max-width: 100%;
+    margin-top: 8rem;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .Contenido{
     width: 100%;
-    padding: 60px;
+    padding: 40px 53px 53px 53px;
     
 }
 /*titulo */
 .titulo{
-    font-size: 6rem;
+    font-size: 50px;
     text-align:left;
     font-family: var(--fuente-principal);
     animation: fadeIn 3s forwards;
@@ -79,28 +76,27 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    font-family: var(--fuente-principal);
     text-align: left;
+    margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
 }
 .sub{
-    font-family: var(--fuente-open-sans);
+    font-family:  var(--fuente-principal);
     text-align: center;
     font-size: 3rem;
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
-    font-size: 25px;
-    line-height: 1.6;
+    font-size: 22px;
 }
-
 .p{
     color: #00324D;
-    font-size: 25px;
+    /* font-size: 25px; */
     margin: 10px;
     text-align: center;
-    line-height: 1.6;
 }
 hr{
     margin: 2rem 0 10px 0;
@@ -275,5 +271,29 @@ a:hover {
     .subtitulo{
         font-size: 17px;
         margin-top: 15px;
+    }
+}
+
+/* --------------- Responsive -------------- */
+@media only screen and (max-width:947px){
+    .Primera_Impresion{
+        flex-direction: column;
+    }
+    .imagen{
+        width: 80%;
+        height: auto;
+    }
+    .imagen img{
+        margin-top: 0px;
+    }
+    .orden{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tarjeta { 
+        flex-direction: column;
     }
 }
