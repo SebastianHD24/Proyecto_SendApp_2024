@@ -19,6 +19,13 @@ function mostrarR() {
                   "Quedamos a su disposición para cualquier otra consulta que pueda tener.<br><br>" +
                   "Atentamente,<br>" +
                   "Sendapp";
+            } else if (usuario.id_rol == 2) {
+                datosMensaje.innerHTML = "Estimado funcionario " + data.nombres + " " + data.apellidos +",<br><br>" +
+                  "Nos dirigimos a usted con respecto a su " + data.tipo_pqrs + " enviada el " + data.fecha_solicitud + ". " +
+                  "Nos complace comunicarle que nuestro equipo de trabajo ha respondido a su " + data.tipo_pqrs + " hoy, " + data.fecha_respuesta + ". La respuesta por parte de nuestro equipo fue: <br>" + data.respuesta_pqrs + "<br><br>" +
+                  "Quedamos a su disposición para cualquier otra consulta que pueda tener.<br><br>" +
+                  "Atentamente,<br>" +
+                  "Sendapp";
             }
         });
     })
