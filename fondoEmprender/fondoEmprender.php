@@ -111,6 +111,7 @@
                 <br>
                 Con esto lo que hacemos es ayudarle al emprendedor a que tenga los elementos que lo ayuden al desarrollo y lograr el éxito de su idea de negocio.
             </p> 
+    </div>
         <div class="tarjetas-contenedor">
             <div class="tarjeta">
 
@@ -138,7 +139,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="tarjeta">
 
             <div class="tarj-img">
