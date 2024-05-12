@@ -28,7 +28,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="" >
+                <img src="./icons/pregunta.png" alt="Icono-pregunta">
             </div>
 
             <div class="contenido_tarjeta">
@@ -50,7 +50,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src=""  >
+                <img src="./icons/atencion-al-cliente.png" alt="Icono-servicios" >
             </div>
 
             <div class="contenido_tarjeta">
@@ -72,7 +72,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="" >
+                <img src="./icons/frontera.png" alt="Icono-acceso">
             </div>
 
             <div class="contenido_tarjeta">
@@ -87,7 +87,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="" >
+                <img src="./icons/apoyar.png" alt="Icono-encargado">
             </div>
 
             <div class="contenido_tarjeta">
@@ -108,7 +108,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="" >
+                <img src="./icons/ayudar.png" alt="Icono-ayuda">
             </div>
 
             <div class="contenido_tarjeta">
