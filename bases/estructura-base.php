@@ -146,6 +146,17 @@
     <script src="../../../Proyecto_SendApp_2024/scripts/menuHamburguesaJS/menuBarGeneral.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/botonLeerMas.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/sesionIniciada.js"></script>
+    <script>
+        window.addEventListener('pageshow', function(event) {
+            var historyTraversal = event.persisted ||
+                                (typeof window.performance != 'undefined' &&
+                                    window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                // Recargar la página si la navegación es a través del historial del navegador
+                window.location.reload();
+            }
+        });
+    </script>
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

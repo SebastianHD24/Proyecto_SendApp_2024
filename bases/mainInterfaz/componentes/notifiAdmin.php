@@ -1,8 +1,7 @@
-
 <h1 id="mensaje1" style="display: none;">No hay historial</h1>
-
-<h1 id="mensaje">No hay nuevas PQR</h1>
+<h1 id="mensaje" style="display: none;" class="titulos">No hay nuevas PQR</h1>
 <div class="contenedor-popup" id="contenedor-popup"> 
+    <div class="popup">
         <div class="sin-responder" id="sin-responder" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="sin_respuesta" class="confirmado">
@@ -32,6 +31,13 @@
                 </tbody>
             </table>  
         </div>
+        <form style="display: none;" id="selector" class="formulario">
+            <select name="" id="">
+                <option value="">Ayer</option>
+                <option value="">Hoy</option>
+                <option value="">Mes Pasado</option>
+            </select>
+        </form>
         <div class="respondidos" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">
@@ -64,8 +70,9 @@
             </table>
         </div>  
     </div>
-<a href="#" onclick="verHistorial();" id="Historial">Ver historial</a>
-<a href="#" class="salir" id="volver" onclick="ocultarHistorial();" style="display: none;">Salir</a>
+</div>
+<a href="#" onclick="verHistorial();" id="Historial" style="display: none;">Ver historial</a>
+<a href="#" id="volver" onclick="ocultarHistorial();" style="display: none;">Salir</a>
 </main> 
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>
