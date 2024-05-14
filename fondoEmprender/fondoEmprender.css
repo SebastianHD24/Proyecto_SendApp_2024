@@ -261,13 +261,10 @@ hr{
     color:#00324D;
     text-align: center;
     padding: 35px;
+    background:linear-gradient(#cfcfcf,#ededed)
 }
 
-.esfera-1,
-.esfera-2,
-.esfera-3{
-    background:linear-gradient(#cfcfcf,#ededed); 
-}
+
 
 .subtitulo{
     font-size: 25px;
