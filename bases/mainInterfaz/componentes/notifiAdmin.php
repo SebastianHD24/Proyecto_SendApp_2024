@@ -1,5 +1,5 @@
 <h1 id="mensaje1" style="display: none;">No hay historial</h1>
-<h1 id="mensaje" style="display: none;">No hay nuevas PQR</h1>
+<h1 id="mensaje" style="display: none;" class="titulos">No hay nuevas PQR</h1>
 <div class="contenedor-popup" id="contenedor-popup"> 
     <div class="popup">
         <div class="sin-responder" id="sin-responder" style="display: none;">
