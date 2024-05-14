@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2024 a las 17:33:19
+-- Tiempo de generación: 14-05-2024 a las 17:37:08
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -63,7 +63,8 @@ CREATE TABLE `pqr` (
   `descripcion` text COLLATE utf8_spanish2_ci NOT NULL,
   `respuesta_pqrs` text COLLATE utf8_spanish2_ci DEFAULT NULL,
   `fecha_solicitud` date DEFAULT NULL,
-  `fecha_respuesta` date DEFAULT NULL
+  `fecha_respuesta` date DEFAULT NULL,
+  `vista` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
@@ -198,7 +199,7 @@ ALTER TABLE `citas`
 -- AUTO_INCREMENT de la tabla `pqr`
 --
 ALTER TABLE `pqr`
-  MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -222,12 +223,6 @@ ALTER TABLE `servicios`
 ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE,
   ADD CONSTRAINT `citas_ibfk_4` FOREIGN KEY (`documento_usuario`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `pqr`
---
-ALTER TABLE `pqr`
-  ADD CONSTRAINT `pqr_ibfk_1` FOREIGN KEY (`documento_us`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `servicios`
