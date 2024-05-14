@@ -8,10 +8,11 @@
     // Obtencion y asignacion del JSON recibido desde el cliente 
     $data = json_decode(file_get_contents("php://input"));
         
-    // Servicio y admin
+    // Info del administrador del area
     $sql = "SELECT imagen, nombres, apellidos, correo, celular FROM usuarios WHERE documento_identidad = $data->admin";
     $query = mysqli_query($conn, $sql);
     
+    //  Verificacion de si existe o no un admin
     if ($query->num_rows > 0){
         $adminArea = mysqli_fetch_assoc($query);
     
