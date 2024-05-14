@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2024 a las 19:27:33
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 14-05-2024 a las 17:33:19
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `citas` (
   `id_cita` int(11) NOT NULL COMMENT 'Identifica la id de la cita',
-  `estado_cita` varchar(30) NOT NULL COMMENT 'Muestra el estado de la cita',
+  `estado_cita` varchar(30) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Muestra el estado de la cita',
   `fecha` date NOT NULL COMMENT 'Muestra la fecha',
   `hora` time NOT NULL COMMENT 'Muestra la hora',
   `documento_usuario` bigint(20) NOT NULL COMMENT 'Muestra la TI o CC',
   `id_servicio` int(2) NOT NULL COMMENT 'Muestra la id de los servicios',
-  `descripcion` varchar(100) NOT NULL,
-  `jornada` varchar(20) NOT NULL
+  `descripcion` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
+  `jornada` varchar(20) COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
@@ -59,9 +59,9 @@ INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuar
 CREATE TABLE `pqr` (
   `id_peticion` int(11) NOT NULL,
   `documento_us` bigint(20) NOT NULL,
-  `tipo_pqrs` varchar(15) NOT NULL,
-  `descripcion` text NOT NULL,
-  `respuesta_pqrs` text DEFAULT NULL,
+  `tipo_pqrs` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
+  `descripcion` text COLLATE utf8_spanish2_ci NOT NULL,
+  `respuesta_pqrs` text COLLATE utf8_spanish2_ci DEFAULT NULL,
   `fecha_solicitud` date DEFAULT NULL,
   `fecha_respuesta` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
@@ -74,7 +74,7 @@ CREATE TABLE `pqr` (
 
 CREATE TABLE `roles` (
   `id_rol` int(2) NOT NULL COMMENT 'Visualiza el rol',
-  `nombre_rol` char(20) NOT NULL COMMENT 'Muestra el nombre del rol',
+  `nombre_rol` char(20) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Muestra el nombre del rol',
   `estado_rol` tinyint(1) NOT NULL COMMENT 'Muestra el estado del rol'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -95,8 +95,8 @@ INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
 
 CREATE TABLE `servicios` (
   `id_servicio` int(2) NOT NULL COMMENT 'Identifica los servicos del sena',
-  `nombre_servicio` char(40) NOT NULL COMMENT 'Es el  nombre de los servicios',
-  `admin_area` char(40) NOT NULL COMMENT 'Identifica el area',
+  `nombre_servicio` char(40) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Es el  nombre de los servicios',
+  `admin_area` bigint(12) DEFAULT NULL COMMENT 'Identifica al admin del area',
   `estado_servicio` tinyint(1) NOT NULL COMMENT 'Muestra el estado de los servicios'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -105,15 +105,15 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado_servicio`) VALUES
-(1, 'bienestar al parendiz', 'sandra', 1),
-(2, 'biblioteca', 'juliana', 1),
-(3, 'Psicologia', 'juliana', 1),
-(4, 'Fondo emprender', 'no se', 1),
-(5, 'Relaciones Corporativas', 'no se', 1),
-(6, 'sennova', 'no se', 1),
-(7, 'Servicios Tecnologicos', 'no se', 1),
-(8, 'Fabrica software', 'no se', 1),
-(9, 'Deportes', 'no se', 1);
+(1, 'bienestar al parendiz', NULL, 1),
+(2, 'biblioteca', NULL, 1),
+(3, 'Psicologia', NULL, 1),
+(4, 'Fondo emprender', NULL, 1),
+(5, 'Relaciones Corporativas', NULL, 1),
+(6, 'sennova', NULL, 1),
+(7, 'Servicios Tecnologicos', NULL, 1),
+(8, 'Fabrica software', NULL, 1),
+(9, 'Deportes', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -122,27 +122,26 @@ INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado
 --
 
 CREATE TABLE `usuarios` (
-  `tipo_documento` varchar(3) NOT NULL,
+  `tipo_documento` varchar(3) COLLATE utf8_spanish2_ci NOT NULL,
   `documento_identidad` bigint(20) NOT NULL COMMENT 'Es la identidad de la persona',
-  `contrasena` varchar(255) NOT NULL COMMENT 'Es la contrasena de todos los usuarios',
-  `nombres` varchar(30) NOT NULL COMMENT 'Nombre del usuario\r\n',
-  `apellidos` varchar(30) NOT NULL COMMENT 'Apellido del usuario',
-  `correo` varchar(30) NOT NULL COMMENT 'Correo del usuario',
-  `celular` varchar(15) NOT NULL COMMENT 'Celular del usuario',
-  `programa` varchar(50) DEFAULT NULL COMMENT 'Programa del usuario',
+  `contrasena` varchar(255) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Es la contrasena de todos los usuarios',
+  `nombres` varchar(30) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Nombre del usuario\r\n',
+  `apellidos` varchar(30) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Apellido del usuario',
+  `correo` varchar(30) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Correo del usuario',
+  `celular` varchar(15) COLLATE utf8_spanish2_ci NOT NULL COMMENT 'Celular del usuario',
+  `programa` varchar(50) COLLATE utf8_spanish2_ci DEFAULT NULL COMMENT 'Programa del usuario',
   `ficha` int(10) DEFAULT NULL COMMENT 'Ficha del usuario',
   `estado` tinyint(1) NOT NULL COMMENT 'Estado del usuario',
   `id_rol` int(2) DEFAULT NULL COMMENT 'Rol del usuario',
-  `id_servicio` int(2) DEFAULT NULL COMMENT 'Los servicios del ususario',
-  `imagen` longblob DEFAULT NULL COMMENT 'Agrega tu foto o una imagen de perfil'
+  `id_servicio` int(2) DEFAULT NULL COMMENT 'Los servicios del ususario'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`, `imagen`) VALUES
-('CC', 1114149055, '$2y$10$st1fzc0QpwVGNAUGDW555OF1oEcfGSSknCE7Rn9R27lhlB1Y8CHue', 'juanes', 'mena', 'loperas@erestu.vomn', '3208108780', '', 0, 1, 3, NULL, NULL);
+INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`) VALUES
+('CC', 1114149055, '$2y$10$st1fzc0QpwVGNAUGDW555OF1oEcfGSSknCE7Rn9R27lhlB1Y8CHue', 'juanes', 'mena', 'loperas@erestu.vomn', '3208108780', '', 0, 1, 3, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -173,7 +172,8 @@ ALTER TABLE `roles`
 -- Indices de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  ADD PRIMARY KEY (`id_servicio`);
+  ADD PRIMARY KEY (`id_servicio`),
+  ADD KEY `admin_area` (`admin_area`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -228,6 +228,12 @@ ALTER TABLE `citas`
 --
 ALTER TABLE `pqr`
   ADD CONSTRAINT `pqr_ibfk_1` FOREIGN KEY (`documento_us`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  ADD CONSTRAINT `servicios_ibfk_1` FOREIGN KEY (`admin_area`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios`
