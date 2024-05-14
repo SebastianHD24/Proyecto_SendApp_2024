@@ -11,11 +11,11 @@
   --fuente-principal: "Work Sans", sans-serif;
 }
 
-.titulo-calendario {
-  font-weight: 600;
+.Titulo-calendario {
+  font-weight: 700;
   text-align: center;
   color: var(--azul);
-  margin-bottom: 2rem;
+  padding-top: 20px;
 }
 
 h3 {
@@ -161,14 +161,18 @@ h3 {
 }
 
 .eventos table{
+  display: flex;
+  justify-content: center;
+  border: none;
   border-collapse: collapse;
-  max-width: 84vw;
+  max-width: 72vw;
+  padding-bottom: 25px;
 }
 
 .eventos th,
 .eventos td {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid var(--gris-oscuro);
 }
 
 .eventos th {
@@ -225,6 +229,6 @@ h3 {
     padding: 0vw 4vw;
   }
   .eventos table{
-    max-width: 60vw;
+    max-width: 82vw;
   }
 } 
