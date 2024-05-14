@@ -70,12 +70,15 @@ section p{
   font-size: 14.1px;
   margin-top: 1rem;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  overflow: hidden;
 }
 
 /* boton interno de las tarjetas */
 .btn{
   background-color: transparent;
   border: none;
+  width: 11em;
+  height: 11em;
 }
 
 /* textos del boton */
@@ -109,6 +112,7 @@ color:var(--verde); Al hacer hover, desaparece el párrafo
 display: flex;
 justify-content: center;
 align-items: center;
+width: 12em;
 }
 
 .cards article p{
