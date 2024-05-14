@@ -1,3 +1,23 @@
+/* ALERTA */
+
+.alerta{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 3px solid var(--verde);
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+}
+.mensaje{
+    font-size: 1.2rem;
+    color: var(--azul);
+    margin: 1rem;
+}
+
 /* Ventana emergente para acciones con los servicios */
 .fondoPopUp {
     width: 100%;

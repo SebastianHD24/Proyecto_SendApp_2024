@@ -1,5 +1,8 @@
 //ETIQUETAS OBTENIDAS EN LA PAGINA
 
+//Ventana emergente
+const alerta = document.getElementById('alerta');
+
 // ventana emergente de confirmacion o negacion
 let ventanaConfirmacion = document.querySelector('.fondoPopUp');
 
@@ -66,7 +69,12 @@ function actualizarEstado(idServicio) {
     })
     .then(data => {
         if (data.cambio === 0) {
-            location.reload(); // Recarga la página si la operación fue exitosa
+            ventanaConfirmacion.classList.add('oculto');
+            alerta.style.display = 'block';
+            alerta.style.zIndex = '999';
+            setTimeout(function(){
+                location.reload();
+            },2000);
         } else {
             console.log(data);
             console.log('Hubo un error al cambiar el estado del servicio');
@@ -103,7 +111,12 @@ function actualizarAdmin(idServicio, posicion) {
         .then(data => {
             switch (data.success) {
                 case 0:
-                    location.reload();
+                    ventanaConfirmacion.classList.add('oculto');
+                    alerta.style.display = 'block';
+                    alerta.style.zIndex = '999';
+                    setTimeout(function(){
+                        location.reload();
+                    },2000);
                     break;
                 case 1:
                     let mensajeCambio = document.querySelectorAll('.mensajeCambio')[posicion];
@@ -128,6 +141,7 @@ botonCerrar.addEventListener('click', function () {
     mensajeAdmin.classList.remove('oculto');
     tablaAdmin.classList.remove('oculto');
     nomServicio.classList.remove('oculto');
+    tablaAdmin.querySelector('tbody').innerHTML = '';
 })
 
 
@@ -162,7 +176,11 @@ function consultar(idAdmin, servicio) {
             const tr = document.createElement('tr');
             const tdImagen = document.createElement('td');
             const imagen = document.createElement('img');
-            imagen.src = adminData.imagen;
+            if (!adminData.imagen){
+                imagen.src = adminData.imagen;
+            } else {
+                imagen.src = "../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/imagen_predeterminada/blank-avatar-photo-place-holder-600nw-1095249842.webp";
+            }
             imagen.alt = 'Imagen de usuario';
             tdImagen.appendChild(imagen);
 

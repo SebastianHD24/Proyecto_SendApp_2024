@@ -9,7 +9,7 @@
         // Acceder al documento de identidad almacenado en la variable de sesión
         $id_usuario = $_SESSION["documento_identidad"];
 
-        $consulta = mysqli_query($conn, "SELECT COUNT(*) AS num_registros FROM pqr WHERE documento_us = '$id_usuario' AND vista = 0 AND respuesta_pqrs IS NOT NULL");
+        $consulta = mysqli_query($conn, "SELECT COUNT(*) AS num_registros FROM pqr WHERE documento_us = '$id_usuario' AND vista = 1 AND respuesta_pqrs IS NOT NULL");
 
         if ($consulta) {
             // Obtener el número de registros desde la consulta
