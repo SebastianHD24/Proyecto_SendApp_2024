@@ -22,17 +22,16 @@ body{
 
 /*Contenido*/
 .orden{
-    margin: 4rem;
+    margin-bottom:4rem;
 }
- .Primera_Impresion{
+.Primera_Impresion{
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
 } 
 
 .contn {
     margin: 1rem;
-    flex:60%;
     padding-right: 20px; 
     text-align: left;
 }
@@ -52,27 +51,25 @@ body{
 }
 
 .imagen{
-    flex: 35%;
-    text-align: center; 
-    padding: 20px;
-
+    padding: 10px;
+    width: 100rem;
 }
 .imagen img{
-    border-radius: 5rem;
-    margin-top: 1rem;
-    max-width: 100%;
+    margin-top: 8rem;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .Contenido{
     width: 100%;
-    padding: 60px;
+    padding: 40px 53px 53px 53px;
 
     
 }
 /*titulo */
 .titulo{
-    font-size: 6rem;
+    font-size: 5rem;
     text-align:left;
     font-family: var(--fuente-principal);
     animation: fadeIn 3s forwards;
@@ -80,20 +77,23 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-    font-family: var(--fuente-open-sans);
+    font-size: 1.5rem;
+    font-family: var(--fuente-principal);
     text-align: left;
     padding-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    color: #000000;
 }
 .sub{
-    font-family: var(--fuente-open-sans);
+    font-family: var(--fuente-principal);
     text-align: center;
     font-size: 3rem;
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
-    font-size: 25px;
+    font-size: 22px;
 }
+
 .p{
     color: #00324D;
     font-size: 25px;
@@ -115,11 +115,11 @@ hr{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 3rem 0 3rem 0;
+    margin: 1.5rem 0 3rem 0;
     gap: 4rem;
 }
 .tarjeta {  
-    width: 40rem;      
+    width: 33rem;      
     background-color: #f0f0f0;
     transition: transform 0.3s ease;
     text-align: center;
@@ -166,11 +166,9 @@ hr{
 }
 
 .esfera {
-    flex: 0 1 calc(30% - 20px); 
-    max-width: calc(100% - 20px);
-    width: 100%;
-    margin: 20px;
-    border-radius: 50%;
+    flex: 0 1 calc(43% - 0px); 
+    max-width: calc(100% - 10px);
+    border-radius: 49%;
     color:#00324D;
     text-align: center;
     padding: 35px;
@@ -180,6 +178,7 @@ hr{
 .esfera-2,
 .esfera-3{
     background:linear-gradient(#cfcfcf,#ededed); 
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
 }
 
 .subtitulo{
@@ -245,12 +244,16 @@ a:hover {
 
     }
     .Contenido{
-        padding: 30px;
+        padding: 10px;
     }
     .orden{
         margin: 2rem;
     }
+    .tarjetas-contenedor {
+        gap: 2rem;
+    }
     .tarjeta{
+        margin-bottom: 0;
         width: 87%; 
         max-width: 30rem;
     }
@@ -258,12 +261,21 @@ a:hover {
         font-size: 1.3rem;
     }
     
-    .parrafo,.p{
+    .parrafo{
         font-size: 1rem;
     }
+    .p{
+        font-size: 0.75rem;
+    }
     .subtitulo{
-        font-size: 17px;
+        font-size: 15px;
         margin-top: 15px;
+    }
+    .esfera {
+        flex: calc(60% - 0px);
+        max-width:calc(90% - 10px);
+        border-radius: 49%;
+        margin-bottom: 1rem;
     }
 }
 /* ------------button ------------------------------- */
@@ -293,4 +305,25 @@ a:hover {
 .btn a{
     text-decoration: none;
     color: var(--blanco);
+}
+
+/* --------------- Responsive -------------- */
+@media only screen and (max-width:947px){
+    .Primera_Impresion{
+        flex-direction: column;
+    }
+    .imagen{
+        width: 80%;
+        height: auto;
+    }
+    .imagen img{
+        margin-top: 0px;
+    }
+    .orden{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    } 
 }

@@ -24,7 +24,7 @@
                     <h3>¡CDTI Somos un Centro de Innovación Tecnológica!</h3>
                 </div>
                     <div class="imagen">
-                        <img src="img/logo_SENNOVA.jpg" alt="">
+                        <img src="../FabricaSoftware/img/img-content/IMG_5380.jpg" alt="Imagen lugar Servicios Tecnologicos">
                     </div>
             </div>
             <button class="button">Reservar cita</button>
@@ -33,7 +33,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/2.png " class="ima" >
+                <img src="./icons/lista-de-verificacion.png " alt="Icono-objetivos" >
             </div>
 
             <div class="contenido_tarjeta">
@@ -53,7 +53,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/1.png" >
+                <img src="./icons/accesibilidad.png" alt="Icono-accesibilidad">
             </div>
 
             <div class="contenido_tarjeta">
@@ -74,7 +74,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/3.png" > 
+                <img src="./icons/vision (1).png" > 
             </div>
 
             <div class="contenido_tarjeta">

@@ -22,7 +22,7 @@
                     <p><strong>Horario de atención:</strong>Lunes a Viernes de 7:30 AM a 12:00 PM y de 1:00 PM a 5:00 PM</p>
                 </div>
                         <div class="imagen">
-                            <img src="Img/Academia-Img/tecnoacademia1.png" alt="foto1">
+                            <img src="../fondoEmprender/img/img-content/IMG_5371.jpg" alt="foto1">
                         </div>
             </div>
             <button class="button">Reservar cita</button>
@@ -61,7 +61,7 @@
     <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/1.png" >
+                <img src="./icons/pregunta.png" alt="Icono-pregunta">
             </div>
 
         <div class="contenido_tarjeta">
@@ -81,7 +81,7 @@
     <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/1.png" >
+                <img src="./icons/presupuesto.png" alt="Icono-presupuesto">
             </div>
 
         <div class="contenido_tarjeta">
@@ -111,11 +111,12 @@
                 <br>
                 Con esto lo que hacemos es ayudarle al emprendedor a que tenga los elementos que lo ayuden al desarrollo y lograr el éxito de su idea de negocio.
             </p> 
+    </div>
         <div class="tarjetas-contenedor">
             <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./icons/time-and-calendar.png" alt="Icono-tiempo">
                     </div>
 
                 <div class="contenido_tarjeta">
@@ -128,7 +129,7 @@
             </div>
             <div class="tarjeta">
 
-                    <div class="tarj-img"><img src="img/1.png" ></div>
+                    <div class="tarj-img"><img src="./icons/reloj.png" alt="Icono-reloj"></div>
 
                 <div class="contenido_tarjeta">
 
@@ -138,11 +139,10 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/1.png" >
+                <img src="./icons/compromiso.png" alt="Icono-compromiso">
             </div>
 
         <div class="contenido_tarjeta">
@@ -163,7 +163,7 @@
     <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/1.png" >
+                <img src="./icons/carrera-profesional.png" alt="Icono-avance">
             </div>
 
         <div class="contenido_tarjeta">
@@ -183,14 +183,14 @@
     <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="img/1.png" >
+                <img src="./icons/ayudar.png" alt="Icono-pregunta">
             </div>
 
         <div class="contenido_tarjeta">
 
                 <h2>¿Qué servicios ofrecemos a los aprendices que hacen una unidad productiva familiar?</h2>
 
-                <p class="contenido-corto"> Ofrecemos asesoria para la creación de empresacon otras fuentes de financiación o recursos propios, los podemos ayudar a mejorar toda la parte administrativa y que esa unidad productiva familiar pueda crecer y formalizarse, formalizar el empleo de ese aprendiz que a estado liderando y si se identifica un aspecto innovador poder pasar el proceso de creacion de empresa con recursos de fondo emprender.</p>
+                <p class="contenido-corto"> Ofrecemos asesoria para la creación de empresa con otras fuentes de financiación o recursos propios, los podemos ayudar a mejorar toda la parte administrativa y que esa unidad productiva familiar pueda crecer y formalizarse, formalizar el empleo de ese aprendiz que a estado liderando y si se identifica un aspecto innovador poder pasar el proceso de creacion de empresa con recursos de fondo emprender.</p>
 
                 <button class="leerMas" onclick="cambiarColor(this)">Leer más</button>
 

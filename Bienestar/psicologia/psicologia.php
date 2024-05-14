@@ -30,18 +30,18 @@
                         <hr>
                     </div>
                         <div class="imagen">
-                            <img src="../psicologia/Img/img content/IMG_7740.JPG" alt="logo"> 
+                            <img src="../psicologia/Img/img content/IMG_1.jpg" alt="logo"> 
                         </div>
                 </div>
                 <button class="button">Reservar cita</button>
             </div>
             <div class="Contenedor">
-            <h2>Servicios Ofrecidos</h2>
+            <h2 class="sub">Servicios Ofrecidos</h2>
             <div class="tarjetas-contenedor">
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/1.png" alt="Imagen representativa de Terapia individual">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -55,7 +55,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/2.png" alt="Imagen representativa de Terapia de Pareja y Familia">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -69,7 +69,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/3.png" alt="Imagen representativa de Apoyo Psicológico para Niños y Adolescentes">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -83,7 +83,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/4.png" alt="Imagen representativa de Orientación Vocacional y Profesional">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -97,7 +97,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/5.png" alt="Imagen representativa de Asesoramiento en Salud Mental y Bienestar">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -111,7 +111,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./Img/icons/6.png" alt="Imagen representativa de Workshops y Talleres">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -126,18 +126,18 @@
             <div class="contenedor-esferas">
                 <div class="esfera esfera-1">
                     <h3 class="subtitulo">Nuestro Enfoque</h3>
-                        <p class="p">En Psicología Integral para el Bienestar, adoptamos un enfoque holístico y centrado en la persona para el tratamiento y la intervención. Creemos en la importancia de considerar todos los aspectos de la vida de un individuo, incluyendo su entorno social, emocional, físico y espiritual. Nuestro objetivo es proporcionar un espacio seguro y compasivo donde los clientes puedan explorar sus preocupaciones, desarrollar nuevas habilidades y alcanzar su máximo potencial.</p>
+                        <p>En Psicología Integral para el Bienestar, adoptamos un enfoque holístico y centrado en la persona para el tratamiento y la intervención. Creemos en la importancia de considerar todos los aspectos de la vida de un individuo, incluyendo su entorno social, emocional, físico y espiritual. Nuestro objetivo es proporcionar un espacio seguro y compasivo donde los clientes puedan explorar sus preocupaciones, desarrollar nuevas habilidades y alcanzar su máximo potencial.</p>
                 </div>
 
                 <div class="esfera esfera-2">
                     <h3 class="subtitulo">Nuestro Equipo</h3>
                 
-                        <p class="p">Nuestro equipo está formado por psicólogos con experiencia en una variedad de áreas de especialización, incluyendo terapia cognitivo-conductual, terapia de pareja, terapia infantil y psicología positiva. Estamos comprometidos con la excelencia profesional y nos esforzamos por ofrecer servicios de la más alta calidad a nuestros clientes.</p>
+                        <p >Nuestro equipo está formado por psicólogos con experiencia en una variedad de áreas de especialización, incluyendo terapia cognitivo-conductual, terapia de pareja, terapia infantil y psicología positiva. Estamos comprometidos con la excelencia profesional y nos esforzamos por ofrecer servicios de la más alta calidad a nuestros clientes.</p>
                 </div>
                 <div class="esfera esfera-3">
                     <h3 class="subtitulo">Contáctanos</h3>
                 
-                        <p class="p">Si estás listo para dar el primer paso hacia una vida más saludable y satisfactoria, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu viaje hacia el bienestar emocional y el crecimiento personal. ¡Contáctanos hoy mismo para programar una consulta inicial!</p>
+                        <p >Si estás listo para dar el primer paso hacia una vida más saludable y satisfactoria, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu viaje hacia el bienestar emocional y el crecimiento personal. ¡Contáctanos hoy mismo para programar una consulta inicial!</p>
                 </div>
             </div>
     </section>
