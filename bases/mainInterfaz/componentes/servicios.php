@@ -138,7 +138,7 @@
 
       </select> 
 
-      <select name='' class="funcionario">
+      <select name='usuario_f' class="funcionario">
     
       </select>
       <p>Area</p>
