@@ -97,7 +97,7 @@
                 <button class="leerMenos" style="display: none;" onclick="cambiarColor(this)">Leer menos</button>
         </div>
     </div>
-    <div class="Contenedor">   
+    <div class="tarjeta">   
         <h3 class="subtitulos">¿Utilizamos el modelo 4K?</h3>
             <p>
                 Este modelo consiste en dar respuesta a la necesidad que tienen los emprendedores y empresarios no solo de recurso económico. Hay 4 capitales que requieren:
