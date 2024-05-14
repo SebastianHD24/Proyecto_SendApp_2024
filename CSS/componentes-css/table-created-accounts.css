@@ -1,3 +1,14 @@
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -31,23 +42,37 @@ body {
 .users-table {
     margin: 0 auto;
     width: 65vw;
+    overflow-y: auto; /* Agregar desplazamiento vertical */
     overflow-x: auto; /* Agregar desplazamiento horizontal */
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    max-height: 55vh; /* Altura máxima del contenedor */
 }
 
 .users-table table {
     max-width: 100%;
     width: auto;
     border-collapse: collapse;
+    
 }
 
 .users-table th, .users-table td {
-    border: 1px solid #ddd;
+    border: 3px solid var(--gris-oscuro);
     padding: 8px;
     text-align: left;
+    top: -3px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Asegura que el encabezado esté encima del contenido */
 }
 
 .users-table th {
-    background-color: #f2f2f2;
+    background-color: var(--azul);
+    color: var(--blanco);
+    text-align: center;
 }
 
 .users-table tr:nth-child(even) {
