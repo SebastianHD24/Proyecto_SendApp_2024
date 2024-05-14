@@ -28,7 +28,7 @@ section article{
   top: 0;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-y: auto;
   padding-left: 2em;
 } */
 
