@@ -97,16 +97,16 @@
                 <button class="leerMenos" style="display: none;" onclick="cambiarColor(this)">Leer menos</button>
         </div>
     </div>
-    <div class="tarjeta">   
-        <h3 class="subtitulos">¿Utilizamos el modelo 4K?</h3>
+    <div class="tarjeta tarjeta3">   
+        <h3 class="subtitulo">¿Utilizamos el modelo 4K?</h3>
             <p>
                 Este modelo consiste en dar respuesta a la necesidad que tienen los emprendedores y empresarios no solo de recurso económico. Hay 4 capitales que requieren:
                 <br>
                 <ol class="l_ordenada">
-                    <li>Capital psicologico</li>
-                    <li>Capital económico</li>
-                    <li>Capital social</li>
-                    <li>Capital soporte</li>
+                    <li>✔ Capital psicologico</li>
+                    <li>✔ Capital económico</li>
+                    <li>✔ Capital social</li>
+                    <li>✔ Capital soporte</li>
                 </ol>
                 <br>
                 Con esto lo que hacemos es ayudarle al emprendedor a que tenga los elementos que lo ayuden al desarrollo y lograr el éxito de su idea de negocio.
@@ -199,5 +199,4 @@
                 <button class="leerMenos" style="display: none;" onclick="cambiarColor(this)">Leer menos</button>
         </div>
     </div>
-            <script src="fondoEmprender.js"></script>
 <?php endblock() ?>
