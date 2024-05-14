@@ -48,8 +48,8 @@ function ver() {
                         <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
                             <input type="hidden" name="fecha_respuesta" id="fecha_S">
                             <input type="hidden" name="id_peticion" id="id_pqr1">
-                            <input type="text" name="respuesta_pqrs">
-                            <input type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});">
+                            <textarea type="text" name="respuesta_pqrs" class="Responder"></textarea>
+                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder">Responder</button>
                         </form>
                     </td>
                     </tr>`;
