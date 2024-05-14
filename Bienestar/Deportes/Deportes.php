@@ -29,7 +29,7 @@
                         <hr>
                     </div>
                         <div class="imagen">
-                            <img src="./img/LogosSena-img/Bienestar logo.jpg" alt="">
+                            <img src="./Img/GYM.jpeg" alt="Imagen donde se muestra como es el lugar de GYM">
                         </div>
                 </div>
                 <button class="button">Reservar cita</button>

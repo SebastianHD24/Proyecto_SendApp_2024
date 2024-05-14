@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+:root{
+  --verde: #39a900;
+  --blanco: #fff;
+  --negro: #070001;
+  --azul: #00324D;
+  --azul-claro: #82DEF0;
+  --gris-oscuro: #cfcfcf;
+  --gris-claro: #ededed;
+  --fuente-principal: "Work Sans", sans-serif;
+}
+
+
+
 .titulo-calendario {
   font-weight: 600;
   text-align: center;
@@ -12,13 +25,23 @@ h3 {
 }
 
 .calendar {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 98%;
-  max-width: 380px;
+  min-height: 28rem;
+  max-width: 30rem;
+  margin-top: 3.5rem;
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: var(--azul);
+}
+
+.calendar h3{
+  margin-right: 1.5rem;
 }
 
 .calendar header {
@@ -98,7 +121,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #000;
+  background: var(--azul);
   border-radius: 50%;
   z-index: -1;
 }
@@ -121,6 +144,9 @@ h3 {
   margin-top: 20px;
   width: 100%;
   border-collapse: collapse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #eventos th,
@@ -148,7 +174,7 @@ h3 {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: green;
+  background-color: var(--verde);
   border-radius: 50%;
   position: absolute;
   top: 5px;

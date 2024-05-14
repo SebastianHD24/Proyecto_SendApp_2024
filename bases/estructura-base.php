@@ -88,7 +88,7 @@
             <div class="resposive__menu" id="menu-no-sesion" >
                 <ul class="resposive__menu-ul">
                     <li>
-                        <i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicioo</p></a>
+                        <i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicio</p></a>
                     </li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Areas</a> <!--Falta la ruta-->

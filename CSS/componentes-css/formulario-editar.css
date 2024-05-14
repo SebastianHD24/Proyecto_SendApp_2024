@@ -55,6 +55,11 @@
 input[disabled]{
     background-color: var(--gris-oscuro);
 }
+.cerrar{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
 .btn-cambiar{
     color: var(--clr-white);
     padding: .8rem;
@@ -63,7 +68,6 @@ input[disabled]{
     cursor: pointer;
     color: var(--blanco);
     background-color: var(--azul);
-    width: 100%;
     margin-bottom: 1rem;
     
 }
@@ -109,6 +113,9 @@ input{
 .cambiar-contraseña{
     display: grid;
     place-content: center;
+    width: 90vw;
+    margin: 5%;
+    padding: 1.5rem 0rem 3rem;
 
 }
 .header-contraseña{

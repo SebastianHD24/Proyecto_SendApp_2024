@@ -22,7 +22,7 @@ section article{
   align-content: center; 
   width: 100%;
 }
-aside{
+/* aside{
   color: white;
   position: sticky;
   top: 0;
@@ -30,7 +30,7 @@ aside{
   flex-direction: column;
   overflow-x: hidden;
   padding-left: 2em;
-}
+} */
 
 section article img{
   width: 9.375rem;
@@ -179,12 +179,7 @@ color: white;
       font-size: 12px;
   }
 }
-@media screen and (max-width: 638px){
-  .cards__container{
-      grid-template-columns: repeat(auto-fill,minmax(130px, 1fr));
-      grid-template-rows: 1fr;
-  }
-}
+
 @media screen and (max-width: 768px){
   .wrapper{
       display: flex;
@@ -206,6 +201,7 @@ color: white;
       opacity: 1;
       visibility: visible;
       height: 100%;
+      width: 32%;
       
   }
   .boton-menu.active::before,
@@ -213,7 +209,7 @@ color: white;
       display: none;
   }
 
-.header-mobile{
+  .header-mobile{
       display: flex;
       padding: 1rem;
       justify-content: space-between;
@@ -224,7 +220,7 @@ color: white;
       border-bottom: 1px black;
       color: var(--verde);
       
-  };
+  }
   
   .header-mobile .logo{
       color: var(--verde);
@@ -247,19 +243,53 @@ color: white;
       z-index: inherit;
   }
 
-.boton-categoria{
-  padding: 0.6rem;
-  font-size: .85rem; 
-  width:70%;
+  .boton-categoria{
+    padding: 0.6rem;
+    font-size: .85rem; 
+    width: 88%;
+  }
+
+  .boton-menu.active{
+    border-radius: 20px;
+  }
+
 }
 
-.boton-menu.active{
-  border-radius: 20px;
+@media screen and (max-width: 638px){
+  .cards__container{
+      grid-template-columns: repeat(auto-fill,minmax(130px, 1fr));
+      grid-template-rows: 1fr;
+  }
+
+  .aside-visible{
+    width: 38%;
+  }
+  .boton-categoria{
+    width:89.5%;
+  }
 }
 
+@media screen and (max-width: 510px){
+  .aside-visible{
+    width: 45%;
+  }
 
+  .boton-categoria{
+    width: 92%;
+  }
 }
-@media screen and (max-width: 405px){
+
+@media screen and (max-width: 420px){
+  .aside-visible{
+    width: 50%;
+  }
+
+  .boton-categoria{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px){
   .cards__container{
       grid-template-columns: repeat(auto-fill,minmax(85px, 1fr));
       grid-template-rows: 1fr;
@@ -270,6 +300,13 @@ color: white;
       padding: 0.8rem;
       font-size: 12px;
   }
+
+  .aside-visible{
+    width: 58%;
+  }
+  .boton-categoria{
+    width: 88%;
+  }
 }
 @media screen and (max-width: 354px) {
   .cards{
@@ -277,6 +314,10 @@ color: white;
       height: 6rem;
       padding: 0.8rem;
       font-size: 12px;
+  }
+
+  .boton-categoria{
+    width: 95%;
   }
 }
 
