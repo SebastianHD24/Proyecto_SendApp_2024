@@ -4,6 +4,7 @@ const historial = document.getElementById('Historial');
 const salir = document.getElementById('volver');
 const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
+const selector = document.getElementById('selector');
 
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
@@ -11,9 +12,10 @@ function verificar() {
         .then(jsonData => {
             if (jsonData.success == "1") {
                 container.style.display = "block";
-                mensaje.style.display = "none";
             } else if (jsonData.success == "2") {
                 container.style.display = "none";
+                mensaje.style.display = "block";
+                historial.style.display = "block";
             }
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -72,6 +74,7 @@ function ver() {
                 .catch(error => console.error("Error en la solicitud fetch: " + error));
             });
         });
+        historial.style.display = "block";
     })
     .catch(error => console.error("Error al obtener datos: " + error));
 }
@@ -85,24 +88,25 @@ function mostrarHistorial(){
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
     .then(response => response.json())
     .then(data => {
-        data.forEach(historial => {
-            if (historial.respuesta_pqrs != null) {
-                container_r.style.display = "block";
-                mensaje1.style.display = "none";
-            } else {
-                container_r.style.display = "none";
-            }
-        })
+        if (data.length === 0) {
+            // Si la lista está vacía, puedes hacer lo que necesites, como mostrar un mensaje
+            container_r.style.display = "none";
+            salir.style.display = "block";
+            mensaje1.style.display = "block";
+        } else {
+            // Si hay elementos en la lista, puedes hacer otras operaciones
+            container_r.style.display = "block";
+        }
     })
+    .catch(error => console.error("Error al obtener datos: " + error));
 }
 
 function verHistorial(){
     mostrarHistorial();
     historial.style.display = "none";
-    salir.style.display = "block";
     mensaje.style.display = "none";
-    mensaje1.style.display = "block";
     container.style.display = "none";
+    selector.style.display = "block";
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
     .then(response => response.json())
@@ -119,12 +123,13 @@ function verHistorial(){
                     <td>${historial.apellidos}</td>
                     <td>${historial.documento_identidad}</td>
                     <td>${historial.fecha_solicitud}</td>
-                    <td>${historial.fecha_respusta}</td>
+                    <td>${historial.fecha_respuesta}</td>
                     <td>${historial.tipo_pqrs}</td>
                     <td>${historial.descripcion}</td>
                     <td>${historial.respuesta_pqrs}</td>
                 </tr>`;
         });
+        salir.style.display = "block";
     })
     .catch(error => console.error("Error al obtener datos: " + error));
 }

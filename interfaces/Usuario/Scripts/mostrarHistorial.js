@@ -1,7 +1,8 @@
-const mensaje = document.getElementById('mensaje');
+const mensaje1 = document.getElementById('mensaje1');
 const historial = document.getElementById('historial');
+const salir = document.getElementById('salir');
 
-function createNotificationBox() {
+function createNotificationBoxH() {
     // Crear elemento section para display-notificaciones
     let displayNotificaciones = document.querySelector(".display-notificaciones");
 
@@ -17,7 +18,7 @@ function createNotificationBox() {
     // Crear elemento div para notifications-pqr
     let notificationsPqr = document.createElement("div");
     notificationsPqr.classList.add("notifications-pqr");
-    notificationsPqr.setAttribute("id", "contenedor_n");
+    notificationsPqr.setAttribute("id", "contenedor_h");
 
     // Contenedor de imagen de PQR
     let pqrFigure = document.createElement("figure");
@@ -46,7 +47,7 @@ function createNotificationBox() {
     detailsButton.classList.add("show__details--button");
     detailsButton.setAttribute("id", "showDetailsButton");
     detailsButton.setAttribute("onclick", "mostrarR();");
-    var span = document.createElement('span');
+    let span = document.createElement('span');
     span.innerHTML = "Ver<br>Detalles";
     detailsButton.appendChild(span);
     notificationsPqr.appendChild(detailsButton);
@@ -58,26 +59,29 @@ function createNotificationBox() {
     displayNotificaciones.appendChild(notificationsContainer);
 }
 
-function consultar() {
-    const historial = document.getElementById('historial');
-    fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
+function consultarHistorial() {
+    function ocultar_QPR() {
+        const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
+        contenedores_notificacion.forEach(contenedor => {
+            contenedor.style.display = "none";
+        });
+    }
+    ocultar_QPR();
+
+    fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/consultaHistorial.php')
     .then(response => response.json())
     .then(data => {
         if (data.num_registros > 0) {
             // Si hay registros, ejecutar un ciclo basado en el número de registros
             for (let i = 0; i < data.num_registros; i++) {
                 // Aquí puedes realizar las operaciones que necesites dentro del ciclo
-                createNotificationBox();
+                createNotificationBoxH();
             }
         } else {
             // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
-            mensaje.style.display = "block";
+            mensaje1.style.display = "block";
         }
-        historial.style.display = "block";
+        salir.style.display = "block";
     })
     .catch(error => console.error("Error:", error));
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    consultar();
-});
