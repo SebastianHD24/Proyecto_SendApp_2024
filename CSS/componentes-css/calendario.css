@@ -11,48 +11,50 @@
   --fuente-principal: "Work Sans", sans-serif;
 }
 
-
-
 .titulo-calendario {
   font-weight: 600;
   text-align: center;
-  color: #00234D;
+  color: var(--azul);
   margin-bottom: 2rem;
 }
 
 h3 {
   font-weight: 600;
+  color: var(--blanco);
+}
+
+.parrafo_calendario{
+  font-weight: 600;
+  padding-bottom: 1rem;
 }
 
 .calendar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
   width: 98%;
-  min-height: 28rem;
-  max-width: 30rem;
-  margin-top: 3.5rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: var(--azul);
-}
-
-.calendar h3{
-  margin-right: 1.5rem;
+  max-width: 380px;
+  padding: 0.5rem;
 }
 
 .calendar header {
+  background-color: var(--azul);
   display: flex;
+  padding: 0.7rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .calendar nav {
   display: flex;
   align-items: center;
+}
+
+.calendar .week{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .calendar ul {
@@ -102,11 +104,17 @@ h3 {
 
 #prev:hover::before,
 #next:hover::before {
-  border-color: #000;
+  border-color: var(--verde);
 }
 
 .days {
   font-weight: 600;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.dates{
+  padding: 0rem 0.7rem 1rem;
 }
 
 .dates li.today {
@@ -140,28 +148,36 @@ h3 {
 }
 
 /* Estilos para la tabla de eventos */
-#eventos {
+.eventos {
   margin-top: 20px;
   width: 100%;
-  border-collapse: collapse;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0vw 3vw;
 }
 
-#eventos th,
-#eventos td {
+.eventos h2{
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.eventos table{
+  border-collapse: collapse;
+  max-width: 84vw;
+}
+
+.eventos th,
+.eventos td {
   padding: 10px;
   border: 1px solid #ccc;
 }
 
-#eventos th {
+.eventos th {
   background-color: #f2f2f2;
   font-weight: bold;
   text-align: left;
 }
 
-#eventos tbody tr:nth-child(even) {
+.eventos tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
@@ -201,4 +217,14 @@ h3 {
 
 .dates li.inactive::before {
   background-color: #ccc;
+  
 }
+
+@media only screen and (max-width: 768px){
+  .eventos{
+    padding: 0vw 4vw;
+  }
+  .eventos table{
+    max-width: 60vw;
+  }
+} 
