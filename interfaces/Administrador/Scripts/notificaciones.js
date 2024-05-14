@@ -4,6 +4,7 @@ const historial = document.getElementById('Historial');
 const salir = document.getElementById('volver');
 const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
+const selector = document.getElementById('selector');
 
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
@@ -105,6 +106,7 @@ function verHistorial(){
     historial.style.display = "none";
     mensaje.style.display = "none";
     container.style.display = "none";
+    selector.style.display = "block";
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
     .then(response => response.json())

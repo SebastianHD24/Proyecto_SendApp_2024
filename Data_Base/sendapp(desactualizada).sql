@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2024 a las 15:54:43
+-- Tiempo de generación: 09-05-2024 a las 19:27:33
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -106,7 +106,14 @@ CREATE TABLE `servicios` (
 
 INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado_servicio`) VALUES
 (1, 'bienestar al parendiz', 'sandra', 1),
-(2, 'biblioteca', 'juliana', 1);
+(2, 'biblioteca', 'juliana', 1),
+(3, 'Psicologia', 'juliana', 1),
+(4, 'Fondo emprender', 'no se', 1),
+(5, 'Relaciones Corporativas', 'no se', 1),
+(6, 'sennova', 'no se', 1),
+(7, 'Servicios Tecnologicos', 'no se', 1),
+(8, 'Fabrica software', 'no se', 1),
+(9, 'Deportes', 'no se', 1);
 
 -- --------------------------------------------------------
 
@@ -203,7 +210,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id_servicio` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Identifica los servicos del sena', AUTO_INCREMENT=3;
+  MODIFY `id_servicio` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Identifica los servicos del sena', AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
