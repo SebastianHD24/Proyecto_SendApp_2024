@@ -45,11 +45,13 @@ a{
 aside{
     color: white;
     top : 0;
+    position: sticky;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 2em;
+    /* overflow-x: hidden; */
     /* overflow-y: auto; */
 }
 

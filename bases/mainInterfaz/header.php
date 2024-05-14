@@ -49,7 +49,7 @@
         <aside>
             <button class="close-menu" id="close-menu"><i class='bx bx-x'></i></a>
 
-            <div class="perfil">    
+            <div class="perfil" style="display: none;">    
                     <!--*****************************************************-->
                     <figure class="foto-perfil">
                       <img class="logo" src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/fotor-ai-20230902143349.jpg">
@@ -57,7 +57,7 @@
                     </figure>
                     <!--*****************************************************-->  
             </div>
-            <article class="nombre">
+            <article class="nombre" style="display: none;">
                 <p><?= $full_name ?></p>
             </article>
                 
