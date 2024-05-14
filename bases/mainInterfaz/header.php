@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/servicios.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/calendario.css">
-
-
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/citaspendiente.css">
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/confirmado.css"
 </head>
 <body>
     <div class="wrapper">
@@ -69,6 +69,9 @@
                     <?php if ($id_rol == 2): ?>
                         <li>
                         <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                        </li>
+                        <li>
+                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Citas sin contestar </button></a>
                         </li>
                     <?php endif; ?>
 

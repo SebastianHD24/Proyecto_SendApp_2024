@@ -4,6 +4,7 @@ const historial = document.getElementById('Historial');
 const salir = document.getElementById('volver');
 const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
+const selector = document.getElementById('selector');
 
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
@@ -47,8 +48,8 @@ function ver() {
                         <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
                             <input type="hidden" name="fecha_respuesta" id="fecha_S">
                             <input type="hidden" name="id_peticion" id="id_pqr1">
-                            <input type="text" name="respuesta_pqrs">
-                            <input type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});">
+                            <textarea type="text" name="respuesta_pqrs" class="Responder"></textarea>
+                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder">Responder</button>
                         </form>
                     </td>
                     </tr>`;
@@ -105,6 +106,7 @@ function verHistorial(){
     historial.style.display = "none";
     mensaje.style.display = "none";
     container.style.display = "none";
+    selector.style.display = "block";
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
     .then(response => response.json())

@@ -1,5 +1,5 @@
 <h1 id="mensaje1" style="display: none;">No hay historial</h1>
-<h1 id="mensaje" style="display: none;">No hay nuevas PQR</h1>
+<h1 id="mensaje" style="display: none;" class="titulos">No hay nuevas PQR</h1>
 <div class="contenedor-popup" id="contenedor-popup"> 
     <div class="popup">
         <div class="sin-responder" id="sin-responder" style="display: none;">
@@ -31,6 +31,13 @@
                 </tbody>
             </table>  
         </div>
+        <form style="display: none;" id="selector" class="formulario">
+            <select name="" id="">
+                <option value="">Ayer</option>
+                <option value="">Hoy</option>
+                <option value="">Mes Pasado</option>
+            </select>
+        </form>
         <div class="respondidos" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">

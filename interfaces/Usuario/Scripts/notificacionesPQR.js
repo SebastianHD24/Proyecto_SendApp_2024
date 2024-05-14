@@ -1,4 +1,5 @@
 const mensaje = document.getElementById('mensaje');
+const historial = document.getElementById('historial');
 
 function createNotificationBox() {
     // Crear elemento section para display-notificaciones
