@@ -28,7 +28,7 @@
 /* Estilos para los botones */
 .button {
     padding: 10px 15px; /* Espacio interno */
-    background-color: #007bff; /* Azul para el botón */
+
     color: white; /* Texto blanco */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
@@ -37,9 +37,6 @@
     cursor: pointer; /* Cambia el cursor a puntero */
 }
 
-.button:hover {
-    background-color: #0056b3; /* Fondo más oscuro en hover */
-}
 
 .button.danger {
     background-color: #dc3545; /* Rojo para botón de peligro */
