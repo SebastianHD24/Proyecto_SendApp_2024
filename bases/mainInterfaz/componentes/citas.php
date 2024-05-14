@@ -30,6 +30,7 @@ if (isset($_SESSION['documento_identidad'])) {
             <div class="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
+                $hora_formato_12 = date("h:i A", strtotime($row['hora']));
                 ?>
                 <div class="notifications">
                     <figure>
@@ -45,7 +46,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <article>
-                        <p>Hora: <?= $row['hora'] ?></p>
+                        <p>Hora: <?=$hora_formato_12   ?> </p>
                     </article>
                     <span></span>
                     <article>

@@ -15,10 +15,10 @@
                 if (!$conn) {
                     die("Error al conectar a la base de datos: " . mysqli_connect_error());
                 }
-
+                $funcionario = $_SESSION["documento_identidad"];
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita 
                         FROM citas
-                        INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad";
+                        INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad WHERE citas.usuario_f= $funcionario";
 
                 $result = mysqli_query($conn, $sql);
 
