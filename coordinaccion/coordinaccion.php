@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="imagen">
-                    <img src="img/logo_SENNOVA.jpg" alt="">
+                    <img src="../coordinaccion/img/img-content/IMG_5377.jpg" alt="">
                 </div>
 
             </div>     
@@ -36,7 +36,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./img/icons/1.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -52,7 +52,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/2.png" >
+                        <img src="./img/icons/2.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -70,7 +70,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/2.png" >
+                        <img src="./img/icons/3.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -89,7 +89,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/2.png" >
+                        <img src="./img/icons/4.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -107,7 +107,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/2.png" >
+                        <img src="./img/icons/5.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -126,7 +126,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/2.png" >
+                        <img src="./img/icons/6.png" >
                     </div>
 
                     <div class="contenido_tarjeta">

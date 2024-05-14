@@ -29,11 +29,14 @@ body {
 }
 
 .users-table {
-    width: 100%;
+    margin: 0 auto;
+    width: 65vw;
+    overflow-x: auto; /* Agregar desplazamiento horizontal */
 }
 
 .users-table table {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     border-collapse: collapse;
 }
 
@@ -61,4 +64,26 @@ body {
 
 .inactivo {
     color: red;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*Ajustar el tamaño del texto en las celdas para pantallas pequeñas*/
+    .users-table th,
+    .users-table td {
+        font-size: 15px; /* Tamaño de fuente más pequeño */
+        padding: 6px; /* Espaciado más pequeño entre celdas */
+    }
+
+    .search-container {
+        margin-bottom: 0px;
+    }
+    
+} 
+
+@media only screen and (max-width: 768px) {
+    /*ajustar el ancho de la tabala de acuerdo al contenedor main*/
+    .users-table{
+        width: 80vw;
+    }
 }

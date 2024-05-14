@@ -54,7 +54,7 @@
                     <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/4.png" >
+                            <img src="img/objetivo.png" >
                         </div>
 
                         <div class="contenido_tarjeta">

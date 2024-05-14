@@ -23,17 +23,16 @@ body{
 
 /*Contenido*/
 .orden{
-    margin: 4rem;
+    margin-bottom: 4rem;
 }
- .Primera_Impresion{
+.Primera_Impresion{
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
 } 
 
 .contn {
     margin: 1rem;
-    flex:60%;
     padding-right: 20px; 
     text-align: left;
 }
@@ -53,26 +52,24 @@ body{
 }
 
 .imagen{
-    flex: 35%;
-    text-align: center; 
-    padding: 20px;
-
+    padding: 10px;
+    width: 120rem;
 }
 .imagen img{
-    margin-top: 9rem;
-    max-width: 134%;
+    margin-top: 8rem;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .Contenido{
     width: 100%;
-    padding: 70px;
-    background:linear-gradient(#ededed,#fff); 
+    padding: 40px 53px 53px 53px;
     
 }
 /*titulo */
 .titulo{
-    font-size: 6rem;
+    font-size: 50px;
     text-align:left;
     font-family: var(--fuente-principal);
     animation: fadeIn 3s forwards;
@@ -80,22 +77,26 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
+    font-size: 18px;
     font-family: var(--fuente-principal);
     text-align: left;
+    margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
 }
 .sub{
-    font-family: var(--fuente-principal);
+    font-family:  var(--fuente-principal);
     text-align: center;
     font-size: 3rem;
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
-    font-size: 25px;
+    font-size: 22px;
 }
 .p{
-    font-size: 25px;
+    color: #00324D;
+    /* font-size: 25px; */
+    margin: 10px;
     text-align: center;
 }
 hr{
@@ -113,10 +114,10 @@ hr{
     flex-wrap: wrap;
     justify-content: center;
     margin: 3rem 0 3rem 0;
-    gap: 4rem;
+    gap: 1.7rem;
 }
 .tarjeta {  
-    width: 40rem;      
+    width: 30rem;      
     background-color: #f0f0f0;
     transition: transform 0.3s ease;
     text-align: center;
@@ -158,4 +159,23 @@ hr{
     .parrafo,.p{
         font-size: 1rem;
     }
+}
+/* --------------- Responsive -------------- */
+@media only screen and (max-width:947px){
+    .Primera_Impresion{
+        flex-direction: column;
+    }
+    .imagen{
+        width: 80%;
+        height: auto;
+    }
+    .imagen img{
+        margin-top: 0px;
+    }
+    .orden{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
 }
