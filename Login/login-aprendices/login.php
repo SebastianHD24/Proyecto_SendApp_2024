@@ -65,70 +65,8 @@
     <div class="login-container">
 
         <!-- CAMBIAR EL METODO POST EN PHP SI ES NECESARIO Y CAMBIAR LA ACCIÓN DEL FORM DEPENDIENDO DE LA NECESIDAD -->
-
-        <form action="agregandoregistro.php" class="form-login form2" method="post"> 
-            <div class="titulos">
-                <ul class="login-nav">
-                    <li class="login-nav__item">
-                        <a id="goToLogin">Iniciar Sesión</a>
-                    </li>
-                    <li class="login-nav__item active">
-                        <a href="#">Registrarse</a>
-                    </li>
-                </ul>
-            </div> 
-            <label for="tipo-documento" class="login__label">
-                Tipo de Documento
-            </label>
-            <select id="tipo-documento" class="login__input" name="tipo_documento">
-                <option value="CC">Cédula de Ciudadanía</option>
-                <option value="TI">Tarjeta de Identidad</option>
-                <option value="DE">Documento Extranjero</option>
-            </select>
-            <p id="mensaje_errord"></p>
-            <label for="login-input-user" class="login__label">
-                Documento de identidad
-            </label>
-            <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad"/>
-
-            <p id="mensaje_errorc"></p>
-            <label for="login-input-password" class="login__label">
-                Contraseña
-            </label>
-            <input id="login-input-password-p" class="login__input" type="text" name="contrasena"/>
-            
-            <label for="login-input-user" class="login__label">
-                Nombres
-            </label>
-            <input id="login-input-user-n" class="login__input" type="text" name="nombres"/>
-
-            <label for="login-input-user" class="login__label">
-                Apellidos
-            </label>
-            <input id="login-input-user-a" class="login__input" type="text" name="apellidos"/>
-
-            <label for="login-input-user" class="login__label">
-                Correo
-            </label>
-            <input id="login-input-user-c" class="login__input" type="email" name="correo"/>
-
-            <label for="login-input-user" class="login__label">
-                Celular
-            </label>
-            <input id="login-input-user-ce" class="login__input" type="text" name="celular"/>
-
-            <label for="login-input-user" class="login__label">
-                Programa opcional
-            </label>
-            <input id="login-input-user-p" class="login__input" type="text" name="programa"/>
-
-            <label for="login-input-user" class="login__label">
-                Ficha opcional
-            </label>
-            <input id="login-input-user-f" class="login__input" type="number" name="ficha"/>
-            <input class="login__submit" type="submit" value="Registrarse">
-            <p id="mensaje_errore"></p>
-        </form>
+        <?php include '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/registro.php' ?>
+        
         <div class="olvidaste">
             <a id="goToLogin" class="login__forgot">¿Ya tienes una cuenta? Inicia sesión aquí.</a> 
         </div>
@@ -141,5 +79,5 @@
 <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/inactividad.js"></script>
 <script src="../Scripts/login.js"></script>
 <script src="../Scripts/informar_errores.js"></script>
-<script src="../Scripts/informar_error_registro.js"></script>
+<script src="../Scripts/informar_error_registro_login.js"></script>
 </html>
