@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/servicios.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/calendario.css">
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/citaspendiente.css">
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/confirmado.css"
 </head>
 <body>
     <div class="wrapper">

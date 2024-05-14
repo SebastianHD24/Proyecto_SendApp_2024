@@ -4,6 +4,10 @@
     height: 100%;
     overflow-x: auto;
 }  */
+.titulos{
+    color: #00234d;
+    font-weight: 600;
+}
  /*Estilos para la tabla de responder*/
  .sin-responder {
      background-color: #00234d;
