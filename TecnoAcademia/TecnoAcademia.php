@@ -36,7 +36,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="./icons/objetivo.png" alt="Icono-objetivos" >
+                        <img src="img/1.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -62,7 +62,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="./icons/servicio.png" alt="Icono-servicios" >
+                        <img src="img/2.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -86,7 +86,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="./icons/beneficio.png" alt="Icono-beneficios">
+                        <img src="img/1.png" >
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -104,7 +104,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="./icons/microscopio.png" alt="Icono-investigación">
+                        <img src="img/2.png" >
                     </div>
 
                     <div class="contenido_tarjeta">

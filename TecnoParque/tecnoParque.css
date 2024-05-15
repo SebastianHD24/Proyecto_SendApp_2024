@@ -137,8 +137,8 @@ hr{
     padding-left: 20px;
 }
 .l_ordenada li{
-    /* margin: 2rem;
-    margin-bottom: 10px; */
+    margin: 2rem;
+    margin-bottom: 10px;
     position: relative;
 }
 .l_ordenada li::before {
@@ -181,7 +181,7 @@ hr{
 }
 
 .subtitulo{
-    /* font-size: 25px; */
+    font-size: 25px;
     margin-top: 2rem;
 }
 .info-container {
@@ -314,10 +314,10 @@ a:hover {
     padding: 15px 30px 15px 30px;
 }
 
-/* .l_ordenada li{
+.l_ordenada li{
     margin-bottom: 10px;
     font-size: 15px;
-} */
+}
 
 
 .lineas{

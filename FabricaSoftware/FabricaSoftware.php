@@ -33,7 +33,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="./icons/lista-de-verificacion.png " alt="Icono-objetivos" >
+                <img src="img/2.png " class="ima" >
             </div>
 
             <div class="contenido_tarjeta">
@@ -53,7 +53,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="./icons/accesibilidad.png" alt="Icono-accesibilidad">
+                <img src="img/1.png" >
             </div>
 
             <div class="contenido_tarjeta">
@@ -74,7 +74,7 @@
         <div class="tarjeta">
 
             <div class="tarj-img">
-                <img src="./icons/vision (1).png" > 
+                <img src="img/3.png" > 
             </div>
 
             <div class="contenido_tarjeta">
