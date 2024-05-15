@@ -202,6 +202,7 @@ color: white;
       visibility: visible;
       height: 100%;
       width: 32%;
+      gap: 15px;
       
   }
   .boton-menu.active::before,
@@ -263,6 +264,7 @@ color: white;
 
   .aside-visible{
     width: 38%;
+    gap: 15px;
   }
   .boton-categoria{
     width:89.5%;
@@ -272,6 +274,7 @@ color: white;
 @media screen and (max-width: 510px){
   .aside-visible{
     width: 45%;
+    gap: 15px;
   }
 
   .boton-categoria{
@@ -282,6 +285,7 @@ color: white;
 @media screen and (max-width: 420px){
   .aside-visible{
     width: 50%;
+    gap: 15px;
   }
 
   .boton-categoria{
@@ -303,6 +307,7 @@ color: white;
 
   .aside-visible{
     width: 58%;
+    gap: 15px;
   }
   .boton-categoria{
     width: 88%;

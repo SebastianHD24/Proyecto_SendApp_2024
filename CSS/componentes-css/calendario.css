@@ -181,9 +181,10 @@ h3 {
 }
 
 .eventos th {
-  background-color: #f2f2f2;
+  background-color: var(--azul);
   font-weight: bold;
   text-align: left;
+  color: var(--blanco);
 }
 
 
