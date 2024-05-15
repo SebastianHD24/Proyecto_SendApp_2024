@@ -31,7 +31,7 @@ h3 {
 .calendar {
   margin: 0 auto;
   width: 98%;
-  max-width: 380px;
+  max-width: 30rem;
   padding: 0.5rem;
 }
 
@@ -152,6 +152,9 @@ h3 {
   margin-top: 20px;
   width: 100%;
   padding: 0vw 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .eventos h2{
