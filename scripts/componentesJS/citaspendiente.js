@@ -3,23 +3,24 @@
     var modal = document.getElementById('modal_' + id);
     modal.style.display = "block";
 }
+
 // Función para cerrar el modal
-function closeModal(id) {
-    var modal = document.getElementById('modal_' + id);
-    modal.style.display = "none";
-}
-// Función para enviar el formulario
 function submitForm(id) {
     var form = document.getElementById('form_' + id);
     var justificacion = document.getElementById('justificacion_' + id).value;
-    // Envía los datos del formulario vía AJAX
+    
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'rechazarcita.php', true);
+    xhr.open('POST', '../../bases/mainInterfaz/backend/rechazarcita.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
         if (xhr.status === 200) {
-            // Recarga la página después de enviar el formulario
-            window.location.reload();
+            var response = xhr.responseText; // Obtener la respuesta del servidor
+            if (response.trim() === "success") {
+                // Redirigir si la actualización fue exitosa
+                window.location.reload();
+            } else {
+                console.log('Error al enviar el formulario');
+            }
         } else {
             console.log('Error al enviar el formulario');
         }
