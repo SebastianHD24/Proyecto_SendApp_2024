@@ -39,13 +39,27 @@
                             <td class="actions">
                                 <button class="button <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
                                 <button class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="openModal(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
+                                <!-- Modal para rechazar la cita -->
                                 <div id="modal_<?= $row['id_cita'] ?>" class="modal">
                                     <div class="modal-content">
+                                        <!-- Botón para cerrar el modal -->
                                         <span class="close" onclick="closeModal(<?= $row['id_cita'] ?>)">&times;</span>
-                                        <form id="form_<?= $row['id_cita'] ?>" class="modal-form" action="rechazarcita.php" method="post">
+                                        <!-- Formulario para justificar el rechazo de la cita -->
+                                        <form id="form_<?= $row['id_cita'] ?>" class="modal-form" method="post">
                                             <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
-                                            <!-- Otros campos del formulario -->
-                                            <button type="button" onclick="submitForm(<?= $row['id_cita'] ?>)" class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>">Enviar</button>
+                                            <!-- Campo para mostrar el nombre del usuario -->
+                                            <label for="nombre_<?= $row['id_cita'] ?>">Nombre:</label>
+                                            <input type="text" id="nombre_<?= $row['id_cita'] ?>" name="nombre" value="<?= $row['nombres'] ?>" disabled>
+                                            <!-- Campo para mostrar la descripción de la cita -->
+                                            <label for="descripcion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
+                                            <input type="text" id="descripcion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
+                                            <!-- Campo para justificar el rechazo -->
+                                            <label for="justificacion_<?= $row['id_cita'] ?>">Justificación:</label>
+                                            <input type="text" id="justificacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
+                                            <div style="margin-top: 10px;">
+                                                <!-- Botón para enviar el formulario -->
+                                                <button type="button" onclick="submitForm(<?= $row['id_cita'] ?>)" class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>">Enviar</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
