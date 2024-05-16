@@ -63,7 +63,7 @@
         <!--Contenedor del título y la fecha-->
         <div class="date">
             <!--Título-->
-            <article>
+            <article class="tituloAtencion">
                 <h1>Atención a su <br>solicitud</h1>
             </article>
             <article>
