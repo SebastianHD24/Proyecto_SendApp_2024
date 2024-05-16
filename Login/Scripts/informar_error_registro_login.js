@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (jsonData.success == "4") {
                 const error = document.getElementById('mensaje_errord');
                 const limpiarC = document.getElementById('login-input-user-d');
-                error.textContent = "El numero de documento debe ser mayor a 5 digitos.";
+                error.textContent = "El numero de documento debe ser mayor a 5 digitossssss.";
                 limpiarC.value = "";
 
                 const error2 = document.getElementById('mensaje_errorc');
