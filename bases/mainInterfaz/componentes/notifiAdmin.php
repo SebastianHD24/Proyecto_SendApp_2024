@@ -39,7 +39,7 @@
                 <option value="mes">Ultimo mes</option>
                 <option value="anio">Ultimo Año</option>
             </select>
-            <button type="submit" onclick="historialDesde();">Buscar</button>
+            <button type="submit" onclick="historialDesde();" class="buscar">Buscar</button>
         </form>
         <div class="respondidos" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">

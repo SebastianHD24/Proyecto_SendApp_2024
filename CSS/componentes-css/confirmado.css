@@ -75,6 +75,22 @@
      width: 25%;
      cursor: pointer;
 }
+/*Boton buscar por fecha */
+.buscar{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 10%;
+    cursor: pointer;
+}
+.buscar:hover{
+    background-color: #00234d;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
 
 /* .formulario select option{
     background: #00234d;
