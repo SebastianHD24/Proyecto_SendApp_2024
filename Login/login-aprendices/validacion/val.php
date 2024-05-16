@@ -1,6 +1,5 @@
 <?php
     error_reporting(0);
-    session_start();
     //llamamos el php que hace la conexion con la base de datos
     include("../../../../Proyecto_SendApp_2024/bases/conexion.php");
     $conn = connection();
@@ -28,6 +27,7 @@
 
         //Verifica con el password_verify que la contraseña encriptada y la contraseña del input sean correctas
         if (password_verify($contrasena, $contrasena_hash)){
+            session_start();
             //Consulta de administrador
             $consulta1 = mysqli_query($conn, "SELECT * FROM usuarios WHERE documento_identidad = '$documento_identidad' and estado = $estado and id_rol = (SELECT id_rol FROM roles WHERE nombre_rol = 'administrador')");
             //Verifica si hay resultados de la consulta y si es asi ejecuta lo que tiene dentro y termina la ejecución del PHP

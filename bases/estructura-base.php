@@ -1,5 +1,4 @@
 <?php require_once 'ti.php' ?>  <!--LLamo la libreria para realizar el proceso de crear bloques para heredarlos a futuro-->
-
 <!--Creo la estructura-->
 
 <!DOCTYPE html>
