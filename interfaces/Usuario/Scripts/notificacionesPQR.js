@@ -1,8 +1,9 @@
 const mensaje = document.getElementById('mensaje');
+const historial = document.getElementById('historial');
 
 function createNotificationBox() {
     // Crear elemento section para display-notificaciones
-    var displayNotificaciones = document.querySelector(".display-notificaciones");
+    let displayNotificaciones = document.querySelector(".display-notificaciones");
 
     if (!displayNotificaciones) {
         console.error("No se encontró el contenedor '.display-notificaciones'");
@@ -10,37 +11,37 @@ function createNotificationBox() {
     }
 
     // Crear elemento div para notifications-container
-    var notificationsContainer = document.createElement("div");
+    let notificationsContainer = document.createElement("div");
     notificationsContainer.classList.add("notifications-container");
 
     // Crear elemento div para notifications-pqr
-    var notificationsPqr = document.createElement("div");
+    let notificationsPqr = document.createElement("div");
     notificationsPqr.classList.add("notifications-pqr");
     notificationsPqr.setAttribute("id", "contenedor_n");
 
     // Contenedor de imagen de PQR
-    var pqrFigure = document.createElement("figure");
+    let pqrFigure = document.createElement("figure");
     pqrFigure.classList.add("figure__icon--schedule");
-    var pqrImg = document.createElement("img");
+    let pqrImg = document.createElement("img");
     pqrImg.setAttribute("src", "../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/qprIcon.png");
     pqrImg.setAttribute("alt", "Imagen de PQR");
     pqrFigure.appendChild(pqrImg);
     notificationsPqr.appendChild(pqrFigure);
 
     // Contenedor de texto
-    var textArticle = document.createElement("article");
+    let textArticle = document.createElement("article");
     textArticle.classList.add("article__text--1");
-    var textParagraph = document.createElement("p");
+    let textParagraph = document.createElement("p");
     textParagraph.textContent = "Atención a su solicitud de QPR.";
     textArticle.appendChild(textParagraph);
     notificationsPqr.appendChild(textArticle);
 
     // Barra divisoria
-    var dividerSpan = document.createElement("span");
+    let dividerSpan = document.createElement("span");
     notificationsPqr.appendChild(dividerSpan);
 
     // Botón Ver Detalles
-    var detailsButton = document.createElement("button");
+    let detailsButton = document.createElement("button");
     detailsButton.setAttribute("type", "button");
     detailsButton.classList.add("show__details--button");
     detailsButton.setAttribute("id", "showDetailsButton");
@@ -58,15 +59,21 @@ function createNotificationBox() {
 }
 
 function consultar() {
+    const historial = document.getElementById('historial');
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
     .then(response => response.json())
     .then(data => {
-        if (data.success === "1") {
-            mensaje.style.display = "none";
-            createNotificationBox();
-        } else if (data.success === "2") {
+        if (data.num_registros > 0) {
+            // Si hay registros, ejecutar un ciclo basado en el número de registros
+            for (let i = 0; i < data.num_registros; i++) {
+                // Aquí puedes realizar las operaciones que necesites dentro del ciclo
+                createNotificationBox();
+            }
+        } else {
+            // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
             mensaje.style.display = "block";
         }
+        historial.style.display = "block";
     })
     .catch(error => console.error("Error:", error));
 }

@@ -22,6 +22,15 @@ section article{
   align-content: center; 
   width: 100%;
 }
+aside{
+  color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding-left: 2em;
+}
 
 section article img{
   width: 9.375rem;
@@ -63,14 +72,38 @@ section p{
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
 }
 
-.cards article p {
-opacity: 1; /* Por defecto visible */
-transition: opacity 0.3s ease; /* Efecto de transición */
+/* boton interno de las tarjetas */
+.btn{
+  background-color: transparent;
+  border: none;
 }
 
-.cards:hover article p {
-color:var(--verde); /* Al hacer hover, desaparece el párrafo */
+/* textos del boton */
+.txt2{
+  display: none;
 }
+
+.cards article p {
+  opacity: 1; /* Por defecto visible */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+  font-size: 0.95rem;
+}
+
+/* .cards:hover article p {
+color:var(--verde); Al hacer hover, desaparece el párrafo 
+} */
+
+/* cuando se haga hover en la tarjeta se cambie el parrafo  */
+.cards:hover article .txt1{
+  display: none;
+}
+
+.cards:hover article .txt2{
+  display: block;
+  font-size: 1rem;
+  color: var(--verde);
+}
+/* --------------------------------------------- */
 
 .cards article{
 display: flex;
@@ -148,7 +181,7 @@ color: white;
       grid-template-rows: 1fr;
   }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
   .wrapper{
       display: flex;
       flex-direction: column;

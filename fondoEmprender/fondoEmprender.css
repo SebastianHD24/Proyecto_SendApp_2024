@@ -23,17 +23,16 @@ body{
 
 /*Contenido*/
 .orden{
-    margin: 4rem;
+    margin-bottom: 4rem;
 }
- .Primera_Impresion{
+.Primera_Impresion{
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
 } 
 
 .contn {
     margin: 1rem;
-    flex:60%;
     padding-right: 20px; 
     text-align: left;
 }
@@ -53,51 +52,51 @@ body{
 }
 
 .imagen{
-    flex: 35%;
-    text-align: center; 
-    padding: 20px;
-
+    padding: 10px;
+    width: 120rem;
 }
 .imagen img{
-    border-radius: 5rem;
-    margin-top: 1rem;
-    max-width: 100%;
+    margin-top: 8rem;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .Contenido{
     width: 100%;
-    padding: 60px;
-    background:linear-gradient(#ededed,#fff); 
+    padding: 40px 53px 53px 53px;
     
 }
 /*titulo */
 .titulo{
-    font-size: 6rem;
+    font-size: 50px;
     text-align:left;
     font-family: var(--fuente-principal);
     animation: fadeIn 3s forwards;
     color: var(--azul);
+    margin-bottom: 40px;
 }
 /*subtitulos*/
 .subtitulos{
-    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    font-family: var(--fuente-principal);
     text-align: left;
+    margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
 }
 .sub{
-    font-family: var(--fuente-open-sans);
+    font-family:  var(--fuente-principal);
     text-align: center;
     font-size: 3rem;
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
-    font-size: 25px;
+    font-size: 22px;
 }
 .p{
     color: #00324D;
-    font-size: 25px;
+    /* font-size: 25px; */
     margin: 10px;
     text-align: center;
 }
@@ -143,7 +142,10 @@ hr{
     margin-bottom: 20px;
     overflow: hidden; 
     box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
-
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .tarjeta.cambio{
     color: #00324D;
@@ -157,13 +159,14 @@ hr{
 
 .tarj-img {
     float: left; 
-    margin-right: 12px; 
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
-
 .tarj-img img {
-    width: 100%; 
+    /* width: 100%;  */
     height:35%; 
     object-fit: cover;
     opacity: 0; 
@@ -183,7 +186,8 @@ hr{
     overflow: hidden; 
 }
 .contenido-corto{
-    padding: 10px; 
+    padding: 10px;
+    font-size: 1.2rem; 
 }
 .contenido-expansivo {
     display: none;
@@ -257,13 +261,10 @@ hr{
     color:#00324D;
     text-align: center;
     padding: 35px;
+    background:linear-gradient(#cfcfcf,#ededed)
 }
 
-.esfera-1,
-.esfera-2,
-.esfera-3{
-    background:linear-gradient(#cfcfcf,#ededed); 
-}
+
 
 .subtitulo{
     font-size: 25px;
@@ -438,5 +439,29 @@ a:hover {
         font-family: var(--fuente-principal);
         color: var(--azul);
 
+    }
+}
+
+/* --------------- Responsive -------------- */
+@media only screen and (max-width:947px){
+    .Primera_Impresion{
+        flex-direction: column;
+    }
+    .imagen{
+        width: 80%;
+        height: auto;
+    }
+    .imagen img{
+        margin-top: 0px;
+    }
+    .orden{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tarjeta { 
+        flex-direction: column;
     }
 }

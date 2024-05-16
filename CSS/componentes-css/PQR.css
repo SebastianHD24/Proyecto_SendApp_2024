@@ -42,6 +42,17 @@ textarea{
     margin: 10px 0px 0px 0px;
     resize: none;
 }
+.Responder{
+    width: 90%;
+    background-color: var(--gris-oscuro);
+    font-family: var(--fuente-principal);
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0px 0px 0px;
+    resize: none;
+    height: 20vh;
+    scrollbar-width: none;
+}
 
 .button{
     display: flex;
@@ -94,4 +105,13 @@ h1{
     width: 50px;
     height: auto;
     padding: 0px 0px 10px 0px;
+}
+
+.btnResponder{
+    background-color: #39a900;
+    width: 90%;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
 }

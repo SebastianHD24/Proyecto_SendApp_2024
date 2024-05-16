@@ -64,7 +64,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/1.png" >
+                        <img src="./icons/servicio.png" alt="Icono-servicios">
                     </div>
 
                     <div class="contenido_tarjeta">
@@ -94,7 +94,7 @@
                 <div class="tarjeta">
 
                     <div class="tarj-img">
-                        <img src="img/2.png" >
+                        <img src="./icons/beneficio.png" alt="Icono-beneficios">
                     </div>
 
                     <div class="contenido_tarjeta">

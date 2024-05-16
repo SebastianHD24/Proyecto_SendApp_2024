@@ -21,7 +21,7 @@
                     <hr>
                 </div>
                 <div class="imagen">
-                    <img src="img/logo_SENNOVA.jpg" alt="">
+                    <img src="./img-content/IMG_5375.jpg" alt="">
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
                     <div class="tarjeta">
 
                         <div class="tarj-img">
-                            <img src="img/4.png" >
+                            <img src="img/objetivo.png" >
                         </div>
 
                         <div class="contenido_tarjeta">

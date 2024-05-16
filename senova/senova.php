@@ -1,5 +1,5 @@
 
-.<?php include '../bases/estructura-base.php' ?>
+<?php include '../bases/estructura-base.php' ?>
 
 <?php startblock('links-styles') ?>
     <link rel="stylesheet" href="../../Proyecto_SendApp_2024/senova/senova.css"> <!-- Estilos de Senova -->
@@ -21,17 +21,17 @@
                     <p class="p">El horario de atención es de 7:30 am a 1:00 pm y de 2:00 pm a 5:00 pm. </p>
                 </div>
                     <div class="imagen">
-                        <img src="img/logo_SENNOVA.jpg" alt="">
+                        <img src="../senova/img/img-content/IMG_5383.jpg" alt="">
                     </div>
             </div>
 
             <button class="button">Reservar cita</button>
         </div>
 
-            <div class="tarjeta" ">
+            <div class="tarjeta" >
 
                 <div class="tarj-img">
-                    <img src="img/5.png" alt="">
+                    <img src="img/icons/5.png" alt="">
                 </div>
 
                 <div class="contenido_tarjeta">
@@ -53,7 +53,8 @@
             <div class="tarjeta">
 
                 <div class="tarj-img">
-                    <img src="img/1.png">
+                    
+                    <img src="img/icons/1.png">
                 </div>
 
                 <div class="contenido_tarjeta">
@@ -75,7 +76,7 @@
             <div class="tarjeta">
 
                 <div class="tarj-img">
-                    <img src="img/2.png" >
+                    <img src="img/icons/2.png" >
                 </div>
 
                 <div class="contenido_tarjeta">
@@ -97,7 +98,7 @@
             <div class="tarjeta">
 
                 <div class="tarj-img">
-                    <img src="img/3.png" >
+                    <img src="img/icons/3.png" >
                 </div>
 
                 <div class="contenido_tarjeta">
@@ -118,7 +119,7 @@
             <div class="tarjeta" >
 
                 <div class="tarj-img">
-                    <img src="img/4.png" >
+                    <img src="img/icons/4.png" >
                 </div>
 
                 <div class="contenido_tarjeta">
