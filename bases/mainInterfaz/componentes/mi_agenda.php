@@ -11,13 +11,14 @@
             </header>
             <section class="week">
                 <ul class="days">
+                    <li>Dom</li>    
                     <li>Lun</li>
                     <li>Mar</li>
                     <li>Mier</li>
                     <li>Jue</li>
                     <li>Vier</li>
                     <li>Saba</li>
-                    <li>Dom</li>
+                    
                 </ul>
                 <ul class="dates"></ul>
             </section>
