@@ -32,43 +32,43 @@
     <label for="login-input-user" class="login__label">
         Documento de identidad
     </label>
-    <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad"/>
+    <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad" placeholder="Número de documento"/>
 
     <p id="mensaje_errorc"></p>
     <label for="login-input-password" class="login__label">
         Contraseña
     </label>
-    <input id="login-input-password-p" class="login__input" type="text" name="contrasena"/>
+    <input id="login-input-password-p" class="login__input" type="text" name="contrasena" placeholder="Contraseña" />
     
     <label for="login-input-user" class="login__label">
         Nombres
     </label>
-    <input id="login-input-user-n" class="login__input" type="text" name="nombres"/>
+    <input id="login-input-user-n" class="login__input" type="text" name="nombres" placeholder="Nombres" />
 
     <label for="login-input-user" class="login__label">
         Apellidos
     </label>
-    <input id="login-input-user-a" class="login__input" type="text" name="apellidos"/>
+    <input id="login-input-user-a" class="login__input" type="text" name="apellidos" placeholder="Apellidos" />
 
     <label for="login-input-user" class="login__label">
         Correo
     </label>
-    <input id="login-input-user-c" class="login__input" type="email" name="correo"/>
+    <input id="login-input-user-c" class="login__input" type="email" name="correo" placeholder="Correo electronico" />
 
     <label for="login-input-user" class="login__label">
         Celular
     </label>
-    <input id="login-input-user-ce" class="login__input" type="text" name="celular"/>
+    <input id="login-input-user-ce" class="login__input" type="text" name="celular" placeholder="Número celular/telefono"/>
 
     <label for="login-input-user" class="login__label">
         Programa opcional
     </label>
-    <input id="login-input-user-p" class="login__input" type="text" name="programa"/>
+    <input id="login-input-user-p" class="login__input" type="text" name="programa" placeholder="Programa"/>
 
     <label for="login-input-user" class="login__label">
         Ficha opcional
     </label>
-    <input id="login-input-user-f" class="login__input" type="number" name="ficha"/>
+    <input id="login-input-user-f" class="login__input" type="number" name="ficha" placeholder="Número de ficha"/>
 
     <?php if (isset($_SESSION['documento_identidad'])): ?>
         <label for="id_rol">Rol:</label>
