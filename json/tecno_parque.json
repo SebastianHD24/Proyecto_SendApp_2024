@@ -1,0 +1,73 @@
+{
+    "titulo": "Tecnoparque",
+    "subtitulo":"¿Qué es Tecnoparque?",
+    "parrafo_inicio": "Es un programa y estrategia de innovación tecnológica del Servicio Nacional de Aprendizaje, creado para brindar apoyo en la materialización de proyectos de desarrollo tecnológico en prototipos funcionales y productos.",
+    "parrafo2": "Para Acceder a los servicios de Tecnoparque debes regístrate en la página oficial <a href=\"https://redtecnoparque.com/\" target=\"_blank\" rel=\"noopener noreferrer\">www.redtecnoparque.com</a> y seguir los pasos del pdf <a href=\"documentos/PASO A PASO REGISTRO DE IDEAS TECNOPARQUE.pdf\" download=\"PASO A PASO REGISTRO DE IDEAS TECNOPARQUE\"><strong>“PASO A PASO REGISTRO DE IDEAS TECNOPARQUE”</strong></a>",
+    "imagen": "Img/TencoParque-img/tecnoparque1.png",
+    "esferas": [
+        {
+          "titulo": "Objetivos de Tecnoparque",
+          "contenido": "Tecnoparque es un programa del SENA que tiene como objetivo principal promover el desarrollo de la innovación, la tecnología y la competitividad empresarial en Colombia."
+        },
+        {
+          "titulo": "¿Para quienes está dirigido el Tecnoparque?",
+          "contenido": "El programa está dirigido a cada uno de los residentes en Colombia. El público interno incluye a aprendices, instructores o investigadores SENA, el público externo incluye a emprendedores empresarios, universitarios en pregrado, universitarios en posgrado y público general que necesitan apoyo de expertos y acceso a laboratorios especializados y equipos para materializar sus ideas."
+        },
+        {
+          "titulo": "Requisitos para ingresar a Tecnoparque",
+          "contenido": "<ol class=\"l_ordenada\"> <li>Debes tener un proyecto o una idea clara relacionada con la tecnología, la innovación o un emprendimiento que pueda beneficiarse de los recursos y el ecosistema ofrecido por el Tecnoparque.</li> <li> Registrarse en la página de Red Tecnoparque.</li> </ol>"
+        },
+        {
+          "titulo": "Convenios de Tecnoparque",
+          "contenido": "Tecnoparque suele tener convenios con universidades locales para proyectos de investigación, empresas relacionadas con el sector tecnológico para el desarrollo de productos o servicios y alianzas con entidades gubernamentales para capacitación y apoyo a emprendedores."
+        }
+    ],
+    "tecno_imagen":"Img/TencoParque-img/logo _tecnoparque.png",
+    "tarjetas": [
+      {
+        "icono": "./icons/servicio.png",
+        "titulo": "¿Cuáles son los servicios que ofrece Tecnoparque?",
+        "contenido": "<ol class=\"l_ordenada\"> <li> Acompañar técnica y metodológicamente el desarrollo de proyectos de base tecnológica, disponiendo de equipo humano experto, ambientes y laboratorios especializados, para la materialización de prototipos que generen un valor agregado a procesos y servicios del sector productivo. </li> <li> Articular esfuerzos y capacidades entre la Red Tecnoparque, los centros de formación profesional y los actores del Sistema de Ciencia, Tecnología e Innovación de Colombia facilitando oportunidades de comercialización, formalización de productos o servicios y registro de propiedad intelectual de prototipos que así lo requieran. </li> <li> Crear espacios para garantizar la generación, apropiación, adaptación, difusión y transferencia de conocimiento y tecnológicas, desde y hacia los sectores productivos y académicos de las regiones. </li> </ol>"
+      },
+      {
+        "icono": "./icons/beneficio.png",
+        "titulo": "¿Qué beneficios se pueden obtener de los servicios que ofrecen?",
+        "contenido": "<ol class=\"l_ordenada\"> <li> Infraestructura y espacio de trabajo: Acceso a instalaciones modernas y equipadas con tecnología de punta, incluyendo laboratorios, espacios de coworking, salas de reuniones y áreas de trabajo colaborativo. </li> <li> Asesoramiento y consultoría: Apoyo técnico y empresarial por parte de expertos en diferentes áreas, incluyendo asesoramiento en desarrollo de negocios, estrategias de comercialización, gestión financiera, propiedad intelectual, entre otros. </li> <li> Formación y capacitación: Programas de formación y capacitación en temas relevantes para el desarrollo de proyectos tecnológicos e innovadores, incluyendo cursos, talleres, seminarios y conferencias. </li> <li> Red de contactos y networking: Oportunidades para establecer contactos con otros emprendedores, empresas, instituciones educativas, inversores y profesionales del sector, facilitando la colaboración, la generación de alianzas estratégicas y el acceso a recursos adicionales. </li> <li> Acceso a financiamiento: Posibilidad de acceder a programas de financiamiento, inversión o subvenciones para el desarrollo y la implementación de proyectos tecnológicos e innovadores.</li> <li> Apoyo en investigación y desarrollo: Facilitación de actividades de investigación, desarrollo e innovación a través de colaboraciones con instituciones académicas, empresas y otras entidades. </li> <li> Internacionalización: Apoyo en procesos de internacionalización de proyectos y empresas, facilitando el acceso a mercados internacionales, programas de intercambio y cooperación internacional.</li> </ol>"
+      }
+    ],
+    "titulo_tarjetas":"Líneas Tecnológicas de Tecnoparque",
+    "lineas":[
+        {
+            "icono":"Img/TencoParque-img/ingenieria.png",
+            "titulo":"Ingenieria y Diseño",
+            "contenido":"Esta línea está enfocada al diseño mecánico, diseño de productos, sistemas CAD/CAM/CAE, optimización topológica, prototipado rápido y procesos de manufactura avanzada,  ingeniería inversa  y análisis dimensiona, prototipado 3d e impresión a laser.",
+            "lista":"<li>Escáners 3D</li> <li>Cortadora laser</li> <li>Termoformado</li> <li>Fresado CNC</li> <li>Impresion 3D</li>"
+        },
+        {
+            "icono":"Img/TencoParque-img/biotecnologia.png",
+            "titulo":"Biotecnología y Nanotecnología",
+            "contenido":"Esta línea está enfocada al trabajo de:",
+            "lista":"<li>Biotecnología industrial</li> <li>Biotecnología Vegetal</li> <li>Medio ambiente</li> <li>Agroindustria alimentaria</li> <li>Agroindustria no alimentaria</li> <li>Nuevos materiales</li> <li>Microbiología agrícola y pecuaria</li> <li>Energias verdes y biocombustibles</li> <li>Nanotecnología</li>"
+        },
+        {
+            "icono":"Img/TencoParque-img/electronica.png",
+            "titulo":"Electrónica y telecomunicaciones",
+            "contenido":"Esta línea está enfocada a:",
+            "lista":"<li>Automatización e instrumentación</li> <li>Redes inteligentes</li> <li>Robótica</li> <li>Sistemas embebidos</li> <li>Agro electrónica</li> <li>Análisis de señales y protocolos</li> <li>Infraestructura</li> <li>Diseño electrónico</li> <li>Telemática</li> <li>Internet de las cosas</li>"
+        },
+        {
+            "icono":"Img/TencoParque-img/realidad_virtual.png",
+            "titulo":"Tecnologías virtuales",
+            "contenido":"Esta línea está enfocada al desarrollo de:",
+            "lista":"<li>Aplicaciones móviles</li> <li>Inteligencia artificial y big data</li> <li>Realidad virtual y simulación</li> <li>Realidad aumentada</li> <li>Animación digital</li> <li>Diseño y desarrollo de video juegos</li> <li>Ingeniería de software</li> <li>Desarrollo de contenidos multimediales</li> <li>Geotecnología</li>"
+        }
+    ],
+    "ubicacion":"Ubicación de Tecnoparque nodo Pereira",
+    "titulo_direccion":"Dirección",
+    "direccion":"Carrera 8 # 26-79 Centro Agropecuario y de Comercio y Servicios.",
+    "titulo_horario":"Horario de atención",
+    "horario":"Lunes a Viernes de 8:00 AM a 12:00 PM y de 1:00 PM a 5:00 PM",
+    "atencion":"Líneas de atención",
+    "telefono":"<strong>Teléfono: </strong> 3135800 Ext. 63122</",
+    "correo":"<strong>Correo: </strong> rdatecnoparque@snea.edu.co"
+}
