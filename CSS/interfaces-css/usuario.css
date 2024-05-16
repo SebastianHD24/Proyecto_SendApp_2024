@@ -254,6 +254,10 @@ color: white;
     border-radius: 20px;
   }
 
+  aside a, li{
+    margin-bottom: 1rem;
+}
+
 }
 
 @media screen and (max-width: 638px){

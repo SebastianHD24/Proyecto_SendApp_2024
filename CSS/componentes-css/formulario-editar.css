@@ -97,9 +97,16 @@ input{
         gap: 0;
     }
 }
+
+@media screen and (min-width: 945px) {
+    .first-section, .second-section{
+        width: 20rem;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .first-section, .second-section{
-        width: 25rem;
+        width: 22.4rem;
     }
 }
 @media screen and (min-width: 1440px) {
@@ -113,7 +120,7 @@ input{
 .cambiar-contraseña{
     display: grid;
     place-content: center;
-    width: 90vw;
+    /* width: 90vw; */
     margin: 5%;
     padding: 1.5rem 0rem 3rem;
 
