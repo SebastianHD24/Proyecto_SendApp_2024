@@ -4,7 +4,7 @@ const historial = document.getElementById('Historial');
 const salir = document.getElementById('volver');
 const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
-const selector = document.getElementById('selector');
+const form = document.getElementById('formulario_notificaciones');
 
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
@@ -93,9 +93,11 @@ function mostrarHistorial(){
             container_r.style.display = "none";
             salir.style.display = "block";
             mensaje1.style.display = "block";
+            form.style.display = "none"
         } else {
             // Si hay elementos en la lista, puedes hacer otras operaciones
             container_r.style.display = "block";
+            form.style.display = "block";
         }
     })
     .catch(error => console.error("Error al obtener datos: " + error));
@@ -106,7 +108,6 @@ function verHistorial(){
     historial.style.display = "none";
     mensaje.style.display = "none";
     container.style.display = "none";
-    selector.style.display = "block";
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
     .then(response => response.json())
@@ -134,55 +135,62 @@ function verHistorial(){
     .catch(error => console.error("Error al obtener datos: " + error));
 }
 
-//Para obtener llos datos desde un tiempo especifico
-// Obtener referencia al formulario
-let form = document.querySelector("#formulario_notificaciones");
 
-// Agregar un evento de escucha para el evento submit del formulario
-form.addEventListener('submit', function(e) {
-    // Prevenir el comportamiento por defecto del formulario (enviar y recargar la página)
-    e.preventDefault();
+function historialDesde(){
+    //Para obtener los datos desde un tiempo especifico
+    // Obtener referencia al formulario
+    //let form = document.querySelector("#formulario_notificaciones");
 
-    // Obtener datos del formulario
-    let formData = new FormData(form);
+    // Agregar un evento de escucha para el evento submit del formulario
+    form.addEventListener('submit', function(e) {
+        // Prevenir el comportamiento por defecto del formulario (enviar y recargar la página)
+        e.preventDefault();
 
-    mostrarHistorial();
-    historial.style.display = "none";
-    salir.style.display = "block";
-    mensaje.style.display = "none";
-    mensaje1.style.display = "block";
-    container.style.display = "none";
+        // Obtener datos del formulario
+        let formData = new FormData(form);
+        // Realizar una solicitud POST al servidor
+        fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/enviarHistorial.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json()) // Convertir la respuesta a JSON
+        .then(data => {
 
-    // Realizar una solicitud POST al servidor
-    fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/enviarHistorial.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json()) // Convertir la respuesta a JSON
-    .then(data => {
-        console.log(data);
-        // Limpiar las tablas antes de agregar nuevos datos
-        document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML = '';
+            if (data.length === 0) {
+                // Si la lista está vacía, puedes hacer lo que necesites, como mostrar un mensaje
+                container_r.style.display = "none";
+                salir.style.display = "block";
+                mensaje1.style.display = "block";
+                form.style.display = "block";
+            } else {
+                // Si hay elementos en la lista, puedes hacer otras operaciones
+                container_r.style.display = "block";
+                mensaje1.style.display = "none";
+                // Limpiar las tablas antes de agregar nuevos datos
+                document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML = '';
 
-        // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
-        data.forEach(historial => {
-            document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
-                <tr>
-                    <td>${historial.id_peticion}</td>
-                    <td>${historial.nombres}</td>
-                    <td>${historial.apellidos}</td>
-                    <td>${historial.documento_identidad}</td>
-                    <td>${historial.fecha_solicitud}</td>
-                    <td>${historial.fecha_respuesta}</td>
-                    <td>${historial.tipo_pqrs}</td>
-                    <td>${historial.descripcion}</td>
-                    <td>${historial.respuesta_pqrs}</td>
-                </tr>`;
-        });
+                // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
+                data.forEach(historial => {
+                    document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
+                        <tr>
+                            <td>${historial.id_peticion}</td>
+                            <td>${historial.nombres}</td>
+                            <td>${historial.apellidos}</td>
+                            <td>${historial.documento_identidad}</td>
+                            <td>${historial.fecha_solicitud}</td>
+                            <td>${historial.fecha_respuesta}</td>
+                            <td>${historial.tipo_pqrs}</td>
+                            <td>${historial.descripcion}</td>
+                            <td>${historial.respuesta_pqrs}</td>
+                        </tr>`;
+                });
+            }
 
-    })
-    .catch(error => console.error('Error:', error));
-});
+        })
+        .catch(error => console.error('Error:', error));
+    });
+}
+
 
 function ocultarHistorial(){
     location.reload();

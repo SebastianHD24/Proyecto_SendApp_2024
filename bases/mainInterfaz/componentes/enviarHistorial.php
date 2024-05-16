@@ -102,7 +102,7 @@
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
-        WHERE p.fecha_solicitud BETWEEN '$ultim_mes' AND '$fecha_actual' 
+        WHERE p.fecha_solicitud BETWEEN '$ultimo_mes' AND '$fecha_actual' 
         AND p.respuesta_pqrs IS NOT NULL";
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){
