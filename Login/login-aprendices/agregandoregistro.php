@@ -25,7 +25,6 @@ if (isset($_SESSION['documento_identidad'])) {
     $id_servicio = $_POST['id_servicio'];
 } else {
     $id_rol = 3;
-    $id_servicio = '';
 }
 
 // Verificar si el rol existe en la base de datos
@@ -51,9 +50,15 @@ if (mysqli_num_rows($resultDocumento) > 0) {
 } else if (strlen(strval($contrasena)) < 6) {
     echo json_encode(array('success' => 2));
 } else {
-    if (preg_match(REGEX, $contrasena) === 1) {
+    if (preg_match(REGEX, $contrasena)) {
         if (mysqli_num_rows($result) > 0) {
-            $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol, id_servicio) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol', '$id_servicio')";
+
+            if (isset($_SESSION['documento_identidad'])) {
+                $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol, id_servicio) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol', '$id_servicio')";
+            } else {
+                $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol')";
+            }
+            
             if (mysqli_query($conn, $sql)) {
                 echo json_encode(array('success' => 6));
             } else {

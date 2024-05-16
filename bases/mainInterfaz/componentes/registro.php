@@ -111,4 +111,6 @@
     <p id="mensaje_errore"></p>
 </form>
 
+<?php if (isset($_SESSION['documento_identidad'])): ?>
 <script src="../../../../Proyecto_SendApp_2024/Login/Scripts/informar_error_registro.js"></script>
+<?php endif ?>
