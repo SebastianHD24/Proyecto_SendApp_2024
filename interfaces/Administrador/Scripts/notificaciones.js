@@ -6,6 +6,8 @@ const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
 const form = document.getElementById('formulario_notificaciones');
 
+console.log("Que esta pasando");
+
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
         .then(response => response.json())
@@ -138,18 +140,15 @@ function verHistorial(){
 
 function historialDesde(){
     //Para obtener los datos desde un tiempo especifico
-    // Obtener referencia al formulario
-    //let form = document.querySelector("#formulario_notificaciones");
 
     // Agregar un evento de escucha para el evento submit del formulario
     form.addEventListener('submit', function(e) {
         // Prevenir el comportamiento por defecto del formulario (enviar y recargar la página)
         e.preventDefault();
-
         // Obtener datos del formulario
         let formData = new FormData(form);
         // Realizar una solicitud POST al servidor
-        fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/enviarHistorial.php', {
+        fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/enviarHistorial.php', {
             method: 'POST',
             body: formData
         })
