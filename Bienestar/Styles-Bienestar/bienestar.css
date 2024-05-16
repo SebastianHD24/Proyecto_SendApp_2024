@@ -24,15 +24,14 @@ body{
 .orden{
     margin-bottom:4rem;
 }
- .Primera_Impresion{
+.Primera_Impresion{
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
 } 
 
 .contn {
     margin: 1rem;
-    flex:60%;
     padding-right: 20px; 
     text-align: left;
 }
@@ -52,16 +51,14 @@ body{
 }
 
 .imagen{
-    flex: 35%;
-    text-align: center; 
-    padding: 20px;
-
+    padding: 10px;
+    width: 100rem;
 }
 .imagen img{
-    border-radius: 5rem;
-    margin-top: 1rem;
-    max-width: 100%;
+    margin-top: 8rem;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .Contenido{
@@ -80,7 +77,7 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-family: var(--fuente-principal);
     text-align: left;
     padding-bottom: 1rem;
@@ -96,6 +93,7 @@ body{
 .parrafo{
     font-size: 22px;
 }
+
 .p{
     color: #00324D;
     font-size: 25px;
@@ -307,4 +305,25 @@ a:hover {
 .btn a{
     text-decoration: none;
     color: var(--blanco);
+}
+
+/* --------------- Responsive -------------- */
+@media only screen and (max-width:947px){
+    .Primera_Impresion{
+        flex-direction: column;
+    }
+    .imagen{
+        width: 80%;
+        height: auto;
+    }
+    .imagen img{
+        margin-top: 0px;
+    }
+    .orden{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    } 
 }

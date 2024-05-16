@@ -1,4 +1,6 @@
-        <h1 class= "Titulo-calendario">Calendar</h1>
+
+        <h1 class= "Titulo-calendario">Calendario</h1>
+        <p class="parrafo_calendario">Citas solicitadas de los usuarios.</p>
         <div class="calendar">
             <header>
                 <h3></h3>
@@ -7,7 +9,7 @@
               <button id="next"></button>
             </nav>
             </header>
-            <section>
+            <section class="week">
                 <ul class="days">
                     <li>Lun</li>
                     <li>Mar</li>
@@ -20,7 +22,7 @@
                 <ul class="dates"></ul>
             </section>
         </div>
-        <div id="eventos"></div>
+        <div class="eventos" id="eventos"></div>
     </main>
 </div>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/calendario.js"></script>

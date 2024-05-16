@@ -12,7 +12,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <button onclick="capturar_id(1)" id="Bienestar">Bienestar al Aprendiz</button>
+                <button onclick="capturar_id(1)" id="Bienestar" class="btn">
+                  <p class="txt1">Bienestar al Aprendiz</p>
+                  <p class="txt2">Agendar Cita</p>
+                
+                </button>
               </article>
             </div>
 
