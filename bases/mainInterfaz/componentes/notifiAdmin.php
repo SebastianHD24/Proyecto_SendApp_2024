@@ -31,12 +31,15 @@
                 </tbody>
             </table>  
         </div>
-        <form style="display: none;" id="selector" class="formulario">
-            <select name="" id="">
-                <option value="">Ayer</option>
-                <option value="">Hoy</option>
-                <option value="">Mes Pasado</option>
+        <form style="display: none;" class="formulario" method="post" id="formulario_notificaciones">
+            <select name="historial_notificaciones" id="historial_notificaciones">
+                <option value="hoy">Hoy</option>
+                <option value="ayer">Ayer</option>
+                <option value="semana">Ultima semana</option>
+                <option value="mes">Ultimo mes</option>
+                <option value="anio">Ultimo Año</option>
             </select>
+            <button type="submit" onclick="historialDesde();">Buscar</button>
         </form>
         <div class="respondidos" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
@@ -76,3 +79,4 @@
 </main> 
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>
+

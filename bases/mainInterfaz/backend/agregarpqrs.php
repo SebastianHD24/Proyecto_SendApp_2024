@@ -25,7 +25,20 @@
 
     $tipo_pqrs = $_POST['tipo_solicitud'];
     $descripcion_pqrs = $_POST['descripcion_pqrs'];
-    $fecha = date('Y-m-d');
+
+
+    function fecha() {
+        // Establecer la zona horaria deseada
+        $zonaHoraria = new DateTimeZone('America/Bogota'); // Cambia 'America/Bogota' por la zona horaria que desees
+        // Obtener la fecha actual en la zona horaria especificada
+        $fechaActual = new DateTime('now', $zonaHoraria);
+        // Formatear la fecha en el formato deseado (año/mes/día)
+        $fechaCompleta = $fechaActual->format('Y/m/d');
+        // Devolver la fecha formateada
+        return $fechaCompleta;
+    }
+    // Ejemplo de uso
+    $fecha = fecha(); 
     
     
 

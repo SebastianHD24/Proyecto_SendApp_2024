@@ -70,12 +70,12 @@
                             <option selected>-</option>
                             <?php
                                 $id_servicio = $servicios['id_servicio'];
-                                $consulta_funcionarios = "SELECT documento_identidad, CONCAT(nombres, ' ', apellidos) AS nombre_completo, estado FROM usuarios WHERE id_servicio = $id_servicio";
+                                $consulta_funcionarios = "SELECT documento_identidad, id_rol, CONCAT(nombres, ' ', apellidos) AS nombre_completo, estado FROM usuarios WHERE id_servicio = $id_servicio";
                                 $consulta_f = mysqli_query($conn, $consulta_funcionarios);
                                 $hayFuncionarios = false; // Variable para indicar si hay funcionarios
                                 if (mysqli_num_rows($consulta_f) != 0):
                                     while ($funci = mysqli_fetch_array($consulta_f)):
-                                        if ($funci['estado'] != 0 && $servicios['admin_area'] != $funci['documento_identidad']):
+                                        if ($funci['estado'] != 0 && $servicios['admin_area'] != $funci['documento_identidad'] && $funci['id_rol'] == 2):
                                             $hayFuncionarios = true;
                                             ?>
                                             <option value="<?= $funci['documento_identidad'] ?>">

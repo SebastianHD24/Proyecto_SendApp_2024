@@ -39,11 +39,11 @@
             <label for="login-input-user-l" class="login__label">
                 Documento
             </label>
-            <input id="login-input-user-l" class="login__input" type="text" name="documento_identidad" />
+            <input id="login-input-user-l" class="login__input" type="text" name="documento_identidad" placeholder="Número de documento" />
             <label for="login-input-password-l" class="login__label">
                 Contraseña
             </label>
-            <input id="login-input-password-l" class="login__input" type="password" name="contrasena" />
+            <input id="login-input-password-l" class="login__input" type="password" name="contrasena" placeholder="Contraseña" />
             <div class="regresarI">
             <input class="login__submit abajo" value="Iniciar Sesion" type="submit">
             <div class="regresar">
