@@ -3,30 +3,36 @@
     var modal = document.getElementById('modal_' + id);
     modal.style.display = "block";
 }
-
+// funcion para cerrar el modal 
+function closeModal(id) {
+    var modal = document.getElementById('modal_' + id);
+    modal.style.display = "none";
+    }
 // Función para cerrar el modal
 function submitForm(id) {
     var form = document.getElementById('form_' + id);
     var justificacion = document.getElementById('justificacion_' + id).value;
-    
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '../../bases/mainInterfaz/backend/rechazarcita.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            var response = xhr.responseText; // Obtener la respuesta del servidor
-            if (response.trim() === "success") {
-                // Redirigir si la actualización fue exitosa
-                window.location.reload();
-            } else {
-                console.log('Error al enviar el formulario');
-            }
+
+    // Envía los datos del formulario vía Fetch
+    fetch('rechazarcita.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'id_cita=' + id + '&justificacion=' + encodeURIComponent(justificacion)
+    })
+    .then(function(response) {
+        if (response.ok) {
+            // Recarga la página después de enviar el formulario
+            window.location.reload();
         } else {
             console.log('Error al enviar el formulario');
         }
-    };
-    xhr.send('id_cita=' + id + '&justificacion=' + encodeURIComponent(justificacion));
-}
+    })
+    .catch(function(error) {
+        console.log('Error al enviar el formulario: ', error);
+       });
+    }
 
 //Bloque de codigo que crea  un formulario para enviar la id de la cita cliqueada y el documento la persona que solicito la cita al componente donde se termianara de aceptar la cita 
 function aceptarCita(documento, id_cita) {
