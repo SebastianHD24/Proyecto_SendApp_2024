@@ -123,11 +123,18 @@ body{
     padding: 25px;
     gap: 20px;
 }
-
+.display-notificaciones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
 .date{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
     gap: 5px;
 }
 
@@ -146,6 +153,12 @@ body{
     text-align: justify;
     line-height: 150%;
 }
+.tituloAtencion{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
 
 .close__button--action{
     width: 70px;
@@ -163,6 +176,12 @@ body{
     cursor: pointer;
     background-color: #00324d;
     color: #39a900;
+}
+
+.button__action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /************************** Responsive Desing *******************************/
