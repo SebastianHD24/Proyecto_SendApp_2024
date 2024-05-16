@@ -33,6 +33,7 @@
         </div>
         <form style="display: none;" class="formulario" method="post" id="formulario_notificaciones">
             <select name="historial_notificaciones" id="historial_notificaciones">
+                <option value="todos">Todos</option>
                 <option value="hoy">Hoy</option>
                 <option value="ayer">Ayer</option>
                 <option value="semana">Ultima semana</option>
