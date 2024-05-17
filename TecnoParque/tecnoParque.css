@@ -52,7 +52,11 @@ body{
 
 .imagen{
     padding: 10px;
-    width: 120rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .imagen img{
     margin-top: 8rem;
@@ -106,7 +110,6 @@ hr{
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    background:linear-gradient(#cfcfcf,#ededed); 
 }
 .tarjetas-contenedor {
     display: flex;
@@ -126,6 +129,7 @@ hr{
     margin-bottom: 20px;
     overflow: hidden; 
     box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
+    color: #000000;
 
 }
 .tarjeta:hover {
@@ -137,9 +141,10 @@ hr{
     padding-left: 20px;
 }
 .l_ordenada li{
-    /* margin: 2rem;
-    margin-bottom: 10px; */
+    margin: 2rem;
+    margin-bottom: 10px;
     position: relative;
+    color: #000000;
 }
 .l_ordenada li::before {
     content: "✔";
@@ -181,7 +186,7 @@ hr{
 }
 
 .subtitulo{
-    /* font-size: 25px; */
+    font-size: 25px;
     margin-top: 2rem;
 }
 .info-container {
@@ -314,10 +319,10 @@ a:hover {
     padding: 15px 30px 15px 30px;
 }
 
-/* .l_ordenada li{
+.l_ordenada li{
     margin-bottom: 10px;
     font-size: 15px;
-} */
+}
 
 
 .lineas{
@@ -359,6 +364,7 @@ a:hover {
     text-align: center;
     padding-top: 5px;
     margin: 0;
+    color: #000000;
 }
 
 .contenido_lineas{

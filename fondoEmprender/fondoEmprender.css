@@ -119,19 +119,17 @@ hr{
     margin-bottom: 10px;
     position: relative;
 }
-.l_ordenada li::before {
-    content: "✔";
+/* .l_ordenada li::before {
     display: inline-block; 
     width: 1em; 
     height: 1em; 
-    margin-right: 0.5em; 
     color: #29a900; 
     font-size: 1.2em; 
     position: absolute; 
     left: -20px;
     top: 50%; 
     transform: translateY(-50%); 
-}
+} */
 .tarjeta {        
     background-color: #f0f0f0;
     transition: transform 0.3s ease;
@@ -146,6 +144,9 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.tarjeta3{
+    display: inherit;
 }
 .tarjeta.cambio{
     color: #00324D;
@@ -333,10 +334,6 @@ a:hover {
     }
     .orden{
         margin: 2rem;
-    }
-    .tarjeta{
-        width: 87%; 
-        max-width: 30rem;
     }
     .subtitulos,.sub{
         font-size: 1.3rem;

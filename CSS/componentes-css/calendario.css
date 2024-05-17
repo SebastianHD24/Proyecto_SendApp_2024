@@ -1,35 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-.titulo-calendario {
-  font-weight: 600;
+:root{
+  --verde: #39a900;
+  --blanco: #fff;
+  --negro: #070001;
+  --azul: #00324D;
+  --azul-claro: #82DEF0;
+  --gris-oscuro: #cfcfcf;
+  --gris-claro: #ededed;
+  --fuente-principal: "Work Sans", sans-serif;
+}
+
+.Titulo-calendario {
+  font-weight: 700;
   text-align: center;
-  color: #00234D;
-  margin-bottom: 2rem;
+  color: var(--azul);
+  padding-top: 20px;
 }
 
 h3 {
   font-weight: 600;
+  color: var(--blanco);
+}
+
+.parrafo_calendario{
+  font-weight: 600;
+  padding-bottom: 1rem;
 }
 
 .calendar {
-  margin: auto;
+  margin: 0 auto;
   width: 98%;
-  max-width: 380px;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 30rem;
+  padding: 0.5rem;
 }
 
 .calendar header {
+  background-color: var(--azul);
   display: flex;
+  padding: 0.7rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
 
 .calendar nav {
   display: flex;
   align-items: center;
+}
+
+.calendar .week{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .calendar ul {
@@ -79,11 +105,17 @@ h3 {
 
 #prev:hover::before,
 #next:hover::before {
-  border-color: #000;
+  border-color: var(--verde);
 }
 
 .days {
   font-weight: 600;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.dates{
+  padding: 0rem 0.7rem 1rem;
 }
 
 .dates li.today {
@@ -98,7 +130,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #000;
+  background: var(--azul);
   border-radius: 50%;
   z-index: -1;
 }
@@ -117,25 +149,46 @@ h3 {
 }
 
 /* Estilos para la tabla de eventos */
-#eventos {
+.eventos {
   margin-top: 20px;
   width: 100%;
+  padding: 0vw 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.eventos h2{
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.eventos table{
+  display: flex;
+  justify-content: center;
+  border: none;
   border-collapse: collapse;
+  max-width: 72vw;
+  padding-bottom: 25px;
 }
 
-#eventos th,
-#eventos td {
+.eventos th,
+.eventos td {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid var(--gris-oscuro);
 }
 
-#eventos th {
-  background-color: #f2f2f2;
+.eventos th {
+  background-color: var(--azul);
   font-weight: bold;
   text-align: left;
+  color: var(--blanco);
 }
 
-#eventos tbody tr:nth-child(even) {
+
+.eventos tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
@@ -148,7 +201,7 @@ h3 {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: green;
+  background-color: var(--verde);
   border-radius: 50%;
   position: absolute;
   top: 5px;
@@ -174,5 +227,16 @@ h3 {
 
 
 .dates li.inactive::before {
-  background-color: #ccc;
+  background-color: #ccc;  
 }
+
+@media only screen and (max-width: 768px){
+  .eventos{
+    padding: 0vw 4vw;
+  }
+  .eventos table{
+    max-width: 82vw;
+  }
+} 
+
+

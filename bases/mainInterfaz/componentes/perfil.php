@@ -108,12 +108,15 @@
                         <input type="text" name="confirmar_contraseña" class="login__input" required placeholder="Ingrese la contraseña nueva otra vez">
                     </div>
                 </div>  
-                <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>
+                
                 <div class="btn-confirmar" id="btnConfirmarcontra">
                     <button type="submit" class="btn-actu">
                         Confirmar
                     </button>
                 </div>
+                <div class="cerrar">
+                    <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>
+                </div>    
             </form>
         </div>    
     </div>
@@ -124,7 +127,7 @@
             <p>¡Actualización exitosa!</p>
         </div>   
         <div class="imagen">
-            <img src="" alt="Señal de aprobación">
+            <img src="imagenes/Componentes-img/senal-aprobada.png" alt="Señal de aprobación">
         </div>
     </div>
     </main> 

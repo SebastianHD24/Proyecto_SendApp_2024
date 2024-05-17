@@ -22,15 +22,15 @@ section article{
   align-content: center; 
   width: 100%;
 }
-aside{
+/* aside{
   color: white;
   position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-y: auto;
   padding-left: 2em;
-}
+} */
 
 section article img{
   width: 9.375rem;
@@ -70,12 +70,15 @@ section p{
   font-size: 14.1px;
   margin-top: 1rem;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  overflow: hidden;
 }
 
 /* boton interno de las tarjetas */
 .btn{
   background-color: transparent;
   border: none;
+  width: 11em;
+  height: 11em;
 }
 
 /* textos del boton */
@@ -109,6 +112,7 @@ color:var(--verde); Al hacer hover, desaparece el párrafo
 display: flex;
 justify-content: center;
 align-items: center;
+width: 12em;
 }
 
 .cards article p{
@@ -175,12 +179,7 @@ color: white;
       font-size: 12px;
   }
 }
-@media screen and (max-width: 638px){
-  .cards__container{
-      grid-template-columns: repeat(auto-fill,minmax(130px, 1fr));
-      grid-template-rows: 1fr;
-  }
-}
+
 @media screen and (max-width: 768px){
   .wrapper{
       display: flex;
@@ -202,6 +201,8 @@ color: white;
       opacity: 1;
       visibility: visible;
       height: 100%;
+      width: 32%;
+      gap: 15px;
       
   }
   .boton-menu.active::before,
@@ -209,7 +210,7 @@ color: white;
       display: none;
   }
 
-.header-mobile{
+  .header-mobile{
       display: flex;
       padding: 1rem;
       justify-content: space-between;
@@ -220,7 +221,7 @@ color: white;
       border-bottom: 1px black;
       color: var(--verde);
       
-  };
+  }
   
   .header-mobile .logo{
       color: var(--verde);
@@ -243,19 +244,60 @@ color: white;
       z-index: inherit;
   }
 
-.boton-categoria{
-  padding: 0.6rem;
-  font-size: .85rem; 
-  width:70%;
+  .boton-categoria{
+    padding: 0.6rem;
+    font-size: .85rem; 
+    width: 88%;
+  }
+
+  .boton-menu.active{
+    border-radius: 20px;
+  }
+
+  aside a, li{
+    margin-bottom: 1rem;
 }
 
-.boton-menu.active{
-  border-radius: 20px;
 }
 
+@media screen and (max-width: 638px){
+  .cards__container{
+      grid-template-columns: repeat(auto-fill,minmax(130px, 1fr));
+      grid-template-rows: 1fr;
+  }
 
+  .aside-visible{
+    width: 38%;
+    gap: 15px;
+  }
+  .boton-categoria{
+    width:89.5%;
+  }
 }
-@media screen and (max-width: 405px){
+
+@media screen and (max-width: 510px){
+  .aside-visible{
+    width: 45%;
+    gap: 15px;
+  }
+
+  .boton-categoria{
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .aside-visible{
+    width: 50%;
+    gap: 15px;
+  }
+
+  .boton-categoria{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px){
   .cards__container{
       grid-template-columns: repeat(auto-fill,minmax(85px, 1fr));
       grid-template-rows: 1fr;
@@ -266,6 +308,14 @@ color: white;
       padding: 0.8rem;
       font-size: 12px;
   }
+
+  .aside-visible{
+    width: 58%;
+    gap: 15px;
+  }
+  .boton-categoria{
+    width: 88%;
+  }
 }
 @media screen and (max-width: 354px) {
   .cards{
@@ -273,6 +323,10 @@ color: white;
       height: 6rem;
       padding: 0.8rem;
       font-size: 12px;
+  }
+
+  .boton-categoria{
+    width: 95%;
   }
 }
 
