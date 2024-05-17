@@ -1,0 +1,33 @@
+{
+    "titulo": "Administración Educativa",
+    "subtitulo": "¿Qué es?",
+    "parrafo": "Es el conjunto de procesos, políticas y prácticas que se aplican en instituciones educativas para gestionar de manera correcta todos los recursos disponibles con el fin de alcanzar los objetivos educativos y garantizar el buen funcionamiento de la institución. Esto incluye tanto aspectos administrativos como pedagógicos y de gestión de recursos humanos y materiales.",
+    "imagen": "./img-content/IMG_5375.jpg",
+    "boton": "Reservar cita",
+    "servicios": [
+      {
+        "imagen": "img/1.png",
+        "titulo": "Servicios",
+        "lista": [
+          "Inscripción en cursos titulados y complementarios.",
+          "Gestión de pruebas de selección.",
+          "Proceso de matrícula.",
+          "Certificación de aprendices.",
+          "Actualización de datos de Sofiaplus.",
+          "Trámites de apostillaje."
+        ]
+      },
+      {
+        "imagen": "img/objetivo.png",
+        "titulo": "Objetivos",
+        "lista": [
+          "Facilitar el proceso de inscripción de aprendices en cursos titulados o complementarios.",
+          "Gestionar pruebas de selección para los aprendices que ingresan.",
+          "Manejar el proceso de matrícula.",
+          "Certificar a los aprendices una vez que completen los requisitos de formación.",
+          "Actualizar datos de los aprendices en el sistema Sofiaplus.",
+          "Facilitar trámites de apostillaje para quienes deseen validar sus títulos en el extranjero."
+        ]
+      }
+    ]
+  }  

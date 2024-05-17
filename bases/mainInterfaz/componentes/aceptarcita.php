@@ -1,4 +1,5 @@
         <?php
+        
         // Obtener el documento del usuario
         $documento = isset($_POST['documento']) ? htmlspecialchars($_POST['documento'], ENT_QUOTES, 'UTF-8') : '';
         $id_cita = isset($_POST['id_cita']) ? ($_POST['id_cita']) : 0;
@@ -60,7 +61,10 @@
             </table>
 
             <button type="submit">Aceptar</button>
+
+            <a href="?p=citaspendiente" class="cancelar-button"> cancelar</a>
         </form>
+
 
         <!-- Ventana emergente despues de una actualizacion. -->
         <div class="alerta" id="alerta" style="display: none;">
@@ -80,3 +84,4 @@
     </main>
 </div>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/mandar.js"></script>
+

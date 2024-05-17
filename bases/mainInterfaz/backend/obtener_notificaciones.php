@@ -2,9 +2,12 @@
 
 //Incluimos la sesion iniciada, la conexion a la base de datos
 include '../../../../Proyecto_SendApp_2024/bases/conexion.php';
+include '../../../../Proyecto_SendApp_2024/bases/sesion_start.php';
 
 // Obtener la conexión a la base de datos
 $conn = connection();
+
+$funcionario = $_SESSION["documento_identidad"];
 
 // Obtener la fecha del POST
 $data = json_decode(file_get_contents("php://input"));
@@ -16,7 +19,7 @@ $year = $data->anio;
 $fecha = sprintf("%04d-%02d-%02d", $year, $month, $day);
 
 // Realizar la consulta SQL para verificar si hay citas para la fecha proporcionada
-$query = "SELECT * FROM citas WHERE fecha = '$fecha'";
+$query = "SELECT * FROM citas WHERE fecha = '$fecha' AND usuario_f = $funcionario";
 $result = mysqli_query($conn, $query);
 
 // Verificar si hay resultados

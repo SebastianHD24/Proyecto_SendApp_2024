@@ -1,4 +1,4 @@
-
+ 
 <div class="div__content">
     <section>
         <!--Logo en el contenido-->
@@ -12,18 +12,14 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <button onclick="capturar_id(1)" id="Bienestar" class="btn">
-                  <p class="txt1">Bienestar al Aprendiz</p>
-                  <p class="txt2">Agendar Cita</p>
-                
-                </button>
+                <button onclick="capturar_id(1); capturar_id_servicio(1)" id="Bienestar">Bienestar al Aprendiz</button>
               </article>
             </div>
 
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(2)" id="Biblioteca" class="btn">
+                <button onclick="capturar_id(2); capturar_id_servicio(2)" id="Biblioteca" class="btn">
                   <p class="txt1">Biblioteca</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -33,7 +29,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
-                <button onclick="capturar_id(3)"id="psicologia" class="btn">
+                <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn">
                   <p class="txt1">Psicologia</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -54,7 +50,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/enprederNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(4)" id="FondoE" class="btn">
+                <button onclick="capturar_id(4); capturar_id_servicio(4)" id="FondoE" class="btn">
                   <p class="txt1">Fondo Emprender</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -64,7 +60,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/corporacionNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(5)" id="RelacionesC" class="btn">
+                <button onclick="capturar_id(5); capturar_id_servicio(5)" id="RelacionesC" class="btn">
                   <p class="txt1">Relaciones Corporativas</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -74,7 +70,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/senova.png" name="" alt=""/>
-                <button onclick="capturar_id(6)" id="Sennova" class="btn">
+                <button onclick="capturar_id(6); capturar_id_servicio(6)" id="Sennova" class="btn">
                   <p class="txt1">Sennova</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -84,7 +80,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/serviciosNegros.png" name="" alt=""/>
-                <button onclick="capturar_id(7)" id="ServiciosT" class="btn">
+                <button onclick="capturar_id(7); capturar_id_servicio(7)" id="ServiciosT" class="btn">
                   <p class="txt1">Servicios Tecnológicos</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -94,7 +90,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/fabricaNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(8)" id="FabricaS" class="btn">
+                <button onclick="capturar_id(8); capturar_id_servicio(8)" id="FabricaS" class="btn">
                   <p class="txt1">Fábrica De Software</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -104,7 +100,7 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoAcademiaNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(9)" id="Deportes" class="btn">
+                <button onclick="capturar_id(9); capturar_id_servicio(9)" id="Deportes" class="btn">
                   <p class="txt1">Deportes</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -138,10 +134,15 @@
       <select  name="jornada" class="select">
         <option value="Diurna"> Diurna </option>
         <option value="Mixta">Mixta</option>
-       
+
+
       </select> 
+
+      <select name='usuario_f' class="funcionario">
+    
+      </select>
       <p>Area</p>
-      <input type="text" name="nombre_servicio" >
+      <input type="text" name="nombre_servicio" disabled >
 
       <div class="formulario">
         <label for="descripcion">Descripción:</label>
@@ -171,5 +172,6 @@
 <!-- este script no se para que sirve mejor no lo muevo by juanes -->
 <script src="../../../../Proyecto_SendApp_2024/componentes/script.js"></script>
 <!-- este script hace que el nombre del area que tengo por el id lo meustre en el input  -->
-<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/Nombre_Area.js"></script>
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreArea.js"></script>
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreFuncionario.js"></script>
 

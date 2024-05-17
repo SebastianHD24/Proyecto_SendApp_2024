@@ -1,0 +1,40 @@
+{
+    "titulo": "Servicios Tecnologicos",
+    "parrafo_inicio": "Sumérgete en el fascinante mundo de los Servicios Tecnológicos del SENA, donde la innovación y la formación se fusionan para crear un futuro prometedor.",
+    "parrafo2": "Nuestro horario de oficina, de 8:00 am a 6:00 pm, en nuestras oficinas de servicios tecnológicos en el centro.",
+    "imagen": "../serviciosTecnologicos/img/img-conten/IMG_5391.jpg",
+    "boton": "Reservar cita",
+    "tarjetas": [
+      {
+        "icono": "./icons/pregunta.png",
+        "titulo": "¿Qué son los servicios tecnológicos?",
+        "contenido_corto": "Los servicios tecnológicos representan proyectos que se alinean con la estrategia de fortalecimiento de los productos de investigación, innovación y desarrollo tecnológico del SENA. Estos proyectos están vinculados directamente al área de desarrollo tecnológico y complementan los productos que se generan en los laboratorios.",
+        "contenido_expandido": "Además, contribuyen al proceso de registro calificado de los tecnólogos formados dentro del centro de formación, especialmente en las áreas específicas que están integradas en las líneas medulares del centro."
+      },
+      {
+        "icono": "./icons/atencion-al-cliente.png",
+        "titulo": "¿Qué servicios ofrece?",
+        "contenido_corto": "Dentro de los centros es fundamental que los laboratorios asociados a los servicios tecnológicos cumplan con requisitos específicos establecidos en los lineamientos de SENNOVA. Estos laboratorios deben satisfacer necesidades particulares y no pueden competir con servicios privados.",
+        "contenido_expandido": "Actualmente, contamos con uno o dos laboratorios dedicados a realizar caracterizaciones mecánicas y dimensionales de productos utilizados en infraestructura, como barras curvadas y mallas electrosoldadas."
+      },
+      {
+        "icono": "./icons/frontera.png",
+        "titulo": "¿Quiénes pueden acceder a servicios tecnológicos?",
+        "contenido_corto": "Los servicios tecnológicos del SENA están disponibles para cualquier persona natural, empresa, aprendiz, instructor o miembro administrativo de la comunidad SENA.",
+        "contenido_expandido": "Estamos comprometidos a brindar apoyo y soluciones tecnológicas a quienes lo necesiten, promoviendo así la colaboración y el intercambio de conocimientos en beneficio de la comunidad."
+      },
+      {
+        "icono": "./icons/apoyar.png",
+        "titulo": "¿De qué se encarga servicios tecnológicos?",
+        "contenido_corto": "Los servicios tecnológicos que ofrecemos están diseñados para satisfacer necesidades específicas del sector, como el sector de la construcción y el sector metalmecánico.",
+        "contenido_expandido": "Nos comprometemos a ofrecer la más alta calidad técnica en nuestros servicios, respaldados por nuestro alcance de acreditación 19 lab 020 ante el Organismo Nacional de Acreditación (ONA)."
+      },
+      {
+        "icono": "./icons/ayudar.png",
+        "titulo": "¿Servicios tecnológicos le puede brindar ayuda a todas las áreas que hay en el CDITI?",
+        "contenido_corto": "Además de proporcionar servicios externos, también ofrecemos servicios internos a través del SENA proveedor. Estos servicios internos están destinados a cubrir las necesidades de otras áreas dentro del centro en elementos específicos.",
+        "contenido_expandido": "Nuestro objetivo es apoyar el desarrollo y éxito de todos los proyectos dentro del centro de formación, tanto externos como internos."
+      }
+    ]
+  }
+  

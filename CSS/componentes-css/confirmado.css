@@ -1,9 +1,8 @@
- /* .contenedor-popup{
+  /* .contenedor-popup{
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 90%;
     overflow-x: auto;
-}  */
+}   */
 .titulos{
     color: #00234d;
     font-weight: 600;
@@ -51,8 +50,8 @@
  .logo {
      width: 10%;
      display: block;
-     margin-right: auto;
-     margin-left: auto;
+     /* margin-right: auto;
+     margin-left: auto; */
  }
 
  .salir {
@@ -75,6 +74,22 @@
      font-weight: bold;
      width: 25%;
      cursor: pointer;
+}
+/*Boton buscar por fecha */
+.buscar{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 10%;
+    cursor: pointer;
+}
+.buscar:hover{
+    background-color: #00234d;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
 }
 
 /* .formulario select option{
@@ -115,7 +130,7 @@
  @media only screen and (min-width: 768px) and (max-width: 1023px) {
      .contenedor-popup {
          display: flex;
-         width: 70%;
+         width: 50%;
          overflow-x: auto;
      }
  }

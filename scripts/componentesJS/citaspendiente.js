@@ -3,29 +3,36 @@
     var modal = document.getElementById('modal_' + id);
     modal.style.display = "block";
 }
-// Función para cerrar el modal
+// funcion para cerrar el modal 
 function closeModal(id) {
     var modal = document.getElementById('modal_' + id);
-    modal.style.display = "none";
-}
-// Función para enviar el formulario
+    modal.style.display = "none";
+    }
+// Función para cerrar el modal
 function submitForm(id) {
     var form = document.getElementById('form_' + id);
     var justificacion = document.getElementById('justificacion_' + id).value;
-    // Envía los datos del formulario vía AJAX
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'rechazarcita.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
+
+    // Envía los datos del formulario vía Fetch
+    fetch('rechazarcita.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'id_cita=' + id + '&justificacion=' + encodeURIComponent(justificacion)
+    })
+    .then(function(response) {
+        if (response.ok) {
             // Recarga la página después de enviar el formulario
             window.location.reload();
         } else {
             console.log('Error al enviar el formulario');
         }
-    };
-    xhr.send('id_cita=' + id + '&justificacion=' + encodeURIComponent(justificacion));
-}
+    })
+    .catch(function(error) {
+        console.log('Error al enviar el formulario: ', error);
+       });
+    }
 
 //Bloque de codigo que crea  un formulario para enviar la id de la cita cliqueada y el documento la persona que solicito la cita al componente donde se termianara de aceptar la cita 
 function aceptarCita(documento, id_cita) {

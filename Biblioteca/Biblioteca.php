@@ -4,192 +4,93 @@
     <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/Biblioteca/biblioteca.css">
     <title>Biblioteca</title>
 <?php endblock() ?>
-
 <?php startblock('contenido') ?>
+<?php
+    // Leer el archivo JSON
+    $json_data = file_get_contents('../json/biblioteca.json');
+    
+    // Decodificar el JSON a un array asociativo
+    $data = json_decode($json_data, true);
+?>
 <section class="Contenido">
-        <div class="orden">
-            <div class="Primera_Impresion">
-                <div class="contn">
-
-                    <h1 class="titulo">Biblioteca</h1>
-
-                    <p class="parrafo">En nuestra biblioteca, te invitamos a perder la noción del tiempo, a sumergirte en las letras y encontrar respuestas a las preguntas que ni siquiera sabías que tenías. Descubre mundos lejanos, desafía tus límites y aliméntate del poder de la palabra escrita.</p>
-                    <hr>
-                    <p><strong>Horario de atención:</strong>Lunes a Viernes de 8:00 AM a 8:00 PM jornada continua.</p>
-                </div>
-                    <div class="imagen">
-                        <img src="../Biblioteca/img/img-content/IMG_5358.jpg" alt="">
-                    </div>
+    <div class="orden">
+        <div class="Primera_Impresion">
+            <div class="contn">
+                <!-- Mostrar el título de la biblioteca -->
+                <h1 class="titulo"><?php echo $data['titulo']; ?></h1>
+                <!-- Mostrar la descripción de la biblioteca -->
+                <p class="parrafo"><?php echo $data['parrafo']; ?></p>
+                <hr>
+                <!-- Mostrar el horario de atención -->
+                <p><strong>Horario de atención:</strong> <?php echo $data['horario']; ?></p>
             </div>
-
-                <button class="button">Reservar cita</button>
+            <div class="imagen">
+                <!-- Mostrar la imagen de la biblioteca -->
+                <img src="<?php echo $data['imagen']; ?>" alt="">
+            </div>
         </div>
-        <div class="Contenedor">
+
+        <button class="button">Reservar cita</button>
+    </div>
+    <div class="Contenedor">
         <div class="actividades">
-                <h3 class="subtitulos">¿Qué actividades ofrecemos?</h3>
-                <p class="p">
-                    Trabajamos bajo los lineamientos a nivel 
-                    <br>
-                    nacional del SENA. Tenemos dos ramas que son:
-                    <br>
-                </p>
-
-                <ol class="l_ordenada">
-                    <div class="actividad">
-                        <div class="actividad1">
-                            <li><strong>Actividades de apoyo a las formación:</strong></li>
-                                <ul class="l_desordenada">
-                                    <li>inducción a la biblioteca.</li>
-                                    <li>Manejo de base de datos.</li>
-                                    <li>Talleres a normas APA.</li>
-                                    <li>Busquedas efectivas en Google</li>
-                                    <li>Elaboración de mapas mentales</li>
-                                </ul>
-                            <br>
-                        </div>
-
-                        <div class="actividad2">
-                            <li><strong>Actividades de extension cultural:</strong></li>
-                            <ul class="l_desordenada">
-                                <li>Taller de escritura creativa</li>
-                                <li>Clubes de lectura</li>
-                                <li>Conversatorios</li>
-                                <li>Encuentros</li>
-                                <li>Galas poéticas</li>
-                                <li>Cine foros</li>
-                            </ul>
-                        </div>
+            <h3 class="subtitulos">¿Qué actividades ofrecemos?</h3>
+            <p class="p">
+                Trabajamos bajo los lineamientos a nivel 
+                <br>
+                nacional del SENA. Tenemos dos ramas que son:
+                <br>
+            </p>
+            <ol class="l_ordenada">
+                <div class="actividad">
+                    <div class="actividad1">
+                        <li><strong>Actividades de apoyo a las formación:</strong></li>
+                        <ul class="l_desordenada">
+                            <!-- Mostrar las actividades de apoyo a la formación -->
+                            <?php foreach ($data['actividades']['apoyo'] as $item): ?>
+                                <li><?php echo $item; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <br>
                     </div>
-                </ol>
-            </div>
-            <div class="tarjetas-contenedor">
-                <div class="tarjeta">
 
-                        <div class="tarj-img">
-                            <img src="./img/icons/subasta (2).png" alt=Icono-dudas">
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>Normas de la biblioteca</h2>
-
-                        <ol class="l_ordenada">
-                            <li>No esta permitido ingerir alimentos y agua.</li>
-                            <li>Manejar los niveles de ruido y voz</li>
-                        </ol>
+                    <div class="actividad2">
+                        <li><strong>Actividades de extensión cultural:</strong></li>
+                        <ul class="l_desordenada">
+                            <!-- Mostrar las actividades de extensión cultural -->
+                            <?php foreach ($data['actividades']['extension'] as $item): ?>
+                                <li><?php echo $item; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
                     </div>
                 </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="./img/icons/pregunta.png" alt="Icono-dudas<">
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>¿Qué tipos de libros se pueden encontrar en la Biblioteca?</h2>
-
-                        <p class="p1">Contamos con libros técnicos que apoyan todos los programas de formación, contamos con colección de literatura y algunas revistas.</p>
-
-                    </div>
-                </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="./img/icons/libro.png" alt="Icono-libros" >
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>¿Cuántos libros puede solicitar un aprendiz para un prestamos?</h2>
-
-                        <p class="p1">Maximo 3 libros para llevar a casa.</p>
-
-                    </div>
-                </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="./img/icons/mapa-vial.png" alt="Icoono-procedimiento" >
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>Procedimiento de un aprendiz para solicitar un prestamo</h2>
-
-                        <ol class="l_ordenada">
-                            <li>Tener el carnet.</li>
-                            <li>Revisar el catálogo bibliográfico, referencia y disponibilidad del libro.</li>
-                            <li>Se le recibe el carnet para subir sus datos al sistema de prestamo y ya se puede llevar el libro.</li>
-                        </ol>
-
-                    </div>
-                </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="./img/icons/solucion.png" alt="Icono-solucion" >
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>Soluciones si un aprendiz daña un libro</h2>
-
-                        <p class="p1"> Al dañar o extraviar un libro, debe reponer el mismo libro que se llevo, si es imposible entonces un libro con tematica similar. 
-                        Lo ideal es que el libro no sea pirada y se le hace acompañamiento al aprendiz para reponerlo.</p>
-
-                    </div>
-                </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="./img/icons/juego-de-mesa.png" alt="Icono-juegos">
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>¿Qué tipo de juegos ofrecemos?</h2>
-                            <ol class="l_ordenada">
-                                <li> Jenga</li>
-                                <li>UNO</li>
-                                <li> Escalera</li>
-                                <li>Dominó</li>
-                            </ol>
-
-                    </div>
-                </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="img/icons/navegador-de-internet.png" alt="Icono-páginas" class="iconosBajo">
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2 >¿Qué paginas virtuales estan vinculas a la biblioteca SENA?</h2>
-                        <p class="p1">El sistema de biblioteca SENA es la pagina oficial y contamos con 33 bases de datos en varias areas del conocimiento y se puede encontrar informacion y libros electrónicos que estan disponibles para aprendices en formación y egresados.
-                        </p>
-            
-                    </div>
-                </div>
-                <div class="tarjeta">
-
-                        <div class="tarj-img">
-                            <img src="./img/icons/reclutamiento.png" alt="Icono-organización" class="iconosBajo">
-                        </div>
-
-                    <div class="contenido_tarjeta">
-
-                        <h2>Proceso para reservar un libro de otro centro vinculado al SENA</h2>
-                        <ol class="l_ordenada">
-                            <li>Verificar disponibilidad del libro</li>
-                            <li>Verificar que el libro se pueda prestar entre centros.</li>
-                            <li>El proceso de solicitud y envio se encarga la biblioteca y se le informa al aprendiz el tiempo que se demora en llegar  y los dias que se le puede prestar, ya el aprendiz decide si acepta o no el prestamo. Cuando el libro llegue al centro de formación se le da aviso al aprendiz para ser reclamado, despues que termine la consulta el aprendiz debe regresar el libro al centro de formación.</li>
-                        </ol>
-
-                    </div>
-                </div>
-            </div>
+            </ol>
         </div>
-    </section>
+        <div class="tarjetas-contenedor">
+            <!-- Mostrar las tarjetas con las normas de la biblioteca y otras informaciones -->
+            <?php foreach ($data['tarjetas'] as $tarjeta): ?>
+                <div class="tarjeta">
+                    <div class="tarj-img">
+                        <img src="<?php echo $tarjeta['imagen']; ?>" alt="<?php echo $tarjeta['alt']; ?>">
+                    </div>
+                    <div class="contenido_tarjeta">
+                        <!-- Mostrar el título de la tarjeta -->
+                        <h2><?php echo $tarjeta['titulo']; ?></h2>
+                        <?php if (isset($tarjeta['items'])): ?>
+                            <!-- Mostrar los elementos de la lista si están disponibles -->
+                            <ol class="l_ordenada">
+                                <?php foreach ($tarjeta['items'] as $item): ?>
+                                    <li><?php echo $item; ?></li>
+                                <?php endforeach; ?>
+                            </ol>
+                        <?php elseif (isset($tarjeta['contenido'])): ?>
+                            <!-- Mostrar el contenido si está disponible -->
+                            <p class="p1"><?php echo $tarjeta['contenido']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
 <?php endblock() ?>
