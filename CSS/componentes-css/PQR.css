@@ -9,7 +9,16 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
-
+.contenido{
+    width: 30rem;
+    height: 28rem;
+}
+.descripcion-pqr{
+    padding: 10px;
+}
+.opcionespqr{
+    font-size: 1rem;
+}
 
 .titulo{
     display: flex;
@@ -43,15 +52,16 @@ textarea{
     resize: none;
 }
 .Responder{
-    width: 90%;
+    width: 15rem;
     background-color: var(--gris-oscuro);
     font-family: var(--fuente-principal);
     border-radius: 5px;
     border: none;
-    margin: 10px 0px 0px 0px;
+    margin: 10px;
     resize: none;
     height: 20vh;
     scrollbar-width: none;
+    padding: 10px;
 }
 
 .button{
@@ -109,9 +119,22 @@ h1{
 
 .btnResponder{
     background-color: #39a900;
+    color: #FFFFFF;
     width: 90%;
     height: 5vh;
     border: none;
     border-radius: 5px;
     margin: 5px;
+    cursor: pointer;
+}
+.btnResponder:hover{
+    background-color: #00324D;
+}
+.select{
+    font-size: 1rem;
+}
+@media only screen and (max-width: 767px){
+    .contenido{
+        width: 20rem;
+    }
 }

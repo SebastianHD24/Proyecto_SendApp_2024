@@ -30,7 +30,8 @@
 /* Estilos para los botones */
 .button {
     padding: 10px 15px; /* Espacio interno */
-    color: rgb(24, 24, 24); /* Texto blanco */
+
+    color: white; /* Texto blanco */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
     text-decoration: none; /* Sin subrayado */
