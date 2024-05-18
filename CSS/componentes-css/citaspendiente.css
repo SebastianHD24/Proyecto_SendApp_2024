@@ -6,6 +6,7 @@
     background-color: white; /* Fondo blanco para el contenedor */
     border: 1px solid #ddd; /* Borde suave */
     border-radius: 5px; /* Bordes redondeados */
+    overflow-x: auto;
 }
 
 /* Estilos para la tabla */
