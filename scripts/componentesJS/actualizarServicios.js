@@ -174,15 +174,6 @@ function consultar(idAdmin, servicio) {
             // Se ordenan los datos del admin para mostrarlos ordenadamente
             mensajeAdmin.classList.add('oculto');
             const tr = document.createElement('tr');
-            const tdImagen = document.createElement('td');
-            const imagen = document.createElement('img');
-            if (!adminData.imagen){
-                imagen.src = adminData.imagen;
-            } else {
-                imagen.src = "../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/imagen_predeterminada/blank-avatar-photo-place-holder-600nw-1095249842.webp";
-            }
-            imagen.alt = 'Imagen de usuario';
-            tdImagen.appendChild(imagen);
 
             const tdNombres = document.createElement('td');
             tdNombres.textContent = adminData.nombres;
@@ -196,7 +187,6 @@ function consultar(idAdmin, servicio) {
             const tdCelular = document.createElement('td');
             tdCelular.textContent = adminData.celular;
 
-            tr.appendChild(tdImagen);
             tr.appendChild(tdNombres);
             tr.appendChild(tdApellidos);
             tr.appendChild(tdCorreo);
