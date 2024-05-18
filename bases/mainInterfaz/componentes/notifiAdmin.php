@@ -75,8 +75,8 @@
         </div>  
     </div>
 </div>
-<a href="#" onclick="verHistorial();" id="Historial" style="display: none;">Ver historial</a>
-<a href="#" id="volver" onclick="ocultarHistorial();" style="display: none;">Salir</a>
+<button class="verHistorial"  onclick="verHistorial();" id="Historial" style="display: none;"><a href="#">Ver historial</a></button>
+<button class="salirHistorial"id="volver" onclick="ocultarHistorial();" style="display: none;"><a href="#" >Salir</a></button>
 </main> 
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>
