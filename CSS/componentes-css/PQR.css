@@ -61,6 +61,7 @@ textarea{
     resize: none;
     height: 20vh;
     scrollbar-width: none;
+    padding: 10px;
 }
 
 .button{
