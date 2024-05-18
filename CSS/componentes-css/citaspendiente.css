@@ -1,3 +1,14 @@
+:root{
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
+}
+
 /* Estilos para el contenedor principal */
 .table_div {
     max-width: 800px; /* Limita el ancho máximo */
@@ -28,8 +39,8 @@
 /* Estilos para los botones */
 .button {
     padding: 10px 15px; /* Espacio interno */
-
-    color: white; /* Texto blanco */
+    color: var(--blanco); /* Texto blanco */
+    background-color: var(--verde);
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
     text-decoration: none; /* Sin subrayado */
