@@ -14,7 +14,7 @@ function submitForm(id) {
     var justificacion = document.getElementById('justificacion_' + id).value;
 
     // Envía los datos del formulario vía Fetch
-    fetch('rechazarcita.php', {
+    fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/rechazarcita.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
