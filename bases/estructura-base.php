@@ -1,5 +1,4 @@
 <?php require_once 'ti.php' ?>  <!--LLamo la libreria para realizar el proceso de crear bloques para heredarlos a futuro-->
-
 <!--Creo la estructura-->
 
 <!DOCTYPE html>
@@ -71,7 +70,7 @@
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
-                    <li id="ingreso"> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html">Ingreso</a></li>
+                    <li id="ingreso"> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login.php">Ingreso</a></li>
                     <li id="interfaz-u" style="display: none;"><i class="fa-solid fa-circle-user"></i><a href="#" onclick="llevarURL();">Perfil</a></li>
                     <li id="cerrar-sesion" style="display: none;"><i class="fa-solid fa-circle-left"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php" onclick="cerrarSesion();">Cerrar sesion</a></li>
                 </ul>
@@ -88,13 +87,13 @@
             <div class="resposive__menu" id="menu-no-sesion" >
                 <ul class="resposive__menu-ul">
                     <li>
-                        <i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicioo</p></a>
+                        <i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicio</p></a>
                     </li>
                     <li class="btn-areas">
                         <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Areas</a> <!--Falta la ruta-->
                     </li>
                     <li id="ingreso-responsive">
-                        <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login-aprendices.html"><p>Ingreso</p></a>
+                        <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login.php"><p>Ingreso</p></a>
                     </li>
                     <li id="interfaz-u-responsive" style="display: none;">
                         <i class="fa-solid fa-circle-user"></i><a href="#" onclick="llevarURL();">Perfil</a>
@@ -146,6 +145,17 @@
     <script src="../../../Proyecto_SendApp_2024/scripts/menuHamburguesaJS/menuBarGeneral.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/botonLeerMas.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/sesionIniciada.js"></script>
+    <script>
+        window.addEventListener('pageshow', function(event) {
+            var historyTraversal = event.persisted ||
+                                (typeof window.performance != 'undefined' &&
+                                    window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                // Recargar la página si la navegación es a través del historial del navegador
+                window.location.reload();
+            }
+        });
+    </script>
 
     <!--Este bloque se llamara en cualquier otro archivo para adicionarle escripts que no son globales en todas la paginas-->
     <?php startblock('scripts') ?>

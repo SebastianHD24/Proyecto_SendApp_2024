@@ -1,4 +1,5 @@
 const mensaje = document.getElementById('mensaje');
+const historial = document.getElementById('historial');
 
 function createNotificationBox() {
     // Crear elemento section para display-notificaciones
@@ -58,6 +59,7 @@ function createNotificationBox() {
 }
 
 function consultar() {
+    const historial = document.getElementById('historial');
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
     .then(response => response.json())
     .then(data => {
@@ -71,6 +73,7 @@ function consultar() {
             // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
             mensaje.style.display = "block";
         }
+        historial.style.display = "block";
     })
     .catch(error => console.error("Error:", error));
 }

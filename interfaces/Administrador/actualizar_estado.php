@@ -1,8 +1,8 @@
 <?php
 // Incluir el archivo de conexión
-include("../../bases/conexion.php");
+include("../../../Proyecto_SendApp_2024/bases/conexion.php");
 // Establecer conexión a la base de datos
-$con = connection();
+$conn = connection();
 
 // Verificar si se recibieron los parámetros esperados en la solicitud GET
 if(isset($_GET['documento_identidad']) && isset($_GET['action'])) { // Cambiado de 'estado' a 'action'
@@ -14,7 +14,7 @@ if(isset($_GET['documento_identidad']) && isset($_GET['action'])) { // Cambiado 
 
     // Consulta SQL para actualizar el estado del usuario en la base de datos
     $sql = "UPDATE usuarios SET estado = ? WHERE documento_identidad = ?";
-    $stmt = mysqli_prepare($con, $sql);
+    $stmt = mysqli_prepare($conn, $sql);
     if ($stmt) {
         // Enlazar parámetros a la consulta preparada
         mysqli_stmt_bind_param($stmt, "ii", $estado, $documento_identidad);
@@ -23,11 +23,11 @@ if(isset($_GET['documento_identidad']) && isset($_GET['action'])) { // Cambiado 
         // Cerrar la consulta preparada
         mysqli_stmt_close($stmt);
         // Redirigir a la página principal después de la actualización
-        header("Location: ../Administrador/Administrador.php");
+        header("Location: ../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php");
         exit(); // Terminar la ejecución del script
     } else {
         // Mostrar un mensaje de error si la preparación de la consulta falla
-        echo "Error en la preparación de la consulta: " . mysqli_error($con);
+        echo "Error en la preparación de la consulta: " . mysqli_error($conn);
     }
 } else {
     // Mostrar un mensaje de error si faltan parámetros en la solicitud
@@ -35,5 +35,5 @@ if(isset($_GET['documento_identidad']) && isset($_GET['action'])) { // Cambiado 
 }
 
 // Cerrar la conexión a la base de datos
-mysqli_close($con);
+mysqli_close($conn);
 ?>

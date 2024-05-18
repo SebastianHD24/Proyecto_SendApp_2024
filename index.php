@@ -50,7 +50,7 @@
                         <img src="Inicio/Img-home/Section-Img/communicate_2343723.png" alt="Inoco De informacion">
                     </article> 
                     <p>
-                        Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la información necesaria en <b><a href="">Acerca CDITI.</a></b>
+                        Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la información necesaria en <b><a href="#Info-cditi">Acerca CDITI.</a></b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -58,7 +58,7 @@
                         <img src="Inicio/Img-home/Section-Img/training_12343284.png" alt="Inoco De Nosotros">
                     </article> 
                     <p>
-                        Si te interesa saber un poco más sobre nosotros y ¿Por qué fue creado este sitio web? puedes visitar el apartado de <b><a href="">Nosotros.</a></b>
+                        Si te interesa saber un poco más sobre nosotros y ¿Por qué fue creado este sitio web? puedes visitar el apartado de <b><a href="#nosotros">Nosotros.</a></b>
                     </p>
                 </div>
                 <div class="p__container">
@@ -72,7 +72,8 @@
             </div>
 
                 <!-- ------------------------ Nosotros -------------------------- -->
-    <div class="container_nostros">
+    <section id="nosotros">
+    <div class="container_nostros" >
         <div class="contenedor">
             <div class="seccion-escudo_bandera">
                 <div class="escudo">
@@ -122,11 +123,12 @@
 
         </div>    
     </div>
+    </section>
 
 
 
     <!-- --------------------------------------- Info CDITI ------------------------------ -->
-
+<section id="Info-cditi">
     <div class="container_info">
         <div class="section-1">
             <h1>CDITI Informa</h1>
@@ -136,6 +138,7 @@
         <img src="./Inicio/Img-home/Section-Img/img2.JPG" alt="">
 
         </div>
+</section>
         </section>
         <div class="map">
             <h1>¿Sabes dónde queda el Centro de Diseño e Innovación tecnológica Industrial?</h1>

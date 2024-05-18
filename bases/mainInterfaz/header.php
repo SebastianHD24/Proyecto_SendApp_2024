@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/notificaiones.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/servicios.css" >
-
-
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/calendario.css">
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/citaspendiente.css">
+    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/confirmado.css" >
 </head>
 <body>
     <div class="wrapper">
@@ -48,7 +49,7 @@
         <aside>
             <button class="close-menu" id="close-menu"><i class='bx bx-x'></i></a>
 
-            <div class="perfil">    
+            <div class="perfil" style="display: none;">    
                     <!--*****************************************************-->
                     <figure class="foto-perfil">
                       <img class="logo" src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/fotor-ai-20230902143349.jpg">
@@ -56,18 +57,23 @@
                     </figure>
                     <!--*****************************************************-->  
             </div>
-            <article class="nombre">
+            <article class="nombre" style="display: none;">
                 <p><?= $full_name ?></p>
             </article>
                 
             <nav class="navbar">
                 <ul class="menu">
-                    <li>
-                    <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
-                    </li>
+                    <?php if ($id_rol != 1): ?>
+                        <li>
+                        <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
+                        </li>
+                    <?php endif ?>
                     <?php if ($id_rol == 2): ?>
                         <li>
                         <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                        </li>
+                        <li>
+                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Citas sin contestar </button></a>
                         </li>
                     <?php endif; ?>
 

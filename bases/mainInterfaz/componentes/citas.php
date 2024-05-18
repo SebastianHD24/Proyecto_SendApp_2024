@@ -13,10 +13,13 @@ if (isset($_SESSION['documento_identidad'])) {
     $sql = "SELECT 
     citas.*, 
     servicios.nombre_servicio, 
-    servicios.admin_area, 
-    servicios.estado_servicio
-     FROM citas INNER JOIN servicios ON 
-    citas.id_servicio = servicios.id_servicio WHERE citas.documento_usuario = '$documento_identidad'";
+    usuarios.nombres AS nombre_funcionario_cita,
+    usuarios.apellidos AS apellido_funcionario_cita
+     FROM citas 
+     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
+     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
+     WHERE citas.documento_usuario = '$documento_identidad'";
+
 
     $result = mysqli_query($conn, $sql);
 
@@ -27,6 +30,7 @@ if (isset($_SESSION['documento_identidad'])) {
             <div class="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
+                $hora_formato_12 = date("h:i A", strtotime($row['hora']));
                 ?>
                 <div class="notifications">
                     <figure>
@@ -42,7 +46,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <article>
-                        <p>Hora: <?= $row['hora'] ?></p>
+                        <p>Hora: <?=$hora_formato_12   ?> </p>
                     </article>
                     <span></span>
                     <article>
@@ -58,7 +62,9 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <article>
-                        <p>  Funcionario: <?= $row['admin_area'] ?></p>
+                    <p>  Funcionario: <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?></p>
+
+
                     </article>
                 </div>
                 <?php

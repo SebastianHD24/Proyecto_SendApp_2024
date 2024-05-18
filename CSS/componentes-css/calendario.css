@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root{
+  --verde: #39a900;
+  --blanco: #fff;
+  --negro: #070001;
+  --azul: #00324D;
+  --azul-claro: #82DEF0;
+  --gris-oscuro: #cfcfcf;
+  --gris-claro: #ededed;
+  --fuente-principal: "Work Sans", sans-serif;
+}
+
+.Titulo-calendario {
+  font-weight: 700;
+  text-align: center;
+  color: var(--azul);
+  padding-top: 20px;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+.parrafo_calendario{
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.calendar {
+  margin: 0 auto;
+  width: 98%;
+  max-width: 30rem;
+  padding: 0.5rem;
+}
+
+.calendar header {
+  background-color: var(--azul);
+  display: flex;
+  padding: 0.7rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.calendar nav {
+  display: flex;
+  align-items: center;
+}
+
+.calendar .week{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.calendar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  width: calc(100% / 7);
+  margin-top: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+#prev,
+#next {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#prev::before,
+#next::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  border-color: #ccc;
+}
+
+#next::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+#prev:hover::before,
+#next:hover::before {
+  border-color: var(--verde);
+}
+
+.days {
+  font-weight: 600;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.dates{
+  padding: 0rem 0.7rem 1rem;
+}
+
+.dates li.today {
+  color: #fff;
+}
+
+.dates li.today::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--azul);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dates li.inactive {
+  color: #ccc;
+}
+
+.prev-month,
+.next-month {
+  color: #ccc;
+}
+
+.dates li.inactive::before {
+  background-color: #ccc;
+}
+
+/* Estilos para la tabla de eventos */
+.eventos {
+  margin-top: 20px;
+  width: 100%;
+  padding: 0vw 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.eventos h2{
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.eventos table{
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-collapse: collapse;
+  max-width: 72vw;
+  padding-bottom: 25px;
+}
+
+.eventos th,
+.eventos td {
+  padding: 10px;
+  border: 2px solid var(--gris-oscuro);
+}
+
+.eventos th {
+  background-color: var(--azul);
+  font-weight: bold;
+  text-align: left;
+  color: var(--blanco);
+}
+
+
+.eventos tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para la bolita de eventos */
+.dates li.has-event {
+  position: relative;
+}
+
+.dates li.has-event::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--verde);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.dates li.event {
+  color: #fff;
+}
+
+.dates li.event::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #00ff0d;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+.dates li.inactive::before {
+  background-color: #ccc;  
+}
+
+@media only screen and (max-width: 768px){
+  .eventos{
+    padding: 0vw 4vw;
+  }
+  .eventos table{
+    max-width: 82vw;
+  }
+} 
+
+
