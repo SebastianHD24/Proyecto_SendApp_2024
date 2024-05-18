@@ -152,8 +152,8 @@
       </div>
 
       <div class="buttons">
-        <button class="button">Cerrar</button>
-        <button type='submit' class="button" onclick="ve();">Enviar</button>
+        <button class="button-servicio">Cerrar</button>
+        <button type='submit' class="button-servicio" onclick="ve();">Enviar</button>
       </div>
     </form>
   </div>

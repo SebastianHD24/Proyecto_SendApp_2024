@@ -49,3 +49,12 @@
     align-items: center;
     padding: 20px;
 }
+.button-servicio{
+    background-color: #39a900;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+}

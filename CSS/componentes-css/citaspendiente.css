@@ -28,7 +28,6 @@
 /* Estilos para los botones */
 .button {
     padding: 10px 15px; /* Espacio interno */
-    background-color: #39a900;
     color: white; /* Texto blanco */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
