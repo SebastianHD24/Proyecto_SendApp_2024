@@ -43,6 +43,7 @@ a{
   
 }
 aside{
+    width: 100%;
     color: white;
     position: sticky;
     height: auto;

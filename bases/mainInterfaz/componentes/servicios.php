@@ -1,11 +1,10 @@
- 
 <div class="div__content">
     <section>
         <!--Logo en el contenido-->
         <article>
             <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/LogoSenaVerde.png" name="SendApp" alt="SendApp Logo"/>
         </article>
-        <h1 class="bienvenida">Bienvenido Usuario</h1>
+        <h1 class="bienvenida">Bienvenido <?= $full_name?> </h1>
         <p>Conoce y agenda tus servicios.</p>
         <div class="cards__container">
       

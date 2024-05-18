@@ -16,10 +16,6 @@
     if ($query->num_rows > 0){
         $adminArea = mysqli_fetch_assoc($query);
     
-        // Codificar la imagen como una URL base64
-        $imagenCodificada = base64_encode($adminArea['imagen']);
-        $adminArea['imagen'] = 'data:image/jpeg;base64,' . $imagenCodificada;
-    
         echo json_encode($adminArea);
     } else {
         echo json_encode(array("adminNotFound" => true));
