@@ -58,3 +58,16 @@
     width: 100px;
     height: 25px;
 }
+.solicitarCita{
+    width: 30rem;
+    height: 28rem;
+}
+.descripcion-servicio{
+    height: 10rem;
+    padding: 10px;
+}
+@media only screen and (max-width: 767px){
+    .solicitarCita{
+        width: 20rem;
+    }
+}

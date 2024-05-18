@@ -9,7 +9,16 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
-
+.contenido{
+    width: 30rem;
+    height: 28rem;
+}
+.descripcion-pqr{
+    padding: 10px;
+}
+.opcionespqr{
+    font-size: 1rem;
+}
 
 .titulo{
     display: flex;
@@ -119,4 +128,12 @@ h1{
 }
 .btnResponder:hover{
     background-color: #00324D;
+}
+.select{
+    font-size: 1rem;
+}
+@media only screen and (max-width: 767px){
+    .contenido{
+        width: 20rem;
+    }
 }

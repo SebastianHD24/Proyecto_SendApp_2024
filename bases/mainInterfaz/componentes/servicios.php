@@ -124,7 +124,7 @@
 </div>
 <!-- la parte de solicitud citas -->
 <div  class="container oculto" >
-    <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo">
+    <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo" class="solicitarCita">
       <input type="hidden" name="id_servicio"  id='id_servicio' value="">
   
       <h1>Solicitar Cita</h1>
@@ -148,7 +148,7 @@
 
       <div class="formulario">
         <label for="descripcion">Descripción:</label>
-        <textarea name='descripcion' id="descripcion" class="descripcion" rows="4"></textarea>
+        <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4"></textarea>
       </div>
 
       <div class="buttons">
