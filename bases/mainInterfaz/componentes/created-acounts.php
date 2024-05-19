@@ -38,16 +38,16 @@
           // Verificar si se realizó una búsqueda
           if(isset($_GET['documento_identidad']) && $_GET['documento_identidad'] != '') {
             $search_term = $_GET['documento_identidad'];
-            $search_term_like = "%$search_term%";
+            $search_term_like = "$search_term%";
             echo "Buscas: $search_term";
 
             // Agregar condición de búsqueda a la consulta SQL
-            $sql .= " WHERE usuarios.documento_identidad = ? OR usuarios.nombres LIKE ? OR usuarios.ficha = ?";
+            $sql .= " WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuarios.ficha LIKE ?";
             // Preparar la consulta SQL
             $stmt = mysqli_prepare($conn, $sql);
             if ($stmt) {
               // Enlazar parámetros a la consulta preparada
-              mysqli_stmt_bind_param($stmt, "iss", $search_term, $search_term_like, $search_term);
+              mysqli_stmt_bind_param($stmt, "sss", $search_term_like, $search_term_like, $search_term_like);
               // Ejecutar la consulta preparada
               mysqli_stmt_execute($stmt);
               // Obtener el resultado de la consulta
