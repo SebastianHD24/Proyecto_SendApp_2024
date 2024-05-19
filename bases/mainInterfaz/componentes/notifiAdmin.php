@@ -10,6 +10,7 @@
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Rol</th>
                         <th>Documento de Identidad</th>
                         <th>Fecha de Dolicitud</th>
                         <th>Asunto</th>
@@ -19,6 +20,7 @@
                 </thead>
                 <tbody class="respuestas">
                     <tr>
+                        <th></th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -50,6 +52,7 @@
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Rol</th>
                         <th>Documento de Identidad</th>
                         <th>Fecha de Solicitud</th>
                         <th>Fecha de Respuesta</th>
@@ -60,6 +63,7 @@
                 </thead>
                 <tbody class="respuestas">
                     <tr>
+                        <th></th>
                         <th></th>
                         <th></th>
                         <th></th>
