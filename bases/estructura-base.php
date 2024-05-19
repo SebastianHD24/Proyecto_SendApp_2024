@@ -90,16 +90,16 @@
                         <i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicio</p></a>
                     </li>
                     <li class="btn-areas">
-                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Areas</a> <!--Falta la ruta-->
+                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php"><p>Areas</p></a>
                     </li>
-                    <li id="ingreso-responsive">
+                    <li id="ingreso-responsive" >
                         <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login.php"><p>Ingreso</p></a>
                     </li>
-                    <li id="interfaz-u-responsive" style="display: none;">
-                        <i class="fa-solid fa-circle-user"></i><a href="#" onclick="llevarURL();">Perfil</a>
+                    <li id="interfaz-u-responsive" >
+                        <i class="fa-solid fa-circle-user"></i><a onclick="llevarURL();"><p>Perfil</p></a>
                     </li>
-                    <li id="cerrar-sesion-responsive" style="display: none;">
-                        <i class="fa-solid fa-circle-left"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php" onclick="cerrarSesion();">Cerrar sesion</a>
+                    <li id="cerrar-sesion-responsive">
+                        <i class="fa-solid fa-circle-left"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php" onclick="cerrarSesion();"><p>Cerrar sesion</p></a>
                     </li>
                 </ul>
             </div>
