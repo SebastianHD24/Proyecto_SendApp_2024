@@ -204,10 +204,6 @@ i{
 }
 
 
-.resposive__menu{
-    display: none;
-}
-
 /* RESPONSIVE */
 
 /* -----responsive menu hambuerguesa -----*/
@@ -247,8 +243,8 @@ i{
     }
 
     .resposive__menu.open{
-        height: 120px;
-        width: 120px;
+        height: 155px;
+        width: 140px;
     }
 
     .resposive__menu-ul{
@@ -278,6 +274,13 @@ i{
         color: var(--verde);
     } 
 
+    #interfaz-u-responsive{
+        display: none;
+    }
+
+    #cerrar-sesion-responsive{
+        display: none;
+    }
 /* estilos para las areas en el menu hamburguesa */
 
     .menu-areas{
