@@ -1,20 +1,47 @@
 // Función para abrir el modal
-    function openModal(id) {
-    var modal = document.getElementById('modal_' + id);
+function openModal(type, id) {
+    var modal = document.getElementById('modal_' + type + '_' + id);
     modal.style.display = "block";
 }
-// funcion para cerrar el modal 
+
+// Función para cerrar el modal
 function closeModal(id) {
     var modal = document.getElementById('modal_' + id);
-    modal.style.display = "none";
-    }
-// Función para cerrar el modal
-function submitForm(id) {
-    var form = document.getElementById('form_' + id);
-    var justificacion = document.getElementById('justificacion_' + id).value;
+    if (modal) {
+        modal.style.display = "none";
+    } else {
+        console.error("El modal con ID " + id + " no fue encontrado.");
+    }
+}
+// Función para desbloquear los botones Confirmar y Cancelar al aceptar la cita
+function unlockButtons(id) {
+    document.querySelector(`#row_${id} .button:not(.disabled)`).classList.remove('disabled');
+}
 
-    // Envía los datos del formulario vía Fetch
-    fetch('rechazarcita.php', {
+// Función para bloquear todos los botones al confirmar la cita
+function blockAllButtons(id) {
+    var buttons = document.querySelectorAll(`#row_${id} .button`);
+    buttons.forEach(function(button) {
+        button.classList.add('disabled');
+    });
+}
+
+// Función para enviar el formulario de aceptación
+function submitAcceptanceForm(id) {
+    // Bloquear todos los botones
+    blockAllButtons(id);
+
+    // Aquí puedes agregar tu código para enviar el formulario de aceptación
+}
+
+// Función para enviar el formulario de cancelación
+function submitCancellationForm(id) {
+    // Bloquear todos los botones
+    blockAllButtons(id);
+
+    var justificacion = document.getElementById('justificacion_cancelacion_' + id).value;
+
+    fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/cancelarcita.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -23,7 +50,29 @@ function submitForm(id) {
     })
     .then(function(response) {
         if (response.ok) {
-            // Recarga la página después de enviar el formulario
+            window.location.reload();
+        } else {
+            console.log('Error al cancelar la cita');
+        }
+    })
+    .catch(function(error) {
+        console.log('Error al cancelar la cita: ', error);
+    });
+}
+
+// Función para enviar el formulario de rechazo
+function submitRejectionForm(id) {
+    var justificacion = document.getElementById('justificacion_' + id).value;
+
+    fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/rechazarcita.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'id_cita=' + id + '&justificacion=' + encodeURIComponent(justificacion)
+    })
+    .then(function(response) {
+        if (response.ok) {
             window.location.reload();
         } else {
             console.log('Error al enviar el formulario');
@@ -31,10 +80,22 @@ function submitForm(id) {
     })
     .catch(function(error) {
         console.log('Error al enviar el formulario: ', error);
-       });
-    }
+    });
+}
+// Función para mostrar el formulario de rechazo
+function mostrarFormularioRechazo(id) {
+    var modal = document.getElementById('modal_' + id);
+    modal.style.display = "block";
+}
 
-//Bloque de codigo que crea  un formulario para enviar la id de la cita cliqueada y el documento la persona que solicito la cita al componente donde se termianara de aceptar la cita 
+// Función para enviar el formulario
+function submitForm(id) {
+    // Invocar a la función de envío de rechazo
+    submitRejectionForm(id);
+}
+
+
+//Bloque de codigo que crea un formulario para enviar la ID de la cita cliqueada y el documento de la persona que solicitó la cita al componente donde se terminará de aceptar la cita 
 function aceptarCita(documento, id_cita) {
     // Crear un formulario oculto
     let form = document.createElement("form");
@@ -62,4 +123,18 @@ function aceptarCita(documento, id_cita) {
 
     // Enviar formulario
     form.submit(); // Envía el formulario
+}
+
+function confirmarCita(id) {
+    fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/confirmarcita.php?id_cita=' + id)
+        .then(function(response) {
+            if (response.ok) {
+                window.location.reload();
+            } else {
+                console.log('Error al confirmar la cita');
+            }
+        })
+        .catch(function(error) {
+            console.log('Error al confirmar la cita: ', error);
+        });
 }

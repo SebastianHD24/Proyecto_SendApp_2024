@@ -6,6 +6,7 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
+                <th>Confirmacion</th>
                 <th>Acciones</th>
                 <th>Jornada</th>
             </tr>
@@ -16,10 +17,10 @@
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
             $funcionario = $_SESSION["documento_identidad"];
-            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita 
-                    FROM citas
-                    INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad WHERE citas.usuario_f= $funcionario";
-
+            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
+            FROM citas
+            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad";
+    
             $result = mysqli_query($conn, $sql);
 
             if ($result === false) {
@@ -36,9 +37,13 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
+                        <td><?= $row['confirmacion'] ?></td>
                         <td class="actions">
                             <button class="button <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
-                            <button class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="openModal(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
+                            <button class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="mostrarFormularioRechazo(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
+                            <a class="button <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Confirmar</a>
+                            <button class="button danger <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Cancelar</button>
+                            
                             <!-- Modal para rechazar la cita -->
                             <div id="modal_<?= $row['id_cita'] ?>" class="modal">
                                 <div class="modal-content">
@@ -60,6 +65,26 @@
                                             <!-- Botón para enviar el formulario -->
                                             <button type="button" onclick="submitForm(<?= $row['id_cita'] ?>)" class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>">Enviar</button>
                                         </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Modal para cancelar la cita -->
+                            <div id="modal_cancelacion_<?= $row['id_cita'] ?>" class="modal">
+                                <div class="modal-content">
+                                    <!-- Botón para cerrar el modal -->
+                                    <span class="close" onclick="closeModal('cancelacion_<?= $row['id_cita'] ?>')">&times;</span>
+                                    
+                                    <!-- Resto dell contenido del modal -->
+                                    <form id="cancelForm_<?= $row['id_cita'] ?>" onsubmit="submitCancellationForm(<?= $row['id_cita'] ?>); return false;">
+                                        <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
+                                        <label for="nombre_cancelacion_<?= $row['id_cita'] ?>">Nombre:</label>
+                                        <input type="text" id="nombre_cancelacion_<?= $row['id_cita'] ?>" name="nombre" value="<?= $row['nombres'] ?>" disabled>
+                                        <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
+                                        <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
+                                        <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación:</label>
+                                        <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
+                                        <button type="submit" class="button danger">Enviar</button>
                                     </form>
                                 </div>
                             </div>
