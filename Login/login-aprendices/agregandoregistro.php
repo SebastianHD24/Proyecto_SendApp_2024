@@ -39,7 +39,7 @@ $resultDocumento = mysqli_query($conn, $queryDocumento);
 $passwordHash = password_hash($contrasena, PASSWORD_BCRYPT);
 
 // Requisitos para la contraseña    
-const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*_-¡?¿·çºª.:,;=|+#\/])(?=.{6,})/';
+const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_\-¡?¿·çºª.:,;=|+#\\/])(?=.{6,})/';
 
 if (mysqli_num_rows($resultDocumento) > 0) {
     echo json_encode(array('success' => 5));
