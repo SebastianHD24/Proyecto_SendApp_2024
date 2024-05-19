@@ -29,7 +29,7 @@
 
 
     if ($historial_notificaciones == "hoy"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
@@ -52,7 +52,7 @@
             echo json_encode(array());
         }
     }else if ($historial_notificaciones == "ayer"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
@@ -75,7 +75,7 @@
             echo json_encode(array());
         }
     }else if ($historial_notificaciones == "semana"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
@@ -98,7 +98,7 @@
             echo json_encode(array());
         }
     }else if ($historial_notificaciones == "mes"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
@@ -121,7 +121,7 @@
             echo json_encode(array());
         }
     }else if($historial_notificaciones == "anio"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta 
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
@@ -144,7 +144,7 @@
             echo json_encode(array());
         }
     }else if($historial_notificaciones == "todos"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and p.respuesta_pqrs IS NOT NULL";
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and p.respuesta_pqrs IS NOT NULL";
         $resultado = mysqli_query($conn, $sql);
         
         // Verificar si la consulta devuelve resultados
@@ -166,5 +166,4 @@
     }else{
         echo "hyyyy";
     }
-
 ?>

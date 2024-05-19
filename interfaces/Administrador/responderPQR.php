@@ -20,7 +20,7 @@
         return $fechaCompleta;
     }
     // Ejemplo de uso
-    $fecha = fecha();    
+    $fecha = fecha();
 
 
     $sql = "UPDATE pqr SET respuesta_pqrs = '$respuesta', fecha_respuesta = '$fecha' WHERE id_peticion = $id_pqr";

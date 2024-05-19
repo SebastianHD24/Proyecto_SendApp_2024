@@ -184,11 +184,18 @@ function historialDesde(){
 
                 // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
                 data.forEach(historial => {
+                    let rol = "";
+                    if (historial.id_rol == 3) {
+                        rol = "Aprendiz";
+                    } else if (historial.id_rol == 2) {
+                        rol = "Funcionario";
+                    }
                     document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
                         <tr>
                             <td>${historial.id_peticion}</td>
                             <td>${historial.nombres}</td>
                             <td>${historial.apellidos}</td>
+                            <td>${rol}</td>
                             <td>${historial.documento_identidad}</td>
                             <td>${historial.fecha_solicitud}</td>
                             <td>${historial.fecha_respuesta}</td>
