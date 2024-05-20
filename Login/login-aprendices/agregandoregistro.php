@@ -53,8 +53,11 @@ if (mysqli_num_rows($resultDocumento) > 0) {
     if (preg_match(REGEX, $contrasena)) {
         if (mysqli_num_rows($result) > 0) {
 
-            if (isset($_SESSION['documento_identidad'])) {
+            if (isset($_SESSION['documento_identidad']) && $id_rol == 2) {
                 $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol, id_servicio) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol', '$id_servicio')";
+            } elseif (isset($_SESSION['documento_identidad']) && $id_rol != 2) {
+                $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol, id_servicio) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol', NULL)";
+
             } else {
                 $sql = "INSERT INTO usuarios (tipo_documento, documento_identidad, contrasena, nombres, apellidos, correo, celular, programa, ficha, estado, id_rol) VALUES ('$tipo_documento', '$documento_identidad', '$passwordHash', '$nombres', '$apellidos', '$correo', '$celular', '$programa', '$ficha', '$estado', '$id_rol')";
             }
