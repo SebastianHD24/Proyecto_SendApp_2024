@@ -38,7 +38,7 @@
             <label for="login-input-user-l" class="login__label">
                 Documento
             </label>
-            <input id="login-input-user-l" class="login__input" type="text" name="documento_identidad" placeholder="Número de documento" />
+            <input id="login-input-user-l" class="login__input" type="number" name="documento_identidad" placeholder="Número de documento" />
             <label for="login-input-password-l" class="login__label">
                 Contraseña
             </label>
