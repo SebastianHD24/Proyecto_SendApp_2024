@@ -15,10 +15,10 @@ if (isset($_SESSION['documento_identidad'])) {
     servicios.nombre_servicio, 
     usuarios.nombres AS nombre_funcionario_cita,
     usuarios.apellidos AS apellido_funcionario_cita
-     FROM citas 
-     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
-     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
-     WHERE citas.documento_usuario = '$documento_identidad'";
+    FROM citas 
+    INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
+    INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
+    WHERE citas.documento_usuario = '$documento_identidad'";
 
 
     $result = mysqli_query($conn, $sql);
@@ -34,37 +34,54 @@ if (isset($_SESSION['documento_identidad'])) {
                 ?>
                 <div class="notifications">
                     <figure>
-                        <img src="../../Styles/Img/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
+                        <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
                     <span></span>
                     <article>
-                        <p>Área: <?= $row['nombre_servicio'] ?></p>
+                        <b>Área: </b>
+                        <p><?= $row['nombre_servicio'] ?></p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Día:<?= $row['fecha'] ?></p>
+                        <b>Día: </b>
+                        <p>
+                            <?= $row['fecha'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Hora: <?=$hora_formato_12   ?> </p>
+                        <b>Hora: </b>
+                        <p>
+                            <?=$hora_formato_12   ?> 
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Estado: <?= $row['estado_cita'] ?></p>
+                        <b>Estado: </b>
+                        <p>
+                            <?= $row['estado_cita'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Motivo: <?= $row['descripcion'] ?></p>
+                        <b>Jornada: </b>
+                        <p>
+                            <?= $row['jornada'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>jornada: <?= $row['jornada'] ?></p>
+                        <b>Funcionario: </b>
+                        <p>
+                            <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                    <p>  Funcionario: <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?></p>
-
-
+                        <b>Motivo: </b>
+                        <p> 
+                            <?= $row['descripcion'] ?>
+                        </p>
                     </article>
                 </div>
                 <?php
