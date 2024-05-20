@@ -1,19 +1,42 @@
+:root {
+    --primary-color: #191919;
+    --primary: #408CF9;
+    --rojo:rgb(219, 38, 38);
+    --white: #fff;
+    --sidebar-primary-hover: #2B2B2F;
+    --sidebar-background: #141318;
+    --background: #F3F5F6;
+    --text-link: #FFFFFF;
+    --expand-button: #408CF9;
+    --logout: #FA7575;
+    --search-background: #2B2B2F;
+    --verde: #39a900;
+    --azul: #00234d;
+    --negro: #070001;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: 'Work Sans', sans-serif;
+  }
+
 /* Estilos para el contenedor principal */
 .table_div {
-    max-width: 800px; /* Limita el ancho máximo */
+   width: 100%; /* Limita el ancho máximo */
     margin: 20px auto; /* Centra el contenido y agrega espacio */
     padding: 10px; /* Relleno interno */
     background-color: white; /* Fondo blanco para el contenedor */
-    border: 1px solid #ddd; /* Borde suave */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow-x: auto;
-    z-index:1;
+    border: 2px solid var(--azul); /* Borde suave */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden ;
+    overflow-x: scroll; /* Solo desplazamiento horizontal */
+    overflow-y: hidden;
+    /* background-color: #00234d; */
 }
 
-/* Estilos para la tabla */
-.tablaCitas {
-    width: 100%; /* Ancho completo */
-    border-collapse: collapse; /* Elimina espacios entre celdas */
+table{
+    /* overflow: hidden ; */
+    overflow-x: scroll; /* Solo desplazamiento horizontal */
+    overflow-y: hidden;   
+    background-color: #00234D;
 }
 
 .fila, .filar {
@@ -27,30 +50,79 @@
     font-weight: bold; /* Texto en negrita */
 }
 
+td{
+    text-align: center;
+    /* border: 1px solid var(--negro)  */
+    background-color: #FFFFFF;
+}
+
+#tabla_titulos{
+    background-color: #00234d;
+    color: white;
+    border-radius: 12px ;
+}
+thead{
+    background-color: #00234d;
+}
+
+
+/* -------------------- button aceptar rechazar citas /// button asistencia ---------------------- */
 /* Estilos para los botones */
 .button {
+    width: 80px;
     padding: 10px 15px; /* Espacio interno */
-
     color: white; /* Texto blanco */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
     text-decoration: none; /* Sin subrayado */
     transition: background-color 0.3s ease; /* Efecto suave en hover */
     cursor: pointer; /* Cambia el cursor a puntero */
+    margin: 5px;
+}
+/* ---------------------------------- */
+.button.asistio{
+    background-color: var(--verde);
+}
+.button.asistio:hover{
+    font-weight: 500;
+    color: var(--negro);
+    background-color: #45ad10;
+}
+/* -------------------------------- */
+
+.button.ausente{
+    background-color: var(--rojo);
+}
+.button.ausente:hover{
+    font-weight: 500;
+    color: var(--negro);
+    background-color: rgb(216, 57, 57);
+}
+/* ------------------------------- */
+.button.aceptar{
+    background-color: var(--azul);
+}
+.button.aceptar:hover{
+    font-weight: 500;
+    color: var(--negro);
+    background-color:  #07264b;
+}
+/* ---------------------------------- */
+
+.button.rechazar{
+    background-color: var(--rojo);
+}
+.button.rechazar:hover{
+    font-weight: 500;
+    color: var(--negro);
+    background-color: rgb(216, 57, 57);
 }
 
 
-.button.danger {
-    background-color: #dc3545; /* Rojo para botón de peligro */
-}
 
-.button.danger:hover {
-    background-color: #c82333; /* Rojo más oscuro en hover */
-}
 
 /* Estilos para el área de acciones */
 .actions {
-    display: flex; /* Layout flexible para acciones */
     gap: 10px; /* Espacio entre botones */
 }
 
@@ -67,15 +139,6 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 5px;
-    position: relative;
-}
 
 .close {
     color: #aaa;
@@ -94,6 +157,71 @@
 
 /* Estilos para botones deshabilitados */
 .button.disabled {
-
+    opacity: 0.5; /* Opacidad reducida */
     pointer-events: none; /* Evita eventos de ratón */
+}
+
+
+/* ------------------- Ausente datos -------------------- */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 50px auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content form label{
+    margin: 10px 0;
+}
+
+.modal-content form input:nth-child(1),
+                    input:nth-child(2) {
+                    text-align: center;
+                    }
+.modal-content form input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content form .button_ausente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content form button{
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 500;
+}
+
+.modal-content form button:hover{
+    background-color: #102b4b;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+    }
+    
 }
