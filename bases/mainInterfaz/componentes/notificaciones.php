@@ -80,8 +80,10 @@
         </div>
     </div>
 </section>
-<a href="#" onclick="consultarHistorial();" id="historial" style="display: none;">Ver historial</a>
-<a href="#" onclick="salir();" id="salir" style="display: none;">Salir</a>
+<button class="verHistorial" onclick="consultarHistorial();" id="historial" style="display: none;"><a href="#" >Ver historial</a></button>
+
+<button class="salirHistorial" onclick="salir();" id="salir" style="display: none;"><a href="#" >Salir</a></button>
+
 </main>
 </div>
 

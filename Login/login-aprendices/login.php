@@ -15,7 +15,9 @@
     <title>Login</title>
 </head>
 <body>
-
+    <header>
+        <img src="./logo/SendApp.png" alt="Logo Sendapp">
+    </header>
     <!-- FORMULARIO DE INICIO DE SESIÓN -->
 
     <div id="loginForm">

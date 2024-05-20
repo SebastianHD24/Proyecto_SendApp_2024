@@ -6,6 +6,8 @@
     background-color: white; /* Fondo blanco para el contenedor */
     border: 1px solid #ddd; /* Borde suave */
     border-radius: 5px; /* Bordes redondeados */
+    overflow-x: auto;
+    z-index:1;
 }
 
 /* Estilos para la tabla */
@@ -92,6 +94,6 @@
 
 /* Estilos para botones deshabilitados */
 .button.disabled {
-    opacity: 0.5; /* Opacidad para que parezca deshabilitado */
+
     pointer-events: none; /* Evita eventos de ratón */
 }

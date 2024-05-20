@@ -11,7 +11,9 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <button onclick="capturar_id(1); capturar_id_servicio(1)" id="Bienestar">Bienestar al Aprendiz</button>
+                <button onclick="capturar_id(1); capturar_id_servicio(1)" id="Bienestar" class = "btn"> <p class="txt1">Bienestar al Aprendiz</p>
+                <p class="txt2">Agendar Cita</p>
+              </button>
               </article>
             </div>
 
@@ -121,7 +123,7 @@
 </div>
 <!-- la parte de solicitud citas -->
 <div  class="container oculto" >
-    <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo">
+    <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo" class="solicitarCita">
       <input type="hidden" name="id_servicio"  id='id_servicio' value="">
   
       <h1>Solicitar Cita</h1>
@@ -145,22 +147,21 @@
 
       <div class="formulario">
         <label for="descripcion">Descripción:</label>
-        <textarea name='descripcion' id="descripcion" class="descripcion" rows="4"></textarea>
+        <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4"></textarea>
       </div>
 
       <div class="buttons">
-        <button class="button">Cerrar</button>
-        <button type='submit' class="button" onclick="ve();">Enviar</button>
+        <button class="button-servicio">Cerrar</button>
+        <button type='submit' class="button-servicio" id="btnEnviar">Enviar</button>
       </div>
     </form>
   </div>
   <!-- /* ventana emergente */ -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="cerrar"></span>
-      <p>¡Formulario Enviado con Exito!</p>
-      <i class='bx bxs-certification'></i>
-    </div>
+  <div class="myModal" id="myModal">
+        <div class="confirmacion" id="confirmacion">
+          <p>Enviada con éxito</p>
+          <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
+        </div>
   </div>
 </main> 
 </div>
