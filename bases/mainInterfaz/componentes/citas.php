@@ -30,41 +30,62 @@ if (isset($_SESSION['documento_identidad'])) {
             <div class="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
-                $hora_formato_12 = date("h:i A", strtotime($row['hora']));
+               
                 ?>
                 <div class="notifications">
                     <figure>
-                        <img src="../../Styles/Img/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
+                        <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
                     <span></span>
                     <article>
-                        <p>Área: <?= $row['nombre_servicio'] ?></p>
+                        <b>
+                            Área: 
+                        </b>
+                        <p>
+                            <?= $row['nombre_servicio'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Día:<?= $row['fecha'] ?></p>
+                        <b>Día: </b>
+                        <p>
+                            <?= $row['fecha'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Hora: <?=$hora_formato_12   ?> </p>
+                        <b>Hora: </b>
+                        <p>
+                            <?= $row['hora']  ?> 
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Estado: <?= $row['estado_cita'] ?></p>
+                        <b>Estado: </b>
+                        <p class="tipo__estado">
+                            <?= $row['estado_cita'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>Motivo: <?= $row['descripcion'] ?></p>
+                        <b>Jornada: </b>
+                        <p>
+                            <?= $row['jornada'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>jornada: <?= $row['jornada'] ?></p>
+                        <b>Funcionario: </b>
+                        <p>
+                            <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                    <p>  Funcionario: <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?></p>
-
-
+                        <b>Motivo: </b>
+                        <p>
+                            <?= $row['descripcion'] ?>
+                        </p>
                     </article>
                 </div>
                 <?php
@@ -88,3 +109,19 @@ if (isset($_SESSION['documento_identidad'])) {
     }
 }
 ?>
+    </main>
+</div>
+<script>
+    let tipoDeEstadoCita = document.querySelectorAll('.tipo__estado');
+
+    console.log(tipoDeEstadoCita);
+
+    tipoDeEstadoCita.forEach(datoActual  => {
+        if(datoActual.textContent = 'pendiente'){
+            datoActual.classList.add('estado_pendiente');
+        }else if(datoActual.textContent = ''){
+
+        }
+    });
+
+</script>

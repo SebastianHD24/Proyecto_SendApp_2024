@@ -162,7 +162,6 @@
       <i class='bx bxs-certification'></i>
     </div>
   </div>
- 
 </main> 
 </div>
 
