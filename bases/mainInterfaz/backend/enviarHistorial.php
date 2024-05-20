@@ -164,6 +164,6 @@
             echo json_encode(array());
         }
     }else{
-        echo "yyyyyy";
+        echo "Error de conexión";
     }
 ?>
