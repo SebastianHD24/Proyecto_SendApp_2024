@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (jsonData.success == "6") {
                 alert('Se ha registrado correctamente')
                 window.location.href = "login.php";
+
+            } else if (jsonData.success == "7") {
+                alert('Por favor llenar todos los campos');
             }
         })
         .catch(error => console.error('Error:', error));

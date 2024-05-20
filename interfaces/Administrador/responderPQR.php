@@ -9,6 +9,12 @@
     $respuesta = $_POST['respuesta_pqrs'];
     $id_pqr = $_POST['id_peticion'];
 
+    //Comprobar para que no envié respuestas vacías
+    if($respuesta == null){
+        echo json_encode(array('success' => 5));
+        exit();
+    }
+
     function fecha() {
         // Establecer la zona horaria deseada
         $zonaHoraria = new DateTimeZone('America/Bogota'); // Cambia 'America/Bogota' por la zona horaria que desees

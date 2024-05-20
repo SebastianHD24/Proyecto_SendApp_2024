@@ -62,14 +62,14 @@
     <input id="login-input-user-ce" class="login__input" type="text" name="celular" placeholder="Número celular/telefono" required/>
 
     <label for="login-input-user" class="login__label">
-        Programa (opcional)
+        Programa*
     </label>
-    <input id="login-input-user-p" class="login__input" type="text" name="programa" placeholder="Programa"/>
+    <input id="login-input-user-p" class="login__input" type="text" name="programa" placeholder="Programa" required/>
 
     <label for="login-input-user" class="login__label">
-        Ficha (opcional)
+        Ficha*
     </label>
-    <input id="login-input-user-f" class="login__input" type="number" name="ficha" placeholder="Número de ficha"/>
+    <input id="login-input-user-f" class="login__input" type="number" name="ficha" placeholder="Número de ficha" required/>
 
     <?php if (isset($_SESSION['documento_identidad'])): ?>
         <label for="id_rol">Rol *</label>

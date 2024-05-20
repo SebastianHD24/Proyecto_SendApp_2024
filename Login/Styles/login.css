@@ -217,7 +217,7 @@ body {
     justify-content: space-between;
     padding-bottom: 1rem;
 }
-#goToLogin + #goToRegister{
+#goToLogin{
 	cursor: pointer;
 }
 
