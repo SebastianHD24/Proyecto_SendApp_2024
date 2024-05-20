@@ -75,7 +75,7 @@
                                     <!-- Botón para cerrar el modal -->
                                     <span class="close" onclick="closeModal('cancelacion_<?= $row['id_cita'] ?>')">&times;</span>
                                     
-                                    <!-- Resto dell contenido del modal -->
+                                    <!-- Resto del contenido del modal -->
                                     <form id="cancelForm_<?= $row['id_cita'] ?>" onsubmit="submitCancellationForm(<?= $row['id_cita'] ?>); return false;">
                                         <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
                                         <label for="nombre_cancelacion_<?= $row['id_cita'] ?>">Nombre:</label>
