@@ -34,7 +34,7 @@
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
         WHERE p.fecha_solicitud = '$fecha_actual' 
-        AND p.respuesta_pqrs IS NOT NULL";        
+        AND p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC";        
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){
             $historial = array();
@@ -56,8 +56,8 @@
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
-        WHERE p.fecha_solicitud BETWEEN '$fecha_ayer' AND '$fecha_actual' 
-        AND p.respuesta_pqrs IS NOT NULL"; 
+        WHERE p.fecha_solicitud BETWEEN '$fecha_ayer' 
+        AND p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC"; 
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){
             $historial = array();
@@ -80,7 +80,7 @@
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
         WHERE p.fecha_solicitud BETWEEN '$ultima_semana' AND '$fecha_actual' 
-        AND p.respuesta_pqrs IS NOT NULL"; 
+        AND p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC"; 
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){
             $historial = array();
@@ -103,7 +103,7 @@
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
         WHERE p.fecha_solicitud BETWEEN '$ultimo_mes' AND '$fecha_actual' 
-        AND p.respuesta_pqrs IS NOT NULL";
+        AND p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC";
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){
             $historial = array();
@@ -126,7 +126,7 @@
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
         WHERE p.fecha_solicitud BETWEEN '$ultimo_anio' AND '$fecha_actual' 
-        AND p.respuesta_pqrs IS NOT NULL";
+        AND p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC";
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){
             $historial = array();
@@ -144,7 +144,7 @@
             echo json_encode(array());
         }
     }else if($historial_notificaciones == "todos"){
-        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and p.respuesta_pqrs IS NOT NULL";
+        $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC";
         $resultado = mysqli_query($conn, $sql);
         
         // Verificar si la consulta devuelve resultados
@@ -164,6 +164,6 @@
             echo json_encode(array());
         }
     }else{
-        echo "hyyyy";
+        echo "Error de conexión";
     }
 ?>
