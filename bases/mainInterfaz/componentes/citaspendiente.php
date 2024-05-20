@@ -1,12 +1,13 @@
 <div class="table_div">
     <table>
         <thead>
-            <tr>
+            <tr id="tabla_titulos">
                 <th>Documento de Identidad</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
                 <th>Confirmacion</th>
+                <th>Asistencia</th>
                 <th>Acciones</th>
                 <th>Jornada</th>
             </tr>
@@ -38,11 +39,13 @@
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
                         <td><?= $row['confirmacion'] ?></td>
+                        <td class="asistio">
+                            <a class="button asistio <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Asistió</a>
+                            <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
                         <td class="actions">
-                            <button class="button <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
-                            <button class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="mostrarFormularioRechazo(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
-                            <a class="button <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Confirmar</a>
-                            <button class="button danger <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Cancelar</button>
+                            <button class="button aceptar<?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
+                            <button class="button rechazar <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="mostrarFormularioRechazo(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
+                            
                             
                             <!-- Modal para rechazar la cita -->
                             <div id="modal_<?= $row['id_cita'] ?>" class="modal">
@@ -61,7 +64,7 @@
                                         <!-- Campo para justificar el rechazo -->
                                         <label for="justificacion_<?= $row['id_cita'] ?>">Justificación:</label>
                                         <input type="text" id="justificacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
-                                        <div style="margin-top: 10px;">
+                                        <div class="button_ausente">
                                             <!-- Botón para enviar el formulario -->
                                             <button type="button" onclick="submitForm(<?= $row['id_cita'] ?>)" class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>">Enviar</button>
                                         </div>
