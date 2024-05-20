@@ -152,17 +152,16 @@
 
       <div class="buttons">
         <button class="button-servicio">Cerrar</button>
-        <button type='submit' class="button-servicio" onclick="ve();">Enviar</button>
+        <button type='submit' class="button-servicio" id="btnEnviar">Enviar</button>
       </div>
     </form>
   </div>
   <!-- /* ventana emergente */ -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="cerrar"></span>
-      <p>¡Formulario Enviado con Exito!</p>
-      <i class='bx bxs-certification'></i>
-    </div>
+  <div class="myModal" id="myModal">
+        <div class="confirmacion" id="confirmacion">
+          <p>Enviada con éxito</p>
+          <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
+        </div>
   </div>
  
 </main> 

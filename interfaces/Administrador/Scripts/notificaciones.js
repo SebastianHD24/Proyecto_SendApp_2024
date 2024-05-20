@@ -51,10 +51,16 @@ function ver() {
                             <input type="hidden" name="fecha_respuesta" id="fecha_S">
                             <input type="hidden" name="id_peticion" id="id_pqr1">
                             <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
-                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder">Responder</button>
+                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder" id = "btnEnviar">Responder</button>
                         </form>
                     </td>
-                    </tr>`;
+                    </tr>
+                    <div class="myModal" id="myModal">
+                        <div class="confirmacion" id="confirmacion">
+                            <p>Enviada con éxito</p>
+                            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
+                        </div>
+                    </div>`;
         });
 
         // Agregar el evento de envío del formulario
@@ -84,7 +90,12 @@ ver();
 
 function enviarIdPQR(id) {
     document.getElementById('id_pqr1').value = id;
-}
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
+        setTimeout(function () {
+            window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+        }, 3000);
+    };
 
 function mostrarHistorial(){
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
