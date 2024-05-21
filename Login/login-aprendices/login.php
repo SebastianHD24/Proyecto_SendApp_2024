@@ -31,7 +31,6 @@
                     </li>
                     <li class="login-nav__item">
                         <a id="goToRegister">Registrarse</a>
-                        
                     </li>
                 </ul>
             </div>
@@ -39,7 +38,7 @@
             <label for="login-input-user-l" class="login__label">
                 Documento
             </label>
-            <input id="login-input-user-l" class="login__input" type="text" name="documento_identidad" placeholder="Número de documento" />
+            <input id="login-input-user-l" class="login__input" type="number" name="documento_identidad" placeholder="Número de documento" />
             <label for="login-input-password-l" class="login__label">
                 Contraseña
             </label>
@@ -48,14 +47,12 @@
             <input class="login__submit abajo" value="Iniciar Sesion" type="submit">
             <div class="regresar">
                 <button class="btn_regresar abajo"><a href="../../index.php">Regresar</a></button>
-            </div>  
+            </div>
             </div>
         </form>
         <!-- <div class="olvidaste">
             <a id="goToRegister" class="login__forgot">¿Olvidaste tu contraseña?</a>
         </div> -->
-        
-        
     </div>
 </div>
 
@@ -66,7 +63,6 @@
 
         <!-- CAMBIAR EL METODO POST EN PHP SI ES NECESARIO Y CAMBIAR LA ACCIÓN DEL FORM DEPENDIENDO DE LA NECESIDAD -->
         <?php include '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/registro.php' ?>
-        
         <div class="olvidaste">
             <a id="goToLogin" class="login__forgot">¿Ya tienes una cuenta? Inicia sesión aquí.</a> 
         </div>

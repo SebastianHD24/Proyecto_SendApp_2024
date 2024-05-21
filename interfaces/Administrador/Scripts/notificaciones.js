@@ -37,11 +37,18 @@ function ver() {
 
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(usuario => {
+            let rol;
+            if (usuario.id_rol == 3) {
+                rol = 'Aprendiz';
+            } else if (usuario.id_rol == 2) {
+                rol = 'Funcionario';
+            }
             document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML += `
                 <tr>
                     <td>${usuario.id_peticion}</td>
                     <td>${usuario.nombres}</td>
                     <td>${usuario.apellidos}</td>
+                    <td>${rol}</td>
                     <td>${usuario.documento_identidad}</td>
                     <td>${usuario.fecha_solicitud}</td>
                     <td>${usuario.tipo_pqrs}</td>
@@ -71,6 +78,8 @@ function ver() {
                     if (jsonData.success == 3 || jsonData.success == 4) {
                         ver();
                         location.reload();
+                    } else if (jsonData.success == 5){
+                        alert("Por favor envía una respuesta");
                     }
                 })
                 .catch(error => console.error("Error en la solicitud fetch: " + error));
@@ -119,11 +128,18 @@ function verHistorial(){
 
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(historial => {
+            let rol = "";
+            if (historial.id_rol == 3) {
+                rol = "Aprendiz";
+            } else if (historial.id_rol == 2) {
+                rol = "Funcionario";
+            }
             document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
                 <tr>
                     <td>${historial.id_peticion}</td>
                     <td>${historial.nombres}</td>
                     <td>${historial.apellidos}</td>
+                    <td>${rol}</td>
                     <td>${historial.documento_identidad}</td>
                     <td>${historial.fecha_solicitud}</td>
                     <td>${historial.fecha_respuesta}</td>
@@ -170,11 +186,18 @@ function historialDesde(){
 
                 // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
                 data.forEach(historial => {
+                    let rol = "";
+                    if (historial.id_rol == 3) {
+                        rol = "Aprendiz";
+                    } else if (historial.id_rol == 2) {
+                        rol = "Funcionario";
+                    }
                     document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
                         <tr>
                             <td>${historial.id_peticion}</td>
                             <td>${historial.nombres}</td>
                             <td>${historial.apellidos}</td>
+                            <td>${rol}</td>
                             <td>${historial.documento_identidad}</td>
                             <td>${historial.fecha_solicitud}</td>
                             <td>${historial.fecha_respuesta}</td>
