@@ -16,7 +16,7 @@
      table-layout: fixed;
      border-radius: 10px;
 
- }
+  }
 
  .confirmado th {
      gap: 5rem;
@@ -26,12 +26,12 @@
      text-align: center;
  }
 
- /*+++++++++++++++++++++++++++++++++++++++++++++++*/
- .respondidos {
-     background-color: #00234d;
-     margin: 10px;
+  /*+++++++++++++++++++++++++++++++++++++++++++++++*/
+  .respondidos {
+      background-color: #00234d;
+      margin: 10px;
 
- }
+  }
 
  /* .confirmado {
      width: 70vw;
@@ -39,15 +39,15 @@
  } */
 
 
- .encabezado {
-     height: 5rem;
- }
+  .encabezado {
+      height: 5rem;
+  }
 
- .encabezado2 {
-     color: #FFFFFF;
-     width: 1200px;
+  .encabezado2 {
+      color: #FFFFFF;
+      width: 1200px;
 
- }
+  }
 
  .respuestas {
      background-color: #FFFFFF;
@@ -64,12 +64,12 @@
 
 
 
- /* Selector */
+  /* Selector */
 
- .formulario {
-     text-align: center;
-     width: 100%;
- }
+  .formulario {
+      text-align: center;
+      width: 100%;
+  }
 
  .formulario select {
      background-color: #00234d;
@@ -96,7 +96,7 @@
     border-radius: 5px;
 }
 
-/* .formulario select option{
+  /* .formulario select option{
     background: #00234d;
     color: #FFFFFF;
     cursor: pointer;
@@ -130,19 +130,21 @@
     color: #FFFFFF;
 }
 
- /* RESPONSIVE */
+  /* RESPONSIVE */
 
- @media only screen and (max-width: 767px) {
-    .contenedor-popup {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        overflow-x: auto;
-    }
-    .buscar{
-        height: 3vh;
-    }
-   /* .formulario {
+  @media only screen and (max-width: 767px) {
+      .contenedor-popup {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          overflow-x: auto;
+      }
+
+      .buscar {
+          height: 3vh;
+      }
+
+      /* .formulario {
         text-align: center;
         width: 100%;
 
@@ -159,17 +161,17 @@
         
 
     } */
-}
+  }
 
- @media only screen and (min-width: 768px) and (max-width: 1023px) {
-     .contenedor-popup {
-         display: flex;
-         width: 50%;
-         overflow-x: auto;
-     }
- }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .contenedor-popup {
+          display: flex;
+          width: 50%;
+          overflow-x: auto;
+      }
+  }
 
- /* @media only screen and (min-width: 1024px){
+  /* @media only screen and (min-width: 1024px){
     .contenedor-popup{
         display: flex;
         width: 100%;

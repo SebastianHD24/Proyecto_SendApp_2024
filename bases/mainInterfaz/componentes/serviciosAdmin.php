@@ -3,7 +3,7 @@
 
 <!-----------------------Parrafo descriptivo del inicio de servicios-->
 <article class="articuloContenedorDeParrafos">
-    <p>Bienvenido a la sección de servicios, aquí podrás cambiar los administradores de cada área,cambiar su estado de <b>Activo o Inactivo</b> y consultar sus datos personal</p>
+    <p>Bienvenido a la sección de servicios, aquí podrás cambiar los administradores de cada área, consultar sus datos personal y cambiar el estado del servicio de <b>Activo o Inactivo</b></p>
 </article>
 
 <!-- Tabla con la info sobre los servicios y acciones que se pueden realizar con ellos -->
@@ -82,7 +82,7 @@
                                     }
                                 ?>
                         </p>
-                    <button id="cambiarEstado" onclick="actualizarEstado(<?= $servicios['id_servicio'] ?>);" class="Boton__acciones">Cambiar estado de usuario</button>
+                    <button id="cambiarEstado" onclick="actualizarEstado(<?= $servicios['id_servicio'] ?>);" class="Boton__acciones">Cambiar estado del servicio</button>
                 </article>
 
                 <!-- Articúlo 4 con el contenido para asignas a un funcionario -->
@@ -137,10 +137,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                 </tbody>
             </table>
             <h4 class="mensajeAdmin">Este servicio no cuenta con un admin</h4>
-            <button onclick="" class="cerrar">Cerrar</button>
+            <button class="cerrar">Cerrar</button>
             </div>
         </div>
 

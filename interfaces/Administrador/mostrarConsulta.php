@@ -5,7 +5,7 @@
         die("Conexión fallida: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and p.respuesta_pqrs IS NULL";
+    $sql = "SELECT u.nombres, u.apellidos, u.documento_identidad, u.id_rol, p.id_peticion, p.tipo_pqrs, p.descripcion, p.respuesta_pqrs, p.fecha_solicitud, p.fecha_respuesta FROM pqr p INNER JOIN usuarios u ON p.documento_us = u.documento_identidad and p.respuesta_pqrs IS NULL";
     $resultado = mysqli_query($conn, $sql);
     
     // Verificar si la consulta devuelve resultados

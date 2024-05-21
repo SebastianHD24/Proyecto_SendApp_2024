@@ -29,8 +29,6 @@
                 <img src="<?php echo $data['imagen']; ?>" alt="">
             </div>
         </div>
-
-        <button class="button">Reservar cita</button>
     </div>
     <div class="Contenedor">
         <div class="actividades">

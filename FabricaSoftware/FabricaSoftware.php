@@ -1,5 +1,4 @@
 <?php include '../bases/estructura-base.php' ?> <!--Llamo el archivo donde se encuentra la estructura que quiero heredar-->
-
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/FabricaSoftware/fabrica.css"> <!-- Estilos de la fabrica -->
@@ -18,6 +17,7 @@
                         // Decodificar el JSON
                         $data = json_decode($json_data, true);
                     ?>
+                    <a href="" target="_blank" style = "color:white; font-size: 2px;">a</a>
                     <h1 class="titulo"><?php echo $data['titulo']; ?></h1>
                     <h2 class="subtitulos"><?php echo $data['subtitulo']; ?></h2>
                     <p class="parrafo"><?php echo $data['parrafo']; ?></p>
@@ -28,7 +28,6 @@
                         <img src="<?php echo $data['imagen']; ?>" alt="Imagen lugar Servicios Tecnologicos">
                     </div>
             </div>
-            <button class="button"><?php echo $data['boton']; ?></button>
         </div>
 
         <?php foreach ($data['tarjetas'] as $tarjeta) { ?>
