@@ -47,7 +47,7 @@
                 echo '</div>';
                 echo '<div class="contenido_tarjeta">';
                 echo '<h2>' . $servicio['titulo'] . '</h2>';
-                echo '<p>' . $servicio['contenido'] . '</p>';
+                echo '<p class="p">' . $servicio['contenido'] . '</p>';
                 echo '</div>';
                 echo '</div>';
             }

@@ -44,7 +44,7 @@
                     </div>
                     <div class="contenido_tarjeta">
                         <h2><?php echo $servicio['titulo']; ?></h2>
-                        <p><?php echo $servicio['contenido']; ?></p>
+                        <p class="p"><?php echo $servicio['contenido']; ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>

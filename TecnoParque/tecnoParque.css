@@ -94,6 +94,7 @@ body{
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+    text-align: justify;
     font-size: 22px;
 }
 .p{
