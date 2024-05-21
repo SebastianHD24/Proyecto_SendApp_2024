@@ -24,7 +24,6 @@ $data = json_decode($json_data, true);
                         <img src="<?php echo $data['imagen']; ?>" alt="Ima">
                     </div>
             </div>
-                <button class="button"><?php echo $data['boton']; ?></button>
         </div>
         <div class="Contenedor">
             <h2 class="sub"><?php echo $data['contenido_adicional']['titulo']; ?></h2>

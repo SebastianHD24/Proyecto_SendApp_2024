@@ -23,7 +23,6 @@ $data = json_decode($json_data, true);
                             <img src="<?php echo $data['imagen']; ?>" alt="Imagenes lugar Servicios Tecnologicos">
                         </div>
                 </div>
-                <button class="button"><?php echo $data['boton']; ?></button>
             </div>
         <?php foreach ($data['tarjetas'] as $tarjeta): ?>
             <div class="tarjeta">
