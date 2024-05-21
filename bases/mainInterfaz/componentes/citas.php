@@ -37,7 +37,7 @@ if (isset($_SESSION['documento_identidad'])) {
                 <div class="notifications">
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
-                        <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
+                        
                     </figure>
                     <span></span>
                     <article>
@@ -47,10 +47,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     <span></span>
                     <article>
                         <b>Día: </b>
-                        <p>
-                            <?= $row['fecha'] ?>
-                        </p>
-                        <p>Día:<?= empty($row['fecha']) ? "Aún no te han asignado el dia" : $row['fecha'] ?>
+                        <p><?= empty($row['fecha']) ? "Aún no te han asignado el dia" : $row['fecha'] ?>
                     </article>
                     <span></span>
                     <article>
