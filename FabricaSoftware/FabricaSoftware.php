@@ -17,7 +17,7 @@
                         // Decodificar el JSON
                         $data = json_decode($json_data, true);
                     ?>
-                    <a href="https://www.youtube.com/watch?v=ajJNI2Yz3UY" target="_blank" style = "color:white; font-size: 2px;">a</a>
+                    <a href="" target="_blank" style = "color:white; font-size: 2px;">a</a>
                     <h1 class="titulo"><?php echo $data['titulo']; ?></h1>
                     <h2 class="subtitulos"><?php echo $data['subtitulo']; ?></h2>
                     <p class="parrafo"><?php echo $data['parrafo']; ?></p>
