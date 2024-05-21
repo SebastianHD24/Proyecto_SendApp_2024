@@ -1,3 +1,5 @@
+        <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/aceptarcitas.css">
+        
         <?php
         
         // Obtener el documento del usuario
@@ -59,10 +61,12 @@
                     <td><input type="time" name="hora" required></td>
                 </tr>
             </table>
-
+            <div class="button_citas">
             <button type="submit">Aceptar</button>
 
             <a href="?p=citaspendiente" class="cancelar-button"> cancelar</a>
+
+            </div>
         </form>
 
 
@@ -81,7 +85,7 @@
 
         ?>
         <?php endif ?>
-    </main>
+        
 </div>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/mandar.js"></script>
 

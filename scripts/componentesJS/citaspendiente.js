@@ -13,6 +13,7 @@ function closeModal(id) {
         console.error("El modal con ID " + id + " no fue encontrado.");
     }
 }
+
 // Función para desbloquear los botones Confirmar y Cancelar al aceptar la cita
 function unlockButtons(id) {
     document.querySelector(`#row_${id} .button:not(.disabled)`).classList.remove('disabled');

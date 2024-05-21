@@ -3,21 +3,28 @@
     width: 90%;
     overflow-x: auto;
 }   */
-  .titulos {
-      color: #00234d;
-      font-weight: 600;
+
+.titulos{
+    color: #00234d;
+    font-weight: 600;
+}
+ /*Estilos para la tabla de responder*/
+ .sin-responder {
+     background-color: #00234d;
+     margin: 10px;
+     border-collapse: collapse;
+     table-layout: fixed;
+     border-radius: 10px;
+
   }
 
-  /*Estilos para la tabla de responder*/
-  .sin-responder {
-      background-color: #00234d;
-
-  }
-
-  th {
-      gap: 5rem;
-      width: 20%;
-  }
+ .confirmado th {
+     gap: 5rem;
+     width: 20%;
+     word-wrap: break-word;
+     padding: 10px;
+     text-align: center;
+ }
 
   /*+++++++++++++++++++++++++++++++++++++++++++++++*/
   .respondidos {
@@ -26,10 +33,10 @@
 
   }
 
-  .confirmado {
-      width: 70vw;
+ /* .confirmado {
+     width: 70vw;
 
-  }
+ } */
 
 
   .encabezado {
@@ -42,24 +49,20 @@
 
   }
 
-  .respuestas {
-      background-color: #FFFFFF;
-      color: #000000;
-      text-align: center;
-  }
+ .respuestas {
+     background-color: #FFFFFF;
+     color: #000000;
+     text-align: center;
+ }
+ .logo {
+     width: 10%;
+     display: block;
+     margin-right: auto;
+     margin-left: auto; 
+     border-radius: 5px;
+ }
 
-  .logo {
-      width: 10%;
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-  }
 
-  .salir {
-      margin-top: 1rem;
-      text-decoration: none;
-      color: #000000;
-  }
 
   /* Selector */
 
@@ -68,32 +71,30 @@
       width: 100%;
   }
 
-  .formulario select {
-      background-color: #00234d;
-      color: #FFFFFF;
-      font-size: .8rem;
-      font-weight: bold;
-      width: 50%;
-      cursor: pointer;
-  }
-
-  /*Boton buscar por fecha */
-  .buscar {
-      background-color: #39a900;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
-      height: 5vh;
-
-      cursor: pointer;
-  }
-
-  .buscar:hover {
-      background-color: #00234d;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
-  }
+ .formulario select {
+     background-color: #00234d;
+     color: #FFFFFF;
+     font-size: .8rem;
+     font-weight: bold;
+     width: 50%;
+     cursor: pointer;
+}
+/*Boton buscar por fecha */
+.buscar{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
+}
+.buscar:hover{
+    background-color: #00234d;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
 
   /* .formulario select option{
     background: #00234d;
@@ -101,6 +102,33 @@
     cursor: pointer;
     
  } */
+ /*Boton ver historial y salir*/
+.verHistorial, .salirHistorial{
+    background-color: #39a900;
+    color: white;
+    
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+.verHistorial a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.verHistorial:hover{
+    background-color: #00234d;
+
+}
+.salirHistorial:hover{
+    background-color: #00234d;
+}
+.salirHistorial a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
   /* RESPONSIVE */
 
