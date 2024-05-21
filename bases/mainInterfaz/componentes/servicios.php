@@ -169,7 +169,7 @@
 <!-- script para mostrar el formulario de la cita cuando se le da click a la bolita  -->
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/formcita.js'></script>
 <!-- este script no se para que sirve mejor no lo muevo by juanes -->
-<script src="../../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/script.js"></script>
+<script src="../../../../Proyecto_SendApp_2024/componentes/script.js"></script>
 <!-- este script hace que el nombre del area que tengo por el id lo meustre en el input  -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreArea.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreFuncionario.js"></script>
