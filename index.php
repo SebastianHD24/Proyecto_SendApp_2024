@@ -34,7 +34,10 @@
                     Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formación, sus principales áreas y servicios.
                 </p>
             </div>
-            <p style="color: red;"> Espacio para el nuevo slider </p>
+
+            <!-- ESTE ES DONDE ESTABA EL ESPACIO PARA EL NUEVO SLIDER QUE VA A HACER KEVIN -->
+
+            
             <!--Contenddor de Parrafos-->
             <div class="content__parrafos-links">
                 <div class="p__container">
