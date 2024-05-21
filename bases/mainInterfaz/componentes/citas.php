@@ -62,9 +62,9 @@ if (isset($_SESSION['documento_identidad'])) {
                     <span></span>
                     <article>
                         <b>Estado: </b>
-                        <p class="tipo__estado">
-                            <?= $row['estado_cita'] ?>
-                        </p>
+                            <b class="tipo__estado"> 
+                                <?= $row['estado_cita'] ?>
+                            </b>
                     </article>
                     <span></span>
                     <article>
@@ -117,11 +117,17 @@ if (isset($_SESSION['documento_identidad'])) {
     console.log(tipoDeEstadoCita);
 
     tipoDeEstadoCita.forEach(datoActual  => {
-        if(datoActual.textContent = 'pendiente'){
-            datoActual.classList.add('estado_pendiente');
-        }else if(datoActual.textContent = ''){
-
-        }
+        if(datoActual.textContent = 'pendiente')
+            {
+                datoActual.classList.add('estado_pendiente');
+            }
+            else if(datoActual.textContent = 'rechazado')
+            {
+                datoActual.classList.add('estado_rechazado');
+            }else
+            {
+                datoActual.classList.add('.estado_aceptado')
+            }
     });
 
 </script>

@@ -84,8 +84,8 @@
 
 /*Clase para añadir en JavaScript cuando el estado de la cita sea pendiente*/
 .estado_pendiente {
-    color: #FFCE40 #FFCE40 #FFCE40 #FFCE40 ;
-    
+    color: #FFCE40;
+    font-weight: 600;
 }
 
 /*Responsive*/
