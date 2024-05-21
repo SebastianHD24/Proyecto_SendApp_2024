@@ -266,11 +266,17 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <article>
-                        <p>Motivo: <?= $row['descripcion'] ?></p>
+                        <b>Jornada: </b>
+                        <p>
+                            <?= $row['jornada'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
-                        <p>jornada: <?= $row['jornada'] ?></p>
+                        <b>Funcionario: </b>
+                        <p>
+                            <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>

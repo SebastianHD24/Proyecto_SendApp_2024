@@ -1,5 +1,5 @@
 <form action="../backend/agregarpqrs.php"  method="post" id="formulario">
-    <section id="mainContent">
+    <section id="mainContent" class="contenido">
         <div class="titulo">
             <h1>Solicitar PQRS</h1>
         </div>
@@ -8,7 +8,7 @@
         <div class="type_PQR">
             <label for="opciones">Tipo de PQR:</label>
             <br>
-            <select name="tipo_solicitud" id="opciones">
+            <select name="tipo_solicitud" id="opciones" class="opcionespqr">
                 <option value="peticion">Peticion</option>
                 <option value="queja">Queja</option>
                 <option value="reclamo">Reclamo</option>
@@ -19,7 +19,7 @@
         <div class="description">
             <label for="description-label">Descripción:</label>
             <br>
-            <textarea name="descripcion_pqrs" id="text" cols="30" rows="10"></textarea>
+            <textarea name="descripcion_pqrs" id="text" cols="30" rows="10" class="descripcion-pqr"></textarea>
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
         <div class="button">
