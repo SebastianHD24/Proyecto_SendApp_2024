@@ -50,7 +50,7 @@
             </figure>
                 <!--Contenedor de texto sobre la petición-->
                 <article class="article__text--1">
-                    <p>Atención a su solicitud de PQR.</p>
+                    <p>Atención a su solicitud de QPR.</p>
                 </article>
             <span></span>
                 <button type="button" class="show__details--button" id="showDetailsButton">
