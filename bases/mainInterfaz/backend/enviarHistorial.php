@@ -56,7 +56,7 @@
         FROM pqr p 
         INNER JOIN usuarios u 
         ON p.documento_us = u.documento_identidad 
-        WHERE p.fecha_solicitud BETWEEN '$fecha_ayer' AND '$fecha_actual' 
+        WHERE p.fecha_solicitud = '$fecha_ayer' 
         AND p.respuesta_pqrs IS NOT NULL ORDER BY p.id_peticion DESC"; 
         $resultado = mysqli_query($conn, $sql);
         if ($resultado->num_rows > 0){

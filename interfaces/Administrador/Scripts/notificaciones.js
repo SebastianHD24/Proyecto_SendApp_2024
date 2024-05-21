@@ -78,6 +78,8 @@ function ver() {
                     if (jsonData.success == 3 || jsonData.success == 4) {
                         ver();
                         location.reload();
+                    } else if (jsonData.success == 5){
+                        alert("Por favor envía una respuesta");
                     }
                 })
                 .catch(error => console.error("Error en la solicitud fetch: " + error));
