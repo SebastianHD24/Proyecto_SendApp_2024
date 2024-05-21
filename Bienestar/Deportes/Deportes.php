@@ -32,7 +32,6 @@
                 <img src="<?php echo $data['imagen']; ?>" alt="">
             </div>
         </div>
-        <button class="button">Reservar cita</button>
     </div>
     <div class="Contenedor">
         <h2 class="sub">Servicios Ofrecidos</h2>

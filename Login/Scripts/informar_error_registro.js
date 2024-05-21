@@ -60,9 +60,6 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
                 } else if (data.success === 5) {
                     const error = document.getElementById('mensaje_errord');
                     error.textContent = "Documento ya registrado.";
-
-                    const error2 = document.getElementById('mensaje_errore');
-                    error2.textContent = "El usuario ya está registrado. Por favor, contacte al administrador para activar su cuenta.";
                 } else {
                     messageDiv.className = 'message_error';
                     messageDiv.innerText = 'Error desconocido. Inténtelo de nuevo.';

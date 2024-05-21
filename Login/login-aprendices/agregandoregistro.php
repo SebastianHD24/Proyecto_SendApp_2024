@@ -19,6 +19,12 @@ $ficha = $_POST['ficha'];
 $tipo_documento = $_POST['tipo_documento'];
 $estado = 1;
 
+//validación para no mandar datos vacíos en caso de modificar el navegador y borrar el required
+if ($documento_identidad == null || $contrasena == null || $nombres == null || $apellidos == null || $correo == null || $celular == null || $programa == null || $ficha == null){
+    echo json_encode(array('success' => 7));
+    exit();
+}
+
 // Verificar si hay una sesión iniciada
 if (isset($_SESSION['documento_identidad'])) {
     $id_rol = $_POST['id_rol'];
@@ -39,7 +45,7 @@ $resultDocumento = mysqli_query($conn, $queryDocumento);
 $passwordHash = password_hash($contrasena, PASSWORD_BCRYPT);
 
 // Requisitos para la contraseña    
-const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*_-¡?¿·çºª.:,;=|+#\/])(?=.{6,})/';
+const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_\-¡?¿·çºª.:,;=|+#\\/])(?=.{6,})/';
 
 if (mysqli_num_rows($resultDocumento) > 0) {
     echo json_encode(array('success' => 5));

@@ -19,59 +19,60 @@
                 <?php endif?>
             </li>
         </ul>
-    </div> 
+    </div>
+    <p>Los campos con el simbolo * son obligatorios</p> 
     <label for="tipo-documento" class="login__label">
-        Tipo de Documento
+        Tipo de Documento *
     </label>
-    <select id="tipo-documento" class="login__input" name="tipo_documento">
+    <select id="tipo-documento" class="login__input" name="tipo_documento" required>
         <option value="CC">Cédula de Ciudadanía</option>
         <option value="TI">Tarjeta de Identidad</option>
         <option value="DE">Documento Extranjero</option>
     </select>
     <p id="mensaje_errord"></p>
     <label for="login-input-user" class="login__label">
-        Documento de identidad
+        Numero de documento *
     </label>
-    <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad" placeholder="Número de documento"/>
+    <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad" placeholder="Número de documento" required/>
 
     <p id="mensaje_errorc"></p>
     <label for="login-input-password" class="login__label">
-        Contraseña
+        Contraseña *
     </label>
-    <input id="login-input-password-p" class="login__input" type="text" name="contrasena" placeholder="Contraseña" />
+    <input id="login-input-password-p" class="login__input" type="text" name="contrasena" placeholder="Contraseña" required/>
     
     <label for="login-input-user" class="login__label">
-        Nombres
+        Nombres *
     </label>
-    <input id="login-input-user-n" class="login__input" type="text" name="nombres" placeholder="Nombres" />
+    <input id="login-input-user-n" class="login__input" type="text" name="nombres" placeholder="Nombres" required/>
 
     <label for="login-input-user" class="login__label">
-        Apellidos
+        Apellidos *
     </label>
-    <input id="login-input-user-a" class="login__input" type="text" name="apellidos" placeholder="Apellidos" />
+    <input id="login-input-user-a" class="login__input" type="text" name="apellidos" placeholder="Apellidos" required/>
 
     <label for="login-input-user" class="login__label">
-        Correo
+        Correo *
     </label>
-    <input id="login-input-user-c" class="login__input" type="email" name="correo" placeholder="Correo electronico" />
+    <input id="login-input-user-c" class="login__input" type="email" name="correo" placeholder="Correo electronico" required/>
 
     <label for="login-input-user" class="login__label">
-        Celular
+        Celular *
     </label>
-    <input id="login-input-user-ce" class="login__input" type="text" name="celular" placeholder="Número celular/telefono"/>
+    <input id="login-input-user-ce" class="login__input" type="text" name="celular" placeholder="Número celular/telefono" required/>
 
     <label for="login-input-user" class="login__label">
-        Programa opcional
+        Programa*
     </label>
-    <input id="login-input-user-p" class="login__input" type="text" name="programa" placeholder="Programa"/>
+    <input id="login-input-user-p" class="login__input" type="text" name="programa" placeholder="Programa" required/>
 
     <label for="login-input-user" class="login__label">
-        Ficha opcional
+        Ficha*
     </label>
-    <input id="login-input-user-f" class="login__input" type="number" name="ficha" placeholder="Número de ficha"/>
+    <input id="login-input-user-f" class="login__input" type="number" name="ficha" placeholder="Número de ficha" required/>
 
     <?php if (isset($_SESSION['documento_identidad'])): ?>
-        <label for="id_rol">Rol:</label>
+        <label for="id_rol">Rol *</label>
         <select name="id_rol" id="id_rol">
             <?php
             // Realizar la consulta para obtener solo los roles de aprendiz y funcionario

@@ -24,6 +24,9 @@ let mensajeAdmin = document.querySelector('.mensajeAdmin');
 // nombre del servicio
 let nomServicio = document.getElementById('tituloServicio');
 
+// contenedor de la tabla con la info del admin
+let contenedor = document.querySelector('.contenedor_informacion');
+
 
 //EVENTOS Y FUNCIONES
 
@@ -68,7 +71,7 @@ function actualizarEstado(idServicio) {
         return response.json();
     })
     .then(data => {
-        if (data.cambio === 0) {
+        if (data.cambio === 1) {
             ventanaConfirmacion.classList.add('oculto');
             alerta.style.display = 'block';
             alerta.style.zIndex = '999';
@@ -121,7 +124,7 @@ function actualizarAdmin(idServicio, posicion) {
                 case 1:
                     let mensajeCambio = document.querySelectorAll('.mensajeCambio')[posicion];
                     mensajeCambio.classList.remove('oculto');
-                    mensajeCambio.textContent = 'No se enviaron datos nuevos para actualizar';
+                    mensajeCambio.textContent = 'No seleccionó ningún adminitrador';
                     contenedorTabla.classList.remove('oculto');
                     ventanaConfirmacion.classList.add('oculto');
                     break;
@@ -147,6 +150,7 @@ botonCerrar.addEventListener('click', function () {
 
 // Bloque de codigo que muestra la info del admin de un area
 function consultar(idAdmin, servicio) {
+    nomServicio.textContent = "Adminitrador del servicio: " + servicio;
     fetch('../../bases/mainInterfaz/backend/mostrarAdmin.php', {
         method: 'POST',
         headers: {
@@ -169,7 +173,6 @@ function consultar(idAdmin, servicio) {
         // Verificación si existe o no un Admin
         if (adminData.adminNotFound) {
             tablaAdmin.classList.add('oculto');
-            nomServicio.classList.add('oculto');
         } else {
             // Se ordenan los datos del admin para mostrarlos ordenadamente
             mensajeAdmin.classList.add('oculto');
@@ -193,7 +196,6 @@ function consultar(idAdmin, servicio) {
             tr.appendChild(tdCelular);
 
             tablaAdmin.querySelector('tbody').appendChild(tr);
-            nomServicio.textContent = "Adminitrador del servicio: " + servicio;
         }
     })
     .catch(error => {

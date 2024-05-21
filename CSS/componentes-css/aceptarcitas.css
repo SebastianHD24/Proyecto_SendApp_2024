@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root{
+  --verde: #39a900;
+  --blanco: #fff;
+  --negro: #070001;
+  --azul: #00324D;
+  --azul-claro: #82DEF0;
+  --gris-oscuro: #cfcfcf;
+  --gris-claro: #ededed;
+  --fuente-principal: "Work Sans", sans-serif;
+}
+
+form{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+form th {
+    font-family: var(--fuente-principal);
+    font-size: 20px;
+    color:var(--verde);
+}
+
+form td{
+    font-family: var(--fuente-principal);
+    font-weight: 800;
+}
+
+form tr{
+    margin: 0px 0px 0px 100px;
+    width: 100%;
+}
+
+
+input[type="text"],
+        input[type="color"],
+        input[type="hidden"] {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            background-color: var(--gris-oscuro);
+            color: var(--negro);
+            border-radius: 20px ;
+            border: 1px solid var(--azul);
+            font-style: none;
+            text-decoration: none;
+
+        }
+form input[type="date"],
+    input[type="time"]{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        background-color: var(--gris-claro);
+        color: var(--negro);
+        border-radius: 20px ;
+        border: 1px solid var(--azul);
+        font-style: none;
+        text-decoration: none;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+input[type="date"]:focus,
+    input[type="time"]:focus {
+        background-color: #a6cfb8;
+        border-color: #80bfff; 
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+        outline: none;
+    }
+
+/* -------------------------------- button---------------------------------- */
+
+.button_citas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    gap: 10px;
+}
+
+.button_citas button{
+    width: 180px;
+    background-color: #39a900;
+    text-decoration: none;
+    color:var(--blanco) ;    
+    height: 26px;
+    outline: none;
+    font-family: var(--fuente-principal);
+    border-radius: 10px;
+    border: 1px solid var(--azul);
+}
+
+.button_citas a{
+    width: 180px;
+    height: 26px;
+    color: var(--blanco);
+    background-color: #39a900;
+    text-align: center;
+    font-family: var(--fuente-principal);
+    border-radius: 10px;
+    border: 1px solid var(--azul);
+}
+
+.button_citas button:hover{
+    background-color: var(--azul);
+    color:var(--verde);
+    cursor: pointer;
+}
+
+.button_citas a:hover{
+    background-color: var(--azul);
+    color:var(--verde);
+    cursor: pointer;
+}

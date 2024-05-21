@@ -37,11 +37,18 @@ function ver() {
 
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(usuario => {
+            let rol;
+            if (usuario.id_rol == 3) {
+                rol = 'Aprendiz';
+            } else if (usuario.id_rol == 2) {
+                rol = 'Funcionario';
+            }
             document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML += `
                 <tr>
                     <td>${usuario.id_peticion}</td>
                     <td>${usuario.nombres}</td>
                     <td>${usuario.apellidos}</td>
+                    <td>${rol}</td>
                     <td>${usuario.documento_identidad}</td>
                     <td>${usuario.fecha_solicitud}</td>
                     <td>${usuario.tipo_pqrs}</td>
@@ -50,11 +57,17 @@ function ver() {
                         <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
                             <input type="hidden" name="fecha_respuesta" id="fecha_S">
                             <input type="hidden" name="id_peticion" id="id_pqr1">
-                            <textarea type="text" name="respuesta_pqrs" class="Responder"></textarea>
-                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder">Responder</button>
+                            <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
+                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder" id = "btnEnviar">Responder</button>
                         </form>
                     </td>
-                    </tr>`;
+                    </tr>
+                    <div class="myModal" id="myModal">
+                        <div class="confirmacion" id="confirmacion">
+                            <p>Enviada con éxito</p>
+                            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
+                        </div>
+                    </div>`;
         });
 
         // Agregar el evento de envío del formulario
@@ -71,6 +84,8 @@ function ver() {
                     if (jsonData.success == 3 || jsonData.success == 4) {
                         ver();
                         location.reload();
+                    } else if (jsonData.success == 5){
+                        alert("Por favor envía una respuesta");
                     }
                 })
                 .catch(error => console.error("Error en la solicitud fetch: " + error));
@@ -84,7 +99,12 @@ ver();
 
 function enviarIdPQR(id) {
     document.getElementById('id_pqr1').value = id;
-}
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
+        setTimeout(function () {
+            window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+        }, 3000);
+    };
 
 function mostrarHistorial(){
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
@@ -119,11 +139,18 @@ function verHistorial(){
 
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(historial => {
+            let rol = "";
+            if (historial.id_rol == 3) {
+                rol = "Aprendiz";
+            } else if (historial.id_rol == 2) {
+                rol = "Funcionario";
+            }
             document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
                 <tr>
                     <td>${historial.id_peticion}</td>
                     <td>${historial.nombres}</td>
                     <td>${historial.apellidos}</td>
+                    <td>${rol}</td>
                     <td>${historial.documento_identidad}</td>
                     <td>${historial.fecha_solicitud}</td>
                     <td>${historial.fecha_respuesta}</td>
@@ -170,11 +197,18 @@ function historialDesde(){
 
                 // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
                 data.forEach(historial => {
+                    let rol = "";
+                    if (historial.id_rol == 3) {
+                        rol = "Aprendiz";
+                    } else if (historial.id_rol == 2) {
+                        rol = "Funcionario";
+                    }
                     document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
                         <tr>
                             <td>${historial.id_peticion}</td>
                             <td>${historial.nombres}</td>
                             <td>${historial.apellidos}</td>
+                            <td>${rol}</td>
                             <td>${historial.documento_identidad}</td>
                             <td>${historial.fecha_solicitud}</td>
                             <td>${historial.fecha_respuesta}</td>

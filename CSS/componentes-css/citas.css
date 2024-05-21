@@ -1,3 +1,4 @@
+/*Estilos de contenedor princial con el grid*/
 .notifications-panel{
     display: grid;
     place-content: center;
@@ -9,28 +10,75 @@
     gap: 32px;
 }
 
+/*Contenedor hijo con la información extradida de la Bd*/
 .notifications{
-    width: 250px;
+    width: 255px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     padding: 12px;
-    border: 1px solid #00324d;
+    border: 2px solid #00324d;
     border-radius: 18px;
 }
 
+.notifications article{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 5px;
+}
+
+/*Estilos especificos solo para centrar el contenido del motivo de las citas*/
+.notifications article:last-child{
+    display: flex;
+    flex-direction: column;
+    min-height  : 80px;
+    overflow-x: auto;
+} 
 .notifications figure{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*Imagen*/
 .notifications figure img{
     width: 35px;
 }
 
+/*Estilos de los datos y titúlos dentro del artículo*/
+.notifications article{
+    display: flex;
+    width: 100%;
+    height: 100;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/*Estilos de las etiquetas B dentro del artículo*/
+.notifications article b{
+    font-size: 1rem;
+}
+
+/*Estilo especificos del motivo de las citas*/
+.notifications article:last-child{
+    min-height: 162px;
+    height: 100%;
+    overflow-x: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: #dbdbdbfd;
+    border-radius: 9px;
+    padding: 5px;
+    font-weight: lighter;
+}
+
+/*Barras verdes separadoras del contenido*/
 .notifications span{
     align-self: center;
     width: 100%;
@@ -39,12 +87,37 @@
     /* opacity: .5; */
 }
 
+/*Texto*/
 .notifications article p{
-    font-weight: 500;
+    font-weight: 300;
 }
+
+/*Clase para añadir en JavaScript cuando el estado de la cita sea aprobado*/
+.estado_aceptado{
+    color: #39a900;
+}
+
+/*Clase para añadir en JavaScript cuando el estado de la cita sea rechazado*/
+.estado_rechazado{
+    color: #671C34;
+}
+
+/*Clase para añadir en JavaScript cuando el estado de la cita sea pendiente*/
+.estado_pendiente {
+    color: #FFCE40;
+    font-weight: 600;
+}
+
+/*Responsive*/
 
 /*Laptops FHD*/
 @media screen and (min-width:1024px){
+    .notifications-panel{
+        grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+        gap: 70px;
+    }
+
+
     .notifications p{
         font-size: 1.2rem;
     }
@@ -52,7 +125,15 @@
 
 /*2k Screens*/
 @media screen and (min-width:1440px){
+    .notifications{
+    width: 265px;
+    }
+
     .notifications p{
+        font-size: 1.4rem;
+    }
+
+    .notifications article b{
         font-size: 1.4rem;
     }
 }
@@ -74,5 +155,9 @@
 
     .notifications figure img{
         width: 75px;
+    }
+
+    .notifications article b{
+        font-size: 2rem;
     }
 }

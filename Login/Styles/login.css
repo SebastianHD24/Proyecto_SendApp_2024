@@ -23,13 +23,23 @@ body {
 	letter-spacing: 1px;
     padding: 2rem;
 }
+header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
 
+header img{
+	width: 12.5rem;
+	height: auto;
+}
 
 .login-container {
 	display: block;
 	position: relative;
 	z-index: 0;
-	margin: 4rem auto 0;
+	margin: .5rem auto 0;
     padding: 5rem 4rem 0 4rem;
     border-radius: 2rem;
 	/* TAMAÑO DEL LOGIN */
@@ -217,7 +227,7 @@ body {
     justify-content: space-between;
     padding-bottom: 1rem;
 }
-#goToLogin + #goToRegister{
+#goToLogin{
 	cursor: pointer;
 }
 
