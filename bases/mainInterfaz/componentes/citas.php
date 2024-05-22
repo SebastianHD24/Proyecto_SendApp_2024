@@ -268,7 +268,12 @@ if (isset($_SESSION['documento_identidad'])) {
                     </figure>
                     <span></span>
                     <article>
-                        <p>Área: <?= $row['nombre_servicio'] ?></p>
+                        <b>
+                            Área: 
+                        </b>
+                        <p>
+                            <?= $row['nombre_servicio'] ?>
+                        </p>
                     </article>
                     <span></span>
                     <article>
