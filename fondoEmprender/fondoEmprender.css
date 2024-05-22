@@ -80,7 +80,6 @@ body{
 .subtitulos{
     font-size: 18px;
     font-family: var(--fuente-principal);
-    text-align: left;
     margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
@@ -247,22 +246,24 @@ hr{
 }
  /* Estilos para las esferas */
  .contenedor-esferas {
-    margin: 3rem 0 3rem 0;
-    display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    justify-items: center;
 }
 
 .esfera {
-    flex: 0 1 calc(30% - 20px); 
-    max-width: calc(100% - 20px);
-    width: 100%;
-    margin: 20px;
-    border-radius: 50%;
+    width: 80%;
+    border-radius: 20px;
     color:#00324D;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 35px;
-    background:linear-gradient(#cfcfcf,#ededed)
+    box-shadow: 3px 6px 9px 3px rgba(7, 7, 7, 0.4);
+    margin-bottom: 50px;
 }
 
 
@@ -460,5 +461,11 @@ a:hover {
 
     .tarjeta { 
         flex-direction: column;
+    }
+    .contenedor-esferas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

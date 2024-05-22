@@ -1,9 +1,9 @@
 const ingreso = document.getElementById('ingreso');
 const interfaz_u = document.getElementById('interfaz-u');
 const cerrar = document.getElementById('cerrar-sesion');
-const ingreso_reponsive = document.getElementById('ingreso-responsive');
-const interfaz_u_responsive = document.getElementById('interfaz-u-responsive');
-const cerrar_responsive = document.getElementById('cerrar-sesion-responsive');
+const ingreso_reponsive = document.querySelectorAll('#ingreso-responsive');
+const interfaz_u_responsive = document.querySelectorAll('#interfaz-u-responsive');
+const cerrar_responsive = document.querySelectorAll('#cerrar-sesion-responsive');
 
 function veri() {
     fetch("../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/val_sesion.php")
@@ -11,11 +11,11 @@ function veri() {
         .then(jsonData => {
             if (jsonData.success === 1) {
                 ingreso.style.display = "none";
-                ingreso_reponsive.style.display = "none";
+                ingreso_reponsive[0].style.display = "none";
                 interfaz_u.style.display = "block";
                 cerrar.style.display = "block";
-                interfaz_u_responsive.style.display = "block";
-                cerrar_responsive.style.display = "block";
+                interfaz_u_responsive[0].style.display = "flex";
+                cerrar_responsive[0].style.display = "flex";
             } else if (jsonData.success === 2) {
                 ingreso.style.display = "block";
                 ingreso_reponsive.style.display = "block";
