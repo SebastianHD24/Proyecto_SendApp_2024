@@ -95,11 +95,13 @@
 /*Clase para añadir en JavaScript cuando el estado de la cita sea aprobado*/
 .estado_aceptado{
     color: #39a900;
+    font-weight: 600;
 }
 
 /*Clase para añadir en JavaScript cuando el estado de la cita sea rechazado*/
 .estado_rechazado{
-    color: #671C34;
+    color: #ff1861;
+    font-weight: 600;
 }
 
 /*Clase para añadir en JavaScript cuando el estado de la cita sea pendiente*/
