@@ -1,3 +1,5 @@
+// aqui con el nombre del area  capturamos el id del servicio para que al dalre click tome el id y de la base de datos me extraiga el nombre del servicio 
+
 function capturar_id(idServicio) {
     // Establecer el campo de ID del servicio
     const campoServicio = document.getElementById("id_servicio");
