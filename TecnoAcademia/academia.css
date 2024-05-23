@@ -90,6 +90,7 @@ body{
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+    text-align: justify;
     font-size: 22px;
 }
 .p{
@@ -113,10 +114,10 @@ hr{
     flex-wrap: wrap;
     justify-content: center;
     margin: 3rem 0 3rem 0;
-    gap: 4rem;
+    gap: 3rem;
 }
 .tarjeta {  
-    width: 40rem;      
+    width: 31rem;      
     background-color: #f0f0f0;
     transition: transform 0.3s ease;
     text-align: center;
@@ -143,6 +144,7 @@ hr{
     /* padding-left: 20px; */
 }
 .l_ordenada li{
+    text-align: justify;
     margin: 2rem;
     margin-bottom: 10px;
     position: relative;
@@ -163,15 +165,15 @@ hr{
  /* Estilos para las esferas */
  .contenedor-esferas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
     justify-items: center;
     margin: 50px 0 50px 0;
 }
 
 .esfera {
-    width: 80%;
+    width: 100%;
     border-radius: 20px;
     color:#00324D;
     text-align: center;
