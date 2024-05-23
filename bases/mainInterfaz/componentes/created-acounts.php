@@ -34,7 +34,6 @@
     } else {
       // Ejecutar la consulta sin condición de búsqueda
       $query = mysqli_query($conn, $sql);
-      echo "<p style = 'color: red;'>No hay ninguna consulta</p>";
     }
 
   ?>
@@ -120,7 +119,7 @@
             }
           } else {
             // Mostrar mensaje de que no hay registros
-            echo "<tr><td colspan='12'>No hay registros que coincidan con la búsqueda.</td></tr>";
+            echo "<tr><td colspan='12' style = 'color: red;'>No hay registros que coincidan con la búsqueda.</td></tr>";
           }
         }
         ?>
