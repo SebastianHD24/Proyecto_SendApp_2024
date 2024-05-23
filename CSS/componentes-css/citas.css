@@ -31,13 +31,6 @@
     gap: 5px;
 }
 
-/*Estilos especificos solo para centrar el contenido del motivo de las citas*/
-.notifications article:last-child{
-    display: flex;
-    flex-direction: column;
-    min-height  : 80px;
-    overflow-x: auto;
-} 
 .notifications figure{
     display: flex;
     justify-content: center;
@@ -119,7 +112,6 @@
         grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
         gap: 70px;
     }
-
 
     .notifications p{
         font-size: 1.2rem;
