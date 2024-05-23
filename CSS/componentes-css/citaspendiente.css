@@ -188,10 +188,10 @@ thead{
     margin: 10px 0;
 }
 
-.modal-content form input:nth-child(1),
+/* .modal-content form input:nth-child(1),
                     input:nth-child(2) {
                     text-align: center;
-                    }
+                    } */
 .modal-content form input{
     width: 100%;
     padding: 10px;

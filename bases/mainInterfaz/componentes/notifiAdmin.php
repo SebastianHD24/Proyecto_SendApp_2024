@@ -12,7 +12,7 @@
                         <th>Apellido</th>
                         <th>Rol</th>
                         <th>Documento de Identidad</th>
-                        <th>Fecha de Dolicitud</th>
+                        <th>Fecha de Solicitud</th>
                         <th>Asunto</th>
                         <th>Descripción</th>
                         <th>Responder</th>
@@ -38,9 +38,9 @@
                 <option value="todos">Todos</option>
                 <option value="hoy">Hoy</option>
                 <option value="ayer">Ayer</option>
-                <option value="semana">Ultima semana</option>
-                <option value="mes">Ultimo mes</option>
-                <option value="anio">Ultimo Año</option>
+                <option value="semana">Última semana</option>
+                <option value="mes">Último mes</option>
+                <option value="anio">Último Año</option>
             </select>
             <button type="submit" onclick="historialDesde();" class="buscar">Buscar</button>
         </form>

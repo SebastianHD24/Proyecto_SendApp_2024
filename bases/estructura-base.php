@@ -48,25 +48,30 @@
                     <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
                     <!-- <li><i class="fa-solid fa-user-group"></i><a href="Nosostros/nosotros.html">Nosotros</a></li> -->
                     <li>
-                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Areas</a>
+                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php">Áreas</a>
                         <ul class="areas-mas">
-                            <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/Biblioteca.php">Biblioteca</a></li>
-                            <li>
+                        <li><a href="../../../Proyecto_SendApp_2024/administracion/administracion.php">Administración educativa</a></li>
+                        <li>
                                 <a href="../../../Proyecto_SendApp_2024/Bienestar/Bienestar.php" id="bienestar">Bienestar al aprendiz</a>
                                 <ul class="areas-bienestar">
-                                    <li><a href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.php">Psicologia</a></li>
-                                    <li><a href="../../../Proyecto_SendApp_2024/Bienestar/Deportes/Deportes.php">Deportes y cultura</a></li>
+                                <li><a href="../../../Proyecto_SendApp_2024/Bienestar/Deportes/Deportes.php">Deportes y cultura</a></li>
+                                    <li><a href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.php">Psicología</a></li>
                                 </ul>
                             </li>
-                            <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/coordinaccion.php">Cordinacion academica</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/administracion/administracion.php">Administracion educativa</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/senova/senova.php">Sennova</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/Biblioteca/Biblioteca.php">Biblioteca</a></li>
+                            
+                            <li><a href="../../../Proyecto_SendApp_2024/coordinaccion/coordinaccion.php">Coordinación académica</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/FabricaSoftware.php">Fábrica de software</a></li>
+
                             <li><a href="../../../Proyecto_SendApp_2024/fondoEmprender/fondoEmprender.php">Fondo emprender</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/relacionesCorporativas/relacionesCorporativas.php">Relaciones corporativas</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/senova/senova.php">Sennova</a></li>
+
+
                             <li><a href="../../../Proyecto_SendApp_2024/serviciosTecnologicos/serviciosTecnologicos.php">Servicios tecnológicos</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/TecnoParque.php">Tecnoparque</a></li>
                             <li><a href="../../../Proyecto_SendApp_2024/TecnoAcademia/TecnoAcademia.php">Tecnoacademia</a></li>
-                            <li><a href="../../../Proyecto_SendApp_2024/FabricaSoftware/FabricaSoftware.php">Fabrica de software</a></li>
+                            <li><a href="../../../Proyecto_SendApp_2024/TecnoParque/TecnoParque.php">Tecnoparque</a></li>
+
                         </ul>
                     </li>
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
@@ -90,7 +95,7 @@
                         <i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php"><p>Inicio</p></a>
                     </li>
                     <li class="btn-areas">
-                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php"><p>Areas</p></a>
+                        <i class="fa-solid fa-cubes"></i><a href="../../../Proyecto_SendApp_2024/Areas/Areas.php"><p>Áreas</p></a>
                     </li>
                     <li id="ingreso-responsive" >
                         <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login.php"><p>Ingreso</p></a>
