@@ -231,6 +231,12 @@ body{
     align-items: center;
     flex-direction: column;     
 }
+#Info-cditi p{
+
+}
+.content #nosotros,#Info-cditi{
+    padding: 1px;
+}
 
 /*Contenedor de los titulos del section*/
 .content__parrafos-titulos{
@@ -275,6 +281,7 @@ body{
     text-align: center;
     border: 2px solid var(--azul); 
     border-radius: 12px;
+    transition: .6s ease;
 }
 
 /*Hover para hacer zoom a cada contenedor*/
@@ -297,6 +304,7 @@ body{
 .p__container p{
     padding: 0px 25px 10px 25px;
     text-align: justify;
+    font-size: 0.9rem;
 }
 
 /*Estilos de la etiqueta a*/
@@ -328,8 +336,8 @@ body{
         align-items:  center;
 }
 .section-escudo_bandera div img{
-        width: 100%;
-        height: 100%;
+        width: 10%;
+        height: auto;
 }
 .section-logosimbolo{
         display: flex;
@@ -356,9 +364,12 @@ body{
         grid-template-columns: 1fr;
     }
 }
-
-.seccion-escudo_bandera img,
 .section-logosimbolo img {
+    max-width: 35%;
+    height: auto;
+}
+
+.seccion-escudo_bandera img{
     max-width: 100%;
     height: auto;
 }
