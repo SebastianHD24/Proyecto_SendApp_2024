@@ -14,7 +14,6 @@ function regresar(){
     console.log('mamguevo');
 }
 
-
 //Accedemos al elemento HTML
 let estadoDeCita = document.querySelectorAll('.estado_cita');
 
