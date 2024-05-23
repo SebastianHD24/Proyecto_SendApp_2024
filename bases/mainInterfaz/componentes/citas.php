@@ -1,17 +1,14 @@
+<!-- botones para ver historial y volver  -->
 <a id="historial" onclick="verHistorial();"  href="#">ver historial</a>
 <a id="volver"  onclick="regresar();"   href="#"  style="display: none;">Regresar</a>
 <?php
 
-
- $conn = connection();
-
 if (isset($_SESSION['documento_identidad'])) {
     $documento_identidad = $_SESSION['documento_identidad'];
 
-    if (!$conn) {
-        die("Error al conectar a la base de datos: " . mysqli_connect_error());
-    }
 
+
+//  en esta consulta estamos llamando los datos que necesitamos y todos los de citas uniendolos con la tabla usuarios y servicios para extraer los datos necesarios en este estamos limitando  a que sean 6 
     $sql = "SELECT 
     citas.*, 
     servicios.nombre_servicio, 
@@ -20,15 +17,16 @@ if (isset($_SESSION['documento_identidad'])) {
      FROM citas 
      INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
      INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
-     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY id_cita ASC LIMIT 6";
+     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY fecha DESC LIMIT 6";
 
 
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
-            // Aquí se abre el único contenedor de cuadrícula
+         // Aquí se abre el único contenedor de cuadrícula
             ?>
+           
             <div class="notifications-panel" id="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc  ($result)) {
@@ -37,20 +35,23 @@ if (isset($_SESSION['documento_identidad'])) {
                 <div class="notifications">
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
-                        
+                        <!-- aqui es donde estamos extrayendo los datos quenecesitmaos de la bse de datos    -->
                     </figure>
                     <span></span>
                     <article>
                         <b>Área: </b>
+                        <!-- aqui el nombre del servicio para que el usuario tenga claro con quien agendo la cita  -->
                         <p><?= $row['nombre_servicio'] ?></p>
                     </article>
                     <span></span>
                     <article>
+                        <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes dia asignado " -->
                         <b>Día: </b>
                         <p><?= empty($row['fecha']) ? "Aún no te han asignado el dia" : $row['fecha'] ?>
                     </article>
                     <span></span>
                     <article>
+                       <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes hora asignado " -->
                     <p>Hora: <?= empty($row['hora']) ? "Aún no te han asignado hora" : $row['hora'] ?> </p>
                     </article>
                     <span></span>
@@ -67,17 +68,12 @@ if (isset($_SESSION['documento_identidad'])) {
                             <?= $row['jornada'] ?>
                         </p>
                     </article>
-                    <span></span>
-                    <article>
-                        <b>Confirmacion: </b>
-                        <p>
-                            <?= empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion'] ?> </p>
-                        
-                        </p>
+                   
                     </article>
                     <span></span>
                     <article>
                         <b>Funcionario: </b>
+                        <!-- aqui extraemos el nombre del funcionario y el apellido de este ya que el aprnediz elije con que funcionario quiere la cita y la idea es que se muestre  -->
                         <p>
                             <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
                         </p>
@@ -116,14 +112,12 @@ if (isset($_SESSION['documento_identidad'])) {
 <?php
 
 
- $conn = connection();
+ 
 
 if (isset($_SESSION['documento_identidad'])) {
     $documento_identidad = $_SESSION['documento_identidad'];
 
-    if (!$conn) {
-        die("Error al conectar a la base de datos: " . mysqli_connect_error());
-    }
+   
 
     $sql = "SELECT 
     citas.*, 

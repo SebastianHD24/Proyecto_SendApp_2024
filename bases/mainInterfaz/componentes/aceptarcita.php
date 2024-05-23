@@ -1,4 +1,4 @@
-        <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/aceptarcitas.css">
+<link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/aceptarcitas.css">
         
         <?php
         
