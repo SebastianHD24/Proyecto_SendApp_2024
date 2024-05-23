@@ -59,7 +59,14 @@ if (isset($_SESSION['documento_identidad'])) {
                     <article>
                         <b>Estado: </b>
                         <p>
-                            <?= $row['estado_cita'] ?>
+                            <?php
+                              if ($row['estado_cita']== 'rechazado'){
+                                echo 'rechazado  -
+                                <a id="verJustificacion" href="#">Ver justificación</a>';
+                              }else {
+                                echo  $row['estado_cita'];
+                              } 
+                            ?> 
                         </p>
                     </article>
                     <span></span>
@@ -167,9 +174,14 @@ if (isset($_SESSION['documento_identidad'])) {
                     <span></span>
                     <article>
                         <b>Estado: </b>
-                        <p>
-                            <?= $row['estado_cita'] ?>
-                        </p>
+                        <?php
+                              if ($row['estado_cita']== 'rechazado'){
+                                echo 'rechazado  -
+                                <a id="verJustificacion" href="#">Ver justificación</a>';
+                              }else {
+                                echo  $row['estado_cita'];
+                              } 
+                            ?> 
                     </article>
                     <span></span>
                     <article>
@@ -225,3 +237,5 @@ if (isset($_SESSION['documento_identidad'])) {
 ?>
 
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/cantidadCitas.js'></script>
+
+

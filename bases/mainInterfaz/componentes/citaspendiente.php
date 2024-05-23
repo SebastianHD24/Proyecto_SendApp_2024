@@ -20,7 +20,7 @@
             $funcionario = $_SESSION["documento_identidad"];
             $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
             FROM citas
-            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad ORDER BY citas.id_cita ASC";
+            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' ORDER BY citas.id_cita ASC ";
     
             $result = mysqli_query($conn, $sql);
 
@@ -47,8 +47,8 @@
                             <button class="button rechazar <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="mostrarFormularioRechazo(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
                             
                             
-                            <!-- Modal para rechazar la cita -->
-                            <div id="modal_<?= $row['id_cita'] ?>" class="modal">
+                             <!-- Modal para rechazar la cita -->
+                                <div id="modal_<?= $row['id_cita'] ?>" class="modal">
                                 <div class="modal-content">
                                     <!-- Botón para cerrar el modal -->
                                     <span class="close" onclick="closeModal(<?= $row['id_cita'] ?>)">&times;</span>
@@ -105,4 +105,7 @@
         </tbody>
     </table>
 </div>
+<?php 
+
+?>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
