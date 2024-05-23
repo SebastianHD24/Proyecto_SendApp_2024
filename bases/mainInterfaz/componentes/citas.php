@@ -1,5 +1,6 @@
-<a id="historial" onclick="verHistorial();"  href="#">ver historial</a>
-<a id="volver" href="#"  onclick="regresar();"  style="display: none;">Regresar</a>
+
+<button class="verHistorial" id="historial" onclick="verHistorial();"  href="#">ver historial</button>
+<button  class="salirHistorial" id="volver" href="#"  onclick="regresar();"  style="display: none;">Regresar</button>
 <?php
 
 
