@@ -31,7 +31,7 @@
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
                 <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn">
-                  <p class="txt1">Psicologia</p>
+                  <p class="txt1">Psicología</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>    

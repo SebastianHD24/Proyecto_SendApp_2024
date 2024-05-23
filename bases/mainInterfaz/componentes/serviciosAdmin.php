@@ -3,7 +3,7 @@
 
 <!-----------------------Parrafo descriptivo del inicio de servicios-->
 <article class="articuloContenedorDeParrafos">
-    <p>Bienvenido a la sección de servicios, aquí podrás cambiar los administradores de cada área, consultar sus datos personal y cambiar el estado del servicio de <b>Activo o Inactivo</b></p>
+    <p>Bienvenido a la sección de servicios, aquí podrás cambiar los administradores de cada área, consultar sus datos personales y cambiar el estado del servicio de <b>Activo o Inactivo</b></p>
 </article>
 
 <!-- Tabla con la info sobre los servicios y acciones que se pueden realizar con ellos -->
@@ -151,7 +151,7 @@
         <!-- Ventana emergente para confirmar accion de cambios. -->
         <div class="fondoPopUp oculto">
             <div class="popUpSeguro">
-                <h4>¿Estas seguro de realizar los cambios?</h4>
+                <h4>¿Está seguro de realizar los cambios?</h4>
                 <div id="botones">
                     <button class="confirmacionAd afir">Si</button>
                     <button class="confirmacionAd nega">No</button>

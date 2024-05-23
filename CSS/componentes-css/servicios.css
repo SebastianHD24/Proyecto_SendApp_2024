@@ -242,10 +242,16 @@ main{
     padding: 5px 0;
     border-radius: 18px 0 18px 0;
 }
+.descripcion-servicio{
+    padding: 10px;
+    font-family:'Work sans' sans-serif ;
+}
 .sub{
-  margin-top: 10px;
+    font-family: 'Work sans' sans-serif;
+    margin-top: 10px;
 }
 .Nombre_Area{
+    font-family: 'Work sans' sans-serif;
     border-radius: 5px;
     margin: 10px;
     padding: 7px;
@@ -257,6 +263,7 @@ main{
     gap: 2rem; 
 }
 .button-servicio{
+    font-family: 'Work sans' sans-serif;
     margin: 10px;
     padding: 10px 20px;
     background-color: #39a900;
