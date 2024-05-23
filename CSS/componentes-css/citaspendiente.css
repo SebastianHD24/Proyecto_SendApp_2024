@@ -30,9 +30,12 @@
     overflow-x: scroll; /* Solo desplazamiento horizontal */
     overflow-y: hidden;
     /* background-color: #00234d; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-table{
+.table_div table{
     /* overflow: hidden ; */
     overflow-x: scroll; /* Solo desplazamiento horizontal */
     overflow-y: hidden;   
@@ -50,7 +53,7 @@ table{
     font-weight: bold; /* Texto en negrita */
 }
 
-td{
+.table_div td{
     text-align: center;
     /* border: 1px solid var(--negro)  */
     background-color: #FFFFFF;
@@ -68,7 +71,7 @@ thead{
 
 /* -------------------- button aceptar rechazar citas /// button asistencia ---------------------- */
 /* Estilos para los botones */
-.button {
+.table_div .button {
     width: 80px;
     padding: 10px 15px; /* Espacio interno */
     color: white; /* Texto blanco */
