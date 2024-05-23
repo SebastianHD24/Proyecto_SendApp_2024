@@ -92,6 +92,16 @@ footer{
 .menu-item:hover{
     opacity: 1;
 }
+/* span footer creado por */
+.span-footer{
+    font-size: .5rem;
+
+}
+.span-footer a{
+    opacity: 1;
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 /*RESPONSIVE FOOTER*/
 

@@ -138,6 +138,7 @@
             <ul class="footer-menu">
                 <li class="menu-item">@SENAComunica</li>
             </ul>
+            <span class="span-footer"><a href="#">Creado por ADSO 2618075</a></span>
 
     </footer>
     <?php endblock() ?> <!--Fin bloque footer-->

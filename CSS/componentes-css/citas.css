@@ -31,13 +31,6 @@
     gap: 5px;
 }
 
-/*Estilos especificos solo para centrar el contenido del motivo de las citas*/
-.notifications article:last-child{
-    display: flex;
-    flex-direction: column;
-    min-height  : 80px;
-    overflow-x: auto;
-} 
 .notifications figure{
     display: flex;
     justify-content: center;
@@ -95,17 +88,20 @@
 /*Clase para añadir en JavaScript cuando el estado de la cita sea aprobado*/
 .estado_aceptado{
     color: #39a900;
+    /* font-weight: 600;  */
 }
 
 /*Clase para añadir en JavaScript cuando el estado de la cita sea rechazado*/
 .estado_rechazado{
-    color: #671C34;
+    color: #ff1861;
+    /* font-weight: 600; */
 }
 
 /*Clase para añadir en JavaScript cuando el estado de la cita sea pendiente*/
 .estado_pendiente {
     color: #FFCE40;
-    font-weight: 600;
+    /* background-color: #3B3B3B; */
+    /* font-weight: 600; */
 }
 
 /*Responsive*/
@@ -116,7 +112,6 @@
         grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
         gap: 70px;
     }
-
 
     .notifications p{
         font-size: 1.2rem;

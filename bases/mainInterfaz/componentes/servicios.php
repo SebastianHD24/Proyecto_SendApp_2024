@@ -130,7 +130,7 @@
      
      
       
-        <p>Jornada:</p>
+        <p class="sub"><strong>Jornada:</strong></p>
 
       <select  name="jornada" class="select">
         <option value="Diurna"> Diurna </option>
@@ -142,11 +142,11 @@
       <select name='usuario_f' class="funcionario">
     
       </select>
-      <p>Area</p>
-      <input type="text" name="nombre_servicio" disabled >
+      <p class="sub"><strong>Area</strong></p>
+      <input type="text" name="nombre_servicio" disabled class="Nombre_Area" >
 
       <div class="formulario">
-        <label for="descripcion">Descripción:</label>
+        <label for="descripcion"><strong>Descripción:</strong></label>
         <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4"></textarea>
       </div>
 

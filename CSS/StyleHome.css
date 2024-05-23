@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/*Estilos universales del documento*/
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     scroll-behavior: smooth;
 }
 
+/*Estilos predefinidos*/
 :root{
     --verde: #39a900;
     --blanco: #fff;
@@ -17,49 +19,14 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
-body{
-    overflow-x: hidden;
-}
-
-/* -------------------------------- mapa ----------------------- */
-
-.map{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.mapaSena{
-    border-radius: 12px;
-    margin: 20px;
-    width:500px;
-    height:300px;
-}
-.map h1 {
-    text-align: center;
-}
-
-@media (max-width: 560px) {
-    .mapaSena{
-        width: 280px;
-        height: auto;
-    }
-    .map h1 {
-        font-size: 20px;
-        padding: 20px;
-    }
-}
-
-
-/* ------------------------------------------------- */
-
+/*Estilos generales del body*/
 body{
     font-family: var(--fuente-principal);
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 /* ----------------------------------------------------- */
 
@@ -253,10 +220,6 @@ body{
 }
 
 /* Contenedor principal con la seccion de informacion */
-.contenido{
-    height: 100%;
-    width: 100%;
-}
 .content section{
     width: 100%;
     height: 100%;
@@ -280,15 +243,17 @@ body{
     text-align: center;
 }
 
+/*Subtítulo descrptivo*/
 .content__parrafos-titulos h2{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
+/*Parrafo introductorio*/
 .content__parrafos-titulos p{
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
-/* Contenedor de parrafos en el section */
+/* Contenedor de parrafos informativos en la parte sperior */
 .content__parrafos-links{
     width: 100%;
     height: 100%;
@@ -301,6 +266,7 @@ body{
     text-align: justify;
 }
 
+/*Contenedor secundario*/
 .p__container{
     display: flex;
     flex-direction: column;
@@ -311,24 +277,29 @@ body{
     border-radius: 12px;
 }
 
+/*Hover para hacer zoom a cada contenedor*/
 .p__container:hover{
     transform: scale(1.05);
 }
 
+/*Artículo que contiene la imagen de cada contenido*/
 .p__container article{
     width: 100%;
 }
 
+/*Estilos para la imagen*/
 .p__container article img{
     width: 90px;
     padding: 10px 0px 10px 0px;
 }
 
+/*Parrafos descriptivos dentro de cada contenedor*/
 .p__container p{
     padding: 0px 25px 10px 25px;
     text-align: justify;
 }
 
+/*Estilos de la etiqueta a*/
 .p__container a{
     color: var(--verde);
 }
@@ -336,9 +307,6 @@ body{
 /* -----------------------Contenido ----------------------------------- */
 
 /* ---------------------------------Contenido de Nosotros--------------------------- */
-
-
-
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -369,8 +337,6 @@ body{
         height: auto;
 }
 
-
-
 .seccion-escudo_bandera,
 .section-logosimbolo {
     border: 5px solid var(--azul);
@@ -384,7 +350,6 @@ body{
     margin: 5px;
     margin-bottom: 10px;
 }
-
 
 @media (max-width: 768px) {
     .contenedor {
@@ -407,8 +372,6 @@ h1{
 }
 
 /* ------------------------------------------------------------------------------------- */
-
-
 .content-izquierda {
     padding: 5px;
     background-color: var(--azul);
@@ -459,11 +422,7 @@ h1{
     border-left: 100px solid var(--azul); /* Ancho del triángulo y color de fondo */
 }
 
-
-
-
 /* --------------------------- derecha ---------------- */
-
 .content-derecha {
     padding: 10px;
     background-color: var(--azul);
@@ -560,10 +519,7 @@ h1{
     }
 }
 
-
 /* --------- Contenido info CDITI ------------ */
-
-
 .container_info{
     margin:20px;
     display: flex;
@@ -597,13 +553,13 @@ h1{
         transform: scale(100%);
     }
 }
+
 @media screen and (min-width:768px){
     
     .recuadros-info div:nth-last-child(-n+2) {
         grid-column: span 2; /* Cada elemento ocupa dos columnas */
         justify-self: center; /* Alinear al centro horizontal */
-}
-
+    }
 }
 
 @media (max-width: 950px){
@@ -612,6 +568,36 @@ h1{
     }
     .container_info img {
         width: 80%;
+    }
+}
+
+/* -------------------------------- mapa ----------------------- */
+
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mapaSena{
+    border-radius: 12px;
+    margin: 20px;
+    width:500px;
+    height:300px;
+}
+.map h1 {
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    .mapaSena{
+        width: 280px;
+        height: auto;
+    }
+    .map h1 {
+        font-size: 20px;
+        padding: 20px;
     }
 }
 

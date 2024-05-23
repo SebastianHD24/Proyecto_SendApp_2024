@@ -242,6 +242,39 @@ main{
     padding: 5px 0;
     border-radius: 18px 0 18px 0;
 }
+.descripcion-servicio{
+    padding: 10px;
+    font-family:'Work sans' sans-serif ;
+}
+.sub{
+    font-family: 'Work sans' sans-serif;
+    margin-top: 10px;
+}
+.Nombre_Area{
+    font-family: 'Work sans' sans-serif;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 7px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+}
+.button-servicio{
+    font-family: 'Work sans' sans-serif;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #39a900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-servicio:hover {
+    background-color: #00234D;
+}
 
 #botones > button{
     width: 100px;
