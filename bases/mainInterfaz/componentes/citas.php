@@ -8,7 +8,7 @@ if (isset($_SESSION['documento_identidad'])) {
 
 
 
-//  en esta consulta estamos llamando los datos que necesitamos y todos los de citas uniendolos con la tabla usuarios y servicios para extraer los datos necesarios en este estamos limitando  a que sean 6 
+    //  en esta consulta estamos llamando los datos que necesitamos y todos los de citas uniendolos con la tabla usuarios y servicios para extraer los datos necesarios en este estamos limitando  a que sean 6 
     $sql = "SELECT 
     citas.*, 
     servicios.nombre_servicio, 
@@ -35,7 +35,7 @@ if (isset($_SESSION['documento_identidad'])) {
                 <div class="notifications">
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
-                        <!-- aqui es donde estamos extrayendo los datos quenecesitmaos de la bse de datos    -->
+                        <!-- aqui es donde estamos extrayendo los datos que necesitmaos de la bse de datos    -->
                     </figure>
                     <span></span>
                     <article>
@@ -52,7 +52,8 @@ if (isset($_SESSION['documento_identidad'])) {
                     <span></span>
                     <article>
                        <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes hora asignado " -->
-                    <p>Hora: <?= empty($row['hora']) ? "Aún no te han asignado hora" : $row['hora'] ?> </p>
+                       <b>Hora</b>
+                    <p> <?= empty($row['hora']) ? "Aún no te han asignado hora" : $row['hora'] ?> </p>
                     </article>
                     <span></span>
                     <article>
@@ -119,6 +120,7 @@ if (isset($_SESSION['documento_identidad'])) {
 
    
 
+    //  en esta consulta estamos llamando los datos que necesitamos y todos los de citas uniendolos con la tabla usuarios y servicios para extraer los datos necesarios en este estamos mostrando todos 
     $sql = "SELECT 
     citas.*, 
     servicios.nombre_servicio, 
@@ -127,7 +129,7 @@ if (isset($_SESSION['documento_identidad'])) {
      FROM citas 
      INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
      INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
-     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY id_cita DESC ";
+     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY fecha DESC ";
 
 
     $result = mysqli_query($conn, $sql);
@@ -145,16 +147,21 @@ if (isset($_SESSION['documento_identidad'])) {
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
+                      <!-- aqui es donde estamos extrayendo los datos que necesitmaos de la bse de datos    -->
                     <span></span>
+                  
                     <article>
+                         <!-- aqui el nombre del servicio para que el usuario tenga claro con quien agendo la cita  -->
                         <p>Área: <?= $row['nombre_servicio'] ?></p>
                     </article>
                     <span></span>
                     <article>
+                         <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes dia asignado " -->
                         <p>Día:<?= empty($row['fecha']) ? "Aún no te han asignado el dia" : $row['fecha'] ?>
                     </article>
                     <span></span>
                     <article>
+                        <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes hora asignada " -->
                     <p>Hora: <?= empty($row['hora']) ? "Aún no te han asignado hora" : $row['hora'] ?> </p>
                     </article>
                     <span></span>
@@ -181,6 +188,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <article>
+                        <!-- aqui extraemos el nombre del funcionario y el apellido de este ya que el aprnediz elije con que funcionario quiere la cita y la idea es que se muestre  -->
                         <b>Funcionario: </b>
                         <p>
                             <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
