@@ -80,9 +80,10 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
+
     font-size: 18px;
     font-family: var(--fuente-principal);
-    text-align: left;
+    text-align: center;
     margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
@@ -120,7 +121,7 @@ hr{
     gap: 4rem;
 }
 .tarjeta {  
-    width: 40rem;      
+    width: 34rem;      
     background-color: #f0f0f0;
     transition: transform 0.3s ease;
     text-align: center;
@@ -142,6 +143,7 @@ hr{
     padding-left: 20px;
 }
 .l_ordenada li{
+    text-align: justify;
     margin: 2rem;
     margin-bottom: 10px;
     position: relative;
@@ -182,6 +184,7 @@ hr{
 }
 
 .esfera p{
+    text-align: justify;
     font-size: large;
 }
 
