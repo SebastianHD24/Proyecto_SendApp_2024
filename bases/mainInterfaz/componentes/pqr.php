@@ -9,7 +9,7 @@
             <label for="opciones">Tipo de PQR:</label>
             <br>
             <select name="tipo_solicitud" id="opciones" class="opcionespqr">
-                <option value="peticion">Peticion</option>
+                <option value="peticion">Petición</option>
                 <option value="queja">Queja</option>
                 <option value="reclamo">Reclamo</option>
                 <option value="sugerencia">Sugerencia</option>

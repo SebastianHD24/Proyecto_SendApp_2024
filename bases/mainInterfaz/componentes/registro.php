@@ -31,7 +31,7 @@
     </select>
     <p id="mensaje_errord"></p>
     <label for="login-input-user" class="login__label">
-        Numero de documento *
+        Número de documento *
     </label>
     <input id="login-input-user-d" class="login__input" type="number" name="documento_identidad" placeholder="Número de documento" required/>
 
