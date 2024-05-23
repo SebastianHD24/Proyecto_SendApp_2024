@@ -115,7 +115,14 @@ if (isset($_SESSION['documento_identidad'])) {
     }
 }
 ?>
+
+
+
+
 <!-- script para ver el historial  -->
+
+
+
 
 <?php
 
@@ -150,7 +157,13 @@ if (isset($_SESSION['documento_identidad'])) {
             while ($row = mysqli_fetch_assoc  ($result)) {
               
                 ?>
+                
                 <div class="notifications">
+
+                    <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
+                      position:fixed;" >
+                        <p class="popup-justificacion_"><?= $row['justificacion_rechazo']?> </p>
+                    </div>
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
@@ -177,7 +190,7 @@ if (isset($_SESSION['documento_identidad'])) {
                         <?php
                               if ($row['estado_cita']== 'rechazado'){
                                 echo 'rechazado  -
-                                <a id="verJustificacion" href="#">Ver justificación</a>';
+                                <a id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
                               }else {
                                 echo  $row['estado_cita'];
                               } 
@@ -213,7 +226,10 @@ if (isset($_SESSION['documento_identidad'])) {
                             <?= $row['descripcion'] ?>
                         </p>
                     </article>
+                   
                 </div>
+               
+
                 <?php
             }
             ?>
@@ -232,10 +248,20 @@ if (isset($_SESSION['documento_identidad'])) {
             <p>Error al encontrar los datos.</p>
         </article>
         <?php
-    }
+    } 
 }
 ?>
 
+
+
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/cantidadCitas.js'></script>
 
+<script>
+function verRechazo(id){
+    let popup = document.getElementById('justificacion-rechazo-'+ id);
+    
+    popup.style.display = 'block';
 
+}
+
+</script>
