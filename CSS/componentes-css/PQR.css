@@ -12,8 +12,10 @@
 .contenido{
     width: 30rem;
     height: 28rem;
-}
-.descripcion-pqr{
+    
+    } 
+    
+    .descripcion-pqr{
     padding: 10px;
 }
 .opcionespqr{
