@@ -4,6 +4,7 @@
     <?php startblock('links-styles') ?>
         <title>SendApp</title>
         <link rel="stylesheet" type="text/css" href="../Proyecto_SendApp_2024/CSS/StyleHome.css">
+        <script src="../Proyecto_SendApp_2024/scripts/ScriptsGenerales/slider.js"></script>
     <?php endblock() ?>
     
     <!-- Slider Sena -->
@@ -15,16 +16,37 @@
     <?php endblock() ?>
 
     <?php startblock('contenido') ?> <!--Llamo el bloque del contenido para sobre escribir lo que contiene la pagina-->
-    <div class="slider">
-        <ul>
-            <li><img src="./Inicio/Img-home/Slider-img/img1.jpg" alt="imagen1"></li>
-            <li><img src="./Inicio/Img-home/Slider-img/img2.png" alt="imagen2"></li>
-            <li><img src="./Inicio/Img-home/Slider-img/img3.png" alt="imagen3"></li>
-            <li><img src="./Inicio/Img-home/Slider-img/img4.png" alt="imagen4"></li>
-        
-        </ul>
-    </div>
+
+
     <!-- Contenido -->
+    <!-- Slider -->
+
+    <div class="splitview skewed">
+        <div class="panel bottom">
+            <div class="content">
+                <div class="description">
+                    <h1 class="TextSli1">Vive la experiencia SENA.</h1>
+                    <p class="TextSlipar1">Sumérgete en un ambiente dinámico que te permite desarrollar tus habilidades.</p>
+                </div>
+
+                <img src="../Proyecto_SendApp_2024/imagenes/Slider-img/expsena.jpg" alt="foto1">
+            </div>
+        </div>
+
+        <div class="panel top">
+            <div class="content">
+                <div class="description">
+                    <h1 class="TextSli2">Explora nuevas perspectivas.</h1>
+                    <p class="TextSlipar2">Crea conexiones significativas y desafíate a ti mismo en cada paso del camino.</p>
+                </div>
+
+                <img src="../Proyecto_SendApp_2024/imagenes/Slider-img/expsena-edit.jpg" alt="foto2">
+            </div>
+        </div>
+
+        <div class="handle"></div>
+            </div>
+
     <div class="content">
         <section>
             <div class="content__parrafos-titulos">
@@ -34,7 +56,8 @@
                     Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formación, sus principales áreas y servicios.
                 </p>
             </div>
-            <p style="color: red;"> Espacio para el nuevo slider </p>
+            
+            
             <!--Contenddor de Parrafos-->
             <div class="content__parrafos-links">
                 <div class="p__container">

@@ -73,7 +73,7 @@
         <!-- Ventana emergente despues de una actualizacion. -->
         <div class="alerta" id="alerta" style="display: none;">
             <div class="mensaje">
-                <p>¡Cita agendada con exito!</p>
+                <p>¡Cita agendada con éxito!</p>
             </div>   
             <div class="imagen">
                 <img src="" alt="Señal de aprobación">

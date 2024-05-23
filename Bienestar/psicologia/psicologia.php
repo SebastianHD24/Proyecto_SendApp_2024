@@ -3,7 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.css"> <!-- Estilos de psicologia -->
-    <title>Psicologia</title>
+    <title>Psicología</title>
 <?php endblock() ?>
 <!--Bloque para el logo sena-->
 <?php startblock('logo-sena') ?>

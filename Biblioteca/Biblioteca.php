@@ -42,7 +42,7 @@
             <ol class="l_ordenada">
                 <div class="actividad">
                     <div class="actividad1">
-                        <li><strong>Actividades de apoyo a las formación:</strong></li>
+                        <li><strong>Actividades de apoyo a la formación:</strong></li>
                         <ul class="l_desordenada">
                             <!-- Mostrar las actividades de apoyo a la formación -->
                             <?php foreach ($data['actividades']['apoyo'] as $item): ?>
