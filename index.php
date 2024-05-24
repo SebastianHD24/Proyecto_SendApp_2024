@@ -108,7 +108,7 @@
                 <img src="./Inicio/Img-home/Section-Img/escudo.png" alt="Escudo Sena">
             </div>
             <div class="section-logosimbolo">
-                <img src="./Inicio/Img-home/LogosSena-Img/logoSenaVerde2.png" alt="Logo Sena">
+                <img src="./Inicio/Img-home/LogosSena-Img/logoSenaVerde2.png" alt="Logo Sena" id="logo-sena-conostros">
                 <div class="logosimbolo">
                     <h1>Logosímbolo</h1>
                     <p>
