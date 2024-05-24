@@ -1,4 +1,10 @@
+<div class="organizar_citas">
+<a class="citasRechazadas" href="javascript:void(0);">Citas rechazadas</a>
+
+</div>
+
 <div class="table_div">
+    
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -105,7 +111,11 @@
         </tbody>
     </table>
 </div>
-<?php 
-
-?>
+<div id="rechazadasContent" >
+    <?php include 'baseCitas/citasRechazadas.php' ?>
+</div>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
+<script>
+let
+
+</script>
