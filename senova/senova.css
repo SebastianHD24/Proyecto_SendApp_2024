@@ -90,6 +90,7 @@ body{
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+   text-align: justify;
     font-size: 22px;
 }
 .p{
@@ -102,7 +103,7 @@ hr{
     margin: 2rem 0 10px 0;
 }
 
-.tarjeta {     
+.tarjeta {
     display: flex;
     align-items: center;
     justify-content: center;   
@@ -117,6 +118,13 @@ hr{
     box-shadow: 0 6px 11px rgba(7, 7, 7, 0.4);
     color: #000000;
 
+}
+.contenido-corto,
+.contenido-expansivo{  
+    text-align: justify;  
+}
+.contenido-expansivo{
+    padding: 10px;
 }
 .tarjeta.cambio{
     color: #00324D;

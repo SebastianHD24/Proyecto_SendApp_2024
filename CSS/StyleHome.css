@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/*Estilos universales del documento*/
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     scroll-behavior: smooth;
 }
 
+/*Estilos predefinidos*/
 :root{
     --verde: #39a900;
     --blanco: #fff;
@@ -17,95 +19,207 @@
     --fuente-principal: "Work Sans", sans-serif;
 }
 
-body{
-    overflow-x: hidden;
-}
-
-/* -------------------------------- mapa ----------------------- */
-
-.map{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.mapaSena{
-    border-radius: 12px;
-    margin: 20px;
-    width:500px;
-    height:300px;
-}
-.map h1 {
-    text-align: center;
-}
-
-@media (max-width: 560px) {
-    .mapaSena{
-        width: 280px;
-        height: auto;
-    }
-    .map h1 {
-        font-size: 20px;
-        padding: 20px;
-    }
-}
-
-
-/* ------------------------------------------------- */
-
+/*Estilos generales del body*/
 body{
     font-family: var(--fuente-principal);
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.slider{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider ul{
-    padding: 0;
-    display: flex;
-    width: 400%;
-
-    animation: slider 20s infinite alternate;
-    animation-timing-function: linear;
-}
-
-.slider li{
-    width: 100%;
-    list-style: none;
-}
-
-.slider li img{
-    width: 100%;
-}
-
-@keyframes slider {
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
-
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
-
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-    75%{margin-left: -300%;}
-    100%{margin-left:-300%}
+    overflow-x: hidden;
 }
 /* ----------------------------------------------------- */
 
-/* Contenedor principal con la seccion de informacion */
-.contenido{
-    height: 100%;
-    width: 100%;
+/* Slider */
+.description, h1,p{
+    font-size: 20px;
 }
+
+/* Panels Slider */
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+ }
+
+.panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel .content {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    color: #FFF;
+}
+    
+.panel .description {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+    
+.panel img {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+    width: 24%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    
+.bottom {
+    background-color: var(--azul);
+    z-index: 1;
+}
+    
+.bottom .description {
+    right: 5%;
+}
+    
+.top {
+    background-color: var(--verde);
+    z-index: 2;
+    width: 50vw;
+}
+
+.top .description {
+    left: 5%;
+}
+    
+/* Handle. */
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+    
+/* Skewed. */
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+    
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+    
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+    
+/* Responsive. */
+
+
+@media (max-width: 1440px){
+    .description h1,p {
+        font-size: 85%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+    
+@media (max-width: 1024px){
+    .description h1,p {
+        font-size: 75%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 768px){
+    .description h1,p {
+        font-size: 75%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 900px) {
+    .description h1,p {
+        font-size: 60%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+    
+@media (max-width: 425px) {
+    .description h1,p {
+        font-size: 42%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+    }
+    .TextSli1 {
+        margin-right: 50px;
+    }
+    .TextSlipar1 {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 320px) {
+    .description h1,p {
+        font-size: 35%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Contenedor principal con la seccion de informacion */
 .content section{
     width: 100%;
     height: 100%;
@@ -116,6 +230,12 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;     
+}
+#Info-cditi p{
+
+}
+.content #nosotros,#Info-cditi{
+    padding: 1px;
 }
 
 /*Contenedor de los titulos del section*/
@@ -129,15 +249,17 @@ body{
     text-align: center;
 }
 
+/*Subtítulo descrptivo*/
 .content__parrafos-titulos h2{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
+/*Parrafo introductorio*/
 .content__parrafos-titulos p{
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
-/* Contenedor de parrafos en el section */
+/* Contenedor de parrafos informativos en la parte sperior */
 .content__parrafos-links{
     width: 100%;
     height: 100%;
@@ -150,6 +272,7 @@ body{
     text-align: justify;
 }
 
+/*Contenedor secundario*/
 .p__container{
     display: flex;
     flex-direction: column;
@@ -158,26 +281,33 @@ body{
     text-align: center;
     border: 2px solid var(--azul); 
     border-radius: 12px;
+    transition: .6s ease;
 }
 
+/*Hover para hacer zoom a cada contenedor*/
 .p__container:hover{
     transform: scale(1.05);
 }
 
+/*Artículo que contiene la imagen de cada contenido*/
 .p__container article{
     width: 100%;
 }
 
+/*Estilos para la imagen*/
 .p__container article img{
     width: 90px;
     padding: 10px 0px 10px 0px;
 }
 
+/*Parrafos descriptivos dentro de cada contenedor*/
 .p__container p{
     padding: 0px 25px 10px 25px;
     text-align: justify;
+    font-size: 0.9rem;
 }
 
+/*Estilos de la etiqueta a*/
 .p__container a{
     color: var(--verde);
 }
@@ -185,9 +315,6 @@ body{
 /* -----------------------Contenido ----------------------------------- */
 
 /* ---------------------------------Contenido de Nosotros--------------------------- */
-
-
-
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -209,16 +336,14 @@ body{
         align-items:  center;
 }
 .section-escudo_bandera div img{
-        width: 100%;
-        height: 100%;
+        width: 10%;
+        height: auto;
 }
 .section-logosimbolo{
         display: flex;
         flex-direction: column;
         height: auto;
 }
-
-
 
 .seccion-escudo_bandera,
 .section-logosimbolo {
@@ -234,15 +359,17 @@ body{
     margin-bottom: 10px;
 }
 
-
 @media (max-width: 768px) {
     .contenedor {
         grid-template-columns: 1fr;
     }
 }
-
-.seccion-escudo_bandera img,
 .section-logosimbolo img {
+    max-width: 35%;
+    height: auto;
+}
+
+.seccion-escudo_bandera img{
     max-width: 100%;
     height: auto;
 }
@@ -256,8 +383,6 @@ h1{
 }
 
 /* ------------------------------------------------------------------------------------- */
-
-
 .content-izquierda {
     padding: 5px;
     background-color: var(--azul);
@@ -308,11 +433,7 @@ h1{
     border-left: 100px solid var(--azul); /* Ancho del triángulo y color de fondo */
 }
 
-
-
-
 /* --------------------------- derecha ---------------- */
-
 .content-derecha {
     padding: 10px;
     background-color: var(--azul);
@@ -409,10 +530,7 @@ h1{
     }
 }
 
-
 /* --------- Contenido info CDITI ------------ */
-
-
 .container_info{
     margin:20px;
     display: flex;
@@ -446,13 +564,13 @@ h1{
         transform: scale(100%);
     }
 }
+
 @media screen and (min-width:768px){
     
     .recuadros-info div:nth-last-child(-n+2) {
         grid-column: span 2; /* Cada elemento ocupa dos columnas */
         justify-self: center; /* Alinear al centro horizontal */
-}
-
+    }
 }
 
 @media (max-width: 950px){
@@ -461,6 +579,36 @@ h1{
     }
     .container_info img {
         width: 80%;
+    }
+}
+
+/* -------------------------------- mapa ----------------------- */
+
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mapaSena{
+    border-radius: 12px;
+    margin: 20px;
+    width:500px;
+    height:300px;
+}
+.map h1 {
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    .mapaSena{
+        width: 280px;
+        height: auto;
+    }
+    .map h1 {
+        font-size: 20px;
+        padding: 20px;
     }
 }
 
@@ -534,23 +682,6 @@ h1{
         font-size: 23px;
     }
 
-    /* responsive slider */
-    .slider{
-        height: 300px;
-    }
-
-    .slider ul{
-        height: 300px;
-    }
-
-    .slider li{
-        height: 300px;
-    }
-
-    .slider li img{
-        height: 300px;
-    }
-
     /* responsive contenido */
     .content__parrafos-titulos{
         font-size: 20px;
@@ -601,23 +732,6 @@ h1{
         font-size: 24px;
     }
 
-    /* responsive slider */
-    .slider{
-        height: 300px;
-    }
-
-    .slider ul{
-        height: 300px;
-    }
-
-    .slider li{
-        height: 300px;
-    }
-
-    .slider li img{
-        height: 300px;
-    }
-
     /* responsive contenido */
     .content__parrafos-titulos{
         font-size: 24px;
@@ -665,23 +779,6 @@ h1{
 
     .links li a{
         font-size: 28px;
-    }
-
-    /* responsive slider */
-    .slider{
-        height: 350px;
-    }
-
-    .slider ul{
-        height: 350px;
-    }
-
-    .slider li{
-        height: 350px;
-    }
-
-    .slider li img{
-        height: 350px;
     }
 
     /* responsive contenido */
@@ -736,23 +833,6 @@ h1{
 
     .links li a{
         font-size: 30px;
-    }
-
-    /* responsive slider */
-    .slider{
-        height: 350px;
-    }
-
-    .slider ul{
-        height: 350px;
-    }
-
-    .slider li{
-        height: 350px;
-    }
-
-    .slider li img{
-        height: 350px;
     }
 
     /* responsive contenido */
@@ -830,23 +910,6 @@ h1{
 
     .links li a{
         font-size: 35px;
-    }
-
-    /* responsive slider */
-    .slider{
-        height: 400px;
-    }
-
-    .slider ul{
-        height: 400px;
-    }
-
-    .slider li{
-        height: 400px;
-    }
-
-    .slider li img{
-        height: 400px;
     }
 
     /* responsive contenido */

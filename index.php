@@ -4,6 +4,7 @@
     <?php startblock('links-styles') ?>
         <title>SendApp</title>
         <link rel="stylesheet" type="text/css" href="../Proyecto_SendApp_2024/CSS/StyleHome.css">
+        <script src="../Proyecto_SendApp_2024/scripts/ScriptsGenerales/slider.js"></script>
     <?php endblock() ?>
     
     <!-- Slider Sena -->
@@ -15,16 +16,37 @@
     <?php endblock() ?>
 
     <?php startblock('contenido') ?> <!--Llamo el bloque del contenido para sobre escribir lo que contiene la pagina-->
-    <div class="slider">
-        <ul>
-            <li><img src="./Inicio/Img-home/Slider-img/img1.jpg" alt="imagen1"></li>
-            <li><img src="./Inicio/Img-home/Slider-img/img2.png" alt="imagen2"></li>
-            <li><img src="./Inicio/Img-home/Slider-img/img3.png" alt="imagen3"></li>
-            <li><img src="./Inicio/Img-home/Slider-img/img4.png" alt="imagen4"></li>
-        
-        </ul>
-    </div>
+
+
     <!-- Contenido -->
+    <!-- Slider -->
+
+    <div class="splitview skewed">
+        <div class="panel bottom">
+            <div class="content">
+                <div class="description">
+                    <h1 class="TextSli1">Vive la experiencia SENA.</h1>
+                    <p class="TextSlipar1">Sumérgete en un ambiente dinámico que te permite desarrollar tus habilidades.</p>
+                </div>
+
+                <img src="../Proyecto_SendApp_2024/imagenes/Slider-img/expsena.jpg" alt="foto1">
+            </div>
+        </div>
+
+        <div class="panel top">
+            <div class="content">
+                <div class="description">
+                    <h1 class="TextSli2">Explora nuevas perspectivas.</h1>
+                    <p class="TextSlipar2">Crea conexiones significativas y desafíate a ti mismo en cada paso del camino.</p>
+                </div>
+
+                <img src="../Proyecto_SendApp_2024/imagenes/Slider-img/expsena-edit.jpg" alt="foto2">
+            </div>
+        </div>
+
+        <div class="handle"></div>
+            </div>
+
     <div class="content">
         <section>
             <div class="content__parrafos-titulos">
@@ -34,15 +56,13 @@
                     Aquí encontrarás toda la información necesaria sobre como está constituido el centro de formación, sus principales áreas y servicios.
                 </p>
             </div>
-
-            <!-- ESTE ES DONDE ESTABA EL ESPACIO PARA EL NUEVO SLIDER QUE VA A HACER KEVIN -->
-
+            
             
             <!--Contenddor de Parrafos-->
             <div class="content__parrafos-links">
                 <div class="p__container">
                     <article>
-                        <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Icono De Areas">
+                        <img src="Inicio/Img-home/Section-Img/icono1-section-verde.png" alt="Icono De Areas">
                     </article>                         
                     <p>
                         En el menú de navagación en el apartado de <b><a href="Areas/Areas.php">Áreas</a></b> puedes encontrar la información referente a cada una de las áreas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
@@ -50,7 +70,7 @@
                 </div>
                 <div class="p__container">
                     <article>
-                        <img src="Inicio/Img-home/Section-Img/communicate_2343723.png" alt="Inoco De informacion">
+                        <img src="Inicio/Img-home/Section-Img/communicate.png" alt="Inoco De informacion">
                     </article> 
                     <p>
                         Si eres una persona natural en este sitío puedes encontrar todos los datos de contacto pertinentes sobre los funcionarios que atienden este centro de formación solo ve al siguiente link y encontrarás todo la información necesaria en <b><a href="#Info-cditi">Acerca CDITI.</a></b>
@@ -58,7 +78,7 @@
                 </div>
                 <div class="p__container">
                     <article>
-                        <img src="Inicio/Img-home/Section-Img/training_12343284.png" alt="Inoco De Nosotros">
+                        <img src="Inicio/Img-home/Section-Img/training.png" alt="Inoco De Nosotros">
                     </article> 
                     <p>
                         Si te interesa saber un poco más sobre nosotros y ¿Por qué fue creado este sitio web? puedes visitar el apartado de <b><a href="#nosotros">Nosotros.</a></b>
@@ -66,7 +86,7 @@
                 </div>
                 <div class="p__container">
                     <article>
-                        <img src="Inicio/Img-home/Section-Img/calendar_2693507.png" alt="Inoco de Agenda">
+                        <img src="Inicio/Img-home/Section-Img/calendar.png" alt="Inoco de Agenda">
                     </article> 
                     <p>
                         Si eres aprendíz Sena y necesitas agendar una cita para algún servicio del Centro de Diseño e Innovación Tecnológica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="../Proyecto_SendApp_2024/Login/login-aprendices/login.php">Ingreso.</a></b>
@@ -88,7 +108,7 @@
                 <img src="./Inicio/Img-home/Section-Img/escudo.png" alt="Escudo Sena">
             </div>
             <div class="section-logosimbolo">
-                <img src="./Inicio/Img-home/Section-Img/logo1.png" alt="Logo Sena">
+                <img src="./Inicio/Img-home/LogosSena-Img/logoSenaVerde2.png" alt="Logo Sena" id="logo-sena-conostros">
                 <div class="logosimbolo">
                     <h1>Logosímbolo</h1>
                     <p>

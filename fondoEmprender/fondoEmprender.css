@@ -91,13 +91,14 @@ body{
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+    text-align: justify;
     font-size: 22px;
 }
 .p{
+    text-align: justify;
     color: #00324D;
     /* font-size: 25px; */
     margin: 10px;
-    text-align: center;
 }
 hr{
     margin: 2rem 0 10px 0;
@@ -186,10 +187,13 @@ hr{
     overflow: hidden; 
 }
 .contenido-corto{
+    text-align: justify;
     padding: 10px;
-    font-size: 1.2rem; 
+   
 }
 .contenido-expansivo {
+    padding: 10px;
+    text-align: justify;
     display: none;
 }
 

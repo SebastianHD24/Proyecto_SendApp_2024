@@ -6,7 +6,7 @@
 
             <!-- Cabecera del formulario cambiar datos -->
             <div class="header">
-                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/Sena-Logo.png" alt="Logo" class="login_img">
+                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/LogoSenaVerde.png" alt="Logo" class="login_img">
                 <h1 class="login__title">Datos de su cuenta</h1>
                 <span class="inputGeneral oculto"></span>
             </div>
