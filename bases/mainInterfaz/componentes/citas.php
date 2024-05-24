@@ -14,13 +14,13 @@ if (isset($_SESSION['documento_identidad'])) {
     servicios.nombre_servicio, 
     usuarios.nombres AS nombre_funcionario_cita,
     usuarios.apellidos AS apellido_funcionario_cita
-FROM citas 
-INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
-INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
-WHERE citas.documento_usuario = '$documento_identidad' 
+    FROM citas 
+    INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
+    INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
+    WHERE citas.documento_usuario = '$documento_identidad' 
     AND citas.fecha >= CURDATE()
-ORDER BY citas.fecha ASC
-LIMIT 6";
+    ORDER BY citas.fecha ASC
+    LIMIT 6";
 
 
 
