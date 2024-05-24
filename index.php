@@ -89,7 +89,7 @@
                         <img src="Inicio/Img-home/Section-Img/calendar.png" alt="Inoco de Agenda">
                     </article> 
                     <p>
-                        Si eres aprendíz Sena y necesitas agendar una cita para algún servicio del Centro de Diseño e Innovación Tecnológica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="Login/login-aprendices/login-aprendices.html">Ingreso.</a></b>
+                        Si eres aprendíz Sena y necesitas agendar una cita para algún servicio del Centro de Diseño e Innovación Tecnológica Industrial recuerda ingresar con tus datos de Sofia en <b><a href="../Proyecto_SendApp_2024/Login/login-aprendices/login.php">Ingreso.</a></b>
                     </p>
                 </div>
             </div>

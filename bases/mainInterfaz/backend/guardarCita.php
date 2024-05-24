@@ -60,6 +60,7 @@ if (isset($_POST['descripcion']) && $_POST['descripcion'] !== "") {
     }
 } else {
     echo "Error: El campo 'descripcion' es obligatorio.";
+    header('Location: ../../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php');
 }
 
 mysqli_close($conn); // Cerrar la conexión a la base de datos

@@ -1,3 +1,4 @@
+// invocamos la variables del html para ocultar hisotrial y volver 
 let historial = document.getElementById('historial-oculto');
 let  predeterminado = document.getElementById('notifications-panel');
 let  enlaceHistorial=document.getElementById('historial'); 
@@ -11,7 +12,7 @@ function verHistorial(){
 
 function regresar(){
      location.reload();
-    console.log('mamguevo');
+    
 }
 
 //Accedemos al elemento HTML

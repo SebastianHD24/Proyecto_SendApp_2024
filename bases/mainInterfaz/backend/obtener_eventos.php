@@ -20,7 +20,7 @@ if(isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     $query = "SELECT citas.descripcion AS evento, citas.hora AS hora, usuarios.nombres AS nombre_usuario 
               FROM citas 
               INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad 
-              WHERE citas.fecha = '$fecha' AND citas.estado_cita = 'aceptado' AND citas.usuario_f=$funcionario";
+              WHERE citas.fecha = '$fecha' AND citas.estado_cita = 'aceptado' AND citas.usuario_f= $funcionario";
     
     $result = mysqli_query($conn, $query);
 

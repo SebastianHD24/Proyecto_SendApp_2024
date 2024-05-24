@@ -1,6 +1,54 @@
 <?php
+    // Este script de PHP redirecciona al usuario fuera de un componente en el que no tenga permisos
 
-    //Este script de php redirecciona al usuario fuera de un componente en el que no tenga permisos 
+    // URL sin parámetros
+    $urlActualSinParametro = strtok($_SERVER['REQUEST_URI'], '?');
+
+    // Dividir la URL en partes
+    $partesURL = explode('/', trim($urlActualSinParametro, '/'));
+
+    // Obtener la penúltima y la última sección
+    $penultimaSeccion = $partesURL[count($partesURL) - 2];
+    $ultimaSeccion = $partesURL[count($partesURL) - 1];
+
+    if ($id_rol == 1) {
+        if ((strcasecmp($penultimaSeccion, 'Funcionario') === 0 && strcasecmp($ultimaSeccion, 'funcionario.php') === 0) || (strcasecmp($penultimaSeccion, 'Usuario') === 0 && strcasecmp($ultimaSeccion, 'usuarioSesion.php') === 0) ) {
+            // Cambiar la penúltima sección a 'administrador' y la última a 'administrador.php'
+            $partesURL[count($partesURL) - 2] = 'Administrador';
+            $partesURL[count($partesURL) - 1] = 'Administrador.php';
+            // Reconstruir la nueva URL
+            $nuevaURL = '/' . implode('/', $partesURL);
+            // Redirigir a la nueva URL
+            header('Location: ' . $nuevaURL);
+            exit();
+        }  
+    } 
+
+    else if ($id_rol == 2) {
+        if ((strcasecmp($penultimaSeccion, 'Administrador') === 0 && strcasecmp($ultimaSeccion, 'Administrador.php') === 0) || (strcasecmp($penultimaSeccion, 'Usuario') === 0 && strcasecmp($ultimaSeccion, 'usuarioSesion.php') === 0) ) {
+            // Cambiar la penúltima sección a 'administrador' y la última a 'administrador.php'
+            $partesURL[count($partesURL) - 2] = 'Funcionario';
+            $partesURL[count($partesURL) - 1] = 'funcionario.php';
+            // Reconstruir la nueva URL
+            $nuevaURL = '/' . implode('/', $partesURL);
+            // Redirigir a la nueva URL
+            header('Location: ' . $nuevaURL);
+            exit();
+        }  
+    }
+
+    else if ($id_rol == 3) {
+        if ((strcasecmp($penultimaSeccion, 'Administrador') === 0 && strcasecmp($ultimaSeccion, 'Administrador.php') === 0) || (strcasecmp($penultimaSeccion, 'Funcionario') === 0 && strcasecmp($ultimaSeccion, 'funcionario.php') === 0) ) {
+            // Cambiar la penúltima sección a 'administrador' y la última a 'administrador.php'
+            $partesURL[count($partesURL) - 2] = 'Usuario';
+            $partesURL[count($partesURL) - 1] = 'usuarioSesion.php';
+            // Reconstruir la nueva URL
+            $nuevaURL = '/' . implode('/', $partesURL);
+            // Redirigir a la nueva URL
+            header('Location: ' . $nuevaURL);
+            exit();
+        }  
+    }
 
     // Obtener la URL de la página actual
     $urlActual = $_SERVER['REQUEST_URI'];
