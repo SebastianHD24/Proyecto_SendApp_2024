@@ -107,6 +107,7 @@
     color: #FFCE40;
     font-weight: 600;
 }
+
 .popup-justificacion {
     
     position: fixed;
@@ -117,7 +118,7 @@
     color:black; 
     height: 100px;
     padding: 20px;
-    background-color: yellow;
+    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     

@@ -14,10 +14,14 @@ if (isset($_SESSION['documento_identidad'])) {
     servicios.nombre_servicio, 
     usuarios.nombres AS nombre_funcionario_cita,
     usuarios.apellidos AS apellido_funcionario_cita
-     FROM citas 
-     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
-     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
-     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY fecha DESC LIMIT 6";
+FROM citas 
+INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
+INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
+WHERE citas.documento_usuario = '$documento_identidad' 
+    AND citas.fecha >= CURDATE()
+ORDER BY citas.fecha ASC
+LIMIT 6";
+
 
 
     $result = mysqli_query($conn, $sql);
@@ -33,6 +37,10 @@ if (isset($_SESSION['documento_identidad'])) {
               
                 ?>
                 <div class="notifications">
+                <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
+                      " >
+                        <p><?= $row['justificacion_rechazo']?> </p>
+                    </div>
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                         <!-- aqui es donde estamos extrayendo los datos que necesitmaos de la bse de datos    -->
@@ -59,10 +67,10 @@ if (isset($_SESSION['documento_identidad'])) {
                     <article>
                         <b>Estado: </b>
                         <p>
-                            <?php
+                        <?php
                               if ($row['estado_cita']== 'rechazado'){
                                 echo 'rechazado  -
-                                <a id="verJustificacion" href="#">Ver justificación</a>';
+                                <a id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
                               }else {
                                 echo  $row['estado_cita'];
                               } 
@@ -161,8 +169,8 @@ if (isset($_SESSION['documento_identidad'])) {
                 <div class="notifications">
 
                     <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
-                      position:fixed;" >
-                        <p class="popup-justificacion_"><?= $row['justificacion_rechazo']?> </p>
+                      " >
+                        <p><?= $row['justificacion_rechazo']?> </p>
                     </div>
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
