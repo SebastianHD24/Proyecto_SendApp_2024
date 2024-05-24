@@ -69,7 +69,7 @@ LIMIT 6";
                         <?php
                               if ($row['estado_cita']== 'rechazado'){
                                 echo 'rechazado  -
-                                <a id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
+                                <a class="verJustificacion" id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
                               }else {
                                 echo  $row['estado_cita'];
                               } 
