@@ -3,7 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.css"> <!-- Estilos de psicologia -->
-    <title>Psicologia</title>
+    <title>Psicología</title>
 <?php endblock() ?>
 <!--Bloque para el logo sena-->
 <?php startblock('logo-sena') ?>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="contenido_tarjeta">
                         <h2><?php echo $servicio['titulo']; ?></h2>
-                        <p><?php echo $servicio['contenido']; ?></p>
+                        <p class="p"><?php echo $servicio['contenido']; ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>

@@ -3,7 +3,7 @@
 <?php startblock('links-styles') ?>
     <!-- ESTILOS CSS -->
     <link rel="stylesheet" type="text/css" href="../../Proyecto_SendApp_2024/Bienestar/Styles-Bienestar/bienestar.css"> <!-- Estilos de Bienestar -->
-    <title>Bienestar Al Aprendíz</title>
+    <title>Bienestar Al Aprendiz</title>
 <?php endblock() ?>
 
 <?php startblock('contenido') ?>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="contenido_tarjeta">
                             <h2><?php echo $servicio['titulo']; ?></h2>
-                            <p><?php echo $servicio['contenido']; ?></p>
+                            <p class="p"><?php echo $servicio['contenido']; ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -91,14 +91,12 @@ body{
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+    text-align: justify;
     font-size: 22px;
 }
 
 .p{
-    color: #00324D;
-    font-size: 25px;
-    margin: 10px;
-    text-align: center;
+    text-align: justify;
 }
 hr{
     margin: 2rem 0 10px 0;
@@ -135,28 +133,7 @@ hr{
     transform: scale(1.1);
     box-shadow: 0 8px 12px rgba(12, 12, 12, 0.5);
 }
-.l_ordenada{
-    list-style-type:none;
-    padding-left: 20px;
-}
-.l_ordenada li{
-    margin: 2rem;
-    margin-bottom: 10px;
-    position: relative;
-}
-.l_ordenada li::before {
-    content: "✔";
-    display: inline-block; 
-    width: 1em; 
-    height: 1em; 
-    margin-right: 0.5em; 
-    color: #29a900; 
-    font-size: 1.2em; 
-    position: absolute; 
-    left: -20px;
-    top: 50%; 
-    transform: translateY(-50%); 
-}
+
  /* Estilos para las esferas */
  .contenedor-esferas {
     margin: 3rem 0 3rem 0;

@@ -90,13 +90,11 @@ body{
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+    text-align: justify;
     font-size: 22px;
 }
 .p{
-    color: #00324D;
-    /* font-size: 25px; */
-    margin: 10px;
-    text-align: center;
+    text-align: justify;
 }
 hr{
     margin: 2rem 0 10px 0;
@@ -138,6 +136,7 @@ hr{
     padding-left: 20px;
 }
 .l_ordenada li{
+    text-align: justify;
     margin: 2rem;
     margin-bottom: 10px;
     position: relative;

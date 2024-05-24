@@ -6,7 +6,7 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
-                <th>Confirmacion</th>
+                <th>Confirmación</th>
                 <th>Asistencia</th>
                 <th>Acciones</th>
                 <th>Jornada</th>

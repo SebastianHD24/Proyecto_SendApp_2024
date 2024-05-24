@@ -86,10 +86,11 @@ body{
 .sub{
     font-family:  var(--fuente-principal);
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 2rem 4rem 2rem 4rem;
 }
 .parrafo{
+    text-align: justify;
     font-size: 22px;
 }
 .p{
@@ -138,6 +139,7 @@ hr{
     padding-left: 20px;
 }
 .l_ordenada li{
+    text-align: justify;
     margin: 2rem;
     margin-bottom: 10px;
     position: relative;

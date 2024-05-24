@@ -1,6 +1,6 @@
-<!-- botones para ver historial y volver  -->
-<a id="historial" onclick="verHistorial();"  href="#">ver historial</a>
-<a id="volver"  onclick="regresar();"   href="#"  style="display: none;">Regresar</a>
+
+<button class="verHistorial" id="historial" onclick="verHistorial();"  href="#">ver historial</button>
+<button  class="salirHistorial" id="volver" href="#"  onclick="regresar();"  style="display: none;">Regresar</button>
 <?php
 
 if (isset($_SESSION['documento_identidad'])) {
@@ -34,17 +34,22 @@ LIMIT 6";
             <div class="notifications-panel" id="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc  ($result)) {
-              
                 ?>
+                <!--Tarjeta donde se muestra la información de la cita-->
                 <div class="notifications">
+<<<<<<< HEAD
                 <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
                       " >
                         <p><?= $row['justificacion_rechazo']?> </p>
                     </div>
                     <figure>
+=======
+                    <!--Contenedor del logo superior-->
+                    <figure> 
+>>>>>>> 8d0ff1a635315c7a7ea6eefb367ca9bdf12dc390
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
-                        <!-- aqui es donde estamos extrayendo los datos que necesitmaos de la bse de datos    -->
                     </figure>
+<<<<<<< HEAD
                     <span></span>
                     <article>
                         <b>Área: </b>
@@ -105,13 +110,84 @@ LIMIT 6";
                 <?php
             }
             ?>
+=======
+                        <!-- Barras que separadao de contenido en la tarjeta -->
+                        <span></span>
+                            <!-- Artículo contenedor de datos extraido de la BD -->
+                            <article>
+                                <b>
+                                    Área: <!--Dato Descriptivo -->
+                                </b> 
+                                <p>
+                                    <?= $row['nombre_servicio'] ?> <!--Dato extraido de la BD -->
+                                </p> 
+                            </article> 
+                                <!-- Barras que separadao de contenido en la tarjeta -->
+                                <span></span>
+                                    <article>
+                                        <b>
+                                            Día: 
+                                        </b>
+                                        <p>
+                                            <?= empty($row['fecha']) ? "Aún no te han asignado el dia" : $row['fecha'] ?>
+                                        </p>
+                                    </article>
+                                        <!-- Barras que separadao de contenido en la tarjeta -->
+                                        <span></span>
+                                            <article>
+                                                <b>
+                                                    Hora: 
+                                                </b>
+                                                <p> 
+                                                    <?= empty($row['hora']) ? "Aún no te han asignado hora" : $row['hora'] ?> 
+                                                </p>
+                                            </article>
+                                                <!-- Barras que separadao de contenido en la tarjeta -->
+                                                <span></span>
+                                                    <article>
+                                                        <b>
+                                                            Estado: 
+                                                        </b>
+                                                        <b class="estado_cita">
+                                                            <?= $row['estado_cita'] ?>
+                                                        </b>
+                                                    </article>
+                                                <!-- Barras que separadao de contenido en la tarjeta -->
+                                                <span></span>
+                                            <article>
+                                                <b>Jornada: </b>
+                                                <p>
+                                                    <?= $row['jornada'] ?>
+                                                </p>
+                                            </article>
+                                        <!-- Barras que separadao de contenido en la tarjeta -->
+                                        <span></span>
+                                    <article>
+                                        <b>Funcionario: </b>
+                                        <p>
+                                            <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
+                                        </p>
+                                    </article>
+                                <!-- Barras que separadao de contenido en la tarjeta -->
+                                <span></span>
+                            <article>
+                                <b>Motivo: </b>
+                                <p> 
+                                    <?= $row['descripcion'] ?>
+                                </p>
+                            </article>
+                        </div>
+                    <?php
+                    }
+                ?>
+>>>>>>> 8d0ff1a635315c7a7ea6eefb367ca9bdf12dc390
             </div> <!-- Aquí se cierra el único contenedor de cuadrícula -->
-            <?php
-        } else {
-            ?>
-            <article>
-                <p>No se encontraron citas para mostrar a este usuario.</p>
-            </article>
+        <?php
+    } else {
+        ?>
+        <article>
+            <p>No se encontraron citas para mostrar a este usuario.</p>
+        </article>
             <?php 
         }
     } else {
@@ -128,14 +204,9 @@ LIMIT 6";
 
 
 <!-- script para ver el historial  -->
-
-
-
-
 <?php
 
-
- 
+ $conn = connection();
 
 if (isset($_SESSION['documento_identidad'])) {
     $documento_identidad = $_SESSION['documento_identidad'];

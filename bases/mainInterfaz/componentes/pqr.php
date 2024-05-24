@@ -9,7 +9,7 @@
             <label for="opciones">Tipo de PQR:</label>
             <br>
             <select name="tipo_solicitud" id="opciones" class="opcionespqr">
-                <option value="peticion">Peticion</option>
+                <option value="peticion">Petición</option>
                 <option value="queja">Queja</option>
                 <option value="reclamo">Reclamo</option>
                 <option value="sugerencia">Sugerencia</option>
@@ -22,9 +22,9 @@
             <textarea name="descripcion_pqrs" id="text" cols="30" rows="10" class="descripcion-pqr"></textarea>
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
-        <div class="button">
-            <button type="submit" id="btnEnviar">Enviar</button>
-            <button type="reset" id="btnCancelar">Cancelar</button>
+        <div class="boton">
+            <button class="button_pqr" type="submit" id="btnEnviar">Enviar</button>
+            <button class="button_pqr" type="reset" id="btnCancelar">Cancelar</button>
         </div>
         <!-- ----------------- menu para ocultar ----------- -->
     </section>

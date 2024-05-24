@@ -31,7 +31,7 @@
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
                 <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn">
-                  <p class="txt1">Psicologia</p>
+                  <p class="txt1">Psicología</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>    
@@ -130,7 +130,7 @@
      
      
       
-        <p>Jornada:</p>
+        <p class="sub"><strong>Jornada:</strong></p>
 
       <select  name="jornada" class="select">
         <option value="Diurna"> Diurna </option>
@@ -142,11 +142,11 @@
       <select name='usuario_f' class="funcionario">
     
       </select>
-      <p>Area</p>
-      <input type="text" name="nombre_servicio" disabled >
+      <p class="sub"><strong>Area</strong></p>
+      <input type="text" name="nombre_servicio" disabled class="Nombre_Area" >
 
       <div class="formulario">
-        <label for="descripcion">Descripción:</label>
+        <label for="descripcion"><strong>Descripción:</strong></label>
         <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4"></textarea>
       </div>
 
