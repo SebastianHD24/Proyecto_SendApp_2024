@@ -163,15 +163,11 @@ select{
     text-align: center;
 }
 
-/*Desenfoque del fondo*/
-.blur-background {
-    filter: blur(5px);
-}
-
-/*Estilo del popup despues de 3 segundos*/
+/*Estilo del mensaje durante 3 segundos*/
 .message_success {
     color: #155724;
-    z-index: 1000;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 

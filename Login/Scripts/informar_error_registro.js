@@ -12,19 +12,17 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
             .then(data => {
                 const messageDiv = document.getElementById('message');
                 const registerForm = document.getElementById('registerForm');
-                messageDiv.style.display = 'block';
-                document.body.classList.add('blur-background');
 
                 if (data.success === 6) {
                     registerForm.style.display = 'none';
                     messageDiv.className = 'message_success';
                     messageDiv.innerText = 'Registro grabado correctamente.';
                     messageDiv.style.display = 'block';
-                    //setTimeout(function() {
-                      //  messageDiv.style.display = 'none';
-                        //document.body.classList.remove('blur-background');
-                        // window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
-                        // }, 120000); 3000 milisegundos = 3 segundos
+                    setTimeout(function() {
+                        messageDiv.style.display = 'none';
+                        document.body.classList.remove('blur-background');
+                        window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
+                    }, 3000); //3000 milisegundos = 3 segundos
                 } else if (data.success === 1) {
                     const error = document.getElementById('mensaje_errord');
                     const limpiarC = document.getElementById('login-input-user-d');
