@@ -40,7 +40,7 @@ select{
     margin: 10px 0px 0px 0px;
     text-align: center;
 }
-label{
+.type_PQR label{
     font-weight: 500;
 }
 

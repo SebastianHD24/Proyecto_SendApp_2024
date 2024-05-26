@@ -20,30 +20,30 @@
 
 /* Estilos para el contenedor principal */
 .table_div {
-   width: 100%; /* Limita el ancho máximo */
-    margin: 20px auto; /* Centra el contenido y agrega espacio */
-    padding: 10px; /* Relleno interno */
+    width: 100%; /*Limita el ancho máximo */
+    margin: 20px auto; 
+    padding: 10px; 
     background-color: white; /* Fondo blanco para el contenedor */
     border: 2px solid var(--azul); /* Borde suave */
     border-radius: 8px; /* Bordes redondeados */
     overflow: hidden ;
-    overflow-x: scroll; /* Solo desplazamiento horizontal */
-    overflow-y: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
     /* background-color: #00234d; */
     display: flex;
-    justify-content: center;
+ 
     align-items: center;
 }
 
 .table_div table{
-    /* overflow: hidden ; */
-    overflow-x: scroll; /* Solo desplazamiento horizontal */
+    overflow: hidden ;
+    overflow-x: auto;
     overflow-y: hidden;   
     background-color: #00234D;
 }
 
 .fila, .filar {
-    padding: 12px; /* Espacio interno */
+    padding: 12px; 
     border: 1px solid #ddd; /* Bordes claros */
 }
 
@@ -192,6 +192,7 @@ thead{
                     input:nth-child(2) {
                     text-align: center;
                     } */
+                            
 .modal-content form input{
     width: 100%;
     padding: 10px;
@@ -222,9 +223,18 @@ thead{
     background-color: #102b4b;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     .modal-content {
         width: 80%;
     }
-    
+    /* .table_div{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-x: auto;
+    } */
+     /* .table_div table{
+        width: 80%;
+        overflow-x: auto;
+    }  */
 }

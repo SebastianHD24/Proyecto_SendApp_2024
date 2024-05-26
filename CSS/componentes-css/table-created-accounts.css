@@ -8,15 +8,31 @@
     --gris-claro: #ededed;
     --fuente-principal: "Work Sans", sans-serif;
 }
-
+/* 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
+} */
 
 .search-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .search-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add_user{
+        margin-top: 10px;
+    }
 }
 
 .search-container input[type="text"] {
@@ -36,6 +52,19 @@ body {
 }
 
 .search-container button:hover {
+    background-color: #45a049;
+}
+
+.add_user{
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+.add_user:hover{
     background-color: #45a049;
 }
 

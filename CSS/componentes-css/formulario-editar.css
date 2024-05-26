@@ -44,7 +44,7 @@
     max-width: 80%;
     width: 20rem;
 }
-.login__input{
+.edit_input{
     padding: .6rem;
     width: 100%;
     border: 1px solid var(--negro);
@@ -52,7 +52,7 @@
     border-radius: 5px;
     cursor:text;
 }
-input[disabled]{
+.edit_input[disabled]{
     background-color: var(--gris-oscuro);
 }
 .cerrar{
@@ -84,7 +84,7 @@ input[disabled]{
     background-color: var(--verde);
     color: var(--blanco);
 }
-input{
+.edit_input{
     margin: 18px 0px 30px 0px;
 }
 
