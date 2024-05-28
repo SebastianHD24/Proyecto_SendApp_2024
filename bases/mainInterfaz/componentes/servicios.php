@@ -145,7 +145,11 @@
       <p class="sub"><strong>Area</strong></p>
       <input type="text" name="nombre_servicio" disabled class="Nombre_Area" >
 
-      
+      <div class="formulario">
+        <label for="descripcion"><strong>Descripción:</strong></label>
+        <p id="charCount">0/150</p>
+        <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="150" placeholder="El limite de caracteres es de 150"></textarea>
+      </div>
 
   <div class="buttons">
         <button class="button-servicio">Cerrar</button>
