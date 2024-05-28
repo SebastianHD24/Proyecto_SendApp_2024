@@ -1,19 +1,21 @@
 <div class="organizar_citas" id="organizar_citas" >
-    <nav>
+    
+<nav>
         <ul>
-        <a class="citasRechazadas" onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a>
-        <a class="citasAsistidas" onclick="ocultarTablaYMostrarAsistidas();"   >Citas  asistidas</a>
+        <button class="citasRechazadas"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</button>
+        <a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a>
         <a class="citasNoAsistidas" href="javascript:void(0);" "  >Citas No-asistidas</a>
-       
-
-        </ul>
+    
+         </ul>
     </nav>
-
+    
 </div>
 <!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
 
+
 <div class="table_div" id="table_div">
-    
+
+
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -123,10 +125,17 @@
     </table>
 
 </div>
+<div class="NoAsistidasContent oculto"> 
 
+     <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); 
+     ?>       
+
+</div>
 
 
 <div class="AsistidasContent oculto"  >
+<a class="citasRechazadas"  href="javascript:void(0);" onclick="volver();">volver</a> 
+<a onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
     <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); 
     ?>
     
@@ -134,7 +143,7 @@
 
 
 <div class="rechazadasContent oculto "  >
-    
+<a class="citasRechazadas"  href="javascript:void(0);" onclick="volver();">volver</a> 
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
     
 </div>
@@ -148,21 +157,21 @@
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 <script>
+// Declaramos variable para  lo que necesitamos 
 let ocultarDiv = document.querySelector('.table_div');
 let mostrarDivRechazadas = document.querySelector('.rechazadasContent');
 let mostarDivAsistidas = document.querySelector('.AsistidasContent');
 let Ocultarnav = document.getElementById('organizar_citas');
-
+let mostarDivNoAsistidas= document.querySelector('.NoAsistidasContent');
+// Funcion para ocultar contenido de citas pendientes y mostar contenido de citas rechazadas
     function ocultarTablaYMostrarRechazadas() {
         ocultarDiv.classList.add('oculto');
+        mostarDivAsistidas.classList.add('oculto');
         mostrarDivRechazadas.classList.remove('oculto');
-       Ocultarnav.style.display='none';
+        Ocultarnav.style.display='none';
     };
 
-    function volverRechazadas() {
-        ocultarDiv.classList.remove('oculto');
-        mostrarDivRechazadas.classList.add('oculto');
-    }; 
+    // funcion para volver 
 
     function ocultarTablaYMostrarAsistidas() {
         ocultarDiv.classList.add('oculto');
@@ -173,7 +182,7 @@ let Ocultarnav = document.getElementById('organizar_citas');
     function volverAsistidas() {
         ocultarDiv.classList.remove('oculto');
         mostrarDivAsistidas.classList.add('oculto');
-    }; 
+    }; 
    
 
 
