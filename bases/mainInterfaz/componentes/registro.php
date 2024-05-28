@@ -1,3 +1,9 @@
+<?php if (isset($_SESSION['documento_identidad'])): ?>
+    <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario_admin.css">
+<?php elseif (!isset($_SESSION['documento_identidad'])): ?>
+    <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/Login/Styles/login.css">
+<?php endif ?> 
+
 <div id="message" class="message"></div>
 
 <form id="registerForm" action="../../../../Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php" class="form-login form2" method="post"> 
@@ -7,9 +13,9 @@
         </button>  
          
     <?php endif ?> 
-    <div class="logo_titulo">
+    <!-- <div class="logo_titulo">
         <img src="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/SendApp.png" alt="Logo" class="registro_img">
-    </div> 
+    </div>  -->
     <div class="titulos">
         <ul class="login-nav">
             <?php if (!isset($_SESSION['documento_identidad'])): ?>    
@@ -29,61 +35,61 @@
     <p class="required_text">Los campos con el simbolo * son obligatorios</p> 
     <div class="contenedor_secciones">
         <div class="primera-seccion">
-            <label for="tipo-documento" class="registro_label">
-                Tipo de Documento *
-            </label>
-            <select id="tipo-documento" class="registro_input" name="tipo_documento" required>
+            <label for="tipo-documento" class="registro_label login__label">
+            Tipo de Documento *
+        </label>
+            <select id="tipo-documento" class="registro_input login__input" name="tipo_documento" required>
                 <option value="CC">Cédula de Ciudadanía</option>
                 <option value="TI">Tarjeta de Identidad</option>
                 <option value="DE">Documento Extranjero</option>
             </select>
             <p id="mensaje_errord"></p>
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Numero de documento *
             </label>
-            <input id="login-input-user-d" class="registro_input" type="number" name="documento_identidad" placeholder="Número de documento" required/>
+            <input id="login-input-user-d" class="registro_input login__input" type="number" name="documento_identidad" placeholder="Número de documento" required/>
 
             <p id="mensaje_errorc"></p>
-            <label for="login-input-password" class="registro_label">
+            <label for="login-input-password" class="registro_label login__label">
                 Contraseña *
             </label>
-            <input id="login-input-password-p" class="registro_input" type="text" name="contrasena" placeholder="Contraseña" required/>
+            <input id="login-input-password-p" class="registro_input login__input" type="text" name="contrasena" placeholder="Contraseña" required/>
             
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Nombres *
             </label>
-            <input id="login-input-user-n" class="registro_input" type="text" name="nombres" placeholder="Nombres" required/>
+            <input id="login-input-user-n" class="registro_input login__input" type="text" name="nombres" placeholder="Nombres" required/>
 
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Apellidos *
             </label>
-            <input id="login-input-user-a" class="registro_input" type="text" name="apellidos" placeholder="Apellidos" required/>
+            <input id="login-input-user-a" class="registro_input login__input" type="text" name="apellidos" placeholder="Apellidos" required/>
 
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Correo *
             </label>
-            <input id="login-input-user-c" class="registro_input" type="email" name="correo" placeholder="Correo electronico" required/>
+            <input id="login-input-user-c" class="registro_input login__input" type="email" name="correo" placeholder="Correo electronico" required/>
         </div>
 
         <div class="segunda-seccion">
 
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Celular *
             </label>
-            <input id="login-input-user-ce" class="registro_input" type="text" name="celular" placeholder="Número celular / telefono" required/>
+            <input id="login-input-user-ce" class="registro_input login__input" type="text" name="celular" placeholder="Número celular / telefono" required/>
 
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Programa*
             </label>
-            <input id="login-input-user-p" class="registro_input" type="text" name="programa" placeholder="Programa" required/>
+            <input id="login-input-user-p" class="registro_input login__input" type="text" name="programa" placeholder="Programa" required/>
 
-            <label for="login-input-user" class="registro_label">
+            <label for="login-input-user" class="registro_label login__label">
                 Ficha*
             </label>
-            <input id="login-input-user-f" class="registro_input" type="number" name="ficha" placeholder="Número de ficha" required/>
+            <input id="login-input-user-f" class="registro_input login__input" type="number" name="ficha" placeholder="Número de ficha" required/>
 
             <?php if (isset($_SESSION['documento_identidad'])): ?>
-                <label class="registro_label" for="id_rol">Rol *</label>
+                <label class="registro_label login__label" for="id_rol">Rol *</label>
                 <select name="id_rol" id="id_rol">
                     <?php
                         // Realizar la consulta para obtener solo los roles de aprendiz y funcionario
@@ -96,7 +102,7 @@
                         }
                     ?>
                 </select>
-                <label class="registro_label" for="id_servicio">Servicio:</label>
+                <label class="registro_label login__label" for="id_servicio">Servicio:</label>
                 <select name="id_servicio" id="id_servicio">
                 <?php
                     // Realizar la consulta para obtener todos los servicios
@@ -121,7 +127,7 @@
             <?php endif ?>
 
             <div class="registrar">
-                <input class="btn_registrar" type="submit" value="Registrarse">
+                <input class="btn_registrar login__submit " type="submit" value="Registrarse">
             </div>
             
             <p id="mensaje_errore"></p>

@@ -1,5 +1,4 @@
 <!-- <link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/created-accounts.css" > -->
-<link rel="stylesheet" type="text/css" href="../../CSS/componentes-css/formulario_admin.css">
 <link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/table-created-accounts.css" >
 
 
