@@ -22,16 +22,13 @@
 .table_div {
     width: 100%; /*Limita el ancho máximo */
     margin: 20px auto; 
-    padding: 10px; 
     background-color: white; /* Fondo blanco para el contenedor */
     border: 2px solid var(--azul); /* Borde suave */
     border-radius: 8px; /* Bordes redondeados */
     overflow: hidden ;
     overflow-x: auto;
     overflow-y: auto;
-    /* background-color: #00234d; */
     display: flex;
- 
     align-items: center;
 }
 
