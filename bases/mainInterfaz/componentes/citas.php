@@ -266,7 +266,7 @@ if (isset($_SESSION['documento_identidad'])) {
 ?>
 
 
-
+<script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/cantidadCitas.js'></script>
 
 <script>
