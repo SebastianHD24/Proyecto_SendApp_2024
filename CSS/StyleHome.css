@@ -193,9 +193,29 @@ body{
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .TextSli1 {
+        margin-right: 50px;
+    }
+    .TextSlipar1 {
+        margin-right: 50px;
+    }
+    .panel #foto1 {
+        left: 28%;
+    }
+    .panel #foto2{
+        left:75%;
+    }
+    .bottom .description {
+        width: 60%;
+        left: 225px;
+    }
+    .top .description {
+        width: 40%;
+        left: 20px;
+    }
 }
     
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     .description h1,p {
         font-size: 0.7rem;
     }
