@@ -1,17 +1,8 @@
-<div class="organizar_citas" id="organizar_citas" >
-    <nav>
-        <ul>
-        <a class="citasRechazadas" href="javascript:void(0);" onclick="mostrarCitasRechazadas();"  >Citas rechazadas</a>
-        <a class="citasNoAsistidas" href="javascript:void(0);" onclick="mostrarCitasNoAsistidas();"  >Citas No-asistidas</a>
-       
 
-        </ul>
-    </nav>
-
-</div>
 <h1 id="titulo_citas">Citas pendientes</h1>
 
-<div class="table_div" id="table_Asistidas">
+<div class="table_div" >
+
     
     <table>
         <thead>
@@ -22,8 +13,7 @@
                 <th>Descripción de la cita</th>
                 <th>Confirmación</th>
                 <th>Jornada</th>
-               <th>Asistencia</th>
-                <th>Acciones</th>
+              
             </tr>
         </thead>
         <tbody>
@@ -35,7 +25,7 @@
             $funcionario = $_SESSION["documento_identidad"];
             $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
             FROM citas
-            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' ORDER BY citas.id_cita ASC ";
+            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'si-asiste' ORDER BY citas.id_cita ASC ";
     
             $result = mysqli_query($conn, $sql);
 
@@ -68,7 +58,16 @@
     </table>
 </div>
 
+
+
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 <script>
+function volver() {
+    // document.getElementById('table_rechazadas').style.display = 'none';
+    // document.getElementById('pendientesContent').style.display = 'block';
+    // document.getElementById('organizar_citas').style.display = 'none';
+    location.reload();
+}
+
 
 </script>
