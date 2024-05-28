@@ -1,17 +1,6 @@
-<div class="organizar_citas">
-    <nav>
-        <ul>
-        <a class="citasRechazadas" href="javascript:void(0);" onclick="mostrarCitasPendientes();"  >Regresar </a>
-        <a class="citasAsistidas" href="javascript:void(0);" onclick="mostrarCitasAsistidas();"  >Citas  asistidas</a>
-        <a class="citasNoAsistidas" href="javascript:void(0);" onclick="mostrarCitasNoAsistidas();"  >Citas No-asistidas</a>
-       
 
-        </ul>
-    </nav>
-
-</div>
-<h1 id="" >citas Rechazadas</h1>
 <div class="table_div" id="table_rechazadas">
+
     
     <table>
         <thead>
@@ -20,6 +9,7 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
+                <th>Justificación Rechazo</th>
                 <th>Jornada</th>
             </tr>
         </thead>
@@ -29,7 +19,7 @@
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
             $funcionario = $_SESSION["documento_identidad"];
-            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
+            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion, citas.justificacion_rechazo 
             FROM citas
             INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='rechazado' ORDER BY citas.id_cita ASC ";
     
@@ -49,6 +39,8 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
+                        <td><?= $row['justificacion_rechazo'] ?></td>
+
                         <td><?= $row['jornada'] ?></td>
                             
                              
@@ -73,18 +65,11 @@
         </tbody>
     </table>
 </div>
-<div id="pendientesContent" style="display: none;" >
-    <?php include  __DIR__ .'../../componentes/citaspendiente.php'; 
-    ?>
 
 
-<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 
 <script>
    function mostrarCitasPendientes() {
-    // document.getElementById('table_rechazadas').style.display = 'none';
-    // document.getElementById('pendientesContent').style.display = 'block';
-    // document.getElementById('organizar_citas').style.display = 'none';
     location.reload();
   
 }

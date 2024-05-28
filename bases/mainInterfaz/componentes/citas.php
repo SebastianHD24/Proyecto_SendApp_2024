@@ -30,7 +30,6 @@ if (isset($_SESSION['documento_identidad'])) {
         if (mysqli_num_rows($result) > 0) {
          // Aquí se abre el único contenedor de cuadrícula
             ?>
-           
             <div class="notifications-panel" id="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc  ($result)) {
@@ -154,8 +153,12 @@ if (isset($_SESSION['documento_identidad'])) {
         if (mysqli_num_rows($result) > 0) {
             // Aquí se abre el único contenedor de cuadrícula
             ?>
+            <div class="buscador">
+                aqui esta el buscador
+            </div>
             <div id="historial-oculto" class= "notifications-panel" style="display: none;">
             <?php
+            
             while ($row = mysqli_fetch_assoc  ($result)) {
               
                 ?>
@@ -240,7 +243,7 @@ if (isset($_SESSION['documento_identidad'])) {
         } else {
             ?>
             <article>
-                <p>No se encontraron citas para mostrar a este usuario.</p>
+                <p></p>
             </article>
             <?php 
         }

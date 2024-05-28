@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-:root{
+:root {
   --verde: #39a900;
   --blanco: #fff;
   --negro: #070001;
@@ -23,7 +23,7 @@ h3 {
   color: var(--blanco);
 }
 
-.parrafo_calendario{
+.parrafo_calendario {
   font-weight: 600;
   padding-bottom: 1rem;
 }
@@ -46,13 +46,12 @@ h3 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
 .calendar nav {
   display: flex;
   align-items: center;
 }
 
-.calendar .week{
+.calendar .week {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -114,7 +113,7 @@ h3 {
   padding-right: 0.7rem;
 }
 
-.dates{
+.dates {
   padding: 0rem 0.7rem 1rem;
 }
 
@@ -135,10 +134,15 @@ h3 {
   z-index: -1;
 }
 
+/* Estilos para días inactivos */
 .dates li.inactive {
   color: #ccc;
+  pointer-events: none; /* Deshabilita eventos de clic en días inactivos */
 }
 
+.dates li.inactive::before {
+  background-color: #ccc; /* Contrasting color */
+}
 .prev-month,
 .next-month {
   color: #ccc;
@@ -159,13 +163,13 @@ h3 {
   flex-direction: column;
 }
 
-.eventos h2{
+.eventos h2 {
   font-weight: 700;
   text-align: center;
   padding-bottom: 1rem;
 }
 
-.eventos table{
+.eventos table {
   display: flex;
   justify-content: center;
   border: none;
@@ -187,7 +191,6 @@ h3 {
   color: var(--blanco);
 }
 
-
 .eventos tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -208,11 +211,12 @@ h3 {
   right: 5px;
 }
 
-.dates li.event {
+/* Estilos para los días con eventos futuros */
+.dates li.event.future {
   color: #fff;
 }
 
-.dates li.event::before {
+.dates li.event.future::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -220,23 +224,36 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #00ff0d;
+  background: #00ff0d; /* Verde para eventos futuros */
   border-radius: 50%;
   z-index: -1;
 }
 
-
-.dates li.inactive::before {
-  background-color: #ccc;  
+/* Estilos para los días con eventos pasados */
+.dates li.event.past {
+  color: #fff;
 }
 
-@media only screen and (max-width: 768px){
-  .eventos{
+.dates li.event.past::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ccc; /* Rojo para eventos pasados */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  .eventos {
     padding: 0vw 4vw;
   }
-  .eventos table{
+  .eventos table {
     max-width: 82vw;
   }
-} 
+}
 
 

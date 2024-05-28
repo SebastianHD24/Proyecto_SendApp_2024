@@ -5,6 +5,7 @@ const salir = document.getElementById('volver');
 const mensaje = document.getElementById('mensaje');
 const mensaje1 = document.getElementById('mensaje1');
 const form = document.getElementById('formulario_notificaciones');
+const formCitas = document.getElementById('formulario_citas');
 
 console.log("Que esta pasando");
 
@@ -242,4 +243,65 @@ function historialDesde(){
 
 function ocultarHistorial(){
     location.reload();
+}
+
+
+function historialCita(){
+    //Para obtener los datos desde un tiempo especifico
+    // Agregar un evento de escucha para el evento submit del formulario
+    console.log("holaa aqui estoy");
+    formCitas.addEventListener('submit', function(e) {
+        // Prevenir el comportamiento por defecto del formulario (enviar y recargar la página)
+        e.preventDefault();
+        // Obtener datos del formulario
+        let formCita = new FormData(formCitas);
+        // Realizar una solicitud POST al servidor
+        fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/historialCitas.php', {
+            method: 'POST',
+            body: formCita
+        })
+        .then(response => response.json()) // Convertir la respuesta a JSON
+        .then(data => {
+            console.log(data)
+            document.querySelector('.notifications-panel').innerHTML = '';
+            data.forEach(row => {
+                    document.querySelector('.notifications-panel').innerHTML += `
+                    <div class="notifications">
+                        <figure>
+                            <img src="../../Styles/Img/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
+                        </figure>
+                        <span></span>
+                        <article>
+                            <p>Área: ${row.nombre_servicio} </p>
+                        </article>
+                        <span></span>
+                        <article>
+                            <p>Día: ${row.fecha} "Aún no te han asignado el dia" : ${row.fecha} </p>
+                        </article>
+                        <span></span>
+                        <article>
+                        <p>Hora: ${row.hora} "Aún no te han asignado hora" : ${row.hora}  </p>
+                        </article>
+                        <span></span>
+                        <article>
+                            <p>Estado: ${row.estado_cita}</p>
+                        </article>
+                        <span></span>
+                        <article>
+                            <p>Motivo: ${row.descripcion}</p>
+                        </article>
+                        <span></span>
+                        <article>
+                            <p>jornada: ${row.jornada}</p>
+                        </article>
+                        <span></span>
+                        <article>
+                        <p>  Funcionario: ${row.nombre_funcionario_cita}  ${row.apellido_funcionario_cita}></p>
+                        </article>
+                    </div>`;
+            });
+
+        })
+        .catch(error => console.error('Error:', error));
+    });
 }

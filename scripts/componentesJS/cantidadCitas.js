@@ -3,6 +3,7 @@ let historial = document.getElementById('historial-oculto');
 let  predeterminado = document.getElementById('notifications-panel');
 let  enlaceHistorial=document.getElementById('historial'); 
 let volver = document.getElementById('volver');
+
 function verHistorial(){
     historial.style.display= "grid";
     predeterminado.style.display="none";
@@ -11,8 +12,7 @@ function verHistorial(){
 }
 
 function regresar(){
-     location.reload();
-    
+     location.reload(); 
 }
 
 //Accedemos al elemento HTML
