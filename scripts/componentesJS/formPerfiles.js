@@ -112,7 +112,7 @@ botonContraseña.forEach(boton => {
 });
 
 
-//
+//Prevencion del envio del formulario de perfiles de forma automatica, evalua la respuesta del servidor para manejar las respuestas al usuario
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
