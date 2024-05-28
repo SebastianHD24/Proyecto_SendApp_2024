@@ -126,6 +126,13 @@
 
 
 
+<div class="AsistidasContent oculto"  >
+    <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); 
+    ?>
+    
+</div>
+
+
 <div class="rechazadasContent oculto "  >
     
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
@@ -133,12 +140,6 @@
 </div>
 
 
-
-<div class="AsistidasContent oculto"  >
-    <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); 
-    ?>
-    
-</div>
 
 
 
@@ -150,10 +151,12 @@
 let ocultarDiv = document.querySelector('.table_div');
 let mostrarDivRechazadas = document.querySelector('.rechazadasContent');
 let mostarDivAsistidas = document.querySelector('.AsistidasContent');
+let Ocultarnav = document.getElementById('organizar_citas');
 
     function ocultarTablaYMostrarRechazadas() {
         ocultarDiv.classList.add('oculto');
         mostrarDivRechazadas.classList.remove('oculto');
+       Ocultarnav.style.display='none';
     };
 
     function volverRechazadas() {
@@ -164,6 +167,7 @@ let mostarDivAsistidas = document.querySelector('.AsistidasContent');
     function ocultarTablaYMostrarAsistidas() {
         ocultarDiv.classList.add('oculto');
         mostarDivAsistidas.classList.remove('oculto');
+        Ocultarnav.style.display='none';
     };
 
     function volverAsistidas() {
