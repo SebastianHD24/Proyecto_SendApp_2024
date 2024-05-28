@@ -11,6 +11,7 @@
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
                 <th>Confirmación</th>
+                <th>Justificación inasistencia</th>
                 <th>Jornada</th>
               
             </tr>
@@ -22,7 +23,7 @@
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
             $funcionario = $_SESSION["documento_identidad"];
-            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
+            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion,citas.justificacion_cancelacion 
             FROM citas
             INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'no-asiste' ORDER BY citas.id_cita ASC ";
     
@@ -43,6 +44,8 @@
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
                         <td><?= $row['confirmacion'] ?></td>
+                        <td><?= $row['justificacion_cancelacion'] ?></td>
+
                         <td><?= $row['jornada'] ?></td>
                         
             <?php
