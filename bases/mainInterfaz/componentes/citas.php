@@ -30,7 +30,6 @@ if (isset($_SESSION['documento_identidad'])) {
         if (mysqli_num_rows($result) > 0) {
          // Aquí se abre el único contenedor de cuadrícula
             ?>
-           
             <div class="notifications-panel" id="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc  ($result)) {
@@ -154,9 +153,23 @@ if (isset($_SESSION['documento_identidad'])) {
         if (mysqli_num_rows($result) > 0) {
             // Aquí se abre el único contenedor de cuadrícula
             ?>
+<<<<<<< HEAD
             <div class="buscador">
                 aqui esta el buscador
             </div>
+=======
+            <form class="formulario" method="post" id="formulario_citas">
+                <select name="historial_citas" id="historial_citas">
+                    <option value="todos">Todos</option>
+                    <option value="hoy">Hoy</option>
+                    <option value="ayer">Ayer</option>
+                    <option value="semana">Ultima semana</option>
+                    <option value="mes">Ultimo mes</option>
+                    <option value="anio">Ultimo Año</option>
+                </select>
+                <button type="submit" onclick="historialCita();" class="buscar">Buscar</button>
+            </form>
+>>>>>>> 67e2c12561e99c3df1253ebad40c4a8b3887b4ca
             <div id="historial-oculto" class= "notifications-panel" style="display: none;">
             <?php
             

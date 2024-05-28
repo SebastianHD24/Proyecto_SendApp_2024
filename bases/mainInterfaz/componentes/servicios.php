@@ -147,10 +147,15 @@
 
       <div class="formulario">
         <label for="descripcion"><strong>Descripción:</strong></label>
+<<<<<<< HEAD
         <textarea name='descripcion' placeholder="maximo 150 caracteres" id="descripcion" class="descripcion-servicio" rows="4"></textarea>
+=======
+        <p id="charCount">0/150</p>
+        <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="150" placeholder="El limite de caracteres es de 150"></textarea>
+>>>>>>> 67e2c12561e99c3df1253ebad40c4a8b3887b4ca
       </div>
 
-      <div class="buttons">
+  <div class="buttons">
         <button class="button-servicio">Cerrar</button>
         <button type='submit' class="button-servicio" id="btnEnviar">Enviar</button>
       </div>
@@ -173,4 +178,3 @@
 <!-- este script hace que el nombre del area que tengo por el id lo meustre en el input  -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreArea.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreFuncionario.js"></script>
-
