@@ -173,7 +173,7 @@
             </div>
             <!-- Card 12-->
             <div class="areas__cards-div"> 
-                <a href="#">
+                <a href="https://sites.google.com/misena.edu.co/3raofertacditi/inicio" target="_blank">
                     <article>
                         <img src="Img/Cards-img/formacionVerde.png" alt="Programas de Formación Icono">
                     </article>
