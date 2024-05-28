@@ -1,15 +1,5 @@
-<div class="organizar_citas" id="organizar_citas" >
-    <nav>
-        <ul>
-        <a class="citasRechazadas"  href="javascript:void(0);" onclick="volver();"  >Regresar</a>
-        <a class="citasNoAsistidas" href="javascript:void(0);" onclick="mostrarCitasNoAsistidas();"  >Citas No-asistidas</a>
-       
 
-        </ul>
-    </nav>
 
-</div>
-<h1 id="titulo_citas">Citas pendientes</h1>
 
 <div class="table_div" >
     

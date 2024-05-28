@@ -1,5 +1,5 @@
 
-<h1 id="titulo_citas">Citas pendientes</h1>
+
 
 <div class="table_div" >
 
