@@ -66,9 +66,6 @@
         </tbody>
     </table>
 </div>
-<div id="pendientesContent" style="display: none;" >
-    <?php include  __DIR__ .'../../componentes/citaspendiente.php'; 
-    ?>
 
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>

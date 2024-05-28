@@ -2,9 +2,11 @@
     
 <nav>
         <ul>
-        <button class="citasRechazadas"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</button>
+        <a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a>
         <a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a>
-        <a class="citasNoAsistidas" href="javascript:void(0);" "  >Citas No-asistidas</a>
+        <a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a>
+        <a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a>
+
     
          </ul>
     </nav>
@@ -102,7 +104,7 @@
                                         <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
                                         <label for="nombre_cancelacion_<?= $row['id_cita'] ?>">Nombre:</label>
                                         <input type="text" id="nombre_cancelacion_<?= $row['id_cita'] ?>" name="nombre" value="<?= $row['nombres'] ?>" disabled>
-                                        <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
+                                        <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la fuck:</label>
                                         <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
                                         <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación:</label>
                                         <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
@@ -122,16 +124,9 @@
             // mysqli_close($conn);
             ?>
         </tbody>
-    </table>
+    </table> 
 
 </div>
-<div class="NoAsistidasContent oculto"> 
-
-     <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); 
-     ?>       
-
-</div>
-
 
 <div class="AsistidasContent oculto"  >
 <a class="citasRechazadas"  href="javascript:void(0);" onclick="volver();">volver</a> 
@@ -141,18 +136,21 @@
     
 </div>
 
-
-<div class="rechazadasContent oculto "  >
-<a class="citasRechazadas"  href="javascript:void(0);" onclick="volver();">volver</a> 
-    <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
-    
+<div class="NoAsistidasContent oculto">
+    <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); ?>       
 </div>
 
+    <div class="rechazadasContent oculto">
+    <a class="citasRechazadas" href="javascript:void(0);" onclick="volver();">volver</a>
+    <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
+    </div>
 
+    <div class="confirmarAsistencia oculto">
+    <?php include (__DIR__ .'/baseCitas/confirmarAsistencia.php'); ?>
+    </div>
 
-
-
-
+</main>
+</div>
 
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
@@ -163,7 +161,10 @@ let mostrarDivRechazadas = document.querySelector('.rechazadasContent');
 let mostarDivAsistidas = document.querySelector('.AsistidasContent');
 let Ocultarnav = document.getElementById('organizar_citas');
 let mostarDivNoAsistidas= document.querySelector('.NoAsistidasContent');
+let mostrarDivConfirmarAsistencia=document.querySelector('.confirmarAsistencia');
 // Funcion para ocultar contenido de citas pendientes y mostar contenido de citas rechazadas
+
+   
     function ocultarTablaYMostrarRechazadas() {
         ocultarDiv.classList.add('oculto');
         mostarDivAsistidas.classList.add('oculto');
@@ -179,11 +180,20 @@ let mostarDivNoAsistidas= document.querySelector('.NoAsistidasContent');
         Ocultarnav.style.display='none';
     };
 
-    function volverAsistidas() {
-        ocultarDiv.classList.remove('oculto');
-        mostrarDivAsistidas.classList.add('oculto');
-    }; 
+    
+    function ocultarTablaYMostrarNoAsistida() {
+        ocultarDiv.classList.add('oculto');
+        mostarDivNoAsistidas.classList.remove('oculto');
+        mostrarDivRechazadas.classList.add('oculto');
+        Ocultarnav.style.display='none';
+    };
    
+    function ocultarTablaYMostrarConfirmarAsistencia(){
+        ocultarDiv.classList.add('oculto');
+        mostrarDivConfirmarAsistencia.classList.remove('oculto');
+        Ocultarnav.style.display='none';
+    };
+    
 
 
 

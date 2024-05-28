@@ -147,7 +147,7 @@
 
       <div class="formulario">
         <label for="descripcion"><strong>Descripción:</strong></label>
-        <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4"></textarea>
+        <textarea name='descripcion' placeholder="maximo 150 caracteres" id="descripcion" class="descripcion-servicio" rows="4"></textarea>
       </div>
 
       <div class="buttons">
