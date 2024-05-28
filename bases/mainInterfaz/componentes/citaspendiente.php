@@ -1,8 +1,8 @@
 <div class="organizar_citas" id="organizar_citas" >
     <nav>
         <ul>
-        <a class="citasRechazadas" href="?citas_only_rejected"   >Citas rechazadas</a>
-        <a class="citasAsistidas" href=""   >Citas  asistidas</a>
+        <a class="citasRechazadas" onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a>
+        <a class="citasAsistidas" onclick="ocultarTablaYMostrarAsistidas();"   >Citas  asistidas</a>
         <a class="citasNoAsistidas" href="javascript:void(0);" "  >Citas No-asistidas</a>
        
 
@@ -127,29 +127,14 @@
 
 
 <div class="rechazadasContent oculto "  >
-    <?php 
-    if(isset($_GET['citas_only_rejected'])){
-        echo "<script>
-        let ContentOculto = document.querySelector('.table-div');
-        let  buttonRechazo = document.querySelector('.rechazadasContent');
-
-        function mostarCitasRechazadas(){
-            ContentOculto.classList.add('oculto');
-            buttonRechazo.classList.remove('oculto');
-
-        }
-        mostrarCitasRechazadas();
-        
-        </script>";
-    }
-    ?>
+    
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
     
 </div>
 
 
 
-<div id="AsistidasContent oculto"  >
+<div class="AsistidasContent oculto"  >
     <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); 
     ?>
     
@@ -162,31 +147,32 @@
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 <script>
-// function mostrarCitasRechazadas() {
-//       document.getElementById('table_div').style.display = 'none';
-//     document.getElementById('rechazadasContent').style.display = 'none';
-//     document.getElementById('rechazadasContent').style.display = 'block';
+let ocultarDiv = document.querySelector('.table_div');
+let mostrarDivRechazadas = document.querySelector('.rechazadasContent');
+let mostarDivAsistidas = document.querySelector('.AsistidasContent');
 
-//     document.getElementById('organizar_citas').style.display = 'none';
-//     document.getElementById('titulo_citas').style.display = 'none';
-//     // Eliminar el div AsistidasContent
-//     // let asistidasContent = document.getElementById('AsistidasContent');
-//     // if (asistidasContent) {
-//     //     asistidasContent.remove();
-//     // }
-// }
+    function ocultarTablaYMostrarRechazadas() {
+        ocultarDiv.classList.add('oculto');
+        mostrarDivRechazadas.classList.remove('oculto');
+    };
 
-// function mostrarCitasAsistidas() {
-//     document.getElementById('table_div').style.display = 'none';
-//     document.getElementById('AsistidasContent').style.display = 'block';
-//     document.getElementById('organizar_citas').style.display = 'none';
-//     document.getElementById('titulo_citas').style.display = 'none';
-//     // Eliminar el div rechazadasContent
-//     // let rechazadasContent = document.getElementById('rechazadasContent');
-//     // if (rechazadasContent) {
-//     //     rechazadasContent.remove();
-//     // }
-// }
+    function volverRechazadas() {
+        ocultarDiv.classList.remove('oculto');
+        mostrarDivRechazadas.classList.add('oculto');
+    }; 
+
+    function ocultarTablaYMostrarAsistidas() {
+        ocultarDiv.classList.add('oculto');
+        mostarDivAsistidas.classList.remove('oculto');
+    };
+
+    function volverAsistidas() {
+        ocultarDiv.classList.remove('oculto');
+        mostrarDivAsistidas.classList.add('oculto');
+    }; 
+   
+
+
 
 
 
