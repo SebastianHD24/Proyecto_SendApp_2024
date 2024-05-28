@@ -130,6 +130,26 @@ body{
 }
     
 /* Responsive. */
+@media (max-width: 2559px){
+    .description h1,p {
+        font-size: 85%;
+    }
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        top: 50%;
+        
+        transform: translate(-50%, -50%);
+    }
+    .panel #foto1 {
+        width: 35%;
+        left: 48%;
+    }
+    .panel #foto2{
+        width: 40%;
+        left:52%;
+    }
+}
 
 
 @media (max-width: 1440px){
@@ -207,7 +227,7 @@ body{
     }
     .bottom .description {
         width: 60%;
-        left: 225px;
+        left: 22 5px;
     }
     .top .description {
         width: 40%;
