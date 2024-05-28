@@ -141,7 +141,8 @@
 </div>
 
     <div class="rechazadasContent oculto">
-    <a class="citasRechazadas" href="javascript:void(0);" onclick="volver();">volver</a>
+    <a class="Regresar" href="javascript:void(0);" onclick="volver();">volver</a>
+    <a class="CitAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas()"> Citas asistidas</a>
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
     </div>
 
@@ -177,6 +178,7 @@ let mostrarDivConfirmarAsistencia=document.querySelector('.confirmarAsistencia')
     function ocultarTablaYMostrarAsistidas() {
         ocultarDiv.classList.add('oculto');
         mostarDivAsistidas.classList.remove('oculto');
+        mostrarDivRechazadas.classList.add('oculto');
         Ocultarnav.style.display='none';
     };
 
