@@ -113,10 +113,13 @@
                     <button type="submit" class="btn-actu">
                         Confirmar
                     </button>
+                    <button type="button" class="btn-cambiar" id="btnCambiar">
+                        Cerrar formulario
+                    </button>
                 </div>
-                <div class="cerrar">
-                    <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>
-                </div>    
+                <!-- <div class="cerrar">
+                    
+                </div>     -->
             </form>
         </div>    
     </div>
