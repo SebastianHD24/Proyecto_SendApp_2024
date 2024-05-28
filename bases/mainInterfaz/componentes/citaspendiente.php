@@ -1,9 +1,18 @@
-<div class="organizar_citas">
-<a class="citasRechazadas" href="javascript:void(0);">Citas rechazadas</a>
+<div class="organizar_citas" id="organizar_citas" >
+    <nav>
+        <ul>
+        <a class="citasRechazadas" href="?citas_only_rejected"   >Citas rechazadas</a>
+        <a class="citasAsistidas" href=""   >Citas  asistidas</a>
+        <a class="citasNoAsistidas" href="javascript:void(0);" "  >Citas No-asistidas</a>
+       
+
+        </ul>
+    </nav>
 
 </div>
+<!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
 
-<div class="table_div">
+<div class="table_div" id="table_div">
     
     <table>
         <thead>
@@ -13,13 +22,14 @@
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
                 <th>Confirmación</th>
-                <th>Asistencia</th>
-                <th>Acciones</th>
                 <th>Jornada</th>
+               <th>Asistencia</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <?php
+           
             if (!$conn) {
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
@@ -45,6 +55,7 @@
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
                         <td><?= $row['confirmacion'] ?></td>
+                        <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
                             <a class="button asistio <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Asistió</a>
                             <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
@@ -98,7 +109,7 @@
                                 </div>
                             </div>
                         </td>
-                        <td><?= $row['jornada'] ?></td>
+                       
                     </tr>
             <?php
                 }
@@ -106,16 +117,77 @@
                 echo "<tr><td colspan='6'>No se encontraron citas pendientes.</td></tr>";
             }
 
-            mysqli_close($conn);
+            // mysqli_close($conn);
             ?>
         </tbody>
     </table>
+
 </div>
-<div id="rechazadasContent" >
-    <?php include 'baseCitas/citasRechazadas.php' ?>
+
+
+
+<div class="rechazadasContent oculto "  >
+    <?php 
+    if(isset($_GET['citas_only_rejected'])){
+        echo "<script>
+        let ContentOculto = document.querySelector('.table-div');
+        let  buttonRechazo = document.querySelector('.rechazadasContent');
+
+        function mostarCitasRechazadas(){
+            ContentOculto.classList.add('oculto');
+            buttonRechazo.classList.remove('oculto');
+
+        }
+        mostrarCitasRechazadas();
+        
+        </script>";
+    }
+    ?>
+    <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
+    
 </div>
+
+
+
+<div id="AsistidasContent oculto"  >
+    <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); 
+    ?>
+    
+</div>
+
+
+
+
+
+
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 <script>
-let
+// function mostrarCitasRechazadas() {
+//       document.getElementById('table_div').style.display = 'none';
+//     document.getElementById('rechazadasContent').style.display = 'none';
+//     document.getElementById('rechazadasContent').style.display = 'block';
+
+//     document.getElementById('organizar_citas').style.display = 'none';
+//     document.getElementById('titulo_citas').style.display = 'none';
+//     // Eliminar el div AsistidasContent
+//     // let asistidasContent = document.getElementById('AsistidasContent');
+//     // if (asistidasContent) {
+//     //     asistidasContent.remove();
+//     // }
+// }
+
+// function mostrarCitasAsistidas() {
+//     document.getElementById('table_div').style.display = 'none';
+//     document.getElementById('AsistidasContent').style.display = 'block';
+//     document.getElementById('organizar_citas').style.display = 'none';
+//     document.getElementById('titulo_citas').style.display = 'none';
+//     // Eliminar el div rechazadasContent
+//     // let rechazadasContent = document.getElementById('rechazadasContent');
+//     // if (rechazadasContent) {
+//     //     rechazadasContent.remove();
+//     // }
+// }
+
+
 
 </script>
