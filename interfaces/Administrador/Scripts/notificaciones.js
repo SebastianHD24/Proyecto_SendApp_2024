@@ -35,6 +35,10 @@ function ver() {
         // Limpiar las tablas antes de agregar nuevos datos
         document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML = '';
 
+        function convertirFecha(fecha) {
+            let partes = fecha.split('-');
+            return `${partes[2]}/${partes[1]}/${partes[0]}`;
+        }
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(usuario => {
             let rol;
@@ -43,6 +47,9 @@ function ver() {
             } else if (usuario.id_rol == 2) {
                 rol = 'Funcionario';
             }
+
+            let fechaSolicitudFormateada = convertirFecha(usuario.fecha_solicitud);
+
             document.querySelector('#contenedor-popup #sin_respuesta tbody').innerHTML += `
                 <tr>
                     <td>${usuario.id_peticion}</td>
@@ -50,7 +57,7 @@ function ver() {
                     <td>${usuario.apellidos}</td>
                     <td>${rol}</td>
                     <td>${usuario.documento_identidad}</td>
-                    <td>${usuario.fecha_solicitud}</td>
+                    <td>${fechaSolicitudFormateada}</td>
                     <td>${usuario.tipo_pqrs}</td>
                     <td>${usuario.descripcion}</td>
                     <td>
@@ -137,6 +144,10 @@ function verHistorial(){
         // Limpiar las tablas antes de agregar nuevos datos
         document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML = '';
 
+        function convertirFecha(fecha) {
+            let partes = fecha.split('-');
+            return `${partes[2]}/${partes[1]}/${partes[0]}`;
+        }
         // Iterar sobre los usuarios y agregarlos a las tablas correspondientes
         data.forEach(historial => {
             let rol = "";
@@ -145,6 +156,10 @@ function verHistorial(){
             } else if (historial.id_rol == 2) {
                 rol = "Funcionario";
             }
+
+            let fechaSolicitudFormateada = convertirFecha(historial.fecha_solicitud);
+            let fechaRespuestaFormateada = convertirFecha(historial.fecha_respuesta);
+
             document.querySelector('#contenedor-popup #con_respuesta tbody').innerHTML += `
                 <tr>
                     <td>${historial.id_peticion}</td>
@@ -152,8 +167,8 @@ function verHistorial(){
                     <td>${historial.apellidos}</td>
                     <td>${rol}</td>
                     <td>${historial.documento_identidad}</td>
-                    <td>${historial.fecha_solicitud}</td>
-                    <td>${historial.fecha_respuesta}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${fechaRespuestaFormateada}</td>
                     <td>${historial.tipo_pqrs}</td>
                     <td>${historial.descripcion}</td>
                     <td>${historial.respuesta_pqrs}</td>
