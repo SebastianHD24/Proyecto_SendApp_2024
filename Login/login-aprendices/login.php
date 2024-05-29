@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- ESTILOS CSS -->
-    <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/Login/Styles/login.css">
     <title>Login</title>
 </head>
 <body>

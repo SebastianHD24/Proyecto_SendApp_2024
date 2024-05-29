@@ -139,3 +139,18 @@ function confirmarCita(id) {
             console.log('Error al confirmar la cita: ', error);
         });
 }
+
+document.querySelector('.citasRechazadas').addEventListener('click', function() {
+    // Alternar la visibilidad del contenido de citas rechazadas
+    var content = document.getElementById('rechazadasContent');
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+});
+
+
+
+
+

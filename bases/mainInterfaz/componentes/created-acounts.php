@@ -1,14 +1,16 @@
-<link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/created-accounts.css" >
+<!-- <link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/created-accounts.css" > -->
 <link rel="stylesheet" type="text/css" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/table-created-accounts.css" >
+
+
 
 <div class="content-table-users">
   <div class="search-container">
     <!-- Formulario de búsqueda -->
-    <form method="GET">
+    <form method="GET" class="add_form">
       <input type="text" name="documento_identidad" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
         <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
     </form>
-    <a href="?new_users" >Agregar Usuario Nuevo </a>
+    <a href="?new_users" class="add_user">Agregar Usuario Nuevo </a>
   </div>
   <?php 
     // Verificar si se realizó una búsqueda
@@ -249,6 +251,7 @@
 </div>
 <!--**************************************************************************************************************-->
 <div class="new_registro oculto">
+  
   <?php
   if(isset($_GET['new_users'])) {
       
@@ -265,6 +268,7 @@
     }
   ?>
   <?php include '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/registro.php' ?>
+  
 </div>
 <!-- Script JavaScript para confirmar acciones -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/update-created-accounts.js"></script>

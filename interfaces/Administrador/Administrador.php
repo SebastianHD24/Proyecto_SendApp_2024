@@ -1,6 +1,6 @@
 <?php
   //Pequeña logica para capturar el componente que se quiere mostrar
-  $component = isset($_GET['p']) ? strtolower($_GET['p']) : 'created-acounts'; 
+  $component = isset($_GET['p']) ? strtolower($_GET['p']) : 'created-acount'; 
 
   // Verificar si el archivo del componente existe
   $rutaComponent = '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/' . $component . '.php';

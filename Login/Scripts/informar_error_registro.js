@@ -12,14 +12,17 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
             .then(data => {
                 const messageDiv = document.getElementById('message');
                 const registerForm = document.getElementById('registerForm');
-                messageDiv.style.display = 'block';
+
                 if (data.success === 6) {
                     registerForm.style.display = 'none';
                     messageDiv.className = 'message_success';
                     messageDiv.innerText = 'Registro grabado correctamente.';
+                    messageDiv.style.display = 'block';
                     setTimeout(function() {
+                        messageDiv.style.display = 'none';
+                        document.body.classList.remove('blur-background');
                         window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
-                        }, 1000); // 1000 milisegundos = 1 segundos
+                    }, 3000); //3000 milisegundos = 3 segundos
                 } else if (data.success === 1) {
                     const error = document.getElementById('mensaje_errord');
                     const limpiarC = document.getElementById('login-input-user-d');
