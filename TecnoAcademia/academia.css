@@ -94,7 +94,7 @@ body{
     font-size: 22px;
 }
 .p{
-    color: #00324D;
+    /* color: #000000; */
     /* font-size: 25px; */
     margin: 10px;
     text-align: center;
@@ -170,12 +170,13 @@ hr{
     grid-row-gap: 30px;
     justify-items: center;
     margin: 50px 0 50px 0;
+    
 }
 
 .esfera {
     width: 100%;
     border-radius: 20px;
-    color:#00324D;
+    /* color:#000000; */
     text-align: center;
     display: flex;
     align-items: center;
@@ -199,7 +200,6 @@ hr{
     max-width: calc(100% - 20px);
     width: 100%;
     margin: 10px;
-    color:#00324D;
     text-align: center;
     padding: 0;
     opacity: 0;
@@ -207,7 +207,6 @@ hr{
 }
 
 .info-column p{
-    color: #00324D;
     margin: 10px;
     text-align: center;
     line-height: 1.6;
@@ -222,17 +221,17 @@ hr{
 }
 
 h4 {
-    color: #28a745;
+    color: #39a900;
     font-size: 18px;
 }
 
 /* Estilos específicos para los enlaces */
 strong {
-    color: #00324D;
+    color: #39a900;
 }
 
 a {
-    color: #070001;
+    color: #39a900;
     text-decoration: none;
 }
 
