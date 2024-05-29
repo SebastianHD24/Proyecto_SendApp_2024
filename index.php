@@ -140,7 +140,7 @@
                     <div class="triangulo-izquierda"></div>
                     <div class="content-derecha">
                         <h1>Visión</h1>
-                    <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regio- nes como contribución a una Colombia educada, equitativa y en paz.</p>
+                    <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regiones como contribución a una Colombia educada, equitativa y en paz.</p>
                     </div>
                     
                 </div>

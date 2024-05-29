@@ -479,12 +479,7 @@ h1{
     80%{
         translate: 0;
     }
-    82%{
-        translate: 20%;
-    }
-    86%{
-        translate: 95%;
-    }
+
 }
 
 .triangulo-derecha {
@@ -528,12 +523,6 @@ h1{
     }
     80%{
         translate: 0;
-    }
-    82%{
-        translate: -20%;
-    }
-    86%{
-        translate: -95%;
     }
 }
 
