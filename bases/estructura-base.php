@@ -147,7 +147,6 @@
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/accesibilidad.js"></script><!--Scripts Accesibilidad-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/header.js"></script><!--Scripts HEADER-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/inactividad.js"></script><!--Scripts Inanctividad -->
-    <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/BotonCitas.js"></script><!--Scripts Boton citas-->
     <script src="../../../Proyecto_SendApp_2024/scripts/menuHamburguesaJS/menuBarGeneral.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/botonLeerMas.js"></script><!--Scripts menu hamburguesa general-->
     <script src="../../../Proyecto_SendApp_2024/scripts/ScriptsGenerales/sesionIniciada.js"></script>

@@ -18,11 +18,11 @@ function veri() {
                 cerrar_responsive[0].style.display = "flex";
             } else if (jsonData.success === 2) {
                 ingreso.style.display = "block";
-                ingreso_reponsive.style.display = "block";
+                ingreso_reponsive[0].style.display = "flex";
                 interfaz_u.style.display = "none";
                 cerrar.style.display = "none";
-                interfaz_u_responsive.style.display = "none";
-                cerrar_responsive.style.display = "none";
+                interfaz_u_responsive[0].style.display = "none";
+                cerrar_responsive[0].style.display = "none";
             }
         })
         .catch(error => console.error("Error:", error));
