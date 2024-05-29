@@ -1,10 +1,23 @@
-<div class="organizar_citas">
-<a class="citasRechazadas" href="javascript:void(0);">Citas rechazadas</a>
-
-</div>
-
-<div class="table_div">
+<div class="organizar_citas" id="organizar_citas" >
     
+<nav>
+        <ul>
+        <a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a>
+        <a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a>
+        <a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a>
+        <a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a>
+
+    
+         </ul>
+    </nav>
+    
+</div>
+<!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
+
+
+<div class="table_div" id="table_div">
+
+
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -13,13 +26,14 @@
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
                 <th>Confirmación</th>
-                <th>Asistencia</th>
-                <th>Acciones</th>
                 <th>Jornada</th>
+               <th>Asistencia</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <?php
+           
             if (!$conn) {
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
@@ -45,6 +59,7 @@
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
                         <td><?= $row['confirmacion'] ?></td>
+                        <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
                             <a class="button asistio <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Asistió</a>
                             <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
@@ -89,7 +104,7 @@
                                         <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
                                         <label for="nombre_cancelacion_<?= $row['id_cita'] ?>">Nombre:</label>
                                         <input type="text" id="nombre_cancelacion_<?= $row['id_cita'] ?>" name="nombre" value="<?= $row['nombres'] ?>" disabled>
-                                        <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
+                                        <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la fuck:</label>
                                         <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
                                         <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación:</label>
                                         <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
@@ -98,7 +113,7 @@
                                 </div>
                             </div>
                         </td>
-                        <td><?= $row['jornada'] ?></td>
+                       
                     </tr>
             <?php
                 }
@@ -106,16 +121,113 @@
                 echo "<tr><td colspan='6'>No se encontraron citas pendientes.</td></tr>";
             }
 
-            mysqli_close($conn);
+            // mysqli_close($conn);
             ?>
         </tbody>
-    </table>
+    </table> 
+
 </div>
-<div id="rechazadasContent" >
-    <?php include 'baseCitas/citasRechazadas.php' ?>
+
+
+<div class="rechazadasContent oculto">
+    <h1 id="titulo_citas"> Citas Rechazadas</h1>
+    <a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a>
+    <a class="CitAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas()"> Citas asistidas</a>
+    <a class="CitANoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas  no asistidas</a>
+    <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
+    <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
+    </div>
+
+<div class="AsistidasContent oculto"  >
+    <h1 id="titulo_citas">Citas Asistidas</h1>
+    <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
+    <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
+    <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
+    <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
+    <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); ?>
+    
 </div>
+
+
+
+<div class="NoAsistidasContent oculto">
+    <h1 id="titulo_citas">Citas que no asistieron</h1>
+    <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
+    <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
+    <a class="Citasasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();"> Citas  asistidas</a>
+    <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
+    <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
+    <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); ?>       
+</div>
+
+    
+<div class="confirmarAsistencia oculto">
+    <h1 id="titulo_citas">Confirmar Citas</h1>
+    <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
+    <a  class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
+    <a class="Citasasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();"> Citas  asistidas</a>
+    <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
+    <?php include (__DIR__ .'/baseCitas/confirmarAsistencia.php'); ?>
+</div>
+
+</main>
+</div>
+
+
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 <script>
-let
+// Declaramos variable para  lo que necesitamos 
+let ocultarDiv = document.querySelector('.table_div');
+let mostrarDivRechazadas = document.querySelector('.rechazadasContent');
+let mostarDivAsistidas = document.querySelector('.AsistidasContent');
+let Ocultarnav = document.getElementById('organizar_citas');
+let mostarDivNoAsistidas= document.querySelector('.NoAsistidasContent');
+let mostrarDivConfirmarAsistencia=document.querySelector('.confirmarAsistencia');
+// Funciones para que los links funcionen
+
+   
+    function ocultarTablaYMostrarRechazadas() {
+        ocultarDiv.classList.add('oculto');
+        mostarDivAsistidas.classList.add('oculto');
+        mostrarDivRechazadas.classList.remove('oculto');
+        mostarDivNoAsistidas.classList.add('oculto');
+        mostrarDivConfirmarAsistencia.classList.add('oculto');
+        Ocultarnav.style.display='none';
+    };
+
+   
+
+    function ocultarTablaYMostrarAsistidas() {
+        ocultarDiv.classList.add('oculto');
+        mostarDivAsistidas.classList.remove('oculto');
+        mostrarDivRechazadas.classList.add('oculto');
+        mostarDivNoAsistidas.classList.add('oculto');
+        mostrarDivConfirmarAsistencia.classList.add('oculto');
+        Ocultarnav.style.display='none';
+    };
+
+    
+    function ocultarTablaYMostrarNoAsistida() {
+        ocultarDiv.classList.add('oculto');
+        mostarDivNoAsistidas.classList.remove('oculto');
+        mostrarDivRechazadas.classList.add('oculto');
+        mostarDivAsistidas.classList.add('oculto');
+        mostrarDivConfirmarAsistencia.classList.add('oculto');
+        Ocultarnav.style.display='none';
+    };
+   
+    function ocultarTablaYMostrarConfirmarAsistencia(){
+        ocultarDiv.classList.add('oculto');
+        mostrarDivConfirmarAsistencia.classList.remove('oculto');
+        mostrarDivRechazadas.classList.add('oculto');
+        mostarDivAsistidas.classList.add('oculto');
+        mostarDivNoAsistidas.classList.add('oculto');
+        Ocultarnav.style.display='none';
+    };
+    
+
+
+
+
 
 </script>

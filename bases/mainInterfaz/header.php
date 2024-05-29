@@ -101,7 +101,7 @@
                             <a  href="?p=serviciosadmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosadmin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notifiadmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiadmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
+                            <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
                         </li>
                     <?php endif; ?>
                         

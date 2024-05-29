@@ -1,6 +1,7 @@
 
-<div class="table_div" id="table_rechazadas">
 
+
+<div class="table_div" >
     
     <table>
         <thead>
@@ -9,19 +10,22 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
-                <th>Justificación Rechazo</th>
+                <th>Confirmación</th>
+                <th>Justificación inasistencia</th>
                 <th>Jornada</th>
+              
             </tr>
         </thead>
         <tbody>
             <?php
+           
             if (!$conn) {
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
             $funcionario = $_SESSION["documento_identidad"];
-            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion, citas.justificacion_rechazo 
+            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion,citas.justificacion_cancelacion 
             FROM citas
-            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='rechazado' ORDER BY citas.id_cita ASC ";
+            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'no-asiste' ORDER BY citas.id_cita ASC ";
     
             $result = mysqli_query($conn, $sql);
 
@@ -39,25 +43,15 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
-                        <td><?= $row['justificacion_rechazo'] ?></td>
+                        <td><?= $row['confirmacion'] ?></td>
+                        <td><?= $row['justificacion_cancelacion'] ?></td>
 
                         <td><?= $row['jornada'] ?></td>
-                            
-                             
-
-                            <!-- Modal para cancelar la cita -->
-                          
-                                    <!-- Resto del contenido del modal -->
-                                   
-                                </div>
-                            </div>
-                        </td>
                         
-                    </tr>
             <?php
                 }
             } else {
-                echo "<tr><td colspan='6'>No se encontraron citas pendientes.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontraron citas donde hayan asistido.</td></tr>";
             }
 
             // mysqli_close($conn);
@@ -67,12 +61,13 @@
 </div>
 
 
-
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
 <script>
-   function mostrarCitasPendientes() {
+function volver() {
+    // document.getElementById('table_rechazadas').style.display = 'none';
+    // document.getElementById('pendientesContent').style.display = 'block';
+    // document.getElementById('organizar_citas').style.display = 'none';
     location.reload();
-  
 }
-
 
 </script>
