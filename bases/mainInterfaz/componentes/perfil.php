@@ -19,14 +19,13 @@
                             <input type="text" name="documento_identidad" class="edit_input" value="<?= $row_user['documento_identidad']?>" disabled placeholder="Documento que lo identifica">
                             <label for="form_input" class="form_input">Nombre:</label>
                             <input type="text" name="nombres" class="edit_input" value="<?= $row_user['nombres']?>" disabled placeholder="Su 'nombre'">
-                            <label for="form_input" class="form_input">Apellidos:</label>
-                            <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
                             <span class="inputCorreo oculto"></span>
                             <label for="form_input" class="form_input">Correo Electrónico:</label>
                             <input type="email" name="correo" class="edit_input" value="<?= $row_user['correo']?>" id="correo" required placeholder="Correo electronico para contactarlo">
                             <span class="inputTelefono oculto"></span>
-                            <label for="form_input" class="form_input">Celular:</label>
-                            <input type="text" name="celular" class="edit_input" value="<?= $row_user['celular']?>" id="celular" required placeholder="Numero telefonico para contactarlo">
+                            <div class="btn-actualizar">
+                    
+                </div> 
                         </div>
                         <div class="second-section">
                         <?php
@@ -71,13 +70,19 @@
                             ?>
                                 <label for="form_input" class="form_input">Servicio:</label>
                                 <input type="text" name="servicio" class="edit_input" value="<?= $area ?>" disabled placeholder="Servicio al que pertenece">
+                                <label for="form_input" class="form_input">Apellidos:</label>
+                                <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
+                                <label for="form_input" class="form_input">Celular:</label>
+                            <input type="text" name="celular" class="edit_input" value="<?= $row_user['celular']?>" id="celular" required placeholder="Numero telefonico para contactarlo">
                         <?php endif; ?>
-                            <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
+                           
                         </div>
                 </div>
-                <div class="btn-actualizar">
-                    <button type="submit" class="btn-actu">Actualizar</button>
-                </div>   
+                <div class="button-perfil">
+                <button type="submit" class="btn-actu">Actualizar</button>
+                <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
+                </div>
+                  
             </form>
         </div>
     </div>
@@ -113,10 +118,13 @@
                     <button type="submit" class="btn-actu">
                         Confirmar
                     </button>
+                    <button type="button" class="btn-cambiar" id="btnCambiar">
+                        Cerrar formulario
+                    </button>
                 </div>
-                <div class="cerrar">
-                    <button type="button" class="btn-cambiar" id="btnCambiar">Cerrar formulario</button>
-                </div>    
+                <!-- <div class="cerrar">
+                    
+                </div>     -->
             </form>
         </div>    
     </div>

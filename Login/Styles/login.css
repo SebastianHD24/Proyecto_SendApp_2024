@@ -35,6 +35,10 @@ header img{
 	height: auto;
 }
 
+.primera-seccion{
+	margin: 1rem 0 1rem 0;
+}
+
 .login-container {
 	display: block;
 	position: relative;
