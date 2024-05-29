@@ -10,7 +10,7 @@ $funcionario = $_SESSION["documento_identidad"];
 if(isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     // Obtener el día, mes y año 
     $day = $_GET['day'];
-    $month = $_GET['month'] + 1; // Suma 1 al mes 
+    $month = $_GET['month']; // Suma 1 al mes 
     $year = $_GET['year'];
 
     // Formatear la fecha para que coincida con el formato en la base de datos (YYYY-MM-DD) 

@@ -17,7 +17,7 @@
                     <li>Mier</li>
                     <li>Jue</li>
                     <li>Vier</li>
-                    <li>Saba</li>
+                    <li>Sab</li>
                     
                 </ul>
                 <ul class="dates"></ul>

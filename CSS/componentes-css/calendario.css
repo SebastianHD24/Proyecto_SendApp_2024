@@ -18,7 +18,7 @@
   padding-top: 20px;
 }
 
-.calendar h3 {
+h3 {
   font-weight: 600;
   color: var(--blanco);
 }
@@ -255,5 +255,3 @@
     max-width: 82vw;
   }
 }
-
-

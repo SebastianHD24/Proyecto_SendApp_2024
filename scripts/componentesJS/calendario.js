@@ -113,7 +113,7 @@ function addDateClickListeners() {
 
             // Verificar si el día pertenece al mes actual
             if (!e.target.classList.contains("inactive")) {
-                fetch(`../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/obtener_eventos.php?day=${selectedDay}&month=${selectedMonth + 1}&year=${selectedYear}`)
+                fetch(`../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/obtener_eventos.php?day=${selectedDay}&month=${selectedMonth + 1}&year=${selectedYear}}`)
                     .then(response => response.text())
                     .then(data => {
                         if (data.trim() !== '') {
