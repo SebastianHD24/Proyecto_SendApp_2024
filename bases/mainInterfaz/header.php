@@ -74,7 +74,7 @@
                         <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
                         </li>
                         <li>
-                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Citas sin contestar </button></a>
+                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Gestion de Citas </button></a>
                         </li>
                     <?php endif; ?>
 
