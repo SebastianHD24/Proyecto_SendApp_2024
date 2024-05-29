@@ -153,7 +153,7 @@ if (isset($_SESSION['documento_identidad'])) {
         if (mysqli_num_rows($result) > 0) {
             // Aquí se abre el único contenedor de cuadrícula
             ?>
-             <form class="formulario" method="post" id="formulario_citas">
+             <!-- <form class="formulario" method="post" id="formulario_citas">
                 <select name="historial_citas" id="historial_citas">
                     <option value="todos">Todos</option>
                     <option value="hoy">Hoy</option>
@@ -163,7 +163,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     <option value="anio">Ultimo Año</option>
                 </select>
                 <button type="submit" onclick="historialCita();" class="buscar">Buscar</button>
-            </form>
+            </form> -->
             <div id="historial-oculto" class= "notifications-panel" style="display: none;">
             <?php
             
@@ -266,7 +266,7 @@ if (isset($_SESSION['documento_identidad'])) {
 ?>
 
 
-<script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>
+<!-- <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script> -->
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/cantidadCitas.js'></script>
 
 <script>
