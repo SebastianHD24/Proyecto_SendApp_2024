@@ -30,6 +30,7 @@
     overflow-y: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .table_div table{
@@ -54,6 +55,7 @@
     text-align: center;
     /* border: 1px solid var(--negro)  */
     background-color: #FFFFFF;
+    padding: 5px;
 }
 
 #tabla_titulos{
@@ -78,6 +80,7 @@ thead{
     transition: background-color 0.3s ease; /* Efecto suave en hover */
     cursor: pointer; /* Cambia el cursor a puntero */
     margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 /* ---------------------------------- */
 .button.asistio{
@@ -85,7 +88,7 @@ thead{
 }
 .button.asistio:hover{
     font-weight: 500;
-    color: var(--negro);
+    color: #00234D;
     background-color: #45ad10;
 }
 /* -------------------------------- */
@@ -226,4 +229,57 @@ thead{
         width: 80%;
         overflow-x: auto;
     }  */
+}
+
+/* ------------------ buscador botones ------------------------- */
+.search-buttons {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+.search-buttons ul a{
+    font-family: var(--fuente-principal);
+    background-color: var(--verde);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px 10px;
+    color: var(--white);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-buttons ul a:hover{
+    color: #00234D;
+    padding: 9px;
+}
+
+.rechazadasContent, .AsistidasContent, .NoAsistidasContent, .confirmarAsistencia{
+    width: 100%;
+    height: auto;
+}
+.rechazadasContent, .AsistidasContent, .NoAsistidasContent, .confirmarAsistencia h1{
+    margin: 20px;
+    text-align: center;
+}
+
+.quick-direction-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.rechazadasContent .Regresar, .CitAsistidas, .CitANoAsistidas, .ConfirmarCitas, .CitasRechazadas, .citasPendientes, .CitasNoasistidas, .Citasasistidas{
+    font-family: var(--fuente-principal);
+    background-color: var(--verde);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 10px 10px;
+    color: var(--white);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.rechazadasContent .Regresar:hover,.CitAsistidas:hover,.CitANoAsistidas:hover,.ConfirmarCitas:hover , .CitasRechazadas:hover, .citasPendientes:hover, .CitasNoasistidas:hover, .Citasasistidas:hover{
+    color: #00234D;
+    padding: 8.3px;
 }

@@ -1,6 +1,6 @@
 <div class="organizar_citas" id="organizar_citas" >
     
-<nav>
+<nav class="search-buttons">
         <ul>
         <a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a>
         <a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a>
@@ -25,10 +25,8 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
-                <th>Confirmación</th>
                 <th>Jornada</th>
-               <th>Asistencia</th>
-                <th>Acciones</th>
+                <th>acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -40,7 +38,7 @@
             $funcionario = $_SESSION["documento_identidad"];
             $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
             FROM citas
-            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' ORDER BY citas.id_cita ASC ";
+            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='pendiente' ORDER BY citas.id_cita ASC ";
     
             $result = mysqli_query($conn, $sql);
 
@@ -58,15 +56,15 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
-                        <td><?= $row['confirmacion'] ?></td>
+                        
                         <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
-                            <a class="button asistio <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Asistió</a>
-                            <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
-                        <td class="actions">
-                            <button class="button aceptar<?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
+                        <button class="button aceptar<?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
                             <button class="button rechazar <?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="mostrarFormularioRechazo(<?= $row['id_cita'] ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Rechazar</button>
                             
+                            
+                       
+                           
                             
                              <!-- Modal para rechazar la cita -->
                                 <div id="modal_<?= $row['id_cita'] ?>" class="modal">
@@ -93,25 +91,7 @@
                                 </div>
                             </div>
 
-                            <!-- Modal para cancelar la cita -->
-                            <div id="modal_cancelacion_<?= $row['id_cita'] ?>" class="modal">
-                                <div class="modal-content">
-                                    <!-- Botón para cerrar el modal -->
-                                    <span class="close" onclick="closeModal('cancelacion_<?= $row['id_cita'] ?>')">&times;</span>
-                                    
-                                    <!-- Resto del contenido del modal -->
-                                    <form id="cancelForm_<?= $row['id_cita'] ?>" onsubmit="submitCancellationForm(<?= $row['id_cita'] ?>); return false;">
-                                        <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
-                                        <label for="nombre_cancelacion_<?= $row['id_cita'] ?>">Nombre:</label>
-                                        <input type="text" id="nombre_cancelacion_<?= $row['id_cita'] ?>" name="nombre" value="<?= $row['nombres'] ?>" disabled>
-                                        <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la fuck:</label>
-                                        <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
-                                        <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación:</label>
-                                        <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
-                                        <button type="submit" class="button danger">Enviar</button>
-                                    </form>
-                                </div>
-                            </div>
+                            
                         </td>
                        
                     </tr>
@@ -131,19 +111,22 @@
 
 <div class="rechazadasContent oculto">
     <h1 id="titulo_citas"> Citas Rechazadas</h1>
-    <a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a>
-    <a class="CitAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas()"> Citas asistidas</a>
-    <a class="CitANoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas  no asistidas</a>
-    <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
-    <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
+    <div class="quick-direction-buttons">
+        <a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a>
+        <a class="CitAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas()"> Citas asistidas</a>
+        <a class="CitANoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas  no asistidas</a>
+        <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>    
     </div>
-
+    <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
+</div>
 <div class="AsistidasContent oculto"  >
     <h1 id="titulo_citas">Citas Asistidas</h1>
-    <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
-    <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
-    <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
-    <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
+    <div class="quick-direction-buttons">
+        <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
+        <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
+        <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
+        <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
+    </div>
     <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); ?>
     
 </div>
@@ -152,21 +135,25 @@
 
 <div class="NoAsistidasContent oculto">
     <h1 id="titulo_citas">Citas que no asistieron</h1>
+    <div class="quick-direction-buttons">
     <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
     <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
     <a class="Citasasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();"> Citas  asistidas</a>
-    <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
+    <!-- <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a> -->
     <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
+    </div>
     <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); ?>       
 </div>
 
     
 <div class="confirmarAsistencia oculto">
     <h1 id="titulo_citas">Confirmar Citas</h1>
+    <div class="quick-direction-buttons">
     <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
     <a  class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
     <a class="Citasasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();"> Citas  asistidas</a>
     <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
+    </div>
     <?php include (__DIR__ .'/baseCitas/confirmarAsistencia.php'); ?>
 </div>
 
