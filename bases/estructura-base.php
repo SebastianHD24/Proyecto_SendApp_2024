@@ -40,9 +40,6 @@
             <nav class="navbar">
                 
                 <!-- Logo sena -->
-                <div class="logo-header">
-                    <img src="../../../Proyecto_SendApp_2024/Inicio/Img-home/LogosSena-img/SendApp.png" alt="Logo Sena" />
-                </div>
 
                 <ul class="links">
                     <li><i class="fa-solid fa-house"></i><a href="../../../Proyecto_SendApp_2024/index.php">Inicio</a></li>
