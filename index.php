@@ -39,7 +39,7 @@
         <div class="panel top">
             <div class="content">
                 <div class="description">
-                    <h1 class="TextSli2">Explora nuevas perspectivas.</h1>
+                    <h1 class="TextSli2">Explora nuevas perspectivas</h1>
                     <p class="TextSlipar2">Crea conexiones significativas y desafíate a ti mismo en cada paso del camino. <br>Aprende a interactuar con tus elementos, explora tus conociminetos y descubre tus habilidades.</p>
                 </div>
                 <img src="./imagenes/Slider-img/certificacion-12062023.jpg" alt="foto2" id="foto2">
