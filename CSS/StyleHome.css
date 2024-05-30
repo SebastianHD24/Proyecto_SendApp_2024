@@ -28,6 +28,8 @@ body{
     flex-direction: column;
     overflow-x: hidden;
 }
+
+
 /* ----------------------------------------------------- */
 
 /* Slider */
@@ -388,6 +390,11 @@ body{
         align-items: center;
         justify-content: center;
         height: auto;
+}
+
+#Info-cditi .container_info .section-1 p{
+    text-align: justify;
+    text-justify: inter-word;
 }
     
 .img_escudo{
