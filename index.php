@@ -48,7 +48,19 @@
         </div>
 
         <div class="handle"></div>
-            </div>
+    </div>
+
+      <!-- --------------------- Sladier para pantallas pequenas --------------------- -->
+    <div class="slider">
+        <ul>
+            <li><img src="./Inicio/Img-home/Slider-img/img1.jpg" alt="imagen1"></li>
+            <li><img src="./Inicio/Img-home/Slider-img/img2.png" alt="imagen2"></li>
+            <li><img src="./Inicio/Img-home/Slider-img/img3.png" alt="imagen3"></li>
+            <li><img src="./Inicio/Img-home/Slider-img/img4.png" alt="imagen4"></li>
+        
+        </ul>
+    </div>
+    <!-- ------------------------------------------------------------------------------ -->
 
     <div class="content">
         <section>
