@@ -85,6 +85,9 @@ if (isset($_SESSION['documento_identidad'])) {
                    
                     </article>
                     <span></span>
+                    <b>Confirmación</b>
+                    <?= empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion'] ?> </p>
+                    <span></span>
                     <article>
                         <b>Funcionario: </b>
                         <!-- aqui extraemos el nombre del funcionario y el apellido de este ya que el aprnediz elije con que funcionario quiere la cita y la idea es que se muestre  -->
@@ -144,7 +147,7 @@ if (isset($_SESSION['documento_identidad'])) {
      FROM citas 
      INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
      INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
-     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY fecha DESC ";
+     WHERE citas.documento_usuario = '$documento_identidad'  ORDER BY citas.id_cita DESC ";
 
 
     $result = mysqli_query($conn, $sql);
