@@ -23,7 +23,7 @@
     width: 100%; /*Limita el ancho máximo */
     margin: 20px auto; 
     background-color: white; /* Fondo blanco para el contenedor */
-    border: 2px solid var(--azul); /* Borde suave */
+    
     border-radius: 8px; /* Bordes redondeados */
     overflow: hidden ;
     overflow-x: auto;
