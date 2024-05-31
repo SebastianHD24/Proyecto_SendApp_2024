@@ -31,7 +31,7 @@
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
                 <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn">
-                  <p class="txt1">Psicología</p>
+                  <p class="txt1">Psicologí a</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>    
@@ -123,6 +123,7 @@
 </div>
 <!-- la parte de solicitud citas -->
 <div  class="container oculto" >
+  <p id="descrip-solicitarCitas">Seleccione la jornada y el funcionario que desea solicitar la cita.</p>
     <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo" class="solicitarCita">
       <input type="hidden" name="id_servicio"  id='id_servicio' value="">
   
@@ -142,16 +143,21 @@
       <select name='usuario_f' class="funcionario">
     
       </select>
-      <p class="sub"><strong>Area</strong></p>
+
+      <p class="sub"><strong>Área:</strong></p>
       <input type="text" name="nombre_servicio" disabled class="Nombre_Area" >
+      
 
       <div class="formulario">
+        <div class="formulario-contador">
         <label for="descripcion"><strong>Descripción:</strong></label>
         <p id="charCount">0/150</p>
+        </div>
+        
         <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="150" placeholder="El limite de caracteres es de 150"></textarea>
       </div>
 
-  <div class="buttons">
+      <div class="buttons">
         <button class="button-servicio">Cerrar</button>
         <button type='submit' class="button-servicio" id="btnEnviar">Enviar</button>
       </div>

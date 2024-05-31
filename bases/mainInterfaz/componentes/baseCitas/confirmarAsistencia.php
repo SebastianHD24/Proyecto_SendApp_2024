@@ -9,7 +9,7 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
-                <th>Confirmación</th>
+                
                 <th>Jornada</th>
                <th>Asistencia</th>
                
@@ -24,7 +24,7 @@
             $funcionario = $_SESSION["documento_identidad"];
             $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
             FROM citas
-            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='aceptado' ORDER BY citas.id_cita ASC ";
+            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='aceptado'AND citas.confirmacion IS NULL ORDER BY citas.id_cita ASC ";
     
             $result = mysqli_query($conn, $sql);
 
@@ -42,7 +42,7 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
-                        <td><?= $row['confirmacion'] ?></td>
+                       
                         <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
                             <button class="button asistio <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Asistió</button>
