@@ -34,6 +34,26 @@ input .toggle1{
     color: white;
     transition: all 1.5s ease;
 }
+body.dark .logo img{
+    content: url('../Inicio/Img-home/LogosSena-img/logoSendappDark2.png');
+    max-width: 8.4rem;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+
+}
+body.dark .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
 .acesibilidad label .fa-solid{
     color: white;
 
