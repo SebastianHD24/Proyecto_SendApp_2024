@@ -26,7 +26,7 @@
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
                 <th>Jornada</th>
-                <th>acciones</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -52,7 +52,7 @@
                     $rejected = $row['estado_cita'] === 'rechazado';
             ?>
                     <tr id="row_<?= $row['documento_identidad'] ?>" <?php if ($accepted || $rejected) echo 'style="background-color: #f2f2f2;"'; ?>>
-                        <td><?= $row['documento_identidad'] ?></td>
+                        <td><strong><?= $row['documento_identidad'] ?></strong></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
