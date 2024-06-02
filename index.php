@@ -5,6 +5,7 @@
         <title>SendApp</title>
         <link rel="stylesheet" type="text/css" href="../Proyecto_SendApp_2024/CSS/StyleHome.css">
         <script src="../Proyecto_SendApp_2024/scripts/ScriptsGenerales/slider.js"></script>
+        <script src="../Proyecto_SendApp_2024/scripts/ScriptsGenerales/animaciones.js"></script>
     <?php endblock() ?>
     
     <!-- Slider Sena -->
