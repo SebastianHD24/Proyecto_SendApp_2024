@@ -18,7 +18,7 @@ if (isset($_SESSION['documento_identidad'])) {
     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
     WHERE citas.documento_usuario = '$documento_identidad' 
-    AND citas.fecha >= CURDATE()
+    AND citas.fecha >= CURDATE() AND NOT citas.confirmacion='no-asiste'
     ORDER BY citas.fecha ASC
     LIMIT 6";
 
@@ -135,7 +135,7 @@ if (isset($_SESSION['documento_identidad'])) {
         <?php
     } else {
         ?>
-        <article>
+        <article  >
             <p>No se encontraron citas para mostrar a este usuario.</p>
         </article>
             <?php 
