@@ -27,9 +27,12 @@ if(isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     // Verificar si hay resultados 
     if(mysqli_num_rows($result) > 0) {
         // Mostrar los eventos debajo del calendario 
-        echo "<h2>Eventos</h2>";
-        echo "<table border='1'>";
+        echo "<h2>Eventos</h2>"; 
+        echo '<div class="tabla-contenedor">';
+        echo "<table>";
+        echo "<thead>";
         echo "<tr><th>Evento</th><th>Hora</th><th>Nombre</th></tr>";
+        echo "<tbody>";
         while($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>{$row['evento']}</td>";
@@ -37,7 +40,10 @@ if(isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
             echo "<td>{$row['nombre_usuario']}</td>";
             echo "</tr>";
         }
+        echo "</tbody>";
+        echo "</thead>";
         echo "</table>";
+        echo "</div>";
     } else {
         echo "No se encontraron citas para el día seleccionado.";
     }
