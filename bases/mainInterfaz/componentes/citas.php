@@ -18,7 +18,7 @@ if (isset($_SESSION['documento_identidad'])) {
     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
     WHERE citas.documento_usuario = '$documento_identidad' 
-    AND citas.fecha >= CURDATE()
+    AND citas.fecha >= CURDATE() AND NOT citas.confirmacion='no-asiste'
     ORDER BY citas.fecha ASC
     LIMIT 6";
 
@@ -35,11 +35,25 @@ if (isset($_SESSION['documento_identidad'])) {
             while ($row = mysqli_fetch_assoc  ($result)) {
                 ?>
                 <!--Tarjeta donde se muestra la información de la cita-->
+
+                
                 <div class="notifications">
+
+                
                 <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
                       " >
-                        <p><?= $row['justificacion_rechazo']?> </p>
+                        <p><?= $row['justificacion_cancelacion']?> </p>
                     </div>
+
+                
+                <div id="justificacion-Noasistencia-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
+                
+                <p><?= $row['justificacion_cancelacion']?></p>
+            
+            
+                </div>
+
+
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
@@ -73,7 +87,7 @@ if (isset($_SESSION['documento_identidad'])) {
                                 echo  $row['estado_cita'];
                               } 
                             ?> 
-                        </p>
+                            </p>
                     </article>
                     <span></span>
                     <article>
@@ -86,7 +100,18 @@ if (isset($_SESSION['documento_identidad'])) {
                     </article>
                     <span></span>
                     <b>Confirmación</b>
-                    <?= empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion'] ?> </p>
+                    <p>
+                    <?php
+                             if($row['confirmacion']== 'no-asiste'){
+                                echo 'no-asiste - 
+                                <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
+                             }else {
+                             
+                             echo empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion']; 
+                            }
+                             ?> 
+                             </p>
+                             
                     <span></span>
                     <article>
                         <b>Funcionario: </b>
@@ -111,7 +136,7 @@ if (isset($_SESSION['documento_identidad'])) {
     } else {
         ?>
         <article>
-            <p>No se encontraron citas para mostrar a este usuario.</p>
+        <p></p>
         </article>
             <?php 
         }
@@ -156,7 +181,7 @@ if (isset($_SESSION['documento_identidad'])) {
         if (mysqli_num_rows($result) > 0) {
             // Aquí se abre el único contenedor de cuadrícula
             ?>
-             <!-- <form class="formulario" method="post" id="formulario_citas">
+               <!-- <form class="formulario" method="post" id="formulario_citas">
                 <select name="historial_citas" id="historial_citas">
                     <option value="todos">Todos</option>
                     <option value="hoy">Hoy</option>
@@ -166,7 +191,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     <option value="anio">Ultimo Año</option>
                 </select>
                 <button type="submit" onclick="historialCita();" class="buscar">Buscar</button>
-            </form> -->
+            </form>   -->
             <div id="historial-oculto" class= "notifications-panel" style="display: none;">
             <?php
             
@@ -176,10 +201,22 @@ if (isset($_SESSION['documento_identidad'])) {
                 
                 <div class="notifications">
 
-                    <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
+
+                <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
                       " >
                         <p><?= $row['justificacion_rechazo']?> </p>
                     </div>
+
+
+                    <div id="justificacion-Noasistencia-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
+                
+                        <p><?= $row['justificacion_cancelacion']?></p>
+            
+            
+                    </div>
+
+               
+
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
@@ -203,14 +240,16 @@ if (isset($_SESSION['documento_identidad'])) {
                     <span></span>
                     <article>
                         <b>Estado: </b>
-                        <?php
+                        <P>
+                            <?php
                               if ($row['estado_cita']== 'rechazado'){
                                 echo 'rechazado  -
                                 <a id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
                               }else {
                                 echo  $row['estado_cita'];
                               } 
-                            ?> 
+                            ?>
+                            </P> 
                     </article>
                     <span></span>
                     <article>
@@ -224,8 +263,19 @@ if (isset($_SESSION['documento_identidad'])) {
                     <article>
                         <b>Confirmacion: </b>
                         <p>
-                            <?= empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion'] ?> </p> 
-                        </p>
+                        <?php
+                             if($row['confirmacion']== 'no-asiste'){
+                                echo 'no-asiste - 
+                                <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
+                             }else {
+                             
+                             echo empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion']; 
+                            }
+                             ?> 
+                             </p>
+                              
+                             
+                    
                     </article>
                     <span></span>
                     <article>
@@ -269,7 +319,7 @@ if (isset($_SESSION['documento_identidad'])) {
 ?>
 
 
-<!-- <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script> -->
+ <!-- <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>  -->
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/cantidadCitas.js'></script>
 
 <script>
@@ -278,6 +328,11 @@ function verRechazo(id){
     
     popup.style.display = 'block';
 
+}
+
+function Vermotivo(id){
+    let popupMotivo = document.getElementById('justificacion-Noasistencia-' + id);
+    popupMotivo.style.display = 'block';
 }
 
 </script>
