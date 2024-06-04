@@ -160,16 +160,13 @@
 
 /*Respuestas*/
 .contenedor_respuesta{
-    display: flex;
-    justify-content: center;
     border: 5px solid var(--azul);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
     width: 60%;
     flex-direction: column;
-    display: flex;
-    justify-content: center;
+
 }
 .contenedor_respuesta h1{
     text-align: center;
@@ -238,6 +235,52 @@
         
 
     } */
+    .contenedor_descripcion{
+        border: 5px solid var(--azul);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
+        width: 60%;
+        flex-direction: column;
+    }
+    .contenedor_descripcion h1{
+        font-size: 1.5rem;
+    }
+    .contenedor_descripcion .button1{
+        background-color: #39a900;
+        color: #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        width: 30%;
+        cursor: pointer;
+        height: 25px;
+        margin-top: 2rem;
+    }
+    .contenedor_respuesta{
+        border: 5px solid var(--azul);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
+        width: 60%;
+        flex-direction: column;
+    }
+    .contenedor_respuesta h1{
+        font-size: 1.5rem;
+    }
+    .contenedor_respuesta textarea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: .7rem;
+    }
+    .contenedor_respuesta .button2{
+        width: 40%;
+    }
+    .contenedor_respuesta .btnResponder{
+
+        margin-left: .7rem;
+    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
