@@ -157,9 +157,9 @@ img.inverted{
     }
   
 
-  img.inverted {
+  /* img.inverted {
       filter: grayscale(100%);
-  }
+  } */
 }
 @media only screen and (min-width: 1024px){
   .acesibilidad {
@@ -209,8 +209,8 @@ img.inverted{
   
 
 
-  img.inverted {
+  /* img.inverted {
       filter: grayscale(100%);
-  }
+  } */
 
 }
