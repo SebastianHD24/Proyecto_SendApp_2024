@@ -20,9 +20,9 @@ body{
     font-family: var(--fuente-principal);
     font-family: 1.2rem;
 }
-/* .tarjetas-contenedor h2{
-    color: #000000;
-} */
+.tarjetas-contenedor h2{
+    color: #00324D;
+}
 /*Contenido*/
 .orden{
     margin-bottom: 4rem;
