@@ -129,6 +129,83 @@
     text-decoration: none;
     color: #FFFFFF;
 }
+/*Aparatados de ver descripcion al responder y ver descripcion del historial*/
+.contenedor_descripcion{
+    border: 5px solid var(--azul);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
+    width: 60%;
+    flex-direction: column;
+}
+.contenedor_descripcion h1{
+    text-align: center;
+}
+.contenedor_descripcion p{
+    text-align: center;
+    margin-top: 1rem;
+}
+.contenedor_descripcion .button1{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    width: 10%;
+    cursor: pointer;
+    height: 25px;
+}
+.contenedor_descripcion .button1:hover{
+    background-color: #00234d;
+}
+
+/*Respuestas*/
+.contenedor_respuesta{
+    display: flex;
+    justify-content: center;
+    border: 5px solid var(--azul);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
+    width: 60%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.contenedor_respuesta h1{
+    text-align: center;
+
+}
+.contenedor_respuesta textarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 1.6rem;
+}
+.contenedor_respuesta .btnResponder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.6rem;
+}
+.contenedor_respuesta .button2{
+    background-color: #00234D;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    width: 15%;
+    cursor: pointer;
+    height: 25px;
+    margin-top: 1rem;
+}
+
+.contenedor_respuesta .button2:hover{
+    background-color: #39a900;
+}
+.contenedor_respuesta p{
+    text-align: center;
+    margin-top: 1rem;
+}
 
   /* RESPONSIVE */
 
