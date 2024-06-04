@@ -135,6 +135,9 @@
         margin-top: 0.1rem;
         margin-bottom: 20px;
     }
+    .main-form{
+        gap: 1px;
+    }
 }
 
 @media screen and (min-width: 1024px) {

@@ -73,7 +73,10 @@
                                         <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
                                         <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
                                         <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación por inasistencia del usuario:</label>
-                                        <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
+                                        <span id="charCount_<?= $row['id_cita'] ?>">0/150</span>
+                                        <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" class="justificacion" placeholder="Escribe aquí tu justificación" required>
+                                        
+
                                         <button type="submit" class="button danger">Enviar</button>
                                     </form>
                                 </div>
@@ -98,16 +101,22 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
-<script>
-// Declaramos variable para  lo que necesitamos 
+<script>// Evento de teclado (input) para el conteo de los caracteres de la descripcion de la cita
+document.addEventListener('DOMContentLoaded', (event) => {
+    const textareas = document.querySelectorAll('.justificacion');
 
+    textareas.forEach(textarea => {
+        const charCount = document.getElementById(`charCount_${textarea.id.split('_').pop()}`);
+
+        textarea.addEventListener('input', () => {
+            const currentLength = textarea.value.length;
+            charCount.textContent = `${currentLength}/150`;
+
+            if (currentLength >= 150) {
+                textarea.value = textarea.value.substring(0, 149);
+            }
+        });
+    });
+});
+</script>

@@ -62,7 +62,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
                 <th>Jornada</th>
-                <th>acciones</th>
+                <th>Acciones</th>
             </tr>
         </thead>    
         <tbody>

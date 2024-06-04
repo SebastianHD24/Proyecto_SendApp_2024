@@ -81,6 +81,10 @@ h3 {
   cursor: pointer;
 }
 
+.dates li.event.past:hover{
+  cursor: pointer;
+}
+
 #prev::before,
 #next::before {
   content: "";

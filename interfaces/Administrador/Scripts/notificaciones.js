@@ -60,22 +60,10 @@ function ver() {
                     <td>${usuario.documento_identidad}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${usuario.tipo_pqrs}</td>
-                    <td>${usuario.descripcion}</td>
-                    <td>
-                        <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
-                            <input type="hidden" name="fecha_respuesta" id="fecha_S">
-                            <input type="hidden" name="id_peticion" id="id_pqr1">
-                            <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
-                            <button type="submit" value="Responder" onclick="enviarIdPQR(${usuario.id_peticion});" class = "btnResponder" id = "btnEnviar">Responder</button>
-                        </form>
-                    </td>
-                    </tr>
-                    <div class="myModal" id="myModal">
-                        <div class="confirmacion" id="confirmacion">
-                            <p>Enviada con éxito</p>
-                            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
-                        </div>
-                    </div>`;
+                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td>
+                    <td><button onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
+                </tr>`;
+            
         });
 
         // Agregar el evento de envío del formulario
@@ -105,7 +93,7 @@ function ver() {
 }
 ver();
 
-function enviarIdPQR(id) {
+function enviarIdPQR() {
     document.getElementById('id_pqr1').value = id;
     let modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -171,8 +159,8 @@ function verHistorial(){
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${fechaRespuestaFormateada}</td>
                     <td>${historial.tipo_pqrs}</td>
-                    <td>${historial.descripcion}</td>
-                    <td>${historial.respuesta_pqrs}</td>
+                    <td><button onclick="verDescripcionH(${historial.id_peticion});">Ver descripción</button></td>
+                    <td><button onclick="verResponderH(${historial.id_peticion});">Ver respuesta</button></td>
                 </tr>`;
         });
         salir.style.display = "block";
@@ -229,8 +217,8 @@ function historialDesde(){
                             <td>${historial.fecha_solicitud}</td>
                             <td>${historial.fecha_respuesta}</td>
                             <td>${historial.tipo_pqrs}</td>
-                            <td>${historial.descripcion}</td>
-                            <td>${historial.respuesta_pqrs}</td>
+                            <td><button onclick="verDescripcionH(${historial.id_peticion});">Ver descripción</button></td>
+                            <td><button onclick="verResponderH(${historial.id_peticion});">Ver respuesta</button></td>
                         </tr>`;
                 });
             }
@@ -304,4 +292,94 @@ function historialCita(){
         })
         .catch(error => console.error('Error:', error));
     });
+}
+
+function verDescripcion(idPeticion){
+    const contenedorSin = document.getElementById('popup');
+    const contenedor_descripcion = document.getElementById('contenedor_descripcion');
+    const descripcion = document.getElementById('descripcion');
+
+    contenedorSin.style.display = "none";
+    contenedor_descripcion.style.display = "block";
+    historial.style.display = "none";
+
+    fetch(`../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarDescripcion.php?id=${idPeticion}`)
+    .then(response => response.json())
+    .then(data => {
+        descripcion.innerHTML = data.descripcion;
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+}
+function verDescripcionH(idPeticion){
+    const contenedorSin = document.getElementById('contenedor-popup');
+    const contenedor_descripcion = document.getElementById('contenedor_descripcionH');
+    const descripcion = document.getElementById('descripcion1');
+
+    contenedorSin.style.display = "none";
+    contenedor_descripcion.style.display = "block";
+    salir.style.display = "none";
+
+    fetch(`../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarDescripcion.php?id=${idPeticion}`)
+    .then(response => response.json())
+    .then(data => {
+        descripcion.innerHTML = data.descripcion;
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+}
+function verResponder(idPeticion){
+    const contenedorSin = document.getElementById('popup');
+    const contenedor_respuesta = document.getElementById('contenedor_respuesta');
+    const id_pqr1 = document.getElementById('id_pqr1');
+
+    contenedorSin.style.display = "none";
+    contenedor_respuesta.style.display = "block";
+    historial.style.display = "none";
+    id_pqr1.value = idPeticion;
+}
+
+function verResponderH(idPeticion) {
+    const contenedorSin = document.getElementById('contenedor-popup');
+    const contenedorRespuestaH = document.getElementById('contenedor_respuestaH');
+    const respuesta = document.getElementById('respuesta');
+
+    contenedorSin.style.display = "none";
+    contenedorRespuestaH.style.display = "block";
+
+    fetch(`../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarRespuesta.php?id=${idPeticion}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.respuesta_pqrs) {
+                respuesta.innerHTML = data.respuesta_pqrs;
+            } else {
+                respuesta.innerHTML = "No hay respuesta.";
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+function cerrarDescripcion(){
+    location.reload();
+}
+
+function cerrarSimpleR(){
+    const contenedorSin = document.getElementById('contenedor-popup');
+    const contenedor_respuestaH = document.getElementById('contenedor_respuestaH');
+
+    contenedorSin.style.display = "block";
+    contenedor_respuestaH.style.display = "none";
+    salir.style.display = "block";
+}
+function cerrarSimpleD(){
+    const contenedorSin = document.getElementById('contenedor-popup');
+    const contenedor_descripcionH = document.getElementById('contenedor_descripcionH');
+
+    contenedorSin.style.display = "block";
+    contenedor_descripcionH.style.display = "none";
+    salir.style.display = "block";
 }
