@@ -18,7 +18,7 @@ if (isset($_SESSION['documento_identidad'])) {
     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
     WHERE citas.documento_usuario = '$documento_identidad' 
-    AND citas.fecha >= CURDATE() AND NOT citas.confirmacion='no-asiste'
+    AND citas.fecha >= CURDATE() AND NOT citas.confirmacion='No asistió' AND NOT citas.confirmacion='Si asistió'
     ORDER BY citas.fecha ASC
     LIMIT 6";
 
@@ -102,8 +102,8 @@ if (isset($_SESSION['documento_identidad'])) {
                     <b>Confirmación</b>
                     <p>
                     <?php
-                             if($row['confirmacion']== 'no-asiste'){
-                                echo 'no-asiste - 
+                             if($row['confirmacion']== 'No asistió'){
+                                echo 'No asistió - 
                                 <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
                              }else {
                              
@@ -264,8 +264,8 @@ if (isset($_SESSION['documento_identidad'])) {
                         <b>Confirmacion: </b>
                         <p>
                         <?php
-                             if($row['confirmacion']== 'no-asiste'){
-                                echo 'no-asiste - 
+                             if($row['confirmacion']== 'No asistió'){
+                                echo 'No asistió - 
                                 <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
                              }else {
                              
