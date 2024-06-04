@@ -131,5 +131,65 @@ function addDateClickListeners() {
     });
 }
 
+
+// Función que toma ciertos datos de la cita seleccionada y los utiliza para mostrar más información sobre esta
+function saberMas(fecha, hora, documento_identidad, idCita) {
+    const ventanaInfo = document.querySelector('.info');
+    const calendario = document.querySelector('.calendar');
+
+    // Ocultar el calendario y mostrar la ventana de información
+    calendario.classList.add('oculto');
+    ventanaInfo.classList.remove('oculto');
+
+    // Crear un objeto con los datos
+    const data = { fecha, hora, documento_identidad, idCita };
+
+    // Enviar los datos al servidor usando fetch
+    fetch('../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/detalles_cita.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Actualizar el contenido de la ventana de información con la respuesta del servidor
+        if (data.success) {
+            document.querySelector('.info h1').textContent = 'Descripción de la cita';
+            document.getElementById('nombreAprendiz').innerHTML = data.nombre_aprendiz;
+            document.getElementById('curso').innerHTML = data.programa;
+            document.getElementById('ficha').innerHTML = data.ficha;
+            document.getElementById('descripcionCita').innerHTML = data.descripcion;
+        } else {
+            document.querySelector('.info h1').textContent = 'Error';
+            document.getElementById('nombreAprendiz').innerHTML = 'Sin información';
+            document.getElementById('curso').innerHTML = 'Sin información';
+            document.getElementById('ficha').innerHTML = 'Sin información';
+            document.getElementById('descripcionCita').innerHTML = data.error || 'No se pudieron obtener los detalles de la cita.';
+        }
+    })
+    .catch(error => {
+        console.error('Error al obtener detalles de la cita:', error);
+        document.querySelector('.info h1').textContent = 'Error';
+        document.getElementById('nombreAprendiz').innerHTML = 'Sin información';
+        document.getElementById('curso').innerHTML = 'Sin información';
+        document.getElementById('ficha').innerHTML = 'Sin información';
+        document.getElementById('descripcionCita').innerHTML = 'Hubo un error al obtener los detalles de la cita.';
+    });
+}
+
+
+// Función para cerrar el pop-up de información y mostrar el calendario
+function cerrar() {
+    const ventanaInfo = document.querySelector('.info');
+    const calendario = document.querySelector('.calendar');
+
+    // Ocultar la ventana de información y mostrar el calendario
+    ventanaInfo.classList.add('oculto');
+    calendario.classList.remove('oculto');
+}
+
+
 renderCalendar();
 addDateClickListeners();
