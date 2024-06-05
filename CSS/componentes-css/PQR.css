@@ -12,6 +12,10 @@
 .contenido{
     width: 30rem;
     height: 28rem;
+    border: 5px solid var(--azul);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
     
     } 
     
@@ -19,7 +23,16 @@
     padding: 10px;
 }
 .opcionespqr{
-    font-size: 1rem;
+    margin: 10px 0px 0px 0px;
+    font-family: 'Work sans' sans-serif;
+    border-radius: 5px;
+    border: 1px solid var(--azul);
+    padding: 7px;
+    width: 100%;
+    text-align: center;
+    color: var(--negro);
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 .titulo{
@@ -39,9 +52,6 @@
     border: none;
     margin: 10px 0px 0px 0px;
     text-align: center;
-}
-.type_PQR label{
-    font-weight: 500;
 }
 
 textarea{
@@ -75,13 +85,18 @@ textarea{
 }
 
 .button_pqr{
-    width: 100px;
-    height: 25px;
-    border-radius: 5px;
-    background-color: var(--verde);
-    border: 1px solid ;
-    color: var(--blanco);
-    font-family: var(--fuente-principal);
+        font-family: 'Work sans' sans-serif;
+        margin: 10px;
+        padding: 10px 2rem;
+        background-color: #39a900;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.button_pqr:hover{
+    background-color: #00324D;
 }
 
 .titulo h1{

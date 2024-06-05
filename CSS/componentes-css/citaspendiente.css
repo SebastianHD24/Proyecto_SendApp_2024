@@ -23,7 +23,6 @@
     width: 100%; /*Limita el ancho máximo */
     margin: 20px auto; 
     background-color: white; /* Fondo blanco para el contenedor */
-    
     border-radius: 8px; /* Bordes redondeados */
     overflow: hidden ;
     overflow-x: auto;
@@ -38,6 +37,8 @@
     overflow-x: auto;
     overflow-y: hidden;   
     background-color: #00234D;
+    margin: 20px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .fila, .filar {
@@ -53,7 +54,7 @@
 
 .table_div td{
     text-align: center;
-    /* border: 1px solid var(--negro)  */
+    border-radius: 0px 0px 0px 2px;
     background-color: #FFFFFF;
     padding: 5px;
 }
@@ -67,6 +68,10 @@ thead{
     background-color: #00234d;
 }
 
+th{
+    border-radius: 10px 10px 0px 0px;
+    padding: 8px 6px 8px 6px;
+}
 
 /* -------------------- button aceptar rechazar citas /// button asistencia ---------------------- */
 /* Estilos para los botones */

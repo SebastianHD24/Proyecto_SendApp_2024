@@ -481,29 +481,12 @@ h1{
     margin-left: 10px;
     margin-right: 180px;
     color: var(--blanco);
-    view-timeline-name: --slideI;
-    view-timeline-axis: block;
-    animation-timeline: --slideI;
-    animation-name: moverI;
-    animation-range-start: entry;
+    transform: translateX(95%);
+    transition: transform 1s ease-out;
 }
 
-@keyframes moverI{
-    0%{
-        translate: 90%;
-    }
-    20%{
-        translate: 0;
-    }
-    80%{
-        translate: 0;
-    }
-    82%{
-        translate: 20%;
-    }
-    86%{
-        translate: 95%;
-    }
+.izquierda.animada {
+    transform: translateX(0);
 }
 
 .triangulo-derecha {
@@ -526,19 +509,28 @@ h1{
     border-bottom-right-radius: 10px;  
 }
 
-.derecha{
+.derecha {
     display: flex;
     margin-left: 80px;
     margin-right: 10px;
     margin-top: 10px;
     color: var(--blanco);
-    view-timeline-name: --slideD;
-    view-timeline-axis: block;
-    animation-timeline: --slideD;
-    animation-name: moverD;
+    transform: translateX(-95%);
+    transition: transform 1s ease-out;
 }
 
-@keyframes moverD{
+.derecha.animada {
+    transform: translateX(0);
+}
+
+
+/* @keyframes moverD{
+    from{
+        transform: translateX(-90%);
+    }
+    to{
+        transform: translateX(0);
+    }
     0%{
         translate: -90%;
     }
@@ -548,13 +540,7 @@ h1{
     80%{
         translate: 0;
     }
-    82%{
-        translate: -20%;
-    }
-    86%{
-        translate: -95%;
-    }
-}
+} */
 
 .triangulo-izquierda {
 

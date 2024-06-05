@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         charCount.textContent = `${currentLength}/150`;
 
         if (currentLength >= 150) {
-            textarea.value = textarea.value.substring(0, 150);
+            textarea.value = textarea.value.substring(0, 149);
         }
     });
 });

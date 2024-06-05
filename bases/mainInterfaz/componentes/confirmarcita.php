@@ -15,7 +15,7 @@ if(isset($_GET['id_cita']) && is_numeric($_GET['id_cita'])) {
     $id_cita = $_GET['id_cita'];
     
     // Actualizar la confirmación de la cita en la base de datos
-    $sql = "UPDATE citas SET confirmacion='si-asiste' WHERE id_cita=$id_cita";
+    $sql = "UPDATE citas SET confirmacion='Si asistió' WHERE id_cita=$id_cita";
 
     if (mysqli_query($conn, $sql)) {
         // No hay redirección aquí
