@@ -1,13 +1,13 @@
 <?php
   //Pequeña logica para capturar el componente que se quiere mostrar
-  $component = isset($_GET['p']) ? strtolower($_GET['p']) : 'mi_agenda'; 
+  $component = isset($_GET['p']) ? strtolower($_GET['p']) : 'citaspendiente'; 
 
   // Verificar si el archivo del componente existe
   $rutaComponent = '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/' . $component . '.php';
   
   if (!file_exists($rutaComponent)) {
       // Si el archivo del componente no existe, redirigir a 'mi_agenda'
-      $component = 'mi_agenda';
+      $component = 'citaspendiente';
   }
 
 

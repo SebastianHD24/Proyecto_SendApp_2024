@@ -4,6 +4,7 @@
     $conn = connection();
     include '../../../Proyecto_SendApp_2024/bases/consulta_nombres_correos.php';
     include '../../../Proyecto_SendApp_2024/bases/redireccionamiento.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="../../../Proyecto_SendApp_2024/bases/mainInterfaz/estiloInterfaces.css">
     <?php
         if ($id_rol == 1){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >';
             $tituloPestaña = "Administrador";
         }
         else if ($id_rol == 2){
@@ -29,12 +31,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/interfaces-css/usuario.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/citas.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/PQR.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/notificaiones.css" >
-    <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/servicios.css" >
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/calendario.css">
     <link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/citaspendiente.css">
@@ -71,11 +71,12 @@
                     <?php endif ?>
                     <?php if ($id_rol == 2): ?>
                         <li>
-                        <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Gestion de Citas </button></a>
                         </li>
                         <li>
-                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Citas sin contestar </button></a>
+                        <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
                         </li>
+                        
                     <?php endif; ?>
 
                     
@@ -100,7 +101,7 @@
                             <a  href="?p=serviciosadmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosadmin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notifiadmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiadmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
+                            <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
                         </li>
                     <?php endif; ?>
                         

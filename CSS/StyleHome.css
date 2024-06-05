@@ -28,6 +28,8 @@ body{
     flex-direction: column;
     overflow-x: hidden;
 }
+
+
 /* ----------------------------------------------------- */
 
 /* Slider */
@@ -91,7 +93,10 @@ body{
 .top .description {
     left: 5%;
 }
-    
+
+.slider{
+    display: none;
+}
 /* Handle. */
 .handle {
     height: 100%;
@@ -129,6 +134,15 @@ body{
     color: var(--azul);
 }
     
+@media (max-width: 834px){
+    .splitview{
+    display: none;
+    }
+    .slider{
+        display: block;
+    }
+}
+
 /* Responsive. */
 @media (max-width: 2559px){
     .description h1,p {
@@ -226,8 +240,8 @@ body{
         left:75%;
     }
     .bottom .description {
-        width: 60%;
-        left: 22 5px;
+        width: 40%;
+        right: 1px;
     }
     .top .description {
         width: 40%;
@@ -388,6 +402,11 @@ body{
         align-items: center;
         justify-content: center;
         height: auto;
+}
+
+#Info-cditi .container_info .section-1 p{
+    text-align: justify;
+    text-justify: inter-word;
 }
     
 .img_escudo{
@@ -1000,5 +1019,88 @@ h1{
 @media screen and (min-width: 2561px) {
     body {
         font-size: 10px; /* Ajusta el tamaño de la fuente para pantallas grandes */
+    }
+}
+
+
+/* -------Slider #2 -------- */
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+
+    animation: slider 20s infinite alternate;
+    animation-timing-function: linear;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider li img{
+    width: 100%;
+}
+
+@keyframes slider {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left:-300%}
+}
+
+
+
+@media screen and (min-width: 1615px){
+
+    /* responsive slider #2*/
+    .slider{
+        height: 300px;
+    }
+
+    .slider ul{
+        height: 300px;
+    }
+
+    .slider li{
+        height: 300px;
+    }
+
+    .slider li img{
+        height: 300px;
+    }
+
+}
+
+
+@media screen and (min-width: 1720px){
+    /* responsive slider */
+    .slider{
+        height: 300px;
+    }
+
+    .slider ul{
+        height: 300px;
+    }
+
+    .slider li{
+        height: 300px;
+    }
+
+    .slider li img{
+        height: 300px;
     }
 }

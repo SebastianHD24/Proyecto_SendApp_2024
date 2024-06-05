@@ -15,7 +15,7 @@ if(isset($_POST['id_cita']) && isset($_POST['justificacion'])) {
     $justificacion = mysqli_real_escape_string($conn, $_POST['justificacion']);
 
     // Actualiza la columna de confirmación a "no" y la columna de justificación de cancelación
-    $sql = "UPDATE citas SET confirmacion = 'no-asiste', justificacion_cancelacion = '$justificacion' WHERE id_cita = $id_cita";
+    $sql = "UPDATE citas SET confirmacion = 'No asistió', justificacion_cancelacion = '$justificacion' WHERE id_cita = $id_cita";
 
     // Ejecuta la consulta
     if (mysqli_query($conn, $sql)) {

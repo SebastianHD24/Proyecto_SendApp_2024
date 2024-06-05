@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-:root{
+:root {
   --verde: #39a900;
   --blanco: #fff;
   --negro: #070001;
@@ -18,12 +18,12 @@
   padding-top: 20px;
 }
 
-.calendar h3 {
+h3 {
   font-weight: 600;
   color: var(--blanco);
 }
 
-.parrafo_calendario{
+.parrafo_calendario {
   font-weight: 600;
   padding-bottom: 1rem;
 }
@@ -46,13 +46,12 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
 .calendar nav {
   display: flex;
   align-items: center;
 }
 
-.calendar .week{
+.calendar .week {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -80,6 +79,10 @@
   position: relative;
   border: none;
   background: transparent;
+  cursor: pointer;
+}
+
+.dates li.event.past:hover{
   cursor: pointer;
 }
 
@@ -115,7 +118,7 @@
   padding-right: 0.7rem;
 }
 
-.dates{
+.dates {
   padding: 0rem 0.7rem 1rem;
 }
 
@@ -136,10 +139,15 @@
   z-index: -1;
 }
 
+/* Estilos para días inactivos */
 .dates li.inactive {
   color: #ccc;
+  pointer-events: none; /* Deshabilita eventos de clic en días inactivos */
 }
 
+.dates li.inactive::before {
+  background-color: #ccc; /* Contrasting color */
+}
 .prev-month,
 .next-month {
   color: #ccc;
@@ -160,11 +168,12 @@
   flex-direction: column;
 }
 
-.eventos h2{
+.eventos h2 {
   font-weight: 700;
   text-align: center;
   padding-bottom: 1rem;
 }
+<<<<<<< HEAD
 .tabla-contenedor {
   width: 100%;
   max-width: 72vw;
@@ -175,6 +184,12 @@
   overflow-x: auto;
 }
 .eventos table{
+=======
+
+.eventos table {
+  display: flex;
+  justify-content: center;
+>>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
   border: none;
   border-collapse: collapse;
   max-width: 72vw;
@@ -194,7 +209,6 @@
   text-align: center;
   color: var(--blanco);
 }
-
 
 .eventos tbody tr:nth-child(even) {
   background-color: #f9f9f9;
@@ -218,11 +232,12 @@
   right: 5px;
 }
 
-.dates li.event {
+/* Estilos para los días con eventos futuros */
+.dates li.event.future {
   color: #fff;
 }
 
-.dates li.event::before {
+.dates li.event.future::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -230,16 +245,48 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   background: #39a900;
+=======
+  background: #00ff0d; /* Verde para eventos futuros */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Estilos para los días con eventos pasados */
+.dates li.event.past {
+  color: #fff;
+}
+
+.dates li.event.past::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ccc; /* Rojo para eventos pasados */
+>>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
   border-radius: 50%;
   z-index: -1;
 }
 
 
-.dates li.inactive::before {
-  background-color: #ccc;  
+/* Pop up de info de la cita */
+.info {
+  max-width: 500px;
+  height: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 768px){
   .eventos table{
     max-width: 82vw;
@@ -267,4 +314,46 @@
   .eventos h2 {
       font-size: 18px;
   }
+=======
+.info .encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info h1 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.info .contenido p {
+  margin: 10px 0;
+  text-align: justify;
+  font-size: 1em;
+  color: #666;
+}
+
+.info button.close-button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #333;
+  padding: 0;
+}
+
+.info button.close-button:hover {
+  color: #000;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .eventos {
+    padding: 0vw 4vw;
+  }
+  .eventos table {
+    max-width: 82vw;
+  }
+>>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
 }
