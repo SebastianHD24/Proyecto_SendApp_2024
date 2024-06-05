@@ -1,7 +1,7 @@
 <h1 id="mensaje1" style="display: none;">No hay historial</h1>
 <h1 id="mensaje" style="display: none;" class="titulos">No hay nuevas PQR</h1>
 <div class="contenedor-popup" id="contenedor-popup"> 
-    <div class="popup">
+    <div class="popup" id="popup">
         <div class="sin-responder" id="sin-responder" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="sin_respuesta" class="confirmado">
@@ -44,6 +44,7 @@
             </select>
             <button type="submit" onclick="historialDesde();" class="buscar">Buscar</button>
         </form>
+        </div>
         <div class="respondidos" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">
@@ -78,9 +79,37 @@
             </table>
         </div>  
     </div>
+    <button class="verHistorial"  onclick="verHistorial();" id="Historial" style="display: none;"><a href="#">Ver historial</a></button>
+    <button class="salirHistorial"id="volver" onclick="ocultarHistorial();" style="display: none;"><a href="#" >Salir</a></button>
+    <!-- contenedor que muestra la descripcion de la pqr -->
+    <div class="contenedor_descripcion" id="contenedor_descripcion" style="display: none;">
+        <h1>Descripción</h1>
+        <p id="descripcion"></p>
+        <button class="button1" onclick="cerrarDescripcion();">Cerrar</button>
+    </div>
+    <div class="contenedor_descripcion" id="contenedor_descripcionH" style="display: none; ">
+        <h1>Descripción</h1>
+        <br>
+        <p id="descripcion1"></p>
+        <button class="button1" onclick="cerrarSimpleD();">Cerrar</button>
+    </diV>
+    <!-- contenedor que muestra el formulario de respuesta y la respuesta -->
+    <div class="contenedor_respuesta" id="contenedor_respuesta" style="display: none; ">
+        <h1>Respuesta</h1>
+        <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
+            <input type="hidden" name="id_peticion" id="id_pqr1">
+            <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
+            <button type="submit" value="Responder" onclick="enviarIdPQR();" class = "btnResponder" id = "btnEnviar">Enviar</button>
+        </form>
+        <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
+    </div>
+    
+    <div class="contenedor_respuesta" id="contenedor_respuestaH" style="display: none;">
+        <h1>Respuesta</h1>
+        <p id="respuesta"></p>
+        <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
+    </div>
 </div>
-<button class="verHistorial"  onclick="verHistorial();" id="Historial" style="display: none;"><a href="#">Ver historial</a></button>
-<button class="salirHistorial"id="volver" onclick="ocultarHistorial();" style="display: none;"><a href="#" >Salir</a></button>
 </main> 
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>

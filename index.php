@@ -5,6 +5,7 @@
         <title>SendApp</title>
         <link rel="stylesheet" type="text/css" href="../Proyecto_SendApp_2024/CSS/StyleHome.css">
         <script src="../Proyecto_SendApp_2024/scripts/ScriptsGenerales/slider.js"></script>
+        <script src="../Proyecto_SendApp_2024/scripts/ScriptsGenerales/animaciones.js"></script>
     <?php endblock() ?>
     
     <!-- Slider Sena -->
@@ -48,7 +49,19 @@
         </div>
 
         <div class="handle"></div>
-            </div>
+    </div>
+
+      <!-- --------------------- Sladier para pantallas pequenas --------------------- -->
+    <div class="slider">
+        <ul>
+            <li><img src="./Inicio/Img-home/Slider-img/img1.jpg" alt="imagen1"></li>
+            <li><img src="./Inicio/Img-home/Slider-img/img2.png" alt="imagen2"></li>
+            <li><img src="./Inicio/Img-home/Slider-img/img3.png" alt="imagen3"></li>
+            <li><img src="./Inicio/Img-home/Slider-img/img4.png" alt="imagen4"></li>
+        
+        </ul>
+    </div>
+    <!-- ------------------------------------------------------------------------------ -->
 
     <div class="content">
         <section>
@@ -140,7 +153,7 @@
                     <div class="triangulo-izquierda"></div>
                     <div class="content-derecha">
                         <h1>Visión</h1>
-                    <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regio- nes como contribución a una Colombia educada, equitativa y en paz.</p>
+                    <p>En el 2018 el SENA será reconocido por la efectividad de su gestión, sus aportes al empleo decente y a la generación de ingresos, impactando la productividad de las personas y de las empresas; que incidirán positivamente en el desarrollo de las regiones como contribución a una Colombia educada, equitativa y en paz.</p>
                     </div>
                     
                 </div>

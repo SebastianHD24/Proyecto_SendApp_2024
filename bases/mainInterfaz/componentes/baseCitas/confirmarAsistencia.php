@@ -1,7 +1,4 @@
-
 <div class="table_div" id="table_div">
-
-
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -9,7 +6,7 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Descripción de la cita</th>
-                <th>Confirmación</th>
+                
                 <th>Jornada</th>
                <th>Asistencia</th>
                
@@ -17,22 +14,33 @@
         </thead>
         <tbody>
             <?php
-           
+            $funcionario = $_SESSION["documento_identidad"];
+            $search_confirmarCitas = '';
+
             if (!$conn) {
                 die("Error al conectar a la base de datos: " . mysqli_connect_error());
             }
-            $funcionario = $_SESSION["documento_identidad"];
-            $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
-            FROM citas
-            INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='aceptado' ORDER BY citas.id_cita ASC ";
-    
+
+            if (isset($_GET['search-confirmarCitas']) && $_GET['search-confirmarCitas'] != '' ){
+                $search_confirmarCitas = $_GET['search-confirmarCitas'];
+
+                $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
+                FROM citas
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='aceptado'AND citas.confirmacion IS NULL AND (citas.documento_usuario LIKE '$search_confirmarCitas%'  OR usuarios.nombres LIKE '$search_confirmarCitas%' OR usuarios.apellidos LIKE '$search_confirmarCitas%') ORDER BY citas.id_cita ASC ";
+
+            } else {
+                $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
+                FROM citas
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='aceptado'AND citas.confirmacion IS NULL ORDER BY citas.id_cita ASC ";
+            }
+            
             $result = mysqli_query($conn, $sql);
 
             if ($result === false) {
                 die("Error en la consulta: " . mysqli_error($conn));
             }
 
-            if (mysqli_num_rows($result) > 0) {
+            elseif (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $accepted = $row['estado_cita'] === 'aceptado';
                     $rejected = $row['estado_cita'] === 'rechazado';
@@ -42,7 +50,7 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
-                        <td><?= $row['confirmacion'] ?></td>
+                       
                         <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
                             <button class="button asistio <?php if (!$accepted) echo 'disabled'; ?>" onclick="confirmarCita(<?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Asistió</button>
@@ -65,7 +73,10 @@
                                         <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
                                         <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
                                         <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación por inasistencia del usuario:</label>
-                                        <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" placeholder="Escribe aquí tu justificación" required>
+                                        <span id="charCount_<?= $row['id_cita'] ?>">0/150</span>
+                                        <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" class="justificacion" placeholder="Escribe aquí tu justificación" required>
+                                        
+
                                         <button type="submit" class="button danger">Enviar</button>
                                     </form>
                                 </div>
@@ -75,7 +86,11 @@
                     </tr>
             <?php
                 }
-            } else {
+            } elseif ($search_confirmarCitas != '' && mysqli_num_rows($result) == 0) {
+                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+            }
+            
+            else {
                 echo "<tr><td colspan='6'>No se encontraron citas pendientes.</td></tr>";
             }
 
@@ -86,16 +101,22 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/citaspendiente.js"></script>
-<script>
-// Declaramos variable para  lo que necesitamos 
+<script>// Evento de teclado (input) para el conteo de los caracteres de la descripcion de la cita
+document.addEventListener('DOMContentLoaded', (event) => {
+    const textareas = document.querySelectorAll('.justificacion');
 
+    textareas.forEach(textarea => {
+        const charCount = document.getElementById(`charCount_${textarea.id.split('_').pop()}`);
+
+        textarea.addEventListener('input', () => {
+            const currentLength = textarea.value.length;
+            charCount.textContent = `${currentLength}/150`;
+
+            if (currentLength >= 150) {
+                textarea.value = textarea.value.substring(0, 149);
+            }
+        });
+    });
+});
+</script>

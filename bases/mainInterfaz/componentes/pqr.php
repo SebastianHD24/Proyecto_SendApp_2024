@@ -19,6 +19,7 @@
         <div class="description">
             <label for="description-label">Descripción:</label>
             <br>
+            <span id="charCount">0/200</span>
             <textarea name="descripcion_pqrs" id="text" cols="30" rows="10" class="descripcion-pqr"></textarea>
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
@@ -37,3 +38,19 @@
 </form>
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/pqrs.js"></script>
+<script>
+    // Evento de teclado (input) para el conteo de los caracteres de la descripcion de la cita
+document.addEventListener('DOMContentLoaded', (event) => {
+    const textarea = document.getElementById('text');
+    const charCount = document.getElementById('charCount');
+
+    textarea.addEventListener('input', () => {
+        const currentLength = textarea.value.length;
+        charCount.textContent = `${currentLength}/200`;
+
+        if (currentLength >= 150) {
+            textarea.value = textarea.value.substring(0, 199);
+        }
+    });
+});
+</script>

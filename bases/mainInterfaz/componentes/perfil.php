@@ -49,6 +49,10 @@
                             <input type="text" name="programa" class="edit_input" value="<?= $programa?>" disabled placeholder="Programa en el que estudia">   
                             <label for="form_input" class="form_input">Ficha:</label>
                             <input type="text" name="ficha" class="edit_input" value="<?= $ficha?>" disabled placeholder="Ficha a la que pertenece">
+                            <label for="form_input" class="form_input">Apellidos:</label>
+                            <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
+                            <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
+                                
                         <?php endif; ?>
                         <?php
                             $rol = $row_user['id_rol'];
@@ -72,15 +76,15 @@
                                 <input type="text" name="servicio" class="edit_input" value="<?= $area ?>" disabled placeholder="Servicio al que pertenece">
                                 <label for="form_input" class="form_input">Apellidos:</label>
                                 <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
-                                <label for="form_input" class="form_input">Celular:</label>
-                            <input type="text" name="celular" class="edit_input" value="<?= $row_user['celular']?>" id="celular" required placeholder="Numero telefonico para contactarlo">
+                                <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
+                               
                         <?php endif; ?>
                            
                         </div>
                 </div>
                 <div class="button-perfil">
                 <button type="submit" class="btn-actu">Actualizar</button>
-                <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
+                
                 </div>
                   
             </form>
@@ -118,7 +122,7 @@
                     <button type="submit" class="btn-actu">
                         Confirmar
                     </button>
-                    <button type="button" class="btn-cambiar" id="btnCambiar">
+                    <button type="button" class="btn-cambiar btn-cambiar-contraseña" id="btnCambiar">
                         Cerrar formulario
                     </button>
                 </div>

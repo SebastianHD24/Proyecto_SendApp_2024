@@ -15,6 +15,10 @@
     flex-direction: column;
     padding: 2rem;
 }
+
+.login__title{
+    text-align: center;
+}
 .header h1{
     font-size: 25px;
     font-weight: 400;
@@ -60,15 +64,24 @@
     align-items: center;
     justify-content: center ;
 }
-.btn-cambiar{
+.btn-confirmar .btn-cambiar-contraseña{
     color: var(--clr-white);
     padding: .8rem;
-    margin-top: 1.8rem;
     border-radius: 7px;
     cursor: pointer;
     color: var(--blanco);
     background-color: var(--azul);
-    margin-bottom: 1rem;
+    border-style: none;
+
+}
+.second-section .btn-cambiar{
+    color: var(--clr-white);
+    margin-top: 2.28rem;
+    padding: .7rem;
+    border-radius: 7px;
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: var(--azul);
     border-style: none;
 }
 .button-perfil{
@@ -87,11 +100,12 @@
 .btn-actu{
     color: var(--clr-white);
     padding: .8rem;
-    width: 20%;
+    width: 30%;
     border-radius: 7px;
     border: 1px solid var(--negro);
     background-color: var(--verde);
     color: var(--blanco);
+    text-align: center;
 }
 .edit_input{
     margin: 18px 0px 30px 0px;
@@ -117,6 +131,13 @@
         justify-content: center;
         flex-direction: column;
     }
+    .second-section .btn-cambiar{
+        margin-top: 0.1rem;
+        margin-bottom: 20px;
+    }
+    .main-form{
+        gap: 1px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -129,9 +150,7 @@
     .first-section, .second-section{
         width: 30rem;
     }
-    .button-perfil{
-        flex-direction: column;
-    }
+    
 }
 
 /* CAMBIAR CONTRASEÑA */

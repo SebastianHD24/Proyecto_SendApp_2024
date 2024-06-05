@@ -207,7 +207,7 @@ hr{
     max-width: calc(100% - 20px);
     width: 100%;
     margin: 10px;
-    color:#00324D;
+    /* color:#00324D; */
     text-align: center;
     padding: 0;
     opacity: 0;
@@ -224,7 +224,7 @@ hr{
 }
 
 h4 {
-    color: #28a745;
+    color: #39a900;
     font-size: 18px;
 }
 
@@ -232,12 +232,10 @@ p {
     margin: 10px 0;
     line-height: 1.6;
 }/* Estilos específicos para los enlaces */
-strong {
-    color: #00324D;
-}
+
 
 a {
-    color: #070001;
+    color: #39a900;
     text-decoration: none;
 }
 
