@@ -76,6 +76,9 @@
                             ?>
                                 <label for="form_input" class="form_input">Servicio:</label>
                                 <input type="text" name="servicio" class="edit_input" value="<?= $area ?>" disabled placeholder="Servicio al que pertenece">
+                                <label for="form_input" class="form_input">Apellidos:</label>
+                                <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
+                                <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
                                
                         <?php endif; ?>
                            
