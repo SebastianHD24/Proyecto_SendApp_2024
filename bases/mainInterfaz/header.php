@@ -19,9 +19,11 @@
             $tituloPestaña = "Administrador";
         }
         else if ($id_rol == 2){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-funcionario.css" >';
             $tituloPestaña = "Funcionario";
         }
         else if ($id_rol == 3){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-aprendiz.css" >';
             $tituloPestaña = "Aprendiz";
         }
     ?>
@@ -101,7 +103,7 @@
                             <a  href="?p=serviciosadmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosadmin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
+                            <a  href="?p=notifiadmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiadmin' ? 'active' : '' ?>"> <i class="bi bi-bell"></i>Notificaciones</button></a>
                         </li>
                     <?php endif; ?>
                         

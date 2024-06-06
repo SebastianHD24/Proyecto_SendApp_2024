@@ -7,7 +7,7 @@
 .titulos{
     color: #00234d;
     font-weight: 600;
-}
+}contenedor-popup
  /*Estilos para la tabla de responder*/
  .sin-responder {
      background-color: #00234d;
@@ -209,6 +209,7 @@
   @media only screen and (max-width: 767px) {
       .contenedor-popup {
           display: flex;
+          flex-direction: column;
           width: 100%;
           height: 100%;
           overflow-x: auto;
