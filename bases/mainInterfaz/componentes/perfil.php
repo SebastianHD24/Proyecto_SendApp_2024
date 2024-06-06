@@ -22,8 +22,6 @@
                             <span class="inputCorreo oculto"></span>
                             <label for="form_input" class="form_input">Correo Electrónico:</label>
                             <input type="email" name="correo" class="edit_input" value="<?= $row_user['correo']?>" id="correo" required placeholder="Correo electronico para contactarlo">
-                            <label for="form_input" class="form_input">Celular:</label>
-                                <input type="text" name="celular" class="edit_input" value="<?= $row_user['celular']?>" id="celular" required placeholder="Numero telefonico para contactarlo">
                             <span class="inputTelefono oculto"></span>
                             <div class="btn-actualizar">
                     
@@ -76,6 +74,9 @@
                             ?>
                                 <label for="form_input" class="form_input">Servicio:</label>
                                 <input type="text" name="servicio" class="edit_input" value="<?= $area ?>" disabled placeholder="Servicio al que pertenece">
+                                <label for="form_input" class="form_input">Apellidos:</label>
+                                <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
+                                <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
                                
                         <?php endif; ?>
                            

@@ -82,34 +82,32 @@
     <button class="verHistorial"  onclick="verHistorial();" id="Historial" style="display: none;"><a href="#">Ver historial</a></button>
     <button class="salirHistorial"id="volver" onclick="ocultarHistorial();" style="display: none;"><a href="#" >Salir</a></button>
     <!-- contenedor que muestra la descripcion de la pqr -->
-    <div class="contenedor_descripcion" id="contenedor_descripcion" style="display: none; width: 400px; height: 500px; background-color: red">
+    <div class="contenedor_descripcion" id="contenedor_descripcion" style="display: none;">
         <h1>Descripción</h1>
-        <br>
         <p id="descripcion"></p>
-        <button onclick="cerrarDescripcion();">Cerrar</button>
+        <button class="button1" onclick="cerrarDescripcion();">Cerrar</button>
     </div>
-    <div class="contenedor_descripcionH" id="contenedor_descripcionH" style="display: none; width: 400px; height: 500px; background-color: red">
+    <div class="contenedor_descripcion" id="contenedor_descripcionH" style="display: none; ">
         <h1>Descripción</h1>
         <br>
         <p id="descripcion1"></p>
-        <button onclick="cerrarSimpleD();">Cerrar</button>
+        <button class="button1" onclick="cerrarSimpleD();">Cerrar</button>
     </diV>
     <!-- contenedor que muestra el formulario de respuesta y la respuesta -->
-    <div class="contenedor_respuesta" id="contenedor_respuesta" style="display: none; width: 400px; height: 500px; background-color: red">
+    <div class="contenedor_respuesta" id="contenedor_respuesta" style="display: none; ">
         <h1>Respuesta</h1>
         <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
             <input type="hidden" name="id_peticion" id="id_pqr1">
             <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
             <button type="submit" value="Responder" onclick="enviarIdPQR();" class = "btnResponder" id = "btnEnviar">Enviar</button>
         </form>
-        <button onclick="cerrarDescripcion();">Cancelar</button>
+        <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
     </div>
     
-    <div class="contenedor_respuestaH" id="contenedor_respuestaH" style="display: none; width: 400px; height: 500px; background-color: green">
+    <div class="contenedor_respuesta" id="contenedor_respuestaH" style="display: none;">
         <h1>Respuesta</h1>
-        <br>
         <p id="respuesta"></p>
-        <button onclick="cerrarSimpleR();">Cerrar</button>
+        <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
     </div>
 </div>
 </main> 

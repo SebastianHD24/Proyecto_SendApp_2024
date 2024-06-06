@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2024 a las 02:10:57
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Jun 05, 2024 at 05:31 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,43 +18,45 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sendapp`
+-- Database: `sendapp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `citas`
+-- Table structure for table `citas`
 --
 
 CREATE TABLE `citas` (
   `id_cita` int(11) NOT NULL COMMENT 'Identifica la id de la cita',
   `estado_cita` varchar(30) NOT NULL COMMENT 'Muestra el estado de la cita',
-  `fecha` date NOT NULL COMMENT 'Muestra la fecha',
-  `hora` time NOT NULL COMMENT 'Muestra la hora',
+  `fecha` date DEFAULT NULL COMMENT 'Muestra la fecha',
+  `hora` time DEFAULT NULL COMMENT 'Muestra la hora',
   `documento_usuario` bigint(20) NOT NULL COMMENT 'Muestra la TI o CC',
   `id_servicio` int(2) NOT NULL COMMENT 'Muestra la id de los servicios',
   `descripcion` varchar(100) NOT NULL,
   `jornada` varchar(20) NOT NULL,
   `usuario_f` bigint(20) NOT NULL,
-  `justificacion_rechazo` varchar(50) NOT NULL
+  `justificacion_rechazo` varchar(150) NOT NULL,
+  `confirmacion` varchar(20) DEFAULT NULL,
+  `justificacion_cancelacion` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `citas`
+-- Dumping data for table `citas`
 --
 
-INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuario`, `id_servicio`, `descripcion`, `jornada`, `usuario_f`, `justificacion_rechazo`) VALUES
-(30, 'aceptado', '2024-05-15', '17:05:00', 1114149055, 3, 'hello', 'Diurna', 1004775687, ''),
-(31, 'aceptado', '2024-05-20', '18:14:00', 1114149055, 3, 'buenos dias ', 'Diurna', 1004775687, ''),
-(32, 'aceptado', '2024-05-22', '08:24:00', 1114149055, 3, 'probando hora de nuevo', 'Diurna', 1004775687, ''),
-(33, 'aceptado', '2024-05-31', '12:12:00', 1114149055, 3, 'hello mode', 'Diurna', 123456789, ''),
-(34, 'pendiente', '0000-00-00', '00:00:00', 1114149055, 3, 'neceisto una cosa', 'Diurna', 1004775687, '');
+INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuario`, `id_servicio`, `descripcion`, `jornada`, `usuario_f`, `justificacion_rechazo`, `confirmacion`, `justificacion_cancelacion`) VALUES
+(2, 'pendiente', NULL, NULL, 1111111111, 1, 'Esto es una prueba para verificar el agendamiento de citas .Desde Bienestar al aprendiz', 'Diurna', 1234567890, '', NULL, ''),
+(3, 'pendiente', NULL, NULL, 1111111111, 2, 'Prueba de Biblioteca', 'Diurna', 1222222222, '', NULL, ''),
+(4, 'pendiente', NULL, NULL, 1111111111, 3, 'Verificacion de envio desde PsicologIA', 'Diurna', 1233333333, '', NULL, ''),
+(5, 'pendiente', NULL, NULL, 1111111111, 4, 'Prueba de envio Fondo Emprender ', 'Diurna', 1234444444, '', NULL, ''),
+(6, 'pendiente', NULL, NULL, 1111111111, 5, 'Prueba de envio desde Relaciones Coporativas\r\n', 'Diurna', 1234555555, '', NULL, '');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pqr`
+-- Table structure for table `pqr`
 --
 
 CREATE TABLE `pqr` (
@@ -64,13 +66,14 @@ CREATE TABLE `pqr` (
   `descripcion` text NOT NULL,
   `respuesta_pqrs` text DEFAULT NULL,
   `fecha_solicitud` date DEFAULT NULL,
-  `fecha_respuesta` date DEFAULT NULL
+  `fecha_respuesta` date DEFAULT NULL,
+  `vista` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `roles`
+-- Table structure for table `roles`
 --
 
 CREATE TABLE `roles` (
@@ -80,7 +83,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `roles`
+-- Dumping data for table `roles`
 --
 
 INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
@@ -91,35 +94,35 @@ INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `servicios`
+-- Table structure for table `servicios`
 --
 
 CREATE TABLE `servicios` (
   `id_servicio` int(2) NOT NULL COMMENT 'Identifica los servicos del sena',
   `nombre_servicio` char(40) NOT NULL COMMENT 'Es el  nombre de los servicios',
-  `admin_area` char(40) NOT NULL COMMENT 'Identifica el area',
+  `admin_area` bigint(12) DEFAULT NULL COMMENT 'Identifica el admin del area',
   `estado_servicio` tinyint(1) NOT NULL COMMENT 'Muestra el estado de los servicios'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `servicios`
+-- Dumping data for table `servicios`
 --
 
 INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado_servicio`) VALUES
-(1, 'bienestar al parendiz', 'sandra', 1),
-(2, 'biblioteca', 'juliana', 1),
-(3, 'Psicologia', 'juliana', 1),
-(4, 'Fondo emprender', 'no se', 1),
-(5, 'Relaciones Corporativas', 'no se', 1),
-(6, 'sennova', 'no se', 1),
-(7, 'Servicios Tecnologicos', 'no se', 1),
-(8, 'Fabrica software', 'no se', 1),
-(9, 'Deportes', 'no se', 1);
+(1, 'Bienestar al aprendiz', NULL, 1),
+(2, 'Biblioteca', NULL, 1),
+(3, 'Psicologia', NULL, 1),
+(4, 'Fondo emprender', NULL, 1),
+(5, 'Relaciones Corporativas', NULL, 1),
+(6, 'Sennova', NULL, 1),
+(7, 'Servicios Tecnologicos', NULL, 1),
+(8, 'Fabrica software', NULL, 1),
+(9, 'Deportes', NULL, 1);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -139,21 +142,28 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`, `imagen`) VALUES
-('CC', 123456789, '$2y$10$XTyXVCGdcibkbZEsoGMMMOM/L3sqOwrDZXy1bVulD9kOqn88KMWqa', 'luisa', 'miranda', 'lopera23@gmail.com', '3292123', '', 0, 1, 2, 3, NULL),
-('CC', 1004775687, '$2y$10$FhtBOKRUu9ALP3AQ9LxKmOoBgvSsrwxh2Fs8r48FM.WQ9klhIDwqq', 'tatiana', 'cardenas', 'lopera23@gmail.com', '3208108780', '', 0, 1, 2, 3, NULL),
-('CC', 1114149055, '$2y$10$S6FHQrWBHuwD4/zo3L91a.bPAeYWRYxKjjcZ.yDxiKoBUVckTKSaa', 'juanes', 'Mena', 'lopera23@gmail.com', '3208108780', '', 0, 1, 3, NULL, NULL),
-('CC', 1234567890, '$2y$10$dDb/4xhJBKyJXQM91JezbOgcYO7XJPbDAu4GcRlwq7txMBXkkkh3u', 'lopera', 'ramirez', 'lopera23@gmail.com', '3208108780', '', 0, 1, 1, NULL, NULL);
+('CC', 1111111111, '$2y$10$VahrkHSRAv0.zzdjO.ltjONs2HjqJG.XzcevIv8B0gZFrSRVpo9Qy', 'Aprendiz', 'Sena', 'user@gail.com', '23423423', 'ADSO', 234231212, 1, 3, NULL, NULL),
+('CC', 1222222222, '$2y$10$.pLy8.mwITM0hZx3uic.YeKlcLkJV0I4JS.GlDIzz2BIuiVYTm5Ne', 'Biblioteca', 'Diana', 'biblioteca@gmail.com', '34241332', '0', 0, 1, 2, 2, NULL),
+('CC', 1233333333, '$2y$10$KHUgZxmmG/LaxmH5WZ/OsuaKOxjzMj3a0wzmxygZTRplIBxLXt.PK', 'Psicologia', 'Carmen ', 'psicologo@gmail.com', '234234', '0', 0, 1, 2, 3, NULL),
+('CC', 1234444444, '$2y$10$RMKpn54SlAXIWENAgYK0/Oija8/kLOo9yoMZHCMItCqU2AXlT0STu', 'Fondo Emprender', 'Ruben', 'fondoemprender@gmail.com', '345342342324', '0', 0, 1, 2, 4, NULL),
+('CC', 1234555555, '$2y$10$PWl/cD3wlcR7pltFZF3kwObadCIQOBj5ZDKsqLcgN0rV3FVG2qdt.', 'Relaciones Corporativas', 'Julian', 'relacionescorpo@gmial.com', '34241332', '0', 0, 1, 2, 5, NULL),
+('CC', 1234566666, '$2y$10$muvY149RvRKMENakWSeyp.v95P3iwvrBjwexMIYdMkYtFOCseG6YG', 'Sennova', 'Benito', 'senova@gmail.com', '50284043', '0', 0, 1, 2, 6, NULL),
+('CC', 1234567777, '$2y$10$Kcro6bgOT.TLGr4Nq/lFWeiEFyLR3wtT7/TYXNcqX0.yv6vQzUAm.', 'Servicios Tecnologicos', 'Jhon', 'serviciostec@gmail.com', '028374934', '0', 0, 1, 2, 7, NULL),
+('CC', 1234567888, '$2y$10$RAcVu6ZtZQCE6QQDmOcgDu0LUOAgIllLwKRyRyoLHBAZzALPhiiWO', 'Fabrica de software', 'Martha', 'fabrica@gmail.com', '23042423', '0', 0, 1, 2, 8, NULL),
+('CC', 1234567890, '$2y$10$LE/jucZN8W8N6/lsrq9LIejNS2HztFR.tFYJPo5JTjCeuAY2XLeQ.', 'Bienestar al aprendiz', 'Juliana', 'beienstar@gmailcom', '2342342', '0', 0, 1, 2, 1, NULL),
+('CC', 1234567899, '$2y$10$jDfZXRw7iWWEFJ6gkTb5SuVMW8M512eVaOVK7QD1VbGSRnkoSGwP6', 'Deportes', 'Andres', 'deportes@gmail.com', '3059324234', '0', 0, 1, 2, 9, NULL),
+('CC', 2222222222, '$2y$10$qSS45i8QegoU6aQ9asT7.utmrF9L.1SHp49VTehCyas5lY2506.Xy', 'Admin', 'superUser', 'admin@gmail.com', '2342342', '0', 0, 1, 1, NULL, NULL);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `citas`
+-- Indexes for table `citas`
 --
 ALTER TABLE `citas`
   ADD PRIMARY KEY (`id_cita`),
@@ -162,26 +172,27 @@ ALTER TABLE `citas`
   ADD KEY `usuario_f` (`usuario_f`);
 
 --
--- Indices de la tabla `pqr`
+-- Indexes for table `pqr`
 --
 ALTER TABLE `pqr`
   ADD PRIMARY KEY (`id_peticion`),
   ADD KEY `documento_us` (`documento_us`);
 
 --
--- Indices de la tabla `roles`
+-- Indexes for table `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id_rol`);
 
 --
--- Indices de la tabla `servicios`
+-- Indexes for table `servicios`
 --
 ALTER TABLE `servicios`
-  ADD PRIMARY KEY (`id_servicio`);
+  ADD PRIMARY KEY (`id_servicio`),
+  ADD KEY `admin_area` (`admin_area`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`documento_identidad`),
@@ -190,39 +201,39 @@ ALTER TABLE `usuarios`
   ADD KEY `id_rol` (`id_rol`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `citas`
+-- AUTO_INCREMENT for table `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifica la id de la cita', AUTO_INCREMENT=35;
+  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifica la id de la cita', AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `pqr`
+-- AUTO_INCREMENT for table `pqr`
 --
 ALTER TABLE `pqr`
-  MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `roles`
+-- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id_rol` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Visualiza el rol', AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `servicios`
+-- AUTO_INCREMENT for table `servicios`
 --
 ALTER TABLE `servicios`
   MODIFY `id_servicio` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Identifica los servicos del sena', AUTO_INCREMENT=10;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `citas`
+-- Constraints for table `citas`
 --
 ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE,
@@ -230,13 +241,19 @@ ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_5` FOREIGN KEY (`usuario_f`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `pqr`
+-- Constraints for table `pqr`
 --
 ALTER TABLE `pqr`
   ADD CONSTRAINT `pqr_ibfk_1` FOREIGN KEY (`documento_us`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `usuarios`
+-- Constraints for table `servicios`
+--
+ALTER TABLE `servicios`
+  ADD CONSTRAINT `servicios_ibfk_1` FOREIGN KEY (`admin_area`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE,

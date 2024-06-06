@@ -1,5 +1,23 @@
+# Desactivar la opción de mostrar el listado de directorios
 Options -Indexes
 
-ErrorDocument 403 "<html><head><title>No tienes permiso para estar aquí</title><style>body { text-align: center; } h1, p { margin: 0 auto; } img { display: block; margin: 0 auto; }</style></head><body><h1>No tienes permiso para estar aqui :)</h1><img src=\"http://localhost/Proyecto_Sendapp_2024/imagenes/LogosSena-img/maxwell-cat.gif\" alt=\"gif de error\"><p><a href=\"http://localhost/Proyecto_Sendapp_2024\">Volver al inicio</a></p></body></html>"
+# Bloquear el acceso a archivos que no sean PHP si no hay referencia HTTP_REFERER
+<FilesMatch "\.(?!(php)$)">
+    <If "%{HTTP_REFERER} == ''">
+        Order deny,allow
+        Deny from all
+    </If>
+</FilesMatch>
 
-ErrorDocument 404 "<html><head><title>No tienes permiso para estar aquí</title><style>body { text-align: center; } h1, p, img { margin: 0 auto; }</style></head><body><h1>Esta pagina no se encuentra disponible. Lo sentimos :)</h1><img src=\"http://localhost/Proyecto_Sendapp_2024/imagenes/LogosSena-img/maxwell-cat.gif\" alt=\"gif de error\"><p><a href=\"http://localhost/Proyecto_Sendapp_2024\">Volver al inicio</a></p></body></html>"
+# Bloquear acceso a los archivos:
+<FilesMatch "^(conexion|consulta_nombres_correos|estructura-base|idRol|redireccionamiento|sesion_start|ti|footer|header|actualizarAdministrador|actualizarContrasena|actualizarPerfil|agregarpqrs|cambiarEstado|cancelarcita|enviarHistorial|guardarCita|mandar|mostrarAdmin|nombreFuncionario|nombreServicio|obtener_eventos|obtener_notificaciones|rechazarcita|update-created-accounts|aceptarcita|citas|citaspendiente|confirmarcita|created-acounts|mi_agenda|notifiAdmin|notificaciones|perfil|pqr|registro|servicios|serviciosAdmin|mostrarCitas|actualizar_estado|consultar|mostrarConsulta|mostrarHistorial|responderPQR|suspender|actualizarVista|consultarHistorial|consultar|mostrarHistorial|mostrarPQR|cerrar_sesion|val_sesion|val|agregandoregistro|crear_usuario_admin)\.php$">
+    <If "%{HTTP_REFERER} == ''">
+        Order deny,allow
+        Deny from all
+    </If>
+</FilesMatch>
+
+# Páginas de error personalizadas
+ErrorDocument 403 "<html><head><title>No tienes permiso para estar aquí</title><style>body { text-align: center; } h1, p { margin: 0 auto; } img { display: block; margin: 0 auto; }</style></head><body><h1>No tienes permiso para estar aqui :)</h1><img src='http://localhost/Proyecto_Sendapp_2024/imagenes/LogosSena-img/maxwell-cat.gif' alt='gif de error'><p><a href='http://localhost/Proyecto_Sendapp_2024/'>Volver al inicio</a></p></body></html>"
+
+ErrorDocument 404 "<html><head><title>No tienes permiso para estar aqui</title><style>body { text-align: center; } h1, p, img { margin: 0 auto; }</style></head><body><h1>Esta pagina no se encuentra disponible. Lo sentimos :)</h1><img src='http://localhost/Proyecto_Sendapp_2024/imagenes/LogosSena-img/maxwell-cat.gif' alt='gif de error'><p><a href='http://localhost/Proyecto_Sendapp_2024/'>Volver al inicio</a></p></body></html>"

@@ -205,6 +205,7 @@ color: white;
       background-color: #00234D;
       border-bottom: 1px black;
       color: var(--verde);
+      z-index: 99;
       
   }
   
