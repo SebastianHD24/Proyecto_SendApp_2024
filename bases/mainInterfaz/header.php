@@ -19,9 +19,11 @@
             $tituloPestaña = "Administrador";
         }
         else if ($id_rol == 2){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-funcionario.css" >';
             $tituloPestaña = "Funcionario";
         }
         else if ($id_rol == 3){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-aprendiz.css" >';
             $tituloPestaña = "Aprendiz";
         }
     ?>

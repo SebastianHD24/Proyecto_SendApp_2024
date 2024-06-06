@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1px 5px 10px 5px;
+    padding: 2rem;
 }
 
 .login__title{
@@ -42,15 +42,11 @@
     flex-wrap: wrap;
     gap: 20px;
 }
-.first-section{
+.first-section, .second-section{
     display: flex;
     flex-direction: column;
     max-width: 80%;
     width: 20rem;
-}
-
-.second-section{
-    display: none;
 }
 .edit_input{
     padding: .6rem;

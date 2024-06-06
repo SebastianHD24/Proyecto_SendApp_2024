@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1px 5px 10px 5px;
+    padding: 2rem;
 }
 
 .login__title{
@@ -41,16 +41,24 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
+    z-index: 1;
 }
 .first-section{
     display: flex;
     flex-direction: column;
     max-width: 80%;
     width: 20rem;
+    z-index: 2;height: auto;
+
 }
 
 .second-section{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    width: 20rem;
+    z-index: 2;
+
 }
 .edit_input{
     padding: .6rem;
@@ -89,11 +97,8 @@
     border-style: none;
 }
 .button-perfil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-direction: row;
+    margin-bottom: 500px;
+    z-index: 3;
 }
 
 .btn-actualizar{
