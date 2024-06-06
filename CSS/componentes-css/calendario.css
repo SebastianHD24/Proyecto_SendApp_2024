@@ -173,23 +173,10 @@ h3 {
   text-align: center;
   padding-bottom: 1rem;
 }
-<<<<<<< HEAD
-.tabla-contenedor {
-  width: 100%;
-  max-width: 72vw;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  background: #f1efef; 
-  overflow-x: auto;
-}
-.eventos table{
-=======
 
 .eventos table {
   display: flex;
   justify-content: center;
->>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
   border: none;
   border-collapse: collapse;
   max-width: 72vw;
@@ -245,9 +232,6 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-<<<<<<< HEAD
-  background: #39a900;
-=======
   background: #00ff0d; /* Verde para eventos futuros */
   border-radius: 50%;
   z-index: -1;
@@ -267,7 +251,6 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #ccc; /* Rojo para eventos pasados */
->>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
   border-radius: 50%;
   z-index: -1;
 }
@@ -286,35 +269,6 @@ h3 {
   flex-direction: column;
 }
 
-<<<<<<< HEAD
-@media only screen and (max-width: 768px){
-  .eventos table{
-    max-width: 82vw;
-  }
-  .calendar ul li {
-    font-size: 13px;
-   }
-   .tabla-contenedor {
-    max-width: 100%;
-    padding: 0 1vw;
-   }
-   .eventos th,
-    .eventos td {
-        padding: 8px;
-        font-size: 14px;
-    }
-} 
-@media (max-width: 480px) {
-  .eventos th,
-  .eventos td {
-      padding: 6px;
-      font-size: 12px;
-  }
-  
-  .eventos h2 {
-      font-size: 18px;
-  }
-=======
 .info .encabezado {
   display: flex;
   justify-content: space-between;
@@ -355,5 +309,4 @@ h3 {
   .eventos table {
     max-width: 82vw;
   }
->>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
 }
