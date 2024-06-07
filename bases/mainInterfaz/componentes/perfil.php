@@ -23,8 +23,9 @@
                             <label for="form_input" class="form_input">Correo Electrónico:</label>
                             <input type="email" name="correo" class="edit_input" value="<?= $row_user['correo']?>" id="correo" required placeholder="Correo electronico para contactarlo">
                             <span class="inputTelefono oculto"></span>
+                            <label for="form_input" class="form_input">Celular:</label>
+                            <input type="text" name="celular" class="edit_input" value="<?= $row_user['celular']?>" id="celular" required placeholder="Numero telefonico para contactarlo">
                             <div class="btn-actualizar">
-                    
                 </div> 
                         </div>
                         <div class="second-section">
