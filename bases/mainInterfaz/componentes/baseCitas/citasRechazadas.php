@@ -8,6 +8,7 @@
                 <th>Descripción de la cita</th>
                 <th>Justificación Rechazo</th>
                 <th>Jornada</th>
+                <th>Fecha Rechazo</th>
             </tr>
         </thead>
         <tbody>
@@ -21,11 +22,11 @@
             if (isset($_GET['search-rechazadas']) && $_GET['search-rechazadas'] != '' ){
                 $search_term_rechazadas = $_GET['search-rechazadas'];
 
-                $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion, citas.justificacion_rechazo 
+                $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion, citas.justificacion_rechazo, citas.fecha
                 FROM citas
                 INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='rechazado' AND (citas.documento_usuario LIKE '$search_term_rechazadas%'  OR usuarios.nombres LIKE '$search_term_rechazadas%' OR usuarios.apellidos LIKE '$search_term_rechazadas%') ORDER BY citas.id_cita ASC ";
             }else {
-                $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion, citas.justificacion_rechazo 
+                $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion, citas.justificacion_rechazo, citas.fecha 
                 FROM citas
                 INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.estado_cita='rechazado' ORDER BY citas.id_cita ASC ";
             }
@@ -49,7 +50,7 @@
                         <td><?= $row['justificacion_rechazo'] ?></td>
 
                         <td><?= $row['jornada'] ?></td>
-                            
+                        <td><?= $row['fecha'] ?></td>    
                              
 
                             <!-- Modal para cancelar la cita -->
