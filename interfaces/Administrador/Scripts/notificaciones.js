@@ -7,8 +7,6 @@ const mensaje1 = document.getElementById('mensaje1');
 const form = document.getElementById('formulario_notificaciones');
 const formCitas = document.getElementById('formulario_citas');
 
-console.log("Que esta pasando");
-
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
         .then(response => response.json())
