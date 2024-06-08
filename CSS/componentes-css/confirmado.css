@@ -206,6 +206,20 @@
     text-align: center;
     margin-top: 1rem;
 }
+/* botones de las casillas*/
+.btn_pqr{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    height: 5vh;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+.btn_pqr:hover{
+    background-color: #00234D;
+}
 
   /* RESPONSIVE */
 

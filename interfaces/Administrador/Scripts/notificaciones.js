@@ -60,8 +60,8 @@ function ver() {
                     <td>${usuario.documento_identidad}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${usuario.tipo_pqrs}</td>
-                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td>
-                    <td><button onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
+                    <td><button class="btn_pqr" onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td>
+                    <td><button class="btn_pqr" onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
                 </tr>`;
             
         });
@@ -159,8 +159,8 @@ function verHistorial(){
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${fechaRespuestaFormateada}</td>
                     <td>${historial.tipo_pqrs}</td>
-                    <td><button onclick="verDescripcionH(${historial.id_peticion});">Ver descripción</button></td>
-                    <td><button onclick="verResponderH(${historial.id_peticion});">Ver respuesta</button></td>
+                    <td><button class="btn_pqr" onclick="verDescripcionH(${historial.id_peticion});">Ver descripción</button></td>
+                    <td><button class="btn_pqr" onclick="verResponderH(${historial.id_peticion});">Ver respuesta</button></td>
                 </tr>`;
         });
         salir.style.display = "block";
