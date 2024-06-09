@@ -58,7 +58,7 @@ function ver() {
                     <td>${usuario.documento_identidad}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${usuario.tipo_pqrs}</td>
-                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td>
+                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td> 
                     <td><button onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
                 </tr>`;
             
