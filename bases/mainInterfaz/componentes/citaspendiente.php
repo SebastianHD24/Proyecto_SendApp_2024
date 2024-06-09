@@ -57,12 +57,12 @@ elseif (isset($_GET['search-confirmarCitas'])) {
     <table>
         <thead>
             <tr id="tabla_titulos">
-                <th>Documento de Identidad</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Descripción de la cita</th>
-                <th>Jornada</th>
-                <th>Acciones</th>
+                <th class="th_header">Documento de Identidad</th>
+                <th class="th_header">Nombres</th>
+                <th class="th_header">Apellidos</th>
+                <th class="th_header">Descripción de la cita</th>
+                <th class="th_header">Jornada</th>
+                <th class="th_header">Acciones</th>
             </tr>
         </thead>    
         <tbody>
