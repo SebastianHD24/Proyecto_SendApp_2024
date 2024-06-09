@@ -7,8 +7,6 @@ const mensaje1 = document.getElementById('mensaje1');
 const form = document.getElementById('formulario_notificaciones');
 const formCitas = document.getElementById('formulario_citas');
 
-console.log("Que esta pasando");
-
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
         .then(response => response.json())
@@ -60,8 +58,8 @@ function ver() {
                     <td>${usuario.documento_identidad}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${usuario.tipo_pqrs}</td>
-                    <td><button class="btn_pqr" onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td>
-                    <td><button class="btn_pqr" onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
+                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td> 
+                    <td><button onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
                 </tr>`;
             
         });

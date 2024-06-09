@@ -58,6 +58,9 @@
     background-color: #FFFFFF;
     padding: 5px;
 }
+.organizar_citas{
+    width: 100%;
+}
 
 #tabla_titulos{
     background-color: #00234d;
@@ -250,6 +253,7 @@ thead{
     margin: 5px 10px;
     color: var(--white);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 
 .search-buttons ul a:hover{

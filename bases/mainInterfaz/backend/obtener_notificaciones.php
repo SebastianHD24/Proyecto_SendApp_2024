@@ -19,7 +19,7 @@ $year = $data->anio;
 $fecha = sprintf("%04d-%02d-%02d", $year, $month, $day);
 
 // Realizar la consulta SQL para verificar si hay citas para la fecha proporcionada
-$query = "SELECT * FROM citas WHERE fecha = '$fecha' AND usuario_f = $funcionario";
+$query = "SELECT * FROM citas WHERE fecha = '$fecha' AND usuario_f = $funcionario AND estado_cita = 'aceptado' ";
 $result = mysqli_query($conn, $query);
 
 // Verificar si hay resultados
@@ -34,5 +34,3 @@ if(mysqli_num_rows($result) > 0) {
 // Devolver la respuesta en formato JSON
 echo json_encode($response);
 ?>
-
-

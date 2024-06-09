@@ -1,10 +1,15 @@
 function mostrarR() {
+    const citas = document.getElementById('citas');
+    const historial = document.getElementById('historial');
     const answer = document.getElementById('answer');
     const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
     answer.style.display = "block";
     contenedores_notificacion.forEach(contenedor => {
         contenedor.style.display = "none";
     });
+
+    historial.style.display = "none";
+    citas.style.display = "none";
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/actualizarVista.php')
     .then(response => response.json())

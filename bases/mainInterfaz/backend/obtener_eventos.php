@@ -28,15 +28,6 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     // Verificar si hay resultados 
     if (mysqli_num_rows($result) > 0) {
         // Mostrar los eventos debajo del calendario 
-<<<<<<< HEAD
-        echo "<h2>Eventos</h2>"; 
-        echo '<div class="tabla-contenedor">';
-        echo "<table>";
-        echo "<thead>";
-        echo "<tr><th>Evento</th><th>Hora</th><th>Nombre</th></tr>";
-        echo "<tbody>";
-        while($row = mysqli_fetch_assoc($result)) {
-=======
         echo "<h2>Eventos</h2>";
         echo "<table border='1'>";
         echo "<tr><th>Más información</th><th>Hora</th><th>Nombre</th></tr>";
@@ -46,17 +37,13 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
             $idCita = $row['id'];
             $documento_identidad = $row['documento_identidad'];
 
->>>>>>> 5024ea8925706fe51ee1e97d1e8de2742e05714b
             echo "<tr>";
             echo "<td><button onclick=\"saberMas('$fecha', '$hora', '$documento_identidad', '$idCita')\">Ver motivo</button></td>";
             echo "<td>{$hora}</td>";
             echo "<td>{$nombre_usuario}</td>";
             echo "</tr>";
         }
-        echo "</tbody>";
-        echo "</thead>";
         echo "</table>";
-        echo "</div>";
     } else {
         echo "No se encontraron citas para el día seleccionado.";
     }
