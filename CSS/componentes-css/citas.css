@@ -1,18 +1,89 @@
-/*Estilos de contenedor princial con el grid*/
-.notifications-panel{
-    display: grid;
-    place-content: center;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fill,minmax(225px, 1fr));
-    width: 100%;
-    min-height: 350px;
-    padding: 10px 25px;
-    gap: 32px;
+:root {
+    --verde: #39a900;
+    --blanco: #fff;
+    --negro: #070001;
+    --azul: #00324D;
+    --azul-claro: #82DEF0;
+    --gris-oscuro: #cfcfcf;
+    --gris-claro: #ededed;
+    --fuente-principal: "Work Sans", sans-serif;
 }
 
-/*Contenedor hijo con la información extradida de la Bd*/
-.notifications{
-    width: 255px;
+/* Estilos de contenedor principal */
+.notifications-panel {
+    flex-direction: column;
+    justify-items: center;
+    width: 95%;
+    min-height: 350px;
+    gap: 32px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Contenedor de la tabla con overflow-x */
+.table_container {
+    width: 100%;
+    overflow-x: auto;
+    border: 2px solid var(--azul);
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px var(--azul);
+}
+
+/* Estilos de la tabla */
+table.appointment {
+    margin: 0 auto;
+    width: 100%;
+    /* table-layout: fixed; */
+    word-wrap: break-word;
+    overflow-x: auto; /* Asegura que el contenido se maneje correctamente */
+    border-collapse: collapse;
+}
+
+/* Estilos generales para las cabeceras de la tabla */
+.appointment_th th {
+    font-size: 1rem; /* Ajusta este valor según tus necesidades */
+    padding: 10px;
+}
+
+.header_th{
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.appointment_th th, .appointment_td td, .reason th, .reason td {
+    border: 4px solid var(--gris-oscuro);
+    padding: 8px;
+    width: auto; /* Cambiar de 100px a auto para flexibilidad */
+    text-align: center;
+}
+
+.appointment_th th:nth-child(1) {
+    border-top-left-radius: 15px;
+}
+
+.appointment_th th:nth-child(7) {
+    border-top-right-radius: 15px;
+}
+
+.appointment_td {
+    background-color: var(--gris-claro);
+    color: var(--negro);
+}
+
+.reason th p {
+    display: flex;
+    font-weight: 400;
+    background-color: var(--gris-oscuro);
+    border-radius: 9px;
+    margin-top: 5px;
+    min-height: 12vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor hijo con la información extraída de la BD */
+.notifications {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -21,155 +92,119 @@
     padding: 12px;
     border: 2px solid #00324d;
     border-radius: 18px;
+    box-shadow: inset 1px 1px 7px var(--azul);
 }
 
-.notifications article{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    gap: 5px;
-}
-
-.notifications figure{
+.notifications figure {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/*Imagen*/
-.notifications figure img{
+/* Imagen */
+.notifications figure img {
     width: 35px;
 }
 
-/*Estilos de los datos y titúlos dentro del artículo*/
-.notifications article{
-    display: flex;
-    width: 100%;
-    height: 100;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-/*Estilos de las etiquetas B dentro del artículo*/
-.notifications article b{
-    font-size: 1rem;
-}
-
-/*Estilo especificos del motivo de las citas*/
-.notifications article:last-child{
-    min-height: 162px;
-    height: 100%;
-    overflow-x: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    background-color: #dbdbdbfd;
-    border-radius: 9px;
-    padding: 5px;
-    font-weight: lighter;
-}
-
-/*Barras verdes separadoras del contenido*/
-.notifications span{
+/* Barras verdes separadoras del contenido */
+.notifications span {
     align-self: center;
     width: 100%;
     height: 1px;
     border: 1px solid #39a900;
-    /* opacity: .5; */
 }
 
-/*Texto*/
-.notifications article p{
-    font-weight: 300;
-}
-
-/*Clase para añadir en JavaScript cuando el estado de la cita sea aprobado*/
-.estado_aceptado{
+/* Clase para añadir en JavaScript cuando el estado de la cita sea aprobado */
+.estado_aceptado {
     color: #39a900;
-    /* font-weight: 600;  */
 }
 
-/*Clase para añadir en JavaScript cuando el estado de la cita sea rechazado*/
-.estado_rechazado{
+/* Clase para añadir en JavaScript cuando el estado de la cita sea rechazado */
+.estado_rechazado {
     color: #ff1861;
-    /* font-weight: 600; */
 }
 
-/*Clase para añadir en JavaScript cuando el estado de la cita sea pendiente*/
+/* Clase para añadir en JavaScript cuando el estado de la cita sea pendiente */
 .estado_pendiente {
     color: #FFCE40;
-    /* background-color: #3B3B3B; */
-    /* font-weight: 600; */
 }
 
 .popup-justificacion {
-    
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    color:black; 
+    color: black;
     height: 100px;
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    
     text-align: center;
 }
 
-/*Responsive*/
+/* Responsividad */
 
-/*Laptops FHD*/
-@media screen and (min-width:1024px){
-    .notifications-panel{
-        grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
-        gap: 70px;
+/* Laptops FHD */
+@media screen and (min-width: 1024px) {
+    .notifications-panel {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
-    .notifications p{
+    .notifications p {
         font-size: 1.2rem;
     }
 }
 
-/*2k Screens*/
-@media screen and (min-width:1440px){
-    .notifications{
-    width: 265px;
+/* 2k Screens */
+@media screen and (min-width: 1440px) {
+    .notifications {
+        width: 100%;
     }
 
-    .notifications p{
-        font-size: 1.4rem;
-    }
-
-    .notifications article b{
+    .notifications p {
         font-size: 1.4rem;
     }
 }
 
-/*4k Screens*/
-@media screen and (min-width:2560px){
-    .notifications-panel{
-        grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+/* 4k Screens */
+@media screen and (min-width: 2560px) {
+    .notifications-panel {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 120px;
     }
 
-    .notifications{
-        width: 350px;
+    .notifications {
+        width: 100%;
     }
 
-    .notifications p{
+    .notifications p {
         font-size: 2rem;
     }
 
-    .notifications figure img{
+    .notifications figure img {
         width: 75px;
     }
+}
 
-    .notifications article b{
-        font-size: 2rem;
+/* Responsividad para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .appointment_th th, .appointment_td td {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .appointment_th th, .appointment_td td {
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .notifications-panel {
+        max-width: 70vw;
     }
 }

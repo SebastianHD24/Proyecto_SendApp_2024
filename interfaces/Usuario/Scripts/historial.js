@@ -60,6 +60,9 @@ function consultarHistorial() {
     const mensaje1 = document.getElementById('mensaje1');
     const historial = document.getElementById('historial');
     const salir = document.getElementById('salir');
+    const citas = document.getElementById('citas');
+
+    citas.style.display = "none";
 
     function ocultar_QPR() {
         const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');

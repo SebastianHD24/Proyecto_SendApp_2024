@@ -16,4 +16,4 @@
     // Consulta SQL para obtener datos de usuarios, roles y servicios
     $sql = "SELECT *, (SELECT nombre_rol FROM roles WHERE roles.id_rol = usuarios.id_rol) AS nombre_rol,
             (SELECT nombre_servicio FROM servicios WHERE servicios.id_servicio = usuarios.id_servicio) AS nombre_servicio
-            FROM usuarios";
+            FROM usuarios WHERE id_rol != 1";

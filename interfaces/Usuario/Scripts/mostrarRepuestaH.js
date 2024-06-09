@@ -1,10 +1,13 @@
 function mostrarH(id) {
+    const salir = document.getElementById('salir');
     const answer = document.getElementById('answerH');
     const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_h"]');
     answer.style.display = "block";
     contenedores_notificacion.forEach(contenedor => {
         contenedor.style.display = "none";
     });
+
+    salir.style.display = "none";
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarHistorial.php?id=' + id)
     .then(response => response.json())
@@ -39,10 +42,12 @@ function mostrarH(id) {
 }
 
 function ocultarH() {
+    const salir = document.getElementById('salir');
     const answer = document.getElementById('answerH');
     answer.style.display = "none";
     const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_h"]');
     contenedores_notificacion.forEach(contenedor => {
         contenedor.style.display = "flex";
     });
+    salir.style.display = "block";
 }

@@ -19,9 +19,11 @@
             $tituloPestaña = "Administrador";
         }
         else if ($id_rol == 2){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-funcionario.css" >';
             $tituloPestaña = "Funcionario";
         }
         else if ($id_rol == 3){
+            echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-aprendiz.css" >';
             $tituloPestaña = "Aprendiz";
         }
     ?>
@@ -51,12 +53,12 @@
             <button class="close-menu" id="close-menu"><i class='bx bx-x'></i></a>
 
             <div class="perfil" style="display: none;">    
-                    <!--*****************************************************-->
-                    <figure class="foto-perfil">
-                      <img class="logo" src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/fotor-ai-20230902143349.jpg">
-                      <i class="bi bi-camera-fill"></i>
-                    </figure>
-                    <!--*****************************************************-->  
+                <!--*****************************************************-->
+                <figure class="foto-perfil">
+                  <img class="logo" src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/fotor-ai-20230902143349.jpg">
+                  <i class="bi bi-camera-fill"></i>
+                </figure>
+                <!--*****************************************************-->  
             </div>
             <article class="nombre" style="display: none;">
                 <p><?= $full_name ?></p>
@@ -66,20 +68,19 @@
                 <ul class="menu">
                     <?php if ($id_rol != 1): ?>
                         <li>
-                        <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
+                            <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
                         </li>
                     <?php endif ?>
                     <?php if ($id_rol == 2): ?>
                         <li>
-                        <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Gestion de Citas </button></a>
+                            <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Gestion de Citas </button></a>
                         </li>
                         <li>
-                        <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                            <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
                         </li>
                         
                     <?php endif; ?>
 
-                    
                     <?php if ($id_rol == 3): ?>
                         <li>
                             <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
@@ -101,7 +102,7 @@
                             <a  href="?p=serviciosadmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosadmin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notifiAdmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiAdmin' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones</button></a>
+                            <a  href="?p=notifiadmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiadmin' ? 'active' : '' ?>"> <i class="bi bi-bell"></i>Notificaciones</button></a>
                         </li>
                     <?php endif; ?>
                         
@@ -110,12 +111,12 @@
                             <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> PQR </button></a>
                         </li>
                         <li>
-                        <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
+                            <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
                         </li>
                     <?php endif; ?>
 
                     <li>
-                    <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i> Perfil </button></a>
+                        <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i> Perfil </button></a>
                     </li>
                 </ul>
             </nav>
@@ -123,4 +124,4 @@
                 <a class="texto-footer" href="../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php"><i class="bi bi-box-arrow-right"></i></a>
             </div> 
         </aside>
-    <main>                                                                                                                                             
+        <main>                                                                                                                                          

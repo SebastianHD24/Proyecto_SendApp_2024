@@ -7,8 +7,6 @@ const mensaje1 = document.getElementById('mensaje1');
 const form = document.getElementById('formulario_notificaciones');
 const formCitas = document.getElementById('formulario_citas');
 
-console.log("Que esta pasando");
-
 function verificar() {
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/consultar.php')
         .then(response => response.json())
@@ -60,7 +58,7 @@ function ver() {
                     <td>${usuario.documento_identidad}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${usuario.tipo_pqrs}</td>
-                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td>
+                    <td><button onclick="verDescripcion(${usuario.id_peticion});">Ver descripcion</button></td> 
                     <td><button onclick="verResponder(${usuario.id_peticion});">Responder</button></td>
                 </tr>`;
             
@@ -159,8 +157,8 @@ function verHistorial(){
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${fechaRespuestaFormateada}</td>
                     <td>${historial.tipo_pqrs}</td>
-                    <td><button onclick="verDescripcionH(${historial.id_peticion});">Ver descripción</button></td>
-                    <td><button onclick="verResponderH(${historial.id_peticion});">Ver respuesta</button></td>
+                    <td><button class="btn_pqr" onclick="verDescripcionH(${historial.id_peticion});">Ver descripción</button></td>
+                    <td><button class="btn_pqr" onclick="verResponderH(${historial.id_peticion});">Ver respuesta</button></td>
                 </tr>`;
         });
         salir.style.display = "block";

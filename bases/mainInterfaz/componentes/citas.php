@@ -18,7 +18,7 @@ if (isset($_SESSION['documento_identidad'])) {
     INNER JOIN servicios ON citas.id_servicio = servicios.id_servicio 
     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
     WHERE citas.documento_usuario = '$documento_identidad' 
-    AND citas.fecha >= CURDATE() AND NOT citas.confirmacion='No asistió' AND NOT citas.confirmacion='Si asistió'
+    AND citas.fecha >= CURDATE() OR NOT citas.confirmacion='No asistió' OR NOT citas.confirmacion='Si asistió'
     ORDER BY citas.fecha ASC
     LIMIT 6";
 
@@ -192,7 +192,7 @@ if (isset($_SESSION['documento_identidad'])) {
                 </select>
                 <button type="submit" onclick="historialCita();" class="buscar">Buscar</button>
             </form>   -->
-            <div id="historial-oculto" class= "notifications-panel" style="display: none;">
+            <div id="historial-oculto" class="notifications-panel" style="display: none;">
             <?php
             
             while ($row = mysqli_fetch_assoc  ($result)) {
@@ -201,9 +201,7 @@ if (isset($_SESSION['documento_identidad'])) {
                 
                 <div class="notifications">
 
-
-                <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;
-                      " >
+                    <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;" >
                         <p><?= $row['justificacion_rechazo']?> </p>
                     </div>
 
@@ -212,90 +210,67 @@ if (isset($_SESSION['documento_identidad'])) {
                 
                         <p><?= $row['justificacion_cancelacion']?></p>
             
-            
-                    </div>
-
-               
+                    </div>               
 
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
                       <!-- aqui es donde estamos extrayendo los datos que necesitmaos de la bse de datos    -->
                     <span></span>
-                  
-                    <article>
-                         <!-- aqui el nombre del servicio para que el usuario tenga claro con quien agendo la cita  -->
-                        <p>Área: <?= $row['nombre_servicio'] ?></p>
-                    </article>
-                    <span></span>
-                    <article>
-                         <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes dia asignado " -->
-                        <p>Día:<?= empty($row['fecha']) ? "Aún no te han asignado el dia" : $row['fecha'] ?>
-                    </article>
-                    <span></span>
-                    <article>
-                        <!-- aqui si no te han asignado fecha te sale la leyenda de "no tienes hora asignada " -->
-                    <p>Hora: <?= empty($row['hora']) ? "Aún no te han asignado hora" : $row['hora'] ?> </p>
-                    </article>
-                    <span></span>
-                    <article>
-                        <b>Estado: </b>
-                        <P>
-                            <?php
-                              if ($row['estado_cita']== 'rechazado'){
-                                echo 'rechazado  -
-                                <a id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
-                              }else {
-                                echo  $row['estado_cita'];
-                              } 
-                            ?>
-                            </P> 
-                    </article>
-                    <span></span>
-                    <article>
-                        <b>Jornada: </b>
-                        <p>
-                            <?= $row['jornada'] ?>
-                        </p>
-                    </article>
-                    <span></span>
-                    
-                    <article>
-                        <b>Confirmacion: </b>
-                        <p>
-                        <?php
-                             if($row['confirmacion']== 'No asistió'){
-                                echo 'No asistió - 
-                                <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
-                             }else {
-                             
-                             echo empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion']; 
-                            }
-                             ?> 
-                             </p>
-                              
-                             
-                    
-                    </article>
-                    <span></span>
-                    <article>
-                        <!-- aqui extraemos el nombre del funcionario y el apellido de este ya que el aprnediz elije con que funcionario quiere la cita y la idea es que se muestre  -->
-                        <b>Funcionario: </b>
-                        <p>
-                            <?= $row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita'] ?>
-                        </p>
-                    </article>
-                    <span></span>
-                    <article>
-                        <b>Motivo: </b>
-                        <p> 
-                            <?= $row['descripcion'] ?>
-                        </p>
-                    </article>
+
+                    <div class="table_container">
+                        <table class="appointment">
+                            <thead>
+                                <tr class="appointment_th">
+                                    <th class="header_th">Área</th>
+                                    <th class="header_th">Día</th>
+                                    <th class="header_th">Hora</th>
+                                    <th class="header_th">Estado</th>
+                                    <th class="header_th">Jornada</th>
+                                    <th class="header_th">Confirmacion</th>
+                                    <th class="header_th">Funcionario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="appointment_td">
+                                    <td><?= htmlspecialchars($row['nombre_servicio']) ?></td>
+                                    <td><?= empty($row['fecha']) ? "Aún no te han asignado el día" : htmlspecialchars($row['fecha']) ?></td>
+                                    <td><?= empty($row['hora']) ? "Aún no te han asignado hora" : htmlspecialchars($row['hora']) ?></td>
+                                    <td><?php
+                                    if ($row['estado_cita']== 'rechazado'){
+                                        echo 'rechazado  -
+                                        <a class="verJustificacion" id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
+                                    }else {
+                                        echo  $row['estado_cita'];
+                                    } 
+                                    ?> </td>
+                                    <td><?= htmlspecialchars($row['jornada']) ?></td>
+                                    <td><?php
+                                    if($row['confirmacion']== 'No asistió'){
+                                        echo 'No asistió - 
+                                        <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
+                                    }else {
+                                        echo empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion']; 
+                                    }
+                                    ?></td>
+                                    <td><?= htmlspecialchars($row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita']) ?></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="reason">
+                                    
+                                    <th colspan="7">Motivo: 
+                                        <p class="" colspan="7"><?= htmlspecialchars($row['descripcion']) ?></p>
+                                    </th>
+                                                                
+                                </tr>
+                            </tfoot>
+                            
+                        </table>
+                    </div>    
                    
                 </div>
                
-
                 <?php
             }
             ?>
@@ -325,14 +300,16 @@ if (isset($_SESSION['documento_identidad'])) {
 <script>
 function verRechazo(id){
     let popup = document.getElementById('justificacion-rechazo-'+ id);
-    
-    popup.style.display = 'block';
-
+    if(popup){
+        popup.style.display = 'block';
+    }
 }
 
 function Vermotivo(id){
     let popupMotivo = document.getElementById('justificacion-Noasistencia-' + id);
-    popupMotivo.style.display = 'block';
+    if(popupMotivo){
+        popupMotivo.style.display = 'block';
+    }
 }
 
 </script>
