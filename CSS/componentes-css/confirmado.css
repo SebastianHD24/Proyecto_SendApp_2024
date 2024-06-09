@@ -17,6 +17,17 @@
      border-radius: 10px;
 
   }
+  .content-img-noti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .popup{
+    width: 100%;    
+  }
 
  .confirmado th {
      gap: 5rem;
@@ -30,13 +41,25 @@
   .respondidos {
       background-color: #00234d;
       margin: 10px;
+      border-radius: 10px;
 
   }
+  .Noti-cerrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
 
- /* .confirmado {
-     width: 70vw;
+.confirmado {
+    background-color: var(--azul);
+    border-radius: 10px;
+}
 
- } */
+.sin-responder{
+    background-color: var(--azul);
+    border-radius: 10px;
+}
 
 
   .encabezado {
@@ -70,6 +93,16 @@
       text-align: center;
       width: 100%;
   }
+  .respuestas td button{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    height: auto;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 6px;
+  }
 
  .formulario select {
      background-color: #00234d;
@@ -77,6 +110,7 @@
      font-size: .8rem;
      font-weight: bold;
      width: 50%;
+     height: 4vh;
      cursor: pointer;
 }
 /*Boton buscar por fecha */
@@ -153,7 +187,7 @@
     color: #FFFFFF;
     border-radius: 10px;
     border: none;
-    width: 10%;
+    width: 20%;
     cursor: pointer;
     height: 25px;
 }
@@ -212,13 +246,18 @@
     color: #FFFFFF;
     border: none;
     border-radius: 10px;
-    height: 5vh;
+    height: auto;
     cursor: pointer;
     font-size: 0.8rem;
     padding: 5px;
 }
 .btn_pqr:hover{
     background-color: #00234D;
+}
+
+.contenedor-popup td{
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
 }
 
   /* RESPONSIVE */
@@ -253,6 +292,8 @@
         
 
     } */
+
+
     .contenedor_descripcion{
         border: 5px solid var(--azul);
         border-radius: 10px;
@@ -304,7 +345,8 @@
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
       .contenedor-popup {
           display: flex;
-          width: 50%;
+          width: 100%;
+          overflow-x: auto;
           overflow-x: auto;
       }
   }

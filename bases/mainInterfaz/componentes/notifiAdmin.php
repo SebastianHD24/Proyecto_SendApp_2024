@@ -3,7 +3,9 @@
 <div class="contenedor-popup" id="contenedor-popup"> 
     <div class="popup" id="popup">
         <div class="sin-responder" id="sin-responder" style="display: none;">
-        <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
+            <div class="content-img-noti">
+                <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
+            </div>
             <table id="sin_respuesta" class="confirmado">
                 <thead class="encabezado">
                     <tr class="encabezado2">
@@ -85,13 +87,17 @@
     <div class="contenedor_descripcion" id="contenedor_descripcion" style="display: none;">
         <h1>Descripción</h1>
         <p id="descripcion"></p>
+        <div class="Noti-cerrar">
         <button class="button1" onclick="cerrarDescripcion();">Cerrar</button>
+        </div>
     </div>
     <div class="contenedor_descripcion" id="contenedor_descripcionH" style="display: none; ">
         <h1>Descripción</h1>
         <br>
         <p id="descripcion1"></p>
+        <div class="Noti-cerrar">
         <button class="button1" onclick="cerrarSimpleD();">Cerrar</button>
+        </div>
     </diV>
     <!-- contenedor que muestra el formulario de respuesta y la respuesta -->
     <div class="contenedor_respuesta" id="contenedor_respuesta" style="display: none; ">
