@@ -172,28 +172,35 @@
         <label for="tipo_documento">Tipo de documento:</label>
       </div>
       <div class="contenedor_secciones">
-        <div class="primera-seccion">
+        
           <select id="tipo-documento" name="tipo_documento">>
                     <option value="CC" <?php if ($row['tipo_documento'] == 'CC') echo 'selected'; ?>>Cédula de Ciudadanía</option>
                     <option value="TI" <?php if ($row['tipo_documento'] == 'TI') echo 'selected'; ?>>Tarjeta de Identidad</option>
                     <option value="DE"<?php if ($row['tipo_documento'] == 'DE') echo 'selected'; ?>>Documento Extranjero</option>
           </select>
+          
         <!-- Campos para editar los datos del usuario -->
+        <div class="primera-seccion">
+        <div class="campo_ficha" style="display: <?php echo ($row['id_rol'] == 3) ? 'block' : 'none'; ?>"> 
+          <label for="ficha">Ficha:</label>
+          <input id="login-input-user-d" class="registro_input login__input" type="number" name="ficha" id="ficha" value="<?= $row['ficha']?>"><br>
+        </div>
         <label for="documento_identidad">Documento:</label>
         <input id="login-input-user-d" class="registro_input login__input" type="number" name="nuevo_documento_identidad" id="documento_identidad" value="<?= $row['documento_identidad']?>"><br>
         <label for="nombres">Nombres:</label>
         <input id="login-input-user-d" class="registro_input login__input" type="text" name="nombres" id="nombres" value="<?= $row['nombres']?>"><br>
+        </div>
+        <div class="segunda-seccion">
         <label for="apellidos">Apellidos:</label>
         <input id="login-input-user-d" class="registro_input login__input" type="text" name="apellidos" id="apellidos" value="<?= $row['apellidos']?>"><br>
+        
+        
         <label for="celular">Celular:</label>
         <input id="login-input-user-d" class="registro_input login__input" type="text" name="celular" id="celular" value="<?= $row['celular']?>"><br>
         <label for="correo">Correo:</label>
         <input id="login-input-user-d" class="registro_input login__input" type="email" name="correo" id="correo" value="<?= $row['correo']?>"><br>
         </div>
-        <div class="campo_ficha" style="display: <?php echo ($row['id_rol'] == 3) ? 'block' : 'none'; ?>"> 
-          <label for="ficha">Ficha:</label>
-          <input id="login-input-user-d" class="registro_input login__input" type="number" name="ficha" id="ficha" value="<?= $row['ficha']?>"><br>
-        </div>
+        
       </div>
       <!-- Menú desplegable para seleccionar el rol del usuario -->
       <label for="id_rol">Roles:</label>
@@ -255,9 +262,15 @@
         
     </form>
     <!-- Div para mostrar el mensaje -->
-    <div class="mensaje oculto" style="color: green; margin-top: 10px;">
-      ¡Usuario actualizado exitosamente!
+    <div class="alerta" id="alerta">
+      <div class="modalA">
+        <div class="barra"></div>
+        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+        <h1 class="tituloM">success</h1>
+        <p class="descripcionM">¡Actualización exitosa!</p>
+      </div>
     </div>
+
   </div>
 </div>
 <!--**************************************-->

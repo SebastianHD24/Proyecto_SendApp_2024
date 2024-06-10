@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Verificar si la actualización fue exitosa
             if (data.success) {
                 form.classList.add('oculto');
-                alerta.style.display = 'block';
+                alerta.style.display = 'flex';
                 alerta.style.zIndex = '999';
                 // Si fue exitosa, recargar la página después de 2 segundos
                 setTimeout(function() {
                     window.location.href = newUrl; // Recargar la página
-                }, 2000);
+                }, 3000);
             } else {
                 // Si hubo un error, mostrar el mensaje de error en la consola
                 console.error(data.message);

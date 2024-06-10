@@ -31,7 +31,7 @@
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
                 <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn">
-                  <p class="txt1">Psicologí a</p>
+                  <p class="txt1">Psicología</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
               </article>    
@@ -164,12 +164,14 @@
     </form>
   </div>
   <!-- /* ventana emergente */ -->
-  <div class="myModal" id="myModal">
-        <div class="confirmacion" id="confirmacion">
-          <p>Enviada con éxito</p>
-          <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
+  <div class="alerta" id="alerta">
+        <div class="modalA">
+            <div class="barra"></div>
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+            <h1 class="tituloM">success</h1>
+            <p class="descripcionM">¡Solicitud enviada con éxito!</p>
         </div>
-  </div>
+    </div>
 </main> 
 </div>
 

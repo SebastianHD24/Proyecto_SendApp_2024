@@ -28,14 +28,14 @@ form_update_users.addEventListener('submit', function(e){
   })
   .then(data => {
     if (data.respuesta === 0) {
-      let mensajeDiv = document.querySelector('.mensaje');
+      const alerta = document.getElementById('alerta');
       let menuLink = document.querySelector('.users-form a');
-      mensajeDiv.classList.remove('oculto');
+      alerta.style.display = 'flex';
       form_update_users.classList.add('oculto');
       menuLink.classList.add('oculto');
       setTimeout(function() {
       window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
-      }, 1000); // 1000 milisegundos = 1 segundos
+      }, 3000); // 3000 milisegundos = 3 segundos
     }else {
       console.log('Error!!! 404');
     }
