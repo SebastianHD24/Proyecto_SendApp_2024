@@ -231,6 +231,7 @@
     cursor: pointer;
     height: 25px;
     margin-top: 1rem;
+    margin-left: 230px;
 }
 
 .contenedor_respuesta .button2:hover{
