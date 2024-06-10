@@ -7,8 +7,7 @@
 .titulos{
     color: #00234d;
     font-weight: 600;
-}contenedor-popup
- /*Estilos para la tabla de responder*/
+}
  .sin-responder {
      background-color: #00234d;
      margin: 10px;
@@ -299,15 +298,22 @@
 
         margin-left: .7rem;
     }
+    .logo {
+        display: none;
+    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
       .contenedor-popup {
           display: flex;
-          width: 50%;
+          width: 80%;
           overflow-x: auto;
       }
+      .sin-responder{
+        margin-right: -19rem;
+      }
   }
+
 
   /* @media only screen and (min-width: 1024px){
     .contenedor-popup{
