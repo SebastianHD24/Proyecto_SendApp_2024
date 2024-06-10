@@ -1,7 +1,7 @@
 const mensaje = document.getElementById('mensaje');
 const historial = document.getElementById('historial');
 
-function createNotificationBox() {
+function createNotificationBoxP() {
     // Crear elemento section para display-notificaciones
     let displayNotificaciones = document.querySelector(".display-notificaciones");
 
@@ -58,26 +58,62 @@ function createNotificationBox() {
     displayNotificaciones.appendChild(notificationsContainer);
 }
 
-function consultar() {
-    const historial = document.getElementById('historial');
-    fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
-    .then(response => response.json())
-    .then(data => {
-        if (data.num_registros > 0) {
-            // Si hay registros, ejecutar un ciclo basado en el número de registros
-            for (let i = 0; i < data.num_registros; i++) {
-                // Aquí puedes realizar las operaciones que necesites dentro del ciclo
-                createNotificationBox();
-            }
-        } else {
-            // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
-            mensaje.style.display = "block";
+function consultarTodo() {
+    let totalRegistros = 0;
+
+    function consultar() {
+        return fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarCitas.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.num_registros > 0) {
+                    totalRegistros += data.num_registros;
+                    for (let i = 0; i < data.num_registros; i++) {
+                        const cita = data.datos[i];
+                        createNotificationBox(cita.hora, cita.fecha, cita.nombre_servicio);
+                    }
+                }
+            })
+            .catch(error => console.error("Error:", error));
+    }
+
+    function consultarR() {
+        return fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarCitasR.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.num_registros > 0) {
+                    totalRegistros += data.num_registros;
+                    for (let i = 0; i < data.num_registros; i++) {
+                        const cita = data.datos[i];
+                        createNotificationBoxR(cita.nombre_servicio);
+                    }
+                }
+            })
+            .catch(error => console.error("Error:", error));
+    }
+
+    function consultarP() {
+        return fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/mostrarPQR.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.num_registros > 0) {
+                    totalRegistros += data.num_registros;
+                    for (let i = 0; i < data.num_registros; i++) {
+                        createNotificationBoxP();
+                    }
+                }
+            })
+            .catch(error => console.error("Error:", error));
+    }
+
+    // Ejecutar todas las funciones y verificar si hay registros en ninguna de ellas
+    Promise.all([consultar(), consultarR(), consultarP()]).then(() => {
+        if (totalRegistros === 0) {
+            mensaje1.style.display = "block";
         }
-        historial.style.display = "block";
-    })
-    .catch(error => console.error("Error:", error));
+        historial1.style.display = "block";
+    }).catch(error => console.error("Error en alguna de las consultas:", error));
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    consultar();
+    consultarTodo();
 });
