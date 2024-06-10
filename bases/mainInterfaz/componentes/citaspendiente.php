@@ -41,7 +41,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
     </div>
 
     <nav class="search-buttons">
-        <ul>
+        <ul class="ul-citaspendientes">
           <li><a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a></li>
           <li><a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a></li>
           <li><a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a></li>
