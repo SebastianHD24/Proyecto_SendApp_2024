@@ -91,10 +91,11 @@ function ver() {
 }
 ver();
 
+
 function enviarIdPQR() {
     document.getElementById('id_pqr1').value = id;
-    let modal = document.getElementById("myModal");
-    modal.style.display = "block";
+    let modal = document.getElementById("alerta");
+    modal.style.display = "flex";
         setTimeout(function () {
             window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
         }, 3000);

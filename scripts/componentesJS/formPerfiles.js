@@ -67,7 +67,7 @@ formContraseña.addEventListener('submit', function(e) {
         console.log(data);
         if (data.contra === 0) {
             contraseña.style.display = 'none';
-            alerta.style.display = 'block';
+            alerta.style.display = 'flex';
             alerta.style.zIndex = '999';
             setTimeout(function(){
                 location.reload();
@@ -145,7 +145,7 @@ formulario.addEventListener('submit', function(e) {
         .then(data => {
             if (data.success === 0) {
                 mainForm.style.display = 'none';
-                alerta.style.display = 'block';
+                alerta.style.display = 'flex';
                 alerta.style.zIndex = '999';
                 setTimeout(function(){
                     location.reload();

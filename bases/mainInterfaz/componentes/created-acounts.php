@@ -262,9 +262,15 @@
         
     </form>
     <!-- Div para mostrar el mensaje -->
-    <div class="mensaje oculto" style="color: green; margin-top: 10px;">
-      ¡Usuario actualizado exitosamente!
+    <div class="alerta" id="alerta">
+      <div class="modalA">
+        <div class="barra"></div>
+        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+        <h1 class="tituloM">success</h1>
+        <p class="descripcionM">¡Actualización exitosa!</p>
+      </div>
     </div>
+
   </div>
 </div>
 <!--**************************************-->

@@ -73,7 +73,7 @@ function actualizarEstado(idServicio) {
     .then(data => {
         if (data.cambio === 1) {
             ventanaConfirmacion.classList.add('oculto');
-            alerta.style.display = 'block';
+            alerta.style.display = 'flex';
             alerta.style.zIndex = '999';
             setTimeout(function(){
                 location.reload();
@@ -115,7 +115,7 @@ function actualizarAdmin(idServicio, posicion) {
             switch (data.success) {
                 case 0:
                     ventanaConfirmacion.classList.add('oculto');
-                    alerta.style.display = 'block';
+                    alerta.style.display = 'flex';
                     alerta.style.zIndex = '999';
                     setTimeout(function(){
                         location.reload();

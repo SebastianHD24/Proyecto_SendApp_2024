@@ -160,12 +160,12 @@
         </div>
 
         <!-- Ventana emergente despues de una actualizacion. -->
-        <div class="alerta" id="alerta" style="display: none;">
-            <div class="mensaje">
-                <p>¡Actualización exitosa!</p>
-            </div>   
-            <div class="imagen">
-                <img src="/xampp/htdocs/Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="Señal de aprobación">
+        <div class="alerta" id="alerta">
+            <div class="modalA">
+                <div class="barra"></div>
+                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                <h1 class="tituloM">success</h1>
+                <p class="descripcionM">¡Actualización exitosa!</p>
             </div>
         </div>
     </main>

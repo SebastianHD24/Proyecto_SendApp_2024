@@ -150,7 +150,7 @@ select{
 }
 
 /* PopPup de registro exitoso */
-.message {
+/* .message {
     display:none;
     position: fixed;
     margin-top: 50%;
@@ -164,11 +164,11 @@ select{
 }
 
 /*Estilo del mensaje durante 3 segundos*/
-.message_success {
+/* .message_success {
     color: #155724;
     font-size: 1.5rem;
     font-weight: 500;
-}
+} */
 
 
 

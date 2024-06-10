@@ -105,9 +105,17 @@
         <form action="../../../../Proyecto_SendApp_2024/interfaces/Administrador/responderPQR.php" method="POST" class="form_respuesta" id="miFormulario">
             <input type="hidden" name="id_peticion" id="id_pqr1">
             <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
-            <button type="submit" value="Responder" onclick="enviarIdPQR();" class = "btnResponder" id = "btnEnviar">Enviar</button>
+            <button type="submit" value="Responder"  class="btnResponder" id="btnEnviar" onclick="enviarIdPQR();">Enviar</button>
         </form>
         <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
+        <div class="alerta" id="alerta" >
+            <div class="modalA">
+                <div class="barra"></div>
+                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                <h1 class="tituloM">success</h1>
+                <p class="descripcionM">¡Actualización exitosa!</p>
+            </div>
+        </div>
     </div>
     
     <div class="contenedor_respuesta" id="contenedor_respuestaH" style="display: none;">
