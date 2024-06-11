@@ -47,7 +47,9 @@
             <button type="submit" onclick="historialDesde();" class="buscar">Buscar</button>
         </form>
         </div>
-        <div class="respondidos" id="respondidos" style="display: none;">
+</div>
+        <div class="contenedor-popup" id="contenedor-popup"> 
+        <div class="sin-responder" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">
                 <thead class="encabezado">
@@ -81,8 +83,10 @@
             </table>
         </div>  
     </div>
+
     <button class="verHistorial"  onclick="verHistorial();" id="Historial" style="display: none;"><a href="#">Ver historial</a></button>
     <button class="salirHistorial"id="volver" onclick="ocultarHistorial();" style="display: none;"><a href="#" >Salir</a></button>
+    </div>
     <!-- contenedor que muestra la descripcion de la pqr -->
     <div class="contenedor_descripcion" id="contenedor_descripcion" style="display: none;">
         <h1>Descripción</h1>

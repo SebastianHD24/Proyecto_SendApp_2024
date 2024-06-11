@@ -345,16 +345,18 @@
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @media only screen and (min-width: 767px) and (max-width: 1280px) {
       .contenedor-popup {
           display: flex;
           width: 100%;
           overflow-x: auto;
+          scrollbar-width: none;
 
       }
       .sin-responder{
         margin-right: -19rem;
       }
+
   }
 
 
@@ -363,8 +365,10 @@
         display: flex;
         width: 80%;
         overflow-x: auto;
+        scrollbar-width: none;
     }
     .sin-responder{
         margin-right: -19rem;
       }
+
 }
