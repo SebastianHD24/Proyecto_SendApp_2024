@@ -23,11 +23,11 @@
                 $search_term_asistidas = $_GET['search-asistidas']; 
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
                 FROM citas
-                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'si-asiste' AND (citas.documento_usuario LIKE '$search_term_asistidas%'  OR usuarios.nombres LIKE '$search_term_asistidas%' OR usuarios.apellidos LIKE '$search_term_asistidas%') ORDER BY citas.id_cita ASC ";
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'Si asistió' AND citas.estado_cita = 'aceptado' AND (citas.documento_usuario LIKE '$search_term_asistidas%'  OR usuarios.nombres LIKE '$search_term_asistidas%' OR usuarios.apellidos LIKE '$search_term_asistidas%') ORDER BY citas.id_cita ASC ";
             } else {
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
                 FROM citas
-                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'si-asiste' ORDER BY citas.id_cita ASC ";
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion = 'Si asistió' AND citas.estado_cita = 'aceptado' ORDER BY citas.id_cita ASC ";
     
             }
 

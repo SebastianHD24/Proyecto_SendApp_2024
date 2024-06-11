@@ -21,15 +21,16 @@
 /* Estilos para el contenedor principal */
 .table_div {
     width: 100%; /*Limita el ancho máximo */
-    margin: 20px auto; 
+    margin: 0 auto; 
     background-color: white; /* Fondo blanco para el contenedor */
     border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     overflow: hidden ;
     overflow-x: auto;
     overflow-y: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .table_div table{
@@ -257,19 +258,27 @@ thead{
     background-color: var(--verde);
     padding: 8px;
     border-radius: 10px;
-    margin: 5px 10px;
+    margin: 10px 10px;
     color: var(--white);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 100%;
+    text-align: center;
+}
+
+.search-buttons ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ul-citaspendientes{
     display: flex;
+    overflow: hidden;
+    overflow-x: auto;
 }
 
 .ul-citaspendientes li{
     list-style: none;
-    margin: 1rem;
+    /* margin: 1rem; */
     display: flex;
 }
 
@@ -321,7 +330,9 @@ thead{
 .quick-direction-buttons{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-x: auto;
 
 }
 
