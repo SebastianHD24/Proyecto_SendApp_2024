@@ -32,23 +32,23 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 } 
 
 ?>
+<nav class="search-buttons">
+    <ul class="ul-citaspendientes">
+        <li><a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a></li>
+        <li><a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a></li>
+        <li><a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a></li>
+        <li><a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a></li>
+        <li><a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a></li>
+    </ul>
+</nav>
+
 <div class="organizar_citas" id="organizar_citas" >
     <div class="dating-finder">
         <form method="GET" class="search-quotes" id="search-quotes">
             <input type="text" name="search" id="searchInput" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
-    </div>
-
-    <nav class="search-buttons">
-        <ul class="ul-citaspendientes">
-          <li><a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a></li>
-          <li><a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a></li>
-          <li><a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a></li>
-          <li><a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a></li>
-        </ul>
-    </nav>
-    
+    </div>    
 </div>
 <!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
 
@@ -155,12 +155,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
         </form>
     </div>
     <h1 id="titulo_citas"> Citas Rechazadas</h1>
-    <div class="quick-direction-buttons">
-        <a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a>
-        <a class="CitAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas()"> Citas asistidas</a>
-        <a class="CitANoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas  no asistidas</a>
-        <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>    
-    </div>
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
 </div>
 <div class="AsistidasContent oculto"  >
@@ -171,12 +165,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
         </form>
     </div>
     <h1 id="titulo_citas">Citas Asistidas</h1>
-    <div class="quick-direction-buttons">
-        <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
-        <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
-        <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
-        <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
-    </div>
     <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); ?>
     
 </div>
@@ -191,13 +179,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
         </form>
     </div>
     <h1 id="titulo_citas">Citas que no asistieron</h1>
-    <div class="quick-direction-buttons">
-    <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
-    <a class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
-    <a class="Citasasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();"> Citas  asistidas</a>
-    <!-- <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a> -->
-    <a class="ConfirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();"> Confirmar Asistencia</a>
-    </div>
     <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); ?>       
 </div>
 
@@ -210,12 +191,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
         </form>
     </div>
     <h1 id="titulo_citas">Confirmar Citas</h1>
-    <div class="quick-direction-buttons">
-    <a class="citasPendientes"  href="javascript:void(0);" onclick="volver();">Citas pendientes</a> 
-    <a  class="CitasRechazadas" href="javascript:void(0);" onclick="ocultarTablaYMostrarRechazadas();">citas rechazadas</a>
-    <a class="Citasasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();"> Citas  asistidas</a>
-    <a class="CitasNoasistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"> Citas no asistidas</a>
-    </div>
     <?php include (__DIR__ .'/baseCitas/confirmarAsistencia.php'); ?>
 </div>
 
