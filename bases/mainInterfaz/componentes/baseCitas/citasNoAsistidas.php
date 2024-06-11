@@ -25,11 +25,11 @@
 
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion,citas.justificacion_cancelacion 
                 FROM citas
-                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'no-asiste' AND (citas.documento_usuario LIKE '$search_term_noAsistidas%'  OR usuarios.nombres LIKE '$search_term_noAsistidas%' OR usuarios.apellidos LIKE '$search_term_noAsistidas%') ORDER BY citas.id_cita ASC ";
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'No asistió' AND citas.estado_cita = 'aceptado' (citas.documento_usuario LIKE '$search_term_noAsistidas%'  OR usuarios.nombres LIKE '$search_term_noAsistidas%' OR usuarios.apellidos LIKE '$search_term_noAsistidas%') ORDER BY citas.id_cita ASC ";
             } else {
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion,citas.justificacion_cancelacion 
                 FROM citas
-                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'no-asiste' ORDER BY citas.id_cita ASC ";
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'No asistió' AND citas.estado_cita = 'aceptado' ORDER BY citas.id_cita ASC ";
             }
 
             $result = mysqli_query($conn, $sql);
