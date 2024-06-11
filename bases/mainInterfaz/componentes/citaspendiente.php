@@ -146,6 +146,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 </div>
 
 
+
 <div class="rechazadasContent oculto">
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
