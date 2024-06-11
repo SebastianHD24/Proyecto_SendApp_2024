@@ -38,7 +38,7 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
             $documento_identidad = $row['documento_identidad'];
 
             echo "<tr>";
-            echo "<td><button onclick=\"saberMas('$fecha', '$hora', '$documento_identidad', '$idCita')\">Ver motivo</button></td>";
+            echo "<td><button class='boton' onclick=\"saberMas('$fecha', '$hora', '$documento_identidad', '$idCita')\">Ver motivo</button></td>";
             echo "<td>{$hora}</td>";
             echo "<td>{$nombre_usuario}</td>";
             echo "</tr>";
