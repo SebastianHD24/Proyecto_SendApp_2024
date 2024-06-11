@@ -305,7 +305,8 @@ thead{
 
 .search-buttons ul a:hover{
     color: #00234D;
-    padding: 9px;
+    padding: .5rem;
+    transition: 0.3s ease;
 }
 
 .rechazadasContent, .AsistidasContent, .NoAsistidasContent, .confirmarAsistencia{
@@ -337,5 +338,6 @@ thead{
 
 .rechazadasContent .Regresar:hover,.CitAsistidas:hover,.CitANoAsistidas:hover,.ConfirmarCitas:hover , .CitasRechazadas:hover, .citasPendientes:hover, .CitasNoasistidas:hover, .Citasasistidas:hover{
     color: #00234D;
-    padding: 8.3px;
+    padding: .5rem;
+    transition: .3s ease;
 }
