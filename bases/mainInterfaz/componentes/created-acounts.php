@@ -129,7 +129,7 @@
     </table>
   </div>
 </div>  
-<!--**************************************************************************************************************-->
+<!--**************************************-->
 <div class="user_update oculto">
   
   <?php
@@ -159,43 +159,53 @@
     
   ?>
 
+<!-- ********************************-->
+
+<link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario_admin.css">
   <!-- Formulario para editar la información del usuario -->
   <div class="users-form">
-    <a href="?p=created-acounts">Menu</a>
+    
     <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/update-created-accounts.php" class="form-update-users" method="post">
       <!-- Campo oculto para almacenar el documento de identidad del usuario -->
       <input type="hidden" name="documento_identidad" value="<?= $row['documento_identidad']?>">
-
-      <label for="tipo_documento">Tipo de documento:</label>
-      <select id="tipo-documento" name="tipo_documento">>
-                <option value="CC" <?php if ($row['tipo_documento'] == 'CC') echo 'selected'; ?>>Cédula de Ciudadanía</option>
-                <option value="TI" <?php if ($row['tipo_documento'] == 'TI') echo 'selected'; ?>>Tarjeta de Identidad</option>
-                <option value="DE"<?php if ($row['tipo_documento'] == 'DE') echo 'selected'; ?>>Documento Extranjero</option>
-      </select>
-      <!-- Campos para editar los datos del usuario -->
-      <label for="documento_identidad">Documento:</label>
-      <input type="number" name="nuevo_documento_identidad" id="documento_identidad" value="<?= $row['documento_identidad']?>"><br>
-
-      <label for="nombres">Nombres:</label>
-      <input type="text" name="nombres" id="nombres" value="<?= $row['nombres']?>"><br>
-
-      <label for="apellidos">Apellidos:</label>
-      <input type="text" name="apellidos" id="apellidos" value="<?= $row['apellidos']?>"><br>
-
-      <label for="celular">Celular:</label>
-      <input type="text" name="celular" id="celular" value="<?= $row['celular']?>"><br>
-
-      <label for="correo">Correo:</label>
-      <input type="email" name="correo" id="correo" value="<?= $row['correo']?>"><br>
-
-      <div class="campo_ficha" style="display: <?php echo ($row['id_rol'] == 3) ? 'block' : 'none'; ?>"> 
-        <label for="ficha">Ficha:</label>
-        <input type="number" name="ficha" id="ficha" value="<?= $row['ficha']?>"><br>
+      <div class="titulos">
+        <label for="tipo_documento">Tipo de documento:</label>
       </div>
-
+      <div class="contenedor_secciones">
+        
+          <select id="tipo-documento" name="tipo_documento">>
+                    <option value="CC" <?php if ($row['tipo_documento'] == 'CC') echo 'selected'; ?>>Cédula de Ciudadanía</option>
+                    <option value="TI" <?php if ($row['tipo_documento'] == 'TI') echo 'selected'; ?>>Tarjeta de Identidad</option>
+                    <option value="DE"<?php if ($row['tipo_documento'] == 'DE') echo 'selected'; ?>>Documento Extranjero</option>
+          </select>
+          
+        <!-- Campos para editar los datos del usuario -->
+        <div class="primera-seccion">
+        <div class="campo_ficha" style="display: <?php echo ($row['id_rol'] == 3) ? 'block' : 'none'; ?>"> 
+          <label for="ficha">Ficha:</label>
+          <input id="login-input-user-d" class="registro_input login__input" type="number" name="ficha" id="ficha" value="<?= $row['ficha']?>"><br>
+        </div>
+        <label for="documento_identidad">Documento:</label>
+        <input id="login-input-user-d" class="registro_input login__input" type="number" name="nuevo_documento_identidad" id="documento_identidad" value="<?= $row['documento_identidad']?>"><br>
+        <label for="nombres">Nombres:</label>
+        <input id="login-input-user-d" class="registro_input login__input" type="text" name="nombres" id="nombres" value="<?= $row['nombres']?>"><br>
+        </div>
+        <div class="segunda-seccion">
+        <label for="apellidos">Apellidos:</label>
+        <input id="login-input-user-d" class="registro_input login__input" type="text" name="apellidos" id="apellidos" value="<?= $row['apellidos']?>"><br>
+        
+        
+        <label for="celular">Celular:</label>
+        <input id="login-input-user-d" class="registro_input login__input" type="text" name="celular" id="celular" value="<?= $row['celular']?>"><br>
+        <label for="correo">Correo:</label>
+        <input id="login-input-user-d" class="registro_input login__input" type="email" name="correo" id="correo" value="<?= $row['correo']?>"><br>
+        </div>
+        
+      </div>
       <!-- Menú desplegable para seleccionar el rol del usuario -->
-      <label for="id_rol">Rol:</label>
+      <label for="id_rol">Roles:</label>
       <select name="id_rol" id="id_rol">
+        
         <?php
           // Realizar la consulta para obtener solo los roles de aprendiz y funcionario
           $sql_roles = "SELECT id_rol, nombre_rol FROM roles WHERE nombre_rol = 'funcionario' or nombre_rol = 'aprendiz'";
@@ -215,7 +225,7 @@
       
       <div class="campo_programa" style="display: <?php echo ($row['id_rol'] == 3) ? 'block' : 'none'; ?>"> 
         <label for="ficha" >Programa:</label>
-        <input type="text" name="programa" id="programa" value="<?= $row['programa']?>"><br>
+        <input id="login-input-user-d" class="registro_input login__input" type="text" name="programa" id="programa" value="<?= $row['programa']?>"><br>
       </div>
       
       <div id="servicio_select" style="display: <?php echo ($row['id_rol'] != 3) ? 'block' : 'none'; ?>">
@@ -241,15 +251,29 @@
         </select><br>
       </div>
       <!-- Botón para enviar el formulario y actualizar la información del usuario -->
-      <input type="submit" value="Actualizar" >
+      <button class="btn_accounts">
+    <input type="submit" value="Actualizar" class="btn">
+</button>
+<br>
+<button class="btn_accounts">
+    <a class="btn" href="?p=created-acounts">Regresar</a>
+</button>
+
+        
     </form>
     <!-- Div para mostrar el mensaje -->
-    <div class="mensaje oculto" style="color: green; margin-top: 10px;">
-      ¡Usuario actualizado exitosamente!
+    <div class="alerta" id="alerta">
+      <div class="modalA">
+        <div class="barra"></div>
+        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+        <h1 class="tituloM">success</h1>
+        <p class="descripcionM">¡Actualización exitosa!</p>
+      </div>
     </div>
+
   </div>
 </div>
-<!--**************************************************************************************************************-->
+<!--**************************************-->
 <div class="new_registro oculto">
   
   <?php

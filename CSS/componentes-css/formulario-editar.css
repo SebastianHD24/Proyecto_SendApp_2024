@@ -96,6 +96,17 @@
     flex-direction: row;
 }
 
+.first-section .btn-cambiar {
+    color: var(--clr-white);
+    margin-bottom: 12px;
+    padding: .7rem;
+    border-radius: 7px;
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: var(--azul);
+    border-style: none
+}
+
 .btn-actualizar{
     display: flex;
     align-items: center;
@@ -194,20 +205,56 @@
 
 /* ALERTA */
 
+/* alerta modal de confirmacion*/
 .alerta{
-    display: grid;
-    place-content: center;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 5px;
-    border: 3px solid var(--verde);
+    background: rgba(0, 0, 0, 0.603);
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-.imagen{
+
+.modalA{
+    width: 25rem;
+    height: 12rem;
+    background-color: aliceblue;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.barra{
+    background-color: #00a500;
+    width: 100%;
+    height: 2rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modalA .tituloM{
+    margin-top: 3rem;
+    color: #00a500;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.mensaje{
-    font-size: 1.2rem;
-    color: var(--azul);
-    margin: 1rem;
+
+.modalA .descripcionM{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.modalA img{
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: -25%;
+    left: calc(50% - 50px);
 }

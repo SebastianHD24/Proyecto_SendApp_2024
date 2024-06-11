@@ -39,13 +39,13 @@ elseif (isset($_GET['search-confirmarCitas'])) {
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    
+
     <nav class="search-buttons">
-        <ul>
-            <a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a>
-            <a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a>
-            <a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a>
-            <a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a>
+        <ul class="ul-citaspendientes">
+          <li><a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a></li>
+          <li><a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a></li>
+          <li><a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a></li>
+          <li><a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a></li>
         </ul>
     </nav>
     
@@ -57,12 +57,12 @@ elseif (isset($_GET['search-confirmarCitas'])) {
     <table>
         <thead>
             <tr id="tabla_titulos">
-                <th>Documento de Identidad</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Descripción de la cita</th>
-                <th>Jornada</th>
-                <th>Acciones</th>
+                <th class="th_header">Documento de Identidad</th>
+                <th class="th_header">Nombres</th>
+                <th class="th_header">Apellidos</th>
+                <th class="th_header">Descripción de la cita</th>
+                <th class="th_header">Jornada</th>
+                <th class="th_header">Acciones</th>
             </tr>
         </thead>    
         <tbody>
@@ -144,6 +144,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
     </table> 
 
 </div>
+
 
 
 <div class="rechazadasContent oculto">

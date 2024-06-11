@@ -99,6 +99,9 @@
 .button-perfil{
     margin-bottom: 500px;
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-actualizar{

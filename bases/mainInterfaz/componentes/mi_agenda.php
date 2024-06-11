@@ -29,10 +29,10 @@
                 <button class="close-button" onclick="cerrar()">X</button>
             </div>
             <div class="contenido">
-                <p>Nombre completo del Aprendiz: <span id="nombreAprendiz">Sin información</span></p>
-                <p>Curso: <span id="curso">Sin información</span></p>
-                <p>Ficha: <span id="ficha">Sin información</span></p>
-                <p>Descripción: <span id="descripcionCita">Sin información</span></p>
+                <p><strong>Nombre completo del Aprendiz:</strong> <span id="nombreAprendiz">Sin información</span></p>
+                <p><strong>Curso:</strong> <span id="curso">Sin información</span></p>
+                <p><strong>Ficha:</strong> <span id="ficha">Sin información</span></p>
+                <p><strong>Descripción:</strong> <span id="descripcionCita">Sin información</span></p>
             </div>
         </div>
     </main>

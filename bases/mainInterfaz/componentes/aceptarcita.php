@@ -71,12 +71,12 @@
 
 
         <!-- Ventana emergente despues de una actualizacion. -->
-        <div class="alerta" id="alerta" style="display: none;">
-            <div class="mensaje">
-                <p>¡Cita agendada con éxito!</p>
-            </div>   
-            <div class="imagen">
-                <img src="" alt="Señal de aprobación">
+        <div class="alerta" id="alerta">
+            <div class="modalA">
+                <div class="barra"></div>
+                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                <h1 class="tituloM">success</h1>
+                <p class="descripcionM">¡Cita agendada con éxito!</p>
             </div>
         </div>
         <?php
