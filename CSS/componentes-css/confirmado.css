@@ -129,12 +129,7 @@
     border-radius: 5px;
 }
 
-  /* .formulario select option{
-    background: #00234d;
-    color: #FFFFFF;
-    cursor: pointer;
-    
- } */
+
  /*Boton ver historial y salir*/
 .verHistorial, .salirHistorial{
     background-color: #39a900;
@@ -275,23 +270,7 @@
           height: 3vh;
       }
 
-      /* .formulario {
-        text-align: center;
-        width: 100%;
 
-        z-index: 1000;
-    }
-
-    .formulario select {
-        background-color: #bcbbbb;
-        color: #000000;
-        font-size: .8rem;
-        font-weight: bold;
-        width: 25%;
-        
-        
-
-    } */
 
 
     .contenedor_descripcion{
@@ -345,7 +324,7 @@
     }
   }
 
-  @media only screen and (min-width: 767px) and (max-width: 1280px) {
+  @media only screen and (min-width: 768px) and (max-width: 1280px) {
       .contenedor-popup {
           display: flex;
           width: 100%;
