@@ -1,8 +1,10 @@
-  /* .contenedor-popup{
+  .contenedor-popup{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 90%;
     overflow-x: auto;
-}   */
+}  
 
 .titulos{
     color: #00234d;
@@ -324,16 +326,22 @@
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 1280px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
       .contenedor-popup {
           display: flex;
-          width: 100%;
+          width: 80%;
           overflow-x: auto;
           scrollbar-width: none;
 
       }
       .sin-responder{
         margin-right: -19rem;
+      }
+      .respondidos{
+        width: 60%;
+      }
+      .confirmado{
+        margin-right: -25rem;
       }
 
   }
@@ -348,6 +356,12 @@
     }
     .sin-responder{
         margin-right: -19rem;
+      }
+      .respondidos{
+        width: 60%;
+      }
+      .confirmado{
+        margin-right: -25rem;
       }
 
 }
