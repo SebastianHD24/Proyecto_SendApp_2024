@@ -18,7 +18,7 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     $fecha = sprintf("%04d-%02d-%02d", $year, $month, $day);
 
     // Realizar la consulta SQL para obtener los datos de la tabla de citas 
-    $query = "SELECT citas.id_cita AS id, citas.hora AS hora, usuarios.nombres AS nombre_usuario, citas.documento_usuario AS documento_identidad
+    $query = "SELECT citas.id_cita AS id, citas.hora AS hora, usuarios.nombres AS nombre_usuario, citas.documento_usuario AS documento_identidad, usuarios.correo AS correo_usuario, usuarios.celular AS telefono_usuario
               FROM citas 
               INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad 
               WHERE citas.fecha = '$fecha' AND citas.estado_cita = 'aceptado' AND citas.usuario_f = '$funcionario'";
@@ -30,8 +30,12 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
         // Mostrar los eventos debajo del calendario 
         echo "<h2>Eventos</h2>";
         echo "<table border='1'>";
-        echo "<tr><th>Más información</th><th>Hora</th><th>Nombre</th></tr>";
+        echo "<tr><th>Más información</th><th>Hora</th><th>Nombre</th><th>Correo</th><th>Celular</th></tr>";
         while ($row = mysqli_fetch_assoc($result)) {
+             // Creamos enlaces dinámicos para correo y WhatsApp
+             $correo_link = "mailto:" . $row['correo_usuario'] . "?subject=&body=";
+             $whatsapp_link = "https://wa.me/+57" . $row['telefono_usuario'] . "?text=";
+
             $hora = htmlspecialchars($row['hora'], ENT_QUOTES, 'UTF-8');
             $nombre_usuario = htmlspecialchars($row['nombre_usuario'], ENT_QUOTES, 'UTF-8');
             $idCita = $row['id'];
@@ -41,6 +45,9 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
             echo "<td><button class='boton' onclick=\"saberMas('$fecha', '$hora', '$documento_identidad', '$idCita')\">Ver motivo</button></td>";
             echo "<td>{$hora}</td>";
             echo "<td>{$nombre_usuario}</td>";
+            // Insertamos los enlaces dinámicos
+            echo "<td><a href='{$correo_link}' target='_blank'>{$row['correo_usuario']}</a></td>";
+            echo "<td><a href='{$whatsapp_link}' target='_blank'>{$row['telefono_usuario']}</a></td>";
             echo "</tr>";
         }
         echo "</table>";

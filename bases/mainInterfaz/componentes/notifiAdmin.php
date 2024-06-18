@@ -47,7 +47,7 @@
             <button type="submit" onclick="historialDesde();" class="buscar">Buscar</button>
         </form>
         </div>
-        <div class="respondidos" id="respondidos" style="display: none;">
+        <div class="" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">
                 <thead class="encabezado">

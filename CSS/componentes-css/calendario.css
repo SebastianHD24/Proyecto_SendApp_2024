@@ -27,7 +27,15 @@ h3 {
   font-weight: 600;
   padding-bottom: 1rem;
 }
-
+.eventos table tr td button {
+  margin: 10px;
+  padding: 10px 2rem;
+  background-color: #39a900;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .calendar {
   margin: 0 auto;
   width: 98%;
@@ -177,11 +185,17 @@ h3 {
 .eventos table {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: none;
   border-collapse: collapse;
   max-width: 72vw;
   padding-bottom: 25px;
+  border-radius: 20px;
 
+}
+
+.eventos tbody{
+  border-radius: 20px;
 }
 
 .eventos th,

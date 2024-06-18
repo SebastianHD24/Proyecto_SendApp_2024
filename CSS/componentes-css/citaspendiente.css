@@ -21,15 +21,16 @@
 /* Estilos para el contenedor principal */
 .table_div {
     width: 100%; /*Limita el ancho máximo */
-    margin: 20px auto; 
+    margin: 0 auto; 
     background-color: white; /* Fondo blanco para el contenedor */
     border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     overflow: hidden ;
     overflow-x: auto;
     overflow-y: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .table_div table{
@@ -60,6 +61,10 @@
 }
 .organizar_citas{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 #tabla_titulos{
@@ -244,21 +249,73 @@ thead{
     width: 100%;
     height: auto;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .search-buttons ul a{
     font-family: var(--fuente-principal);
     background-color: var(--verde);
     padding: 8px;
     border-radius: 10px;
-    margin: 5px 10px;
+    margin: 10px 10px;
     color: var(--white);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.search-buttons ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-citaspendientes{
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.ul-citaspendientes li{
+    list-style: none;
+    /* margin: 1rem; */
+    display: flex;
+}
+
+.dating-finder{
+    padding: 2rem;
+}
+
+.dating-finder form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dating-finder input{
     width: 100%;
+    padding: 10px;
+    margin: 5px 2rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.dating-finder button{
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 500;
 }
 
 .search-buttons ul a:hover{
     color: #00234D;
-    padding: 9px;
+    padding: .5rem;
+    transition: 0.3s ease;
 }
 
 .rechazadasContent, .AsistidasContent, .NoAsistidasContent, .confirmarAsistencia{
@@ -273,7 +330,9 @@ thead{
 .quick-direction-buttons{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-x: auto;
 
 }
 
@@ -290,5 +349,6 @@ thead{
 
 .rechazadasContent .Regresar:hover,.CitAsistidas:hover,.CitANoAsistidas:hover,.ConfirmarCitas:hover , .CitasRechazadas:hover, .citasPendientes:hover, .CitasNoasistidas:hover, .Citasasistidas:hover{
     color: #00234D;
-    padding: 8.3px;
+    padding: .5rem;
+    transition: .3s ease;
 }

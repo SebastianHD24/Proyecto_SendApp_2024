@@ -1,14 +1,15 @@
-  /* .contenedor-popup{
+  .contenedor-popup{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 90%;
     overflow-x: auto;
-}   */
+}  
 
 .titulos{
     color: #00234d;
     font-weight: 600;
-}contenedor-popup
- /*Estilos para la tabla de responder*/
+}
  .sin-responder {
      background-color: #00234d;
      margin: 10px;
@@ -22,7 +23,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    width: 100%;
   }
 
   .popup{
@@ -54,6 +54,7 @@
 .confirmado {
     background-color: var(--azul);
     border-radius: 10px;
+    width: 100%;
 }
 
 .sin-responder{
@@ -130,12 +131,7 @@
     border-radius: 5px;
 }
 
-  /* .formulario select option{
-    background: #00234d;
-    color: #FFFFFF;
-    cursor: pointer;
-    
- } */
+
  /*Boton ver historial y salir*/
 .verHistorial, .salirHistorial{
     background-color: #39a900;
@@ -276,23 +272,7 @@
           height: 3vh;
       }
 
-      /* .formulario {
-        text-align: center;
-        width: 100%;
 
-        z-index: 1000;
-    }
-
-    .formulario select {
-        background-color: #bcbbbb;
-        color: #000000;
-        font-size: .8rem;
-        font-weight: bold;
-        width: 25%;
-        
-        
-
-    } */
 
 
     .contenedor_descripcion{
@@ -341,22 +321,47 @@
 
         margin-left: .7rem;
     }
+    .logo {
+        display: none;
+    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
       .contenedor-popup {
           display: flex;
-          width: 100%;
+          width: 80%;
           overflow-x: auto;
-          overflow-x: auto;
+          scrollbar-width: none;
+
       }
+      .sin-responder{
+        margin-right: -19rem;
+      }
+      .respondidos{
+        width: 60%;
+      }
+      .confirmado{
+        margin-right: -25rem;
+      }
+
   }
 
-  /* @media only screen and (min-width: 1024px){
+
+  @media only screen and (min-width: 1024px){
     .contenedor-popup{
         display: flex;
-        width: 100%;
-        height: 100%;
+        width: 80%;
         overflow-x: auto;
+        scrollbar-width: none;
     }
-} */
+    .sin-responder{
+        margin-right: -19rem;
+      }
+      .respondidos{
+        width: 60%;
+      }
+      .confirmado{
+        margin-right: -25rem;
+      }
+
+}
