@@ -107,7 +107,9 @@
             <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
             <button type="submit" value="Responder"  class="btnResponder" id="btnEnviar" onclick="enviarIdPQR();">Enviar</button>
         </form>
-        <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
+        <div class="botones-notificar-resúesta">
+            <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
+        </div>
         <div class="alerta" id="alerta" >
             <div class="modalA">
                 <div class="barra"></div>

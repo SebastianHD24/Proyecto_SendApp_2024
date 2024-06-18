@@ -131,6 +131,11 @@
     border-radius: 5px;
 }
 
+.botones-notificar-resúesta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
  /*Boton ver historial y salir*/
 .verHistorial, .salirHistorial{
@@ -223,11 +228,10 @@
     color: #FFFFFF;
     border-radius: 10px;
     border: none;
-    width: 15%;
+    padding: 10px;
     cursor: pointer;
-    height: 25px;
     margin-top: 1rem;
-    margin-left: 230px;
+    text-align: center;
 }
 
 .contenedor_respuesta .button2:hover{
@@ -350,7 +354,6 @@
   @media only screen and (min-width: 1024px){
     .contenedor-popup{
         display: flex;
-        width: 80%;
         overflow-x: auto;
         scrollbar-width: none;
     }

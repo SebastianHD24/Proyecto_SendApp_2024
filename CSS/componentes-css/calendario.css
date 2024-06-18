@@ -184,7 +184,6 @@ h3 {
 
 .eventos table {
   display: flex;
-  justify-content: center;
   align-items: center;
   border: none;
   border-collapse: collapse;
@@ -194,14 +193,14 @@ h3 {
 
 }
 
-.eventos tbody{
-  border-radius: 20px;
-}
-
 .eventos th,
 .eventos td {
   padding: 10px;
   border: 2px solid var(--gris-oscuro);
+}
+
+.eventos tr{
+  border-radius: 20px;
 }
 
 .eventos th {
@@ -332,6 +331,8 @@ h3 {
   }
   .eventos table {
     max-width: 82vw;
+    overflow: hidden;
+    overflow-x: auto
   }
   .calendar ul li {
     font-size: 14px;
