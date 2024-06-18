@@ -108,12 +108,12 @@
             <button type="submit" value="Responder"  class="btnResponder" id="btnEnviar" onclick="enviarIdPQR();">Enviar</button>
         </form>
         <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
-        <div class="alerta" id="alerta" >
+        <div class="alerta" id="alerta" style="display: ;">
             <div class="modalA">
                 <div class="barra"></div>
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
                 <h1 class="tituloM">success</h1>
-                <p class="descripcionM">¡Actualización exitosa!</p>
+                <p class="descripcionM">¡Respuesta enviada con exito!</p>
             </div>
         </div>
     </div>

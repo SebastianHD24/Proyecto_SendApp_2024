@@ -78,6 +78,15 @@
                                         
 
                                         <button type="submit" class="button danger">Enviar</button>
+
+                                        <div class="alerta" id="alerta">
+                                            <div class="modalA">
+                                                <div class="barra"></div>
+                                                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                                                <h1 class="tituloM">success</h1>
+                                                <p class="descripcionM">Justificacion enviada</p>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
