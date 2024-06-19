@@ -24,7 +24,7 @@
     margin: 0 auto; 
     background-color: white; /* Fondo blanco para el contenedor */
     border-radius: 8px; /* Bordes redondeados */
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-around;
     overflow: hidden ;
@@ -323,6 +323,10 @@ thead{
 }
 .rechazadasContent, .AsistidasContent, .NoAsistidasContent, .confirmarAsistencia h1{
     margin: 20px;
+    text-align: center;
+}
+
+#titulo_citas{
     text-align: center;
 }
 
