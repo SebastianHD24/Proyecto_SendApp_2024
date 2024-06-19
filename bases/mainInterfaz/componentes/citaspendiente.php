@@ -54,7 +54,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 
 <div class="table_div" id="table_div">
-    
+    <h1 id="titulo_citas"> Citas Pendientes</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">

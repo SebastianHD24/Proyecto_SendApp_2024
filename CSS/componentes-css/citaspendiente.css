@@ -26,11 +26,16 @@
     border-radius: 8px; /* Bordes redondeados */
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-around;
     overflow: hidden ;
     overflow-x: auto;
     overflow-y: auto;
 
+}
+
+h1#titulo_citas {
+    text-align: center;
 }
 
 .table_div table{
