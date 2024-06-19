@@ -1,5 +1,5 @@
 /*Creando varibles de colores*/
-:root{
+:root {
     --verde: #39a900;
     --blanco: #fff;
     --negro: #070001;
@@ -14,11 +14,12 @@
 /* main{
     padding: 1.3rem;
 } */
-.solicitarCita h1{
+.solicitarCita h1 {
     text-align: center;
 }
+
 /*Título h1 de inicio*/
-.tituloDeInicioH1{
+.tituloDeInicioH1 {
     font-size: 1.4rem;
     color: var(--azul);
     font-style: italic;
@@ -26,21 +27,21 @@
 }
 
 /*Sección introductoria del inicio*/
-.articuloContenedorDeParrafos{
+.articuloContenedorDeParrafos {
     width: 100%;
     padding: 1.5rem;
 }
 
-.articuloContenedorDeParrafos p{
+.articuloContenedorDeParrafos p {
     text-align: justify;
 }
 
-.articuloContenedorDeParrafos b{
+.articuloContenedorDeParrafos b {
     color: var(--verde);
 }
 
 /*Estilos de la tabla de información*/
-.tablaServicios{
+.tablaServicios {
     width: 100%;
     display: grid;
     /* border: 1px solid var(--negro); */
@@ -48,7 +49,7 @@
 }
 
 /*Contenedor de la imagen dentro de la tabla*/
-.tablaServicios .contenedor__imagen-inicio{
+.tablaServicios .contenedor__imagen-inicio {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,22 +57,22 @@
 }
 
 /*Logo dentro de la tabla*/
-.tablaServicios .contenedor__imagen-inicio img{
+.tablaServicios .contenedor__imagen-inicio img {
     width: 150px;
 }
 
 /*Contenedor de secciones con los datos GRID*/
-.tabla__datos-grid{
+.tabla__datos-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: auto;
     justify-items: center;
     gap: 1.2rem;
     padding: 1rem;
 }
 
-.seccion_informacion_servicios{
+.seccion_informacion_servicios {
     width: 100%;
     display: grid;
     /* border: 2px solid var(--azul); */
@@ -80,43 +81,47 @@
 }
 
 /*Ajustando el espaciado de los elementos dentro de la sección*/
-.seccion_informacion_servicios article{
+.seccion_informacion_servicios article {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template-rows: auto;
     gap: 20px;
     padding: 1.5rem;
-    border: 1.5px var(--azul) solid; 
+    border: 1.5px var(--azul) solid;
 }
 
 /*Subtitlo H3 dentro de las secciones*/
-.nombre__campo-subtitulo{
+.nombre__campo-subtitulo {
     font-size: 1.1rem;
     color: var(--azul);
 }
 
 /*Parrafos que contienen los datos extraidos de la BD*/
-.datos__parrafo{
+.datos__parrafo {
     font-style: italic;
     font-weight: 600;
     padding: 0;
 }
 
 /*Botones dentro de cada artículo*/
-.seccion_informacion_servicios article > button{
+.seccion_informacion_servicios article>button {
     font-family: 'Work Sans', sans-serif;
-    height: 30px;
+    height: 35px;
     letter-spacing: 1px;
     background-color: var(--gris-claro);
     cursor: pointer;
     color: var(--verde);
     border-radius: 12px;
-    border: none;
+    border: 1px solid #00234D;
     font-weight: 600;
+    cursor: pointer;
+}
+.seccion_informacion_servicios article>button:hover{
+    background-color: #00234D;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,13 +130,13 @@
     height: auto;
 }
 
-#descrip-solicitarCitas{
-    padding: 5px 0px 20px 0px ;
+#descrip-solicitarCitas {
+    padding: 5px 0px 20px 0px;
     font-weight: 600;
     text-align: center;
 }
 
-.solicitarCita{
+.solicitarCita {
     border: 5px solid var(--azul);
     border-radius: 10px;
     padding: 20px;
@@ -140,7 +145,7 @@
 }
 
 /*Select dentro de cada artículo*/
-.seccion_informacion_servicios article select{
+.seccion_informacion_servicios article select {
     font-family: 'Work Sans', sans-serif;
     cursor: pointer;
     height: 30px;
@@ -149,7 +154,7 @@
     margin: 0;
 }
 
-.select{
+.select {
     width: 100%;
     height: 30px;
     background-color: var(--gris-oscuro);
@@ -165,7 +170,7 @@
     font-size: .9rem;
 }
 
-.funcionario{
+.funcionario {
     width: 100%;
     height: 30px;
     background-color: var(--gris-oscuro);
@@ -176,13 +181,13 @@
     font-size: 1.2rem;
 }
 
-.funcionario option{
+.funcionario option {
     width: 100px;
     font-size: .9rem;
 }
 
 /*Contenedor con la informaciión del Aadministrador*/
-.popUp{
+.popUp {
     background-color: var(--gris-claro);
     width: 75%;
     display: flex;
@@ -194,12 +199,12 @@
     padding: 20px 0;
     border: 1px solid var(--verde);
     border-radius: 18px 0 18px 0;
-    background: rgb(0,50,77);
-    background: linear-gradient(270deg, rgba(0,50,77,1) 0%, rgba(255,244,221,1) 100%); 
+    background: rgb(0, 50, 77);
+    background: linear-gradient(270deg, rgba(0, 50, 77, 1) 0%, rgba(255, 244, 221, 1) 100%);
 }
 
 /*Contenedor secundario con el efecto de blur*/
-.contenedor_informacion{
+.contenedor_informacion {
     width: 90%;
     height: 100%;
     overflow-x: auto;
@@ -216,7 +221,7 @@
 }
 
 /*Tabla de información*/
-.tablaAdmin{
+.tablaAdmin {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -224,12 +229,12 @@
     padding: 10px;
 }
 
-.tablaAdmin thead{
+.tablaAdmin thead {
     padding: 0 5px;
 }
 
 /*Nombre de las columnas dentro de la talba*/
-.tablaAdmin thead tr{
+.tablaAdmin thead tr {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -237,7 +242,7 @@
 }
 
 /*Nombre de loas columnas dentro de la talba*/
-.tablaAdmin tbody tr{
+.tablaAdmin tbody tr {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -246,12 +251,12 @@
 }
 
 /*Estilos del mensaje oculto en caso de no encontrar la información de un admin*/
-.mensajeAdmin{
+.mensajeAdmin {
     margin: 25px;
 }
 
 /*Boton dentro del pop-up*/
-.cerrar{
+.cerrar {
     width: 100px;
     height: 30px;
     border: none;
@@ -262,10 +267,10 @@
 }
 
 /*Efecto de mouse por encima*/
-.cerrar:hover{
+.cerrar:hover {
     transform: scale(1.1);
-    background: rgb(0,50,77);
-    background: linear-gradient(270deg, rgba(0,50,77,1) 0%, rgba(255,244,221,1) 100%); 
+    background: rgb(0, 50, 77);
+    background: linear-gradient(270deg, rgba(0, 50, 77, 1) 0%, rgba(255, 244, 221, 1) 100%);
     color: var(--blanco);
     letter-spacing: 1px;
     font-weight: 500;
@@ -275,7 +280,6 @@
 /*Estilos de la ventana emergente previa para confimar de manera definitiva los cambios o no confirmalos*/
 /*Contenedor principal*/
 .fondoPopUp {
-    background-color: var(--gris-claro);
     width: 75%;
     display: flex;
     position: relative;
@@ -286,12 +290,12 @@
     padding: 20px 0;
     border: 1px solid var(--verde);
     border-radius: 18px 0 18px 0;
-    background: rgb(0,50,77);
-    background: linear-gradient(270deg, rgba(0,50,77,1) 0%, rgba(255,244,221,1) 100%); 
+    background: rgb(0, 50, 77);
+    color: #ffffff;
 }
 
 /*Segundo contenedor con la información y los botones*/
-.popUpSeguro{
+.popUpSeguro {
     width: 90%;
     height: 100%;
     overflow-x: auto;
@@ -303,16 +307,19 @@
     padding: 5px 0;
     border-radius: 18px 0 18px 0;
 }
-.descripcion-servicio{
+
+.descripcion-servicio {
     padding: 10px;
-    font-family:'Work sans' sans-serif ;
+    font-family: 'Work sans' sans-serif;
     font-size: 1rem;
 }
-.sub{
+
+.sub {
     font-family: 'Work sans' sans-serif;
     margin-top: 10px;
 }
-.Nombre_Area{
+
+.Nombre_Area {
     font-family: 'Work sans' sans-serif;
     border-radius: 5px;
     border: 1px solid var(--azul);
@@ -324,7 +331,7 @@
     font-size: 1.1rem;
 }
 
-.formulario-contador{
+.formulario-contador {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,12 +339,13 @@
     margin: 20px 2px 0px 1px;
 }
 
-.formulario-area-nombre-funcionario{
+.formulario-area-nombre-funcionario {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -345,7 +353,8 @@
     gap: 2rem;
     margin-top: 10px;
 }
-.button-servicio{
+
+.button-servicio {
     font-family: 'Work sans' sans-serif;
     margin: 10px;
     padding: 10px 2rem;
@@ -355,11 +364,12 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .button-servicio:hover {
     background-color: #00234D;
 }
 
-#botones > button{
+#botones>button {
     width: 100px;
     height: 30px;
     border: none;
@@ -370,11 +380,10 @@
     margin: 15px 5px;
 }
 
-#botones button:hover{
+#botones button:hover {
     transform: scale(1.1);
-    background: rgb(0,50,77);
-    background: linear-gradient(270deg, rgba(0,50,77,1) 0%, rgba(255,244,221,1) 100%); 
-    color: var(--blanco);
+    background: linear-gradient(270deg, rgba(57, 169, 0, 1) 0%, rgba(255, 244, 221, 1) 100%);
+    color: var(--azul);
     letter-spacing: 1px;
     font-weight: 500;
     transition: all 250ms ease-in-out;
@@ -382,28 +391,29 @@
 
 /*Responsive*/
 @media screen and (min-width: 1100px) and (max-width: 1440px) {
-    .tabla__datos-grid{
-        grid-template-columns: repeat(auto-fill,minmax(325px, 1fr));
+    .tabla__datos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
     }
 }
 
-@media screen and (min-width: 1441px) and (max-width:2560px){
-    .tabla__datos-grid{
-        grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
+@media screen and (min-width: 1441px) and (max-width:2560px) {
+    .tabla__datos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
 }
 
-@media (max-width: 768px){
-    .solicitarCita{
+@media (max-width: 768px) {
+    .solicitarCita {
         width: 80%;
     }
 }
 
-@media (max-width: 415px){
-    .button-servicio{
+@media (max-width: 415px) {
+    .button-servicio {
         padding: 10px 1rem;
     }
-    .buttons{
+
+    .buttons {
         gap: 1rem;
     }
 }
