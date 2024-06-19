@@ -19,7 +19,7 @@ if (isset($_SESSION['documento_identidad'])) {
     INNER JOIN usuarios ON citas.usuario_f = usuarios.documento_identidad
     WHERE citas.documento_usuario = '$documento_identidad' 
     AND citas.fecha >= CURDATE() OR NOT citas.confirmacion='No asistió' OR NOT citas.confirmacion='Si asistió'
-    ORDER BY citas.fecha ASC
+    ORDER BY citas.id_cita DESC
     LIMIT 6";
 
 
