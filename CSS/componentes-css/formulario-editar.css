@@ -122,6 +122,11 @@
     color: var(--blanco);
     text-align: center;
 }
+
+.btn-actu:hover{
+    cursor: pointer;
+}
+
 .edit_input{
     margin: 18px 0px 30px 0px;
 }

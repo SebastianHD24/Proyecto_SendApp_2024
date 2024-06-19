@@ -84,6 +84,15 @@
 .contenedor_secciones .registro_label{
     font-weight: 500;
 }
+.btn-input-crear-cuenta{
+   background-color: var(--azul); 
+   border: none;
+   color: var(--blanco);
+}
+
+.btn-input-crear-cuenta:hover{
+    cursor: pointer;
+ }
 
 select{
     width: 100%;

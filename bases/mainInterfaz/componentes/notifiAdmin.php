@@ -47,7 +47,7 @@
             <button type="submit" onclick="historialDesde();" class="buscar">Buscar</button>
         </form>
         </div>
-        <div class="respondidos" id="respondidos" style="display: none;">
+        <div class="" id="respondidos" style="display: none;">
         <img class="logo" alt="logo" src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/SendApp.png">
             <table id="con_respuesta" class="confirmado">
                 <thead class="encabezado">
@@ -107,7 +107,9 @@
             <textarea type="text" name="respuesta_pqrs" class="Responder" rows="4" cols="80"></textarea>
             <button type="submit" value="Responder"  class="btnResponder" id="btnEnviar" onclick="enviarIdPQR();">Enviar</button>
         </form>
-        <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
+        <div class="botones-notificar-resúesta">
+            <button class="button2" onclick="cerrarDescripcion();">Cancelar</button>
+        </div>
         <div class="alerta" id="alerta" >
             <div class="modalA">
                 <div class="barra"></div>

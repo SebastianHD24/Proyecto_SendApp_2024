@@ -252,7 +252,7 @@
       </div>
       <!-- Botón para enviar el formulario y actualizar la información del usuario -->
       <button class="btn_accounts">
-    <input type="submit" value="Actualizar" class="btn">
+    <input type="submit" value="Actualizar" class="btn-input-crear-cuenta">
 </button>
 <br>
 <button class="btn_accounts">

@@ -63,7 +63,7 @@ section p{
 }
 
 /* boton interno de las tarjetas */
-.btn{
+.cards__container .btn{
   background-color: transparent;
   border: none;
   width: 11em;

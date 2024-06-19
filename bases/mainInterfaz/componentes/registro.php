@@ -4,14 +4,16 @@
     <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/Login/Styles/login.css">
 <?php endif ?> 
 
-<div class="alerta" id="alerta" >
-    <div class="modalA">
-        <div class="barra"></div>
-        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-        <h1 class="tituloM">success</h1>
-        <p class="descripcionM">Registro guardado correctamente</p>
+<?php if (isset($_SESSION['documento_identidad'])): ?>
+    <div class="alerta" id="alerta">
+        <div class="modalA">
+            <div class="barra"></div>
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+            <h1 class="tituloM">success</h1>
+            <p class="descripcionM">Registro guardado correctamente</p>
+        </div>
     </div>
-</div>
+<?php endif ?>
 
 <form id="registerForm" action="../../../../Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php" class="form-login form2" method="post"> 
     <?php if (isset($_SESSION['documento_identidad'])): ?>

@@ -163,7 +163,9 @@ header img{
 	font-weight: 550;
 	margin-bottom: 1rem;
 }
-
+#alerta{
+display: none;
+}
 
 .login__input {
 	color: black;
