@@ -1,8 +1,10 @@
-  /* .contenedor-popup{
+  .contenedor-popup{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 90%;
     overflow-x: auto;
-}   */
+}  
 
 .titulos{
     color: #00234d;
@@ -21,7 +23,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    width: 100%;
   }
 
   .popup{
@@ -53,6 +54,7 @@
 .confirmado {
     background-color: var(--azul);
     border-radius: 10px;
+    width: 100%;
 }
 
 .sin-responder{
@@ -129,12 +131,12 @@
     border-radius: 5px;
 }
 
-  /* .formulario select option{
-    background: #00234d;
-    color: #FFFFFF;
-    cursor: pointer;
-    
- } */
+.botones-notificar-resúesta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
  /*Boton ver historial y salir*/
 .verHistorial, .salirHistorial{
     background-color: #39a900;
@@ -226,11 +228,10 @@
     color: #FFFFFF;
     border-radius: 10px;
     border: none;
-    width: 15%;
+    padding: 10px;
     cursor: pointer;
-    height: 25px;
     margin-top: 1rem;
-    margin-left: 230px;
+    text-align: center;
 }
 
 .contenedor_respuesta .button2:hover{
@@ -275,23 +276,7 @@
           height: 3vh;
       }
 
-      /* .formulario {
-        text-align: center;
-        width: 100%;
 
-        z-index: 1000;
-    }
-
-    .formulario select {
-        background-color: #bcbbbb;
-        color: #000000;
-        font-size: .8rem;
-        font-weight: bold;
-        width: 25%;
-        
-        
-
-    } */
 
 
     .contenedor_descripcion{
@@ -345,16 +330,22 @@
     }
   }
 
-  @media only screen and (min-width: 767px) and (max-width: 1280px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
       .contenedor-popup {
           display: flex;
-          width: 100%;
+          width: 80%;
           overflow-x: auto;
           scrollbar-width: none;
 
       }
       .sin-responder{
         margin-right: -19rem;
+      }
+      .respondidos{
+        width: 60%;
+      }
+      .confirmado{
+        margin-right: -25rem;
       }
 
   }
@@ -363,12 +354,17 @@
   @media only screen and (min-width: 1024px){
     .contenedor-popup{
         display: flex;
-        width: 80%;
         overflow-x: auto;
         scrollbar-width: none;
     }
     .sin-responder{
         margin-right: -19rem;
+      }
+      .respondidos{
+        width: 60%;
+      }
+      .confirmado{
+        margin-right: -25rem;
       }
 
 }

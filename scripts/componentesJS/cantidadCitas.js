@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function regresar() {
         if (Historial) Historial.style.display = "none";
-        if (predeterminado) predeterminado.style.display = "block";
+        if (predeterminado) predeterminado.style.display = "flex";
         if (enlaceHistorial) enlaceHistorial.style.display = "block";
         if (volver) volver.style.display = "none";
         if (nohistorial) nohistorial.style.display = "block";  // Ajusta esto según tu lógica

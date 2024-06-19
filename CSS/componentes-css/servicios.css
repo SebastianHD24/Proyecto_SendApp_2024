@@ -11,9 +11,9 @@
 }
 
 /*Estilos especificos solo para esta sección en especifico de la tabla*/
-main{
-    padding: 10px 10px;
-}
+/* main{
+    padding: 1.3rem;
+} */
 .solicitarCita h1{
     text-align: center;
 }
@@ -22,12 +22,13 @@ main{
     font-size: 1.4rem;
     color: var(--azul);
     font-style: italic;
+    padding: 1.5rem;
 }
 
 /*Sección introductoria del inicio*/
 .articuloContenedorDeParrafos{
     width: 100%;
-    padding: .8rem;
+    padding: 1.5rem;
 }
 
 .articuloContenedorDeParrafos p{
@@ -66,14 +67,16 @@ main{
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
     grid-template-rows: auto;
     justify-items: center;
-    gap: 15px;
+    gap: 1.2rem;
+    padding: 1rem;
 }
 
 .seccion_informacion_servicios{
     width: 100%;
     display: grid;
-    border: 2px solid var(--azul);
+    /* border: 2px solid var(--azul); */
     border-radius: 12px;
+    padding: 1.3rem;
 }
 
 /*Ajustando el espaciado de los elementos dentro de la sección*/
@@ -83,7 +86,8 @@ main{
     grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
     grid-template-rows: auto;
     gap: 20px;
-    padding: 15px 15px; 
+    padding: 1.5rem;
+    border: 1.5px var(--azul) solid; 
 }
 
 /*Subtitlo H3 dentro de las secciones*/

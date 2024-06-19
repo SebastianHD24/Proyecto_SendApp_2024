@@ -184,7 +184,6 @@ h3 {
 
 .eventos table {
   display: flex;
-  justify-content: center;
   align-items: center;
   border: none;
   border-collapse: collapse;
@@ -194,14 +193,14 @@ h3 {
 
 }
 
-.eventos tbody{
-  border-radius: 20px;
-}
-
 .eventos th,
 .eventos td {
   padding: 10px;
   border: 2px solid var(--gris-oscuro);
+}
+
+.eventos tr{
+  border-radius: 20px;
 }
 
 .eventos th {
@@ -246,7 +245,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #00ff0d; /* Verde para eventos futuros */
+  background: #39a900; /* Verde para eventos futuros */
   border-radius: 50%;
   z-index: -1;
 }
@@ -272,7 +271,7 @@ h3 {
 
 /* Pop up de info de la cita */
 .info {
-
+  max-width: 100%;
   height: 50%;
   margin: 20px auto;
   padding: 20px;
@@ -315,6 +314,16 @@ h3 {
   color: #000;
 }
 
+.boton-calenda{
+    position: relative;
+    padding: 10px 10px;
+    background-color: #39a900;
+    border-radius: 6px;
+    color: var(--gris-claro);
+    border: none;
+    font-family: var(--fuente-principal);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 
 @media only screen and (max-width: 768px) {
   .eventos {
@@ -322,5 +331,11 @@ h3 {
   }
   .eventos table {
     max-width: 82vw;
+    overflow: hidden;
+    overflow-x: auto
   }
+  .calendar ul li {
+    font-size: 14px;
+  }
+  
 }
