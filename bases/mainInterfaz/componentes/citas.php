@@ -1,6 +1,6 @@
-
-<button class="verHistorial" id="historial" onclick="verHistorial();"  href="#">ver historial</button>
+<button class="verHistorial" id="historial" onclick="verHistorial();"  href="#">Ver historial</button>
 <button  class="salirHistorial" id="volver" href="#"  onclick="regresar();"  style="display: none;">Regresar</button>
+
 <?php
 
 if (isset($_SESSION['documento_identidad'])) {
@@ -35,25 +35,21 @@ if (isset($_SESSION['documento_identidad'])) {
             while ($row = mysqli_fetch_assoc  ($result)) {
                 ?>
                 <!--Tarjeta donde se muestra la información de la cita-->
-
-                
-                <div class="notifications">
-
-                
-                <div id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;">
-                    <h2 onclick="Cerrarjustificacion(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Xxxxx</h2>
-                    <p><?= $row['justificacion_rechazo']?></p>
-                </div>
-
-
-
-                    <div id="justificacion-Noasistencia-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
-                    <h2 onclick="Cerrarmotivo(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Xxxxxx</h2>
-                        <p><?= $row['justificacion_cancelacion']?></p>
-            
+                <div id="contenedorm-descripcion">
+                    <div id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion contenedor_descripcion" style="display:none;">
+                        <h2>Justificación de rechazo:</h2>
+                        <p><?= $row['justificacion_rechazo']?></p>
+                        <button class="button1" onclick="Cerrarjustificacion(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Cerrar</button>
                     </div>
 
+                    <div id="justificacion-Noasistencia-<?= $row['id_cita'] ?>" class="popup-justificacion contenedor_descripcion" style="display:none;">
+                        <h2>Justificación de no asistencia:</h2>
+                        <p><?= $row['justificacion_cancelacion']?></p>
+                        <button class="button1" onclick="Cerrarmotivo(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Cerrar</button>
+                    </div>
+                </div>
 
+                <div class="notifications">
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
@@ -180,21 +176,18 @@ if (isset($_SESSION['documento_identidad'])) {
             while ($row = mysqli_fetch_assoc  ($result)) {
               
                 ?>
-                
+                <div  id="justificacion-rechazos-<?= $row['id_cita'] ?>" class="popup-justificacion contenedor_descripcion" style="display:none;" >
+                    <h2>Justificación de rechazo:</h2>
+                    <p><?= $row['justificacion_rechazo']?> </p>
+                    <button class="button1" onclick="Cerrarjustificaciones(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Cerrar</button>
+                </div>
+                <div id="justificacion-Noasistencias-<?= $row['id_cita'] ?>"  class="popup-justificacion contenedor_descripcion" style="display:none;">
+                    <h2>Justificación de no asistencia:</h2>
+                    <p><?= $row['justificacion_cancelacion']?></p>
+                    <button class="button1" onclick="Cerrarmotivos(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Cerrar</button>
+                </div> 
+
                 <div class="notifications">
-
-                    <div  id="justificacion-rechazos-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;" >
-                    <h2 onclick="Cerrarjustificaciones(<?= $row['id_cita'] ?>);" style="cursor:pointer;">X</h2>
-                        <p><?= $row['justificacion_rechazo']?> </p>
-                    </div>
-
-
-                    <div id="justificacion-Noasistencias-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
-                        <h2 onclick="Cerrarmotivos(<?= $row['id_cita'] ?>);" style="cursor:pointer;">X</h2>
-                        <p><?= $row['justificacion_cancelacion']?></p>
-            
-                    </div>               
-
                     <figure>
                         <img src="../../../../Proyecto_SendApp_2024/imagenes/Componentes-img/Schedule.png" class="notifications-logo" alt="Icono de Calendario"/>
                     </figure>
@@ -253,7 +246,6 @@ if (isset($_SESSION['documento_identidad'])) {
                     </div>    
                    
                 </div>
-               
                 <?php
             }
             ?>
@@ -279,49 +271,3 @@ if (isset($_SESSION['documento_identidad'])) {
 
  <!-- <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>  -->
 <script src='../../../../Proyecto_SendApp_2024/scripts/componentesJS/cantidadCitas.js'></script>
-
-<script>
-function verRechazo(id){
-    let popup = document.getElementById('justificacion-rechazos-'+ id);
-    if(popup){
-        popup.style.display = 'block';
-    }
-}
-function verRechazos(id){
-    let popup = document.getElementById('justificacion-rechazo-'+ id);
-    if(popup){
-        popup.style.display = 'block';
-    }
-}
-function Cerrarjustificaciones(id){
-    let popup = document.getElementById('justificacion-rechazos-' + id);
-    popup.style.display = 'none';
-}
-function Cerrarjustificacion(id){
-    let popup = document.getElementById('justificacion-rechazo-' + id);
-    popup.style.display = 'none';
-}
-
-// *************************************************************************
-function Vermotivos(id){
-    let popupMotivo = document.getElementById('justificacion-Noasistencias-' + id);
-    if(popupMotivo){
-        popupMotivo.style.display = 'block';
-    }
-}
-
-function Vermotivo(id){
-    let popupMotivo = document.getElementById('justificacion-Noasistencia-' + id);
-    if(popupMotivo){
-        popupMotivo.style.display = 'block';
-    }
-}
-function Cerrarmotivo(id){
-    let popup = document.getElementById('justificacion-Noasistencia-' + id);
-    popup.style.display = 'none';
-}
-function Cerrarmotivos(id){
-    let popup = document.getElementById('justificacion-Noasistencias-' + id);
-    popup.style.display = 'none';
-}
-</script>

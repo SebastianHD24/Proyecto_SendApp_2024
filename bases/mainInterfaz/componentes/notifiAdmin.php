@@ -115,7 +115,7 @@
                 <div class="barra"></div>
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
                 <h1 class="tituloM">success</h1>
-                <p class="descripcionM">¡Actualización exitosa!</p>
+                <p class="descripcionM">¡Respuesta enviada con exito!</p>
             </div>
         </div>
     </div>
@@ -123,7 +123,9 @@
     <div class="contenedor_respuesta" id="contenedor_respuestaH" style="display: none;">
         <h1>Respuesta</h1>
         <p id="respuesta"></p>
-        <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
+        <div class="Boton-noti-respuesta">
+            <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
+        </div>
     </div>
 </div>
 </main> 
