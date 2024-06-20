@@ -50,7 +50,7 @@
                         <td><?= $row['apellidos'] ?></td>
                         <td><button onclick="verDescripcion3(<?= $row['id_cita'] ?>);">Descripcion</button></td>
                         <td><?= $row['confirmacion'] ?></td>
-                        <td><?= $row['justificacion_cancelacion'] ?></td>
+                        <td><button onclick="verJustificacion1(<?= $row['id_cita'] ?>);">Justificación</button></td>
 
                         <td><?= $row['jornada'] ?></td>
                         

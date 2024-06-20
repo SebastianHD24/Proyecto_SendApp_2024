@@ -386,6 +386,48 @@ let descripcion1 = document.querySelector('.contenedor_descripcion1');
                 mensaje.textContent = 'Error al obtener la descripción.';
         });
     }
+    function verJustificacion(id_j){
+        mostrarDivRechazadas.style.display = "none";
+        Botones.style.display = "none";
+        descripcion1.style.display = "block";
+
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/justificacion.php?id=${id_j}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.justificacion_rechazo) {
+                    // Muestra la descripción obtenida
+                    mensaje1.textContent = data.justificacion_rechazo;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje1.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
+    function verJustificacion1(id_j){
+        mostarDivNoAsistidas.style.display = "none";
+        Botones.style.display = "none";
+        descripcion1.style.display = "block";
+
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/justificacion1.php?id=${id_j}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.justificacion_cancelacion) {
+                    // Muestra la descripción obtenida
+                    mensaje1.textContent = data.justificacion_cancelacion;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje1.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
     function cerrarDescripcion(){
         ocultarDiv.style.display = "block";
         Ocultarnav.style.display = "block";

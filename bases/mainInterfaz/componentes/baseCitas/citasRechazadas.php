@@ -48,7 +48,7 @@
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
                         <td><button onclick="verDescripcion1(<?= $row['id_cita'] ?>);">Descripcion</button></td>
-                        <td><?= $row['justificacion_rechazo'] ?></td>
+                        <td><button onclick="verJustificacion(<?= $row['id_cita'] ?>);">Justificación</button></td>
 
                         <td><?= $row['jornada'] ?></td>
                         <td><?= $row['fecha'] ?></td>    
