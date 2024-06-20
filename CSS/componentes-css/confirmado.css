@@ -196,6 +196,7 @@
     background-color: #00234d;
 }
 
+
 /*los mismo pero con un 1 en todo*/
 .contenedor_descripcion1{
     border: 5px solid var(--azul);
@@ -223,6 +224,11 @@
 }
 .contenedor_descripcion1 .button11:hover{
     background-color: #00234d;
+}
+.Noti-cerrar1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 /*Respuestas*/
