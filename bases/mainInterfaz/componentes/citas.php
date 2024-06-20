@@ -40,15 +40,15 @@ if (isset($_SESSION['documento_identidad'])) {
                 <div class="notifications">
 
                 
-                    <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;" >
-                        
-                        <p><?= $row['justificacion_rechazo']?> </p>
+                <div id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;">
+                    <h2 onclick="Cerrarjustificacion(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Xxxxx</h2>
+                    <p><?= $row['justificacion_rechazo']?></p>
+                </div>
 
-                    </div>
 
 
                     <div id="justificacion-Noasistencia-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
-                
+                    <h2 onclick="Cerrarmotivo(<?= $row['id_cita'] ?>);" style="cursor:pointer;">Xxxxxx</h2>
                         <p><?= $row['justificacion_cancelacion']?></p>
             
                     </div>
@@ -80,7 +80,7 @@ if (isset($_SESSION['documento_identidad'])) {
                                     <td><?php
                                     if ($row['estado_cita']== 'rechazado'){
                                         echo 'rechazado  -
-                                        <a class="verJustificacion" id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
+                                        <a class="verJustificacion" id="verJustificacion" onclick="verRechazos(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
                                     }else {
                                         echo  $row['estado_cita'];
                                     } 
@@ -100,7 +100,7 @@ if (isset($_SESSION['documento_identidad'])) {
                             <tfoot>
                                 <tr class="reason">
                                     
-                                    <th colspan="7">Motivo: 
+                                    <th colspan="7">Motivo de la cita: 
                                         <p class="" colspan="7"><?= htmlspecialchars($row['descripcion']) ?></p>
                                     </th>
                                                                 
@@ -183,13 +183,14 @@ if (isset($_SESSION['documento_identidad'])) {
                 
                 <div class="notifications">
 
-                    <div  id="justificacion-rechazo-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;" >
+                    <div  id="justificacion-rechazos-<?= $row['id_cita'] ?>" class="popup-justificacion" style="display:none;" >
+                    <h2 onclick="Cerrarjustificaciones(<?= $row['id_cita'] ?>);" style="cursor:pointer;">X</h2>
                         <p><?= $row['justificacion_rechazo']?> </p>
                     </div>
 
 
-                    <div id="justificacion-Noasistencia-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
-                
+                    <div id="justificacion-Noasistencias-<?= $row['id_cita'] ?>"  class="popup-justificacion" style="display:none;">
+                        <h2 onclick="Cerrarmotivos(<?= $row['id_cita'] ?>);" style="cursor:pointer;">X</h2>
                         <p><?= $row['justificacion_cancelacion']?></p>
             
                     </div>               
@@ -230,7 +231,7 @@ if (isset($_SESSION['documento_identidad'])) {
                                     <td><?php
                                     if($row['confirmacion']== 'No asistió'){
                                         echo 'No asistió - 
-                                        <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
+                                        <a id="verconfirmacion" onclick="Vermotivos(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
                                     }else {
                                         echo empty($row['confirmacion']) ? "aún no se a hecho " : $row['confirmacion']; 
                                     }
@@ -241,7 +242,7 @@ if (isset($_SESSION['documento_identidad'])) {
                             <tfoot>
                                 <tr class="reason">
                                     
-                                    <th colspan="7">Motivo: 
+                                    <th colspan="7">Motivo de la cita: 
                                         <p class="" colspan="7"><?= htmlspecialchars($row['descripcion']) ?></p>
                                     </th>
                                                                 
@@ -281,9 +282,31 @@ if (isset($_SESSION['documento_identidad'])) {
 
 <script>
 function verRechazo(id){
+    let popup = document.getElementById('justificacion-rechazos-'+ id);
+    if(popup){
+        popup.style.display = 'block';
+    }
+}
+function verRechazos(id){
     let popup = document.getElementById('justificacion-rechazo-'+ id);
     if(popup){
         popup.style.display = 'block';
+    }
+}
+function Cerrarjustificaciones(id){
+    let popup = document.getElementById('justificacion-rechazos-' + id);
+    popup.style.display = 'none';
+}
+function Cerrarjustificacion(id){
+    let popup = document.getElementById('justificacion-rechazo-' + id);
+    popup.style.display = 'none';
+}
+
+// *************************************************************************
+function Vermotivos(id){
+    let popupMotivo = document.getElementById('justificacion-Noasistencias-' + id);
+    if(popupMotivo){
+        popupMotivo.style.display = 'block';
     }
 }
 
@@ -293,5 +316,12 @@ function Vermotivo(id){
         popupMotivo.style.display = 'block';
     }
 }
-
+function Cerrarmotivo(id){
+    let popup = document.getElementById('justificacion-Noasistencia-' + id);
+    popup.style.display = 'none';
+}
+function Cerrarmotivos(id){
+    let popup = document.getElementById('justificacion-Noasistencias-' + id);
+    popup.style.display = 'none';
+}
 </script>
