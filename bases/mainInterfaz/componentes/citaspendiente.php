@@ -32,7 +32,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 } 
 
 ?>
-<nav class="search-buttons">
+<nav class="search-buttons" id="search-buttons">
     <ul class="ul-citaspendientes">
         <li><a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a></li>
         <li><a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a></li>
@@ -42,7 +42,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
     </ul>
 </nav>
 
-<div class="organizar_citas" id="organizar_citas" >
+<div class="organizar_citas" id="organizar_citas">
     <div class="dating-finder">
         <form method="GET" class="search-quotes" id="search-quotes">
             <input type="text" name="search" id="searchInput" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
@@ -52,9 +52,8 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 </div>
 <!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
 
-
 <div class="table_div" id="table_div">
-    
+    <h1 id="titulo_citas"> Citas Pendientes</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -99,7 +98,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
                             <td><?= $row['documento_identidad'] ?></td>
                             <td><?= $row['nombres'] ?></td>
                             <td><?= $row['apellidos'] ?></td>
-                            <td><?= $row['descripcion'] ?></td>
+                            <td><button onclick="verDescripcion(<?= $row['id_cita'] ?>);">Descripcion</button></td>
                             <td><?= $row['jornada'] ?></td>
                             <td class="asistio">
                                 <button class="button aceptar<?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
@@ -143,9 +142,24 @@ elseif (isset($_GET['search-confirmarCitas'])) {
             ?>
         </tbody>
     </table> 
-
 </div>
 
+
+<div class="contenedor_descripcion" id="contenedor_descripcion" style="display: none;">
+    <h1>Descripción</h1>
+    <p id="descripcion"></p>
+    <div class="Noti-cerrar">
+    <button class="button1" onclick="cerrarDescripcion();">Cerrar</button>
+    </div>
+</div>
+
+<div class="contenedor_descripcion1" id="contenedor_descripcion1" style="display: none;">
+    <h1>Descripción</h1>
+    <p id="descripcion1"></p>
+    <div class="Noti-cerrar1">
+    <button class="button11" onclick="cerrarDescripcion1();">Cerrar</button>
+    </div>
+</div>
 
 
 <div class="rechazadasContent oculto">
@@ -155,9 +169,10 @@ elseif (isset($_GET['search-confirmarCitas'])) {
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas"> Citas Rechazadas</h1>
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
 </div>
+
+
 <div class="AsistidasContent oculto"  >
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
@@ -165,11 +180,9 @@ elseif (isset($_GET['search-confirmarCitas'])) {
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas">Citas Asistidas</h1>
     <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); ?>
     
 </div>
-
 
 
 <div class="NoAsistidasContent oculto">
@@ -179,7 +192,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas">Citas que no asistieron</h1>
     <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); ?>       
 </div>
 
@@ -191,7 +203,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas">Confirmar Citas</h1>
     <?php include (__DIR__ .'/baseCitas/confirmarAsistencia.php'); ?>
 </div>
 
@@ -203,11 +214,16 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 <script>
 // Declaramos variable para  lo que necesitamos 
 let ocultarDiv = document.querySelector('.table_div');
+let Botones = document.querySelector('.search-buttons')
 let mostrarDivRechazadas = document.querySelector('.rechazadasContent');
+let mensaje = document.getElementById('descripcion');
+let mensaje1 = document.getElementById('descripcion1');
 let mostarDivAsistidas = document.querySelector('.AsistidasContent');
 let Ocultarnav = document.getElementById('organizar_citas');
 let mostarDivNoAsistidas= document.querySelector('.NoAsistidasContent');
 let mostrarDivConfirmarAsistencia=document.querySelector('.confirmarAsistencia');
+let descripcion = document.querySelector('.contenedor_descripcion');
+let descripcion1 = document.querySelector('.contenedor_descripcion1');
 // Funciones para que los links funcionen
 
    
@@ -252,6 +268,126 @@ let mostrarDivConfirmarAsistencia=document.querySelector('.confirmarAsistencia')
 
     function volver() {
     location.href = '../../../../../Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
-}    
+    }   
+    
+    function verDescripcion(id_cita){
+        ocultarDiv.style.display = "none";
+        Ocultarnav.style.display = "none";
+        Botones.style.display = "none";
+        descripcion.style.display = "block";
 
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/descripcion.php?id=${id_cita}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.descripcion) {
+                    // Muestra la descripción obtenida
+                    mensaje.textContent = data.descripcion;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
+    function verDescripcion1(id_cita){
+        mostrarDivRechazadas.style.display = "none";
+        Botones.style.display = "none";
+        descripcion1.style.display = "block";
+
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/descripcion.php?id=${id_cita}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.descripcion) {
+                    // Muestra la descripción obtenida
+                    mensaje1.textContent = data.descripcion;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje1.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
+    function verDescripcion2(id_cita){
+        mostarDivAsistidas.style.display = "none";
+        Botones.style.display = "none";
+        descripcion1.style.display = "block";
+
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/descripcion.php?id=${id_cita}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.descripcion) {
+                    // Muestra la descripción obtenida
+                    mensaje1.textContent = data.descripcion;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje1.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
+    function verDescripcion3(id_cita){
+        mostarDivNoAsistidas.style.display = "none";
+        Botones.style.display = "none";
+        descripcion1.style.display = "block";
+
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/descripcion.php?id=${id_cita}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.descripcion) {
+                    // Muestra la descripción obtenida
+                    mensaje1.textContent = data.descripcion;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje1.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
+    function verDescripcion4(id_cita){
+        mostrarDivConfirmarAsistencia.style.display = "none";
+        Botones.style.display = "none";
+        descripcion1.style.display = "block";
+
+        fetch(`../../../../Proyecto_SendApp_2024/interfaces/Funcionario/descripcion.php?id=${id_cita}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.descripcion) {
+                    // Muestra la descripción obtenida
+                    mensaje1.textContent = data.descripcion;
+                } else {
+                    // Manejo de error si no se encuentra la descripción
+                    mensaje1.textContent = 'No se encontró la descripción.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                mensaje.textContent = 'Error al obtener la descripción.';
+        });
+    }
+    function cerrarDescripcion(){
+        ocultarDiv.style.display = "block";
+        Ocultarnav.style.display = "block";
+        Botones.style.display = "flex";
+        descripcion.style.display = "none";
+    }
+    function cerrarDescripcion1(){
+        Botones.style.display = "flex";
+        mostrarDivRechazadas.style.display = "block"
+        descripcion1.style.display = "none";
+        mostarDivAsistidas.style.display = "block";
+        mostarDivNoAsistidas.style.display = "block";
+        mostrarDivConfirmarAsistencia.style.display = "block";
+    }
 </script>

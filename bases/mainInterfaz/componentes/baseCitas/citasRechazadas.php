@@ -1,4 +1,5 @@
-<div class="table_div" id="table_rechazadas">   
+<div class="table_div" id="table_rechazadas"> 
+    <h1 id="titulo_citas"> Citas Rechazadas</h1>  
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -46,7 +47,7 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><?= $row['descripcion'] ?></td>
+                        <td><button onclick="verDescripcion1(<?= $row['id_cita'] ?>);">Descripcion</button></td>
                         <td><?= $row['justificacion_rechazo'] ?></td>
 
                         <td><?= $row['jornada'] ?></td>

@@ -122,6 +122,15 @@ input[type="date"]:focus,
     cursor: pointer;
 }
 
+/* mensaje para los servicios desabilitados */
+.mensaje-emergente {
+    display: none;
+    position: absolute;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+}
 
 /* alerta modal de confirmacion*/
 .alerta{

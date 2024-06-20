@@ -158,6 +158,55 @@ select{
     color: var(--blanco);
 }
 
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    margin-left: 50%;
+
+}
+
+.exit-icon .exit-image {
+    width: 24px; 
+    height: 24px;
+}
+
+.exit-icon .tooltip {
+    visibility: hidden;
+    width: 50px;
+    background-color: #b6b5b5;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 100%; 
+    margin-top: -12px; 
+    margin-left: 10px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.exit-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.exit-icon .exit-image {
+    transition: filter 0.3s;
+}
+
+.exit-icon:hover .exit-image {
+    filter: brightness(0.7);
+}
+
 /* PopPup de registro exitoso */
 /* .message {
     display:none;

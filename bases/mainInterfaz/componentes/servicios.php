@@ -1,3 +1,19 @@
+<?php
+// Consulta preparada para obtener todos los estados del servicio
+$sql = "SELECT estado_servicio FROM servicios";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$query = $stmt->get_result();
+
+// Crear una lista para almacenar los estados del servicio
+$estadosServicios = array();
+
+// Recorrer los resultados y añadir los estados a la lista
+while ($row = $query->fetch_assoc()) {
+    $estadosServicios[] = $row['estado_servicio'];
+}
+$stmt->close();
+?>
 <div class="div__content">
     <section>
         <!--Logo en el contenido-->
@@ -11,16 +27,25 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/wellBeingBlack.png" name="" alt="Logo Bienestar"/>
-                <button onclick="capturar_id(1); capturar_id_servicio(1)" id="Bienestar" class = "btn"> <p class="txt1">Bienestar al Aprendiz</p>
-                <p class="txt2">Agendar Cita</p>
-              </button>
+                <button onclick="capturar_id(1); capturar_id_servicio(1)" id="Bienestar" class="btn"
+                <?php if ($estadosServicios[0] == 0): ?>
+                    disabled
+                <?php endif; ?>
+                >
+                    <p class="txt1">Bienestar al Aprendiz</p>
+                    <p class="txt2">Agendar Cita</p>
+                </button>
               </article>
             </div>
 
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/bibliotecaNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(2); capturar_id_servicio(2)" id="Biblioteca" class="btn">
+                <button onclick="capturar_id(2); capturar_id_servicio(2)" id="Biblioteca" class="btn"
+                <?php if ($estadosServicios[1] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Biblioteca</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -30,7 +55,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/academico.png" name="" alt=""/>
-                <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn">
+                <button onclick="capturar_id(3); capturar_id_servicio(3)"id="psicologia" class="btn"
+                <?php if ($estadosServicios[2] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Psicología</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -51,7 +80,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/enprederNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(4); capturar_id_servicio(4)" id="FondoE" class="btn">
+                <button onclick="capturar_id(4); capturar_id_servicio(4)" id="FondoE" class="btn"
+                <?php if ($estadosServicios[3] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Fondo Emprender</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -61,7 +94,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/corporacionNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(5); capturar_id_servicio(5)" id="RelacionesC" class="btn">
+                <button onclick="capturar_id(5); capturar_id_servicio(5)" id="RelacionesC" class="btn"
+                <?php if ($estadosServicios[4] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Relaciones Corporativas</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -71,7 +108,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/senova.png" name="" alt=""/>
-                <button onclick="capturar_id(6); capturar_id_servicio(6)" id="Sennova" class="btn">
+                <button onclick="capturar_id(6); capturar_id_servicio(6)" id="Sennova" class="btn"
+                <?php if ($estadosServicios[5] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Sennova</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -81,7 +122,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/serviciosNegros.png" name="" alt=""/>
-                <button onclick="capturar_id(7); capturar_id_servicio(7)" id="ServiciosT" class="btn">
+                <button onclick="capturar_id(7); capturar_id_servicio(7)" id="ServiciosT" class="btn"
+                <?php if ($estadosServicios[6] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Servicios Tecnológicos</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -91,7 +136,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/fabricaNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(8); capturar_id_servicio(8)" id="FabricaS" class="btn">
+                <button onclick="capturar_id(8); capturar_id_servicio(8)" id="FabricaS" class="btn"
+                <?php if ($estadosServicios[7] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Fábrica De Software</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -101,7 +150,11 @@
             <div class="cards">
               <article>
                 <img src="../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/Areas-img/tecnoAcademiaNegro.png" name="" alt=""/>
-                <button onclick="capturar_id(9); capturar_id_servicio(9)" id="Deportes" class="btn">
+                <button onclick="capturar_id(9); capturar_id_servicio(9)" id="Deportes" class="btn"
+                <?php if ($estadosServicios[8] == 0): ?>
+                  disabled
+                <?php endif; ?>
+                >
                   <p class="txt1">Deportes</p>
                   <p class="txt2">Agendar Cita</p>
                 </button>
@@ -122,56 +175,60 @@
     </section>  
 </div>
 <!-- la parte de solicitud citas -->
-<div  class="container oculto" >
-  <p id="descrip-solicitarCitas">Seleccione la jornada y el funcionario que desea solicitar la cita.</p>
+<div class="container oculto">
+    <p id="descrip-solicitarCitas">Seleccione la jornada y el funcionario que desea solicitar la cita.</p>
     <form action="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php" method="post" id="formularioo" class="solicitarCita">
-      <input type="hidden" name="id_servicio"  id='id_servicio' value="">
-  
-      <h1>Solicitar Cita</h1>
-     
-     
-      
+        <input type="hidden" name="id_servicio" id="id_servicio" value="">
+
+        <h1>Solicitar Cita</h1>
+
         <p class="sub"><strong>Jornada:</strong></p>
+        <select name="jornada" class="select">
+            <option value="Diurna"> Diurna </option>
+            <option value="Mixta"> Mixta </option>
+        </select>
 
-      <select  name="jornada" class="select">
-        <option value="Diurna"> Diurna </option>
-        <option value="Mixta">Mixta</option>
+        <select name='usuario_f' class="funcionario">
+            <!-- Aquí deberías llenar dinámicamente los usuarios funcionarios -->
+        </select>
 
+        <p class="sub"><strong>Área:</strong></p>
+        <input type="text" name="nombre_servicio" disabled class="Nombre_Area">
 
-      </select> 
-
-      <select name='usuario_f' class="funcionario">
-    
-      </select>
-
-      <p class="sub"><strong>Área:</strong></p>
-      <input type="text" name="nombre_servicio" disabled class="Nombre_Area" >
-      
-
-      <div class="formulario">
-        <div class="formulario-contador">
-        <label for="descripcion"><strong>Descripción:</strong></label>
-        <p id="charCount">0/150</p>
+        <div class="formulario">
+            <div class="formulario-contador">
+                <label for="descripcion"><strong>Descripción:</strong></label>
+                <p id="charCount">0/150</p>
+            </div>
+            <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="150" placeholder="El límite de caracteres es de 150"></textarea>
         </div>
-        
-        <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="150" placeholder="El limite de caracteres es de 150"></textarea>
-      </div>
 
-      <div class="buttons">
-        <button class="button-servicio">Cerrar</button>
-        <button type='submit' class="button-servicio" id="btnEnviar">Enviar</button>
-      </div>
+        <div class="buttons">
+            <button type="button" class="button-servicio" id="btnCerrar">Cerrar</button>
+            <button type='submit' class="button-servicio" id="btnEnviar">Enviar</button>
+        </div>
     </form>
-  </div>
-  <!-- /* ventana emergente */ -->
-  <div class="alerta" id="alerta">
-        <div class="modalA">
-            <div class="barra"></div>
-            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-            <h1 class="tituloM">success</h1>
-            <p class="descripcionM">¡Solicitud enviada con éxito!</p>
-        </div>
+</div>
+
+<!-- Ventana emergente de éxito -->
+<div class="alerta" id="alerta">
+    <div class="modalA">
+        <div class="barra"></div>
+        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+        <h1 class="tituloM">success</h1>
+        <p class="descripcionM">¡Solicitud enviada con éxito!</p>
     </div>
+</div>
+
+<!-- Ventana emergente de error -->
+<div class="alerta" id="alerta2">
+    <div class="modalA">
+        <div class="barra"></div>
+        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+        <h1 class="tituloM">Error al pedir la cita</h1>
+        <p class="descripcionM">¡Sucedio un incoveniente!</p>
+    </div>
+</div>
 </main> 
 </div>
 

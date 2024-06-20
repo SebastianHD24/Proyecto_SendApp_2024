@@ -26,11 +26,26 @@
     border-radius: 8px; /* Bordes redondeados */
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-around;
     overflow: hidden ;
     overflow-x: auto;
     overflow-y: auto;
 
+}
+
+.table_div tr td button{
+    margin: 10px;
+    padding: 10px 2rem;
+    background-color: #39a900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1#titulo_citas {
+    text-align: center;
 }
 
 .table_div table{
@@ -71,6 +86,11 @@
     background-color: #00234d;
     color: white;
     border-radius: 12px ;
+}
+
+#tabla_titulos th {
+    border-radius: 10px 10px;
+    padding: 8px 6px 8px 6px;
 }
 thead{
     background-color: #00234d;
@@ -325,6 +345,10 @@ thead{
 }
 .rechazadasContent, .AsistidasContent, .NoAsistidasContent, .confirmarAsistencia h1{
     margin: 20px;
+    text-align: center;
+}
+
+#titulo_citas{
     text-align: center;
 }
 
