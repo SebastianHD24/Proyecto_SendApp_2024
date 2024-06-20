@@ -1,68 +1,71 @@
-<?php 
+<?php
 session_start(); // Asegúrate de iniciar la sesión
 include '../../../../Proyecto_SendApp_2024/bases/conexion.php'; // Conexión a la base de datos
 
 $conn = connection(); // Conexión a la base de datos
 
 if (!$conn) {
-    die("Error al conectar a la base de datos: " . mysqli_connect_error());
+    echo json_encode(['success' => 0, 'message' => 'Error al conectar a la base de datos']);
+    exit();
 }
 
-// Obtenemos el ID del servicio del formulario
+// Obtener el ID del servicio del formulario
 $id_servicio = isset($_POST['id_servicio']) ? intval($_POST['id_servicio']) : null;
-$usuario_f = isset($_POST['usuario_f']) ? intval($_POST['usuario_f']) : null;
-
 
 if ($id_servicio === null) {
-    die("Error: El campo 'id_servicio' es obligatorio.");
+    echo json_encode(['success' => 0, 'message' => 'Error: El campo \'id_servicio\' es obligatorio.']);
+    exit();
 }
 
-$documento_identidad = $_SESSION['documento_identidad']; // Obtener el documento de identidad del usuario
+// Consulta preparada para obtener el estado del servicio
+$sql = "SELECT estado_servicio FROM servicios WHERE id_servicio = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $id_servicio); // Evitar inyección SQL
+$stmt->execute();
+$query = $stmt->get_result();
 
-// Verificar que se haya proporcionado una descripción
-if (isset($_POST['descripcion']) && $_POST['descripcion'] !== "") {
-    $descripcion = $_POST['descripcion'];
+// Obtener el estado actual del servicio
+$estadoServicio = mysqli_fetch_array($query);
+$estado = $estadoServicio['estado_servicio'];
 
-    // Verificar que se haya proporcionado la jornada
-    if (isset($_POST['jornada']) && $_POST['jornada'] !== "") {
-        $jornada = $_POST['jornada'];
+// Verificar el estado del servicio
+if ($estado != 1) {
+    echo json_encode(['success' => 0, 'message' => 'Error: El estado del servicio no permite agendar citas en este momento.']);
+    exit();
+}
 
-        // Verificar que se haya proporcionado el usuario
-        if (isset($_POST['usuario_f']) && $_POST['usuario_f'] !== "") {
-            $usuario_f = $_POST['usuario_f'];
-            $estado = 'pendiente'; // Estado predeterminado para la cita
-            
-            // Uso de declaración preparada para evitar inyección SQL
-            $sql = "INSERT INTO citas (descripcion, documento_usuario, jornada, estado_cita, id_servicio, usuario_f) VALUES (?, ?, ?, ?, ?, ?)";
-            $stmt = mysqli_prepare($conn, $sql);
+// Obtener los demás datos del formulario
+$documento_identidad = $_SESSION['documento_identidad'];
+$jornada = isset($_POST['jornada']) ? $_POST['jornada'] : null;
+$descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : null;
+$usuario_f = isset($_POST['usuario_f']) ? $_POST['usuario_f'] : null;
 
-            if ($stmt) {
-                // Definir los tipos de datos para bind_param
-                mysqli_stmt_bind_param($stmt, 'sisssi', $descripcion, $documento_identidad, $jornada, $estado, $id_servicio, $usuario_f);
+if ($jornada === null || $descripcion === null || $usuario_f === null) {
+    echo json_encode(['success' => 0, 'message' => 'Error: Todos los campos son obligatorios.']);
+    exit();
+}
 
-                if (mysqli_stmt_execute($stmt)) {
-                    // Si la inserción es exitosa, redirigir al usuario a su sesión
-                    header('Location: ../../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php');
-                    exit(); // Terminar el script para evitar más procesamiento
-                } else {
-                    echo "Error al guardar datos: " . mysqli_stmt_error($stmt);
-                }
+$estado_cita = 'pendiente'; // Estado predeterminado para la cita
 
-                mysqli_stmt_close($stmt); // Cerrar el statement
-            } else {
-                echo "Error al preparar la declaración: " . mysqli_error($conn); // Manejo de errores de preparación
-            }
-        } else {
-            echo "Error: El campo 'usuario_f' es obligatorio.";
-        }
+// Uso de declaración preparada para evitar inyección SQL
+$sql_insert = "INSERT INTO citas (descripcion, documento_usuario, jornada, estado_cita, id_servicio, usuario_f) VALUES (?, ?, ?, ?, ?, ?)";
+$stmt_insert = mysqli_prepare($conn, $sql_insert);
+
+if ($stmt_insert) {
+    mysqli_stmt_bind_param($stmt_insert, 'ssssii', $descripcion, $documento_identidad, $jornada, $estado_cita, $id_servicio, $usuario_f);
+
+    if (mysqli_stmt_execute($stmt_insert)) {
+        mysqli_stmt_close($stmt_insert);
+        mysqli_close($conn);
+        echo json_encode(['success' => 1, 'message' => 'Cita guardada correctamente.']);
+        exit();
     } else {
-        echo "Error: El campo 'jornada' es obligatorio.";
+        echo json_encode(['success' => 0, 'message' => 'Error al guardar la cita: ' . mysqli_stmt_error($stmt_insert)]);
+        exit();
     }
 } else {
-    echo "Error: El campo 'descripcion' es obligatorio.";
-    header('Location: ../../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php');
+    echo json_encode(['success' => 0, 'message' => 'Error al preparar la declaración de inserción: ' . mysqli_error($conn)]);
+    exit();
 }
 
-mysqli_close($conn); // Cerrar la conexión a la base de datos
-
-?>
+mysqli_close($conn);

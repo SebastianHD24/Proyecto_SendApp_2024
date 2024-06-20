@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2024 a las 23:22:13
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Jun 20, 2024 at 06:34 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sendapp`
+-- Database: `sendapp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `citas`
+-- Table structure for table `citas`
 --
 
 CREATE TABLE `citas` (
@@ -43,7 +43,7 @@ CREATE TABLE `citas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `citas`
+-- Dumping data for table `citas`
 --
 
 INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuario`, `id_servicio`, `descripcion`, `jornada`, `usuario_f`, `justificacion_rechazo`, `confirmacion`, `justificacion_cancelacion`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `citas` (`id_cita`, `estado_cita`, `fecha`, `hora`, `documento_usuar
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pqr`
+-- Table structure for table `pqr`
 --
 
 CREATE TABLE `pqr` (
@@ -74,7 +74,7 @@ CREATE TABLE `pqr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `pqr`
+-- Dumping data for table `pqr`
 --
 
 INSERT INTO `pqr` (`id_peticion`, `documento_us`, `tipo_pqrs`, `descripcion`, `respuesta_pqrs`, `fecha_solicitud`, `fecha_respuesta`, `vista`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `pqr` (`id_peticion`, `documento_us`, `tipo_pqrs`, `descripcion`, `r
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `roles`
+-- Table structure for table `roles`
 --
 
 CREATE TABLE `roles` (
@@ -94,7 +94,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `roles`
+-- Dumping data for table `roles`
 --
 
 INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
@@ -105,35 +105,34 @@ INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `servicios`
+-- Table structure for table `servicios`
 --
 
 CREATE TABLE `servicios` (
   `id_servicio` int(2) NOT NULL COMMENT 'Identifica los servicos del sena',
   `nombre_servicio` char(40) NOT NULL COMMENT 'Es el  nombre de los servicios',
-  `admin_area` bigint(12) DEFAULT NULL COMMENT 'Identifica el admin del area',
   `estado_servicio` tinyint(1) NOT NULL COMMENT 'Muestra el estado de los servicios'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `servicios`
+-- Dumping data for table `servicios`
 --
 
-INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `admin_area`, `estado_servicio`) VALUES
-(1, 'Bienestar al aprendiz', NULL, 1),
-(2, 'Biblioteca', NULL, 1),
-(3, 'Psicologia', NULL, 1),
-(4, 'Fondo emprender', NULL, 1),
-(5, 'Relaciones Corporativas', NULL, 1),
-(6, 'Sennova', NULL, 1),
-(7, 'Servicios Tecnologicos', NULL, 1),
-(8, 'Fabrica software', NULL, 1),
-(9, 'Deportes', NULL, 1);
+INSERT INTO `servicios` (`id_servicio`, `nombre_servicio`, `estado_servicio`) VALUES
+(1, 'Bienestar al aprendiz', 1),
+(2, 'Biblioteca', 1),
+(3, 'Psicologia', 1),
+(4, 'Fondo emprender', 1),
+(5, 'Relaciones Corporativas', 1),
+(6, 'Sennova', 1),
+(7, 'Servicios Tecnologicos', 1),
+(8, 'Fabrica software', 1),
+(9, 'Deportes', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -153,7 +152,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `nombres`, `apellidos`, `correo`, `celular`, `programa`, `ficha`, `estado`, `id_rol`, `id_servicio`, `imagen`) VALUES
@@ -171,11 +170,11 @@ INSERT INTO `usuarios` (`tipo_documento`, `documento_identidad`, `contrasena`, `
 ('CC', 2222222222, '$2y$10$qSS45i8QegoU6aQ9asT7.utmrF9L.1SHp49VTehCyas5lY2506.Xy', 'Admin', 'superUser', 'admin@gmail.com', '2342342', '0', 0, 1, 1, NULL, NULL);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `citas`
+-- Indexes for table `citas`
 --
 ALTER TABLE `citas`
   ADD PRIMARY KEY (`id_cita`),
@@ -184,27 +183,26 @@ ALTER TABLE `citas`
   ADD KEY `usuario_f` (`usuario_f`);
 
 --
--- Indices de la tabla `pqr`
+-- Indexes for table `pqr`
 --
 ALTER TABLE `pqr`
   ADD PRIMARY KEY (`id_peticion`),
   ADD KEY `documento_us` (`documento_us`);
 
 --
--- Indices de la tabla `roles`
+-- Indexes for table `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id_rol`);
 
 --
--- Indices de la tabla `servicios`
+-- Indexes for table `servicios`
 --
 ALTER TABLE `servicios`
-  ADD PRIMARY KEY (`id_servicio`),
-  ADD KEY `admin_area` (`admin_area`);
+  ADD PRIMARY KEY (`id_servicio`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`documento_identidad`),
@@ -213,39 +211,39 @@ ALTER TABLE `usuarios`
   ADD KEY `id_rol` (`id_rol`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `citas`
+-- AUTO_INCREMENT for table `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifica la id de la cita', AUTO_INCREMENT=11;
+  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifica la id de la cita', AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT de la tabla `pqr`
+-- AUTO_INCREMENT for table `pqr`
 --
 ALTER TABLE `pqr`
   MODIFY `id_peticion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `roles`
+-- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id_rol` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Visualiza el rol', AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `servicios`
+-- AUTO_INCREMENT for table `servicios`
 --
 ALTER TABLE `servicios`
   MODIFY `id_servicio` int(2) NOT NULL AUTO_INCREMENT COMMENT 'Identifica los servicos del sena', AUTO_INCREMENT=10;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `citas`
+-- Constraints for table `citas`
 --
 ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE,
@@ -253,19 +251,13 @@ ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_5` FOREIGN KEY (`usuario_f`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `pqr`
+-- Constraints for table `pqr`
 --
 ALTER TABLE `pqr`
   ADD CONSTRAINT `pqr_ibfk_1` FOREIGN KEY (`documento_us`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `servicios`
---
-ALTER TABLE `servicios`
-  ADD CONSTRAINT `servicios_ibfk_1` FOREIGN KEY (`admin_area`) REFERENCES `usuarios` (`documento_identidad`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `usuarios`
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON UPDATE CASCADE,
