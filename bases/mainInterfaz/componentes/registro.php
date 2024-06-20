@@ -17,9 +17,11 @@
 
 <form id="registerForm" action="../../../../Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php" class="form-login form2" method="post"> 
     <?php if (isset($_SESSION['documento_identidad'])): ?>
-        <button class="btn_accounts">
-            <a class="btn" href="?p=created-acounts">Cuentas Creadas</a>
-        </button>  
+        <a class="btn exit-icon" href="?p=created-acounts">
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/cerrarsesion.png" alt="Salir" class="exit-image">
+            <span class="tooltip">Salir</span>
+        </a>
+
          
     <?php endif ?> 
     <!-- <div class="logo_titulo">

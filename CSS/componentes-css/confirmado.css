@@ -196,6 +196,41 @@
     background-color: #00234d;
 }
 
+
+/*los mismo pero con un 1 en todo*/
+.contenedor_descripcion1{
+    border: 5px solid var(--azul);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
+    width: 60%;
+    flex-direction: column;
+}
+.contenedor_descripcion1 h1{
+    text-align: center;
+}
+.contenedor_descripcion1 p{
+    text-align: center;
+    margin-top: 1rem;
+}
+.contenedor_descripcion1 .button11{
+    background-color: #39a900;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    width: 20%;
+    cursor: pointer;
+    height: 25px;
+}
+.contenedor_descripcion1 .button11:hover{
+    background-color: #00234d;
+}
+.Noti-cerrar1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
 /*Respuestas*/
 .contenedor_respuesta{
     border: 5px solid var(--azul);

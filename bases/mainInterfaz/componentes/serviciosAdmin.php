@@ -37,10 +37,10 @@
                         <p class="datos__parrafo" id="nombreServicio">
                         <?= $servicios['nombre_servicio'] ?>
                         </p>
-                </article>
+                
 
                 <!-- Articúlo 2 con el contenido del estado del servcio -->
-                <article class="estado__servicio">
+                
                     <h3 class="nombre__campo-subtitulo">Estado Del Servicio</h3>
                         <p class="datos__parrafo" id="nombreServicio">
                             <?php
