@@ -123,7 +123,9 @@
     <div class="contenedor_respuesta" id="contenedor_respuestaH" style="display: none;">
         <h1>Respuesta</h1>
         <p id="respuesta"></p>
-        <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
+        <div class="Boton-noti-respuesta">
+            <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
+        </div>
     </div>
 </div>
 </main> 
