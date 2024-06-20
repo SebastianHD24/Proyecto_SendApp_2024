@@ -163,7 +163,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 
 <div class="rechazadasContent oculto">
-    <h1 id="titulo_citas"> Citas Rechazadas</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-rechazadas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
@@ -175,7 +174,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 
 <div class="AsistidasContent oculto"  >
-    <h1 id="titulo_citas">Citas Asistidas</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-asistidas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
@@ -188,7 +186,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 
 <div class="NoAsistidasContent oculto">
-    <h1 id="titulo_citas">Citas que no asistieron</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-noAsistidas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
@@ -200,7 +197,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
     
 <div class="confirmarAsistencia oculto">
-    <h1 id="titulo_citas">Confirmar Citas</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-confirmarCitas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->

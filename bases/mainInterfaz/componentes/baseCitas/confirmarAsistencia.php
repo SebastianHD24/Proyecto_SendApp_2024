@@ -1,4 +1,5 @@
 <div class="table_div" id="table_div">
+    <h1 id="titulo_citas">Confirmar Citas</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">

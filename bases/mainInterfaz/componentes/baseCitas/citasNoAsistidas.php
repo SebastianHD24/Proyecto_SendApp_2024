@@ -1,4 +1,5 @@
 <div class="table_div" >
+    <h1 id="titulo_citas">Citas que no asistieron</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">
