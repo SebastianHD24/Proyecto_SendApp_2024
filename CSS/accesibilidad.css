@@ -44,7 +44,9 @@ body.dark .logo{
     margin: 0;
     padding: 0;
 }
-
+.dark .titulo{
+    color: #39a900;
+}
 
 .acesibilidad label .fa-solid{
     color: white;

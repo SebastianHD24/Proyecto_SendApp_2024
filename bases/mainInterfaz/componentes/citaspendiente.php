@@ -52,7 +52,6 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 </div>
 <!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
 
-
 <div class="table_div" id="table_div">
     <h1 id="titulo_citas"> Citas Pendientes</h1>
     <table>
@@ -149,23 +148,23 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 
 <div class="rechazadasContent oculto">
+    <h1 id="titulo_citas"> Citas Rechazadas</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-rechazadas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas"> Citas Rechazadas</h1>
     <?php include (__DIR__ .'/baseCitas/citasRechazadas.php'); ?>
 </div>
 <div class="AsistidasContent oculto"  >
+    <h1 id="titulo_citas">Citas Asistidas</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-asistidas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas">Citas Asistidas</h1>
     <?php  include (__DIR__ .'/baseCitas/citasAsistidas.php'); ?>
     
 </div>
@@ -173,25 +172,25 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 
 <div class="NoAsistidasContent oculto">
+    <h1 id="titulo_citas">Citas que no asistieron</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-noAsistidas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas">Citas que no asistieron</h1>
     <?php include (__DIR__ .'/baseCitas/citasNoAsistidas.php'); ?>       
 </div>
 
     
 <div class="confirmarAsistencia oculto">
+    <h1 id="titulo_citas">Confirmar Citas</h1>
     <div class="dating-finder">
         <form method="GET" class="search-quotes">
             <input type="text" name="search-confirmarCitas" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
             <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
         </form>
     </div>
-    <h1 id="titulo_citas">Confirmar Citas</h1>
     <?php include (__DIR__ .'/baseCitas/confirmarAsistencia.php'); ?>
 </div>
 
