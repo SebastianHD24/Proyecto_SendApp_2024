@@ -1,8 +1,8 @@
 <!------------------------Titulo de los servicios------------------------->
-<h1 class="tituloDeInicioH1">Lista de Servicios</h1>
+<h1 class="tituloDeInicioH1" id="titulo">Lista de Servicios</h1>
 
 <!-----------------------Parrafo descriptivo del inicio de servicios-->
-<article class="articuloContenedorDeParrafos">
+<article class="articuloContenedorDeParrafos" id="texto" >
     <p>Bienvenido a la sección de servicios, aquí podrás cambiar los administradores de cada área, consultar sus datos personales y cambiar el estado del servicio de <b>Activo o Inactivo</b></p>
 </article>
 
