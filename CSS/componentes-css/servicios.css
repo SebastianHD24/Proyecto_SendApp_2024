@@ -1,24 +1,13 @@
-/*Creando varibles de colores*/
+/* Variables de colores */
 :root {
     --verde: #39a900;
-    --blanco: #fff;
-    --negro: #070001;
     --azul: #00324D;
     --azul-claro: #82DEF0;
     --gris-oscuro: #cfcfcf;
     --gris-claro: #ededed;
-    --fuent-principal: 'Work Sans', sans-serif;
 }
 
-/*Estilos especificos solo para esta sección en especifico de la tabla*/
-/* main{
-    padding: 1.3rem;
-} */
-.solicitarCita h1 {
-    text-align: center;
-}
-
-/*Título h1 de inicio*/
+/* Estilos para el título h1 de inicio */
 .tituloDeInicioH1 {
     font-size: 1.4rem;
     color: var(--azul);
@@ -26,7 +15,7 @@
     padding: 1.5rem;
 }
 
-/*Sección introductoria del inicio*/
+/* Estilos para el contenedor de párrafos */
 .articuloContenedorDeParrafos {
     width: 100%;
     padding: 1.5rem;
@@ -40,72 +29,55 @@
     color: var(--verde);
 }
 
-/*Estilos de la tabla de información*/
+/* Estilos para la tabla de servicios */
 .tablaServicios {
     width: 100%;
     display: grid;
-    /* border: 1px solid var(--negro); */
     border-radius: .8rem;
 }
 
-/*Contenedor de la imagen dentro de la tabla*/
-.tablaServicios .contenedor__imagen-inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-/*Logo dentro de la tabla*/
-.tablaServicios .contenedor__imagen-inicio img {
-    width: 150px;
-}
-
-/*Contenedor de secciones con los datos GRID*/
+/* Estilos para el grid de datos */
 .tabla__datos-grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: auto;
-    justify-items: center;
     gap: 1.2rem;
     padding: 1rem;
 }
 
+/* Estilos para la sección de información de servicios */
 .seccion_informacion_servicios {
     width: 100%;
     display: grid;
-    /* border: 2px solid var(--azul); */
     border-radius: 12px;
     padding: 1.3rem;
 }
 
-/*Ajustando el espaciado de los elementos dentro de la sección*/
 .seccion_informacion_servicios article {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: auto;
     gap: 20px;
     padding: 1.5rem;
     border: 1.5px var(--azul) solid;
+    border-radius: 20px;
 }
 
-/*Subtitlo H3 dentro de las secciones*/
+/* Estilos para el subtítulo H3 dentro de las secciones */
 .nombre__campo-subtitulo {
     font-size: 1.1rem;
     color: var(--azul);
 }
 
-/*Parrafos que contienen los datos extraidos de la BD*/
+/* Estilos para los párrafos de datos */
 .datos__parrafo {
     font-style: italic;
     font-weight: 600;
     padding: 0;
 }
 
-/*Botones dentro de cada artículo*/
-.seccion_informacion_servicios article>button {
+/* Estilos para los botones dentro de cada artículo */
+.seccion_informacion_servicios article > button {
     font-family: 'Work Sans', sans-serif;
     height: 35px;
     letter-spacing: 1px;
@@ -115,78 +87,13 @@
     border-radius: 12px;
     border: 1px solid #00234D;
     font-weight: 600;
-    cursor: pointer;
 }
-.seccion_informacion_servicios article>button:hover{
+
+.seccion_informacion_servicios article > button:hover {
     background-color: #00234D;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-}
-
-#descrip-solicitarCitas {
-    padding: 5px 0px 20px 0px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.solicitarCita {
-    border: 5px solid var(--azul);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
-    width: 60%;
-}
-
-/*Select dentro de cada artículo*/
-.seccion_informacion_servicios article select {
-    font-family: 'Work Sans', sans-serif;
-    cursor: pointer;
-    height: 30px;
-    border-radius: 12px;
-    background-color: var(--gris-claro);
-    margin: 0;
-}
-
-.select {
-    width: 100%;
-    height: 30px;
-    background-color: var(--gris-oscuro);
-    border-radius: 5px;
-    border: none;
-    margin: 10px 0px 0px 0px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.select option {
-    width: 100px;
-    font-size: .9rem;
-}
-
-.funcionario {
-    width: 100%;
-    height: 30px;
-    background-color: var(--gris-oscuro);
-    border-radius: 5px;
-    border: none;
-    margin: 10px 0px 0px 0px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.funcionario option {
-    width: 100px;
-    font-size: .9rem;
-}
-
-/*Contenedor con la informaciión del Aadministrador*/
+/* Estilos para el pop-up */
 .popUp {
     background-color: var(--gris-claro);
     width: 75%;
@@ -199,11 +106,11 @@
     padding: 20px 0;
     border: 1px solid var(--verde);
     border-radius: 18px 0 18px 0;
-    background: rgb(0, 50, 77);
+    background: rgb(0, 50, 77); /* Fallback */
     background: linear-gradient(270deg, rgba(0, 50, 77, 1) 0%, rgba(255, 244, 221, 1) 100%);
 }
 
-/*Contenedor secundario con el efecto de blur*/
+/* Estilos para el contenedor de información */
 .contenedor_informacion {
     width: 90%;
     height: 100%;
@@ -213,14 +120,11 @@
     align-items: center;
     flex-direction: column;
     background: #fafafa10;
-    /* border: 1px solid rgb(177, 199, 177); */
     padding: 5px 0;
     border-radius: 18px 0 18px 0;
-    /* backdrop-filter: blur(0.2rem);
-    -webkit-backdrop-filter: blur(0.2rem); */
 }
 
-/*Tabla de información*/
+/* Estilos para la tabla de administración */
 .tablaAdmin {
     width: 100%;
     display: flex;
@@ -233,7 +137,6 @@
     padding: 0 5px;
 }
 
-/*Nombre de las columnas dentro de la talba*/
 .tablaAdmin thead tr {
     display: flex;
     width: 100%;
@@ -241,7 +144,6 @@
     gap: 20px;
 }
 
-/*Nombre de loas columnas dentro de la talba*/
 .tablaAdmin tbody tr {
     display: flex;
     width: 100%;
@@ -250,12 +152,12 @@
     color: var(--blanco);
 }
 
-/*Estilos del mensaje oculto en caso de no encontrar la información de un admin*/
+/* Estilos para el mensaje de administrador oculto */
 .mensajeAdmin {
     margin: 25px;
 }
 
-/*Boton dentro del pop-up*/
+/* Estilos para el botón de cerrar */
 .cerrar {
     width: 100px;
     height: 30px;
@@ -266,10 +168,9 @@
     cursor: pointer;
 }
 
-/*Efecto de mouse por encima*/
 .cerrar:hover {
     transform: scale(1.1);
-    background: rgb(0, 50, 77);
+    background: rgb(0, 50, 77); /* Fallback */
     background: linear-gradient(270deg, rgba(0, 50, 77, 1) 0%, rgba(255, 244, 221, 1) 100%);
     color: var(--blanco);
     letter-spacing: 1px;
@@ -277,8 +178,7 @@
     transition: all 250ms ease-in-out;
 }
 
-/*Estilos de la ventana emergente previa para confimar de manera definitiva los cambios o no confirmalos*/
-/*Contenedor principal*/
+/* Estilos para el fondo del pop-up */
 .fondoPopUp {
     width: 75%;
     display: flex;
@@ -290,11 +190,11 @@
     padding: 20px 0;
     border: 1px solid var(--verde);
     border-radius: 18px 0 18px 0;
-    background: rgb(0, 50, 77);
+    background: rgb(0, 50, 77); /* Fallback */
     color: #ffffff;
 }
 
-/*Segundo contenedor con la información y los botones*/
+/* Estilos para la sección segura del pop-up */
 .popUpSeguro {
     width: 90%;
     height: 100%;
@@ -308,68 +208,8 @@
     border-radius: 18px 0 18px 0;
 }
 
-.descripcion-servicio {
-    padding: 10px;
-    font-family: 'Work sans' sans-serif;
-    font-size: 1rem;
-}
-
-.sub {
-    font-family: 'Work sans' sans-serif;
-    margin-top: 10px;
-}
-
-.Nombre_Area {
-    font-family: 'Work sans' sans-serif;
-    border-radius: 5px;
-    border: 1px solid var(--azul);
-    padding: 7px;
-    width: 100%;
-    text-align: center;
-    color: var(--negro);
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.formulario-contador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 2px 0px 1px;
-}
-
-.formulario-area-nombre-funcionario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 10px;
-}
-
-.button-servicio {
-    font-family: 'Work sans' sans-serif;
-    margin: 10px;
-    padding: 10px 2rem;
-    background-color: #39a900;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button-servicio:hover {
-    background-color: #00234D;
-}
-
-#botones>button {
+/* Estilos para los botones dentro de #botones */
+#botones > button {
     width: 100px;
     height: 30px;
     border: none;
@@ -389,14 +229,14 @@
     transition: all 250ms ease-in-out;
 }
 
-/*Responsive*/
+/* Media queries para responsividad */
 @media screen and (min-width: 1100px) and (max-width: 1440px) {
     .tabla__datos-grid {
         grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
     }
 }
 
-@media screen and (min-width: 1441px) and (max-width:2560px) {
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
     .tabla__datos-grid {
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
