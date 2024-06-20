@@ -39,7 +39,7 @@ function submitAcceptanceForm(id) {
 function submitCancellationForm(id) {
     // Bloquear todos los botones
     blockAllButtons(id);
-
+    const alerta = document.getElementById('alerta');
     var justificacion = document.getElementById('justificacion_cancelacion_' + id).value;
 
     fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/cancelarcita.php', {
@@ -51,7 +51,10 @@ function submitCancellationForm(id) {
     })
     .then(function(response) {
         if (response.ok) {
-            window.location.reload();
+            alerta.style.display = 'flex';
+            setTimeout(function() {
+                window.location.reload(); // Recargar la página
+            }, 2000);
         } else {
             console.log('Error al cancelar la cita');
         }
@@ -64,7 +67,7 @@ function submitCancellationForm(id) {
 // Función para enviar el formulario de rechazo
 function submitRejectionForm(id) {
     var justificacion = document.getElementById('justificacion_' + id).value;
-
+    const alerta = document.getElementById('alerta');
     fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/rechazarcita.php', {
         method: 'POST',
         headers: {
@@ -74,7 +77,11 @@ function submitRejectionForm(id) {
     })
     .then(function(response) {
         if (response.ok) {
-            window.location.reload();
+            alerta.style.display = 'flex';
+            setTimeout(function() {
+                window.location.reload(); // Recargar la página
+            }, 2000);
+            
         } else {
             console.log('Error al enviar el formulario');
         }

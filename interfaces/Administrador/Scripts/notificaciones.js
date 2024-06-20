@@ -347,6 +347,7 @@ function verResponderH(idPeticion) {
 
     contenedorSin.style.display = "none";
     contenedorRespuestaH.style.display = "block";
+    salir.style.display = "none";
 
     fetch(`../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarRespuesta.php?id=${idPeticion}`)
         .then(response => response.json())

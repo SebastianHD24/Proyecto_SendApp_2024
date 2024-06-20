@@ -165,7 +165,6 @@ select{
     padding: 10px;
     text-decoration: none;
     color: #000;
-    margin-left: 50%;
 
 }
 
@@ -177,7 +176,7 @@ select{
 .exit-icon .tooltip {
     visibility: hidden;
     width: 50px;
-    background-color: #b6b5b5;
+    background-color: #413f3f;
     color: #fff;
     text-align: center;
     border-radius: 6px;
