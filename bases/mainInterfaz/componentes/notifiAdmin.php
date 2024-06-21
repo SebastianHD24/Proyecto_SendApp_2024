@@ -127,7 +127,7 @@
             <button class="button2" onclick="cerrarSimpleR();">Cerrar</button>
         </div>
     </div>
-</div>
+</div>  
 </main> 
 </div>
 <script src="../../../../Proyecto_SendApp_2024/interfaces/Administrador/Scripts/notificaciones.js"></script>
