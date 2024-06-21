@@ -133,20 +133,18 @@ body{
 .date{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     padding: 20px 0 20px 0;
-    gap: 5px;
 }
 
 .date article:last-child{
     display: flex;
-    justify-content: flex-end;
     color: #39a900;
 }
 
 .date article h1{
     color: #00324d;
     font-size: 1.5rem;
+
 }
 
 .text p{
@@ -241,6 +239,7 @@ body{
     .answer__container{
         width: 485px;
     }
+
 }
 
 /*Laptos FHD */
@@ -281,6 +280,7 @@ body{
         height: 40px;
         font-size: 1.3rem;
     }
+
 }
 
 /*Pantallas 2k */
@@ -395,5 +395,6 @@ body{
         width: 200px;
         height: 60px;
     }
+
 
 }
