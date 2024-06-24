@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Evitar que el formulario se envíe automáticamente
         
         const formData = new FormData(form); // Obtener los datos del formulario
-        const newUrl = 'http://localhost/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
+        const newUrl = 'https://sendapp.com.co/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
         
         fetch('../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/mandar.php', {
             method: 'POST',

@@ -1,4 +1,12 @@
             <!-- Contenedor del formulario de los datos de su cuenta -->
+             <?php
+                $documentos = [
+                    'CC' => 'Cédula de Ciudadanía', 
+                    'TI' => 'Tarjeta de Identidad', 
+                    'DE' => 'Documento Extranjero'
+                ];
+                $tipo = $row_user['tipo_documento'];
+             ?>
             <div class="container" id="formularioPrincipal">
                 <!-- Segundo contenedor del formulario de los datos de su cuenta -->
                 <div class="second-container">
@@ -12,10 +20,38 @@
                     <form method="POST" class="login__form datos_cuenta">
                         <div class="main-form">
                             <div class="first-section">
+                                <label for="form_input" class="form_input">Tipo de documento:</label>
+                                <?php if ($id_rol != 1): 
+                                    // Definir los tipos de documentos y obtener el tipo del usuario
+                                ?>
+                                    <input type="text" name="tipo" class="edit_input" value="<?= $documentos[$tipo] ?>" disabled placeholder="Tipo de documento">
+                                <?php elseif ($id_rol == 1): ?>
+                                    <select id="tipo_documento" name="tipo_documento" class="edit_input">
+                                        <?php foreach($documentos as $acronimo => $palabra): ?>
+                                            <option value="<?= $acronimo ?>" <?= $acronimo == $tipo ? 'selected' : '' ?>>
+                                                <?= $palabra ?> <?= $acronimo == $tipo ? '(Actual)' : '' ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                <?php endif; ?>
                                 <label for="form_input" class="form_input">Documento Identidad:</label>
-                                <input type="text" name="documento_identidad" class="edit_input" value="<?= $row_user['documento_identidad']?>" disabled placeholder="Documento que lo identifica">
+                                <input type="text" name="documento_identidad" class="edit_input" value="<?= $row_user['documento_identidad']?>"
+                                <?php if ($id_rol != 1): ?>
+                                    disabled
+                                <?php endif; ?>
+                                placeholder="Documento que lo identifica" id="documento">
                                 <label for="form_input" class="form_input">Nombre:</label>
-                                <input type="text" name="nombres" class="edit_input" value="<?= $row_user['nombres']?>" disabled placeholder="Su 'nombre'">
+                                <input type="text" name="nombres" class="edit_input" value="<?= $row_user['nombres']?>"
+                                <?php if ($id_rol != 1): ?>
+                                    disabled
+                                <?php endif; ?>
+                                placeholder="Su 'nombre'" id="nombre">
+                                <label for="form_input" class="form_input">Apellidos:</label>
+                                <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>"
+                                <?php if ($id_rol != 1): ?>
+                                    disabled
+                                <?php endif; ?>
+                                placeholder="Su(s) 'apellido(s)'" id="apellidos">
                                 <span class="inputCorreo oculto"></span>
                                 <label for="form_input" class="form_input">Correo Electrónico:</label>
                                 <input type="email" name="correo" class="edit_input" value="<?= $row_user['correo']?>" id="correo" required placeholder="Correo electronico para contactarlo">
@@ -54,8 +90,6 @@
                                     <input type="text" name="programa" class="edit_input" value="<?= $programa?>" disabled placeholder="Programa en el que estudia">   
                                     <label for="form_input" class="form_input">Ficha:</label>
                                     <input type="text" name="ficha" class="edit_input" value="<?= $ficha?>" disabled placeholder="Ficha a la que pertenece">
-                                    <label for="form_input" class="form_input">Apellidos:</label>
-                                    <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
                                     <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>     
                                 <?php endif; ?>
                                 <?php
@@ -132,11 +166,16 @@
                 <div class="modalA">
                     <div class="barra"></div>
                     <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                    <h1 class="tituloM">success</h1>
+                    <h1 class="tituloM"></h1>
                     <p class="descripcionM">¡Actualización exitosa!</p>
                 </div>
             </div>
 
         </main> 
     </div>
-<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/formPerfiles.js"></script> 
+<?php if ($id_rol != 1): ?>
+    <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/formPerfiles.js"></script>
+<?php else: ?>
+    <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/perfilAdmin.js"></script>
+<?php endif; ?>
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/contraseña.js"></script>  

@@ -54,7 +54,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 <div class="table_div" id="table_div">
     <h1 id="titulo_citas"> Citas Pendientes</h1>
-    <table>
+    <table class="tableCitasPendientes">
         <thead>
             <tr id="tabla_titulos">
                 <th class="th_header">Documento de Identidad</th>
@@ -129,7 +129,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
                                                 <div class="modalA">
                                                     <div class="barra"></div>
                                                     <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                                                    <h1 class="tituloM">success</h1>
+                                                    <h1 class="tituloM"></h1>
                                                     <p class="descripcionM">Cita Rechazada correctamente</p>
                                                 </div>
                                             </div>

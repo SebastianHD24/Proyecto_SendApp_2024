@@ -1,0 +1,14 @@
+[23-Jun-2024 23:09:22 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(citas.documento_usuario LIKE 'AAAAAA%'  OR usuarios.nombres LIKE 'AAAAAA%' O...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/baseCitas/citasNoAsistidas.php:36
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/baseCitas/citasNoAsistidas.php(36): mysqli_query()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/citaspendiente.php(205): include('/home/sendappc/...')
+#2 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php(18): require_once('/home/sendappc/...')
+#3 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/baseCitas/citasNoAsistidas.php on line 36
+[24-Jun-2024 09:09:05 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(citas.documento_usuario LIKE 'sebastian%'  OR usuarios.nombres LIKE 'sebasti...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/baseCitas/citasNoAsistidas.php:36
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/baseCitas/citasNoAsistidas.php(36): mysqli_query()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/citaspendiente.php(205): include('/home/sendappc/...')
+#2 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php(18): require_once('/home/sendappc/...')
+#3 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/baseCitas/citasNoAsistidas.php on line 36

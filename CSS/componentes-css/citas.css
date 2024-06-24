@@ -135,9 +135,8 @@ table.appointment {
 }
 
 .popup-justificacion {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    margin-left: 580px;
+    margin-top: 270px;
     transform: translate(-50%, -50%);
     width: 80%; /* Ajustable según necesidad */
     max-width: 500px; /* Ajustable según necesidad */
@@ -155,7 +154,6 @@ table.appointment {
 #contenedorm-descripcion {
     width: 100%;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -207,6 +205,111 @@ table.appointment {
 /* Responsividad */
 
 /* Laptops FHD */
+@media screen and (min-width: 320px) {
+
+    .popup-justificacion {
+        margin-left: 135px;
+        margin-top: 330px;
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
+    }
+
+    #justificacion-Noasistencia-15 {
+        width: 200%;
+    }
+    #contenedorm-descripcion {
+        width: 38%;
+        height: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 375px) {
+
+    .popup-justificacion {
+        margin-left: 155px;
+        margin-top: 350px;
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
+    }
+
+    #justificacion-Noasistencia-15 {
+        width: 200%;
+    }
+    #contenedorm-descripcion {
+        width: 30%;
+        height: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 425px) {
+
+    .popup-justificacion {
+        margin-left: 180px;
+        margin-top: 370px;
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
+    }
+
+    #justificacion-Noasistencia-15 {
+        width: 200%;
+    }
+    #contenedorm-descripcion {
+        width: 30%;
+        height: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    .notifications-panel {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .notifications p {
+        font-size: 1.2rem;
+    }
+    .popup-justificacion {
+        margin-left: 340px;
+        margin-top: 330px;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
+    }
+}
 @media screen and (min-width: 1024px) {
     .notifications-panel {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -214,6 +317,22 @@ table.appointment {
 
     .notifications p {
         font-size: 1.2rem;
+    }
+    .popup-justificacion {
+        margin-left: 370px;
+        margin-top: 270px;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
     }
 }
 
@@ -226,45 +345,49 @@ table.appointment {
     .notifications p {
         font-size: 1.4rem;
     }
+
+    .popup-justificacion {
+        margin-left: 640px;
+        margin-top: 270px;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
+    }
 }
 
 /* 4k Screens */
 @media screen and (min-width: 2560px) {
-    .notifications-panel {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 120px;
-    }
-
     .notifications {
         width: 100%;
     }
 
     .notifications p {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
-    .notifications figure img {
-        width: 75px;
-    }
-}
-
-/* Responsividad para pantallas más pequeñas */
-@media screen and (max-width: 600px) {
-    .appointment_th th, .appointment_td td {
-        font-size: 0.9rem;
-        padding: 4px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .appointment_th th, .appointment_td td {
-        font-size: 0.8rem;
-        padding: 2px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .notifications-panel {
-        max-width: 70vw;
+    .popup-justificacion {
+        margin-left: 950px;
+        margin-top: 270px;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Ajustable según necesidad */
+        max-width: 500px; /* Ajustable según necesidad */
+        color: black;
+        height: auto;
+        max-height: 80%; /* Ajustable según necesidad */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: auto; /* Para manejar contenido extenso */
     }
 }

@@ -78,7 +78,9 @@
             <div class="content__parrafos-links">
                 <div class="p__container">
                     <article>
-                        <img src="Inicio/Img-home/Section-Img/logo-verde.png " alt="Icono De Areas">
+
+                    <!-- Inicio/Img-home/Section-Img/logo-verde.png -->
+                        <img src="Inicio/Img-home/Section-Img/extracurricular-activities_14189558.png" alt="Icono De Areas">
                     </article>                         
                     <p>
                         En el menú de navagación en el apartado de <b><a href="Areas/Areas.php">Áreas</a></b> puedes encontrar la información referente a cada una de las áreas y sus respectivos servicios.</br>Ten en cuenta que algunos de estos servicios solo estan disponibles para las personas en calidad de <b>Aprendíz Sena.</b>
@@ -124,7 +126,7 @@
                 <img src="./Inicio/Img-home/Section-Img/escudo.png" alt="Escudo Sena">
             </div>
             <div class="section-logosimbolo">
-                <img src="./Inicio/Img-home/LogosSena-Img/logoSenaVerde2.png" alt="Logo Sena" id="logo-sena-conostros">
+                <img src="./Inicio/Img-home/Section-Img/logoSenaVerde2.png" alt="Logo Sena" id="logo-sena-conostros">
                 <div class="logosimbolo">
                     <h1>Logosímbolo</h1>
                     <p>

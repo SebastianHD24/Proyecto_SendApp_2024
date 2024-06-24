@@ -215,7 +215,7 @@ $stmt->close();
     <div class="modalA">
         <div class="barra"></div>
         <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-        <h1 class="tituloM">success</h1>
+        <h1 class="tituloM"></h1>
         <p class="descripcionM">¡Solicitud enviada con éxito!</p>
     </div>
 </div>

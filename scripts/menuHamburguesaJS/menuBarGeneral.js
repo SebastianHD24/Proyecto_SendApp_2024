@@ -1,35 +1,28 @@
-//Cambiar color de la tarjeta
-function cambiarColor(btn){
-    let tarjeta = btn.closest('.tarjeta');
-    tarjeta.classList.toggle("cambio");
-}
-
-//para expandir
 document.addEventListener("DOMContentLoaded", function() {
-    let BotonLeerMas = document.querySelectorAll('.leerMas');
-    let BotonLeerMenos = document.querySelectorAll('.leerMenos');
+    let botonesLeerMas = document.querySelectorAll('.leerMas');
+    let botonesLeerMenos = document.querySelectorAll('.leerMenos');
 
-    BotonLeerMas.forEach(function(button, index) {
-        button.addEventListener('click', function(event) {
+    botonesLeerMas.forEach(function(botonLeerMas) {
+        botonLeerMas.addEventListener('click', function(event) {
             event.preventDefault();
-            let expandirContenido = this.nextElementSibling;
-            let botonLeerMenos = BotonLeerMenos[index];
+            let contenidoExpandido = this.nextElementSibling;
+            let botonLeerMenos = contenidoExpandido.nextElementSibling;
 
-            expandirContenido.style.display = 'block';
-            botonLeerMenos.style.display = 'inline';
-            this.style.display = 'none'; 
+            contenidoExpandido.classList.add('expandido');
+            botonLeerMenos.classList.add('visible');
+            this.classList.remove('visible');
         });
     });
-//Para contraer
-     BotonLeerMenos.forEach(function(button) {
-          button.addEventListener('click', function(event) {
-              event.preventDefault();
-              let ContraerCintenido = this.previousElementSibling;
-              let botonLeerMas = ContraerCintenido.previousElementSibling;
 
-              ContraerCintenido.style.display = 'none';
-              botonLeerMas.style.display = 'inline'; 
-              this.style.display = 'none'; 
-          });
-      });
- });
+    botonesLeerMenos.forEach(function(botonLeerMenos) {
+        botonLeerMenos.addEventListener('click', function(event) {
+            event.preventDefault();
+            let contenidoExpandido = this.previousElementSibling;
+            let botonLeerMas = contenidoExpandido.previousElementSibling;
+
+            contenidoExpandido.classList.remove('expandido');
+            botonLeerMas.classList.add('visible');
+            this.classList.remove('visible');
+        });
+    });
+});

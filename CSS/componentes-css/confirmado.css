@@ -173,7 +173,7 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 3);
-    width: 60%;
+    width: 100%;
     flex-direction: column;
 }
 .contenedor_descripcion h1{
@@ -377,7 +377,7 @@
           display: flex;
           width: 80%;
           overflow-x: auto;
-          scrollbar-width: none;
+          
 
       }
       .sin-responder{
@@ -397,7 +397,7 @@
     .contenedor-popup{
         display: flex;
         overflow-x: auto;
-        scrollbar-width: none;
+        
     }
     .sin-responder{
         margin-right: -19rem;

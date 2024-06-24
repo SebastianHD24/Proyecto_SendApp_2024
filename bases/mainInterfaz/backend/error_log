@@ -1,0 +1,18 @@
+[24-Jun-2024 08:00:24 America/Bogota] PHP Warning:  Undefined array key "documento_identidad" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 38
+[24-Jun-2024 08:00:24 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'documento_usuario' cannot be null in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php:57
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php(57): mysqli_stmt_execute()
+#1 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 57
+[24-Jun-2024 08:00:31 America/Bogota] PHP Warning:  Undefined array key "documento_identidad" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 38
+[24-Jun-2024 08:00:31 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'documento_usuario' cannot be null in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php:57
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php(57): mysqli_stmt_execute()
+#1 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 57
+[24-Jun-2024 08:00:35 America/Bogota] PHP Warning:  Undefined array key "documento_identidad" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 38
+[24-Jun-2024 08:00:35 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'documento_usuario' cannot be null in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php:57
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php(57): mysqli_stmt_execute()
+#1 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 57

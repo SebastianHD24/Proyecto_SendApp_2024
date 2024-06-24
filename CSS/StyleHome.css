@@ -444,6 +444,7 @@ body{
 @media (max-width: 768px) {
     .contenedor {
         grid-template-columns: 1fr;
+        
     }
 }
 .section-logosimbolo img {
@@ -452,11 +453,16 @@ body{
 }
 
 .seccion-escudo_bandera img{
-    width: 60vh;
+    width: 30vh;
     height: auto;
 }
 
+}
 
+.seccion-escudo_bandera img{
+    width: 50vh;
+    height: auto;
+}
 h1{
     color:var(--verde);
 }

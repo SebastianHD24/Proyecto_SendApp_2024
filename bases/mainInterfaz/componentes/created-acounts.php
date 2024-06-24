@@ -20,7 +20,8 @@
       echo "Buscas: $search_term";
 
       // Agregar condición de búsqueda a la consulta SQL
-      $sql .= " WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuarios.ficha LIKE ?";
+        $sql = "SELECT * FROM usuarios WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuarios.ficha LIKE ?";
+
       // Preparar la consulta SQL
       $stmt = mysqli_prepare($conn, $sql);
       if ($stmt) {
@@ -266,7 +267,7 @@
       <div class="modalA">
         <div class="barra"></div>
         <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-        <h1 class="tituloM">success</h1>
+        <h1 class="tituloM"></h1>
         <p class="descripcionM">¡Actualización exitosa!</p>
       </div>
     </div>

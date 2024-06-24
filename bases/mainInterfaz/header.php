@@ -16,18 +16,18 @@
     <?php
         if ($id_rol == 1){
             echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >';
-            $tituloPestaña = "Administrador";
+            $tituloPesta���a = "Administrador";
         }
         else if ($id_rol == 2){
             echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-funcionario.css" >';
-            $tituloPestaña = "Funcionario";
+            $tituloPesta���a = "Funcionario";
         }
         else if ($id_rol == 3){
             echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-aprendiz.css" >';
-            $tituloPestaña = "Aprendiz";
+            $tituloPesta���a = "Aprendiz";
         }
     ?>
-    <title><?= $tituloPestaña ?></title>
+    <title><?= $tituloPesta���a ?></title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,10 +99,10 @@
                             <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> Cuentas Creadas </button></a>
                         </li>
                         <li>
-                            <a  href="?p=serviciosadmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosadmin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                            <a  href="?p=servicios_admin"><button class="boton-menu boton-categoria <?php echo $component == 'servicios_admin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notifiadmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiadmin' ? 'active' : '' ?>"> <i class="bi bi-bell"></i>Notificaciones</button></a>
+                            <a  href="?p=notifi_admin"><button class="boton-menu boton-categoria <?php echo $component == 'notifi_admin' ? 'active' : '' ?>"> <i class="bi bi-bell"></i>Notificaciones</button></a>
                         </li>
                     <?php endif; ?>
                         
@@ -124,4 +124,4 @@
                 <a class="texto-footer" href="../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php"><i class="bi bi-box-arrow-right"></i></a>
             </div> 
         </aside>
-        <main>                                                                                                                                          
+        <main>                                                                                                                                                                                                                                                                          
