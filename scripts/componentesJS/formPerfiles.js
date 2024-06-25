@@ -83,6 +83,10 @@ formulario.addEventListener('submit', function(e) {
                     mensajeTelefono.classList.remove('oculto');
                     mensajeTelefono.textContent = 'Solo se permiten números celulares y fijos de Colombia.';
                     break;
+                case 4:
+                    mensajeCorreo.classList.remove('oculto');
+                    mensajeCorreo.textContent = 'Correo ya registrado.';
+                    break;
                 default:
                     console.log("Error inesperado: Código de éxito no reconocido.");
                     break;

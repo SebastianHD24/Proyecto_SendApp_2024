@@ -30,7 +30,32 @@ if ($result_current_email) {
 
         if (mysqli_num_rows($result_check_email) > 0) {
             // El nuevo correo ya existe en la base de datos
-            echo "Error: El correo ya existe en la base de datos.";
+            echo json_encode(array('respuesta' => 1));
+            exit();
+        }
+    }
+} else {
+    // Error al obtener el correo actual
+    echo "Error al obtener el correo actual: " . mysqli_error($conn);
+    exit();
+}
+
+// Verificar si el correo ha cambiado
+$query_current_document = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$documento_identidad'";
+$result_current_document = mysqli_query($conn, $query_current_document);
+
+if ($result_current_document) {
+    $row_current_document = mysqli_fetch_assoc($result_current_document);
+    $current_document = $row_current_document['documento_identidad'];
+
+    if ($current_document !== $nuevo_documento_identidad) {
+        // El correo ha cambiado, verificar si el nuevo correo ya existe en la base de datos
+        $query_check_document = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$documento_identidad'";
+        $result_check_document = mysqli_query($conn, $query_check_document);
+
+        if (mysqli_num_rows($result_check_document) > 0) {
+            // El nuevo correo ya existe en la base de datos
+            echo json_encode(array('respuesta' => 2));
             exit();
         }
     }

@@ -52,11 +52,11 @@
                                     disabled
                                 <?php endif; ?>
                                 placeholder="Su(s) 'apellido(s)'" id="apellidos">
-                                <span class="inputCorreo oculto"></span>
                                 <label for="form_input" class="form_input">Correo Electrónico:</label>
+                                <span class="inputCorreo oculto" style="color: red;"></span>
                                 <input type="email" name="correo" class="edit_input" value="<?= $row_user['correo']?>" id="correo" required placeholder="Correo electronico para contactarlo">
-                                <span class="inputTelefono oculto"></span>
                                 <label for="form_input" class="form_input">Celular:</label>
+                                <span class="inputTelefono oculto" style="color: red;"></span>
                                 <input type="text" name="celular" class="edit_input" value="<?= $row_user['celular']?>" id="celular" required placeholder="Numero telefonico para contactarlo">
                                 <?php
                                     $rol = $row_user['id_rol'];

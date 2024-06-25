@@ -36,7 +36,11 @@ form_update_users.addEventListener('submit', function(e){
       setTimeout(function() {
       window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
       }, 3000); // 3000 milisegundos = 3 segundos
-    }else {
+    } else if(data.respuesta == 1){
+      alert('Error el correo ya esta registrado')
+    } else if(data.respuesta == 2){
+      alert('Error el documento ya esta registrado')
+    } else {
       console.log('Error!!! 404');
     }
   })
