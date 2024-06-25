@@ -118,3 +118,8 @@ th {
 .inactivo {
     color: red;
 }
+#mensaje_error, #mensaje_errord, #mensaje_errorc, #mensaje_errore, #mensaje_errorcorreo {
+	color: rgb(189, 38, 38);
+	padding-left: 1rem;
+	padding-bottom: 0.5rem;
+}

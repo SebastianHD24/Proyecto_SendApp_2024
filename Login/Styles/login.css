@@ -73,25 +73,7 @@ header img{
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-#mensaje_error {
-	color: rgb(189, 38, 38);
-	padding-left: 1rem;
-	padding-bottom: 0.5rem;
-}
-
-#mensaje_errord {
-	color: rgb(189, 38, 38);
-	padding-left: 1rem;
-	padding-bottom: 0.5rem;
-}
-
-#mensaje_errorc {
-	color: rgb(189, 38, 38);
-	padding-left: 1rem;
-	padding-bottom: 0.5rem;
-}
-
-#mensaje_errore {
+#mensaje_error, #mensaje_errord, #mensaje_errorc, #mensaje_errore, #mensaje_errorcorreo {
 	color: rgb(189, 38, 38);
 	padding-left: 1rem;
 	padding-bottom: 0.5rem;
