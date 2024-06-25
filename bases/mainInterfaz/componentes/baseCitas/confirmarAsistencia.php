@@ -6,8 +6,7 @@
                 <th>Documento de Identidad</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
-                <th>Descripción de la cita</th>
-                
+                <th>Descripción de la cita</th> 
                 <th>Jornada</th>
                <th>Asistencia</th>
                
@@ -74,7 +73,7 @@
                                         <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
                                         <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
                                         <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación por inasistencia del usuario:</label>
-                                        <span id="charCount_<?= $row['id_cita'] ?>">0/150</span>
+                                        <span id="charCount_<?= $row['id_cita'] ?>">0/1000</span>
                                         <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" class="justificacion" placeholder="Escribe aquí tu justificación" required>
                                         
 
@@ -121,10 +120,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         textarea.addEventListener('input', () => {
             const currentLength = textarea.value.length;
-            charCount.textContent = `${currentLength}/150`;
+            charCount.textContent = `${currentLength}/1000`;
 
-            if (currentLength >= 150) {
-                textarea.value = textarea.value.substring(0, 149);
+            if (currentLength >= 1000) {
+                textarea.value = textarea.value.substring(0, 999);
             }
         });
     });

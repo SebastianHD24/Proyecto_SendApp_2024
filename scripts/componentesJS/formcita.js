@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     textarea.addEventListener('input', () => {
         const currentLength = textarea.value.length;
-        charCount.textContent = `${currentLength}/150`;
+        charCount.textContent = `${currentLength}/1000`;
 
-        if (currentLength >= 150) {
-            textarea.value = textarea.value.substring(0, 149);
+        if (currentLength >= 1000) {
+            textarea.value = textarea.value.substring(0, 999);
         }
     });
 });
@@ -68,7 +68,7 @@ btnCerrar.addEventListener('click', (event) => {
     const textarea = document.getElementById('descripcion');
     textarea.value = "";
     const charCount = document.getElementById('charCount');
-    charCount.textContent = "0/150";
+    charCount.textContent = "0/1000";
     contenedor.classList.add('oculto');
     div_container.classList.remove('oculto');
 });

@@ -19,7 +19,7 @@
         <div class="description">
             <label for="description-label">Descripción:</label>
             <br>
-            <span id="charCount">0/250</span>
+            <span id="charCount">0/1000</span>
             <textarea name="descripcion_pqrs" id="text" cols="30" rows="10" class="descripcion-pqr"></textarea>
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     textarea.addEventListener('input', () => {
         const currentLength = textarea.value.length;
-        charCount.textContent = `${currentLength}/250`;
+        charCount.textContent = `${currentLength}/1000`;
 
-        if (currentLength >= 150) {
-            textarea.value = textarea.value.substring(0, 249);
+        if (currentLength >= 1000) {
+            textarea.value = textarea.value.substring(0, 999);
         }
     });
 });
