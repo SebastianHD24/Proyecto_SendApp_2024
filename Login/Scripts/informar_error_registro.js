@@ -59,6 +59,25 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
         } else if (data.success === 5) {
             const error = document.getElementById('mensaje_errord');
             error.textContent = "Documento ya registrado.";
+
+            const error2 = document.getElementById('mensaje_errore');
+            error2.textContent = "No se pudo registrar, verifique los campos.";
+        } else if (data.success == "7") {
+            alert('Por favor llenar todos los campos');
+        } else if (data.success == "8") {
+            const error = document.getElementById('mensaje_errorcorreo');
+            error.textContent = "Correo ya registrado.";
+            
+            const error3 = document.getElementById('mensaje_errore');
+            error3.textContent = "No se pudo registrar, verifique los campos.";
+        } else if (data.success == "9") {
+            const error = document.getElementById('mensaje_errorcorreo');
+            error.textContent = "Correo ya registrado.";
+            const error1 = document.getElementById('mensaje_errord');
+            error1.textContent = "Documento ya registrado.";
+            
+            const error3 = document.getElementById('mensaje_errore');
+            error3.textContent = "No se pudo registrar, verifique los campos.";
         } else {
             messageDiv.className = 'message_error';
             messageDiv.innerText = 'Error desconocido. Inténtelo de nuevo.';

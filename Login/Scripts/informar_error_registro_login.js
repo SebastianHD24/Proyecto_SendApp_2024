@@ -58,13 +58,29 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (jsonData.success == "5") {
                 const error = document.getElementById('mensaje_errord');
                 error.textContent = "Documento ya registrado.";
-                
+
+                const error3 = document.getElementById('mensaje_errore');
+                error3.textContent = "No se pudo registrar, verifique los campos.";
             } else if (jsonData.success == "6") {
                 alert('Se ha registrado correctamente')
                 window.location.href = "login.php";
 
             } else if (jsonData.success == "7") {
                 alert('Por favor llenar todos los campos');
+            } else if (jsonData.success == "8") {
+                const error = document.getElementById('mensaje_errorcorreo');
+                error.textContent = "Correo ya registrado.";
+                
+                const error3 = document.getElementById('mensaje_errore');
+                error3.textContent = "No se pudo registrar, verifique los campos.";
+            } else if (jsonData.success == "9") {
+                const error = document.getElementById('mensaje_errorcorreo');
+                error.textContent = "Correo ya registrado.";
+                const error1 = document.getElementById('mensaje_errord');
+                error1.textContent = "Documento ya registrado.";
+                
+                const error3 = document.getElementById('mensaje_errore');
+                error3.textContent = "No se pudo registrar, verifique los campos.";
             }
         })
         .catch(error => console.error('Error:', error));
