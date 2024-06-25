@@ -81,6 +81,7 @@ table.appointment {
     min-height: 12vh;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 /* Contenedor hijo con la información extraída de la BD */
@@ -309,6 +310,8 @@ table.appointment {
         text-align: center;
         overflow-y: auto; /* Para manejar contenido extenso */
     }
+
+
 }
 @media screen and (min-width: 1024px) {
     .notifications-panel {
@@ -390,4 +393,101 @@ table.appointment {
         text-align: center;
         overflow-y: auto; /* Para manejar contenido extenso */
     }
+}
+
+@media screen and (max-width: 518px){
+        /* --------------------------------------------------------------------------------- */
+
+.notifications-panel {
+    display: flex;
+    flex-direction:row;
+    justify-items: center;
+    width: 98%;
+    overflow-x:hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.notifications{
+    width: 18rem;
+}
+
+/* Estilos base para la tabla */
+table.appointment {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Ocultar las filas de encabezado */
+thead {
+    display: none;
+}
+
+/* Estilo para cada fila de datos */
+tbody {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.appointment_td {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 15px 15px 0px 0px;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Estilo para cada celda en la fila */
+.appointment_td > td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.appointment_td > td:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para el encabezado de las columnas */
+.header_th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Estilo para los enlaces */
+.verJustificacion, .verMotivo {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Estilo para el pie de la tabla */
+tfoot {
+    /* display: block; */
+    width: 100%;
+}
+
+.reason {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.reason th h4{
+    text-align: center;
+}
+
+.reason th {
+    text-align: left;
+}
+
+ /* aqui se le esta dando color a cada td y aplicandole un estilo a las cajas de color azul  */
+table.appointment tr.appointment_td td:nth-child(1), td:nth-child(3), td:nth-child(5), td:nth-child(7) {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+
+        /* --------------------------------------------------------------------------------- */
+        
 }

@@ -157,8 +157,7 @@ main{
     background-color: white;
     margin: 1rem 1rem 1rem 0px;
     border-radius: 2rem;
-    /* width: 80vw; */
-    /* padding: 3rem; */ 
+    overflow: hidden;
 }
 
 /*Logo De Arriba*/
