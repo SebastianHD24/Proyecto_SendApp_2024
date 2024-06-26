@@ -10,7 +10,7 @@ Options -Indexes
 </FilesMatch>
 
 # Bloquear acceso a los archivos:
-<FilesMatch "^(conexion|consulta_nombres_correos|estructura-base|idRol|redireccionamiento|sesion_start|ti|footer|header|actualizarAdministrador|actualizarContrasena|actualizarPerfil|agregarpqrs|cambiarEstado|cancelarcita|enviarHistorial|guardarCita|mandar|mostrarAdmin|nombreFuncionario|nombreServicio|obtener_eventos|obtener_notificaciones|rechazarcita|update-created-accounts|aceptarcita|citas|citaspendiente|confirmarcita|created-acounts|mi_agenda|notifiAdmin|notificaciones|perfil|pqr|registro|servicios|serviciosAdmin|mostrarCitas|actualizar_estado|consultar|mostrarConsulta|mostrarHistorial|responderPQR|suspender|actualizarVista|consultarHistorial|consultar|mostrarHistorial|mostrarPQR|cerrar_sesion|val_sesion|val|agregandoregistro|crear_usuario_admin)\.php$">
+<FilesMatch "^(conexion|consulta_nombres_correos|estructura-base|idRol|redireccionamiento|sesion_start|ti|footer|header|actualizarAdministrador|actualizarContrasena|actualizarPerfil|agregarpqrs|cambiarEstado|cancelarcita|enviarHistorial|guardarCita|mandar|mostrarAdmin|nombreFuncionario|nombreServicio|obtener_eventos|obtener_notificaciones|rechazarcita|update-created-accounts|aceptarcita|citas|citaspendiente|confirmarcita|created-acounts|mi_agenda|notifiAdmin|notificaciones|perfil|pqr|registro|servicios|serviciosAdmin|mostrarCitas|actualizar_estado|consultar|mostrarConsulta|mostrarHistorial|responderPQR|suspender|actualizarVista|consultarHistorial|consultar|mostrarHistorial|mostrarPQR|cerrar_sesion|val_sesion|val|agregandoregistro|crear_usuario_admin|actualizarAdmin|recuContra|email|emailCitas|)\.php$">
     <If "%{HTTP_REFERER} == ''">
         Order deny,allow
         Deny from all

@@ -52,9 +52,9 @@
             </div>
             </div>
         </form>
-        <!-- <div class="olvidaste">
-            <a id="goToRegister" class="login__forgot">¿Olvidaste tu contraseña?</a>
-        </div> -->
+        <div class="olvidaste">
+            <a id="goToRegister" class="login__forgot" href="./recuperarContrasena.php">¿Olvidaste tu contraseña?</a>
+        </div>
     </div>
 </div>
 

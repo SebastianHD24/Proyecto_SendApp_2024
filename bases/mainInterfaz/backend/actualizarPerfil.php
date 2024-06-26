@@ -10,30 +10,6 @@
     $celular = $_POST['celular'];
     $regex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
 
-// Verificar si el correo ha cambiado
-$query_current_email = "SELECT correo FROM usuarios WHERE documento_identidad = '$documento_identidad'";
-$result_current_email = mysqli_query($conn, $query_current_email);
-
-if ($result_current_email) {
-    $row_current_email = mysqli_fetch_assoc($result_current_email);
-    $current_email = $row_current_email['correo'];
-
-    if ($current_email !== $correo) {
-        // El correo ha cambiado, verificar si el nuevo correo ya existe en la base de datos
-        $query_check_email = "SELECT correo FROM usuarios WHERE correo = '$correo'";
-        $result_check_email = mysqli_query($conn, $query_check_email);
-
-        if (mysqli_num_rows($result_check_email) > 0) {
-            // El nuevo correo ya existe en la base de datos
-            echo json_encode(array('success' => 4));
-            exit();
-        }
-    }
-} else {
-    // Error al obtener el correo actual
-    echo "Error al obtener el correo actual: " . mysqli_error($conn);
-    exit();
-}
     // Validación del formato del correo electrónico
     if (!preg_match($regex, $correo)) {
         echo json_encode(array('success' => 1));
@@ -45,14 +21,31 @@ if ($result_current_email) {
         echo json_encode(array('success' => 3));
     // Consulta y actualizacion de los campos
     } else {
-        // Actualización de la base de datos utilizando consultas preparadas
-        $consulta = "UPDATE usuarios SET correo=?, celular=? WHERE documento_identidad = ?";
-        $stmt = $conn->prepare($consulta);
-        $stmt->bind_param("ssi", $correo, $celular, $documento_identidad);
-        $peticion = $stmt->execute();
+        // Consulta para verificar que solo hay un cuenta con ese correo
+        $consultaTipo = "SELECT nombres FROM usuarios WHERE correo = ?";
+        $stmt = $conn->prepare($consultaTipo);
+        $stmt->bind_param("s", $correo);
+        $peticion1 = $stmt->execute();
 
-        // Verificación del éxito de la actualización
-        if ($peticion) {
-            echo json_encode(array('success' => 0));
+        // Verificación del éxito de la consulta
+        if ($peticion1) {
+            $resultado1 = $stmt->get_result();
+            if ($resultado1->num_rows > 0) {
+                echo json_encode(array('success' => 4));
+                exit;
+            } else {
+                // Actualización de la base de datos utilizando consultas preparadas
+                $consulta = "UPDATE usuarios SET correo=?, celular=? WHERE documento_identidad = ?";
+                $stmt = $conn->prepare($consulta);
+                $stmt->bind_param("ssi", $correo, $celular, $documento_identidad);
+                $peticion = $stmt->execute();
+                
+                // Verificación del éxito de la actualización
+                if ($peticion) {
+                    echo json_encode(array('success' => 0));
+                }
+            }
         }
+        $stmt->close();
     };
+    $conn->close();
