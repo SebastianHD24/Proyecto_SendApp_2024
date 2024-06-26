@@ -75,7 +75,7 @@
                     <!-- <li><i class="fa-solid fa-circle-info"></i><a href="infoCDITI/info.html">Acerca CDITI</a> -->
                     <li id="ingreso"> <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login.php">Ingreso</a></li>
                     <li id="interfaz-u" style="display: none;"><i class="fa-solid fa-circle-user"></i><a href="#" onclick="llevarURL();">Perfil</a></li>
-                    <li id="cerrar-sesion" style="display: none;"><i class="fa-solid fa-circle-left"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php" onclick="cerrarSesion();">Cerrar sesion</a></li>
+                    <li id="cerrar-sesion" style="display: none;"><i class="fa-solid fa-circle-left"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php" onclick="cerrarSesion();">Cerrar sesión</a></li>
                 </ul>
 
                 <!--Menu Hamburguesa Animado-->

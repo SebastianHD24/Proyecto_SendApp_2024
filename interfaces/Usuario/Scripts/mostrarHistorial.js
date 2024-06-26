@@ -63,7 +63,7 @@ function consultarHistorial() {
     function ocultar_QPR() {
         const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
         contenedores_notificacion.forEach(contenedor => {
-            contenedor.style.display = "none";
+            contenedor.style.display = "flex";
         });
     }
     ocultar_QPR();

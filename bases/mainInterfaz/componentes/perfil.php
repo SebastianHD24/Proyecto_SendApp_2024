@@ -120,7 +120,7 @@
                         </div>
                         <div class="button-perfil">
                             <button type="submit" class="btn-actu">Actualizar</button>
-                        </div>      
+                        </div>
                     </form>
                 </div>
             </div>

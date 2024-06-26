@@ -70,6 +70,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  cursor: pointer;
 }
 
 .calendar ul li {

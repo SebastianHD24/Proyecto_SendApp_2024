@@ -22,7 +22,9 @@ function createNotificationBoxR(nombreServicio) {
 
     let boxTextArticle = document.createElement("article");
     boxTextArticle.classList.add("article__text--1");
-    let boxTextParagraph = document.createElement("p");
+    let boxTextParagraph = document.createElement("a");
+    let url = '../../../Proyecto_SendApp_2024/interfaces/Usuario/usuarioSesion.php?p=citas';
+    boxTextParagraph.href = url;
     boxTextParagraph.textContent = `Su cita con ${nombreServicio} fue rechazada, si desea conocer el motivo dirígete al apartado de Mis citas`;
     boxTextArticle.appendChild(boxTextParagraph);
     notificationsBox.appendChild(boxTextArticle);
