@@ -1,7 +1,6 @@
 <?php
 // Inclusión para la conexión con la base de datos
 include '../../../../Proyecto_SendApp_2024/bases/conexion.php';
-
 $conn = connection();
 
 // Array para almacenar la respuesta
@@ -24,6 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Cita actualizada correctamente
                 $response['success'] = true;
                 $response['message'] = "Cita actualizada correctamente";
+
+                $url = 'http://sendapp.com.co/Proyecto_SendApp_2024/scripts/email/emailCitas.php?id_cita=' . $id_cita;
+                $emailResponse = file_get_contents($url);
             } else {
                 $response['success'] = false;
                 $response['message'] = "No se encontró una cita para el ID proporcionado";

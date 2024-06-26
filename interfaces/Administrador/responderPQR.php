@@ -33,6 +33,9 @@
 
     if (mysqli_query($conn, $sql)) {
         echo json_encode(array('success' => 3));
+
+        $url = 'http://sendapp.com.co/Proyecto_SendApp_2024/scripts/email/email.php?id_peticion=' . $id_pqr;
+        $response = file_get_contents($url);
     } else {
         echo json_encode(array('success' => 4));
     }
