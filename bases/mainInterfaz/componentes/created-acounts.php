@@ -7,7 +7,6 @@
     <form method="GET" class="add_form">
       <input type="text" name="documento_identidad" placeholder="Buscar por Documento o Nombre"> <!-- Campo de búsqueda -->
       <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
-      <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
     </form>
     <a href="?new_users" class="add_user">Agregar Usuario Nuevo </a>
   </div>
@@ -19,9 +18,6 @@
       echo "Buscas: $search_term";
 
       // Agregar condición de búsqueda a la consulta SQL
-      $sql = "SELECT *, (SELECT nombre_rol FROM roles WHERE roles.id_rol = usuarios.id_rol) AS nombre_rol,
-            (SELECT nombre_servicio FROM servicios WHERE servicios.id_servicio = usuarios.id_servicio) AS nombre_servicio
-            FROM usuarios WHERE id_rol != 1 AND (usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuarios.ficha LIKE ?)";
       $sql = "SELECT *, (SELECT nombre_rol FROM roles WHERE roles.id_rol = usuarios.id_rol) AS nombre_rol,
             (SELECT nombre_servicio FROM servicios WHERE servicios.id_servicio = usuarios.id_servicio) AS nombre_servicio
             FROM usuarios WHERE id_rol != 1 AND (usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuarios.ficha LIKE ?)";
@@ -46,7 +42,6 @@
   <!-- Tabla de usuarios -->
   <div class="users-table">
     <table>
-      <!-- Encabezados de la tabla -->
       <!-- Encabezados de la tabla -->
       <thead>
         <tr>
@@ -76,9 +71,6 @@
               // Iterar sobre los resultados y mostrar cada fila en la tabla
               while ($row = mysqli_fetch_array($query)) {
                 $frase = "No Aplica";
-              // Iterar sobre los resultados y mostrar cada fila en la tabla
-              while ($row = mysqli_fetch_array($query)) {
-                $frase = "No Aplica";
         ?>
               <tr id="row_<?= $row['documento_identidad'] ?>">
                 <!-- Mostrar datos de usuario en cada columna -->
@@ -95,43 +87,8 @@
                     } else {
                       echo $row['programa'];
                     } 
-                <td data-label="Tipo de Documento"><?= $row['tipo_documento'] ?></td>
-                <td data-label="Documento Identidad"><?= $row['documento_identidad'] ?></td>
-                <td data-label="Nombre"><?= $row['nombres'] ?></td>
-                <td data-label="Apellidos"><?= $row['apellidos'] ?></td>
-                <td data-label="Correo"><?= $row['correo'] ?></td>
-                <td data-label="Celular"><?= $row['celular'] ?></td>
-                <td data-label="Programa">
-                  <?php 
-                    if($row['id_rol'] != 3){
-                      echo $frase;
-                    } else {
-                      echo $row['programa'];
-                    } 
                   ?>
                 </td>
-                
-                <td data-label="Ficha">
-                  <?php 
-                    if($row['id_rol'] != 3){
-                      echo $frase;
-                    } else {
-                      echo $row['ficha'];
-                    } 
-                  ?>
-                </td>
-                
-                <td data-label="Estado" id="estado_<?= $row['documento_identidad'] ?>" class="<?= ($row['estado'] == 1) ? 'activo' : 'inactivo' ?>">
-                  <?= ($row['estado'] == 1) ? 'Activo' : 'Inactivo' ?>
-                </td>
-                <td data-label="Rol"><?= $row['nombre_rol'] ?></td>
-                <td data-label="Servicio">
-                  <?php
-                    if($row['id_rol'] != 2){
-                      echo $frase;
-                    } else {
-                      echo $row['nombre_servicio'];
-                    } 
                 
                 <td data-label="Ficha">
                   <?php 
@@ -158,7 +115,6 @@
                 </td>
                 <!-- Acciones -->
                 <td data-label="Acciones">
-                <td data-label="Acciones">
                   <?php if ($row['estado'] == 1): ?>
                     <!-- Enlace para desactivar usuario -->
                     <a href="actualizar_estado.php?action=desactivar&documento_identidad=<?= $row['documento_identidad'] ?>"  onclick="return confirmarDesactivar('<?= $row['documento_identidad'] ?>')">Desactivar</a>
@@ -169,14 +125,6 @@
                   <!-- Enlace para editar usuario -->
                   <a href="?actualizar=<?= $row['documento_identidad'] ?>" class="users-table--edit ">Editar</a>
                 </td>
-              </tr>
-        <?php
-              }
-            } else {
-              // Mostrar mensaje de que no hay registros
-              echo "<tr><td colspan='12' style='color: red;'>No hay registros que coincidan con la búsqueda.</td></tr>";
-            }
-          }
               </tr>
         <?php
               }
@@ -521,7 +469,6 @@
     }
   ?>
   <?php include '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/registro.php' ?>
-  
   
 </div>
 <!-- Script JavaScript para confirmar acciones -->
