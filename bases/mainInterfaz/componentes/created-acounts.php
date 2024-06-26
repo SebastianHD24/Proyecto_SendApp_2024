@@ -293,7 +293,7 @@
     }
   ?>
   <?php include '../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/registro.php' ?>
-  
 </div>
 <!-- Script JavaScript para confirmar acciones -->
+<script src="../../../../Proyecto_SendApp_2024/Login/Scripts/informar_error_registro.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/update-created-accounts.js"></script>

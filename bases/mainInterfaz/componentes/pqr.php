@@ -19,7 +19,7 @@
         <div class="description">
             <label for="description-label">Descripción:</label>
             <br>
-            <span id="charCount">0/250</span>
+            <span id="charCount">0/1000</span>
             <textarea name="descripcion_pqrs" id="text" cols="30" rows="10" class="descripcion-pqr"></textarea>
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
@@ -33,7 +33,7 @@
         <div class="modalA">
             <div class="barra"></div>
             <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-            <h1 class="tituloM">success</h1>
+            <h1 class="tituloM"></h1>
             <p class="descripcionM">¡PQR enviada con éxito!</p>
         </div>
     </div>
@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     textarea.addEventListener('input', () => {
         const currentLength = textarea.value.length;
-        charCount.textContent = `${currentLength}/250`;
+        charCount.textContent = `${currentLength}/1000`;
 
-        if (currentLength >= 150) {
-            textarea.value = textarea.value.substring(0, 249);
+        if (currentLength >= 1000) {
+            textarea.value = textarea.value.substring(0, 999);
         }
     });
 });

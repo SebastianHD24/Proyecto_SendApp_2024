@@ -76,6 +76,7 @@
             </label>
             <input id="login-input-user-a" class="registro_input login__input" type="text" name="apellidos" placeholder="Apellidos" required/>
 
+            <p id="mensaje_errorcorreo"></p>
             <label for="login-input-user" class="registro_label login__label">
                 Correo *
             </label>
@@ -144,7 +145,3 @@
             <p id="mensaje_errore"></p>
         </div>
 </form>
-
-<?php if (isset($_SESSION['documento_identidad'])): ?>
-<script src="../../../../Proyecto_SendApp_2024/Login/Scripts/informar_error_registro.js"></script>
-<?php endif ?>

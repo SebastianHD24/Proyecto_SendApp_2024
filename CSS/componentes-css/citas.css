@@ -81,6 +81,7 @@ table.appointment {
     min-height: 12vh;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 /* Contenedor hijo con la información extraída de la BD */
@@ -135,14 +136,10 @@ table.appointment {
 }
 
 .popup-justificacion {
-    margin-left: 580px;
-    margin-top: 270px;
-    transform: translate(-50%, -50%);
     width: 80%; /* Ajustable según necesidad */
     max-width: 500px; /* Ajustable según necesidad */
     color: black;
     height: auto;
-    max-height: 80%; /* Ajustable según necesidad */
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -207,81 +204,38 @@ table.appointment {
 /* Laptops FHD */
 @media screen and (min-width: 320px) {
 
-    .popup-justificacion {
-        margin-left: 135px;
-        margin-top: 330px;
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 
     #justificacion-Noasistencia-15 {
         width: 200%;
     }
     #contenedorm-descripcion {
-        width: 38%;
-        height: 90%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 }
 @media screen and (min-width: 375px) {
 
-    .popup-justificacion {
-        margin-left: 155px;
-        margin-top: 350px;
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 
     #justificacion-Noasistencia-15 {
         width: 200%;
     }
     #contenedorm-descripcion {
-        width: 30%;
-        height: 90%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 }
 @media screen and (min-width: 425px) {
 
-    .popup-justificacion {
-        margin-left: 180px;
-        margin-top: 370px;
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
 
     #justificacion-Noasistencia-15 {
         width: 200%;
     }
     #contenedorm-descripcion {
-        width: 30%;
-        height: 90%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -293,22 +247,9 @@ table.appointment {
     .notifications p {
         font-size: 1.2rem;
     }
-    .popup-justificacion {
-        margin-left: 340px;
-        margin-top: 330px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
+
+
 }
 @media screen and (min-width: 1024px) {
     .notifications-panel {
@@ -318,22 +259,7 @@ table.appointment {
     .notifications p {
         font-size: 1.2rem;
     }
-    .popup-justificacion {
-        margin-left: 370px;
-        margin-top: 270px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 }
 
 /* 2k Screens */
@@ -346,22 +272,7 @@ table.appointment {
         font-size: 1.4rem;
     }
 
-    .popup-justificacion {
-        margin-left: 640px;
-        margin-top: 270px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 }
 
 /* 4k Screens */
@@ -374,20 +285,108 @@ table.appointment {
         font-size: 1.4rem;
     }
 
-    .popup-justificacion {
-        margin-left: 950px;
-        margin-top: 270px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
+    
+}
+
+@media screen and (max-width: 518px){
+        /* --------------------------------------------------------------------------------- */
+
+.notifications-panel {
+    display: flex;
+    flex-direction:row;
+    justify-items: center;
+    width: 98%;
+    overflow-x:hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.notifications{
+    width: 18rem;
+}
+
+/* Estilos base para la tabla */
+table.appointment {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Ocultar las filas de encabezado */
+thead {
+    display: none;
+}
+
+/* Estilo para cada fila de datos */
+tbody {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.appointment_td {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 15px 15px 0px 0px;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Estilo para cada celda en la fila */
+.appointment_td > td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.appointment_td > td:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para el encabezado de las columnas */
+.header_th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Estilo para los enlaces */
+.verJustificacion, .verMotivo {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Estilo para el pie de la tabla */
+tfoot {
+    /* display: block; */
+    width: 100%;
+}
+
+.reason {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.reason th h4{
+    text-align: center;
+}
+
+.reason th {
+    text-align: left;
+}
+
+ /* aqui se le esta dando color a cada td y aplicandole un estilo a las cajas de color azul  */
+table.appointment tr.appointment_td td:nth-child(1), td:nth-child(3), td:nth-child(5), td:nth-child(7) {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+
+        /* --------------------------------------------------------------------------------- */
+        
+}
+
+@media screen and (max-width: 320px){
+    #justificacion-Noasistencia-15{
+        width:100%;
     }
 }

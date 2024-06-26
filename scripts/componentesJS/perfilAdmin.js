@@ -17,6 +17,9 @@ const contenedorFormulario = document.getElementById('formularioPrincipal');
 // Contenedor del formulario de los datos
 const mainForm = document.getElementById('formularioPrincipal');
 
+// Mensaje para el input de Correo
+const mensajeCorreo = document.querySelector('.inputCorreo');
+
 // Ventana emergente
 const alertaEmergente = document.getElementById('alerta');
 
@@ -103,6 +106,10 @@ formu.addEventListener('submit', function(e) {
                 case 8:
                     mensajePrincipal.classList.remove('oculto');
                     mensajePrincipal.textContent = "No se realizó ningún cambio";
+                    break;
+                case 9:
+                    mensajeCorreo.classList.remove('oculto');
+                    mensajeCorreo.textContent = 'Correo ya registrado.';
                     break;
                 default:
                     console.log("Error inesperado: Código de éxito no reconocido.");

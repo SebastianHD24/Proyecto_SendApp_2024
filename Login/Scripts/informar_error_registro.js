@@ -10,15 +10,12 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        const messageDiv = document.getElementById('alerta');
-        const registerForm = document.getElementById('registerForm');
 
         if (data.success === 6) {
-            registerForm.style.display = 'none';
-            messageDiv.style.display = 'flex';
+            alert("Registro guardado correctamente");
             setTimeout(function() {
                 window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
-            }, 3000); // 3000 milisegundos = 3 segundos
+            }, 1000); // 3000 milisegundos = 3 segundos
         } else if (data.success === 1) {
             const error = document.getElementById('mensaje_errord');
             const limpiarC = document.getElementById('login-input-user-d');
@@ -59,6 +56,25 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
         } else if (data.success === 5) {
             const error = document.getElementById('mensaje_errord');
             error.textContent = "Documento ya registrado.";
+
+            const error2 = document.getElementById('mensaje_errore');
+            error2.textContent = "No se pudo registrar, verifique los campos.";
+        } else if (data.success == "7") {
+            alert('Por favor llenar todos los campos');
+        } else if (data.success == "8") {
+            const error = document.getElementById('mensaje_errorcorreo');
+            error.textContent = "Correo ya registrado.";
+            
+            const error3 = document.getElementById('mensaje_errore');
+            error3.textContent = "No se pudo registrar, verifique los campos.";
+        } else if (data.success == "9") {
+            const error = document.getElementById('mensaje_errorcorreo');
+            error.textContent = "Correo ya registrado.";
+            const error1 = document.getElementById('mensaje_errord');
+            error1.textContent = "Documento ya registrado.";
+            
+            const error3 = document.getElementById('mensaje_errore');
+            error3.textContent = "No se pudo registrar, verifique los campos.";
         } else {
             messageDiv.className = 'message_error';
             messageDiv.innerText = 'Error desconocido. Inténtelo de nuevo.';

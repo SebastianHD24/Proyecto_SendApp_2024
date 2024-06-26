@@ -32,7 +32,7 @@ LIMIT 6;
         if (mysqli_num_rows($result) > 0) {
          // Aquí se abre el único contenedor de cuadrícula
             ?>
-            <div class="notifications-panel" id="notifications-panel">
+    <div class="notifications-panel" id="notifications-panel">
             <?php
             while ($row = mysqli_fetch_assoc  ($result)) {
                 ?>
@@ -98,7 +98,7 @@ LIMIT 6;
                             <tfoot>
                                 <tr class="reason">
                                     
-                                    <th colspan="7">Motivo de la cita: 
+                                    <th colspan="7"><h4>Motivo de la cita: </h4>
                                         <p class="" colspan="7"><?= htmlspecialchars($row['descripcion']) ?></p>
                                     </th>
                                                                 
@@ -111,7 +111,7 @@ LIMIT 6;
                 <?php
             }
             ?>
-            </div> <!-- Aquí se cierra el único contenedor de cuadrícula -->
+    </div> <!-- Aquí se cierra el único contenedor de cuadrícula -->
         <?php
     } else {
         ?>
@@ -171,7 +171,7 @@ if (isset($_SESSION['documento_identidad'])) {
                     <option value="anio">Ultimo Año</option>
                 </select>
                 <button type="submit" onclick="historialCita();" class="buscar">Buscar</button>
-            </form>   -->
+            </form>   -->                    
             <div id="historial-oculto" class="notifications-panel" style="display: none;">
             <?php
             
@@ -237,7 +237,7 @@ if (isset($_SESSION['documento_identidad'])) {
                             <tfoot>
                                 <tr class="reason">
                                     
-                                    <th colspan="7">Motivo de la cita: 
+                                    <th colspan="7"><h4>Motivo de la cita:</h4> 
                                         <p class="" colspan="7"><?= htmlspecialchars($row['descripcion']) ?></p>
                                     </th>
                                                                 

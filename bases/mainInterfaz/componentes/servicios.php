@@ -198,9 +198,9 @@ $stmt->close();
         <div class="formulario">
             <div class="formulario-contador">
                 <label for="descripcion"><strong>Descripción:</strong></label>
-                <p id="charCount">0/150</p>
+                <p id="charCount">0/1000</p>
             </div>
-            <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="150" placeholder="El límite de caracteres es de 150"></textarea>
+            <textarea name='descripcion' id="descripcion" class="descripcion-servicio" rows="4" maxlength="1000" placeholder="El límite de caracteres es de 1000"></textarea>
         </div>
 
         <div class="buttons">
