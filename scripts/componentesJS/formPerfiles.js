@@ -85,7 +85,7 @@ formulario.addEventListener('submit', function(e) {
                     break;
                 case 4:
                     mensajeCorreo.classList.remove('oculto');
-                    mensajeCorreo.textContent = 'El correo electronico ya esta registrado en el sistema';
+                    mensajeCorreo.textContent = 'Correo ya registrado.';
                     break;
                 default:
                     console.log("Error inesperado: Código de éxito no reconocido.");

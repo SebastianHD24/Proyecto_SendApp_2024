@@ -16,6 +16,9 @@
     box-sizing: border-box;
     width: 100%;
 }
+.exit-icon {
+    margin-left:50%;
+}
 
 .registro{
     max-width: 1000px;

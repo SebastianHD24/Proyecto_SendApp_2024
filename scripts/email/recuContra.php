@@ -8,13 +8,12 @@ if (!$conn) {
 }
 
 // Expresión regular que establece los requisitos para que la contraseña sea segura
-const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&_\-¡?¿·çºª.:,;=|+#\\/])(?=.{6,})/';
+const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.{6,})/';
 
 // Definir las constantes para los caracteres de la contraseña
 const MAYUSCULAS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const MINUSCULAS = 'abcdefghijklmnopqrstuvwxyz';
 const NUMEROS = '0123456789';
-const ESPECIALES = '!@#$%^&*_\-¿.:,;=|+#';
 
 // Incluir PHPMailer y sus dependencias
 require 'PHPMailer/src/Exception.php';
@@ -29,17 +28,15 @@ function generarContrasena() {
     $mayusculas = MAYUSCULAS;
     $minusculas = MINUSCULAS;
     $numeros = NUMEROS;
-    $especiales = ESPECIALES;
 
     $longitud = 10;
     $contraseña = '';
 
     $contraseña .= $mayusculas[random_int(0, strlen($mayusculas) - 1)];
     $contraseña .= $numeros[random_int(0, strlen($numeros) - 1)];
-    $contraseña .= $especiales[random_int(0, strlen($especiales) - 1)];
 
     for ($i = 0; $i < ($longitud - 3); $i++) {
-        $caracterAleatorio = $mayusculas . $minusculas . $numeros . $especiales;
+        $caracterAleatorio = $mayusculas . $minusculas . $numeros ;
         $contraseña .= $caracterAleatorio[random_int(0, strlen($caracterAleatorio) - 1)];
     }
 
@@ -74,9 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $contrasenaProvisional = generarContrasena();
 
         // Preparar el correo con la nueva contraseña
-        $mensaje = "Contraseña temporal: $contrasenaProvisional <br><br>
-                    Ingrese a su cuenta para cambiar su contraseña<br><br>
-                    Si tiene algún inconveniente, no dude en contactarnos a través de soporte@sendapp.com.co <br><br>
+        $mensaje = "Contrasena provisional: $contrasenaProvisional <br><br>
+                    Ingrese a su cuenta para cambiar su contrasena<br><br>
+                    Si tiene algun inconveniente, no dude en contactarnos a traves de soporte@sendapp.com.co <br><br>
                     Link para volver al login: https://sendapp.com.co/Proyecto_SendApp_2024/Login/login-aprendices/login.php <br><br>
                     NOTA: No responder a este correo";
 
@@ -104,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Contenido del correo
             $mail->isHTML(true);
-            $mail->Subject = 'RECUPERACION DE LA CONTRASEÑA';
+            $mail->Subject = 'RECUPERACION DE LA CONTRASENA';
             $mail->Body    = $mensaje;
 
             // Envía el correo

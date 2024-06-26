@@ -54,7 +54,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 
 <div class="table_div" id="table_div">
     <h1 id="titulo_citas"> Citas Pendientes</h1>
-    <table class="tableCitasPendientes">
+    <table>
         <thead>
             <tr id="tabla_titulos">
                 <th class="th_header">Documento de Identidad</th>
@@ -98,7 +98,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
                             <td><?= $row['documento_identidad'] ?></td>
                             <td><?= $row['nombres'] ?></td>
                             <td><?= $row['apellidos'] ?></td>
-                            <td><button onclick="verDescripcion(<?= $row['id_cita'] ?>);">Descripcion</button></td>
+                            <td><button onclick="verDescripcion(<?= $row['id_cita'] ?>);">Descripción</button></td>
                             <td><?= $row['jornada'] ?></td>
                             <td class="asistio">
                                 <button class="button aceptar<?php if ($accepted || $rejected) echo 'disabled'; ?>" onclick="aceptarCita(<?php echo $row['documento_identidad']; ?>, <?php echo $row['id_cita']; ?>)" <?php if ($accepted || $rejected) echo 'disabled'; ?>>Aceptar</button>
@@ -129,7 +129,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
                                                 <div class="modalA">
                                                     <div class="barra"></div>
                                                     <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                                                    <h1 class="tituloM"></h1>
+                                                    <h1 class="tituloM">success</h1>
                                                     <p class="descripcionM">Cita Rechazada correctamente</p>
                                                 </div>
                                             </div>

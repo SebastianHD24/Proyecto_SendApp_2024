@@ -27,7 +27,7 @@
             <div class="content box-left-top">
                     <div class="description">
                         <h1 class="TextSli1">Vive la experiencia SENA.</h1>
-                        <p class="TextSlipar1">Aprovecha la oportunidad de entrar a estudiar en el Sena CDITI, visualiza las convocatorias en nuestro apartado de áreas/Programa de formación. <br> Aqui encontrataras todas las convocatorias a los programas de formación que tenemos en nuestro centro. </p>
+                        <p class="TextSlipar1">Aprovecha la oportunidad de entrar a estudiar en el Sena CDITI, visualiza las convocatorias en nuestro apartado de áreas/Programa de formación. <br> Aqui encontrarás todas las convocatorias a los programas de formación que tenemos en nuestro centro. </p>
                    
                     </div>
 
@@ -41,7 +41,7 @@
             <div class="content">
                 <div class="description">
                     <h1 class="TextSli2">Explora nuevas perspectivas</h1>
-                    <p class="TextSlipar2">Crea conexiones significativas y desafíate a ti mismo en cada paso del camino. <br>Aprende a interactuar con tus elementos, explora tus conociminetos y descubre tus habilidades.</p>
+                    <p class="TextSlipar2">Crea conexiones significativas y desafíate a ti mismo en cada paso del camino. <br>Aprende a interactuar con tus elementos, explora tus conocimientos y descubre tus habilidades.</p>
                 </div>
                 <img src="./imagenes/Slider-img/certificacion-12062023.jpg" alt="foto2" id="foto2">
                 

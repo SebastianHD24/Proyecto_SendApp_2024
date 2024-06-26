@@ -84,3 +84,155 @@
 [24-Jun-2024 09:23:26 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
 [24-Jun-2024 09:23:26 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
 [24-Jun-2024 09:23:26 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 03:31:50 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:31:56 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 03:32:03 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:03 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:03 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:03 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:03 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:03 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 03:32:13 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:17 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:17 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 03:32:40 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 97
+[26-Jun-2024 03:32:40 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 103
+[26-Jun-2024 11:56:12 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 11:56:17 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:06:16 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:06:27 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:09:25 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:09:31 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:09:51 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:09:54 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:10:06 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:10:36 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:10:43 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:10:46 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 12:40:12 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE usuarios.documento_identidad LIKE ? OR usuarios.nombres LIKE ? OR usuar...' at line 3 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php:23
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php(23): mysqli_prepare()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php(17): require_once('/home/sendappc/...')
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 23
+[26-Jun-2024 14:00:09 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:01:05 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:04 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 100
+[26-Jun-2024 14:02:54 America/Bogota] PHP Warning:  Undefined array key "nombre_rol" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/componentes/created-acounts.php on line 94

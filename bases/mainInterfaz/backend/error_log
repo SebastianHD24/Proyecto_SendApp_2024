@@ -16,3 +16,19 @@ Stack trace:
 #0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php(57): mysqli_stmt_execute()
 #1 {main}
   thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/guardarCita.php on line 57
+[26-Jun-2024 08:32:45 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:32:47 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:32:50 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:32:50 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:34:12 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:34:13 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:34:14 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:35:00 America/Bogota] PHP Parse error:  syntax error, unexpected token "if" in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 36
+[26-Jun-2024 08:35:33 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 34
+[26-Jun-2024 08:36:26 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/mainInterfaz/backend/actualizarPerfil.php on line 34
