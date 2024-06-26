@@ -92,14 +92,64 @@ function ver() {
 ver();
 
 
-function enviarIdPQR() {
-    document.getElementById('id_pqr1').value = id;
-    let modal = document.getElementById("alerta");
+// function enviarIdPQR() {
+//     document.getElementById('id_pqr1').value = id;
+//     let modal = document.getElementById("alerta");
+//     modal.style.display = "flex";
+//     setTimeout(function () {
+//         window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+//     }, 3000);
+// };
+
+let form1 = document.getElementById('miFormulario');
+let modal = document.getElementById("alerta");
+let btnEnviar = document.getElementById("btnEnviar");
+
+btnEnviar.addEventListener('click', function() {
+    // Redirigir a la página especificada en la respuesta del servidor
+    form1.style.display = "none";
     modal.style.display = "flex";
-        setTimeout(function () {
-            window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+    setTimeout(function () {
+        // window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+        modal.style.display = 'none';
+        window.location.reload();
+    }, 2000);
+});
+
+document.getElementById('btnEnviar').addEventListener('click', function(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe inmediatamente
+
+    const form = document.getElementById('miFormulario');
+    const formData = new FormData(form);
+
+    // Enviar datos a la base de datos usando AJAX
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        // Mostrar el contenedor de alerta después de 3 segundos
+        setTimeout(function() {
+            
+            const alerta = document.getElementById('alerta');
+            alerta.style.display = 'flex';
+
+            // Ocultar el contenedor de alerta después de 3 segundos
+            setTimeout(function() {
+                alerta.style.display = 'none';
+                window.location.reload();
+            }, 3000);
         }, 3000);
-    };
+        
+        // Aquí puedes manejar la respuesta del servidor si es necesario
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
 
 function mostrarHistorial(){
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')

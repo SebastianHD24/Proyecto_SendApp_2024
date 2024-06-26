@@ -10,15 +10,12 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        const messageDiv = document.getElementById('alerta');
-        const registerForm = document.getElementById('registerForm');
 
         if (data.success === 6) {
-            registerForm.style.display = 'none';
-            messageDiv.style.display = 'flex';
+            alert("Registro guardado correctamente");
             setTimeout(function() {
                 window.location.href = '../../../../Proyecto_SendApp_2024/interfaces/Administrador/Administrador.php';
-            }, 3000); // 3000 milisegundos = 3 segundos
+            }, 1000); // 3000 milisegundos = 3 segundos
         } else if (data.success === 1) {
             const error = document.getElementById('mensaje_errord');
             const limpiarC = document.getElementById('login-input-user-d');
