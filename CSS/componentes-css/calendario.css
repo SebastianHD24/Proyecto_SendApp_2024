@@ -216,6 +216,21 @@ h3 {
 .eventos tbody tr:hover {
   background-color: #e9e9e9; 
 }
+
+
+/* Estilo para la tabla responsiva en dispositivos móviles */
+@media screen and (max-width: 600px) {
+    .eventos table {
+        display: flex;
+        flex-direction: column;
+    }
+    .eventos table th,
+    .eventos table td {
+        width: 100%; /* Asegura que cada celda ocupe todo el ancho disponible */
+        text-align: left; /* Alineación del texto a la izquierda */
+    }
+}
+
 /* Estilos para la bolita de eventos */
 .dates li.has-event {
   position: relative;

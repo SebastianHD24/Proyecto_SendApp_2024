@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const error3 = document.getElementById('mensaje_errore');
                 error3.textContent = "No se pudo registrar, verifique los campos.";
             } else if (jsonData.success == "6") {
-                alert('Se ha registrado correctamente')
+                alert('Se ha registrado correctamente');
                 window.location.href = "login.php";
 
             } else if (jsonData.success == "7") {
