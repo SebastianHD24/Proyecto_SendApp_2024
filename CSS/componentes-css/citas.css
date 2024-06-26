@@ -136,14 +136,10 @@ table.appointment {
 }
 
 .popup-justificacion {
-    margin-left: 580px;
-    margin-top: 270px;
-    transform: translate(-50%, -50%);
     width: 80%; /* Ajustable según necesidad */
     max-width: 500px; /* Ajustable según necesidad */
     color: black;
     height: auto;
-    max-height: 80%; /* Ajustable según necesidad */
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -208,81 +204,38 @@ table.appointment {
 /* Laptops FHD */
 @media screen and (min-width: 320px) {
 
-    .popup-justificacion {
-        margin-left: 135px;
-        margin-top: 330px;
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 
     #justificacion-Noasistencia-15 {
         width: 200%;
     }
     #contenedorm-descripcion {
-        width: 38%;
-        height: 90%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 }
 @media screen and (min-width: 375px) {
 
-    .popup-justificacion {
-        margin-left: 155px;
-        margin-top: 350px;
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 
     #justificacion-Noasistencia-15 {
         width: 200%;
     }
     #contenedorm-descripcion {
-        width: 30%;
-        height: 90%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 }
 @media screen and (min-width: 425px) {
 
-    .popup-justificacion {
-        margin-left: 180px;
-        margin-top: 370px;
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
 
     #justificacion-Noasistencia-15 {
         width: 200%;
     }
     #contenedorm-descripcion {
-        width: 30%;
-        height: 90%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -294,22 +247,7 @@ table.appointment {
     .notifications p {
         font-size: 1.2rem;
     }
-    .popup-justificacion {
-        margin-left: 340px;
-        margin-top: 330px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 
 
 }
@@ -321,22 +259,7 @@ table.appointment {
     .notifications p {
         font-size: 1.2rem;
     }
-    .popup-justificacion {
-        margin-left: 370px;
-        margin-top: 270px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 }
 
 /* 2k Screens */
@@ -349,22 +272,7 @@ table.appointment {
         font-size: 1.4rem;
     }
 
-    .popup-justificacion {
-        margin-left: 640px;
-        margin-top: 270px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 }
 
 /* 4k Screens */
@@ -377,22 +285,7 @@ table.appointment {
         font-size: 1.4rem;
     }
 
-    .popup-justificacion {
-        margin-left: 950px;
-        margin-top: 270px;
-        transform: translate(-50%, -50%);
-        width: 80%; /* Ajustable según necesidad */
-        max-width: 500px; /* Ajustable según necesidad */
-        color: black;
-        height: auto;
-        max-height: 80%; /* Ajustable según necesidad */
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        text-align: center;
-        overflow-y: auto; /* Para manejar contenido extenso */
-    }
+    
 }
 
 @media screen and (max-width: 518px){
@@ -490,4 +383,10 @@ table.appointment tr.appointment_td td:nth-child(1), td:nth-child(3), td:nth-chi
 
         /* --------------------------------------------------------------------------------- */
         
+}
+
+@media screen and (max-width: 320px){
+    #justificacion-Noasistencia-15{
+        width:100%;
+    }
 }
