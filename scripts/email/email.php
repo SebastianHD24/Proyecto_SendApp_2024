@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
                 SendApp<br><br>
                 NOTA: No responder a este correo";
     
-    if (!empty($correo)) {
+    if (empty($correo)) {
         echo "Error: No se encontró un correo electrónico asociado al documento de identidad.";
     } else {
         $mail = new PHPMailer(true);
@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
     
             // Configuración del email
             $mail->setFrom('noreply@sendapp.com.co', 'SendApp');
-            $mail->addAddress($correo, 'A');
+            $mail->addAddress($correo, '');
     
             // Contenido del correo
             $mail->isHTML(true);
