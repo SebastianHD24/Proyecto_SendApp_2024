@@ -223,7 +223,6 @@ h3 {
 @media screen and (max-width: 600px) {
     .eventos table {
         display: flex;
-        flex-direction: column;
     }
     .eventos table th,
     .eventos table td {

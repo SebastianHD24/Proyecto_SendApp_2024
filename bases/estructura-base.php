@@ -99,7 +99,7 @@
                         <i class="fa-solid fa-right-to-bracket"></i><a href="../../../Proyecto_SendApp_2024/Login/login-aprendices/login.php"><p>Ingreso</p></a>
                     </li>
                     <li id="interfaz-u-responsive" >
-                        <i class="fa-solid fa-circle-user"></i><a onclick="llevarURL();"><p>Perfil</p></a>
+                        <i class="fa-solid fa-circle-user"></i><a onclick="llevarURL();"><p>Interfaz</p></a>
                     </li>
                     <li id="cerrar-sesion-responsive">
                         <i class="fa-solid fa-circle-left"></i><a href="../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php" onclick="cerrarSesion();"><p>Cerrar sesión</p></a>

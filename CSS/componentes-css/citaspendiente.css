@@ -55,7 +55,7 @@ h1#titulo_citas {
 .table_div table{
     overflow: hidden ;
     overflow-x: auto;
-    overflow-y: hidden;   
+    overflow-y: auto;   
     background-color: #00234D;
     margin: 20px;
     border-radius: 10px 10px 0px 0px;
