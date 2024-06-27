@@ -260,58 +260,33 @@ color: white;
   }
 }
 
-@media screen and (max-width: 510px){
-  .aside-visible{
-    width: 45%;
-    gap: 15px;
+@media screen and (max-width: 504px){
+  .cards__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Dos columnas de igual tamaño */
+    grid-template-rows: auto auto auto;  /* Tres filas automáticas */
+    gap: 20px;  /* Espacio entre las cards */
+    grid-template-areas: 
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8"
+      "card9 card9";
+    justify-items: center;  /* Centra el contenido en cada celda */
   }
-
-  .boton-categoria{
-    width: 92%;
+  
+  
+  .cards:nth-child(1) { grid-area: card1; }
+  .cards:nth-child(2) { grid-area: card2; }
+  .cards:nth-child(3) { grid-area: card3; }
+  .cards:nth-child(4) { grid-area: card4; }
+  .cards:nth-child(5) { grid-area: card5; }
+  .cards:nth-child(6) { grid-area: card6; }
+  .cards:nth-child(7) { grid-area: card7; }
+  .cards:nth-child(8) { grid-area: card8; }
+  .cards:nth-child(9) { 
+    grid-area: card9; 
+    justify-self: center;  /* Centra la card en su fila */
   }
+  
 }
-
-@media screen and (max-width: 420px){
-  .aside-visible{
-    width: 50%;
-    gap: 15px;
-  }
-
-  .boton-categoria{
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 400px){
-  .cards{
-      width: 7rem;
-      height: 7rem;
-      padding: 0.8rem;
-      font-size: 12px;
-  }
-
-  .aside-visible{
-    width: 58%;
-    gap: 15px;
-  }
-  .boton-categoria{
-    width: 88%;
-  }
-}
-@media screen and (max-width: 354px) {
-  .cards__container{
-    grid-template-columns: repeat(auto-fill,minmax(85px, 1fr));
-    grid-template-rows: 1fr;
-}
-  .cards{
-      width: 6rem;
-      height: 6rem;
-      padding: 0.8rem;
-      font-size: 12px;
-  }
-
-  .boton-categoria{
-    width: 95%;
-  }
-}
-

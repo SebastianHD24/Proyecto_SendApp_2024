@@ -173,7 +173,7 @@
                 </a>
             </div>
             <!-- Card 12 -->
-            <div class="areas__cards-div"> 
+            <div class="areascards-div"> 
                 <a href="../../Proyecto_SendApp_2024/TecnoParque/TecnoParque.php"> <!--De aqui en adelante me falta cambiar las rutas y ponerlas bien-->
                     <article>
                         <img src="Img/Cards-img/TparqueVerde.png" alt="Tecno Parque Icono">
