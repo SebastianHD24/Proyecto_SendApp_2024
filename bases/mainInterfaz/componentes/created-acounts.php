@@ -183,7 +183,7 @@
       </div>
       <div class="contenedor_secciones">
         
-          <select id="tipo-documento" name="tipo_documento">>
+          <select id="tipo-documento" name="tipo_documento">
                     <option value="CC" <?php if ($row['tipo_documento'] == 'CC') echo 'selected'; ?>>Cédula de Ciudadanía</option>
                     <option value="TI" <?php if ($row['tipo_documento'] == 'TI') echo 'selected'; ?>>Tarjeta de Identidad</option>
                     <option value="DE"<?php if ($row['tipo_documento'] == 'DE') echo 'selected'; ?>>Documento Extranjero</option>

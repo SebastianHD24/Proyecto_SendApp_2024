@@ -225,7 +225,7 @@ $stmt->close();
     <div class="modalA">
         <div class="barra"></div>
         <h1 class="tituloM">Error:</h1>
-        <p class="descripcionM">¡Sucedio un incoveniente!</p>
+        <p class="descripcionM">¡Sucedió un incoveniente!</p>
     </div>
 </div>
 </main> 

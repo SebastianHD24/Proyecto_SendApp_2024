@@ -47,18 +47,18 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><button onclick="verDescripcion2(<?= $row['id_cita'] ?>);">Descripcion</button></td>
+                        <td><button onclick="verDescripcion2(<?= $row['id_cita'] ?>);">Descripción</button></td>
                         <td><?= $row['confirmacion'] ?></td>
                         <td><?= $row['jornada'] ?></td>
                         
             <?php
                 }
             } elseif ($search_term_asistidas != '' && mysqli_num_rows($result) == 0){
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";  
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";  
             } 
             
             else {
-                echo "<tr><td colspan='6'>No se encontraron citas donde hayan asistido.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontraron citas donde haya asistido.</td></tr>";
             }
             // mysqli_close($conn);
             ?>

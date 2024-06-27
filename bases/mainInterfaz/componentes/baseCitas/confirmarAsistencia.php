@@ -49,7 +49,7 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><button onclick="verDescripcion4(<?= $row['id_cita'] ?>);">Descripcion</button></td>
+                        <td><button onclick="verDescripcion4(<?= $row['id_cita'] ?>);">Descripción</button></td>
                        
                         <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
@@ -62,7 +62,7 @@
                                     <div class="barra"></div>
                                     <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
                                     <h1 class="tituloM"></h1>
-                                    <p class="descripcionM">Asistencia confirmada con exito</p>
+                                    <p class="descripcionM">Asistencia confirmada con éxito</p>
                                 </div>
                             </div>
                             
@@ -91,7 +91,7 @@
                                                 <div class="barra"></div>
                                                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
                                                 <h1 class="tituloM"></h1>
-                                                <p class="descripcionM">Justificacion inasistencia enviada</p>
+                                                <p class="descripcionM">Justificación inasistencia enviada</p>
                                             </div>
                                         </div>
                                     </form>
@@ -103,7 +103,7 @@
             <?php
                 }
             } elseif ($search_confirmarCitas != '' && mysqli_num_rows($result) == 0) {
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";
             }
             
             else {

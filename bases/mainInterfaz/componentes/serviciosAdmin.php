@@ -64,7 +64,7 @@
             <div class="popUpSeguro">
                 <h4>¿Está seguro de realizar los cambios?</h4>
                 <div id="botones">
-                    <button class="confirmacionAd afir">Si</button>
+                    <button class="confirmacionAd afir">Sí</button>
                     <button class="confirmacionAd nega">No</button>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="modalA">
                 <div class="barra"></div>
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                <h1 class="tituloM">success</h1>
+                <h1 class="tituloM">Éxito</h1>
                 <p class="descripcionM">¡Actualización exitosa!</p>
             </div>
         </div>

@@ -66,7 +66,7 @@ LIMIT 6;
                                     <th class="header_th">Hora</th>
                                     <th class="header_th">Estado</th>
                                     <th class="header_th">Jornada</th>
-                                    <th class="header_th">Confirmacion</th>
+                                    <th class="header_th">Confirmación</th>
                                     <th class="header_th">Funcionario</th>
                                 </tr>
                             </thead>

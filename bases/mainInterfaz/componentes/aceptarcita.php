@@ -64,7 +64,7 @@
             <div class="button_citas">
             <button type="submit">Aceptar</button>
 
-            <a href="?p=citaspendiente" class="cancelar-button"> cancelar</a>
+            <a href="?p=citaspendiente" class="cancelar-button"> Cancelar</a>
 
             </div>
         </form>

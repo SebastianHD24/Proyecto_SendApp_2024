@@ -66,7 +66,7 @@
             <?php
                 }
             } elseif ($search_term_rechazadas != '' && mysqli_num_rows($result) == 0) {
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";
             } 
             
             else {

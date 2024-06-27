@@ -115,7 +115,7 @@
                 <div class="barra"></div>
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
                 <h1 class="tituloM"></h1>
-                <p class="descripcionM">¡Respuesta enviada con exito!</p>
+                <p class="descripcionM">¡Respuesta enviada con éxito!</p>
             </div>
         </div>
     </div>
