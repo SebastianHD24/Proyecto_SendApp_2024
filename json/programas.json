@@ -1,0 +1,17 @@
+[
+    { "id": 1, "name": "Tecnólogo en Análisis y desarrollo de software" },
+    { "id": 2, "name": "Tecnólogo en Desarrollo de colecciones para la industria de la moda" },
+    { "id": 3, "name": "Tecnólogo en Producción de medios audiovisuales digitales" },
+    { "id": 4, "name": "Tecnólogo en Mantenimiento mecatrónico de automotores" },
+    { "id": 5, "name": "Tecnólogo en Electricidad industrial" },
+    { "id": 6, "name": "Tecnólogo en Mantenimiento electromecanico industrial" },
+    { "id": 7, "name": "Técnico en Instalación de sistemas électricos residenciales y comerciales" },
+    { "id": 8, "name": "Técnico en Programación de software" },
+    { "id": 9, "name": "Técnico en Contrucciones livianas industrializadas en seco" },
+    { "id": 10, "name": "Técnico en Dibujo digital de arquitectura e ingeniería" },
+    { "id": 11, "name": "Técnico en Mecanizado en torno y fresadora comercial" },
+    { "id": 12, "name": "Técnico en Patronaje industrial de prendas de vestir" },
+    { "id": 13, "name": "Técnico en Marketing digital para el sistema de la moda" },
+    { "id": 14, "name": "Técnico en Mantenimiento en equipos de aires acondicionados y refrigeración" }
+  ]
+  
