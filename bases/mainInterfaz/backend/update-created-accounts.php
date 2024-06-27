@@ -40,7 +40,7 @@ if ($result_current_email) {
     exit();
 }
 
-// Verificar si el correo ha cambiado
+// Verificar si el documento ha cambiado
 $query_current_document = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$documento_identidad'";
 $result_current_document = mysqli_query($conn, $query_current_document);
 
@@ -50,7 +50,7 @@ if ($result_current_document) {
 
     if ($current_document !== $nuevo_documento_identidad) {
         // El correo ha cambiado, verificar si el nuevo correo ya existe en la base de datos
-        $query_check_document = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$documento_identidad'";
+        $query_check_document = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$nuevo_documento_identidad'";
         $result_check_document = mysqli_query($conn, $query_check_document);
 
         if (mysqli_num_rows($result_check_document) > 0) {
