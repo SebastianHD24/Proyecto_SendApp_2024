@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
 
     $mensaje = "Estimado/a $nombres:<br><br>
     Esperamos que se encuentre bien.<br><br>
-    Nos dirigimos a usted en relación con su cita. Nos complace informarle que hemos procesado su cita; por favor, diríjase a nuestro sitio web para conocer los detalles.<br><br>
+    Nos dirigimos a usted en relación con su cita. Nos complace informarle que hemos procesado su solicitud; por favor, diríjase a nuestro sitio web para conocer los detalles.<br><br>
     Agradecemos su paciencia y comprensión durante este proceso. Si tiene alguna pregunta adicional o necesita más información, no dude en contactarnos a través de soporte@sendapp.com.co.<br><br>
     Estamos comprometidos en brindarle el mejor servicio posible y valoramos sus comentarios y sugerencias.<br><br>
     Atentamente,<br>

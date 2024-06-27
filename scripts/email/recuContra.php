@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Preparar el correo con la nueva contraseña
         $mensaje = "Contrasena provisional: $contrasenaProvisional <br><br>
                     Ingrese a su cuenta para cambiar su contrasena<br><br>
-                    Si tiene algun inconveniente, no dude en contactarnos a traves de soporte@sendapp.com.co <br><br>
+                    Si tiene algún inconveniente, no dude en contactarnos a través de soporte@sendapp.com.co <br><br>
                     Link para volver al login: https://sendapp.com.co/Proyecto_SendApp_2024/Login/login-aprendices/login.php <br><br>
                     NOTA: No responder a este correo";
 

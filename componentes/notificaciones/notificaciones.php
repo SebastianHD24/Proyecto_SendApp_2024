@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>notificaciones</title>
+    <title>Notificaciones</title>
 </head>
 <body>
 <!----------------------------Contenedor principal de notificaiones-------------------------------->
@@ -50,7 +50,7 @@
             </figure>
                 <!--Contenedor de texto sobre la petición-->
                 <article class="article__text--1">
-                    <p>Atención a su solicitud de QPR.</p>
+                    <p>Atención a su solicitud de PQR.</p>
                 </article>
             <span></span>
                 <button type="button" class="show__details--button" id="showDetailsButton">
@@ -74,7 +74,7 @@
             </article>
         </div>
         <div class="text">
-                <p>Estimado usuario en atención a su <b>PQR con Bienestar al aprendiz del día: 25/08/2024 </b> en que fue realizada, nos permitimos informarle que su solicitud ya a sido procesada, teniendo en cuenta lo anterior su cita para el <b> dia 24/08/2024 a  las 10:30 a.m</b> con Bienestar al aprendiz no pudo ser agenda  por motivos de disponibilidad horaria, ya que contamos con un gran número de citas registradas para el mismo día, por lo tanto su cita será reagendada para el <b>día 02/09/2024 a la 11:00 a.m</b> con el funcionario <b>Jorge Padilla</b>.
+                <p>Estimado usuario en atención a su <b>PQR con Bienestar al aprendiz del día: 25/08/2024 </b> en que fue realizada, nos permitimos informarle que su solicitud ya ha sido procesada, teniendo en cuenta lo anterior su cita para el <b> dia 24/08/2024 a  las 10:30 a.m</b> con Bienestar al aprendiz no pudo ser agendada por motivos de disponibilidad horaria, ya que contamos con un gran número de citas registradas para el mismo día, por lo tanto su cita será reagendada para el <b>día 02/09/2024 a la 11:00 a.m</b> con el funcionario <b>Jorge Padilla</b>.
                 </p>
         </div>
         <div class="button__action">
