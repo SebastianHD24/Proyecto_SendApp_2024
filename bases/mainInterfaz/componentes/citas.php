@@ -89,7 +89,7 @@ LIMIT 6;
                                         echo 'No asistió - 
                                         <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
                                     }else {
-                                        echo empty($row['confirmacion']) ? "aún no se ha hecho " : $row['confirmacion']; 
+                                        echo empty($row['confirmacion']) ? "Pendiente " : $row['confirmacion']; 
                                     }
                                     ?></td>
                                     <td data-label="Funcionario: "><?= htmlspecialchars($row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita']) ?></td>

@@ -1,5 +1,5 @@
 <div class="table_div" >  
-    <h1 id="titulo_citas">Citas Asistidas</h1>  
+    <h1 id="titulo_citas">Citas asistidas</h1>  
     <table>
         <thead>
             <tr id="tabla_titulos">
