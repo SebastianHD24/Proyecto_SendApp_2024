@@ -1,5 +1,6 @@
 let btnEnviar = document.getElementById("btnEnviar");
-let modal = document.getElementById("alerta");
+let modal1 = document.getElementById("alerta");
+let modal2 = document.getElementById("alerta2");
 let formPQR = document.getElementById('mainContent');
 let tituloModal = document.querySelector(".tituloM");
 let descripcionModal = document.querySelector(".descripcionM");
@@ -19,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verificar si la descripción está vacía
         if (descripcion === "") {
             // Mostrar el modal con el mensaje de error
-            tituloModal.textContent = "Error";
-            descripcionModal.textContent = "Debes agregar una descripción de tu PQRS";
-            modal.style.display = "flex";
+            // tituloModal.textContent = "Error";
+            // descripcionModal.textContent = "Debes agregar una descripción de tu PQRS";
+            modal2.style.display = "flex";
             
             setTimeout(function () {
                 location.reload();
@@ -42,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Manejar la respuesta del servidor aquí
                 if (data.success == 2) {
                     // Mostrar el modal con el mensaje de éxito
-                    tituloModal.textContent = "¡Éxito!";
-                    descripcionModal.textContent = "¡PQR enviada con éxito!";
-                    modal.style.display = "flex";
+                    // tituloModal.textContent = "¡Éxito!";
+                    // descripcionModal.textContent = "¡PQR enviada con éxito!";
+                    modal1.style.display = "flex";
                     formPQR.style.display = "none";
 
                     setTimeout(function () {

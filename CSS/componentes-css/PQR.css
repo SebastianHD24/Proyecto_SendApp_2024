@@ -121,20 +121,24 @@ textarea{
 
 #alerta2 .modalA{
     width: 25rem;
-    height: 16rem;
+    height: 13rem;
     background-color: aliceblue;
     border-radius: 20px;
     position: absolute;
 }
 
 #alerta2 .barra{
-    background-color: #00a500;
+    background-color: #E72827;
     width: 100%;
     height: 2rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
+
+#alerta2 .tituloM{
+    color: #E72827;
+}
 
 /* -------------------------------------------- */
 .modalA{
