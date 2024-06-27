@@ -133,6 +133,12 @@ body{
 .TextSli2 {
     color: var(--azul);
 }
+.TextSlipar1{
+    text-align: right;
+}
+.TextSlipar2{
+    text-align: center;
+}
 .description h1,p{
     font-size: 0.9rem;
     padding: 0px 25px 10px 0px;

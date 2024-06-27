@@ -183,14 +183,24 @@ hr{
     margin-top: 20px; 
 }
 @media only screen and (max-width: 720px) {
-    .contenido{
-        padding: 30px;
+
+    .tarjeta{
+        gap: 1.2rem;
+        margin: 4rem 1rem 2.5rem 1.1rem;
+        padding: 15px;
+    }
+    .Contenido{
+        width: 100%;
+        padding: 23px 23px 23px 23px;  
     }
     .titulo{
         font-size: 30px;
     }
     .tarj-img {
         width: 100%; 
+    }
+    .tarjeta{
+        padding: 15px;
     }
 
     .contenido_tarjeta {
