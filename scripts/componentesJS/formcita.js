@@ -103,3 +103,18 @@ divsCards.forEach(function(divCards) {
     divCards.addEventListener('mouseover', cambiarTextoServicioDeshabilitado);
     divCards.addEventListener('mouseout', restablecerTextoAgendarCita);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('formularioo');
+    const descripcionField = document.getElementById('descripcion');
+    const alerta2 = document.getElementById('alerta2');
+    const alerta2Descripcion = alerta2.querySelector('.descripcionM');
+
+    form.addEventListener('submit', function(event) {
+        if (descripcionField.value.trim() === "") {
+            event.preventDefault();
+            alerta2Descripcion.textContent = "Error: El campo descripción no está lleno.";
+            alerta2.style.display = 'block'; // Mostrar alerta de error
+        }
+    });
+});
