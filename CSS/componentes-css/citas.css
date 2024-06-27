@@ -313,16 +313,16 @@ table.appointment {
 }
 
 /* Ocultar las filas de encabezado */
-thead {
+/* thead {
     display: none;
-}
+} */
 
 /* Estilo para cada fila de datos */
-tbody {
-    /* display: flex;
+/* tbody {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap; */
-}
+    flex-wrap: wrap;
+} */
 
 .appointment_td {
     display: flex;
