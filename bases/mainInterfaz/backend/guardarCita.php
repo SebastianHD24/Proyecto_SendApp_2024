@@ -45,6 +45,11 @@ if ($jornada === null || $descripcion === null || $usuario_f === null) {
     exit();
 }
 
+if (empty($descripcion)) {
+    echo json_encode(['success' => 0, 'message' => 'Error: El campo descripción no está lleno.']);
+    exit();
+}
+
 $estado_cita = 'pendiente'; // Estado predeterminado para la cita
 
 // Uso de declaración preparada para evitar inyección SQL

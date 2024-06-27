@@ -125,11 +125,11 @@ elseif (isset($_GET['search-confirmarCitas'])) {
                                                 <!-- Botón para enviar el formulario -->
                                                 <button type="button" onclick="submitForm(<?= $row['id_cita'] ?>)" class="button danger <?php if ($accepted || $rejected) echo 'disabled'; ?>">Enviar</button>
                                             </div>
-                                            <div class="alerta" id="alerta">
+                                            <div class="alerta" id="alerta" style="display: none;">
                                                 <div class="modalA">
-                                                    <div class="barra"></div>
-                                                    <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                                                    <h1 class="tituloM">success</h1>
+                                                    <div class="barra" style="background-color: #E72827;"></div>
+                                                    <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cancelar.png" alt="check">
+                                                    <h1 class="tituloM"></h1>
                                                     <p class="descripcionM">Cita Rechazada correctamente</p>
                                                 </div>
                                             </div>

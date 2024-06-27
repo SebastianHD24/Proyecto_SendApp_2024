@@ -39,7 +39,7 @@ function submitAcceptanceForm(id) {
 function submitCancellationForm(id) {
     // Bloquear todos los botones
     blockAllButtons(id);
-    const alerta = document.getElementById('alerta');
+    const alerta2 = document.getElementById('alerta2');
     var justificacion = document.getElementById('justificacion_cancelacion_' + id).value;
 
     fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/cancelarcita.php', {
@@ -51,7 +51,8 @@ function submitCancellationForm(id) {
     })
     .then(function(response) {
         if (response.ok) {
-            alerta.style.display = 'flex';
+            // alert("Motivo de inasistencia enviado con exito :)");
+            alerta2.style.display = 'flex';
             setTimeout(function() {
                 window.location.reload(); // Recargar la página
             }, 2000);
@@ -100,7 +101,7 @@ function mostrarFormularioRechazo(id) {
 function submitForm(id) {
     // Invocar a la función de envío de rechazo
     submitRejectionForm(id);
-    var modal = document.getElementById('modal_' + id);
+    // var modal = document.getElementById('modal_' + id);
     modal.style.display = "none";
     alert('La cita ha sido rechazada')
     window.location.reload(); // Recargar la página
@@ -139,10 +140,15 @@ function aceptarCita(documento, id_cita) {
 }
 
 function confirmarCita(id) {
+    const alerta1 = document.getElementById('alerta1');
     fetch('../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/confirmarcita.php?id_cita=' + id)
         .then(function(response) {
             if (response.ok) {
-                window.location.reload();
+                alerta1.style.display = 'flex';
+                setTimeout(function() {
+                    window.location.reload(); // Recargar la página
+                }, 2000);
+                
             } else {
                 console.log('Error al confirmar la cita');
             }

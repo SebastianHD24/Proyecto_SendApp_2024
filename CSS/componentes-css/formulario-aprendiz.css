@@ -31,7 +31,7 @@
 }
 .second-container{
     padding: 2em;
-    height: 67rem;
+    height: 63rem;
 }
 .login_img{
     width: 10rem;
@@ -130,54 +130,14 @@
     margin: 18px 0px 30px 0px;
 }
 
-/* @media screen and (max-width: 704px ){
-    .btn-actu{
-        width: 7.2rem;
-    }
-    .main-form{
-        gap: 0;
-
-    }
-    
-    
-}
-
 @media screen and (max-width: 945px) {
-    .first-section, .second-section{
-        width: 20rem;
+    
+    .second-container{
+        padding: 2em;
+        height: 80rem;
     }
-    .button-perfil{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .second-section .btn-cambiar{
-        margin-top: 0.1rem;
-        margin-bottom: 20px;
-    }
-    .main-form{
-        gap: 1px;
-        height: 105vh;
-        overflow: auto;
-    }
-
 }
 
-@media screen and (min-width: 1024px) {
-    .first-section, .second-section{
-        width: 22.4rem;
-    }
-
-    
-}
-@media screen and (min-width: 1440px) {
-    .first-section, .second-section{
-        width: 30rem;
-    }
-
-    
-} */
 
 /* CAMBIAR CONTRASEÑA */
 

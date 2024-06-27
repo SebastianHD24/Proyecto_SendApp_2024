@@ -52,7 +52,7 @@ aside{
     display: flex;
     flex-direction: column;
     /* justify-content: end; */
-    padding-top: 8rem;
+    padding-top: 4rem;
     padding-left: 2em;
     /* overflow-x: hidden; */
     /* overflow-y: auto; */
@@ -210,9 +210,35 @@ main{
     display: none !important;
 }
 
+/*nombre del rol */
+#verRolo{
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@media only screen and (max-width: 945px){
+    aside {
+        padding-top: 4.5rem;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     main{
         padding: 1.5rem 0rem 3rem;
         margin: 5%;
+    }
+}
+
+@media only screen and (max-width: 510px){
+    #verRolo h1{
+        display: none;
     }
 }
