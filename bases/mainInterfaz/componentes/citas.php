@@ -72,10 +72,10 @@ LIMIT 6;
                             </thead>
                             <tbody>
                                 <tr class="appointment_td">
-                                    <td><?= htmlspecialchars($row['nombre_servicio']) ?></td>
-                                    <td><?= empty($row['fecha']) ? "Aún no te han asignado el día" : htmlspecialchars($row['fecha']) ?></td>
-                                    <td><?= empty($row['hora']) ? "Aún no te han asignado hora" : htmlspecialchars($row['hora']) ?></td>
-                                    <td><?php
+                                    <td data-label="Área: "><?= htmlspecialchars($row['nombre_servicio']) ?></td>
+                                    <td data-label="Día: "><?= empty($row['fecha']) ? "Aún no te han asignado el día" : htmlspecialchars($row['fecha']) ?></td>
+                                    <td data-label="Hora: "><?= empty($row['hora']) ? "Aún no te han asignado hora" : htmlspecialchars($row['hora']) ?></td>
+                                    <td data-label="Estado: "><?php
                                     if ($row['estado_cita']== 'rechazado'){
                                         echo 'rechazado  -
                                         <a class="verJustificacion" id="verJustificacion" onclick="verRechazos(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
@@ -83,8 +83,8 @@ LIMIT 6;
                                         echo  $row['estado_cita'];
                                     } 
                                     ?></td>
-                                    <td><?= htmlspecialchars($row['jornada']) ?></td>
-                                    <td><?php
+                                    <td data-label="Jornada: "><?= htmlspecialchars($row['jornada']) ?></td>
+                                    <td data-label="Confirmación: "><?php
                                     if($row['confirmacion']== 'No asistió'){
                                         echo 'No asistió - 
                                         <a id="verconfirmacion" onclick="Vermotivo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
@@ -92,14 +92,14 @@ LIMIT 6;
                                         echo empty($row['confirmacion']) ? "aún no se ha hecho " : $row['confirmacion']; 
                                     }
                                     ?></td>
-                                    <td><?= htmlspecialchars($row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita']) ?></td>
+                                    <td data-label="Funcionario: "><?= htmlspecialchars($row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita']) ?></td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr class="reason">
                                     
                                     <th colspan="7"><h4>Motivo de la cita: </h4>
-                                        <p class="" colspan="7"><?= htmlspecialchars($row['descripcion']) ?></p>
+                                        <p><?= htmlspecialchars($row['descripcion']) ?></p>
                                     </th>
                                                                 
                                 </tr>
@@ -211,10 +211,10 @@ if (isset($_SESSION['documento_identidad'])) {
                             </thead>
                             <tbody>
                                 <tr class="appointment_td">
-                                    <td><?= htmlspecialchars($row['nombre_servicio']) ?></td>
-                                    <td><?= empty($row['fecha']) ? "Aún no te han asignado el día" : htmlspecialchars($row['fecha']) ?></td>
-                                    <td><?= empty($row['hora']) ? "Aún no te han asignado hora" : htmlspecialchars($row['hora']) ?></td>
-                                    <td><?php
+                                    <td data-label="Área: "><?= htmlspecialchars($row['nombre_servicio']) ?></td>
+                                    <td data-label="Día: "><?= empty($row['fecha']) ? "Aún no te han asignado el día" : htmlspecialchars($row['fecha']) ?></td>
+                                    <td data-label="Hora: "><?= empty($row['hora']) ? "Aún no te han asignado hora" : htmlspecialchars($row['hora']) ?></td>
+                                    <td data-label="Estado: "><?php
                                     if ($row['estado_cita']== 'rechazado'){
                                         echo 'rechazado  -
                                         <a class="verJustificacion" id="verJustificacion" onclick="verRechazo(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver justificación</a>';
@@ -222,8 +222,8 @@ if (isset($_SESSION['documento_identidad'])) {
                                         echo  $row['estado_cita'];
                                     } 
                                     ?> </td>
-                                    <td><?= htmlspecialchars($row['jornada']) ?></td>
-                                    <td><?php
+                                    <td data-label="Jornada: "><?= htmlspecialchars($row['jornada']) ?></td>
+                                    <td data-label="Confirmación: "><?php
                                     if($row['confirmacion']== 'No asistió'){
                                         echo 'No asistió - 
                                         <a id="verconfirmacion" onclick="Vermotivos(' . $row['id_cita'] . ');" style="color:blue; cursor: pointer;">Ver Motivo </a> ';
@@ -231,7 +231,7 @@ if (isset($_SESSION['documento_identidad'])) {
                                         echo empty($row['confirmacion']) ? "aún no se ha hecho " : $row['confirmacion']; 
                                     }
                                     ?></td>
-                                    <td><?= htmlspecialchars($row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita']) ?></td>
+                                    <td data-label="Funcionario: "><?= htmlspecialchars($row['nombre_funcionario_cita'] . ' ' . $row['apellido_funcionario_cita']) ?></td>
                                 </tr>
                             </tbody>
                             <tfoot>
