@@ -7,12 +7,25 @@ include '../../../../Proyecto_SendApp_2024/bases/sesion_start.php';
 $conn = connection();
 $funcionario = $_SESSION["documento_identidad"];
 
+// Función para convertir el número del mes en su nombre en texto
+function obtenerNombreMes($numMes) {
+    $meses = [
+        1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo",
+        6 => "Junio", 7 => "Julio", 8 => "Agosto", 9 => "Septiembre",
+        10 => "Octubre", 11 => "Noviembre", 12 => "Diciembre"
+    ];
+    return $meses[$numMes];
+}
+
 // Verificar si se ha enviado un día, mes y año 
 if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     // Obtener el día, mes y año 
     $day = $_GET['day'];
     $month = $_GET['month'];
     $year = $_GET['year'];
+
+    // Obtener el nombre del mes en texto
+    $nombreMes = obtenerNombreMes($month);
 
     // Formatear la fecha para que coincida con el formato en la base de datos (YYYY-MM-DD) 
     $fecha = sprintf("%04d-%02d-%02d", $year, $month, $day);
@@ -28,7 +41,7 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
     // Verificar si hay resultados 
     if (mysqli_num_rows($result) > 0) {
         // Mostrar los eventos debajo del calendario 
-        echo "<h2>Eventos</h2>";
+        echo "<h2>Citas del día $day de $nombreMes</h2>";
         echo "<table border='1'>";
         echo "<tr><th>Más información</th><th>Hora</th><th>Nombre</th><th>Correo</th><th>Celular</th></tr>";
         while ($row = mysqli_fetch_assoc($result)) {
@@ -57,3 +70,5 @@ if (isset($_GET['day']) && isset($_GET['month']) && isset($_GET['year'])) {
 } else {
     echo "Datos insuficientes.";
 }
+
+

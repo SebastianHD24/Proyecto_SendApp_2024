@@ -43,7 +43,7 @@
             <div class="barra" ></div>
             <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cancelar.png" alt="check">
             <h1 class="tituloM">¡Error!</h1>
-            <p class="descripcionM">Debes agregar una descripción de tu PQRS</p>
+            <p class="descripcionM">Debes agregar una descripción de tu PQR</p>
         </div>
     </div>
 </form>
