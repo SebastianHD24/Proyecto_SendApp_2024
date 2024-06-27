@@ -46,7 +46,7 @@ if ($jornada === null || $descripcion === null || $usuario_f === null) {
 }
 
 if (empty($descripcion)) {
-    echo json_encode(['success' => 0, 'message' => 'Error: El campo descripción no está lleno.']);
+    echo json_encode(['success' => 0, 'message' => 'El campo descripción no está lleno.']);
     exit();
 }
 

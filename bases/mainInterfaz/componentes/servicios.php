@@ -224,7 +224,6 @@ $stmt->close();
 <div class="alerta" id="alerta2">
     <div class="modalA">
         <div class="barra"></div>
-        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/LogoSenaVerde.png" alt="error">
         <h1 class="tituloM">Error al pedir la cita</h1>
         <p class="descripcionM">¡Sucedio un incoveniente!</p>
     </div>
