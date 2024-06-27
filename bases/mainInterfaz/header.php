@@ -66,6 +66,9 @@
                 
             <nav class="navbar">
                 <ul class="menu">
+                    <li>
+                        <button id="verRolo"><h1> <?= $tituloPesta���a ?></h1></button>
+                    </li>
                     <?php if ($id_rol != 1): ?>
                         <li>
                             <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> <p class="letras-menuHamburg-lateral">Inicio</p> </button></a>

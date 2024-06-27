@@ -1,5 +1,5 @@
             <!-- Contenedor del formulario de los datos de su cuenta -->
-             <?php
+            <?php
                 $documentos = [
                     'CC' => 'Cédula de Ciudadanía', 
                     'TI' => 'Tarjeta de Identidad', 
@@ -46,12 +46,10 @@
                                     disabled
                                 <?php endif; ?>
                                 placeholder="Su 'nombre'" id="nombre">
-                                <label for="form_input" class="form_input">Apellidos:</label>
-                                <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>"
-                                <?php if ($id_rol != 1): ?>
-                                    disabled
+                                <?php if ($id_rol == 1): ?>
+                                    <label for="form_input" class="form_input">Apellidos:</label>
+                                    <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" placeholder="Su(s) 'apellido(s)'" id="apellidos">
                                 <?php endif; ?>
-                                placeholder="Su(s) 'apellido(s)'" id="apellidos">
                                 <label for="form_input" class="form_input">Correo Electrónico:</label>
                                 <span class="inputCorreo oculto" style="color: red;"></span>
                                 <input type="email" name="correo" class="edit_input" value="<?= $row_user['correo']?>" id="correo" required placeholder="Correo electronico para contactarlo">
@@ -86,6 +84,8 @@
                                         $ficha = "No pertenece a ninguna ficha";
                                     }
                                 ?>
+                                    <label for="form_input" class="form_input">Apellidos:</label>
+                                    <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'" id="apellidos">
                                     <label for="form_input" class="form_input">Programa:</label>
                                     <input type="text" name="programa" class="edit_input" value="<?= $programa?>" disabled placeholder="Programa en el que estudia">   
                                     <label for="form_input" class="form_input">Ficha:</label>
@@ -108,10 +108,10 @@
                                         $area = "No perteneces a ningun servicio";       
                                     endif;
                                 ?>
+                                    <label for="form_input" class="form_input">Apellidos:</label>
+                                    <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'" id="apellidos">
                                     <label for="form_input" class="form_input">Servicio:</label>
                                     <input type="text" name="servicio" class="edit_input" value="<?= $area ?>" disabled placeholder="Servicio al que pertenece">
-                                    <label for="form_input" class="form_input">Apellidos:</label>
-                                    <input type="text" name="apellidos" class="edit_input" value="<?= $row_user['apellidos']?>" disabled placeholder="Su(s) 'apellido(s)'">
                                     <button type="button" class="btn-cambiar" id="btnCambiar">Cambiar Contraseña</button>
                                 
                                 <?php endif; ?>

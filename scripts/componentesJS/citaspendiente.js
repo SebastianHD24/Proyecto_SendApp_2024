@@ -100,7 +100,7 @@ function mostrarFormularioRechazo(id) {
 function submitForm(id) {
     // Invocar a la función de envío de rechazo
     submitRejectionForm(id);
-    var modal = document.getElementById('modal_' + id);
+    // var modal = document.getElementById('modal_' + id);
     modal.style.display = "none";
     alert('La cita ha sido rechazada')
     window.location.reload(); // Recargar la página

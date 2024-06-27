@@ -216,6 +216,19 @@ main{
     }
 }
 
+/*nombre del rol */
+#verRolo{
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
 @media only screen and (max-width: 768px) {
     main{
         padding: 1.5rem 0rem 3rem;
