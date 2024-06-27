@@ -1,5 +1,5 @@
 <div class="table_div" id="table_rechazadas"> 
-    <h1 id="titulo_citas"> Citas Rechazadas</h1>  
+    <h1 id="titulo_citas"> Citas rechazadas</h1>  
     <table>
         <thead>
             <tr id="tabla_titulos">

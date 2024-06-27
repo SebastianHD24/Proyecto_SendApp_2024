@@ -36,9 +36,9 @@ elseif (isset($_GET['search-confirmarCitas'])) {
     <ul class="ul-citaspendientes">
         <li><a class="Regresar" href="javascript:void(0);" onclick="volver();">Citas Pendientes</a></li>
         <li><a class="citasRechazadas" href="javascript:void(0);"  onclick="ocultarTablaYMostrarRechazadas();"   >Citas rechazadas</a></li>
-        <li><a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas  asistidas</a></li>
-        <li><a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas No-asistidas</a></li>
-        <li><a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar Asistencia</a></li>
+        <li><a class="citasAsistidas"   href="javascript:void(0);" onclick="ocultarTablaYMostrarAsistidas();" >Citas asistidas</a></li>
+        <li><a class="citasNoAsistidas" href="javascript:void(0);" onclick="ocultarTablaYMostrarNoAsistida();"  >Citas no asistidas</a></li>
+        <li><a class="confirmarCitas" href="javascript:void(0);" onclick="ocultarTablaYMostrarConfirmarAsistencia();">Confirmar asistencia</a></li>
     </ul>
 </nav>
 
@@ -53,7 +53,7 @@ elseif (isset($_GET['search-confirmarCitas'])) {
 <!-- <h1 id="titulo_citas">Citas pendientes</h1> -->
 
 <div class="table_div" id="table_div">
-    <h1 id="titulo_citas"> Citas Pendientes</h1>
+    <h1 id="titulo_citas"> Citas pendientes</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">
