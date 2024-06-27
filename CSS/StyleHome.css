@@ -133,7 +133,10 @@ body{
 .TextSli2 {
     color: var(--azul);
 }
-    
+.description h1,p{
+    font-size: 0.9rem;
+    padding: 0px 25px 10px 0px;
+}
 @media (max-width: 834px){
     .splitview{
     display: none;
@@ -217,7 +220,7 @@ body{
 
 @media (max-width: 900px) {
     .description h1,p {
-        font-size: 60%;
+        font-size: 0.9rem
     }
     .panel img {
         box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -251,7 +254,7 @@ body{
     
 @media (max-width: 435px) {
     .description h1,p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
     .panel img {
         box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -334,6 +337,7 @@ body{
 /*Parrafo introductorio*/
 .content__parrafos-titulos p{
     font-size: 0.9rem;
+    padding: 0px 25px 10px 25px;
 }
 
 /* Contenedor de parrafos informativos en la parte sperior */
@@ -458,7 +462,7 @@ body{
 }
 
 .seccion-escudo_bandera img{
-    width: 50vh;
+    width: 60%;
     height: auto;
 }
 h1{
