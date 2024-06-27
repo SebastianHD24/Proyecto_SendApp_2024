@@ -33,8 +33,17 @@
         <div class="modalA">
             <div class="barra"></div>
             <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-            <h1 class="tituloM"></h1>
+            <h1 class="tituloM">¡Éxito!</h1>
             <p class="descripcionM">¡PQR enviada con éxito!</p>
+        </div>
+    </div>
+
+    <div class="alerta" id="alerta2" >
+        <div class="modalA">
+            <div class="barra" ></div>
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cancelar.png" alt="check">
+            <h1 class="tituloM">¡Error!</h1>
+            <p class="descripcionM">Debes agregar una descripción de tu PQRS</p>
         </div>
     </div>
 </form>
@@ -56,3 +65,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 </script>
+
