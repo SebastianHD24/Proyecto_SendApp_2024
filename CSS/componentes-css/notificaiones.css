@@ -18,6 +18,15 @@ body{
     gap: 30px;
     padding: 30px 0px 30px 0px;
 }
+.notifications-container-h{
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    /* border: 1px solid #000; */
+    border-radius: 36px;
+    gap: 30px;
+    padding: 30px 0px 30px 0px;
+}
 
 /********************* Estilos del contenedor con la informacioón de las notificaciones **********************/
 .notifications-box{
@@ -195,6 +204,11 @@ body{
         width: 525px;
         padding: 20px 20px;
     }
+    .notifications-container-h{
+        justify-items: center; /*Alineación de los items de manera vertical*/
+        width: 525px;
+        padding: 20px 20px;
+    }
 
     /*--------------Notificaciones-----------------*/
     .notifications-box{
@@ -253,6 +267,10 @@ body{
         width: 780px;
         justify-items: center; /*Alineación de los items de manera vertical*/
     }
+    .notifications-container-h{
+        width: 780px;
+        justify-items: center; /*Alineación de los items de manera vertical*/
+    }
 
     /*------------------------Notificaciones-----------*/
     .notifications-box{
@@ -291,6 +309,10 @@ body{
 /*Pantallas 2k */
 @media screen and (min-width: 1440px){
     .notifications-container{
+        place-items: center;
+        width: 1000px;
+    }
+    .notifications-container-h{
         place-items: center;
         width: 1000px;
     }
@@ -333,6 +355,10 @@ body{
 /*Pantallas ultra wide 4k*/
 @media screen and (min-width:2560px){
     .notifications-container{
+        justify-content: center;
+        width: 1800px;
+    }
+    .notifications-container-h{
         justify-content: center;
         width: 1800px;
     }

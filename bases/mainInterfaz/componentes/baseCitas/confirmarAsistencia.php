@@ -86,7 +86,7 @@
 
                                         <button type="submit" class="button danger">Enviar</button>
 
-                                        <div class="alerta" id="alerta" style="display: flex;">
+                                        <div class="alerta" id="alerta2" style="display: none;">
                                             <div class="modalA">
                                                 <div class="barra" style="background-color: #00a500;"></div>
                                                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">

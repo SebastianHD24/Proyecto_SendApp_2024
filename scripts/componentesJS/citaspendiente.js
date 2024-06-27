@@ -167,8 +167,3 @@ document.querySelector('.citasRechazadas').addEventListener('click', function() 
         content.style.display = 'none';
     }
 });
-
-
-
-
-

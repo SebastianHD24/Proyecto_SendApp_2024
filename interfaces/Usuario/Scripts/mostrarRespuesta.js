@@ -7,6 +7,10 @@ function mostrarR() {
     contenedores_notificacion.forEach(contenedor => {
         contenedor.style.display = "none";
     });
+    const con = document.querySelectorAll('.notifications-container');
+    con.forEach(container => {
+        container.style.display = "none";
+    });
 
     historial.style.display = "none";
     citas.style.display = "none";
