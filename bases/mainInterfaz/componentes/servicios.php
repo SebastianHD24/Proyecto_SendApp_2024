@@ -239,3 +239,21 @@ $stmt->close();
 <!-- este script hace que el nombre del area que tengo por el id lo meustre en el input  -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreArea.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreFuncionario.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('formularioo');
+            const descripcionField = document.getElementById('descripcion');
+            const alerta2 = document.getElementById('alerta2');
+            const alerta2Descripcion = alerta2.querySelector('.descripcionM');
+
+            form.addEventListener('submit', function(event) {
+                if (descripcionField.value.trim() === "") {
+                    event.preventDefault();
+                    alerta2Descripcion.textContent = "Error: El campo descripción no está lleno.";
+                    alerta2.style.display = 'block'; // Mostrar alerta de error
+                }
+            });
+        });
+    </script>
