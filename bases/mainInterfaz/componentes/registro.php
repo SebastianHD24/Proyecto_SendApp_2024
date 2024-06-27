@@ -158,7 +158,7 @@
 
       data.forEach(item => {
         const option = document.createElement('option');
-        option.value = item.id;
+        option.value = item.name;
         option.textContent = item.name;
         select.appendChild(option);
       });
