@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener('submit', function(event) {
         if (descripcionField.value.trim() === "") {
             event.preventDefault();
-            alerta2Descripcion.textContent = "Error: El campo descripción no está lleno.";
+            alerta2Descripcion.textContent = "El campo descripción no está lleno.";
             alerta2.style.display = 'block'; // Mostrar alerta de error
         }
     });

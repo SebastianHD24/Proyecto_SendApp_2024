@@ -224,7 +224,7 @@ $stmt->close();
 <div class="alerta" id="alerta2">
     <div class="modalA">
         <div class="barra"></div>
-        <h1 class="tituloM">Error al pedir la cita</h1>
+        <h1 class="tituloM">Error:</h1>
         <p class="descripcionM">¡Sucedio un incoveniente!</p>
     </div>
 </div>
