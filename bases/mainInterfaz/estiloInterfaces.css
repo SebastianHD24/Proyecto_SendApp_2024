@@ -210,6 +210,12 @@ main{
     display: none !important;
 }
 
+@media only screen and (max-width: 945px){
+    aside {
+        padding-top: 6rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     main{
         padding: 1.5rem 0rem 3rem;
