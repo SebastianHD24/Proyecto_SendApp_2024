@@ -86,7 +86,7 @@
             }else{
                 ?>
                 <article>
-                        <p>no se encontró citas para mostar  a este usuario </p>
+                        <p>no se encontró citas para mostar a este usuario </p>
                     </article>
                     <?php 
 

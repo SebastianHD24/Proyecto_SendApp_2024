@@ -20,7 +20,6 @@
 
 /* Estilos para el contenedor principal */
 .table_div {
-    width: 100%; /*Limita el ancho máximo */
     table-layout: fixed;
     display: flex;
     margin: 0 auto; 

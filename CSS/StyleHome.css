@@ -146,7 +146,7 @@ body{
 /* Responsive. */
 @media (max-width: 2559px){
     .description h1,p {
-        font-size: 85%;
+        font-size: 16px;
     }
     .panel img {    
         box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -380,7 +380,7 @@ body{
 /*Parrafos descriptivos dentro de cada contenedor*/
 .p__container p{
     padding: 0px 25px 10px 25px;
-    text-align: justify;
+    text-align: left;
     font-size: 0.9rem;
 }
 
@@ -455,8 +455,6 @@ body{
 .seccion-escudo_bandera img{
     width: 30vh;
     height: auto;
-}
-
 }
 
 .seccion-escudo_bandera img{

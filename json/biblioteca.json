@@ -1,90 +1,89 @@
 {
-    "titulo": "Biblioteca",
-    "parrafo": "En nuestra biblioteca, te invitamos a perder la noción del tiempo, a sumergirte en las letras y encontrar respuestas a las preguntas que ni siquiera sabías que tenías. Descubre mundos lejanos, desafía tus límites y aliméntate del poder de la palabra escrita.",
-    "horario": "Lunes a Viernes de 8:00 AM a 8:00 PM jornada continua",
-    "imagen": "../Biblioteca/img/img-content/IMG_5358.jpg",
-    "actividades": {
+  "titulo": "Biblioteca",
+  "parrafo": "En nuestra biblioteca, te invitamos a perder la noción del tiempo, a sumergirte en las letras y encontrar respuestas a las preguntas que ni siquiera sabías que tenías. Descubre mundos lejanos, desafía tus límites y aliméntate del poder de la palabra escrita.",
+  "horario": "Lunes a Viernes de 8:00 AM a 8:00 PM jornada continua",
+  "imagen": "../Biblioteca/img/img-content/IMG_5358.jpg",
+  "actividades": {
       "apoyo": [
-        "Inducción a la biblioteca.",
-        "Manejo de base de datos.",
-        "Talleres a normas APA.",
-        "Búsquedas efectivas en Google.",
-        "Elaboración de mapas mentales."
+          "Inducción a la biblioteca.",
+          "Manejo de base de datos.",
+          "Talleres de normas APA.",
+          "Búsquedas efectivas en Google.",
+          "Elaboración de mapas mentales."
       ],
       "extension": [
-        "Taller de escritura creativa.",
-        "Clubes de lectura.",
-        "Conversatorios.",
-        "Encuentros.",
-        "Galas poéticas.",
-        "Cine foros."
+          "Taller de escritura creativa.",
+          "Clubes de lectura.",
+          "Conversatorios.",
+          "Encuentros.",
+          "Galas poéticas.",
+          "Cine foros."
       ]
-    },
-    "tarjetas": [
+  },
+  "tarjetas": [
       {
-        "imagen": "./img/icons/subasta (2).png",
-        "alt": "Icono-dudas",
-        "titulo": "Normas de la biblioteca",
-        "items": [
-          "No está permitido ingerir alimentos y agua.",
-          "Manejar los niveles de ruido y voz."
-        ]
+          "imagen": "./img/icons/subasta (2).png",
+          "alt": "Icono-dudas",
+          "titulo": "Normas de la biblioteca",
+          "items": [
+              "No está permitido ingerir alimentos y agua.",
+              "Manejar los niveles de ruido y voz."
+          ]
       },
       {
-        "imagen": "./img/icons/pregunta.png",
-        "alt": "Icono-dudas",
-        "titulo": "¿Qué tipos de libros se pueden encontrar en la Biblioteca?",
-        "contenido": "Contamos con libros técnicos que apoyan todos los programas de formación, contamos con colección de literatura y algunas revistas."
+          "imagen": "./img/icons/pregunta.png",
+          "alt": "Icono-dudas",
+          "titulo": "¿Qué tipos de libros se pueden encontrar en la Biblioteca?",
+          "contenido": "Contamos con libros técnicos que apoyan todos los programas de formación, contamos con colección de literatura y algunas revistas."
       },
       {
-        "imagen": "./img/icons/libro.png",
-        "alt": "Icono-libros",
-        "titulo": "¿Cuántos libros puede solicitar un aprendiz para un préstamo?",
-        "contenido": "Máximo 3 libros para llevar a casa."
+          "imagen": "./img/icons/libro.png",
+          "alt": "Icono-libros",
+          "titulo": "¿Cuántos libros puede solicitar un aprendiz para un préstamo?",
+          "contenido": "Máximo 3 libros para llevar a casa."
       },
       {
-        "imagen": "./img/icons/mapa-vial.png",
-        "alt": "Icono-procedimiento",
-        "titulo": "Procedimiento de un aprendiz para solicitar un préstamo",
-        "items": [
-          "Tener el carnet.",
-          "Revisar el catálogo bibliográfico, referencia y disponibilidad del libro.",
-          "Se le recibe el carnet para subir sus datos al sistema de préstamo y ya se puede llevar el libro."
-        ]
+          "imagen": "./img/icons/mapa-vial.png",
+          "alt": "Icono-procedimiento",
+          "titulo": "Procedimiento de un aprendiz para solicitar un préstamo",
+          "items": [
+              "Tener el carné.",
+              "Revisar el catálogo bibliográfico, referencia y disponibilidad del libro.",
+              "Se le recibe el carné para subir sus datos al sistema de préstamo y ya se puede llevar el libro."
+          ]
       },
       {
-        "imagen": "./img/icons/solucion.png",
-        "alt": "Icono-solucion",
-        "titulo": "Soluciones si un aprendiz daña un libro",
-        "contenido": "Al dañar o extraviar un libro, debe reponer el mismo libro que se llevó, si es imposible entonces un libro con temática similar. Lo ideal es que el libro no sea pirateado y se le hace acompañamiento al aprendiz para reponerlo."
+          "imagen": "./img/icons/solucion.png",
+          "alt": "Icono-solucion",
+          "titulo": "Soluciones si un aprendiz daña un libro",
+          "contenido": "Al dañar o extraviar un libro, debe reponer el mismo libro que se llevó, si es imposible entonces un libro con temática similar. Lo ideal es que el libro no sea pirateado y se le hace acompañamiento al aprendiz para reponerlo."
       },
       {
-        "imagen": "./img/icons/juego-de-mesa.png",
-        "alt": "Icono-juegos",
-        "titulo": "¿Qué tipo de juegos ofrecemos?",
-        "items": [
-          "Jenga",
-          "UNO",
-          "Escalera",
-          "Dominó"
-        ]
+          "imagen": "./img/icons/juego-de-mesa.png",
+          "alt": "Icono-juegos",
+          "titulo": "¿Qué tipo de juegos ofrecemos?",
+          "items": [
+              "Jenga",
+              "UNO",
+              "Escalera",
+              "Dominó"
+          ]
       },
       {
-        "imagen": "./img/icons/navegador-de-internet.png",
-        "alt": "Icono-páginas",
-        "titulo": "¿Qué páginas virtuales están vinculadas a la biblioteca SENA?",
-        "contenido": "El sistema de biblioteca SENA es la página oficial y contamos con 33 bases de datos en varias áreas del conocimiento y se puede encontrar información y libros electrónicos que están disponibles para aprendices en formación y egresados."
+          "imagen": "./img/icons/navegador-de-internet.png",
+          "alt": "Icono-páginas",
+          "titulo": "¿Qué páginas virtuales están vinculadas a la biblioteca SENA?",
+          "contenido": "El sistema de biblioteca SENA es la página oficial y contamos con 33 bases de datos en varias áreas del conocimiento y se puede encontrar información y libros electrónicos que están disponibles para aprendices en formación y egresados."
       },
       {
-        "imagen": "./img/icons/reclutamiento.png",
-        "alt": "Icono-organización",
-        "titulo": "Proceso para reservar un libro de otro centro vinculado al SENA",
-        "items": [
-          "Verificar disponibilidad del libro",
-          "Verificar que el libro se pueda prestar entre centros.",
-          "El proceso de solicitud y envío se encarga la biblioteca y se le informa al aprendiz el tiempo que se demora en llegar y los días que se le puede prestar, ya el aprendiz decide si acepta o no el préstamo. Cuando el libro llegue al centro de formación se le da aviso al aprendiz para ser reclamado, después que termine la consulta el aprendiz debe regresar el libro al centro de formación."
-        ]
+          "imagen": "./img/icons/reclutamiento.png",
+          "alt": "Icono-organización",
+          "titulo": "Proceso para reservar un libro de otro centro vinculado al SENA",
+          "items": [
+              "Verificar disponibilidad del libro.",
+              "Verificar que el libro se pueda prestar entre centros.",
+              "El proceso de solicitud y envío se encarga la biblioteca y se le informa al aprendiz el tiempo que se demora en llegar y los días que se le puede prestar, ya el aprendiz decide si acepta o no el préstamo. Cuando el libro llegue al centro de formación se le da aviso al aprendiz para ser reclamado, después que termine la consulta el aprendiz debe regresar el libro al centro de formación."
+          ]
       }
-    ]
-  }
-  
+  ]
+}

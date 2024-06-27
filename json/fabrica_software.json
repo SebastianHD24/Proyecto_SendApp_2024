@@ -1,28 +1,28 @@
 {
-    "titulo": "Fábrica de Software",
-    "subtitulo": "¿Qué es la frabrica de software?",
-    "parrafo": "En el corazón del centro de diseño e innovación tecnológica industrial, se encuentra la fábrica de software, un lugar donde la creatividad y la tecnología convergen para impulsar el progreso y la innovación.<br>La fábrica de software no es solo un centro de desarrollo tecnológico, es un ecosistema dinámico que sirve como puente entre la educación y la industria, donde los aprendices del Sena tienen la oportunidad de transformar sus conocimientos en soluciones prácticas y tangibles.",
-    "parrafo2": "¡CDTI Somos un Centro de Innovación Tecnológica!",
-    "imagen": "../FabricaSoftware/img/img-content/IMG_5380.jpg",
-    "boton": "Reservar cita",
-    "tarjetas": [
+  "titulo": "Fábrica de Software",
+  "subtitulo": "¿Qué es la fábrica de software?",
+  "parrafo": "En el corazón del Centro de Diseño e Innovación Tecnológica Industrial se encuentra la fábrica de software, un lugar donde la creatividad y la tecnología convergen para impulsar el progreso y la innovación. La fábrica de software no es solo un centro de desarrollo tecnológico, es un ecosistema dinámico que sirve como puente entre la educación y la industria, donde los aprendices del SENA tienen la oportunidad de transformar sus conocimientos en soluciones prácticas y tangibles.",
+  "parrafo2": "¡CDTI Somos un Centro de Innovación Tecnológica!",
+  "imagen": "../FabricaSoftware/img/img-content/IMG_5380.jpg",
+  "boton": "Reservar cita",
+  "tarjetas": [
       {
-        "imagen": "./icons/lista-de-verificacion.png",
-        "titulo": "Objetivos de la Fábrica de Software",
-        "contenido_corto": "Con un propósito dual, la fábrica de software se destaca por dos objetivos principales: en primer lugar, ofrece servicios tecnológicos a clientes internos y externos, abriendo las puertas a empresarios, miembros de la comunidad Sena y otros actores del sector interesados en desarrollar aplicaciones innovadoras.",
-        "contenido_expandido": "En segundo lugar, la fábrica de software tiene un enfoque pedagógico, acercando a los aprendices durante su formación académica al mundo real del desarrollo de productos, preparándolos para enfrentar los desafíos y oportunidades del mercado laboral."
+          "imagen": "./icons/lista-de-verificacion.png",
+          "titulo": "Objetivos de la Fábrica de Software",
+          "contenido_corto": "Con un propósito dual, la fábrica de software se destaca por dos objetivos principales: en primer lugar, ofrece servicios tecnológicos a clientes internos y externos, abriendo las puertas a empresarios, miembros de la comunidad SENA y otros actores del sector interesados en desarrollar aplicaciones innovadoras.",
+          "contenido_expandido": "En segundo lugar, la fábrica de software tiene un enfoque pedagógico, acercando a los aprendices durante su formación académica al mundo real del desarrollo de productos, preparándolos para enfrentar los desafíos y oportunidades del mercado laboral."
       },
       {
-        "imagen": "./icons/accesibilidad.png",
-        "titulo": "Accesibilidad de la Fábrica de Software",
-        "contenido_corto": "La fábrica de software destaca por su compromiso con la innovación y la colaboración. A través de diversas formas de contacto, desde el área de servicios tecnológicos hasta la subdirección del centro.",
-        "contenido_expandido": "Cualquier aprendiz del Sena puede ingresar, independientemente de su programa de formación, siempre que tenga un proyecto con un componente tecnológico. la fábrica de software se asegura de estar al alcance de aquellos que buscan soluciones tecnológicas innovadoras y accesibles."
+          "imagen": "./icons/accesibilidad.png",
+          "titulo": "Accesibilidad de la Fábrica de Software",
+          "contenido_corto": "La fábrica de software destaca por su compromiso con la innovación y la colaboración. A través de diversas formas de contacto, desde el área de servicios tecnológicos hasta la subdirección del centro.",
+          "contenido_expandido": "Cualquier aprendiz del SENA puede ingresar, independientemente de su programa de formación, siempre que tenga un proyecto con un componente tecnológico. La fábrica de software se asegura de estar al alcance de aquellos que buscan soluciones tecnológicas innovadoras y accesibles."
       },
       {
-        "imagen": "./icons/vision.png",
-        "titulo": "Nuestra Visión",
-        "contenido_corto": "La fábrica de software tiene una visión clara para su futuro. En primer lugar, busca expandirse físicamente en términos de infraestructura para abordar las deficiencias de espacios actuales del Sena. Además, busca crear un grupo de semilleros dentro de la misma fábrica, donde los aprendices puedan desarrollar proyectos no solo por necesidades empresariales, sino también por iniciativa propia, como ayudar a un familiar con un negocio.",
-        "contenido_expandido": "El Sena proporcionaría orientación y apoyo en este proceso sin costo alguno, ya que se trata de un esfuerzo social para beneficio común. Es importante destacar que la fábrica de software no solo busca generar ingresos, sino también contribuir al desarrollo social y económico mediante la generación de recursos significativos en bienes, servicios y conocimientos."
+          "imagen": "./icons/vision.png",
+          "titulo": "Nuestra Visión",
+          "contenido_corto": "La fábrica de software tiene una visión clara para su futuro. En primer lugar, busca expandirse físicamente en términos de infraestructura para abordar las deficiencias de espacios actuales del SENA. Además, busca crear un grupo de semilleros dentro de la misma fábrica, donde los aprendices puedan desarrollar proyectos no solo por necesidades empresariales, sino también por iniciativa propia, como ayudar a un familiar con un negocio.",
+          "contenido_expandido": "El SENA proporcionaría orientación y apoyo en este proceso sin costo alguno, ya que se trata de un esfuerzo social para beneficio común. Es importante destacar que la fábrica de software no solo busca generar ingresos, sino también contribuir al desarrollo social y económico mediante la generación de recursos significativos en bienes, servicios y conocimientos."
       }
-    ]
-  }
+  ]
+}

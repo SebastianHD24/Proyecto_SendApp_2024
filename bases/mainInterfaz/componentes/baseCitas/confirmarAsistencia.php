@@ -57,7 +57,14 @@
                             <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
                        
                             
-                            
+                            <div class="alerta" id="alerta1" style="display: none;">
+                                <div class="modalA">
+                                    <div class="barra"></div>
+                                    <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                                    <h1 class="tituloM"></h1>
+                                    <p class="descripcionM">Asistencia confirmada con exito</p>
+                                </div>
+                            </div>
                             
                             <!-- Modal para decir que no asistio la cita -->
                             <div id="modal_cancelacion_<?= $row['id_cita'] ?>" class="modal">
@@ -79,12 +86,12 @@
 
                                         <button type="submit" class="button danger">Enviar</button>
 
-                                        <div class="alerta" id="alerta">
+                                        <div class="alerta" id="alerta2" style="display: none;">
                                             <div class="modalA">
                                                 <div class="barra"></div>
                                                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                                                <h1 class="tituloM">success</h1>
-                                                <p class="descripcionM">Justificacion enviada</p>
+                                                <h1 class="tituloM"></h1>
+                                                <p class="descripcionM">Justificacion inasistencia enviada</p>
                                             </div>
                                         </div>
                                     </form>
