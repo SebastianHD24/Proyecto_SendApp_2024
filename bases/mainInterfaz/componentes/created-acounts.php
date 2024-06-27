@@ -139,7 +139,7 @@
   </div>
 </div>
 
-<!--**************************************-->
+<!--**************-->
 <div class="user_update oculto">
   
   <?php
@@ -169,7 +169,7 @@
     
   ?>
 
-<!-- ********************************-->
+<!-- ************-->
 
 <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario_admin.css">
   <!-- Formulario para editar la información del usuario -->
@@ -276,14 +276,14 @@
       <div class="modalA">
         <div class="barra"></div>
         <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-        <h1 class="tituloM">success</h1>
+        <h1 class="tituloM"></h1>
         <p class="descripcionM">¡Actualización exitosa!</p>
       </div>
     </div>
 
   </div>
 </div>
-<!--**************************************-->
+<!--**************-->
 <div class="new_registro oculto">
   
   <?php
@@ -306,7 +306,7 @@
 </div>
 <!-- Script JavaScript para confirmar acciones -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/update-created-accounts.js"></script>
-<!--**************************************-->
+<!--**************-->
 <div class="user_update oculto">
   
   <?php
@@ -336,7 +336,7 @@
     
   ?>
 
-<!-- ********************************-->
+<!-- ************-->
 
 <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario_admin.css">
   <!-- Formulario para editar la información del usuario -->
@@ -443,14 +443,14 @@
       <div class="modalA">
         <div class="barra"></div>
         <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-        <h1 class="tituloM">success</h1>
+        <h1 class="tituloM"></h1>
         <p class="descripcionM">¡Actualización exitosa!</p>
       </div>
     </div>
 
   </div>
 </div>
-<!--**************************************-->
+<!--**************-->
 <div class="new_registro oculto">
   
   <?php
@@ -473,3 +473,4 @@
 </div>
 <!-- Script JavaScript para confirmar acciones -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/update-created-accounts.js"></script>
+<script src="../../../../Proyecto_SendApp_2024/Login/Scripts/informar_error_registro.js"></script>

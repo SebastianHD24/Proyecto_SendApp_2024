@@ -130,13 +130,15 @@
     margin: 18px 0px 30px 0px;
 }
 
-@media screen and (max-width: 704px ){
+/* @media screen and (max-width: 704px ){
     .btn-actu{
         width: 7.2rem;
     }
     .main-form{
         gap: 0;
+
     }
+    
     
 }
 
@@ -159,20 +161,23 @@
         height: 105vh;
         overflow: auto;
     }
+
 }
 
 @media screen and (min-width: 1024px) {
     .first-section, .second-section{
         width: 22.4rem;
     }
+
     
 }
 @media screen and (min-width: 1440px) {
     .first-section, .second-section{
         width: 30rem;
     }
+
     
-}
+} */
 
 /* CAMBIAR CONTRASEÑA */
 
