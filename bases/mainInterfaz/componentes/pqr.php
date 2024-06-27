@@ -19,7 +19,7 @@
         <div class="description">
             <label for="description-label">Descripción:</label>
             <br>
-            <span id="charCount">0/200</span>
+            <span id="charCount">0/1000</span>
             <textarea name="descripcion_pqrs" id="text" cols="30" rows="10" class="descripcion-pqr"></textarea>
         </div>
         <!-- ------------------------------------- Botones -------------------- -->
@@ -29,12 +29,23 @@
         </div>
         <!-- ----------------- menu para ocultar ----------- -->
     </section>
-    <div class="myModal" id="myModal">
-    <div class="confirmacion" id="confirmacion">
-        <p>Enviada con éxito</p>
-        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/senal-aprobada.png" alt="imagen de confirmacion del envio de la pqrs">
+    <div class="alerta" id="alerta">
+        <div class="modalA">
+            <div class="barra"></div>
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+            <h1 class="tituloM">¡Éxito!</h1>
+            <p class="descripcionM">¡PQR enviada con éxito!</p>
+        </div>
     </div>
-</div>
+
+    <div class="alerta" id="alerta2" >
+        <div class="modalA">
+            <div class="barra" ></div>
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cancelar.png" alt="check">
+            <h1 class="tituloM">¡Error!</h1>
+            <p class="descripcionM">Debes agregar una descripción de tu PQR</p>
+        </div>
+    </div>
 </form>
 
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/pqrs.js"></script>
@@ -46,11 +57,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     textarea.addEventListener('input', () => {
         const currentLength = textarea.value.length;
-        charCount.textContent = `${currentLength}/200`;
+        charCount.textContent = `${currentLength}/1000`;
 
-        if (currentLength >= 150) {
-            textarea.value = textarea.value.substring(0, 199);
+        if (currentLength >= 1000) {
+            textarea.value = textarea.value.substring(0, 999);
         }
     });
 });
 </script>
+

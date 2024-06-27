@@ -41,14 +41,22 @@ $result = mysqli_query($conn, $query);
 $queryDocumento = "SELECT documento_identidad FROM usuarios WHERE documento_identidad = '$documento_identidad'";
 $resultDocumento = mysqli_query($conn, $queryDocumento);
 
+// Verificar que el correo no esté en la base de datos
+$queryCorreo = "SELECT correo FROM usuarios WHERE correo = '$correo'";
+$resultCorreo = mysqli_query($conn, $queryCorreo);
+
 // Encriptar la contraseña
 $passwordHash = password_hash($contrasena, PASSWORD_BCRYPT);
 
 // Requisitos para la contraseña    
 const REGEX = '/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_\-¡?¿·çºª.:,;=|+#\\/])(?=.{6,})/';
 
-if (mysqli_num_rows($resultDocumento) > 0) {
+if (mysqli_num_rows($resultDocumento) > 0 && mysqli_num_rows($resultCorreo) > 0){
+    echo json_encode(array('success' => 9));
+} else if (mysqli_num_rows($resultDocumento) > 0) {
     echo json_encode(array('success' => 5));
+} else if (mysqli_num_rows($resultCorreo) > 0) {
+    echo json_encode(array('success' => 8));
 } else if (strlen(strval($contrasena)) < 6 && strlen(strval($documento_identidad)) < 5) {
     echo json_encode(array('success' => 4));
 } else if (strlen(strval($documento_identidad)) < 5) {

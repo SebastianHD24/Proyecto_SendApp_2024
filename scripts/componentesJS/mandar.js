@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Evitar que el formulario se envíe automáticamente
         
         const formData = new FormData(form); // Obtener los datos del formulario
-        const newUrl = 'http://localhost/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
+        const newUrl = 'https://sendapp.com.co/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
         
         fetch('../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/mandar.php', {
             method: 'POST',
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Verificar si la actualización fue exitosa
             if (data.success) {
                 form.classList.add('oculto');
-                alerta.style.display = 'block';
+                alerta.style.display = 'flex';
                 alerta.style.zIndex = '999';
                 // Si fue exitosa, recargar la página después de 2 segundos
                 setTimeout(function() {
                     window.location.href = newUrl; // Recargar la página
-                }, 2000);
+                }, 3000);
             } else {
                 // Si hubo un error, mostrar el mensaje de error en la consola
                 console.error(data.message);

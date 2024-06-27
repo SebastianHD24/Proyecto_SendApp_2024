@@ -33,7 +33,7 @@ function createNotificationBoxH() {
     let textArticle = document.createElement("article");
     textArticle.classList.add("article__text--1");
     let textParagraph = document.createElement("p");
-    textParagraph.textContent = "Atención a su solicitud de QPR.";
+    textParagraph.textContent = "Atención a su solicitud de PQR.";
     textArticle.appendChild(textParagraph);
     notificationsPqr.appendChild(textArticle);
 
@@ -63,7 +63,7 @@ function consultarHistorial() {
     function ocultar_QPR() {
         const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
         contenedores_notificacion.forEach(contenedor => {
-            contenedor.style.display = "none";
+            contenedor.style.display = "flex";
         });
     }
     ocultar_QPR();

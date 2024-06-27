@@ -11,6 +11,7 @@
 
 /* Estilos de contenedor principal */
 .notifications-panel {
+    display: flex;
     flex-direction: column;
     justify-items: center;
     width: 95%;
@@ -19,6 +20,7 @@
     max-height: 80vh;
     overflow-y: auto;
     overflow-x: auto;
+    align-items: center;
 }
 
 /* Contenedor de la tabla con overflow-x */
@@ -80,10 +82,12 @@ table.appointment {
     min-height: 12vh;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 /* Contenedor hijo con la información extraída de la BD */
 .notifications {
+    width:100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -125,28 +129,130 @@ table.appointment {
 }
 
 /* Clase para añadir en JavaScript cuando el estado de la cita sea pendiente */
+
+.hidden {
+    display: none;
+}
 .estado_pendiente {
     color: #FFCE40;
 }
 
 .popup-justificacion {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
+    width: 80%; /* Ajustable según necesidad */
+    max-width: 500px; /* Ajustable según necesidad */
     color: black;
-    height: 100px;
+    height: auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
+    overflow-y: auto; /* Para manejar contenido extenso */
 }
+
+#contenedorm-descripcion {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_descripcion {
+    border: 5px solid var(--azul);
+    border-radius: 10px;
+    padding: 20px; /* Asegurarse de que haya suficiente padding */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+}
+
+.contenedor_descripcion h1 {
+    text-align: center;
+}
+
+.contenedor_descripcion p {
+    text-align: center;
+    margin-top: 1rem;
+    word-wrap: break-word; /* Para manejar palabras largas */
+}
+
+.contenedor_descripcion .button1 {
+    background-color: #39a900;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    width: auto;
+    min-width: 100px; /* Asegurar un tamaño mínimo */
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 25px;
+    margin: 10px auto;
+    display: block;
+}
+
+.contenedor_descripcion .button1:hover {
+    background-color: #00234d;
+}
+
+.popup-justificacion {
+    display: none;
+}
+
 
 /* Responsividad */
 
 /* Laptops FHD */
+@media screen and (min-width: 320px) {
+
+    
+
+    #justificacion-Noasistencia-15 {
+        width: 200%;
+    }
+    #contenedorm-descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 375px) {
+
+    
+
+    #justificacion-Noasistencia-15 {
+        width: 200%;
+    }
+    #contenedorm-descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 425px) {
+
+
+    #justificacion-Noasistencia-15 {
+        width: 200%;
+    }
+    #contenedorm-descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    .notifications-panel {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .notifications p {
+        font-size: 1.2rem;
+    }
+    
+
+
+}
 @media screen and (min-width: 1024px) {
     .notifications-panel {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -155,6 +261,7 @@ table.appointment {
     .notifications p {
         font-size: 1.2rem;
     }
+    
 }
 
 /* 2k Screens */
@@ -166,45 +273,117 @@ table.appointment {
     .notifications p {
         font-size: 1.4rem;
     }
+
+    
 }
 
 /* 4k Screens */
 @media screen and (min-width: 2560px) {
-    .notifications-panel {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 120px;
-    }
-
     .notifications {
         width: 100%;
     }
 
     .notifications p {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
-    .notifications figure img {
-        width: 75px;
-    }
+    
 }
 
-/* Responsividad para pantallas más pequeñas */
-@media screen and (max-width: 600px) {
-    .appointment_th th, .appointment_td td {
-        font-size: 0.9rem;
-        padding: 4px;
-    }
+@media screen and (max-width: 518px){
+        /* --------------------------------------------------------------------------------- */
+
+.notifications-panel {
+    display: flex;
+    flex-direction:row;
+    justify-items: center;
+    width: 98%;
+    overflow-x:hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.notifications{
+    width: 18rem;
 }
 
-@media screen and (max-width: 400px) {
-    .appointment_th th, .appointment_td td {
-        font-size: 0.8rem;
-        padding: 2px;
-    }
+/* Estilos base para la tabla */
+table.appointment {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-@media screen and (min-width: 768px) {
-    .notifications-panel {
-        max-width: 70vw;
+/* Ocultar las filas de encabezado */
+/* thead {
+    display: none;
+} */
+
+/* Estilo para cada fila de datos */
+/* tbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+.appointment_td {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 15px 15px 0px 0px;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Estilo para cada celda en la fila */
+.appointment_td > td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.appointment_td > td:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para el encabezado de las columnas */
+.header_th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Estilo para los enlaces */
+.verJustificacion, .verMotivo {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Estilo para el pie de la tabla */
+tfoot {
+    /* display: block; */
+    width: 100%;
+}
+
+.reason {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.reason th h4{
+    text-align: center;
+}
+
+.reason th {
+    text-align: left;
+}
+
+
+
+        /* --------------------------------------------------------------------------------- */
+        
+}
+
+@media screen and (max-width: 320px){
+    #justificacion-Noasistencia-15{
+        width:100%;
     }
 }

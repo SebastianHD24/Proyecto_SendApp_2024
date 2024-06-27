@@ -44,7 +44,9 @@ body.dark .logo{
     margin: 0;
     padding: 0;
 }
-
+.dark .titulo{
+    color: #39a900;
+}
 
 .acesibilidad label .fa-solid{
     color: white;
@@ -75,7 +77,9 @@ img.inverted{
       bottom: 0;
 
     }
-    
+    .acesibilidad:hover{
+        transform: none;
+    }
 
     #toggle, #toggle2, #toggle3, #toggle4, #toggle5{
         display: none;
@@ -124,6 +128,9 @@ img.inverted{
       border-radius: 50px;
       bottom: 0;
 
+    }
+    .acesibilidad:hover{
+        transform: none;
     }
     
 

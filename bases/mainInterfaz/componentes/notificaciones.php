@@ -13,9 +13,6 @@
             <article>
                 <h1>Atención a su <br>solicitud</h1>
             </article>
-            <article>
-                <p>fecha</p>
-            </article>
         </div>
         <div class="text">
             <p id="datosMensaje"></p>
@@ -32,9 +29,6 @@
             <!--Título-->
             <article class="tituloAtencion">
                 <h1>Atención a su <br>solicitud</h1>
-            </article>
-            <article>
-                <p>fecha</p>
             </article>
         </div>
         <div class="text">

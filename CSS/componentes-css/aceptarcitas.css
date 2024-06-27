@@ -121,3 +121,67 @@ input[type="date"]:focus,
     color:var(--verde);
     cursor: pointer;
 }
+
+/* mensaje para los servicios desabilitados */
+.mensaje-emergente {
+    display: none;
+    position: absolute;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* alerta modal de confirmacion*/
+.alerta{
+    background: rgba(0, 0, 0, 0.603);
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modalA{
+    width: 25rem;
+    height: 12rem;
+    background-color: aliceblue;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.barra{
+    background-color: #00a500;
+    width: 100%;
+    height: 2rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modalA .tituloM{
+    margin-top: 3rem;
+    color: #00a500;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalA .descripcionM{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.modalA img{
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: -25%;
+    left: calc(50% - 50px);
+}

@@ -76,10 +76,26 @@ function ver() {
                 .then(response => response.json())
                 .then(jsonData => {
                     if (jsonData.success == 3 || jsonData.success == 4) {
-                        ver();
-                        location.reload();
+                        let modal = document.getElementById("alerta");
+
+                        // Redirigir a la página especificada en la respuesta del servidor
+                        
+                        modal.style.display = "flex";
+                        setTimeout(function () {
+                            // window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+                            modal.style.display = 'none';
+                            window.location.reload();
+                        }, 2000);
                     } else if (jsonData.success == 5){
-                        alert("Por favor envía una respuesta");
+                        let modal2 = document.getElementById("alerta2");
+
+                        // Redirigir a la página especificada en la respuesta del servidor
+                        
+                        modal2.style.display = "flex";
+                        setTimeout(function () {
+                            // window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+                            modal2.style.display = 'none';
+                        }, 2000);
                     }
                 })
                 .catch(error => console.error("Error en la solicitud fetch: " + error));
@@ -91,14 +107,16 @@ function ver() {
 }
 ver();
 
-function enviarIdPQR() {
-    document.getElementById('id_pqr1').value = id;
-    let modal = document.getElementById("myModal");
-    modal.style.display = "block";
-        setTimeout(function () {
-            window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
-        }, 3000);
-    };
+
+// function enviarIdPQR() {
+//     document.getElementById('id_pqr1').value = id;
+//     let modal = document.getElementById("alerta");
+//     modal.style.display = "flex";
+//     setTimeout(function () {
+//         window.location.href = "../../interfaces/Usuario/usuarioSesion.php"; 
+//     }, 3000);
+// };
+
 
 function mostrarHistorial(){
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarHistorial.php')
@@ -346,6 +364,7 @@ function verResponderH(idPeticion) {
 
     contenedorSin.style.display = "none";
     contenedorRespuestaH.style.display = "block";
+    salir.style.display = "none";
 
     fetch(`../../../../Proyecto_SendApp_2024/interfaces/Administrador/mostrarRespuesta.php?id=${idPeticion}`)
         .then(response => response.json())

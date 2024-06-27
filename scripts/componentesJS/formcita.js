@@ -45,8 +45,6 @@ botones.forEach(boton => {
     }
 });
 
-console.log("hola soy Dios");
-
 // Evento de teclado (input) para el conteo de los caracteres de la descripcion de la cita
 document.addEventListener('DOMContentLoaded', (event) => {
     const textarea = document.getElementById('descripcion');
@@ -54,10 +52,69 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     textarea.addEventListener('input', () => {
         const currentLength = textarea.value.length;
-        charCount.textContent = `${currentLength}/150`;
+        charCount.textContent = `${currentLength}/1000`;
 
-        if (currentLength >= 150) {
-            textarea.value = textarea.value.substring(0, 149);
+        if (currentLength >= 1000) {
+            textarea.value = textarea.value.substring(0, 999);
+        }
+    });
+});
+
+// Funcionalidad para cerrar el formulario y mostrar el contenido
+let btnCerrar = document.getElementById('btnCerrar');
+
+btnCerrar.addEventListener('click', (event) => {
+    event.preventDefault();
+    const textarea = document.getElementById('descripcion');
+    textarea.value = "";
+    const charCount = document.getElementById('charCount');
+    charCount.textContent = "0/1000";
+    contenedor.classList.add('oculto');
+    div_container.classList.remove('oculto');
+});
+
+// Función para cambiar el texto cuando se pasa el mouse sobre el div .cards
+function cambiarTextoServicioDeshabilitado(event) {
+    let divCards = event.currentTarget; // Obtener el div .cards sobre el cual se activó el evento
+    let boton = divCards.querySelector('.btn'); // Obtener el botón dentro del div .cards
+    let textoAgendarCita = boton.querySelector('.txt2'); // Obtener el elemento <p> con clase 'txt2'
+    
+    if (boton.disabled) {
+        textoAgendarCita.textContent = 'Servicio deshabilitado por el momento'; // Cambiar el texto del segundo párrafo
+    } else {
+        textoAgendarCita.textContent = 'Agendar Cita'; // Restablecer el texto si no está deshabilitado
+    }
+}
+
+// Función para restablecer el texto original cuando el mouse sale del div .cards
+function restablecerTextoAgendarCita(event) {
+    let divCards = event.currentTarget; // Obtener el div .cards sobre el cual se activó el evento
+    let boton = divCards.querySelector('.btn'); // Obtener el botón dentro del div .cards
+    let textoAgendarCita = boton.querySelector('.txt2'); // Obtener el elemento <p> con clase 'txt2'
+    
+    textoAgendarCita.textContent = 'Agendar Cita'; // Restaurar el texto original cuando el mouse sale del div .cards
+}
+
+// Obtener todos los contenedores .cards
+const divsCards = document.querySelectorAll('.cards');
+
+// Iterar sobre cada contenedor .cards para añadir eventos
+divsCards.forEach(function(divCards) {
+    divCards.addEventListener('mouseover', cambiarTextoServicioDeshabilitado);
+    divCards.addEventListener('mouseout', restablecerTextoAgendarCita);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('formularioo');
+    const descripcionField = document.getElementById('descripcion');
+    const alerta2 = document.getElementById('alerta2');
+    const alerta2Descripcion = alerta2.querySelector('.descripcionM');
+
+    form.addEventListener('submit', function(event) {
+        if (descripcionField.value.trim() === "") {
+            event.preventDefault();
+            alerta2Descripcion.textContent = "El campo descripción no está lleno.";
+            alerta2.style.display = 'block'; // Mostrar alerta de error
         }
     });
 });

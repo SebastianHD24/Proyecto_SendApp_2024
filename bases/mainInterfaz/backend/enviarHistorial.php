@@ -4,7 +4,7 @@
     session_start();
     //chequeando la conexion
     if (!$conn) {
-        die("Conexion Fallo: ".mysqli_connect_error());
+        die("Conexión Falló: ".mysqli_connect_error());
     }
     
     $historial_notificaciones = $_POST['historial_notificaciones'];

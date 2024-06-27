@@ -4,13 +4,24 @@
     <link rel="stylesheet" href="../../../../Proyecto_SendApp_2024/Login/Styles/login.css">
 <?php endif ?> 
 
-<div id="message" class="message"></div>
+<?php if (isset($_SESSION['documento_identidad'])): ?>
+    <div class="alerta" id="alerta">
+        <div class="modalA">
+            <div class="barra"></div>
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+            <h1 class="tituloM"></h1>
+            <p class="descripcionM">Registro guardado correctamente</p>
+        </div>
+    </div>
+<?php endif ?>
 
 <form id="registerForm" action="../../../../Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php" class="form-login form2" method="post"> 
     <?php if (isset($_SESSION['documento_identidad'])): ?>
-        <button class="btn_accounts">
-            <a class="btn" href="?p=created-acounts">Cuentas Creadas</a>
-        </button>  
+        <a class="btn exit-icon" href="?p=created-acounts">
+            <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/componentes/cerrarsesion.png" alt="Salir" class="exit-image">
+            <span class="tooltip">Salir</span>
+        </a>
+
          
     <?php endif ?> 
     <!-- <div class="logo_titulo">
@@ -65,6 +76,7 @@
             </label>
             <input id="login-input-user-a" class="registro_input login__input" type="text" name="apellidos" placeholder="Apellidos" required/>
 
+            <p id="mensaje_errorcorreo"></p>
             <label for="login-input-user" class="registro_label login__label">
                 Correo *
             </label>
@@ -79,9 +91,12 @@
             <input id="login-input-user-ce" class="registro_input login__input" type="text" name="celular" placeholder="Número celular / telefono" required/>
 
             <label for="login-input-user" class="registro_label login__label">
-                Programa*
+                Programas*
             </label>
-            <input id="login-input-user-p" class="registro_input login__input" type="text" name="programa" placeholder="Programa" required/>
+            <select id="login-input-user-p" class="registro_input login__input" type="text" name="programa" placeholder="Programa">
+                    
+
+            </select>
 
             <label for="login-input-user" class="registro_label login__label">
                 Ficha*
@@ -134,6 +149,21 @@
         </div>
 </form>
 
-<?php if (isset($_SESSION['documento_identidad'])): ?>
-<script src="../../../../Proyecto_SendApp_2024/Login/Scripts/informar_error_registro.js"></script>
-<?php endif ?>
+<script  >
+    document.addEventListener("DOMContentLoaded", function() {
+  fetch('../../../../Proyecto_SendApp_2024/json/programas.json')
+    .then(response => response.json())
+    .then(data => {
+      const select = document.getElementById('login-input-user-p');
+
+      data.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.name;
+        option.textContent = item.name;
+        select.appendChild(option);
+      });
+    })
+    .catch(error => console.error('Error al cargar el JSON:', error));
+});
+
+</script>

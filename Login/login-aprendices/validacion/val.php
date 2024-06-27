@@ -6,7 +6,7 @@
 
     //comprueba si fallo la conexion
     if (!$conn) {
-        die("Conexion Fallo: ".mysqli_connect_error());
+        die("Conexión Falló: ".mysqli_connect_error());
     }
     //Esta parte es para admitir caracteres especiales
     @mysqli_query($conn, "SET NAMES 'utf8'");

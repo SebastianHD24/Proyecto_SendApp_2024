@@ -1,0 +1,15 @@
+[24-Jun-2024 07:50:41 America/Bogota] PHP Warning:  Undefined array key "id_servicio" in /home/sendappc/public_html/Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php on line 31
+[26-Jun-2024 01:44:49 America/Bogota] PHP Warning:  Undefined variable $X5 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php on line 7
+[26-Jun-2024 01:44:49 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'sendappc_sendappc'@'host51.latinoamericahosting.com' (using password: YES) in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php:10
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php(10): mysqli_connect()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php(4): connection()
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php on line 10
+[26-Jun-2024 01:44:52 America/Bogota] PHP Warning:  Undefined variable $X5 in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php on line 7
+[26-Jun-2024 01:44:52 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'sendappc_sendappc'@'host51.latinoamericahosting.com' (using password: YES) in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php:10
+Stack trace:
+#0 /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php(10): mysqli_connect()
+#1 /home/sendappc/public_html/Proyecto_SendApp_2024/Login/login-aprendices/agregandoregistro.php(4): connection()
+#2 {main}
+  thrown in /home/sendappc/public_html/Proyecto_SendApp_2024/bases/conexion.php on line 10

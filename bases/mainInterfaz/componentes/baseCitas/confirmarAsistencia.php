@@ -1,12 +1,12 @@
 <div class="table_div" id="table_div">
+    <h1 id="titulo_citas">Confirmar Citas</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">
                 <th>Documento de Identidad</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
-                <th>Descripción de la cita</th>
-                
+                <th>Descripción de la cita</th> 
                 <th>Jornada</th>
                <th>Asistencia</th>
                
@@ -49,7 +49,7 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><?= $row['descripcion'] ?></td>
+                        <td><button onclick="verDescripcion4(<?= $row['id_cita'] ?>);">Descripción</button></td>
                        
                         <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
@@ -57,7 +57,14 @@
                             <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
                        
                             
-                            
+                            <div class="alerta" id="alerta1" style="display: none;">
+                                <div class="modalA">
+                                    <div class="barra"></div>
+                                    <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                                    <h1 class="tituloM"></h1>
+                                    <p class="descripcionM">Asistencia confirmada con éxito</p>
+                                </div>
+                            </div>
                             
                             <!-- Modal para decir que no asistio la cita -->
                             <div id="modal_cancelacion_<?= $row['id_cita'] ?>" class="modal">
@@ -73,11 +80,20 @@
                                         <label for="descripcion_cancelacion_<?= $row['id_cita'] ?>">Descripción de la cita:</label>
                                         <input type="text" id="descripcion_cancelacion_<?= $row['id_cita'] ?>" name="descripcion" value="<?= $row['descripcion'] ?>" disabled>
                                         <label for="justificacion_cancelacion_<?= $row['id_cita'] ?>">Justificación por inasistencia del usuario:</label>
-                                        <span id="charCount_<?= $row['id_cita'] ?>">0/150</span>
+                                        <span id="charCount_<?= $row['id_cita'] ?>">0/1000</span>
                                         <input type="text" id="justificacion_cancelacion_<?= $row['id_cita'] ?>" name="justificacion" class="justificacion" placeholder="Escribe aquí tu justificación" required>
                                         
 
                                         <button type="submit" class="button danger">Enviar</button>
+
+                                        <div class="alerta" id="alerta" style="display: flex;">
+                                            <div class="modalA">
+                                                <div class="barra" style="background-color: #00a500;"></div>
+                                                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                                                <h1 class="tituloM"></h1>
+                                                <p class="descripcionM">Justificación inasistencia enviada</p>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -87,7 +103,7 @@
             <?php
                 }
             } elseif ($search_confirmarCitas != '' && mysqli_num_rows($result) == 0) {
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";
             }
             
             else {
@@ -111,10 +127,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         textarea.addEventListener('input', () => {
             const currentLength = textarea.value.length;
-            charCount.textContent = `${currentLength}/150`;
+            charCount.textContent = `${currentLength}/1000`;
 
-            if (currentLength >= 150) {
-                textarea.value = textarea.value.substring(0, 149);
+            if (currentLength >= 1000) {
+                textarea.value = textarea.value.substring(0, 999);
             }
         });
     });

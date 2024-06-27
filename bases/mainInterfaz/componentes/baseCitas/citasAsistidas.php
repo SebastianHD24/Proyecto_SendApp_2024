@@ -1,4 +1,5 @@
-<div class="table_div" >    
+<div class="table_div" >  
+    <h1 id="titulo_citas">Citas Asistidas</h1>  
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -23,11 +24,11 @@
                 $search_term_asistidas = $_GET['search-asistidas']; 
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
                 FROM citas
-                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'si-asiste' AND (citas.documento_usuario LIKE '$search_term_asistidas%'  OR usuarios.nombres LIKE '$search_term_asistidas%' OR usuarios.apellidos LIKE '$search_term_asistidas%') ORDER BY citas.id_cita ASC ";
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'Si asistió' AND citas.estado_cita = 'aceptado' AND (citas.documento_usuario LIKE '$search_term_asistidas%'  OR usuarios.nombres LIKE '$search_term_asistidas%' OR usuarios.apellidos LIKE '$search_term_asistidas%') ORDER BY citas.id_cita ASC ";
             } else {
                 $sql = "SELECT citas.id_cita, citas.documento_usuario AS documento_identidad, usuarios.nombres, usuarios.apellidos, citas.descripcion, citas.jornada, citas.estado_cita, citas.confirmacion 
                 FROM citas
-                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion= 'si-asiste' ORDER BY citas.id_cita ASC ";
+                INNER JOIN usuarios ON citas.documento_usuario = usuarios.documento_identidad AND citas.usuario_f='$funcionario' WHERE citas.confirmacion = 'Si asistió' AND citas.estado_cita = 'aceptado' ORDER BY citas.id_cita ASC ";
     
             }
 
@@ -46,18 +47,18 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><?= $row['descripcion'] ?></td>
+                        <td><button onclick="verDescripcion2(<?= $row['id_cita'] ?>);">Descripción</button></td>
                         <td><?= $row['confirmacion'] ?></td>
                         <td><?= $row['jornada'] ?></td>
                         
             <?php
                 }
             } elseif ($search_term_asistidas != '' && mysqli_num_rows($result) == 0){
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";  
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";  
             } 
             
             else {
-                echo "<tr><td colspan='6'>No se encontraron citas donde hayan asistido.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontraron citas donde haya asistido.</td></tr>";
             }
             // mysqli_close($conn);
             ?>

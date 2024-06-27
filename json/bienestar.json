@@ -1,56 +1,55 @@
 {
-    "titulo": "Bienestar Al Aprendiz",
-    "subtitulo": "Apoyo Integral para tu Éxito Académico y Personal",
-    "parrafo": "Bienvenido a Bienestar al Aprendiz, tu centro de apoyo integral diseñado para promover tu bienestar y éxito tanto dentro como fuera del aula. Nuestro equipo dedicado está aquí para ofrecerte orientación, recursos y actividades que te ayudarán a alcanzar tus metas académicas y personales.",
-    "imagen": "./img/img-content/IMG_5364.jpg",
-    "botones": [
+  "titulo": "Bienestar al Aprendiz",
+  "subtitulo": "Apoyo Integral para tu Éxito Académico y Personal",
+  "parrafo": "Bienvenido a Bienestar al Aprendiz, tu centro de apoyo integral diseñado para promover tu bienestar y éxito tanto dentro como fuera del aula. Nuestro equipo dedicado está aquí para ofrecerte orientación, recursos y actividades que te ayudarán a alcanzar tus metas académicas y personales.",
+  "imagen": "./img/img-content/IMG_5364.jpg",
+  "botones": [
       {
-        "titulo": "Psicología",
-        "enlace": "../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.php"
+          "titulo": "Psicología",
+          "enlace": "../../Proyecto_SendApp_2024/Bienestar/psicologia/psicologia.php"
       },
       {
-        "titulo": "Deportes y Cultura",
-        "enlace": "../../Proyecto_SendApp_2024/Bienestar/Deportes/deportes.php"
+          "titulo": "Deportes y Cultura",
+          "enlace": "../../Proyecto_SendApp_2024/Bienestar/Deportes/Deportes.php"
       }
-    ],
-    "servicios": [
+  ],
+  "servicios": [
       {
-        "imagen": "../Bienestar/img/icons/ayuda.png",
-        "titulo": "Acompañamiento Individualizado:",
-        "contenido": "Brindamos apoyo individualizado a través de sesiones de acompañamiento personalizadas. Ya sea que necesites ayuda con problemas académicos, emocionales o personales, estamos aquí para escucharte y proporcionarte orientación."
+          "imagen": "../Bienestar/img/icons/ayuda.png",
+          "titulo": "Acompañamiento Individualizado:",
+          "contenido": "Brindamos apoyo individualizado a través de sesiones de acompañamiento personalizadas. Ya sea que necesites ayuda con problemas académicos, emocionales o personales, estamos aquí para escucharte y proporcionarte orientación."
       },
       {
-        "imagen": "../Bienestar/img/icons/ninos.png",
-        "titulo": "Apoyo Emocional y Psicológico",
-        "contenido": "Nuestros profesionales están disponibles para ofrecerte apoyo emocional y psicológico en momentos de estrés, ansiedad o cualquier otro desafío que puedas enfrentar durante tu trayectoria académica."
+          "imagen": "../Bienestar/img/icons/ninos.png",
+          "titulo": "Apoyo Emocional y Psicológico",
+          "contenido": "Nuestros profesionales están disponibles para ofrecerte apoyo emocional y psicológico en momentos de estrés, ansiedad o cualquier otro desafío que puedas enfrentar durante tu trayectoria académica."
       },
       {
-        "imagen": "../Bienestar/img/icons/habilidad.png",
-        "titulo": "Desarrollo de Habilidades Blandas",
-        "contenido": "Ofrecemos talleres y actividades diseñadas para fortalecer tus habilidades blandas, como comunicación efectiva, trabajo en equipo, liderazgo y resolución de problemas. Estas habilidades son fundamentales para tu éxito tanto en el aula como en el mundo laboral."
+          "imagen": "../Bienestar/img/icons/habilidad.png",
+          "titulo": "Desarrollo de Habilidades Blandas",
+          "contenido": "Ofrecemos talleres y actividades diseñadas para fortalecer tus habilidades blandas, como comunicación efectiva, trabajo en equipo, liderazgo y resolución de problemas. Estas habilidades son fundamentales para tu éxito tanto en el aula como en el mundo laboral."
       },
       {
-        "imagen": "../Bienestar/img/icons/felicidad.png",
-        "titulo": "Eventos y Celebraciones",
-        "contenido": "Organizamos eventos y celebraciones para fomentar un sentido de comunidad y pertenencia entre los aprendices. Desde actividades culturales hasta jornadas de integración, siempre hay algo emocionante sucediendo en nuestro centro."
+          "imagen": "../Bienestar/img/icons/felicidad.png",
+          "titulo": "Eventos y Celebraciones",
+          "contenido": "Organizamos eventos y celebraciones para fomentar un sentido de comunidad y pertenencia entre los aprendices. Desde actividades culturales hasta jornadas de integración, siempre hay algo emocionante sucediendo en nuestro centro."
       },
       {
-        "imagen": "../Bienestar/img/icons/asesoramiento.png",
-        "titulo": "Asesoramiento en Salud y Bienestar",
-        "contenido": "Proporcionamos recursos y asesoramiento en temas relacionados con la salud y el bienestar, incluyendo hábitos de vida saludable, prevención de enfermedades y promoción de un estilo de vida equilibrado."
+          "imagen": "../Bienestar/img/icons/asesoramiento.png",
+          "titulo": "Asesoramiento en Salud y Bienestar",
+          "contenido": "Proporcionamos recursos y asesoramiento en temas relacionados con la salud y el bienestar, incluyendo hábitos de vida saludable, prevención de enfermedades y promoción de un estilo de vida equilibrado."
       }
-    ],
-    "enfoque": {
+  ],
+  "enfoque": {
       "titulo": "Nuestro Enfoque",
       "contenido": "En Bienestar al Aprendiz, creemos en el poder del apoyo integral para promover el éxito académico y personal de nuestros aprendices. Nos esforzamos por crear un entorno acogedor y solidario donde cada estudiante se sienta valorado y empoderado para alcanzar su máximo potencial."
-    },
-    "equipo": {
+  },
+  "equipo": {
       "titulo": "Nuestro Equipo",
       "contenido": "Nuestro equipo está formado por profesionales capacitados en psicología, orientación educativa, trabajo social y otras disciplinas relacionadas. Estamos comprometidos con tu bienestar y éxito, y trabajamos juntos para brindarte el apoyo que necesitas para triunfar en tu viaje educativo."
-    },
-    "contacto": {
+  },
+  "contacto": {
       "titulo": "Contáctanos",
       "contenido": "Si necesitas apoyo, orientación o simplemente alguien con quien hablar, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu camino hacia el éxito académico y personal. ¡No estás solo(a)!"
-    }
   }
-  
+}

@@ -133,7 +133,10 @@ body{
 .TextSli2 {
     color: var(--azul);
 }
-    
+.description h1,p{
+    font-size: 0.9rem;
+    padding: 0px 25px 10px 0px;
+}
 @media (max-width: 834px){
     .splitview{
     display: none;
@@ -146,7 +149,7 @@ body{
 /* Responsive. */
 @media (max-width: 2559px){
     .description h1,p {
-        font-size: 85%;
+        font-size: 16px;
     }
     .panel img {    
         box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -217,7 +220,7 @@ body{
 
 @media (max-width: 900px) {
     .description h1,p {
-        font-size: 60%;
+        font-size: 0.9rem
     }
     .panel img {
         box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -251,7 +254,7 @@ body{
     
 @media (max-width: 435px) {
     .description h1,p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
     .panel img {
         box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -334,6 +337,7 @@ body{
 /*Parrafo introductorio*/
 .content__parrafos-titulos p{
     font-size: 0.9rem;
+    padding: 0px 25px 10px 25px;
 }
 
 /* Contenedor de parrafos informativos en la parte sperior */
@@ -380,7 +384,7 @@ body{
 /*Parrafos descriptivos dentro de cada contenedor*/
 .p__container p{
     padding: 0px 25px 10px 25px;
-    text-align: justify;
+    text-align: left;
     font-size: 0.9rem;
 }
 
@@ -444,6 +448,7 @@ body{
 @media (max-width: 768px) {
     .contenedor {
         grid-template-columns: 1fr;
+        
     }
 }
 .section-logosimbolo img {
@@ -452,14 +457,14 @@ body{
 }
 
 .seccion-escudo_bandera img{
-    max-width: 100%;
+    width: 30vh;
     height: auto;
 }
 
 .seccion-escudo_bandera img{
-    width: 60vh;
+    width: 60%;
+    height: auto;
 }
-
 h1{
     color:var(--verde);
 }

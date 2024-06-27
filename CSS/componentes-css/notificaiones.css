@@ -42,10 +42,12 @@ body{
     padding: 20px;
 }
 
-.notifications-box article p{
+.notifications-box article a{
     padding: 0px 20px 20px 20px; 
     text-align:justify;
     font-weight: 500;
+    text-decoration: none;
+    color: #000000;
 }
 
 .notifications-box span{
@@ -117,12 +119,13 @@ body{
 .answer__container{
     display: grid;
     place-items: center;
-    width: 250px;
+    width: 90%;
     border: 1px solid #000;
     border-radius: 36px;
-    padding: 25px;
+    padding: 5px;
     gap: 20px;
 }
+
 .display-notificaciones{
     display: flex;
     align-items: center;
@@ -130,34 +133,33 @@ body{
     width: 100%;
     flex-direction: column;
 }
+
 .date{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     padding: 20px 0 20px 0;
-    gap: 5px;
 }
 
 .date article:last-child{
     display: flex;
-    justify-content: flex-end;
     color: #39a900;
 }
 
 .date article h1{
     color: #00324d;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .text p{
-    text-align: justify;
     line-height: 150%;
+    padding: 0px 10px;
 }
+
 .tituloAtencion{
-    padding: 20px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .close__button--action{
@@ -182,6 +184,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0px;
 }
 
 /************************** Responsive Desing *******************************/
@@ -241,6 +244,7 @@ body{
     .answer__container{
         width: 485px;
     }
+
 }
 
 /*Laptos FHD */
@@ -281,6 +285,7 @@ body{
         height: 40px;
         font-size: 1.3rem;
     }
+
 }
 
 /*Pantallas 2k */
@@ -395,5 +400,6 @@ body{
         width: 200px;
         height: 60px;
     }
+
 
 }

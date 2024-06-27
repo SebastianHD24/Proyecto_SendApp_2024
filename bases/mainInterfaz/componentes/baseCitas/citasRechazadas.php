@@ -1,4 +1,5 @@
-<div class="table_div" id="table_rechazadas">   
+<div class="table_div" id="table_rechazadas"> 
+    <h1 id="titulo_citas"> Citas Rechazadas</h1>  
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -46,8 +47,8 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><?= $row['descripcion'] ?></td>
-                        <td><?= $row['justificacion_rechazo'] ?></td>
+                        <td><button onclick="verDescripcion1(<?= $row['id_cita'] ?>);">Descripcion</button></td>
+                        <td><button onclick="verJustificacion(<?= $row['id_cita'] ?>);">Justificación</button></td>
 
                         <td><?= $row['jornada'] ?></td>
                         <td><?= $row['fecha'] ?></td>    
@@ -65,7 +66,7 @@
             <?php
                 }
             } elseif ($search_term_rechazadas != '' && mysqli_num_rows($result) == 0) {
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";
             } 
             
             else {

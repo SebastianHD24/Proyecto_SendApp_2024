@@ -80,10 +80,8 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-
     font-size: 18px;
     font-family: var(--fuente-principal);
-    text-align: center;
     margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;

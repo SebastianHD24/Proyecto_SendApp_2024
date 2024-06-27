@@ -23,6 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "Cita actualizada correctamente";
                 // Redirigir al usuario a citaspendiente.php después de actualizar la cita correctamente
                 header('Location: citaspendiente.php');
+
+                $url = 'http://sendapp.com.co/Proyecto_SendApp_2024/scripts/email/emailCitas.php?id_cita=' . $id_cita;
+                $emailResponse = file_get_contents($url);
                 exit; // Asegura que el script se detenga después de la redirección
             } else {
                 echo "No se encontró una cita para el ID proporcionado";

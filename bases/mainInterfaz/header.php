@@ -16,18 +16,18 @@
     <?php
         if ($id_rol == 1){
             echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-editar.css" >';
-            $tituloPestaña = "Administrador";
+            $tituloPesta���a = "Administrador";
         }
         else if ($id_rol == 2){
             echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-funcionario.css" >';
-            $tituloPestaña = "Funcionario";
+            $tituloPesta���a = "Funcionario";
         }
         else if ($id_rol == 3){
             echo '<link rel="stylesheet" type="text/css" href="../../../Proyecto_SendApp_2024/CSS/componentes-css/formulario-aprendiz.css" >';
-            $tituloPestaña = "Aprendiz";
+            $tituloPesta���a = "Aprendiz";
         }
     ?>
-    <title><?= $tituloPestaña ?></title>
+    <title><?= $tituloPesta���a ?></title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,57 +66,60 @@
                 
             <nav class="navbar">
                 <ul class="menu">
+                    <li>
+                        <button id="verRolo"><h1> <?= $tituloPesta���a ?></h1></button>
+                    </li>
                     <?php if ($id_rol != 1): ?>
                         <li>
-                            <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> Inicio </button></a>
+                            <a  href="../../../Proyecto_SendApp_2024/index.php"><button class="boton-menu boton-categoria" > <i class="bi bi-house"></i> <p class="letras-menuHamburg-lateral">Inicio</p> </button></a>
                         </li>
                     <?php endif ?>
                     <?php if ($id_rol == 2): ?>
                         <li>
-                            <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Gestion de Citas </button></a>
+                            <a  href="?p=citaspendiente"><button class="boton-menu boton-categoria <?php echo $component == 'citaspendiente' || $component == 'aceptarcita' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> <p class="letras-menuHamburg-lateral">Gestion de Citas</p> </button></a>
                         </li>
                         <li>
-                            <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mi Calendario </button></a>
+                            <a  href="?p=mi_agenda"><button class="boton-menu boton-categoria <?php echo $component == 'mi_agenda' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i><p class="letras-menuHamburg-lateral"> Mi Calendario</p> </button></a>
                         </li>
                         
                     <?php endif; ?>
 
                     <?php if ($id_rol == 3): ?>
                         <li>
-                            <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                            <a  href="?p=servicios"><button class="boton-menu boton-categoria <?php echo $component == 'servicios' ? 'active' : '' ?>" > <i class="bi bi-columns-gap"></i> <p class="letras-menuHamburg-lateral">Servicios</p> </button></a>
                         </li>
                     <?php endif; ?>
 
                     <?php if ($id_rol == 3): ?>
                         <li>
-                            <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i> Mis Citas </button></a>
+                            <a  href="?p=citas"><button class="boton-menu boton-categoria <?php echo $component == 'citas' ? 'active' : '' ?>" > <i class="bi bi-calendar-event"></i><p class="letras-menuHamburg-lateral"> Mis Citas</p> </button></a>
                         </li>
 
                     <?php endif; ?>
                     
                     <?php if ($id_rol == 1): ?>
                         <li>
-                            <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i> Cuentas Creadas </button></a>
+                            <a  href="?p=created-acounts"><button class="boton-menu boton-categoria <?php echo $component == 'created-acounts' ? 'active' : '' ?>" > <i class="bi bi-ui-checks-grid"></i><p class="letras-menuHamburg-lateral">Cuentas Creadas</p></button></a>
                         </li>
                         <li>
-                            <a  href="?p=serviciosadmin"><button class="boton-menu boton-categoria <?php echo $component == 'serviciosadmin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> Servicios </button></a>
+                            <a  href="?p=servicios_admin"><button class="boton-menu boton-categoria <?php echo $component == 'servicios_admin' ? 'active' : '' ?>"> <i class="bi bi-columns-gap"></i> <p class="letras-menuHamburg-lateral">Servicios</p> </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notifiadmin"><button class="boton-menu boton-categoria <?php echo $component == 'notifiadmin' ? 'active' : '' ?>"> <i class="bi bi-bell"></i>Notificaciones</button></a>
+                            <a  href="?p=notifi_admin"><button class="boton-menu boton-categoria <?php echo $component == 'notifi_admin' ? 'active' : '' ?>"> <i class="bi bi-bell"></i><p class="letras-menuHamburg-lateral">Notificaciones</p></button></a>
                         </li>
                     <?php endif; ?>
                         
                     <?php if ($id_rol != 1): ?>
                         <li>
-                            <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> PQR </button></a>
+                            <a  href="?p=pqr"><button class="boton-menu boton-categoria <?php echo $component == 'pqr' ? 'active' : '' ?>" > <i class="bi bi-chat-left-dots"></i> <p class="letras-menuHamburg-lateral">PQR</p> </button></a>
                         </li>
                         <li>
-                            <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i>Notificaciones </button></a>
+                            <a  href="?p=notificaciones"><button class="boton-menu boton-categoria <?php echo $component == 'notificaciones' ? 'active' : '' ?>" > <i class="bi bi-bell"></i> <p class="letras-menuHamburg-lateral">Notificaciones</p> </button></a>
                         </li>
                     <?php endif; ?>
 
                     <li>
-                        <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i> Perfil </button></a>
+                        <a  href="?p=perfil"><button class="boton-menu boton-categoria <?php echo $component == 'perfil' ? 'active' : '' ?>" > <i class="bi bi-person"></i><p class="letras-menuHamburg-lateral"> Perfil</p> </button></a>
                     </li>
                 </ul>
             </nav>
@@ -124,4 +127,4 @@
                 <a class="texto-footer" href="../../../Proyecto_SendApp_2024/Login/login-aprendices/validacion/cerrar_sesion.php"><i class="bi bi-box-arrow-right"></i></a>
             </div> 
         </aside>
-        <main>                                                                                                                                          
+        <main>                                                                                                                                                                                                                                                                          

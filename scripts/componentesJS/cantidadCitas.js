@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function regresar() {
         if (Historial) Historial.style.display = "none";
-        if (predeterminado) predeterminado.style.display = "block";
+        if (predeterminado) predeterminado.style.display = "flex";
         if (enlaceHistorial) enlaceHistorial.style.display = "block";
         if (volver) volver.style.display = "none";
         if (nohistorial) nohistorial.style.display = "block";  // Ajusta esto según tu lógica
@@ -39,3 +39,109 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function verRechazo(id){
+    let popup = document.getElementById('justificacion-rechazos-'+ id);
+    if(popup){
+        popup.style.display = 'block';
+    }
+    ocultarElementos();
+}
+
+function verRechazos(id){
+    let popup = document.getElementById('justificacion-rechazo-'+ id);
+        popup.style.display = 'block';
+        ocultarElementoss();
+}
+
+function Cerrarjustificacion(id){
+    let popup = document.getElementById('justificacion-rechazo-' + id);
+    popup.style.display = 'none';
+    mostrarElementoss();
+}
+
+function Cerrarjustificaciones(id){
+    let popup = document.getElementById('justificacion-rechazos-' + id);
+    mostrarElementos();
+    popup.style.display = 'none';
+}
+
+function Vermotivos(id){
+    let popupMotivo = document.getElementById('justificacion-Noasistencias-' + id);
+    if(popupMotivo){
+        popupMotivo.style.display = 'block';
+    }
+    ocultarElementos();
+}
+
+function Vermotivo(id){
+    let popupMotivo = document.getElementById('justificacion-Noasistencia-' + id);
+    if(popupMotivo){
+        popupMotivo.style.display = 'block';
+    }
+    ocultarElementoss();
+}
+
+function Cerrarmotivo(id){
+    let popup = document.getElementById('justificacion-Noasistencia-' + id);
+    popup.style.display = 'none';
+    mostrarElementoss();
+}
+
+function Cerrarmotivos(id){
+    let popup = document.getElementById('justificacion-Noasistencias-' + id);
+    popup.style.display = 'none';
+    mostrarElementos();
+}
+
+function ocultarElementos() {
+    document.querySelectorAll('.notifications-panel, .notifications').forEach(el => {
+        el.classList.add('hidden');
+    });
+    document.querySelectorAll('.popup-justificacion').forEach(el => {
+        el.classList.remove('hidden');
+    });
+    let volver = document.getElementById('volver');
+    if (volver) {
+        volver.style.display = 'none';
+    }
+}
+
+function ocultarElementoss() {
+    document.querySelectorAll('.notifications').forEach(el => {
+        el.classList.add('hidden');
+    });
+    document.querySelectorAll('.popup-justificacion').forEach(el => {
+        el.classList.remove('hidden');
+    });
+    let historial = document.getElementById('historial');
+    if (historial) {
+        historial.style.display = 'none';
+    }
+}
+
+function mostrarElementos() {
+    document.querySelectorAll('.notifications-panel, .notifications').forEach(el => {
+        el.classList.remove('hidden');
+    });
+    document.querySelectorAll('.popup-justificacion').forEach(el => {
+        el.classList.add('hidden');
+    });
+    let volver = document.getElementById('volver');
+    if (volver) {
+        volver.style.display = 'block';
+    }
+}
+
+function mostrarElementoss() {
+    document.querySelectorAll('.notifications').forEach(el => {
+        el.classList.remove('hidden');
+    });
+    document.querySelectorAll('.popup-justificacion').forEach(el => {
+        el.classList.add('hidden');
+    });
+    let historial = document.getElementById('historial');
+    if (historial) {
+        historial.style.display = 'block';
+    }
+}
