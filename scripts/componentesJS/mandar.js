@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Evitar que el formulario se envíe automáticamente
         
         const formData = new FormData(form); // Obtener los datos del formulario
-        const newUrl = 'https://sendapp.com.co/Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
+        const newUrl = '../../../Proyecto_SendApp_2024/interfaces/Funcionario/funcionario.php?p=citaspendiente';
         
         fetch('../../../Proyecto_SendApp_2024/bases/mainInterfaz/backend/mandar.php', {
             method: 'POST',
@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 3000);
             } else {
                 // Si hubo un error, mostrar el mensaje de error en la consola
-                console.error(data.message);
+                // console.error(data.message);
+                alert(data.message);
             }
         })
         .catch(error => {

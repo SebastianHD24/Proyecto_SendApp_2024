@@ -54,21 +54,21 @@
                 </tr>
                 <tr>
                     <td>Día</td>
-                    <td><input type="date" name="fecha" required></td>
+                    <td><input type="date" name="fecha" id="fecha" required></td>
                 </tr>
                 <tr>
                     <td>Hora</td>
-                    <td><input type="time" name="hora" required></td>
+                    <td><input type="time" name="hora" id="hora" required></td>
                 </tr>
             </table>
+
             <div class="button_citas">
             <button type="submit">Aceptar</button>
 
-            <a href="?p=citaspendiente" class="cancelar-button"> cancelar</a>
+            <a href="?p=citaspendiente" class="cancelar-button">Cancelar</a>
 
             </div>
         </form>
-
 
         <!-- Ventana emergente despues de una actualizacion. -->
         <div class="alerta" id="alerta">
