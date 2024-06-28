@@ -15,15 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fecha = isset($_POST['fecha']) ? $_POST['fecha'] : null;
     $hora = isset($_POST['hora']) ? $_POST['hora'] : null;
 
-    // if ($fecha && $hora && $id_usuario) {
-    //     $sql = $conn->prepare("SELECT hora, fecha FROM citas WHERE fecha = ? AND hora = ? AND usuario_f = ?");
-    //     $sql->bind_param("sss", $fecha, $hora, $id_usuario);
-        
-    //     if ($sql->execute()) {
-    //         $sql->store_result();
-    //         if ($sql->num_rows > 0) {
-    //             $response['success'] = false;
-    //             $response['message'] = "Ya hay una cita agendada a la misma hora";
     if ($fecha && $hora && $id_usuario) {
         // Convertir la hora a un formato de tiempo y calcular el rango de 15 minutos antes y después
         $hora_inicio = date('H:i:s', strtotime("$hora - 15 minutes"));
