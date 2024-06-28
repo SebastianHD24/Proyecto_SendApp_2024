@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sql->store_result();
             if ($sql->num_rows > 0) {
                 $response['success'] = false;
-                $response['message'] = "En Agenda";
+                $response['message'] = "Lo sentimos el espacio esta agendado";
             } else {
                 if ($id_cita) {
                     $estado = 'aceptado';
