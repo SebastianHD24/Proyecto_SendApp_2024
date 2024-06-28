@@ -6,6 +6,10 @@ function mostrarH(id) {
     contenedores_notificacion.forEach(contenedor => {
         contenedor.style.display = "none";
     });
+    const con = document.querySelectorAll('.notifications-container-h');
+    con.forEach(container => {
+        container.style.display = "none";
+    });
 
     salir.style.display = "none";
 
@@ -48,6 +52,10 @@ function ocultarH() {
     const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_h"]');
     contenedores_notificacion.forEach(contenedor => {
         contenedor.style.display = "flex";
+    });
+    const con = document.querySelectorAll('.notifications-container-h');
+    con.forEach(container => {
+        container.style.display = "flex";
     });
     salir.style.display = "block";
 }

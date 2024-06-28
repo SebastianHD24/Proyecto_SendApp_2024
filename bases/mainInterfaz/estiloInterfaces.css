@@ -221,6 +221,7 @@ main{
     padding: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
+    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 945px){
@@ -232,7 +233,7 @@ main{
 
 @media only screen and (max-width: 768px) {
     main{
-        padding: 1.5rem 0rem 3rem;
+        padding: 1.5rem 0.5rem 3rem;
         margin: 5%;
     }
 }

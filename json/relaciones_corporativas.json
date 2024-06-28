@@ -1,12 +1,12 @@
 {
     "titulo": "Relaciones Corporativas",
     "subtitulo": "¿Qué son las relaciones corporativas del SENA?",
-    "parrafo": "Es el área encargada de la interacción entre el servicio nacional de aprendizaje SENA y las empresas. En el CDITI contamos con una oficina de contratación de aprendices que hace parte de las relaciones corporativas del SENA.",
+    "parrafo": "Es el área encargada de la interacción entre el Servicio Nacional de Aprendizaje SENA y las empresas. En el CDITI contamos con una oficina de contratación de aprendices que hace parte de las relaciones corporativas del SENA.",
     "imagen": "../relacionesCorporativas/img/img-content/IMG_5384.jpg",
     "boton": "Reservar cita",
     "contenido_adicional": {
         "titulo": "¿Cómo se pueden ver las empresas que están realizando contratación de aprendices?",
-        "parrafo": "Los aprendices pueden visualizar las empresas que están ofreciendo contrato de aprendizaje ingresando a la plataforma oficial de CAPRENDIZAJE SENA, selecciona aprendices e ingresa con su documento de identidad y contraseña."
+        "parrafo": "Los aprendices pueden visualizar las empresas que están ofreciendo contrato de aprendizaje ingresando a la plataforma oficial de CAPRENDIZAJE SENA, seleccionando 'aprendices' e ingresando con su documento de identidad y contraseña."
     },
     "tarjetas": [
         {

@@ -185,7 +185,7 @@ color: white;
       opacity: 1;
       visibility: visible;
       height: 100%;
-      
+      gap:5px;
   }
   .boton-menu.active::before,
   .boton-menu.active::after{

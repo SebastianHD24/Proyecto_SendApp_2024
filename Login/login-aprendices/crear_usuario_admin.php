@@ -4,7 +4,7 @@
 
     //chequeando la conexion
     if (!$conn) {
-        die("Conexion Fallo: ".mysqli_connect_error());
+        die("Conexión Falló: ".mysqli_connect_error());
     }
 
     // Este echo es para verificar si nos conectamos satisfactoriamente
@@ -40,7 +40,7 @@
         echo "<script>alert('El usuario ya está registrado en la base de datos.')</script>";
         // echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
     } else if(strlen(strval($documento_identidad)) < 10 || strlen($contrasena) < 6){
-        echo "<script>alert('Verifique que la longitud de la contraseña sea mayor a 6 digitos y verifique que el numero de documento sea mayor a 10 digitos.')</script>";
+        echo "<script>alert('Verifique que la longitud de la contraseña sea mayor a 6 dígitos y verifique que el número de documento sea mayor a 10 digitos.')</script>";
         // echo "<meta http-equiv='refresh' content='0; url=login-aprendices.html'>";
     } else {
         if (mysqli_num_rows($result) > 0) {

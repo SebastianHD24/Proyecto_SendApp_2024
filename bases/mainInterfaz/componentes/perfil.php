@@ -178,4 +178,4 @@
 <?php else: ?>
     <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/perfilAdmin.js"></script>
 <?php endif; ?>
-<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/contraseña.js"></script>  
+<script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/contrasena.js"></script>  

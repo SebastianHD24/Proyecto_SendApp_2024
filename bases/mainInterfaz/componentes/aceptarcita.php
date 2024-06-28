@@ -34,8 +34,8 @@
         <form method="post" id="myForm">
             <table>
                 <tr>
-                    <th>Campo</th>
-                    <th>Valor</th>
+                    <th>Detalles</th>
+                    <th>Información</th>
                 </tr>
                 <tr>
                     <td>Documento de Identidad</td>

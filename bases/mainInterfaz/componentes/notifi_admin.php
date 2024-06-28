@@ -115,7 +115,15 @@
                 <div class="barra"></div>
                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
                 <h1 class="tituloM"></h1>
-                <p class="descripcionM">¡Respuesta enviada con exito!</p>
+                <p class="descripcionM">¡Respuesta enviada con éxito!</p>
+            </div>
+        </div>
+        <div class="alerta" id="alerta2" >
+            <div class="modalA">
+                <div class="barra" ></div>
+                <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cancelar.png" alt="check">
+                <h1 class="tituloM">¡Error!</h1>
+                <p class="descripcionM">Debes agregar una respuesta a la PQR</p>
             </div>
         </div>
     </div>

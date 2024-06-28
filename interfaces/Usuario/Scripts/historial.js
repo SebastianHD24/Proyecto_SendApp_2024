@@ -9,7 +9,7 @@ function createNotificationBoxH(id) {
 
     // Crear elemento div para notifications-container
     let notificationsContainer = document.createElement("div");
-    notificationsContainer.classList.add("notifications-container");
+    notificationsContainer.classList.add("notifications-container-h");
 
     // Crear elemento div para notifications-pqr
     let notificationsPqr = document.createElement("div");
@@ -29,7 +29,7 @@ function createNotificationBoxH(id) {
     let textArticle = document.createElement("article");
     textArticle.classList.add("article__text--1");
     let textParagraph = document.createElement("p");
-    textParagraph.textContent = "Atención a su solicitud de QPR.";
+    textParagraph.textContent = "Atención a su solicitud de PQR.";
     textArticle.appendChild(textParagraph);
     notificationsPqr.appendChild(textArticle);
 
@@ -42,7 +42,7 @@ function createNotificationBoxH(id) {
     detailsButton.setAttribute("type", "button");
     detailsButton.classList.add("show__details--button");
     detailsButton.setAttribute("id", "showDetailsButton");
-    detailsButton.setAttribute("onclick", "mostrarH(" + id + ");");
+    detailsButton.setAttribute("onclick", `mostrarH(${id});`);
     let span = document.createElement('span');
     span.innerHTML = "Ver<br>Detalles";
     detailsButton.appendChild(span);
@@ -56,15 +56,20 @@ function createNotificationBoxH(id) {
 }
 
 function consultarHistorial() {
-    const mensaje = document.getElementById('mensaje');
     const mensaje1 = document.getElementById('mensaje1');
+    const mensaje = document.getElementById('mensaje');
     const historial = document.getElementById('historial');
     const salir = document.getElementById('salir');
     const citas = document.getElementById('citas');
 
     citas.style.display = "none";
+    mensaje.style.display = "none";
 
     function ocultar_QPR() {
+        const con = document.querySelectorAll('.notifications-container');
+        con.forEach(container => {
+            container.style.display = "none";
+        });
         const contenedores_notificacion = document.querySelectorAll('[id^="contenedor_n"]');
         contenedores_notificacion.forEach(contenedor => {
             contenedor.style.display = "none";
@@ -73,24 +78,25 @@ function consultarHistorial() {
     ocultar_QPR();
 
     fetch('../../../../Proyecto_SendApp_2024/interfaces/Usuario/consultaHistorial.php')
-    .then(response => response.json())
-    .then(data => {
-        if (data.num_registros > 0) {
-            // Si hay registros, ejecutar un ciclo basado en el número de registros
-            for (let i = 0; i < data.num_registros; i++) {
-                // Aquí puedes realizar las operaciones que necesites dentro del ciclo
-                createNotificationBoxH(data.id_peticion[i]); // Pasar el ID al crear el box
+        .then(response => response.json())
+        .then(data => {
+            if (data.num_registros > 0) {
+                // Si hay registros, ejecutar un ciclo basado en el número de registros
+                for (let i = 0; i < data.num_registros; i++) {
+                    // Aquí puedes realizar las operaciones que necesites dentro del ciclo
+                    createNotificationBoxH(data.id_peticion[i]); // Pasar el ID al crear el box
+                }
+            } else {
+                // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
+                mensaje1.style.display = "block";
             }
-        } else {
-            // Si no hay registros, puedes mostrar un mensaje o realizar otras operaciones
-            mensaje1.style.display = "block";
-        }
-        mensaje.style.display = "none";
-        historial.style.display = "none";
-        salir.style.display = "block";
-    })
-    .catch(error => console.error("Error:", error));
+            mensaje1.style.display = "none";
+            historial.style.display = "none";
+            salir.style.display = "block";
+        })
+        .catch(error => console.error("Error:", error));
 }
-function salir(){
+
+function salir() {
     location.reload();
 }

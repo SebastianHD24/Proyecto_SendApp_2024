@@ -91,9 +91,12 @@
             <input id="login-input-user-ce" class="registro_input login__input" type="text" name="celular" placeholder="Número celular / telefono" required/>
 
             <label for="login-input-user" class="registro_label login__label">
-                Programa*
+                Programas*
             </label>
-            <input id="login-input-user-p" class="registro_input login__input" type="text" name="programa" placeholder="Programa" required/>
+            <select id="login-input-user-p" class="registro_input login__input" type="text" name="programa" placeholder="Programa">
+                    
+
+            </select>
 
             <label for="login-input-user" class="registro_label login__label">
                 Ficha*
@@ -145,3 +148,22 @@
             <p id="mensaje_errore"></p>
         </div>
 </form>
+
+<script  >
+    document.addEventListener("DOMContentLoaded", function() {
+  fetch('../../../../Proyecto_SendApp_2024/json/programas.json')
+    .then(response => response.json())
+    .then(data => {
+      const select = document.getElementById('login-input-user-p');
+
+      data.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.name;
+        option.textContent = item.name;
+        select.appendChild(option);
+      });
+    })
+    .catch(error => console.error('Error al cargar el JSON:', error));
+});
+
+</script>

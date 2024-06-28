@@ -1,5 +1,5 @@
 <div class="table_div" id="table_div">
-    <h1 id="titulo_citas">Confirmar Citas</h1>
+    <h1 id="titulo_citas">Confirmar asistencia</h1>
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -49,7 +49,7 @@
                         <td><?= $row['documento_identidad'] ?></td>
                         <td><?= $row['nombres'] ?></td>
                         <td><?= $row['apellidos'] ?></td>
-                        <td><button onclick="verDescripcion4(<?= $row['id_cita'] ?>);">Descripcion</button></td>
+                        <td><button onclick="verDescripcion4(<?= $row['id_cita'] ?>);">Descripción</button></td>
                        
                         <td><?= $row['jornada'] ?></td>
                         <td class="asistio">
@@ -57,7 +57,14 @@
                             <button class="button ausente <?php if (!$accepted) echo 'disabled'; ?>" onclick="openModal('cancelacion', <?= $row['id_cita'] ?>)" <?php if (!$accepted) echo 'disabled'; ?>>Ausente</button>
                        
                             
-                            
+                            <div class="alerta" id="alerta1" style="display: none;">
+                                <div class="modalA">
+                                    <div class="barra"></div>
+                                    <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
+                                    <h1 class="tituloM"></h1>
+                                    <p class="descripcionM">Asistencia confirmada con éxito</p>
+                                </div>
+                            </div>
                             
                             <!-- Modal para decir que no asistio la cita -->
                             <div id="modal_cancelacion_<?= $row['id_cita'] ?>" class="modal">
@@ -79,12 +86,12 @@
 
                                         <button type="submit" class="button danger">Enviar</button>
 
-                                        <div class="alerta" id="alerta">
+                                        <div class="alerta" id="alerta2" style="display: none;">
                                             <div class="modalA">
-                                                <div class="barra"></div>
+                                                <div class="barra" style="background-color: #00a500;"></div>
                                                 <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/cheque.png" alt="check">
-                                                <h1 class="tituloM">success</h1>
-                                                <p class="descripcionM">Justificacion enviada</p>
+                                                <h1 class="tituloM"></h1>
+                                                <p class="descripcionM">Justificación inasistencia enviada</p>
                                             </div>
                                         </div>
                                     </form>
@@ -96,7 +103,7 @@
             <?php
                 }
             } elseif ($search_confirmarCitas != '' && mysqli_num_rows($result) == 0) {
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";
             }
             
             else {

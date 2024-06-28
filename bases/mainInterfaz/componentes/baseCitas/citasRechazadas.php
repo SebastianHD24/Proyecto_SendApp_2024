@@ -1,5 +1,5 @@
 <div class="table_div" id="table_rechazadas"> 
-    <h1 id="titulo_citas"> Citas Rechazadas</h1>  
+    <h1 id="titulo_citas"> Citas rechazadas</h1>  
     <table>
         <thead>
             <tr id="tabla_titulos">
@@ -66,7 +66,7 @@
             <?php
                 }
             } elseif ($search_term_rechazadas != '' && mysqli_num_rows($result) == 0) {
-                echo "<tr><td colspan='6'>No se encontro ningun resultado de busqueda.</td></tr>";
+                echo "<tr><td colspan='6'>No se encontró ningún resultado de búsqueda.</td></tr>";
             } 
             
             else {

@@ -17,7 +17,7 @@
     width: 95%;
     min-height: 350px;
     gap: 32px;
-    max-height: 80vh;
+    max-height: 65vh;
     overflow-y: auto;
     overflow-x: auto;
     align-items: center;
@@ -290,96 +290,71 @@ table.appointment {
     
 }
 
-@media screen and (max-width: 518px){
-        /* --------------------------------------------------------------------------------- */
+/* Responsive tablas */
+@media screen and (max-width: 600px) {
+    .appointment thead {
+        display: none;
+    }
 
-.notifications-panel {
-    display: flex;
-    flex-direction:row;
-    justify-items: center;
-    width: 98%;
-    overflow-x:hidden;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.notifications{
-    width: 18rem;
-}
+    .appointment, 
+    .appointment tbody, 
+    .appointment tr, 
+    .appointment td {
+        display: block;
+        width: 100%;
+    }
 
-/* Estilos base para la tabla */
-table.appointment {
-    width: 100%;
-    border-collapse: collapse;
-}
+    .appointment td {
+        padding-left: 50%;
+        position: relative;
+    }
 
-/* Ocultar las filas de encabezado */
-thead {
-    display: none;
-}
+    .appointment td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
 
-/* Estilo para cada fila de datos */
-tbody {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
-}
+    .appointment_th th, .appointment_td td, .reason th, .reason td {
+        border: 2px solid var(--gris-oscuro);
+    }
 
-.appointment_td {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    border-radius: 15px 15px 0px 0px;
-    margin: 5px;
-    padding: 10px;
-}
+    .reason th {
+        padding-left: 10px;
+        width: 16rem;
+    }
 
-/* Estilo para cada celda en la fila */
-.appointment_td > td {
-    border-bottom: 1px solid #ddd;
-    padding: 8px;
-}
+    .reason{
+        width: 100%;
+    }
 
-.appointment_td > td:last-child {
-    border-bottom: none;
-}
+    .reason th p {
+        font-weight: 400;
+        background-color: var(--gris-oscuro);
+        border-radius: 9px;
+        margin-top: 5px;
+        min-height: 12vh;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
 
-/* Estilo para el encabezado de las columnas */
-.header_th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-align: left;
-}
-
-/* Estilo para los enlaces */
-.verJustificacion, .verMotivo {
-    color: blue;
-    cursor: pointer;
-}
-
-/* Estilo para el pie de la tabla */
-tfoot {
-    /* display: block; */
-    width: 100%;
-}
-
-.reason {
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-    padding: 10px;
-}
-
-.reason th h4{
-    text-align: center;
-}
-
-.reason th {
-    text-align: left;
-}
-
-
-
-        /* --------------------------------------------------------------------------------- */
-        
+    .notifications-panel {
+        display: flex;
+        flex-direction:row;
+        justify-items: center;
+        width: 98%;
+        overflow-x:hidden;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .notifications{
+        width: 18rem;
+    }
 }
 
 @media screen and (max-width: 320px){

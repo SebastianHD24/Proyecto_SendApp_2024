@@ -224,9 +224,8 @@ $stmt->close();
 <div class="alerta" id="alerta2">
     <div class="modalA">
         <div class="barra"></div>
-        <img src="../../../../Proyecto_SendApp_2024/bases/mainInterfaz/Usuario-img/LogosSena-img/LogoSenaVerde.png" alt="error">
-        <h1 class="tituloM">Error al pedir la cita</h1>
-        <p class="descripcionM">¡Sucedio un incoveniente!</p>
+        <h1 class="tituloM">Error:</h1>
+        <p class="descripcionM">¡Sucedió un incoveniente!</p>
     </div>
 </div>
 </main> 
@@ -239,3 +238,6 @@ $stmt->close();
 <!-- este script hace que el nombre del area que tengo por el id lo meustre en el input  -->
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreArea.js"></script>
 <script src="../../../../Proyecto_SendApp_2024/scripts/componentesJS/NombreFuncionario.js"></script>
+
+
+   

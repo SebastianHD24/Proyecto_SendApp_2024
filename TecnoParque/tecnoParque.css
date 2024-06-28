@@ -80,10 +80,8 @@ body{
 }
 /*subtitulos*/
 .subtitulos{
-
     font-size: 18px;
     font-family: var(--fuente-principal);
-    text-align: center;
     margin-top: 1.5rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
@@ -243,15 +241,28 @@ a:hover {
     text-decoration: underline;
 }
 @media only screen and (max-width: 767px){
+
+    .tarjeta{
+        gap: 1.2rem;
+        margin: 4rem 1rem 2.5rem 1.1rem;
+        padding: 15px;
+    }
+    .Contenido{
+        width: 100%;
+        padding: 23px 23px 23px 23px;  
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .tarjeta{
+        padding: 15px;
+    }
     .titulo{
         font-size: 2rem;
         text-align: center;
         font-family: var(--fuente-principal);
         color: var(--azul);
 
-    }
-    .Contenido{
-        padding: 30px;
     }
     .orden{
         margin: 2rem;

@@ -1,39 +1,39 @@
 {
-    "titulo": "Coordinación Académica",
-    "subtitulo": "¿Qué es coordinación académica?",
-    "parrafo": "La coordinación académica es el área encargada de planificar, organizar, supervisar y evaluar todos los aspectos relacionados con los programas de formación y los servicios académicos que ofrece el SENA CDITI.",
-    "imagen": "../coordinaccion/img/img-content/IMG_5377.jpg",
-    "funciones": [
+  "titulo": "Coordinación Académica",
+  "subtitulo": "¿Qué es la coordinación académica?",
+  "parrafo": "La coordinación académica es el área encargada de planificar, organizar, supervisar y evaluar todos los aspectos relacionados con los programas de formación y los servicios académicos que ofrece el SENA CDITI.",
+  "imagen": "../coordinaccion/img/img-content/1719500746960.jpg",
+  "funciones": [
       {
-        "imagen": "./img/icons/1.png",
-        "titulo": "Diseño Curricular.",
-        "contenido": "Se encarga de diseñar y actualizar los planes de estudio y los contenidos de los programas formativos en función de las necesidades del sector productivo y las tendencias tecnológicas."
+          "imagen": "./img/icons/1.png",
+          "titulo": "Diseño Curricular",
+          "contenido": "Se encarga de diseñar y actualizar los planes de estudio y los contenidos de los programas formativos en función de las necesidades del sector productivo y las tendencias tecnológicas."
       },
       {
-        "imagen": "./img/icons/2.png",
-        "titulo": "Programación Académica.",
-        "contenido": "Organiza los horarios, asignaturas y recursos necesarios para el desarrollo adecuado de los programas de formación."
+          "imagen": "./img/icons/2.png",
+          "titulo": "Programación Académica",
+          "contenido": "Organiza los horarios, asignaturas y recursos necesarios para el desarrollo adecuado de los programas de formación."
       },
       {
-        "imagen": "./img/icons/3.png",
-        "titulo": "Selección y Formación de Docentes.",
-        "contenido": "Coordina la selección y capacitación de los instructores y docentes, asegurando que cuenten con las competencias necesarias para impartir la formación de manera efectiva."
+          "imagen": "./img/icons/3.png",
+          "titulo": "Selección y Formación de Docentes",
+          "contenido": "Coordina la selección y capacitación de los instructores y docentes, asegurando que cuenten con las competencias necesarias para impartir la formación de manera efectiva."
       },
       {
-        "imagen": "./img/icons/4.png",
-        "titulo": "Gestión de Recursos.",
-        "contenido": "Administra los recursos pedagógicos, tecnológicos y logísticos requeridos para el desarrollo de las actividades académicas."
+          "imagen": "./img/icons/4.png",
+          "titulo": "Gestión de Recursos",
+          "contenido": "Administra los recursos pedagógicos, tecnológicos y logísticos requeridos para el desarrollo de las actividades académicas."
       },
       {
-        "imagen": "./img/icons/5.png",
-        "titulo": "Seguimiento y Evaluación.",
-        "contenido": "Realiza el seguimiento continuo de los procesos académicos y evalúa el desempeño de los estudiantes y docentes para garantizar la calidad educativa."
+          "imagen": "./img/icons/5.png",
+          "titulo": "Seguimiento y Evaluación",
+          "contenido": "Realiza el seguimiento continuo de los procesos académicos y evalúa el desempeño de los estudiantes y docentes para garantizar la calidad educativa."
       },
       {
-        "imagen": "./img/icons/6.png",
-        "titulo": "Vinculación con el Sector Productivo.",
-        "contenido": "Establece alianzas y convenios con empresas y entidades del sector productivo para asegurar que la formación impartida responda a las necesidades reales del mercado laboral."
+          "imagen": "./img/icons/6.png",
+          "titulo": "Vinculación con el Sector Productivo",
+          "contenido": "Establece alianzas y convenios con empresas y entidades del sector productivo para asegurar que la formación impartida responda a las necesidades reales del mercado laboral."
       }
-    ],
-    "parrafo_final": "La coordinación académica garantiza la eficiencia y calidad de la formación. Al gestionar de manera efectiva todos los aspectos académicos, contribuye a la preparación integral de los estudiantes y a su inserción exitosa en el mercado laboral. Además, facilita la actualización constante de los programas formativos para adaptarlos a los avances tecnológicos y las demandas del entorno laboral actual."
-  }  
+  ],
+  "parrafo_final": "La coordinación académica garantiza la eficiencia y calidad de la formación. Al gestionar de manera efectiva todos los aspectos académicos, contribuye a la preparación integral de los estudiantes y a su inserción exitosa en el mercado laboral. Además, facilita la actualización constante de los programas formativos para adaptarlos a los avances tecnológicos y las demandas del entorno laboral actual."
+}

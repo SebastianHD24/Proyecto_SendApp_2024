@@ -5,7 +5,7 @@
 
     //chequeando la conexion
     if (!$conn) {
-        die("Conexion Fallo: ".mysqli_connect_error());
+        die("Conexión Falló: ".mysqli_connect_error());
     }
 
     $id_usuario = $_SESSION['documento_identidad'];

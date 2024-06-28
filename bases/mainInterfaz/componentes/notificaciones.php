@@ -1,8 +1,6 @@
 <h1 id="mensaje" style="display: none;">No hay notificaciones</h1>
 <h1 id="mensaje1" style="display: none;">No hay Historial</h1>
 <section class="display-notificaciones">
-    <div class="notifications-container">
-    </div>
     <div class="citas" id="citas"></div>
 
     <!--Contenedor Respuesta QPR-->
