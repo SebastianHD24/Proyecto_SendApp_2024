@@ -18,12 +18,13 @@
 
 .login__title{
     text-align: center;
+    
 }
 .header h1{
     font-size: 25px;
-    font-weight: 400;
     padding: 1.3rem;
     padding-bottom: 0;
+    font-weight: bold;
 }
 .container{
     display: flex;
